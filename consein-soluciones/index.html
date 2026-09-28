@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones | Consein</title>
+<meta name="description" content="Soluciones Consein: Infraestructura, Seguridad, Colaboración, Servicios Empresariales, Data, Automatización e Inteligencia Artificial sobre Microsoft. NortIA, el sistema operativo para la IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!--
+  MODELO DE PÁGINA · Menú "Soluciones" de www.consein.com
+  Basado en: Consein_Soluciones_DISD_Offerings_NortIA_ver_1.docx (DISD, septiembre 2026)
+  - Rutas (hash) que replican las URL recomendadas en la sección 06 del documento:
+      #/soluciones                           -> Portada de Soluciones (hub)
+      #/nortia                               -> Nueva página destacada NortIA (NRT-00 a NRT-05)
+      #/infraestructura-y-colaboracion       -> Infraestructura (INF) + Colaboración (COL)
+      #/ciberseguridad                       -> Seguridad (SEG)
+      #/ia-y-automatizacion-de-procesos      -> Banner NortIA + IA (IA-02 a IA-06) + Automatización (AUT)
+      #/financieras-y-gobierno-corporativo   -> Data (DAT) + Servicios Empresariales (EMP)
+  - Cada página sigue la estructura de 8 bloques del documento:
+      Hero · Problemas · Soluciones · Offerings · Evidencia · Respaldo · Puente NortIA · Cierre (un solo CTA)
+  - Todo el contenido vive en el objeto DATA (al final); editar ahí los textos.
+  - Paleta tomada del documento: azul marino #1B2A5E, azul #2F5BEA, cobre NortIA #B8734A y un color por práctica.
+-->
+<style>
+:root{
+  --navy:#1B2A5E; --navy-2:#1B2A4A; --blue:#2F5BEA; --ink:#1F2937; --muted:#5B6477;
+  --line:#E3E7EF; --bg:#FFFFFF; --soft:#F7F8FB; --copper:#B8734A; --copper-2:#E9C9B2; --copper-bg:#FAF6F0;
+  --radius:14px; --shadow:0 6px 24px rgba(27,42,94,.08);
+  --c:#2F5BEA; /* color de práctica activo */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Open Sans',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif;color:var(--navy);line-height:1.2;margin:0 0 .5em}
+a{color:var(--blue)}
+img,svg{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:760px}
+section{padding:72px 0}
+.alt{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;padding:14px 26px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-copper{background:var(--copper);color:#fff}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-outline{background:#fff;color:var(--c);border-color:var(--c)}
+.btn-sm{padding:10px 18px;font-size:.85rem}
+
+/* ---------- Header / menú ---------- */
+.topbar{background:var(--navy-2);color:#cfd6e6;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:6px;padding-bottom:6px;flex-wrap:wrap}
+header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:.12em;color:var(--navy);font-size:1.35rem}
+.logo small{display:block;font-size:.62rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-top:-2px}
+nav.main>ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;align-items:center}
+nav.main>ul>li{position:relative}
+nav.main>ul>li>a{display:block;padding:10px 14px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.92rem;color:var(--navy);text-decoration:none;border-radius:8px}
+nav.main>ul>li>a:hover,nav.main>ul>li.active>a{background:var(--soft);color:var(--blue)}
+.dropdown{position:absolute;top:100%;right:-120px;width:560px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;display:none;grid-template-columns:1fr 1fr;gap:4px}
+li.has-dd:hover .dropdown,li.has-dd:focus-within .dropdown,li.has-dd.open .dropdown{display:grid}
+.dropdown a{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;text-decoration:none;color:var(--ink)}
+.dropdown a:hover{background:var(--soft)}
+.dropdown a strong{display:block;font-family:'Montserrat',sans-serif;font-size:.88rem;color:var(--navy)}
+.dropdown a span{font-size:.78rem;color:var(--muted)}
+.dropdown a.feature{grid-column:1/-1;background:linear-gradient(90deg,var(--navy-2),#2a3a6a);color:#fff}
+.dropdown a.feature strong{color:#fff}.dropdown a.feature span{color:var(--copper-2)}
+.dropdown .tag{font-size:.62rem;font-weight:700;background:var(--copper);color:#fff;border-radius:99px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.dropdown .dim strong{color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:50%;flex:0 0 10px;margin-top:5px}
+.menu-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+/* ---------- Breadcrumb ---------- */
+.crumbs{font-size:.82rem;color:var(--muted);padding-top:14px;padding-bottom:14px}
+.crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{color:var(--blue)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;color:#fff;padding:96px 0 88px;overflow:hidden;background:var(--navy)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 400px at 85% 10%,color-mix(in srgb,var(--c) 55%,transparent),transparent 70%),
+  radial-gradient(600px 300px at 0% 100%,rgba(47,91,234,.35),transparent 70%)}
+.hero .wrap{position:relative}
+.hero h1{color:#fff;font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;max-width:860px}
+.hero p{font-size:1.18rem;color:#dfe5f3;max-width:720px}
+.hero .eyebrow{color:#fff;opacity:.85}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .note{font-size:.85rem;color:#b9c3dc;margin-top:14px}
+.hero.nortia{background:var(--navy-2)}
+.hero.nortia::before{background:radial-gradient(800px 420px at 90% 0%,rgba(184,115,74,.55),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(47,91,234,.3),transparent 70%)}
+.phases-inline{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.06em;color:var(--copper-2);margin:6px 0 18px}
+
+/* ---------- Stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:-44px;position:relative;z-index:2}
+.stat{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;text-align:center}
+.stat b{display:block;font-family:'Montserrat',sans-serif;font-size:2rem;color:var(--navy);font-weight:800}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* ---------- Grids / cards ---------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:var(--shadow)}
+.card h3{font-size:1.1rem}
+.pcard{border-top:4px solid var(--pc);display:flex;flex-direction:column}
+.pcard .num{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--pc);font-size:.85rem}
+.pcard p{color:var(--muted);font-size:.93rem;flex:1}
+.pcard a{font-weight:700;text-decoration:none;color:var(--pc);font-size:.9rem}
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--pc,var(--c)) 12%,#fff);color:var(--pc,var(--c));margin-bottom:14px}
+.ico svg{width:24px;height:24px}
+
+/* Problemas (preguntas) */
+.q{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;padding:18px 20px}
+.q .qm{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.4rem;color:var(--c);line-height:1}
+.q p{margin:0;font-weight:600;color:var(--navy)}
+
+/* Soluciones */
+.sol{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.sol+.sol{margin-top:14px}
+.sol>div{padding:20px 22px}
+.sol .n{background:color-mix(in srgb,var(--c) 8%,#fff)}
+.sol .n h3{font-size:1.05rem;margin-bottom:6px;color:var(--navy)}
+.sol small{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.sol .r{border-left:1px solid var(--line)}
+.sol .r p{color:var(--c);font-weight:600;margin:0}
+.sol .h{border-left:1px solid var(--line)}
+.sol .h p,.sol .n p{margin:0;font-size:.93rem;color:var(--muted)}
+
+/* Offerings */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 24px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font-size:.82rem;font-weight:600;cursor:pointer;color:var(--muted);font-family:inherit}
+.chip.on{background:var(--c);border-color:var(--c);color:#fff}
+.offer{display:flex;flex-direction:column;border-radius:var(--radius);background:#fff;border:1px solid var(--line);overflow:hidden}
+.offer .top{padding:20px 22px 0}
+.offer .code{font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.08em}
+.offer .type{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c);background:color-mix(in srgb,var(--c) 10%,#fff);padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.offer h3{font-size:1.08rem;margin-bottom:6px}
+.offer .frase{font-style:italic;color:var(--ink);margin:0 0 12px}
+.offer dl{margin:0;padding:0 22px;font-size:.88rem}
+.offer dt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.offer dd{margin:2px 0 0}
+.offer ul{margin:4px 0 0;padding-left:18px}.offer li{margin:2px 0}
+.offer .res{background:color-mix(in srgb,var(--c) 7%,#fff);border-radius:10px;padding:10px 12px;margin-top:12px}
+.offer .res dt{margin-top:0}
+.offer .extra{font-size:.8rem;color:var(--muted);margin-top:10px}
+.offer .extra b{color:var(--copper)}
+.offer .foot{margin-top:auto;padding:18px 22px 22px}
+.offer .foot .btn{width:100%;justify-content:center}
+.offer.star{border:2px solid var(--copper)}
+.offer.star .ribbon{background:var(--copper);color:#fff;font-size:.72rem;font-weight:700;text-align:center;padding:4px;letter-spacing:.06em}
+
+/* Evidencia */
+.ev{background:var(--navy);color:#fff;border-radius:var(--radius);padding:26px}
+.ev b{display:block;font-family:'Montserrat',sans-serif;font-size:1.7rem;font-weight:800;color:#fff;line-height:1.15}
+.ev p{color:#d5dcee;font-size:.9rem;margin:8px 0}
+.ev cite{font-style:normal;font-size:.75rem;color:var(--copper-2)}
+.market{margin-top:24px;border:1px dashed var(--c);border-radius:var(--radius);padding:22px 24px;background:#fff}
+.market h4{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.market ul{margin:0;padding-left:18px;color:var(--muted)}.market li{margin:6px 0}
+.market .lect{margin:14px 0 0;font-weight:600;color:var(--navy)}
+.disclaimer{font-size:.78rem;color:var(--muted);margin-top:14px}
+
+/* Respaldo */
+.badge{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.badge .ms{flex:0 0 auto;display:grid;grid-template-columns:repeat(2,14px);gap:3px}
+.badge .ms i{width:14px;height:14px;display:block}
+.badge h4{margin:0;font-size:.98rem}.badge p{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+.kv{font-size:.9rem}.kv b{color:var(--navy)}
+.tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tech span{font-size:.78rem;background:var(--soft);border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--muted)}
+blockquote.testi{margin:0;border-left:4px solid var(--c);padding:6px 0 6px 18px;color:var(--muted);font-style:italic}
+
+/* Puente NortIA */
+.bridge{background:linear-gradient(100deg,var(--navy-2),#2b3563);color:#fff;border-radius:var(--radius);padding:30px 32px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.bridge h3{color:#fff;margin-bottom:6px}.bridge p{margin:0;color:#dbe1f0}
+.bridge .comp{width:64px;height:64px;border-radius:50%;border:2px solid var(--copper-2);display:grid;place-items:center;color:var(--copper-2)}
+.bridge .codes{font-size:.82rem;color:var(--copper-2);margin-top:6px}
+
+/* Cierre */
+.closing{background:var(--navy);color:#fff;text-align:center}
+.closing h2{color:#fff;font-size:clamp(1.6rem,3vw,2.3rem)}
+.closing p{color:#d5dcee;max-width:680px;margin:0 auto 26px}
+form.contact{max-width:760px;margin:30px auto 0;background:#fff;border-radius:var(--radius);padding:26px;text-align:left;color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.contact label{font-size:.8rem;font-weight:700;color:var(--navy);display:flex;flex-direction:column;gap:4px}
+form.contact input,form.contact select,form.contact textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-weight:400}
+form.contact .full{grid-column:1/-1}
+form.contact>*,.grid>*{min-width:0}
+form.contact input,form.contact select,form.contact textarea{width:100%;max-width:100%}
+form.contact .ok{grid-column:1/-1;display:none;background:#E8F6EE;color:#1d6b3d;padding:12px;border-radius:10px;font-weight:600}
+
+/* Practice section header */
+.practice-head{display:flex;gap:18px;align-items:center;margin-bottom:8px}
+.practice-head .big{font-family:'Montserrat',sans-serif;font-weight:800;font-size:3rem;color:color-mix(in srgb,var(--c) 30%,#fff);line-height:1}
+.subnav{position:sticky;top:72px;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.subnav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+.subnav a{white-space:nowrap;font-size:.84rem;font-weight:600;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:99px}
+.subnav a:hover{background:var(--soft);color:var(--navy)}
+.benefits{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.benefits span{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.88rem;font-weight:600;color:var(--navy)}
+.benefits span::before{content:"✓";color:var(--c);font-weight:800}
+
+/* NortIA específicos */
+.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:ph}
+.phase{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.phase .k{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--copper);text-transform:uppercase}
+.phase h3{font-size:1.4rem;margin:4px 0}
+.phase .sub{font-weight:600;color:var(--navy);font-size:.9rem}
+.phase ul{padding-left:18px;font-size:.88rem;color:var(--muted)}
+.phase .act{font-size:.8rem;border-top:1px solid var(--line);padding-top:10px;color:var(--muted)}
+.phase .act b{color:var(--navy)}
+.compare{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare th,.compare td{padding:16px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:.93rem}
+.compare thead th{background:var(--navy-2);color:#fff;font-family:'Montserrat',sans-serif}
+.compare thead th:last-child{background:var(--copper)}
+.compare tr:last-child td{border-bottom:0}
+.compare td:first-child{font-weight:700;color:var(--navy);width:22%}
+.compare td:last-child{background:var(--copper-bg);font-weight:600}
+.norte{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.norte div{background:#fff;border-radius:12px;border:1px solid var(--line);padding:18px;text-align:center}
+.norte b{display:block;font-family:'Montserrat',sans-serif;font-size:2.2rem;color:var(--copper);line-height:1}
+.norte h4{margin:8px 0 4px;font-size:.95rem}
+.norte p{font-size:.82rem;color:var(--muted);margin:0}
+.norte em{display:block;font-size:.8rem;color:var(--navy);margin-top:8px}
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pain div{border-radius:var(--radius);padding:22px;background:#fff;border:1px solid var(--line)}
+.pain h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--copper)}
+.banner-nortia{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:linear-gradient(100deg,var(--navy-2),#3a3150);color:#fff;border-radius:var(--radius);padding:28px 32px}
+.banner-nortia h3{color:#fff}.banner-nortia p{color:#e6dcd4;margin:0}
+.table-map{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.table-map th,.table-map td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:.9rem;vertical-align:top}
+.table-map th{background:var(--soft);font-family:'Montserrat',sans-serif;color:var(--navy);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.table-map td:first-child{font-weight:700}
+.table-map code{font-size:.78rem;color:var(--copper)}
+
+.model{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.model div{flex:1 0 140px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.model b{font-family:'Montserrat',sans-serif;color:var(--blue)}
+.model p{font-size:.82rem;color:var(--muted);margin:6px 0 0}
+
+/* Footer */
+footer{background:#0f1936;color:#aab4cc;font-size:.88rem;padding:48px 0 24px}
+footer h4{color:#fff;font-size:.9rem}
+footer a{color:#aab4cc;text-decoration:none}footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
+footer .legal{border-top:1px solid #243056;margin-top:32px;padding-top:18px;font-size:.78rem}
+
+@media (max-width:980px){
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .cycle{grid-template-columns:repeat(2,1fr)}
+  .norte{grid-template-columns:repeat(3,1fr)}
+  .sol{grid-template-columns:1fr}.sol .r,.sol .h{border-left:0;border-top:1px solid var(--line)}
+  .menu-toggle{display:block}
+  nav.main{position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none;max-height:calc(100vh - 72px);overflow:auto}
+  nav.main.open{display:block}
+  nav.main>ul{flex-direction:column;align-items:stretch;padding:10px 16px}
+  .dropdown{position:static;width:auto;display:grid;grid-template-columns:1fr;box-shadow:none;border:0;padding:0 0 0 8px}
+  .bridge{grid-template-columns:1fr}.banner-nortia{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  section{padding:52px 0}
+  .g2,.g3,.g4,.pain,.cycle{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .norte{grid-template-columns:1fr 1fr}
+  form.contact{grid-template-columns:minmax(0,1fr)}
+  .topbar .wrap span:last-child{display:none}
+  .table-map thead{display:none}.table-map td{display:block;border-bottom:0;padding:6px 16px}.table-map tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><span>Venezuela · Panamá · República Dominicana · Estados Unidos</span><span>Microsoft Solutions Partner · 82 certificaciones vigentes</span></div></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#/soluciones" aria-label="Consein, inicio de Soluciones">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" fill="#1B2A5E"/><path d="M24.5 12.2A8 8 0 1 0 24.5 23.8" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="25" cy="18" r="2.4" fill="#B8734A"/></svg>
+      <span><b>CONSEIN</b><small>Consultores e Ingenieros</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+    <nav class="main" aria-label="Principal">
+      <ul>
+        <li><a href="https://www.consein.com/">Inicio</a></li>
+        <li><a href="https://www.consein.com/">Nosotros</a></li>
+        <li class="has-dd active"><a href="#/soluciones" aria-haspopup="true">Soluciones ▾</a>
+          <div class="dropdown" id="dd"></div>
+        </li>
+        <li><a href="https://www.consein.com/">Casos de éxito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid g4">
+      <div><h4>CONSEIN</h4><p>Desde 1987 transformamos empresas con tecnología Microsoft. Nos hacemos cargo del resultado, no solo del proyecto.</p></div>
+      <div><h4>Soluciones</h4><ul id="foot-sol"></ul></div>
+      <div><h4>Presencia</h4><ul><li>Venezuela</li><li>Panamá (sede internacional)</li><li>República Dominicana</li><li>Estados Unidos</li></ul></div>
+      <div><h4>Microsoft Solutions Partner</h4><ul><li>Infrastructure (Azure)</li><li>Modern Work</li><li>Data &amp; AI (Azure)</li><li>Digital &amp; App Innovation (Azure)</li></ul></div>
+    </div>
+    <div class="legal">© 2026 Consein · Las cifras de estudios Forrester Total Economic Impact™ fueron encargadas por Microsoft, representan organizaciones compuestas y no constituyen garantía. El resultado específico de cada cliente se determina con el Diagnóstico Consein 360.</div>
+  </div>
+</footer>
+
+<script>
+const DATA = {
+ "nortia": {
+  "offerings": [
+   {
+    "code": "NRT-00",
+    "name": "Consein 360 · Diagnóstico Cero Fricción",
+    "tipo": "Fase 0 Radar · assessment sin costo, 8 horas, 100% remoto",
+    "incluye": [
+     "Medición de madurez organizacional y readiness tecnológico.",
+     "Revisión de licencias, uso actual, datos y riesgos.",
+     "Identificación de hasta tres dominios de negocio prioritarios.",
+     "Hoja de ruta y estimación de retorno."
+    ],
+    "frase": "El primer paso hacia su autonomía en IA.",
+    "ideal": "Cualquier organización que tenga o evalúe licencias de Copilot o proyectos de IA.",
+    "resuelve": "Inversión en IA sin punto de partida claro ni prioridades de negocio.",
+    "resultado": "Un punto de partida claro y los tres dominios donde la IA generará más valor.",
+    "cta": "Inicie su diagnóstico hoy."
+   },
+   {
+    "code": "NRT-01",
+    "name": "Norte Ejecutivo: Sesión de Liderazgo en IA",
+    "tipo": "Fase 1 Norte · sesión ejecutiva C-level",
+    "incluye": [
+     "Panorama de la IA aplicada a su industria.",
+     "Resultados del Radar y dominios priorizados.",
+     "Principios de gobierno y riesgo.",
+     "Acuerdos y hoja de ruta ejecutiva."
+    ],
+    "frase": "La estrategia de IA empieza en la dirección.",
+    "ideal": "Comités ejecutivos y gerencias que deben decidir hacia dónde llevar la IA.",
+    "resuelve": "Iniciativas de IA sin patrocinio ni alineación con la estrategia.",
+    "resultado": "Una dirección alineada que patrocina la transformación.",
+    "cta": "Agende una sesión ejecutiva."
+   },
+   {
+    "code": "NRT-02",
+    "name": "Talleres N-O-R-T-E",
+    "tipo": "Fase 1 Norte · talleres de 4 horas, grupos de hasta 10 personas",
+    "incluye": [
+     "Metodología N-O-R-T-E aplicada a casos reales del área.",
+     "Práctica guiada en Microsoft 365 Copilot.",
+     "Biblioteca de prompts por rol.",
+     "Medición de uso posterior."
+    ],
+    "frase": "Enseñamos a preguntar bien, como estándar de toda la empresa.",
+    "ideal": "Equipos operativos de cualquier área con acceso a Copilot.",
+    "resuelve": "Prompts genéricos, resultados pobres y abandono temprano.",
+    "resultado": "Equipos que usan Copilot como motor de productividad, no como buscador.",
+    "cta": "Programe los talleres para su equipo."
+   },
+   {
+    "code": "NRT-03",
+    "name": "Programa AI Champions",
+    "tipo": "Fase 2 Vector · inmersión de 6 a 8 semanas con mentoría semanal",
+    "incluye": [
+     "Selección de champions por área.",
+     "Mentoría semanal y construcción de agentes reales con Copilot Studio y Agent Builder.",
+     "Automatizaciones funcionales conectadas a procesos.",
+     "Certificación de los champions."
+    ],
+    "frase": "Convierta a sus usuarios clave en expertos internos que construyen.",
+    "ideal": "Organizaciones que quieren capacidad propia de IA sin depender de terceros.",
+    "resuelve": "Dependencia externa y agentes que nunca salen del piloto.",
+    "resultado": "Agentes en producción y un equipo interno capaz de escalar.",
+    "cta": "Forme a sus AI Champions."
+   },
+   {
+    "code": "NRT-04",
+    "name": "Brújula: Gobernanza y Confianza en IA",
+    "tipo": "Fase 3 Brújula · programa de gobierno",
+    "incluye": [
+     "Cultura de liderazgo: tácticas de adopción y del diseño a la acción.",
+     "IQ: gobernanza de la información que alimenta a la IA.",
+     "Trust: identidades, protección de datos y controles de seguridad.",
+     "Hoja de ruta de evolución."
+    ],
+    "frase": "IA que escala con control, seguridad y cultura.",
+    "ideal": "Organizaciones reguladas o con varias iniciativas de IA en curso.",
+    "resuelve": "Riesgos de datos, IA en la sombra y adopción que no se sostiene.",
+    "resultado": "Una estrategia de IA autónoma, segura y sostenible en el tiempo.",
+    "cta": "Gobierne su IA con confianza."
+   },
+   {
+    "code": "NRT-05",
+    "name": "NortIA Continuo",
+    "tipo": "Ciclo recurrente · nuevo dominio de negocio",
+    "incluye": [
+     "Nuevo Radar sobre un dominio de alto valor.",
+     "Talleres y champions para el nuevo equipo.",
+     "Nuevos agentes y automatizaciones.",
+     "Revisión de gobierno y métricas de valor."
+    ],
+    "frase": "Repita el ciclo en cada área del negocio.",
+    "ideal": "Organizaciones que completaron un primer ciclo NortIA.",
+    "resuelve": "Transformaciones que se detienen después del primer proyecto.",
+    "resultado": "Una organización que evoluciona con la IA de forma permanente.",
+    "cta": "Lleve NortIA a su siguiente área."
+   }
+  ],
+  "puentes": [
+   {
+    "esp": "Infraestructura",
+    "necesita": "Una plataforma Azure preparada para ejecutar agentes e IA generativa con seguridad y costos controlados.",
+    "offerings": "INF-07 AI-Ready Infrastructure · INF-02 Azure Landing Zone"
+   },
+   {
+    "esp": "Seguridad",
+    "necesita": "Trust: identidades protegidas y datos clasificados antes de que la IA acceda a la información.",
+    "offerings": "SEG-03 Protección de Datos para la Era de la IA · SEG-02 Identidad Zero Trust"
+   },
+   {
+    "esp": "Colaboración",
+    "necesita": "Copilot vive en Microsoft 365: permisos ordenados, contenidos gobernados y adopción por rol.",
+    "offerings": "COL-04 Copilot Ready · COL-05 Adopción de Copilot con NortIA"
+   },
+   {
+    "esp": "Servicios Empresariales",
+    "necesita": "Agentes y Copilot conectados al ERP, al CRM y a los tableros de Power BI.",
+    "offerings": "EMP-05 Copilot para Finanzas y Ventas · EMP-04 Tablero Ejecutivo"
+   },
+   {
+    "esp": "Data",
+    "necesita": "IQ: información gobernada, confiable y lista para que los agentes respondan bien.",
+    "offerings": "DAT-01 Data & AI Readiness · DAT-04 Gobierno con Purview · DAT-05 Datos Listos para Agentes"
+   },
+   {
+    "esp": "Automatización",
+    "necesita": "Agentes que no solo responden, sino que ejecutan procesos de punta a punta.",
+    "offerings": "AUT-04 Procesamiento Inteligente de Documentos · AUT-05 Centro de Excelencia"
+   },
+   {
+    "esp": "AI",
+    "necesita": "Agentes a la medida, búsqueda inteligente y operación continua de la IA.",
+    "offerings": "IA-02 Agent Factory · IA-03 Enterprise RAG · IA-06 AgentOps"
+   }
+  ]
+ },
+ "practicas": [
+  {
+   "num": "01",
+   "name": "Infraestructura",
+   "promesa": "La plataforma donde corre el negocio digital.",
+   "definicion": "Construimos plataformas modernas, resilientes y escalables en Microsoft Azure y en entornos híbridos, que soportan la operación y el crecimiento del negocio. Diseñamos, migramos y gestionamos la infraestructura para eliminar la dependencia de hardware costoso, mantener el gasto de TI bajo control y dejar a la organización preparada para la inteligencia artificial.",
+   "designacion": "Microsoft Solutions Partner for Infrastructure (Azure)",
+   "especializacion": "Especialización avanzada: Infra and Database Migration to Microsoft Azure (nivel superior, con profundidad técnica comprobada).",
+   "marco": "Cloud Adoption Framework (CAF) y Well-Architected Framework (WAF) de Microsoft.",
+   "tecnologias": "Microsoft Azure, Azure Arc, Azure Migrate, Azure Virtual Machines, Azure Backup, Azure Site Recovery, Azure Kubernetes Service (AKS), Azure Monitor, Windows Server.",
+   "soluciones": [
+    {
+     "nombre": "Azure Cloud Foundation",
+     "problema": "Entornos cloud creados sin una arquitectura común, con controles mínimos y sin claridad de costos.",
+     "hacemos": "Diseñamos la base de Azure: landing zone, identidad, redes, políticas, monitoreo y etiquetado de costos desde el inicio.",
+     "resultado": "Despliegues ordenados y repetibles, mayor control y una base lista para crecer con menor riesgo."
+    },
+    {
+     "nombre": "Migración y Modernización a Azure",
+     "problema": "Infraestructura local costosa, limitada o difícil de escalar y mantener.",
+     "hacemos": "Inventariamos cargas y dependencias, planificamos por oleadas, migramos, probamos y estabilizamos.",
+     "resultado": "Escalabilidad bajo demanda, menor dependencia del hardware físico y una ruta clara de modernización."
+    },
+    {
+     "nombre": "Continuidad, Respaldo y Recuperación",
+     "problema": "Respaldos sin validar, recuperación lenta o planes de continuidad nunca probados.",
+     "hacemos": "Definimos la criticidad, diseñamos políticas de respaldo y recuperación ante desastres y las probamos.",
+     "resultado": "Mayor resiliencia operativa y recuperación predecible de las cargas críticas."
+    },
+    {
+     "nombre": "Optimización de costos y Servicios Gestionados",
+     "problema": "Facturas de nube que crecen sin explicación y equipos de TI absorbidos por la operación diaria.",
+     "hacemos": "Aplicamos Azure Advisor, Reserved Instances y Azure Hybrid Benefit, y operamos la plataforma con monitoreo continuo.",
+     "resultado": "Gasto tecnológico optimizado y una plataforma que evoluciona sin cargar al equipo interno."
+    }
+   ],
+   "oferta": "Migramos su infraestructura a Azure con responsabilidad de extremo a extremo: nos hacemos cargo de que su nube funcione, escale y se optimice, no solo de migrarla, bajo los estándares CAF y WAF de Microsoft. Acompañamos al cliente desde el diagnóstico hasta la operación continua.",
+   "entrega": [
+    "Diagnóstico Consein 360 del estado actual de la infraestructura (gratuito, 8 horas, 100% remoto).",
+    "Arquitectura Azure optimizada para costos y preparada para IA desde el primer día.",
+    "Migración gestionada desde on-premises con mínima fricción y continuidad garantizada.",
+    "Servicios gestionados de infraestructura: monitoreo, optimización y evolución continua.",
+    "Optimización de costos cloud con Azure Advisor, Reserved Instances y Azure Hybrid Benefit."
+   ],
+   "destino": "Destino web: Soluciones › Infraestructura y Seguridad  (consein.com/infraestructura-y-colaboracion)",
+   "offerings": [
+    {
+     "code": "INF-01",
+     "name": "Consein 360 · Diagnóstico de Infraestructura",
+     "tipo": "Assessment · gratuito, 8 horas, 100% remoto",
+     "incluye": [
+      "Inventario y evaluación del entorno actual.",
+      "Análisis de costos y oportunidades de ahorro.",
+      "Revisión de continuidad y seguridad base.",
+      "Evaluación de preparación para cargas de IA."
+     ],
+     "frase": "Conozca el estado real, el costo y los riesgos de su infraestructura antes de invertir.",
+     "ideal": "Empresas con servidores propios, nubes sin gobierno o sin claridad sobre lo que pagan.",
+     "resuelve": "Decisiones de inversión tomadas sin datos y riesgos de continuidad que nadie ha medido.",
+     "resultado": "Informe ejecutivo, hoja de ruta priorizada y estimación de retorno.",
+     "puente": "Comparte la puerta de entrada de la fase Radar de NortIA.",
+     "cta": "Solicite su Diagnóstico Consein 360."
+    },
+    {
+     "code": "INF-02",
+     "name": "Azure Landing Zone",
+     "tipo": "Implementación",
+     "incluye": [
+      "Arquitectura objetivo bajo CAF y WAF.",
+      "Identidad, redes, políticas y nomenclatura.",
+      "Monitoreo y etiquetado de costos.",
+      "Documentación y transferencia de conocimiento."
+     ],
+     "frase": "La base correcta para crecer en Azure sin desorden.",
+     "ideal": "Organizaciones que inician en Azure o necesitan reordenar su nube.",
+     "resuelve": "Suscripciones sin estructura, costos sin trazabilidad y seguridad inconsistente.",
+     "resultado": "Una plataforma gobernada y lista para recibir nuevas cargas.",
+     "cta": "Diseñe su base en Azure con Consein."
+    },
+    {
+     "code": "INF-03",
+     "name": "Migración de Servidores y Bases de Datos a Azure",
+     "tipo": "Programa por oleadas",
+     "incluye": [
+      "Evaluación de dependencias con Azure Migrate.",
+      "Plan de migración por oleadas.",
+      "Migración de servidores y bases de datos a Azure SQL y máquinas virtuales.",
+      "Pruebas, estabilización y optimización posterior."
+     ],
+     "frase": "Lleve sus cargas críticas a la nube con la especialización que Microsoft certifica.",
+     "ideal": "Empresas con datacenter propio, hardware al final de su vida útil o SQL Server local.",
+     "resuelve": "Costo y obsolescencia del hardware, y dificultad para escalar.",
+     "resultado": "Cargas operando en Azure con continuidad y una ruta de modernización.",
+     "prueba": "Respaldado por la especialización Infra and Database Migration to Microsoft Azure.",
+     "cta": "Evalúe qué cargas puede llevar a Azure."
+    },
+    {
+     "code": "INF-04",
+     "name": "Resiliencia Azure: Respaldo y Recuperación",
+     "tipo": "Implementación + servicio gestionado",
+     "incluye": [
+      "Análisis de criticidad y objetivos de recuperación.",
+      "Azure Backup y Azure Site Recovery.",
+      "Pruebas periódicas de recuperación.",
+      "Monitoreo y reportes de estado."
+     ],
+     "frase": "Que una falla no detenga su negocio.",
+     "ideal": "Organizaciones con respaldos sin probar o sin plan de contingencia.",
+     "resuelve": "Pérdida de información y recuperación lenta ante incidentes.",
+     "resultado": "Una recuperación predecible, documentada y probada.",
+     "cta": "Revise la capacidad real de recuperación de su empresa."
+    },
+    {
+     "code": "INF-05",
+     "name": "Azure FinOps: Optimización Continua de Costos",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Análisis de consumo con Azure Advisor y Cost Management.",
+      "Reserved Instances, planes de ahorro y Azure Hybrid Benefit.",
+      "Eliminación de recursos ociosos.",
+      "Reporte mensual de ahorro."
+     ],
+     "frase": "Pague solo por la nube que realmente usa.",
+     "ideal": "Empresas cuya factura de nube crece sin explicación.",
+     "resuelve": "Recursos ociosos, compromisos mal dimensionados y falta de visibilidad del gasto.",
+     "resultado": "Gasto cloud visible, controlado y optimizado mes a mes.",
+     "prueba": "Referencia: hasta 35% menos gasto en el primer año (Forrester TEI, 2025).",
+     "cta": "Descubra cuánto puede ahorrar en Azure."
+    },
+    {
+     "code": "INF-06",
+     "name": "Azure Managed Services",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Monitoreo proactivo.",
+      "Gestión de incidentes y solicitudes.",
+      "Parches, actualizaciones y buenas prácticas.",
+      "Evolución continua de la plataforma."
+     ],
+     "frase": "Su infraestructura operada por especialistas certificados.",
+     "ideal": "Equipos de TI absorbidos por la operación diaria.",
+     "resuelve": "Incidentes recurrentes y poco tiempo para iniciativas estratégicas.",
+     "resultado": "Operación estable y un equipo interno enfocado en el negocio.",
+     "prueba": "Testimonio publicado en consein.com: Digitel (Gerencia de TI e Inteligencia del Negocio) destaca el apoyo de Consein en trabajo remoto, seguridad y servicios en la nube.",
+     "cta": "Delegue la operación de su nube."
+    },
+    {
+     "code": "INF-07",
+     "name": "AI-Ready Infrastructure",
+     "tipo": "Acelerador",
+     "incluye": [
+      "Arquitectura Azure para Microsoft Foundry y Azure OpenAI.",
+      "Redes privadas, identidad y seguridad.",
+      "Gobierno de costos para cargas de IA.",
+      "Monitoreo y operación."
+     ],
+     "frase": "Prepare su plataforma para ejecutar IA con seguridad y costos bajo control.",
+     "ideal": "Organizaciones que llevarán agentes o IA generativa a producción.",
+     "resuelve": "Pilotos de IA que no escalan por falta de una base técnica segura.",
+     "resultado": "Una base lista para los agentes que construye NortIA.",
+     "prueba": "Referencia: 17% de ahorro al desplegar cargas de AI/ML en Azure (Forrester TEI, 2024).",
+     "puente": "Habilita la fase Vector de NortIA y los agentes de Agent Factory.",
+     "cta": "Prepare su nube para la IA."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "304% de ROI en 3 años",
+     "significa": "Retorno con gestión híbrida unificada en Azure Arc; recuperación de la inversión en menos de seis meses.",
+     "fuente": "Forrester TEI — Azure Arc, 2025"
+    },
+    {
+     "cifra": "35% menos gasto en nube",
+     "significa": "Reducción en el primer año al combinar Azure Advisor, Reserved Instances y Azure Hybrid Benefit.",
+     "fuente": "Forrester TEI — Azure Cost Efficiency Solutions, 2025"
+    },
+    {
+     "cifra": "60% menos en costos legacy",
+     "significa": "Reducción de costos de soluciones y plataformas heredadas al migrar a Azure.",
+     "fuente": "Forrester TEI — RHEL on Azure, 2024"
+    },
+    {
+     "cifra": "30% más productividad de TI",
+     "significa": "Ganancia en operaciones de TI gracias a la gestión unificada de infraestructura híbrida.",
+     "fuente": "Forrester TEI — Azure Arc, 2025"
+    },
+    {
+     "cifra": "40% del tiempo de TI liberado",
+     "significa": "El equipo de TI redirige su tiempo hacia iniciativas de negocio de alto valor.",
+     "fuente": "Forrester TEI — RHEL on Azure, 2024"
+    },
+    {
+     "cifra": "17% de ahorro en cargas de IA",
+     "significa": "Ahorro al desplegar cargas de AI/ML y 15% menos costo operativo continuo frente al escenario local.",
+     "fuente": "Forrester TEI — Migrating to Azure for AI-Readiness, 2024"
+    }
+   ],
+   "contexto": [
+    "84% de las organizaciones considera que gestionar el gasto en la nube es su principal desafío, y los presupuestos cloud se exceden en promedio 17%. (Flexera — State of the Cloud Report 2025)",
+    "29% del gasto en nube se desperdicia; es el primer aumento en cinco años (antes 27%), impulsado por las cargas de IA. (Flexera — State of the Cloud Report 2026)"
+   ],
+   "lectura": "El reto ya no es \"estar en la nube\", sino que la nube cueste lo justo y no se detenga. Consein cierra esa brecha con arquitectura, operación y optimización continua.",
+   "web_h1": "Una infraestructura que no se detiene y que cuesta lo justo",
+   "web_sub": "Diseñamos, migramos y operamos su plataforma en Microsoft Azure con responsabilidad de extremo a extremo.",
+   "web_texto": "Servidores que envejecen, facturas de nube que crecen sin explicación y respaldos que nadie ha probado son riesgos que frenan el negocio. En Consein evaluamos su infraestructura, diseñamos una arquitectura Azure bajo los marcos CAF y WAF de Microsoft, migramos con mínima interrupción y nos quedamos para operarla y optimizarla.",
+   "web_beneficios": [
+    "Continuidad operativa y recuperación predecible",
+    "Gasto tecnológico bajo control",
+    "Plataforma escalable y preparada para la IA"
+   ],
+   "web_prueba": "Las organizaciones que gestionan su entorno híbrido con Azure Arc reportan un ROI de 304% en tres años (Forrester TEI, 2025).",
+   "web_cta": "Solicite su Diagnóstico Consein 360: gratuito, 8 horas, 100% remoto."
+  },
+  {
+   "num": "02",
+   "name": "Seguridad",
+   "promesa": "La confianza que protege la organización.",
+   "definicion": "Protegemos identidades, datos, dispositivos, aplicaciones y operaciones bajo un enfoque Zero Trust. Consolidamos las herramientas de seguridad en el ecosistema Microsoft, detectamos y respondemos más rápido a las amenazas y convertimos la protección en una operación continua, no en un proyecto puntual.",
+   "designacion": "Respaldo a través de Microsoft Solutions Partner for Modern Work (seguridad del puesto de trabajo) y Solutions Partner for Infrastructure (Azure), que acredita la capacidad de asegurar entornos en Azure.",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Zero Trust.",
+   "tecnologias": "Microsoft Defender XDR, Microsoft Sentinel, Microsoft Entra, Microsoft Purview, Microsoft Security Copilot, Defender for Cloud.",
+   "soluciones": [
+    {
+     "nombre": "Microsoft Security Assessment",
+     "problema": "Falta de visibilidad sobre identidades, dispositivos, datos, nube y los controles que ya existen.",
+     "hacemos": "Evaluamos la postura de seguridad Microsoft y entregamos una hoja de ruta de remediación priorizada por riesgo e impacto.",
+     "resultado": "Visión consolidada del riesgo, prioridades claras y mejor uso de las licencias existentes."
+    },
+    {
+     "nombre": "Zero Trust Identity",
+     "problema": "Accesos excesivos, autenticación débil y poco control de usuarios, privilegios y dispositivos.",
+     "hacemos": "Implementamos MFA, acceso condicional, protección de identidades y gobierno de privilegios.",
+     "resultado": "Menor riesgo de cuentas comprometidas, acceso contextual y mayor trazabilidad."
+    },
+    {
+     "nombre": "SOC Moderno con Defender y Sentinel",
+     "problema": "Herramientas fragmentadas, exceso de alertas y respuesta reactiva a incidentes.",
+     "hacemos": "Integramos Defender XDR y Sentinel con casos de uso, reglas, automatizaciones y tableros.",
+     "resultado": "Visibilidad centralizada, investigación y respuesta más rápidas y menos carga para el equipo."
+    },
+    {
+     "nombre": "Managed Security Services",
+     "problema": "Una seguridad que depende de un equipo interno saturado o sin especialización.",
+     "hacemos": "Monitoreo continuo, respuesta a incidentes, reportes ejecutivos mensuales y formación del equipo de TI.",
+     "resultado": "Protección sostenida sin tener que construir la capacidad internamente."
+    }
+   ],
+   "oferta": "Protegemos su organización con un enfoque Zero Trust integral: consolidamos su stack de seguridad y garantizamos que la protección sea una operación continua. Nos hacemos cargo de proteger su operación de forma integral (identidades, dispositivos, datos y red), no solo de instalar herramientas.",
+   "entrega": [
+    "Evaluación de postura de seguridad, incluida en el Diagnóstico Consein 360.",
+    "Implementación de Microsoft Defender para Endpoint, Identity, Cloud Apps y Office 365.",
+    "Microsoft Sentinel (SIEM/XDR) con correlación de amenazas asistida por IA.",
+    "Consolidación del stack de seguridad y reducción de licencias redundantes.",
+    "Servicios gestionados de seguridad con reportes ejecutivos mensuales.",
+    "Formación del equipo de TI en gestión proactiva de la seguridad."
+   ],
+   "destino": "Destino web: Soluciones › Ciberseguridad  (consein.com/ciberseguridad)",
+   "offerings": [
+    {
+     "code": "SEG-01",
+     "name": "Security Assessment 360",
+     "tipo": "Assessment",
+     "incluye": [
+      "Revisión de Microsoft Secure Score.",
+      "Identidad, endpoints, correo, datos y nube.",
+      "Análisis de brechas de configuración.",
+      "Hoja de ruta priorizada por riesgo e impacto."
+     ],
+     "frase": "Sepa dónde está expuesto y qué corregir primero.",
+     "ideal": "Empresas sin una visión consolidada de su riesgo digital.",
+     "resuelve": "Controles desconocidos, licencias de seguridad subutilizadas y prioridades poco claras.",
+     "resultado": "Mapa de riesgo y plan de remediación accionable.",
+     "puente": "Alimenta la dimensión Trust de la fase Brújula de NortIA.",
+     "cta": "Solicite su evaluación de seguridad."
+    },
+    {
+     "code": "SEG-02",
+     "name": "Identidad y Acceso Zero Trust",
+     "tipo": "Implementación",
+     "incluye": [
+      "MFA y acceso condicional.",
+      "Restablecimiento de contraseñas en autoservicio.",
+      "Gestión de privilegios y de accesos de terceros con responsable, finalidad y fecha de salida.",
+      "Revisiones periódicas de acceso."
+     ],
+     "frase": "La identidad es la primera línea de defensa.",
+     "ideal": "Organizaciones con accesos excesivos, contraseñas débiles o usuarios externos sin control.",
+     "resuelve": "Cuentas comprometidas, privilegios permanentes y accesos de terceros que nadie retira.",
+     "resultado": "Menos riesgo de cuentas comprometidas y menos tickets de soporte.",
+     "prueba": "Testimonio publicado en consein.com: Banco Plaza redujo significativamente los tickets de contraseñas y mejoró su postura con Entra Self-Service Password y Secure Score.",
+     "cta": "Fortalezca la identidad de su organización."
+    },
+    {
+     "code": "SEG-03",
+     "name": "Protección de Datos para la Era de la IA",
+     "tipo": "Implementación",
+     "incluye": [
+      "Descubrimiento y clasificación de información sensible con Purview.",
+      "Etiquetas de sensibilidad y prevención de pérdida de datos (DLP).",
+      "Revisión de sobreexposición antes de Copilot.",
+      "Políticas de cumplimiento y retención."
+     ],
+     "frase": "Antes de que la IA lea su información, clasifíquela y protéjala.",
+     "ideal": "Empresas que activarán Copilot o agentes sobre información sensible.",
+     "resuelve": "Contenidos sobreexpuestos, fugas de información e incumplimiento normativo.",
+     "resultado": "Información protegida y lista para usarse con IA de forma segura.",
+     "puente": "Es el pilar Trust de la fase Brújula de NortIA.",
+     "cta": "Proteja sus datos antes de activar la IA."
+    },
+    {
+     "code": "SEG-04",
+     "name": "SOC Moderno: Defender XDR + Sentinel",
+     "tipo": "Implementación",
+     "incluye": [
+      "Despliegue de Defender para Endpoint, Identity, Office 365 y Cloud Apps.",
+      "Sentinel con conectores y casos de uso.",
+      "Automatización de respuesta.",
+      "Tableros ejecutivos."
+     ],
+     "frase": "Una sola vista para detectar y responder más rápido.",
+     "ideal": "Equipos con herramientas fragmentadas y exceso de alertas.",
+     "resuelve": "Respuesta reactiva, amenazas que pasan desapercibidas y alta carga operativa.",
+     "resultado": "Detección centralizada y respuesta más rápida.",
+     "prueba": "Referencia: 67% menos tiempo de resolución de incidentes (Forrester TEI, 2025).",
+     "cta": "Modernice su detección y respuesta."
+    },
+    {
+     "code": "SEG-05",
+     "name": "Consein Managed Security",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Monitoreo continuo y respuesta a incidentes.",
+      "Reportes ejecutivos mensuales.",
+      "Mejora continua de la postura (Secure Score).",
+      "Formación del equipo de TI."
+     ],
+     "frase": "Su seguridad vigilada todos los días por especialistas.",
+     "ideal": "Organizaciones sin un equipo de seguridad dedicado.",
+     "resuelve": "Seguridad que depende de un equipo interno saturado.",
+     "resultado": "Protección sostenida sin construir la capacidad internamente.",
+     "cta": "Delegue la operación de su seguridad."
+    },
+    {
+     "code": "SEG-06",
+     "name": "Consolidación del Stack de Seguridad",
+     "tipo": "Assessment + implementación",
+     "incluye": [
+      "Inventario de herramientas y licencias.",
+      "Mapeo de capacidades frente a Microsoft Defender y Purview.",
+      "Plan de transición sin brechas de protección.",
+      "Estimación de ahorro."
+     ],
+     "frase": "Menos herramientas, más protección y menor costo.",
+     "ideal": "Empresas que pagan varias soluciones de seguridad que se superponen.",
+     "resuelve": "Licencias redundantes, integraciones complejas y visibilidad fragmentada.",
+     "resultado": "Un stack unificado, más simple y más económico.",
+     "prueba": "Referencia: hasta 60% de ahorro al unificar seguridad en Microsoft (estudios Forrester TEI).",
+     "cta": "Calcule su ahorro por consolidación."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "242% de ROI en 3 años",
+     "significa": "Retorno al adoptar Microsoft Defender, con recuperación de la inversión en menos de seis meses.",
+     "fuente": "Forrester TEI — Microsoft Defender, 2025"
+    },
+    {
+     "cifra": "USD 17,8 millones en beneficios",
+     "significa": "Suma de consolidación de herramientas, optimización de SecOps y menor costo de brechas en tres años.",
+     "fuente": "Forrester TEI — Microsoft Defender, 2025"
+    },
+    {
+     "cifra": "67% menos tiempo de resolución",
+     "significa": "El tiempo medio de resolución (MTTR) pasa de hasta 3 horas a menos de 1 hora en la mayoría de incidentes.",
+     "fuente": "Forrester TEI — Microsoft Defender, 2025"
+    },
+    {
+     "cifra": "50% menos tiempo de reconocimiento",
+     "significa": "El tiempo medio de reconocimiento de amenazas (MTTA) baja de 30 a 15 minutos.",
+     "fuente": "Forrester TEI — Microsoft Defender, 2025"
+    },
+    {
+     "cifra": "Hasta 60% de ahorro",
+     "significa": "Al unificar la seguridad en Microsoft frente a arquitecturas multi-proveedor fragmentadas.",
+     "fuente": "Microsoft Security — resumen de estudios Forrester TEI"
+    },
+    {
+     "cifra": "80% menos esfuerzo",
+     "significa": "Reducción del esfuerzo de respuesta a incidentes.",
+     "fuente": "Forrester TEI — Microsoft Defender, 2025"
+    }
+   ],
+   "contexto": [
+    "USD 4,44 millones es el costo promedio global de una brecha de datos; identificarla y contenerla toma en promedio 241 días. (IBM — Cost of a Data Breach Report 2025)",
+    "USD 1,9 millones ahorran en promedio por brecha las organizaciones que usan IA y automatización de forma extensiva en seguridad. (IBM — Cost of a Data Breach Report 2025)",
+    "63% de las organizaciones no tiene políticas de gobierno para gestionar la IA o prevenir la \"IA en la sombra\". (IBM — Cost of a Data Breach Report 2025)"
+   ],
+   "lectura": "La velocidad de detección es el factor que más reduce el costo de una brecha. Consein combina Zero Trust, automatización y operación continua para ganar esa velocidad.",
+   "web_h1": "Seguridad que opera todos los días, no solo el día de la instalación",
+   "web_sub": "Protegemos identidades, datos, dispositivos y aplicaciones con un enfoque Zero Trust sobre Microsoft Defender, Sentinel, Entra y Purview.",
+   "web_texto": "Herramientas fragmentadas, alertas que nadie atiende y accesos sin control dejan a la organización expuesta. Consolidamos su seguridad en Microsoft, detectamos y respondemos más rápido a las amenazas y le entregamos reportes ejecutivos para decidir con claridad.",
+   "web_beneficios": [
+    "Menor exposición al riesgo",
+    "Respuesta a incidentes más rápida",
+    "Menos herramientas y menores costos de licenciamiento"
+   ],
+   "web_prueba": "Con Microsoft Defender, las organizaciones reducen hasta 67% el tiempo de resolución de incidentes (Forrester TEI, 2025).",
+   "web_cta": "Solicite una evaluación de su postura de seguridad."
+  },
+  {
+   "num": "03",
+   "name": "Colaboración",
+   "promesa": "Personas y conocimiento conectados.",
+   "definicion": "Conectamos personas, equipos, información y conocimiento en un entorno de trabajo moderno basado en Microsoft 365 y Copilot. Nos aseguramos de que las herramientas no solo se instalen, sino que se usen y generen un impacto real en la productividad del equipo.",
+   "designacion": "Microsoft Solutions Partner for Modern Work",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Modern Collaboration Architecture y Copilot Scenario Framework.",
+   "tecnologias": "Microsoft 365, Microsoft Teams, SharePoint Online, OneDrive, Exchange Online, Microsoft Viva, Copilot Chat, Microsoft 365 Copilot.",
+   "soluciones": [
+    {
+     "nombre": "Microsoft 365 Modern Workplace",
+     "problema": "Herramientas dispersas, colaboración informal y dificultad para encontrar información.",
+     "hacemos": "Configuramos Teams, SharePoint y OneDrive con arquitectura de sitios, permisos, gobierno y adopción.",
+     "resultado": "Mejor colaboración, acceso más rápido a la información y menos silos y duplicidad."
+    },
+    {
+     "nombre": "Intranet y Gestión del Conocimiento",
+     "problema": "Contenido disperso, comunicaciones fragmentadas y dependencia de personas para localizar información.",
+     "hacemos": "Creamos una intranet con arquitectura de información, hubs, metadatos, búsqueda y modelo de publicación.",
+     "resultado": "Una fuente central de información, más autoservicio y comunicación interna consistente."
+    },
+    {
+     "nombre": "Copilot Chat y Microsoft 365 Copilot Adoption",
+     "problema": "Licencias subutilizadas, prompts genéricos y dificultad para demostrar valor en el trabajo diario.",
+     "hacemos": "Habilitamos Copilot con casos de uso por rol, ingeniería de prompts, champions y medición de uso.",
+     "resultado": "Uso efectivo de Copilot, ahorro de tiempo en tareas frecuentes y adopción medible."
+    }
+   ],
+   "oferta": "Implementamos, optimizamos y acompañamos la adopción de Microsoft 365 y Copilot, garantizando que las herramientas se usen y generen impacto real. Incluimos licenciamiento adecuado, configuración, formación en lenguaje de negocio y acompañamiento posterior con medición mensual del impacto.",
+   "entrega": [
+    "Licenciamiento Microsoft 365 optimizado según el perfil de uso real.",
+    "Configuración completa de Teams, SharePoint, OneDrive y Outlook.",
+    "Implementación de Copilot con prompts y casos de uso por rol y departamento.",
+    "Programa de adopción y formación práctica en lenguaje de negocio, no técnico.",
+    "Acompañamiento post-implementación con medición y reporte mensual de productividad."
+   ],
+   "destino": "Destino web: Soluciones › Infraestructura y Seguridad  (consein.com/infraestructura-y-colaboracion); el componente Copilot se refuerza en la página de IA",
+   "offerings": [
+    {
+     "code": "COL-01",
+     "name": "Modern Workplace Quick Start",
+     "tipo": "Implementación",
+     "incluye": [
+      "Configuración de Teams, SharePoint, OneDrive y Exchange.",
+      "Arquitectura de sitios, equipos y permisos.",
+      "Políticas de gobierno.",
+      "Capacitación inicial."
+     ],
+     "frase": "Un entorno de trabajo ordenado desde el primer día.",
+     "ideal": "Empresas que usan Microsoft 365 de forma parcial o desordenada.",
+     "resuelve": "Herramientas dispersas, archivos duplicados y colaboración informal.",
+     "resultado": "Colaboración ordenada y acceso rápido a la información.",
+     "cta": "Ordene su entorno de trabajo."
+    },
+    {
+     "code": "COL-02",
+     "name": "Migración a Microsoft 365",
+     "tipo": "Implementación",
+     "incluye": [
+      "Plan de migración por grupos.",
+      "Migración de correo, archivos y sitios.",
+      "Validación y comunicación a usuarios.",
+      "Soporte posterior a la migración."
+     ],
+     "frase": "Correo, archivos y sitios en la nube sin interrumpir la operación.",
+     "ideal": "Organizaciones con servidores locales de correo o archivos, u otras plataformas.",
+     "resuelve": "Infraestructura obsoleta y trabajo remoto limitado.",
+     "resultado": "Trabajo desde cualquier lugar sobre una plataforma segura.",
+     "cta": "Planifique su migración a Microsoft 365."
+    },
+    {
+     "code": "COL-03",
+     "name": "Intranet Corporativa y Gestión del Conocimiento",
+     "tipo": "Implementación",
+     "incluye": [
+      "Arquitectura de información.",
+      "Intranet en SharePoint con Viva Connections y Viva Engage.",
+      "Metadatos y búsqueda.",
+      "Modelo de publicación y gobierno."
+     ],
+     "frase": "Un punto único para el conocimiento de su empresa.",
+     "ideal": "Empresas donde encontrar información depende de preguntar a alguien.",
+     "resuelve": "Contenido disperso y comunicación interna fragmentada.",
+     "resultado": "Más autoservicio y comunicación interna consistente.",
+     "puente": "Deja el conocimiento listo para agentes y soluciones RAG.",
+     "cta": "Construya su intranet con Consein."
+    },
+    {
+     "code": "COL-04",
+     "name": "Copilot Ready",
+     "tipo": "Assessment + acelerador",
+     "incluye": [
+      "Revisión de licencias y requisitos técnicos.",
+      "Detección de contenidos sobreexpuestos.",
+      "Ajuste de permisos y etiquetado con Purview.",
+      "Plan de despliegue por grupos."
+     ],
+     "frase": "Ordene permisos y contenidos antes de encender Copilot.",
+     "ideal": "Organizaciones que compraron o evalúan Microsoft 365 Copilot.",
+     "resuelve": "Riesgo de que Copilot muestre información que no debería y licencias que no rinden.",
+     "resultado": "Copilot activado de forma segura y con base para la adopción.",
+     "puente": "Preparación técnica para la fase Norte de NortIA.",
+     "cta": "Prepare su organización para Copilot."
+    },
+    {
+     "code": "COL-05",
+     "name": "Adopción de Copilot con NortIA",
+     "tipo": "Programa",
+     "incluye": [
+      "Casos de uso por rol y área.",
+      "Talleres de la metodología N-O-R-T-E.",
+      "Red de champions internos.",
+      "Medición mensual de uso e impacto."
+     ],
+     "frase": "Del uso ocasional al hábito productivo.",
+     "ideal": "Empresas con licencias de Copilot que se usan poco o como un simple buscador.",
+     "resuelve": "Adopción superficial, prompts genéricos y retorno invisible.",
+     "resultado": "Copilot integrado en el flujo de trabajo con impacto medible.",
+     "prueba": "Referencia: 9 horas ahorradas por usuario al mes con Copilot (Forrester TEI, 2025).",
+     "puente": "Es la fase Norte de NortIA aplicada a la colaboración.",
+     "cta": "Convierta Copilot en productividad real."
+    },
+    {
+     "code": "COL-06",
+     "name": "Gobierno de Teams y SharePoint",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Ciclo de vida de equipos y sitios.",
+      "Revisión periódica de permisos.",
+      "Archivado y retención.",
+      "Reportes de uso."
+     ],
+     "frase": "Colaboración que crece sin volverse un caos.",
+     "ideal": "Organizaciones con cientos de equipos y sitios sin control.",
+     "resuelve": "Proliferación de equipos, permisos heredados y contenido abandonado.",
+     "resultado": "Un entorno colaborativo limpio, seguro y medible.",
+     "cta": "Mantenga su colaboración bajo control."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "223% de ROI para PyMEs",
+     "significa": "Retorno de Microsoft 365 for Business en tres años, con un valor presente neto de USD 631.000.",
+     "fuente": "Forrester TEI — M365 for Business, 2025"
+    },
+    {
+     "cifra": "353% de ROI con Copilot (PyMEs)",
+     "significa": "Retorno potencial de Microsoft 365 Copilot en un período de tres años.",
+     "fuente": "Forrester TEI — M365 Copilot for SMB, 2024"
+    },
+    {
+     "cifra": "9 horas al mes por usuario",
+     "significa": "Tiempo ahorrado con Copilot en redacción, resúmenes y análisis de datos.",
+     "fuente": "Forrester TEI — M365 Copilot, 2025"
+    },
+    {
+     "cifra": "70 horas al año por empleado",
+     "significa": "Ahorro en colaboración y comunicación con Microsoft 365 E3 y Teams.",
+     "fuente": "Forrester TEI — M365 E3, 2025"
+    },
+    {
+     "cifra": "29% más rápido",
+     "significa": "Los usuarios de Copilot completaron tareas de búsqueda, escritura y resumen más rápido; 70% se declaró más productivo.",
+     "fuente": "Microsoft Work Trend Index, 2023"
+    },
+    {
+     "cifra": "USD 60 por usuario al mes",
+     "significa": "Ahorro en licenciamiento al consolidar soluciones de terceros en Microsoft 365 E3.",
+     "fuente": "Forrester TEI — M365 E3, 2025"
+    }
+   ],
+   "contexto": [
+    "80% de los trabajadores afirma no tener el tiempo o la energía suficientes para hacer bien su trabajo. (Microsoft — Work Trend Index 2025 (31.000 trabajadores, 31 mercados))",
+    "Cada 2 minutos se interrumpe a los trabajadores más expuestos con reuniones, correos o mensajes durante el horario laboral. (Microsoft WorkLab — The Infinite Workday, 2025)"
+   ],
+   "lectura": "El problema no es la falta de herramientas, sino su uso fragmentado. Consein ordena el entorno de trabajo y acompaña la adopción hasta que el valor sea medible.",
+   "web_h1": "Equipos conectados, conocimiento al alcance y Copilot trabajando para usted",
+   "web_sub": "Implementamos y acompañamos la adopción de Microsoft 365 y Copilot para que su inversión se traduzca en productividad real.",
+   "web_texto": "Muchas organizaciones pagan licencias que su gente usa a medias. Configuramos Teams, SharePoint y OneDrive con orden y gobierno, creamos intranets que centralizan el conocimiento y activamos Copilot con casos de uso por rol, formación en lenguaje de negocio y medición mensual del impacto.",
+   "web_beneficios": [
+    "Menos tiempo buscando información",
+    "Colaboración ordenada desde cualquier lugar",
+    "Licencias que generan valor medible"
+   ],
+   "web_prueba": "Los usuarios de Microsoft 365 Copilot ahorran en promedio 9 horas al mes (Forrester TEI, 2025).",
+   "web_cta": "Convierta Copilot en una capacidad de trabajo, no solo en una licencia."
+  },
+  {
+   "num": "04",
+   "name": "Servicios Empresariales",
+   "promesa": "De la transacción a la decisión.",
+   "definicion": "Integramos la gestión empresarial (ERP), la relación con los clientes (CRM) y la inteligencia de negocio (Power BI) para que las organizaciones no solo administren su operación, sino que comprendan su desempeño y decidan a tiempo.",
+   "designacion": "Respaldo a través de Microsoft Solutions Partner for Data & AI (Azure) para la capa de analítica e inteligencia de negocio (Power BI).",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Modelo de servicios End-to-End de Consein, con Power BI como plataforma protagonista.",
+   "tecnologias": "Power BI, Dynamics 365 Business Central, Dynamics GP (Great Plains), Dynamics 365 Sales, Dynamics 365 Customer Service, Customer Insights.",
+   "soluciones": [
+    {
+     "nombre": "Business Central Quick Start",
+     "problema": "Procesos financieros manuales, baja trazabilidad y sistemas que limitan el crecimiento.",
+     "hacemos": "Implementamos Dynamics 365 Business Central con un alcance inicial enfocado en los procesos prioritarios.",
+     "resultado": "Procesos integrados, mayor control financiero y una plataforma preparada para crecer."
+    },
+    {
+     "nombre": "Modernización de Dynamics GP a Business Central",
+     "problema": "Dependencia de Great Plains, infraestructura local y procesos difíciles de ampliar o integrar.",
+     "hacemos": "Evaluamos GP, inventariamos personalizaciones e integraciones y definimos la ruta, el piloto y la transición.",
+     "resultado": "Evolución hacia la nube con menor riesgo y sin perder información crítica."
+    },
+    {
+     "nombre": "CRM Comercial y Servicio",
+     "problema": "Información comercial dispersa, seguimiento manual y poca visibilidad del ciclo del cliente.",
+     "hacemos": "Implementamos Dynamics 365 para ventas y servicio: procesos, etapas, casos, SLA, integraciones y tableros.",
+     "resultado": "Trazabilidad comercial, mejor atención al cliente e indicadores en tiempo real."
+    },
+    {
+     "nombre": "Power BI para Gestión Ejecutiva",
+     "problema": "Reportes manuales, cifras inconsistentes y falta de una visión ejecutiva común.",
+     "hacemos": "Levantamos KPIs, integramos y modelamos datos y diseñamos tableros ejecutivos seguros.",
+     "resultado": "Visibilidad ejecutiva, menos esfuerzo de reportería y decisiones con información consistente."
+    }
+   ],
+   "oferta": "Modernizamos la gestión financiera, comercial y operativa sobre Microsoft Dynamics 365 y Power BI, empezando por los procesos prioritarios, con una migración de datos segura y una visión ejecutiva común. Nos hacemos cargo de que el sistema se adopte y de que la información llegue a quien toma las decisiones.",
+   "entrega": [
+    "Descubrimiento y diseño funcional alineado con los objetivos del negocio.",
+    "Configuración financiera y operativa base en Business Central.",
+    "Migración de datos y ruta de modernización desde Dynamics GP.",
+    "CRM de ventas y servicio con integraciones y automatizaciones básicas.",
+    "KPIs y tableros ejecutivos en Power BI.",
+    "Capacitación, pruebas, salida en vivo y acompañamiento."
+   ],
+   "destino": "Destino web: Soluciones › Data y Soluciones Empresariales  (consein.com/financieras-y-gobierno-corporativo)",
+   "offerings": [
+    {
+     "code": "EMP-01",
+     "name": "Business Central Quick Start",
+     "tipo": "Implementación",
+     "incluye": [
+      "Descubrimiento y diseño funcional.",
+      "Configuración financiera y operativa base.",
+      "Migración inicial de datos.",
+      "Capacitación, pruebas y salida en vivo."
+     ],
+     "frase": "Modernice su gestión financiera con un ERP conectado.",
+     "ideal": "PyMEs y empresas medianas con procesos financieros manuales o sistemas limitados.",
+     "resuelve": "Baja trazabilidad, cierres lentos y sistemas que frenan el crecimiento.",
+     "resultado": "Procesos integrados y mayor control financiero.",
+     "prueba": "Referencia: hasta 30% menos tiempo de cierre mensual (Forrester TEI, 2026).",
+     "cta": "Conozca una ruta práctica para modernizar su ERP."
+    },
+    {
+     "code": "EMP-02",
+     "name": "Ruta Great Plains a Business Central",
+     "tipo": "Assessment + programa",
+     "incluye": [
+      "Assessment funcional y técnico de GP.",
+      "Inventario de personalizaciones e integraciones.",
+      "Estrategia de datos y migración.",
+      "Piloto y plan de transición."
+     ],
+     "frase": "Evolucione Dynamics GP a la nube sin perder información crítica.",
+     "ideal": "Empresas que dependen de Dynamics GP (Great Plains).",
+     "resuelve": "Infraestructura local, personalizaciones difíciles de mantener y riesgo de obsolescencia.",
+     "resultado": "Una ruta clara y de bajo riesgo hacia Business Central.",
+     "cta": "Evalúe su ruta de Great Plains a Business Central."
+    },
+    {
+     "code": "EMP-03",
+     "name": "CRM de Ventas y Servicio al Cliente",
+     "tipo": "Implementación",
+     "incluye": [
+      "Diseño de procesos comerciales o de servicio.",
+      "Configuración de Dynamics 365 Sales o Customer Service.",
+      "Integraciones y automatizaciones básicas.",
+      "Tableros, capacitación y adopción."
+     ],
+     "frase": "Una sola visión del cliente, de la oportunidad al servicio.",
+     "ideal": "Equipos comerciales y de servicio que trabajan con hojas de cálculo.",
+     "resuelve": "Seguimiento manual, oportunidades perdidas y poca visibilidad del cliente.",
+     "resultado": "Trazabilidad comercial e indicadores en tiempo real.",
+     "cta": "Transforme la relación con sus clientes."
+    },
+    {
+     "code": "EMP-04",
+     "name": "Tablero Ejecutivo Power BI",
+     "tipo": "Implementación",
+     "incluye": [
+      "Levantamiento de KPIs con la dirección.",
+      "Integración y modelado de datos de ERP y CRM.",
+      "Tableros ejecutivos.",
+      "Publicación, seguridad y transferencia."
+     ],
+     "frase": "Una sola versión de las cifras para toda la dirección.",
+     "ideal": "Direcciones que reciben reportes manuales o cifras que no coinciden.",
+     "resuelve": "Horas dedicadas a armar reportes y decisiones con información inconsistente.",
+     "resultado": "Visibilidad ejecutiva y menos esfuerzo de reportería.",
+     "cta": "Construya su visión ejecutiva con Power BI."
+    },
+    {
+     "code": "EMP-05",
+     "name": "Copilot para Finanzas y Ventas",
+     "tipo": "Acelerador",
+     "incluye": [
+      "Activación de Copilot en Business Central, Dynamics 365 y Power BI.",
+      "Casos de uso por rol en finanzas y ventas.",
+      "Talleres N-O-R-T-E para cada equipo.",
+      "Medición de impacto."
+     ],
+     "frase": "IA dentro del ERP, el CRM y los tableros que ya usa.",
+     "ideal": "Equipos de finanzas y ventas con Dynamics 365 o Power BI.",
+     "resuelve": "Tareas repetitivas de cobranza, conciliación, seguimiento y análisis.",
+     "resultado": "Menos tiempo operativo y decisiones más rápidas.",
+     "puente": "Aplica las fases Norte y Vector de NortIA a finanzas y ventas.",
+     "cta": "Lleve la IA a sus procesos de negocio."
+    },
+    {
+     "code": "EMP-06",
+     "name": "Soporte y Evolución de Dynamics",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Atención de incidencias y solicitudes.",
+      "Mejoras funcionales y nuevos reportes.",
+      "Gestión de actualizaciones.",
+      "Capacitación continua."
+     ],
+     "frase": "Su ERP y CRM siempre al día y mejorando.",
+     "ideal": "Empresas que ya operan Dynamics y necesitan soporte experto.",
+     "resuelve": "Incidencias sin resolver, versiones desactualizadas y mejoras postergadas.",
+     "resultado": "Un sistema estable que evoluciona con el negocio.",
+     "cta": "Asegure la continuidad de su ERP."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "209% de ROI en 3 años",
+     "significa": "Retorno de Dynamics 365 Business Central para una organización compuesta de 300 empleados.",
+     "fuente": "Forrester TEI — Dynamics 365 Business Central, 2026"
+    },
+    {
+     "cifra": "Hasta 30% menos tiempo de cierre",
+     "significa": "Reducción del tiempo de cierre contable mensual.",
+     "fuente": "Forrester TEI — Dynamics 365 Business Central, 2026"
+    },
+    {
+     "cifra": "Hasta 50% más productividad",
+     "significa": "En cuentas por pagar, cuentas por cobrar y facturación.",
+     "fuente": "Forrester TEI — Dynamics 365 Business Central, 2026"
+    },
+    {
+     "cifra": "14% menos costo total",
+     "significa": "Reducción del costo total de propiedad (TCO).",
+     "fuente": "Forrester TEI — Dynamics 365 Business Central, 2026"
+    }
+   ],
+   "contexto": [
+    "Más del 70% de las iniciativas de ERP implementadas recientemente no cumplirán plenamente los objetivos de su caso de negocio para 2027; hasta 25% fracasará de forma grave. (Gartner — What IT Leaders Must Do to Avoid Disappointing ERP Initiatives, 2024)",
+    "75% de las estrategias de ERP no está fuertemente alineada con la estrategia general del negocio. (Gartner — ERP Strategy)"
+   ],
+   "lectura": "Un ERP falla por falta de alineación con el negocio, no por la tecnología. Consein inicia cada implementación desde los procesos prioritarios y acompaña hasta la adopción.",
+   "web_h1": "De la transacción a la decisión",
+   "web_sub": "Integramos ERP, CRM y Power BI para que administre su operación y entienda su desempeño a tiempo.",
+   "web_texto": "Cierres contables que tardan semanas, reportes armados a mano y clientes gestionados en hojas de cálculo limitan el crecimiento. Implementamos Dynamics 365 Business Central, modernizamos Dynamics GP (Great Plains), organizamos ventas y servicio con Dynamics 365 y construimos tableros ejecutivos en Power BI.",
+   "web_beneficios": [
+    "Cierres más rápidos y control financiero",
+    "Visibilidad comercial y del cliente",
+    "Decisiones basadas en cifras consistentes"
+   ],
+   "web_prueba": "Con Business Central, las organizaciones reducen hasta 30% el tiempo de cierre mensual (Forrester TEI, 2026).",
+   "web_cta": "Conozca una ruta práctica para modernizar su ERP."
+  },
+  {
+   "num": "05",
+   "name": "Data",
+   "promesa": "Información confiable convertida en valor.",
+   "definicion": "Convertimos datos dispersos en activos confiables, gobernados y accesibles para la toma de decisiones, la analítica y la inteligencia artificial, sobre Microsoft Fabric, OneLake, Azure y Microsoft Purview.",
+   "designacion": "Microsoft Solutions Partner for Data & AI (Azure)",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Marco Data & AI de Microsoft (Microsoft Agent Framework) y gobierno de datos con Purview.",
+   "tecnologias": "Microsoft Fabric, OneLake, Fabric Data Factory, Lakehouse, Data Warehouse, Azure SQL, Azure Cosmos DB, Azure Data Lake, Azure Databricks, Microsoft Purview.",
+   "soluciones": [
+    {
+     "nombre": "Data & Analytics Assessment",
+     "problema": "Silos de información, baja calidad de datos y múltiples herramientas sin una arquitectura común.",
+     "hacemos": "Evaluamos fuentes, flujos, gobierno y consumo, y definimos la arquitectura objetivo y la hoja de ruta.",
+     "resultado": "Prioridades claras, menor riesgo de inversión y una base para analítica e IA."
+    },
+    {
+     "nombre": "Microsoft Fabric Foundation",
+     "problema": "Arquitecturas fragmentadas, duplicación de datos y largos tiempos para disponer de información.",
+     "hacemos": "Implementamos Fabric y OneLake: workspaces, lakehouse o warehouse, pipelines, seguridad y operación.",
+     "resultado": "Menos fragmentación, acceso más rápido a los datos y una arquitectura integrada y escalable."
+    },
+    {
+     "nombre": "Gobierno y Calidad de Datos",
+     "problema": "Datos sin responsables, sin linaje, sin clasificación y sin reglas de calidad consistentes.",
+     "hacemos": "Diseñamos un modelo práctico de roles, dominios, catálogo, linaje, clasificación y calidad.",
+     "resultado": "Mayor confianza en la información, trazabilidad y mejor preparación para IA y cumplimiento."
+    }
+   ],
+   "oferta": "Diseñamos arquitecturas de datos modernas, gobernadas y seguras para que cada dato se convierta en una decisión de negocio. No entregamos reportes estáticos: entregamos capacidad de decisión, base para la automatización y preparación real para la IA.",
+   "entrega": [
+    "Inventario de fuentes y casos de uso priorizados.",
+    "Arquitectura objetivo y hoja de ruta de datos y analítica.",
+    "Plataforma Microsoft Fabric y OneLake operativa, con pipelines y seguridad.",
+    "Modelo de gobierno: roles, catálogo, linaje, clasificación y calidad.",
+    "Modelos semánticos y analítica avanzada y en tiempo real."
+   ],
+   "destino": "Destino web: Soluciones › Data y Soluciones Empresariales  (consein.com/financieras-y-gobierno-corporativo)",
+   "offerings": [
+    {
+     "code": "DAT-01",
+     "name": "Data & AI Readiness Assessment",
+     "tipo": "Assessment",
+     "incluye": [
+      "Inventario de fuentes y casos de uso.",
+      "Evaluación de arquitectura, calidad y gobierno.",
+      "Priorización de dominios de datos.",
+      "Arquitectura objetivo y hoja de ruta."
+     ],
+     "frase": "Descubra qué tan preparados están sus datos para decidir y para la IA.",
+     "ideal": "Organizaciones con silos de información o que planean iniciativas de IA.",
+     "resuelve": "Inversiones en analítica o IA sobre datos poco confiables.",
+     "resultado": "Prioridades claras y menor riesgo de inversión.",
+     "puente": "Mide la dimensión IQ de la fase Brújula y complementa el Radar de NortIA.",
+     "cta": "Evalúe la preparación de sus datos."
+    },
+    {
+     "code": "DAT-02",
+     "name": "Microsoft Fabric Foundation",
+     "tipo": "Implementación",
+     "incluye": [
+      "Arquitectura Fabric y OneLake.",
+      "Lakehouse o Warehouse inicial.",
+      "Pipelines de integración.",
+      "Seguridad, documentación y operación."
+     ],
+     "frase": "Una sola plataforma para integrar, almacenar y analizar sus datos.",
+     "ideal": "Empresas con arquitecturas de datos fragmentadas.",
+     "resuelve": "Duplicación de datos y largos tiempos para disponer de información.",
+     "resultado": "Acceso más rápido a los datos sobre una base escalable.",
+     "prueba": "Referencia: 379% de ROI en tres años (Forrester TEI, 2024).",
+     "cta": "Active su plataforma moderna de datos."
+    },
+    {
+     "code": "DAT-03",
+     "name": "Optimización y Modernización de Bases de Datos",
+     "tipo": "Programa",
+     "incluye": [
+      "Diagnóstico de rendimiento.",
+      "Optimización de consultas e índices.",
+      "Migración a Azure SQL o SQL Managed Instance.",
+      "Monitoreo y alta disponibilidad."
+     ],
+     "frase": "Bases de datos más rápidas, seguras y listas para la nube.",
+     "ideal": "Empresas con SQL Server local, lento o sin soporte.",
+     "resuelve": "Rendimiento deficiente, costos de licencias y riesgo por versiones obsoletas.",
+     "resultado": "Mejor rendimiento y una base de datos preparada para analítica e IA.",
+     "prueba": "Respaldado por la especialización Infra and Database Migration to Microsoft Azure.",
+     "cta": "Optimice sus bases de datos."
+    },
+    {
+     "code": "DAT-04",
+     "name": "Gobierno y Calidad de Datos con Purview",
+     "tipo": "Implementación",
+     "incluye": [
+      "Modelo de roles y dominios.",
+      "Catálogo y clasificación.",
+      "Linaje y reglas de calidad.",
+      "Hoja de ruta de gobierno."
+     ],
+     "frase": "Datos con dueño, trazabilidad y reglas claras.",
+     "ideal": "Organizaciones reguladas o que no confían en sus cifras.",
+     "resuelve": "Datos sin responsables, sin linaje y sin control de calidad.",
+     "resultado": "Mayor confianza en la información y preparación para cumplimiento.",
+     "puente": "Es el pilar IQ (gobernanza de datos) de la fase Brújula de NortIA.",
+     "cta": "Convierta el gobierno de datos en una capacidad."
+    },
+    {
+     "code": "DAT-05",
+     "name": "Datos Listos para Agentes",
+     "tipo": "Acelerador",
+     "incluye": [
+      "Selección y preparación de fuentes documentales y estructuradas.",
+      "Indexación y modelos semánticos.",
+      "Control de permisos.",
+      "Evaluación de calidad de respuestas."
+     ],
+     "frase": "Conecte a la IA con el conocimiento correcto de su empresa.",
+     "ideal": "Empresas que construyen agentes o asistentes sobre documentos y sistemas.",
+     "resuelve": "Agentes que responden sin contexto o con información desactualizada.",
+     "resultado": "Agentes que responden con información autorizada y vigente.",
+     "puente": "Prepara los datos que usan los agentes de la fase Vector.",
+     "cta": "Prepare sus datos para agentes de IA."
+    },
+    {
+     "code": "DAT-06",
+     "name": "Data Platform Managed Service",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Operación y monitoreo de pipelines.",
+      "Control de calidad de datos.",
+      "Optimización de costos de capacidad.",
+      "Evolución de modelos y tableros."
+     ],
+     "frase": "Su plataforma de datos operando y mejorando cada mes.",
+     "ideal": "Empresas sin un equipo dedicado de ingeniería de datos.",
+     "resuelve": "Pipelines que fallan, costos de capacidad sin control y reportes desactualizados.",
+     "resultado": "Datos disponibles y confiables todos los días.",
+     "cta": "Delegue la operación de sus datos."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "379% de ROI en 3 años",
+     "significa": "Retorno de Microsoft Fabric, con USD 9,79 millones de valor presente neto.",
+     "fuente": "Forrester TEI — Microsoft Fabric, 2024"
+    },
+    {
+     "cifra": "25% más productividad",
+     "significa": "En ingeniería de datos.",
+     "fuente": "Forrester TEI — Microsoft Fabric, 2024"
+    },
+    {
+     "cifra": "20% más acceso y producción",
+     "significa": "De los analistas de negocio a los datos y a sus entregables.",
+     "fuente": "Forrester TEI — Microsoft Fabric, 2024"
+    }
+   ],
+   "contexto": [
+    "USD 12,9 millones al año es el costo promedio que la mala calidad de los datos genera a las organizaciones. (Gartner — Data Quality research)",
+    "60% de los proyectos de IA que no cuenten con datos preparados para IA serán abandonados hasta 2026, según la predicción de Gartner. (Gartner, 2025)"
+   ],
+   "lectura": "Sin datos confiables no hay decisiones confiables ni IA que escale. Consein construye la base gobernada que habilita ambas.",
+   "web_h1": "Datos en los que puede confiar para decidir y para la IA",
+   "web_sub": "Unificamos, gobernamos y activamos sus datos sobre Microsoft Fabric y Microsoft Purview.",
+   "web_texto": "Cuando cada área tiene su propia versión de la cifra, las decisiones se retrasan y la IA no puede escalar. Evaluamos sus fuentes, diseñamos una arquitectura moderna en Microsoft Fabric y OneLake y establecemos un gobierno práctico de calidad, linaje y responsables.",
+   "web_beneficios": [
+    "Una sola fuente confiable de información",
+    "Analítica más rápida y autónoma",
+    "Base lista para inteligencia artificial"
+   ],
+   "web_prueba": "Microsoft Fabric genera un ROI de 379% en tres años (Forrester TEI, 2024).",
+   "web_cta": "Conozca el nivel de preparación de sus datos."
+  },
+  {
+   "num": "06",
+   "name": "Automatización",
+   "promesa": "La eficiencia que acelera la operación.",
+   "definicion": "Digitalizamos y orquestamos procesos con Microsoft Power Platform para eliminar tareas manuales, reducir errores y acelerar la ejecución del negocio, con soluciones low-code adaptadas a la realidad operativa de cada cliente.",
+   "designacion": "Microsoft Solutions Partner for Digital & App Innovation (Azure)",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Power Platform Adoption Framework.",
+   "tecnologias": "Power Automate, Power Apps, Power Pages, Microsoft Dataverse, AI Builder, Microsoft Forms, SharePoint.",
+   "soluciones": [
+    {
+     "nombre": "Automation Discovery",
+     "problema": "Iniciativas aisladas, automatización sin prioridades y dificultad para demostrar beneficios.",
+     "hacemos": "Analizamos procesos, volúmenes, tiempos y errores para construir una cartera priorizada de oportunidades.",
+     "resultado": "Foco en los casos de mayor impacto y una ruta de ejecución medible."
+    },
+    {
+     "nombre": "Automatización de Flujos con Power Automate",
+     "problema": "Procesos repetitivos, aprobaciones por correo, demoras y falta de trazabilidad.",
+     "hacemos": "Diseñamos flujos que automatizan aprobaciones, notificaciones y movimientos de datos entre sistemas.",
+     "resultado": "Menos tiempo y errores, mayor trazabilidad y ejecución consistente."
+    },
+    {
+     "nombre": "Aplicaciones Empresariales Low-Code",
+     "problema": "Procesos administrados en hojas de cálculo, formularios aislados o aplicaciones heredadas.",
+     "hacemos": "Creamos aplicaciones web y móviles con Power Apps, con datos, seguridad e integraciones.",
+     "resultado": "Desarrollo más ágil, mejor experiencia de usuario y procesos centralizados."
+    }
+   ],
+   "oferta": "Automatizamos sus procesos con inteligencia: liberamos cientos de horas por empleado al año y reducimos la dependencia de sistemas heredados costosos. Nos hacemos cargo de que la automatización genere un impacto real y medible, no solo de crear flujos o aplicaciones aisladas.",
+   "entrega": [
+    "Diagnóstico de procesos automatizables, incluido en el Diagnóstico Consein 360.",
+    "Flujos de automatización con Power Automate (RPA y DPA).",
+    "Aplicaciones low-code con Power Apps y portales con Power Pages.",
+    "Formación de citizen developers para equipos de negocio.",
+    "Acompañamiento para automatizar nuevos procesos de forma progresiva."
+   ],
+   "destino": "Destino web: Soluciones › IA y Automatización de procesos  (consein.com/ia-y-automatizacion-de-procesos)",
+   "offerings": [
+    {
+     "code": "AUT-01",
+     "name": "Automation Discovery",
+     "tipo": "Assessment",
+     "incluye": [
+      "Talleres de descubrimiento con las áreas.",
+      "Mapa de procesos y dolores.",
+      "Evaluación de viabilidad y valor.",
+      "Backlog priorizado y hoja de ruta."
+     ],
+     "frase": "Descubra qué procesos debe automatizar primero.",
+     "ideal": "Empresas que quieren automatizar pero no saben por dónde empezar.",
+     "resuelve": "Iniciativas aisladas y beneficios difíciles de demostrar.",
+     "resultado": "Una cartera de automatización con retorno estimado.",
+     "cta": "Identifique sus procesos con mayor retorno."
+    },
+    {
+     "code": "AUT-02",
+     "name": "Primer Proceso Automatizado",
+     "tipo": "Implementación",
+     "incluye": [
+      "Diseño del flujo y sus reglas.",
+      "Construcción en Power Automate con conectores.",
+      "Aprobaciones, alertas y seguimiento.",
+      "Pruebas, documentación y capacitación."
+     ],
+     "frase": "Resultados visibles desde el primer proceso.",
+     "ideal": "Áreas con aprobaciones por correo o tareas repetitivas de alto volumen.",
+     "resuelve": "Demoras, errores manuales y falta de trazabilidad.",
+     "resultado": "Un proceso automatizado y medido que sirve de modelo para escalar.",
+     "prueba": "Referencia: 200 horas ahorradas al año por empleado en tareas de alto volumen (Forrester TEI, 2024).",
+     "cta": "Automatice su primer proceso."
+    },
+    {
+     "code": "AUT-03",
+     "name": "Aplicaciones y Portales Low-Code",
+     "tipo": "Implementación",
+     "incluye": [
+      "Diseño funcional y experiencia de usuario.",
+      "Aplicaciones en Power Apps y portales en Power Pages.",
+      "Datos en Dataverse, seguridad e integraciones.",
+      "Publicación y transferencia."
+     ],
+     "frase": "Del Excel a una aplicación empresarial.",
+     "ideal": "Procesos gestionados en hojas de cálculo, formularios aislados o aplicaciones heredadas.",
+     "resuelve": "Información dispersa y dependencia de desarrollo tradicional costoso.",
+     "resultado": "Aplicaciones web y móviles adaptadas al negocio.",
+     "prueba": "Testimonio publicado en consein.com: Aiwa Latam destaca que los desarrollos en Power Apps y las automatizaciones de Consein optimizaron sus procesos.",
+     "cta": "Convierta un proceso manual en una aplicación."
+    },
+    {
+     "code": "AUT-04",
+     "name": "Procesamiento Inteligente de Documentos",
+     "tipo": "Implementación",
+     "incluye": [
+      "Extracción de datos con AI Builder.",
+      "Validación y reglas de negocio.",
+      "Integración con ERP y flujos de aprobación.",
+      "Tablero de seguimiento."
+     ],
+     "frase": "Facturas, formularios y solicitudes procesados sin digitar.",
+     "ideal": "Áreas de finanzas, compras u operaciones con alto volumen documental.",
+     "resuelve": "Digitación manual, errores y cuellos de botella.",
+     "resultado": "Documentos procesados más rápido y con menos errores.",
+     "puente": "Primer paso de automatización cognitiva que conecta con los agentes de NortIA.",
+     "cta": "Automatice su procesamiento documental."
+    },
+    {
+     "code": "AUT-05",
+     "name": "Centro de Excelencia Power Platform",
+     "tipo": "Programa",
+     "incluye": [
+      "Estrategia de entornos y políticas de datos.",
+      "Kit de gobierno y monitoreo.",
+      "Formación de citizen developers.",
+      "Catálogo de soluciones reutilizables."
+     ],
+     "frase": "Automatización que escala con gobierno.",
+     "ideal": "Empresas con muchos creadores de soluciones y poco control.",
+     "resuelve": "Soluciones sin soporte, riesgos de datos y duplicidad de esfuerzos.",
+     "resultado": "Innovación distribuida, segura y medible.",
+     "puente": "Complementa el Programa AI Champions de la fase Vector.",
+     "cta": "Escale su automatización con gobierno."
+    },
+    {
+     "code": "AUT-06",
+     "name": "Soporte y Evolución de Automatizaciones",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Monitoreo de flujos y aplicaciones.",
+      "Atención de incidencias.",
+      "Mejoras y nuevos casos de uso.",
+      "Reporte de valor generado."
+     ],
+     "frase": "Sus flujos y aplicaciones funcionando y creciendo.",
+     "ideal": "Empresas con soluciones Power Platform en producción.",
+     "resuelve": "Flujos que fallan sin aviso y mejoras postergadas.",
+     "resultado": "Automatización estable que sigue sumando valor.",
+     "cta": "Asegure la continuidad de sus automatizaciones."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "248% de ROI en 3 años",
+     "significa": "Retorno de Power Automate (RPA + DPA), con USD 39,85 millones de valor presente neto.",
+     "fuente": "Forrester TEI — Power Automate, 2024"
+    },
+    {
+     "cifra": "224% de ROI en 3 años",
+     "significa": "Retorno de Power Platform a escala, con USD 81,7 millones de valor presente neto.",
+     "fuente": "Forrester TEI — Power Platform, 2024"
+    },
+    {
+     "cifra": "200 horas al año por empleado",
+     "significa": "Ahorradas en tareas de alto volumen como entrada de datos, facturación o recopilación de documentos.",
+     "fuente": "Forrester TEI — Power Automate, 2024"
+    },
+    {
+     "cifra": "80% menos costos de stack legacy",
+     "significa": "Al consolidar herramientas de desarrollo en Power Platform.",
+     "fuente": "Forrester TEI — Power Platform, 2024"
+    },
+    {
+     "cifra": "35% más rápido",
+     "significa": "En el desarrollo de nuevas soluciones.",
+     "fuente": "Forrester TEI — Power Platform, 2024"
+    },
+    {
+     "cifra": "Menos de 6 meses",
+     "significa": "Tiempo de recuperación de la inversión en Power Platform y Power Automate.",
+     "fuente": "Forrester TEI — Power Platform y Power Automate, 2024"
+    }
+   ],
+   "contexto": [
+    "60% a 70% del tiempo de los empleados se dedica a actividades que la IA generativa, junto con otras tecnologías, tiene el potencial de automatizar. (McKinsey — The Economic Potential of Generative AI, 2023)"
+   ],
+   "lectura": "La pregunta ya no es si automatizar, sino por dónde empezar. Consein prioriza los procesos con mayor retorno y los lleva a producción con medición.",
+   "web_h1": "Menos tareas manuales, más tiempo para lo que importa",
+   "web_sub": "Automatizamos procesos y creamos aplicaciones low-code con Microsoft Power Platform.",
+   "web_texto": "Aprobaciones por correo, datos copiados entre sistemas y procesos que viven en hojas de cálculo consumen horas y generan errores. Identificamos los procesos con mayor retorno, los automatizamos con Power Automate y los digitalizamos con Power Apps, formando a su equipo para seguir creciendo.",
+   "web_beneficios": [
+    "Menos errores y tiempos de espera",
+    "Trazabilidad de punta a punta",
+    "Soluciones ágiles sin desarrollo tradicional costoso"
+   ],
+   "web_prueba": "Power Automate permite ahorrar 200 horas al año por empleado en tareas de alto volumen (Forrester TEI, 2024).",
+   "web_cta": "Identifique qué procesos debe automatizar primero."
+  },
+  {
+   "num": "07",
+   "name": "Inteligencia Artificial (AI)",
+   "promesa": "Inteligencia aplicada a resultados.",
+   "definicion": "Llevamos la inteligencia artificial de la experimentación a resultados medibles mediante agentes, copilotos y soluciones seguras conectadas a los datos y procesos del negocio, con gobierno desde el diseño.",
+   "designacion": "Microsoft Solutions Partner for Data & AI (Azure)",
+   "especializacion": "Sin especialización avanzada específica registrada en la documentación analizada.",
+   "marco": "Microsoft Agent Framework y metodología propia NortIA (Radar, Norte, Vector y Brújula).",
+   "tecnologias": "Microsoft 365 Copilot, Copilot Studio, Microsoft Foundry, Azure OpenAI, Azure AI Search, Azure AI Services, GitHub Copilot, Copilot para Power BI.",
+   "soluciones": [
+    {
+     "nombre": "NortIA: de la licencia al valor gobernado",
+     "problema": "Licencias dormidas, uso aislado de IA, agentes que no llegan a producción y falta de estrategia y gobierno.",
+     "hacemos": "Radar (diagnóstico), Norte (activación y prompts por rol), Vector (champions y agentes) y Brújula (gobierno y roadmap).",
+     "resultado": "Mayor adopción, agentes conectados a procesos medulares y gobernanza desde el diseño."
+    },
+    {
+     "nombre": "Agent Factory",
+     "problema": "Prototipos desconectados, respuestas sin contexto y agentes sin control operativo ni criterios de éxito.",
+     "hacemos": "Diseñamos, construimos, evaluamos y desplegamos agentes empresariales con seguridad, integración y medición.",
+     "resultado": "Agentes orientados a resultados, integrados a los sistemas y mantenibles."
+    },
+    {
+     "nombre": "Enterprise RAG y Búsqueda Inteligente",
+     "problema": "Información dispersa y respuestas de IA sin contexto ni control sobre fuentes y permisos.",
+     "hacemos": "Preparamos e indexamos fuentes autorizadas, con arquitectura RAG, controles de acceso y evaluación.",
+     "resultado": "Respuestas contextualizadas, mejor acceso al conocimiento y control de las fuentes."
+    }
+   ],
+   "oferta": "Convertimos la IA en capacidad empresarial: activamos las licencias, formamos champions, construimos agentes orientados a procesos y gobernamos personas, datos, seguridad y confianza con la metodología NortIA. Nos hacemos cargo de que la IA pase del piloto a resultados.",
+   "entrega": [
+    "Radar: diagnóstico de madurez, licencias, casos de uso, datos y riesgos.",
+    "Norte: activación y metodología de ingeniería de prompts por rol.",
+    "Vector: formación de champions y construcción de agentes orientados a procesos.",
+    "Brújula: gobierno de cultura, datos, seguridad, confianza y hoja de ruta.",
+    "Agentes en Copilot Studio y Microsoft Foundry, y soluciones RAG con Azure AI Search."
+   ],
+   "destino": "Destino web: Soluciones › IA y Automatización de procesos  (consein.com/ia-y-automatizacion-de-procesos) + nueva página destacada NortIA",
+   "offerings": [
+    {
+     "code": "IA-01",
+     "name": "NortIA: el sistema operativo para la IA",
+     "tipo": "Programa insignia (ver sección 03)",
+     "incluye": [
+      "Fase 0 Radar: medición y foco.",
+      "Fase 1 Norte: alineación y método N-O-R-T-E.",
+      "Fase 2 Vector: AI Champions y agentes reales.",
+      "Fase 3 Brújula: gobernanza y confianza."
+     ],
+     "frase": "De la licencia al valor gobernado, en cuatro fases que forman un ciclo continuo.",
+     "ideal": "Toda organización que quiere que la IA pase del piloto a resultados y se vuelva una capacidad propia.",
+     "resuelve": "Licencias dormidas, adopción superficial, agentes que no llegan a producción y falta de gobierno.",
+     "resultado": "Una organización autónoma para repetir el ciclo en cualquier área del negocio.",
+     "cta": "Solicite el Consein 360 · Diagnóstico Cero Fricción."
+    },
+    {
+     "code": "IA-02",
+     "name": "Agent Factory",
+     "tipo": "Implementación",
+     "incluye": [
+      "Descubrimiento del caso y criterios de éxito.",
+      "Diseño de conocimiento, acciones y arquitectura.",
+      "Construcción en Copilot Studio o Microsoft Foundry.",
+      "Pruebas, evaluación, publicación y monitoreo."
+     ],
+     "frase": "Convierta un caso de negocio en un agente en producción.",
+     "ideal": "Áreas con procesos repetitivos basados en conocimiento o consultas.",
+     "resuelve": "Prototipos desconectados y agentes sin control operativo ni criterios de éxito.",
+     "resultado": "Agentes integrados a sus sistemas y orientados a resultados.",
+     "puente": "Industrializa los agentes que nacen en la fase Vector.",
+     "cta": "Lleve su primer agente a producción."
+    },
+    {
+     "code": "IA-03",
+     "name": "Enterprise RAG y Búsqueda Inteligente",
+     "tipo": "Implementación",
+     "incluye": [
+      "Selección y preparación de fuentes.",
+      "Indexación con Azure AI Search y arquitectura RAG.",
+      "Controles de acceso y trazabilidad.",
+      "Evaluación y mejora continua de respuestas."
+     ],
+     "frase": "Respuestas de IA basadas en el conocimiento autorizado de su empresa.",
+     "ideal": "Organizaciones con políticas, procedimientos y documentos dispersos.",
+     "resuelve": "Tiempo perdido buscando información y respuestas de IA sin contexto.",
+     "resultado": "Conocimiento accesible, confiable y útil para toda la organización.",
+     "cta": "Active su conocimiento empresarial con IA."
+    },
+    {
+     "code": "IA-04",
+     "name": "IA Generativa a la Medida con Azure OpenAI",
+     "tipo": "Implementación",
+     "incluye": [
+      "Diseño de la experiencia y del caso de uso.",
+      "Arquitectura segura en Azure OpenAI y Microsoft Foundry.",
+      "Integración con sistemas y canales.",
+      "Monitoreo, seguridad y evolución."
+     ],
+     "frase": "Asistentes inteligentes para sus clientes y canales digitales.",
+     "ideal": "Empresas que quieren transformar la experiencia de sus clientes con IA.",
+     "resuelve": "Atención limitada por horarios, volumen o capacidad del equipo.",
+     "resultado": "Experiencias conversacionales escalables y seguras.",
+     "prueba": "Consein desarrolló junto a Bancaribe ARIA IA Generativa, reconocida en los WITSA Global AI Awards 2026 en la categoría AI Infrastructure.",
+     "cta": "Diseñe su asistente de IA con Consein."
+    },
+    {
+     "code": "IA-05",
+     "name": "Copilot Studio Quick Start",
+     "tipo": "Acelerador",
+     "incluye": [
+      "Selección de un caso de uso acotado.",
+      "Construcción conjunta del agente.",
+      "Buenas prácticas de seguridad y publicación.",
+      "Transferencia de conocimiento."
+     ],
+     "frase": "Su primer agente funcional, construido junto a su equipo.",
+     "ideal": "Equipos que quieren experimentar con agentes de forma guiada.",
+     "resuelve": "Curva de aprendizaje y miedo a empezar.",
+     "resultado": "Un agente en uso y un equipo que sabe cómo construir el siguiente.",
+     "puente": "Puerta de entrada práctica a la fase Vector.",
+     "cta": "Construya su primer agente."
+    },
+    {
+     "code": "IA-06",
+     "name": "AgentOps: Operación y Evolución de Agentes",
+     "tipo": "Servicio gestionado",
+     "incluye": [
+      "Monitoreo de calidad de respuestas.",
+      "Control de costos y consumo.",
+      "Revisión de seguridad y cumplimiento.",
+      "Mejoras y nuevos casos de uso."
+     ],
+     "frase": "Agentes que siguen funcionando bien después del lanzamiento.",
+     "ideal": "Empresas con agentes o asistentes de IA en producción.",
+     "resuelve": "Respuestas que se degradan, costos crecientes y riesgos sin vigilancia.",
+     "resultado": "IA confiable, segura y sostenible en el tiempo.",
+     "puente": "Sostiene en la operación los principios de la fase Brújula.",
+     "cta": "Asegure la operación de sus agentes."
+    }
+   ],
+   "evidencia": [
+    {
+     "cifra": "284% de ROI proyectado",
+     "significa": "Retorno proyectado en tres años con Azure AI y USD 23,3 millones de valor presente neto.",
+     "fuente": "Forrester TEI — Microsoft Azure AI, 2023"
+    },
+    {
+     "cifra": "150% más producción de trabajo",
+     "significa": "Mediante automatización y escalamiento de procesos con IA.",
+     "fuente": "Forrester TEI — Microsoft Azure AI, 2023"
+    },
+    {
+     "cifra": "116% de ROI con Copilot",
+     "significa": "Retorno de Microsoft 365 Copilot en empresas corporativas, con USD 19,7 millones de valor presente neto.",
+     "fuente": "Forrester TEI — M365 Copilot Enterprise, 2025"
+    }
+   ],
+   "contexto": [
+    "88% de las organizaciones ya usa IA en al menos una función, pero casi dos tercios aún no ha comenzado a escalarla y solo 39% reporta algún impacto en su EBIT. (McKinsey — The State of AI 2025)",
+    "63% de las organizaciones carece de políticas de gobierno de IA. (IBM — Cost of a Data Breach Report 2025)"
+   ],
+   "lectura": "La brecha de la IA no es tecnológica, es de método y de gobierno. NortIA existe para cerrarla. (NortIA se posiciona por su estructura y entregables; no se publican cifras propias no verificadas.)",
+   "web_h1": "Inteligencia artificial que llega a producción y genera resultados",
+   "web_sub": "Con NortIA activamos, escalamos y gobernamos la IA en su organización.",
+   "web_texto": "Licencias dormidas, pilotos que nunca pasan a producción y agentes sin control son el día a día de muchas empresas. Consein acompaña todo el recorrido: diagnóstico de preparación, activación por rol, formación de champions, construcción de agentes conectados a sus procesos y gobierno de datos, seguridad y confianza.",
+   "web_beneficios": [
+    "Mayor aprovechamiento de las licencias de IA",
+    "Agentes conectados a procesos medulares",
+    "Gobierno y seguridad desde el diseño"
+   ],
+   "web_prueba": "Forrester proyecta un ROI de 284% en tres años para las organizaciones que adoptan Azure AI (TEI, 2023).",
+   "web_cta": "Solicite el Diagnóstico Cero Fricción de NortIA."
+  }
+ ]
+};
+
+/* ----------------------------------------------------------------
+   Configuración de páginas (sección 06 del documento)
+------------------------------------------------------------------*/
+const COLORS = {'01':'#2F6FED','02':'#2E9D5B','03':'#0E9AA7','04':'#D9731A','05':'#1A8FD1','06':'#7B4FD6','07':'#4B3FC9'};
+const SHORT = {'01':'Infraestructura','02':'Seguridad','03':'Colaboración','04':'Servicios Empresariales','05':'Data','06':'Automatización','07':'Inteligencia Artificial'};
+const ANCHOR = {'01':'infraestructura','02':'seguridad','03':'colaboracion','04':'servicios-empresariales','05':'data','06':'automatizacion','07':'inteligencia-artificial'};
+const PAGES = [
+  {slug:'nortia', title:'NortIA', desc:'Solución insignia: el sistema operativo para la IA', nortia:true},
+  {slug:'infraestructura-y-colaboracion', title:'Infraestructura y Colaboración', desc:'Azure, Microsoft 365 y Copilot', practices:['01','03'],
+    hero:{h1:'La plataforma donde corre su negocio y el espacio donde su equipo colabora', sub:'Diseñamos, migramos y operamos su infraestructura en Microsoft Azure, y conectamos a sus personas con Microsoft 365 y Copilot, con responsabilidad de extremo a extremo.'}},
+  {slug:'ciberseguridad', title:'Ciberseguridad', desc:'Zero Trust con Defender, Sentinel, Entra y Purview', practices:['02'], star:'SEG-03'},
+  {slug:'ia-y-automatizacion-de-procesos', title:'IA y Automatización de procesos', desc:'Agentes, copilotos y Power Platform', practices:['07','06'], banner:true, skip:['IA-01'],
+    hero:{h1:'Inteligencia artificial que llega a producción y procesos que se ejecutan solos', sub:'Con NortIA activamos, escalamos y gobernamos la IA, y con Microsoft Power Platform eliminamos tareas manuales para acelerar la operación.'}},
+  {slug:'financieras-y-gobierno-corporativo', title:'Data y Soluciones Empresariales', desc:'Fabric, Purview, Dynamics 365 y Power BI', practices:['05','04'],
+    hero:{h1:'Datos confiables y sistemas de negocio conectados para decidir a tiempo', sub:'Unificamos y gobernamos sus datos con Microsoft Fabric y Purview, e integramos ERP, CRM y Power BI para pasar de la transacción a la decisión.'}},
+];
+const OUT_OF_SCOPE = [{title:'Telecom y Hardware',desc:'Contenido actual del sitio'},{title:'Ecosistema',desc:'Contenido actual del sitio'}];
+
+const ICONS = {
+ '01':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18a4.5 4.5 0 0 1-.5-9A6 6 0 0 1 18 9a4 4 0 0 1-.5 9z"/></svg>',
+ '02':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+ '03':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 1.5-4.5 3-4.5s4 1 4 4.5"/></svg>',
+ '04':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+ '05':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>',
+ '06':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>',
+ '07':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg>',
+ compass:'<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l-2.5 5.5L8 16l2.5-5.5z" fill="currentColor"/></svg>'
+};
+
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const P = num => DATA.practicas.find(p=>p.num===num);
+const noDot = s => s.replace(/\.\s*$/,'');
+const question = s => '¿' + noDot(s).replace(/^./,c=>c.toUpperCase()) + '?';
+const cleanLectura = s => s.replace(/\s*\(NortIA se posiciona.*$/,'');
+const DIAG_CTA = 'Solicite su Diagnóstico Consein 360';
+const setColor = (el,c)=>el.style.setProperty('--c',c);
+
+/* ---------------- Menú ---------------- */
+function buildMenu(){
+  const dd = document.getElementById('dd');
+  const n = PAGES[0];
+  let h = `<a class="feature" href="#/${n.slug}"><span class="dot" style="background:#B8734A"></span><div><strong>${n.title}<span class="tag">INSIGNIA</span></strong><span>${n.desc}</span></div></a>`;
+  PAGES.slice(1).forEach(p=>{
+    const c = COLORS[p.practices[0]];
+    h += `<a href="#/${p.slug}"><span class="dot" style="background:${c}"></span><div><strong>${p.title}</strong><span>${p.desc}</span></div></a>`;
+  });
+  OUT_OF_SCOPE.forEach(o=> h += `<a class="dim" href="https://www.consein.com/" target="_blank" rel="noopener"><span class="dot" style="background:#C9CFDB"></span><div><strong>${o.title}</strong><span>${o.desc}</span></div></a>`);
+  dd.innerHTML = h;
+  document.getElementById('foot-sol').innerHTML = PAGES.map(p=>`<li><a href="#/${p.slug}">${p.title}</a></li>`).join('') + OUT_OF_SCOPE.map(o=>`<li><a href="https://www.consein.com/">${o.title}</a></li>`).join('');
+}
+
+/* ---------------- Bloques reutilizables ---------------- */
+function crumbs(title){
+  return `<div class="wrap crumbs"><a href="https://www.consein.com/">Inicio</a> › <a href="#/soluciones">Soluciones</a>${title?` › <span>${esc(title)}</span>`:''}</div>`;
+}
+function offerCard(o, opts={}){
+  const star = opts.star===o.code;
+  const extra = [
+    o.prueba ? `<div class="extra"><b>Prueba ·</b> ${esc(o.prueba)}</div>`:'',
+    o.puente ? `<div class="extra"><b>Puente NortIA ·</b> ${esc(o.puente)}</div>`:''
+  ].join('');
+  return `<article class="offer${star?' star':''}" data-type="${esc(typeKey(o.tipo))}">
+    ${star?'<div class="ribbon">PUENTE HACIA NORTIA</div>':''}
+    <div class="top"><div class="code">${esc(o.code)}</div><span class="type">${esc(o.tipo)}</span>
+    <h3>${esc(o.name)}</h3><p class="frase">${esc(o.frase)}</p></div>
+    <dl>
+      <dt>Ideal para</dt><dd>${esc(o.ideal)}</dd>
+      <dt>Qué resuelve</dt><dd>${esc(o.resuelve)}</dd>
+      <dt>Incluye</dt><dd><ul>${o.incluye.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></dd>
+      <div class="res"><dt>Resultado</dt><dd>${esc(o.resultado)}</dd></div>
+      ${extra}
+    </dl>
+    <div class="foot"><a class="btn btn-outline btn-sm" href="#contacto" data-interest="${esc(o.code+' · '+o.name)}">${esc(noDot(o.cta))}</a></div>
+  </article>`;
+}
+function typeKey(t){
+  t=t.toLowerCase();
+  if(t.includes('assessment')||t.includes('diagn')) return 'Assessment';
+  if(t.includes('gestionado')) return 'Servicio gestionado';
+  if(t.includes('programa')||t.includes('ciclo')||t.includes('fase')) return 'Programa';
+  if(t.includes('acelerador')||t.includes('quick')) return 'Acelerador';
+  return 'Implementación';
+}
+function offeringsBlock(list, id, opts={}){
+  const types = [...new Set(list.map(o=>typeKey(o.tipo)))];
+  return `<div class="filters" data-for="${id}"><button class="chip on" data-f="*">Todos (${list.length})</button>${types.map(t=>`<button class="chip" data-f="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+  <div class="grid g3" id="${id}">${list.map(o=>offerCard(o,opts)).join('')}</div>`;
+}
+function msBadge(){return `<div class="ms" aria-hidden="true"><i style="background:#F25022"></i><i style="background:#7FBA00"></i><i style="background:#00A4EF"></i><i style="background:#FFB900"></i></div>`}
+
+const TESTIMONIOS = {'01':'Digitel (Gerencia de TI e Inteligencia del Negocio) destaca el apoyo de Consein en trabajo remoto, seguridad y servicios en la nube. — Testimonio publicado en consein.com'};
+
+function practiceSection(p, page, idx){
+  const c = COLORS[p.num], id = ANCHOR[p.num];
+  const offers = p.offerings.filter(o=>!(page.skip||[]).includes(o.code));
+  const bridge = DATA.nortia.puentes.find(b=>p.name.startsWith(b.esp) || (b.esp==='AI' && p.num==='07'));
+  const sectionStyle = `style="--c:${c}"`;
+  return `
+  <!-- ===== ${p.name} ===== -->
+  <section id="${id}" ${sectionStyle}>
+    <div class="wrap">
+      <div class="practice-head"><div class="ico" style="--pc:${c}">${ICONS[p.num]}</div><div><div class="eyebrow">Práctica ${p.num} · ${esc(SHORT[p.num])}</div><div style="color:var(--muted);font-weight:600">${esc(p.promesa)}</div></div></div>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);max-width:860px">${esc(p.web_h1)}</h2>
+      <p class="lead">${esc(p.web_texto)}</p>
+      <div class="benefits">${p.web_beneficios.map(b=>`<span>${esc(b)}</span>`).join('')}</div>
+    </div>
+  </section>
+
+  <section class="alt" id="${id}-problemas" ${sectionStyle}>
+    <div class="wrap">
+      <div class="eyebrow">Problemas que resolvemos</div>
+      <h2>¿Le resulta familiar?</h2>
+      <div class="grid g2" style="margin-top:22px">${p.soluciones.map(s=>`<div class="q"><span class="qm">?</span><p>${esc(question(s.problema))}</p></div>`).join('')}</div>
+    </div>
+  </section>
+
+  <section id="${id}-soluciones" ${sectionStyle}>
+    <div class="wrap">
+      <div class="eyebrow">Soluciones</div>
+      <h2>Cómo lo resolvemos</h2>
+      <p class="lead" style="margin-bottom:26px">${esc(p.oferta)}</p>
+      ${p.soluciones.map(s=>`<div class="sol"><div class="n"><h3>${esc(s.nombre)}</h3><p>${esc(s.problema)}</p></div><div class="h"><small>Qué hacemos</small><p>${esc(s.hacemos)}</p></div><div class="r"><small>Resultado para el negocio</small><p>${esc(s.resultado)}</p></div></div>`).join('')}
+    </div>
+  </section>
+
+  <section class="alt" id="${id}-offerings" ${sectionStyle}>
+    <div class="wrap">
+      <div class="eyebrow">Offerings · ${esc(SHORT[p.num])}</div>
+      <h2>Elija por dónde empezar</h2>
+      <p class="lead">Ofertas empaquetadas, con alcance claro y un resultado concreto. El alcance final se ajusta en el Diagnóstico Consein 360.</p>
+      ${page.banner && p.num==='07' ? `<div style="margin:20px 0"><a class="btn btn-copper btn-sm" href="#/nortia">IA-01 · NortIA: el sistema operativo para la IA →</a></div>`:''}
+      ${offeringsBlock(offers, 'off-'+p.num, {star:page.star})}
+    </div>
+  </section>
+
+  <section id="${id}-evidencia" ${sectionStyle}>
+    <div class="wrap">
+      <div class="eyebrow">Evidencia de impacto</div>
+      <h2>Lo que reporta la industria</h2>
+      <div class="grid g3" style="margin-top:22px">${p.evidencia.slice(0,3).map(e=>`<div class="ev"><b>${esc(e.cifra)}</b><p>${esc(e.significa)}</p><cite>${esc(e.fuente)}</cite></div>`).join('')}</div>
+      <div class="market"><h4>Contexto de mercado</h4><ul>${p.contexto.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lect">Lectura Consein: ${esc(cleanLectura(p.lectura))}</p></div>
+      <p class="disclaimer">Cifras de referencia de la industria, expresadas “hasta” o “en promedio”; no constituyen garantía. El resultado de cada cliente se determina con el Diagnóstico Consein 360.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="${id}-respaldo" ${sectionStyle}>
+    <div class="wrap">
+      <div class="eyebrow">Respaldo</div>
+      <h2>Por qué confiar en Consein</h2>
+      <div class="grid g2" style="margin-top:22px">
+        <div class="badge">${msBadge()}<div><h4>${esc(p.designacion)}</h4>${/^Sin /.test(p.especializacion)?'':`<p>${esc(p.especializacion)}</p>`}</div></div>
+        <div class="card kv"><p style="margin-top:0"><b>Marco de referencia:</b> ${esc(p.marco)}</p><b>Tecnologías clave</b><div class="tech">${p.tecnologias.replace(/\.$/,'').split(/,\s*/).map(t=>`<span>${esc(t)}</span>`).join('')}</div></div>
+      </div>
+      ${TESTIMONIOS[p.num]?`<blockquote class="testi" style="margin-top:22px">${esc(TESTIMONIOS[p.num])}</blockquote>`:''}
+    </div>
+  </section>
+
+  ${bridge?`<section style="--c:${c};padding-top:0;padding-bottom:${idx===page.practices.length-1?'72px':'24px'}" class="alt">
+    <div class="wrap"><div class="bridge"><div class="comp">${ICONS.compass}</div>
+      <div><h3>${esc(SHORT[p.num])} + NortIA</h3><p>${esc(bridge.necesita)}</p><div class="codes">Offerings que se activan: ${esc(bridge.offerings)}</div></div>
+      <a class="btn btn-copper btn-sm" href="#/nortia">Conozca NortIA</a></div></div>
+  </section>`:''}`;
+}
+
+function closing(interest){
+  return `<section class="closing" id="contacto">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--copper-2)">Primer paso</div>
+      <h2>Solicite su Diagnóstico Consein 360</h2>
+      <p>Una evaluación ejecutiva gratuita, de 8 horas y 100% remota, que convierte los benchmarks de la industria en una hoja de ruta a la medida de su organización.</p>
+      <form class="contact" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset();">
+        <label>Nombre y apellido<input required name="nombre" autocomplete="name"></label>
+        <label>Empresa<input required name="empresa" autocomplete="organization"></label>
+        <label>Correo corporativo<input required type="email" name="email" autocomplete="email"></label>
+        <label>País<select name="pais"><option>Venezuela</option><option>Panamá</option><option>República Dominicana</option><option>Estados Unidos</option><option>Otro</option></select></label>
+        <label class="full">Solución de interés<select name="interes" id="interes">${interestOptions(interest)}</select></label>
+        <label class="full">¿Qué problema de negocio quiere resolver?<textarea name="mensaje" rows="3"></textarea></label>
+        <div class="full"><button class="btn btn-primary" type="submit">${DIAG_CTA}</button></div>
+        <div class="ok">Gracias. Un especialista de Consein le contactará para agendar su diagnóstico. (Formulario de muestra: conectar al CRM del sitio.)</div>
+      </form>
+    </div>
+  </section>`;
+}
+function interestOptions(def){
+  let h = `<option>Diagnóstico Consein 360 (general)</option><optgroup label="NortIA">${DATA.nortia.offerings.map(o=>`<option>${esc(o.code+' · '+o.name)}</option>`).join('')}</optgroup>`;
+  DATA.practicas.forEach(p=>{ h += `<optgroup label="${esc(SHORT[p.num])}">${p.offerings.map(o=>`<option>${esc(o.code+' · '+o.name)}</option>`).join('')}</optgroup>`; });
+  return h;
+}
+
+/* ---------------- Páginas ---------------- */
+function pageHub(){
+  setColor(document.documentElement,'#2F5BEA');
+  const stats = [['+39','años en el mercado (desde 1987)'],['82','certificaciones Microsoft vigentes'],['25','especialistas certificados'],['7','prácticas especializadas'],['4','designaciones Solutions Partner']];
+  const steps = [['Evaluamos','Descubrimos el potencial oculto de su tecnología.'],['Diseñamos','Plataformas a la medida de hoy y de mañana.'],['Actualizamos','Modernizamos con agilidad y precisión.'],['Transformamos','Impulsamos el cambio cultural y digital.'],['Optimizamos','Más rendimiento, menos costo.'],['Administramos','Continuidad y confianza.'],['Aseguramos','Gestión total para que usted crezca.']];
+  return `${crumbs()}
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Soluciones · Dirección de Innovación y Servicios Digitales</div>
+    <h1>Soluciones que resuelven problemas de negocio</h1>
+    <p>Construimos la plataforma tecnológica, protegemos los activos digitales, conectamos a las personas, optimizamos los procesos, transformamos los datos en valor, automatizamos la operación e incorporamos inteligencia artificial para acelerar su crecimiento.</p>
+    <div class="actions"><a class="btn btn-primary" href="#contacto">${DIAG_CTA}</a><a class="btn btn-ghost" href="#/nortia">Conozca NortIA</a></div>
+    <div class="note">Gratuito · 8 horas · 100% remoto</div>
+  </div></section>
+  <div class="wrap"><div class="stats">${stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('')}</div></div>
+
+  <section><div class="wrap">
+    <div class="banner-nortia"><div><div class="eyebrow" style="color:var(--copper-2)">Solución insignia</div><h3 style="font-size:1.6rem">NortIA: el sistema operativo para la IA en su empresa</h3><p>La metodología de Consein para pasar de la licencia al valor gobernado. Radar → Norte → Vector → Brújula.</p></div><a class="btn btn-copper" href="#/nortia">Descubra NortIA</a></div>
+  </div></section>
+
+  <section class="alt" style="padding-top:56px"><div class="wrap">
+    <div class="eyebrow">Siete prácticas, un ecosistema</div>
+    <h2>Nuestras soluciones</h2>
+    <p class="lead">La infraestructura es el cimiento, la seguridad el perímetro, la automatización el motor y los datos y la IA el cerebro. El valor real está en orquestarlos juntos.</p>
+    <div class="grid g4" style="margin-top:26px">${DATA.practicas.map(p=>{const pg=PAGES.find(x=>x.practices&&x.practices.includes(p.num));return `<div class="card pcard" style="--pc:${COLORS[p.num]}"><div class="ico">${ICONS[p.num]}</div><div class="num">${p.num}</div><h3>${esc(SHORT[p.num])}</h3><p>${esc(p.promesa)} ${esc(p.definicion.split('. ')[0])}.</p><a href="#/${pg.slug}#${ANCHOR[p.num]}">Ver soluciones →</a></div>`}).join('')}
+      <div class="card pcard" style="--pc:#B8734A;background:var(--copper-bg)"><div class="ico">${ICONS.compass}</div><div class="num">INSIGNIA</div><h3>NortIA</h3><p>El camino completo hacia una cultura de IA sostenible en el ecosistema Microsoft. Activa a las siete prácticas.</p><a href="#/nortia">Ver NortIA →</a></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="eyebrow">Por qué Consein</div>
+    <h2>Nos hacemos cargo del resultado, no solo del proyecto</h2>
+    <p class="lead">Desde 1987 transformamos empresas con tecnología Microsoft en Venezuela, Panamá, República Dominicana y Estados Unidos. Somos Microsoft Solutions Partner en Infrastructure (Azure), Modern Work, Data &amp; AI y Digital &amp; App Innovation, con especialización en migración de infraestructura y bases de datos a Azure.</p>
+    <div class="model" style="margin-top:24px">${steps.map((s,i)=>`<div><b>${i+1}. ${s[0]}</b><p>${s[1]}</p></div>`).join('')}</div>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card"><h3>Uso correcto</h3><p style="color:var(--muted);margin:0">La solución fue adoptada por los usuarios.</p></div>
+      <div class="card"><h3>Operación estable</h3><p style="color:var(--muted);margin:0">Funciona sin interrupciones críticas y con alto rendimiento.</p></div>
+      <div class="card"><h3>Evolución</h3><p style="color:var(--muted);margin:0">Puede optimizarse y escalar en el tiempo.</p></div>
+    </div>
+    <p class="disclaimer">Así medimos el éxito de un proyecto. En 2026, ARIA IA Generativa, desarrollada junto a Bancaribe, fue reconocida en los WITSA Global AI Awards (AI Infrastructure).</p>
+  </div></section>
+
+  <section class="alt"><div class="wrap">
+    <div class="eyebrow">Mapa del menú Soluciones</div>
+    <h2>Dónde encontrar cada especialidad</h2>
+    <table class="table-map" style="margin-top:20px"><thead><tr><th>Página</th><th>Especialidades</th><th>Offerings</th></tr></thead><tbody>
+      <tr><td><a href="#/nortia">NortIA</a></td><td>Solución insignia transversal</td><td><code>NRT-00 a NRT-05</code></td></tr>
+      <tr><td><a href="#/infraestructura-y-colaboracion">Infraestructura y Colaboración</a></td><td>Infraestructura · Colaboración</td><td><code>INF-01 a INF-07 · COL-01 a COL-06</code></td></tr>
+      <tr><td><a href="#/ciberseguridad">Ciberseguridad</a></td><td>Seguridad</td><td><code>SEG-01 a SEG-06</code></td></tr>
+      <tr><td><a href="#/ia-y-automatizacion-de-procesos">IA y Automatización de procesos</a></td><td>Inteligencia Artificial · Automatización</td><td><code>IA-02 a IA-06 · AUT-01 a AUT-06</code></td></tr>
+      <tr><td><a href="#/financieras-y-gobierno-corporativo">Data y Soluciones Empresariales</a></td><td>Data · Servicios Empresariales</td><td><code>DAT-01 a DAT-06 · EMP-01 a EMP-06</code></td></tr>
+    </tbody></table>
+  </div></section>
+  ${closing()}`;
+}
+
+function pageSolution(page){
+  const nums = page.practices;
+  setColor(document.documentElement, COLORS[nums[0]]);
+  const first = P(nums[0]);
+  const hero = page.hero || {h1:first.web_h1, sub:first.web_sub};
+  const sub = nums.map(n=>{const p=P(n),a=ANCHOR[n];return `<a href="#${a}" style="color:${COLORS[n]}">● ${esc(SHORT[n])}</a><a href="#${a}-problemas">Problemas</a><a href="#${a}-soluciones">Soluciones</a><a href="#${a}-offerings">Offerings</a><a href="#${a}-evidencia">Evidencia</a><a href="#${a}-respaldo">Respaldo</a>`}).join('') + `<a href="#contacto"><b>Diagnóstico 360</b></a>`;
+  return `${crumbs(page.title)}
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Soluciones · ${esc(page.title)}</div>
+    <h1>${esc(hero.h1)}</h1>
+    <p>${esc(hero.sub)}</p>
+    <div class="actions"><a class="btn btn-primary" href="#contacto">${DIAG_CTA}</a></div>
+    <div class="note">Gratuito · 8 horas · 100% remoto</div>
+  </div></section>
+  <nav class="subnav" aria-label="En esta página"><div class="wrap">${sub}</div></nav>
+  ${page.banner?`<section style="padding-bottom:0"><div class="wrap"><div class="banner-nortia"><div><div class="eyebrow" style="color:var(--copper-2)">Solución insignia · IA-01</div><h3 style="font-size:1.5rem">NortIA: de la licencia al valor gobernado</h3><p>Cuatro fases que forman un ciclo continuo: Radar, Norte, Vector y Brújula. Activa y gobierna la IA en toda su organización.</p></div><a class="btn btn-copper" href="#/nortia">Conozca NortIA</a></div></div></section>`:''}
+  ${nums.map((n,i)=>practiceSection(P(n),page,i)).join('')}
+  ${closing()}`;
+}
+
+function pageNortia(){
+  setColor(document.documentElement,'#B8734A');
+  const N = DATA.nortia;
+  const phases = [
+    {k:'Fase 0',n:'Radar',s:'Medición y foco',d:'Detectamos su punto de partida antes de avanzar.',i:['Medición de madurez organizacional y readiness tecnológico.','Priorización de hasta tres dominios de negocio.','Entrada: Consein 360 · Diagnóstico Cero Fricción.'],a:'Todas las especialidades'},
+    {k:'Fase 1',n:'Norte',s:'Alineación y método',d:'La dirección antes que la tecnología: enseñamos a preguntar bien.',i:['Metodología propia de ingeniería de prompting.','Talleres de 4 horas, grupos de hasta 10 personas.','Sesiones ejecutivas para perfiles C-level.'],a:'Colaboración · Servicios Empresariales'},
+    {k:'Fase 2',n:'Vector',s:'Capacidad interna',d:'La dirección de NortIA, convertida en capacidad propia de su equipo.',i:['Programa AI Champions de 6 a 8 semanas con mentoría semanal.','Agentes reales con Copilot Studio y Agent Builder.','Certificación de los champions.'],a:'Automatización · AI · Data · Infraestructura'},
+    {k:'Fase 3',n:'Brújula',s:'Gobernanza y confianza',d:'La confianza y la gobernanza que mantienen el rumbo correcto.',i:['Cultura de liderazgo: del diseño a la acción.','IQ: gobernanza de la información que alimenta a la IA.','Trust: arquitectura de seguridad y confianza.'],a:'Data · Seguridad · Infraestructura'},
+  ];
+  const norte = [['N','Necesidad','Ancla el prompt en un dolor real del negocio.','¿Qué problema concreto necesito resolver?'],['O','Objetivo y Orden','Define el éxito y las acciones a ejecutar.','¿Qué resultado específico espero obtener?'],['R','Rol','Asigna una experticia, por ejemplo: analista financiero senior.','¿Quién debe ser Copilot en este contexto?'],['T','Tono y Formato','Controla la salida exacta: tabla, tablero, correo.','¿Cómo quiero la respuesta?'],['E','Evidencia','Conecta el prompt con la realidad y los datos de la empresa.','¿Qué datos debe usar?']];
+  const pracNum = {'Infraestructura':'01','Seguridad':'02','Colaboración':'03','Servicios Empresariales':'04','Data':'05','Automatización':'06','AI':'07'};
+  return `${crumbs('NortIA')}
+  <section class="hero nortia"><div class="wrap">
+    <div class="eyebrow" style="color:var(--copper-2)">NortIA · Metodología propia de Consein</div>
+    <h1>NortIA: el sistema operativo para la IA en su empresa</h1>
+    <div class="phases-inline">Radar → Norte → Vector → Brújula</div>
+    <p>La metodología de Consein para pasar de la licencia al valor gobernado: cuatro fases, una sola dirección.</p>
+    <div class="actions"><a class="btn btn-copper" href="#contacto">Inicie su Consein 360 · Diagnóstico Cero Fricción</a></div>
+    <div class="note">Sin costo · 8 horas · 100% remoto</div>
+  </div></section>
+  <nav class="subnav" aria-label="En esta página"><div class="wrap"><a href="#problema">El problema</a><a href="#paradigma">Paradigma</a><a href="#fases">Las 4 fases</a><a href="#norte">Método N-O-R-T-E</a><a href="#ciclo">Ciclo</a><a href="#prueba">Respaldo</a><a href="#offerings">Offerings</a><a href="#ecosistema">Especialidades</a><a href="#contacto"><b>Diagnóstico</b></a></div></nav>
+
+  <section id="problema"><div class="wrap">
+    <div class="eyebrow">El espejismo de la IA</div>
+    <h2>¿Su Copilot funciona como un buscador con esteroides?</h2>
+    <p class="lead">Comprar licencias no transforma una empresa. Sin dirección, la IA termina subutilizada, con adopción superficial y un retorno imposible de medir.</p>
+    <div class="pain" style="margin-top:24px">
+      <div><h4>El error común</h4><p>Tratar la inteligencia artificial como una implementación puntual de TI, enfocada solo en la compra de licencias.</p></div>
+      <div><h4>El síntoma</h4><p>Copilot termina subutilizado y opera en la práctica como un simple buscador con esteroides.</p></div>
+      <div><h4>El impacto</h4><p>Adopción superficial, retorno de la inversión que no se puede medir y alta fricción en los procesos diarios.</p></div>
+    </div>
+    <div class="market"><h4>Lo que confirman las firmas independientes</h4><ul>
+      <li>88% de las organizaciones usa IA en al menos una función, pero casi dos tercios aún no ha comenzado a escalarla y solo 39% reporta algún impacto en su EBIT. (McKinsey, The State of AI 2025)</li>
+      <li>60% de los proyectos de IA que no cuenten con datos preparados para IA serán abandonados hasta 2026, según la predicción de Gartner. (Gartner, 2025)</li>
+      <li>63% de las organizaciones carece de políticas de gobierno de IA. (IBM, Cost of a Data Breach 2025)</li></ul></div>
+  </div></section>
+
+  <section class="alt" id="paradigma"><div class="wrap">
+    <div class="eyebrow">Del gasto a la inversión</div>
+    <h2>El cambio de paradigma</h2>
+    <table class="compare" style="margin-top:20px"><thead><tr><th>Dimensión</th><th>El espejismo (status quo)</th><th>La realidad con NortIA</th></tr></thead><tbody>
+      <tr><td>Enfoque principal</td><td>Compra masiva de licencias tecnológicas.</td><td>Transferencia sistemática de conocimiento.</td></tr>
+      <tr><td>Uso de Copilot</td><td>Un buscador con esteroides para tareas aisladas.</td><td>Un motor de productividad integrado en el flujo de trabajo.</td></tr>
+      <tr><td>Impacto en el negocio</td><td>Fricción operativa, abandono temprano y retorno invisible.</td><td>Adopción profunda, agentes autónomos y retorno medible.</td></tr>
+    </tbody></table>
+  </div></section>
+
+  <section id="fases"><div class="wrap">
+    <div class="eyebrow">Cuatro fases, una sola dirección</div>
+    <h2>Cómo funciona NortIA</h2>
+    <p class="lead">NortIA no es una herramienta ni una licencia: es la metodología que convierte la IA en una capacidad permanente de su organización. Su motor central es la transferencia de conocimiento.</p>
+    <div class="cycle" style="margin-top:26px">${phases.map(f=>`<div class="phase"><div class="k">${f.k}</div><h3>${f.n}</h3><div class="sub">${f.s}</div><p style="font-size:.9rem;color:var(--muted)">${f.d}</p><ul>${f.i.map(x=>`<li>${x}</li>`).join('')}</ul><div class="act"><b>Activa:</b> ${f.a}</div></div>`).join('')}</div>
+  </div></section>
+
+  <section class="alt" id="norte"><div class="wrap">
+    <div class="eyebrow">Fase Norte</div>
+    <h2>La arquitectura N-O-R-T-E: el estándar de comunicación con la IA</h2>
+    <div class="norte" style="margin-top:22px">${norte.map(n=>`<div><b>${n[0]}</b><h4>${n[1]}</h4><p>${n[2]}</p><em>${n[3]}</em></div>`).join('')}</div>
+  </div></section>
+
+  <section id="ciclo"><div class="wrap">
+    <div class="eyebrow">Un ciclo continuo</div>
+    <h2>NortIA no termina: evoluciona</h2>
+    <div class="model" style="margin-top:20px">
+      <div><b style="color:var(--copper)">0 · Radar</b><p>Identifica un nuevo dominio de negocio de alto valor.</p></div>
+      <div><b style="color:var(--copper)">1 · Norte</b><p>Alinea al equipo con la metodología N-O-R-T-E.</p></div>
+      <div><b style="color:var(--copper)">2 · Vector</b><p>Construye agentes y certifica a los champions.</p></div>
+      <div><b style="color:var(--copper)">3 · Brújula</b><p>Asegura con gobernanza de datos, seguridad y cambio cultural.</p></div>
+    </div>
+    <p class="lead" style="margin-top:18px">Una vez instalado, su organización tiene la autonomía para repetir este ciclo en cualquier área del negocio.</p>
+  </div></section>
+
+  <section class="alt" id="prueba"><div class="wrap">
+    <div class="eyebrow">Respaldo</div>
+    <h2>Respaldo de Consein en inteligencia artificial</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="ev"><b>WITSA Global AI Awards 2026</b><p>ARIA IA Generativa, desarrollada junto a Bancaribe, reconocida en la categoría AI Infrastructure.</p></div>
+      <div class="ev"><b>9 horas al mes</b><p>Ahorro promedio por usuario con Microsoft 365 Copilot y ROI de 116% en empresas corporativas.</p><cite>Forrester TEI, 2025</cite></div>
+      <div class="ev"><b>Microsoft Solutions Partner</b><p>Data &amp; AI (Azure), además de Infrastructure, Modern Work y Digital &amp; App Innovation, que respaldan cada fase.</p></div>
+    </div>
+    <p class="disclaimer">NortIA se posiciona por su estructura, su método y sus entregables. Las cifras de la industria son referencia y no constituyen garantía.</p>
+  </div></section>
+
+  <section id="offerings" style="--c:#B8734A"><div class="wrap">
+    <div class="eyebrow">Offerings NortIA</div>
+    <h2>Contrátelo como programa completo o por fases</h2>
+    <p class="lead">Cada offering es una puerta de entrada que conduce naturalmente a la siguiente.</p>
+    ${offeringsBlock(N.offerings,'off-nrt',{star:'NRT-00'}).replace('PUENTE HACIA NORTIA','EMPIECE AQUÍ')}
+  </div></section>
+
+  <section class="alt" id="ecosistema"><div class="wrap">
+    <div class="eyebrow">Un ecosistema, no piezas sueltas</div>
+    <h2>Cómo NortIA impulsa a todas las especialidades</h2>
+    <p class="lead">Ninguna iniciativa de IA funciona en el vacío. Cada fase de NortIA genera necesidades concretas que resuelven las demás prácticas.</p>
+    <table class="table-map" style="margin-top:20px"><thead><tr><th>Especialidad</th><th>Qué necesita NortIA de ella</th><th>Offerings que se activan</th></tr></thead><tbody>
+      ${N.puentes.map(b=>{const n=pracNum[b.esp];const pg=PAGES.find(x=>x.practices&&x.practices.includes(n));return `<tr><td><a href="#/${pg.slug}#${ANCHOR[n]}" style="color:${COLORS[n]}">${esc(SHORT[n])}</a></td><td>${esc(b.necesita)}</td><td><code>${esc(b.offerings)}</code></td></tr>`}).join('')}
+    </tbody></table>
+  </div></section>
+  ${closing()}`;
+}
+
+/* ---------------- Router ---------------- */
+function render(){
+  const raw = location.hash.replace(/^#\/?/,'');
+  const [slug, anchor] = raw.split('#');
+  const page = PAGES.find(p=>p.slug===slug);
+  // anclas internas (#seccion) no cambian de página
+  if(raw && !raw.startsWith('/') && !page && slug!=='soluciones' && document.getElementById(slug)) return;
+  const app = document.getElementById('app');
+  app.innerHTML = !page ? pageHub() : page.nortia ? pageNortia() : pageSolution(page);
+  document.title = (page?page.title+' | ':'')+'Soluciones | Consein';
+  document.querySelector('nav.main').classList.remove('open');
+  wire();
+  if(anchor){ const el=document.getElementById(anchor); if(el) setTimeout(()=>el.scrollIntoView(),0); }
+  else window.scrollTo(0,0);
+}
+function wire(){
+  document.querySelectorAll('.filters').forEach(f=>{
+    f.addEventListener('click',e=>{
+      const b=e.target.closest('.chip'); if(!b) return;
+      f.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));
+      document.querySelectorAll('#'+f.dataset.for+' .offer').forEach(o=>o.style.display=(b.dataset.f==='*'||o.dataset.type===b.dataset.f)?'':'none');
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    const h=a.getAttribute('href');
+    if(h.startsWith('#/')) return;
+    a.addEventListener('click',e=>{
+      const el=document.getElementById(h.slice(1)); if(!el) return;
+      e.preventDefault(); el.scrollIntoView({behavior:'smooth'});
+      if(a.dataset.interest){ const s=document.getElementById('interes'); if(s){ [...s.options].forEach(o=>{if(o.text===a.dataset.interest)s.value=o.value}); } }
+    });
+  });
+}
+buildMenu();
+window.addEventListener('hashchange',render);
+render();
+</script>
+</body>
+</html>
