@@ -10,13 +10,12 @@
 <!--
   MODELO DE PÁGINA · Menú "Soluciones" de www.consein.com
   Basado en: Consein_Soluciones_DISD_Offerings_NortIA_ver_1.docx (DISD, septiembre 2026)
-  - Rutas (hash) que replican las URL recomendadas en la sección 06 del documento:
+  - Rutas (hash):
       #/soluciones                           -> Portada de Soluciones (hub)
       #/nortia                               -> Nueva página destacada NortIA (NRT-00 a NRT-05)
-      #/infraestructura-y-colaboracion       -> Infraestructura (INF) + Colaboración (COL)
-      #/ciberseguridad                       -> Seguridad (SEG)
-      #/ia-y-automatizacion-de-procesos      -> Banner NortIA + IA (IA-02 a IA-06) + Automatización (AUT)
-      #/financieras-y-gobierno-corporativo   -> Data (DAT) + Servicios Empresariales (EMP)
+      Una página por cada una de las 7 prácticas, con personalidad propia (PERSONA / ART):
+      #/infraestructura  #/ciberseguridad  #/colaboracion  #/servicios-empresariales
+      #/data  #/automatizacion  #/inteligencia-artificial (con banner NortIA)
   - Cada página sigue la estructura de 8 bloques del documento:
       Hero · Problemas · Soluciones · Offerings · Evidencia · Respaldo · Puente NortIA · Cierre (un solo CTA)
   - Todo el contenido vive en el objeto DATA (al final); editar ahí los textos.
@@ -238,6 +237,27 @@ form.contact .ok{grid-column:1/-1;display:none;background:#E8F6EE;color:#1d6b3d;
 .model div{flex:1 0 140px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
 .model b{font-family:'Montserrat',sans-serif;color:var(--blue)}
 .model p{font-size:.82rem;color:var(--muted);margin:6px 0 0}
+
+/* Personalidad por práctica */
+.hero.practice::before{background:radial-gradient(700px 380px at 80% 30%,color-mix(in srgb,var(--c) 45%,transparent),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+.hero .art svg{width:100%;height:auto;max-height:340px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
+.promesa{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:600;color:#fff;opacity:.75;margin:4px 0 14px;font-style:italic}
+.kw{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.kw span{border:1.5px solid;border-radius:99px;padding:5px 14px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.manifesto{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start}
+.voice{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--navy);font-size:1.15rem;line-height:1.35}
+.proof{border-radius:var(--radius);padding:30px;color:#fff;border-top:6px solid var(--c)}
+.proof b{display:block;font-family:'Montserrat',sans-serif;font-size:2.3rem;font-weight:800;line-height:1.1;margin:8px 0;color:#fff}
+.proof p{color:#dbe1f0;margin:0}
+.others{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:16px}
+.others a{display:flex;flex-direction:column;gap:4px;text-decoration:none;border:1px solid var(--line);border-top:4px solid var(--pc);border-radius:12px;padding:14px;background:#fff}
+.others a:hover{box-shadow:var(--shadow)}
+.others .ico{width:36px;height:36px;margin:0 0 6px}.others .ico svg{width:20px;height:20px}
+.others b{font-family:'Montserrat',sans-serif;color:var(--navy);font-size:.9rem}
+.others small{color:var(--muted);font-size:.76rem;line-height:1.35}
+@media (max-width:980px){.hero-grid,.manifesto{grid-template-columns:1fr}.hero .art{max-width:320px}.others{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.others{grid-template-columns:1fr 1fr}.hero .art{display:none}}
 
 /* Footer */
 footer{background:#0f1936;color:#aab4cc;font-size:.88rem;padding:48px 0 24px}
@@ -1773,16 +1793,56 @@ const DATA = {
 const COLORS = {'01':'#2F6FED','02':'#2E9D5B','03':'#0E9AA7','04':'#D9731A','05':'#1A8FD1','06':'#7B4FD6','07':'#4B3FC9'};
 const SHORT = {'01':'Infraestructura','02':'Seguridad','03':'Colaboración','04':'Servicios Empresariales','05':'Data','06':'Automatización','07':'Inteligencia Artificial'};
 const ANCHOR = {'01':'infraestructura','02':'seguridad','03':'colaboracion','04':'servicios-empresariales','05':'data','06':'automatizacion','07':'inteligencia-artificial'};
+/* Una página por práctica (7), cada una con su propia personalidad:
+   color, fondo del hero, patrón gráfico, ilustración, palabras clave, pregunta gancho y CTA propio. */
 const PAGES = [
   {slug:'nortia', title:'NortIA', desc:'Solución insignia: el sistema operativo para la IA', nortia:true},
-  {slug:'infraestructura-y-colaboracion', title:'Infraestructura y Colaboración', desc:'Azure, Microsoft 365 y Copilot', practices:['01','03'],
-    hero:{h1:'La plataforma donde corre su negocio y el espacio donde su equipo colabora', sub:'Diseñamos, migramos y operamos su infraestructura en Microsoft Azure, y conectamos a sus personas con Microsoft 365 y Copilot, con responsabilidad de extremo a extremo.'}},
-  {slug:'ciberseguridad', title:'Ciberseguridad', desc:'Zero Trust con Defender, Sentinel, Entra y Purview', practices:['02'], star:'SEG-03'},
-  {slug:'ia-y-automatizacion-de-procesos', title:'IA y Automatización de procesos', desc:'Agentes, copilotos y Power Platform', practices:['07','06'], banner:true, skip:['IA-01'],
-    hero:{h1:'Inteligencia artificial que llega a producción y procesos que se ejecutan solos', sub:'Con NortIA activamos, escalamos y gobernamos la IA, y con Microsoft Power Platform eliminamos tareas manuales para acelerar la operación.'}},
-  {slug:'financieras-y-gobierno-corporativo', title:'Data y Soluciones Empresariales', desc:'Fabric, Purview, Dynamics 365 y Power BI', practices:['05','04'],
-    hero:{h1:'Datos confiables y sistemas de negocio conectados para decidir a tiempo', sub:'Unificamos y gobernamos sus datos con Microsoft Fabric y Purview, e integramos ERP, CRM y Power BI para pasar de la transacción a la decisión.'}},
+  {slug:'infraestructura', title:'Infraestructura', desc:'Azure y nube híbrida', practices:['01']},
+  {slug:'ciberseguridad', title:'Ciberseguridad', desc:'Zero Trust con Defender, Sentinel y Entra', practices:['02'], star:'SEG-03'},
+  {slug:'colaboracion', title:'Colaboración', desc:'Microsoft 365, Teams y Copilot', practices:['03'], star:'COL-05'},
+  {slug:'servicios-empresariales', title:'Servicios Empresariales', desc:'Dynamics 365, ERP, CRM y Power BI', practices:['04']},
+  {slug:'data', title:'Data', desc:'Microsoft Fabric y Purview', practices:['05'], star:'DAT-05'},
+  {slug:'automatizacion', title:'Automatización de procesos', desc:'Power Automate, Power Apps y low-code', practices:['06']},
+  {slug:'inteligencia-artificial', title:'Inteligencia Artificial', desc:'Agentes, copilotos y RAG', practices:['07'], banner:true, skip:['IA-01']},
 ];
+const PERSONA = {
+  '01':{bg:'#0B1B45', pattern:'grid',    keywords:['Resiliencia','Escala','Costo justo'],
+        hook:'¿Su infraestructura impulsa el negocio o lo frena?', voice:'Sólida, técnica y confiable: el cimiento sobre el que corre todo lo demás.'},
+  '02':{bg:'#0A2419', pattern:'hex',     keywords:['Zero Trust','Detección','Respuesta'],
+        hook:'¿Sabe hoy dónde está expuesta su organización?', voice:'Vigilante y firme: la protección no es un proyecto, es una operación de todos los días.'},
+  '03':{bg:'#062F35', pattern:'people',  keywords:['Personas','Conocimiento','Copilot'],
+        hook:'¿Su equipo pierde tiempo buscando información?', voice:'Cercana y humana: la tecnología al servicio de cómo trabaja la gente.'},
+  '04':{bg:'#361B07', pattern:'bars',    keywords:['Control','Visibilidad','Decisión'],
+        hook:'¿Sus cifras llegan a tiempo para decidir?', voice:'Ejecutiva y precisa: del registro de la transacción a la decisión oportuna.'},
+  '05':{bg:'#05263A', pattern:'dots',    keywords:['Unificar','Gobernar','Activar'],
+        hook:'¿Cada área tiene su propia versión de la cifra?', voice:'Analítica y rigurosa: una sola verdad, gobernada y lista para la IA.'},
+  '06':{bg:'#1E1242', pattern:'flow',    keywords:['Menos manual','Más velocidad','Trazabilidad'],
+        hook:'¿Cuántas horas se van en copiar, aprobar y perseguir correos?', voice:'Ágil y práctica: procesos que se ejecutan solos para que su gente haga lo que importa.'},
+  '07':{bg:'#110C36', pattern:'neural',  keywords:['Activar','Escalar','Gobernar'],
+        hook:'¿Su IA se quedó en el piloto?', voice:'Visionaria con los pies en la tierra: inteligencia aplicada a resultados medibles.'},
+};
+function patternURI(kind, c){
+  const s = {
+    grid:  `<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><path d='M48 0H0v48' fill='none' stroke='${c}' stroke-opacity='.32'/><circle cx='0' cy='0' r='2' fill='${c}' fill-opacity='.45'/></svg>`,
+    hex:   `<svg xmlns='http://www.w3.org/2000/svg' width='56' height='98'><path d='M28 66L0 50V17L28 1l28 16v33zM28 98V66' fill='none' stroke='${c}' stroke-opacity='.32'/></svg>`,
+    people:`<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><circle cx='20' cy='20' r='4' fill='${c}' fill-opacity='.32'/><circle cx='60' cy='50' r='4' fill='${c}' fill-opacity='.32'/><path d='M20 20L60 50M60 50L100 20M-20 50L20 20' stroke='${c}' stroke-opacity='.32'/></svg>`,
+    bars:  `<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><path d='M8 60V40M22 60V25M36 60V33M50 60V15' stroke='${c}' stroke-opacity='.32' stroke-width='6'/></svg>`,
+    dots:  `<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22'><circle cx='11' cy='11' r='1.6' fill='${c}' fill-opacity='.32'/></svg>`,
+    flow:  `<svg xmlns='http://www.w3.org/2000/svg' width='90' height='60'><path d='M0 30h30l10-10h20l10 10h20' fill='none' stroke='${c}' stroke-opacity='.32'/><path d='M84 26l6 4-6 4' fill='none' stroke='${c}' stroke-opacity='.4'/></svg>`,
+    neural:`<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><g stroke='${c}' stroke-opacity='.32'><path d='M10 15L45 45L80 20M10 75L45 45L80 70M45 45L45 88'/></g><g fill='${c}' fill-opacity='.45'><circle cx='10' cy='15' r='2.5'/><circle cx='80' cy='20' r='2.5'/><circle cx='45' cy='45' r='3.5'/><circle cx='10' cy='75' r='2.5'/><circle cx='80' cy='70' r='2.5'/></g></svg>`,
+  }[kind];
+  return `url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+}
+/* Ilustraciones del hero, una por práctica */
+const ART = {
+ '01':c=>`<svg viewBox="0 0 320 260" fill="none"><g stroke="${c}" stroke-width="2"><path d="M160 30l110 55-110 55-110-55z" fill="${c}" fill-opacity=".12"/><path d="M50 85v60l110 55 110-55V85"/><path d="M160 140v60"/><path d="M50 115l110 55 110-55" stroke-opacity=".5"/></g><g fill="#fff"><circle cx="160" cy="85" r="7"/><circle cx="105" cy="112" r="4"/><circle cx="215" cy="112" r="4"/></g><path d="M160 85L105 112M160 85l55 27" stroke="#fff" stroke-opacity=".6"/><path d="M120 230h80" stroke="${c}" stroke-width="3" stroke-linecap="round"/></svg>`,
+ '02':c=>`<svg viewBox="0 0 320 260" fill="none"><path d="M160 20l95 35v65c0 60-40 100-95 120-55-20-95-60-95-120V55z" fill="${c}" fill-opacity=".14" stroke="${c}" stroke-width="2.5"/><path d="M160 55l60 22v43c0 38-25 63-60 76-35-13-60-38-60-76V77z" stroke="#fff" stroke-opacity=".35"/><rect x="138" y="112" width="44" height="38" rx="6" fill="#fff"/><path d="M146 112v-12a14 14 0 0 1 28 0v12" stroke="#fff" stroke-width="5"/><circle cx="160" cy="128" r="5" fill="${c}"/><path d="M160 130v10" stroke="${c}" stroke-width="3"/></svg>`,
+ '03':c=>`<svg viewBox="0 0 320 260" fill="none"><g stroke="${c}" stroke-width="2" stroke-opacity=".7"><path d="M160 130L80 70M160 130l80-60M160 130L70 190M160 130l90 60M80 70h160"/></g><circle cx="160" cy="130" r="34" fill="${c}"/><path d="M146 124h28M146 136h18" stroke="#fff" stroke-width="4" stroke-linecap="round"/>${[[80,70],[240,70],[70,190],[250,190]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="22" fill="#fff" fill-opacity=".92"/><circle cx="${x}" cy="${y-5}" r="7" fill="${c}"/><path d="M${x-11} ${y+13}a11 9 0 0 1 22 0" fill="${c}"/>`).join('')}</svg>`,
+ '04':c=>`<svg viewBox="0 0 320 260" fill="none"><rect x="30" y="30" width="260" height="190" rx="14" fill="#fff" fill-opacity=".06" stroke="${c}" stroke-width="2"/><path d="M30 62h260" stroke="${c}" stroke-opacity=".5"/><circle cx="48" cy="46" r="4" fill="${c}"/><circle cx="62" cy="46" r="4" fill="#fff" fill-opacity=".5"/>${[[60,150],[100,120],[140,135],[180,95],[220,80]].map(([x,y])=>`<rect x="${x}" y="${y}" width="24" height="${200-y}" rx="4" fill="${c}" fill-opacity=".85"/>`).join('')}<path d="M60 130L112 100l40 12 40-40 44-18" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="236" cy="54" r="0"/><circle cx="236" cy="54" r="0"/><circle cx="236" cy="54" r="0"/><circle cx="236" cy="54" r="7" fill="#fff" transform="translate(0 0)"/></svg>`,
+ '05':c=>`<svg viewBox="0 0 320 260" fill="none"><g fill="${c}" fill-opacity=".85"><circle cx="40" cy="60" r="7"/><circle cx="40" cy="130" r="7"/><circle cx="40" cy="200" r="7"/></g><g stroke="${c}" stroke-width="2" stroke-opacity=".7"><path d="M47 60c60 0 60 70 113 70M47 130h113M47 200c60 0 60-70 113-70"/></g><ellipse cx="200" cy="85" rx="55" ry="18" fill="#fff" fill-opacity=".92"/><path d="M145 85v90c0 10 25 18 55 18s55-8 55-18V85" fill="${c}" fill-opacity=".25" stroke="#fff" stroke-width="2"/><path d="M145 130c0 10 25 18 55 18s55-8 55-18" stroke="#fff" stroke-opacity=".6" stroke-width="2"/><path d="M270 120l24 10-24 10" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>`,
+ '06':c=>`<svg viewBox="0 0 320 260" fill="none"><g stroke="${c}" stroke-width="2.5"><rect x="20" y="105" width="64" height="50" rx="10" fill="${c}" fill-opacity=".2"/><rect x="128" y="105" width="64" height="50" rx="25" fill="${c}"/><rect x="236" y="105" width="64" height="50" rx="10" fill="${c}" fill-opacity=".2"/><path d="M84 130h44M192 130h44"/><path d="M120 124l8 6-8 6M228 124l8 6-8 6"/></g><path d="M160 105V60h110v45" stroke="#fff" stroke-opacity=".5" stroke-dasharray="6 6" stroke-width="2"/><circle cx="160" cy="60" r="0"/><g transform="translate(160 130)"><circle r="10" fill="#fff"/><path d="M-4-6l10 6-10 6z" fill="${c}"/></g><path d="M268 125l6 6 12-12" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M40 200h240" stroke="${c}" stroke-opacity=".4" stroke-width="2"/><circle cx="160" cy="200" r="5" fill="#fff"/></svg>`,
+ '07':c=>`<svg viewBox="0 0 320 260" fill="none">${(()=>{const L=[[[50,60],[50,130],[50,200]],[[140,40],[140,100],[140,160],[140,220]],[[230,80],[230,180]],[[290,130]]];let h='';for(let i=0;i<L.length-1;i++)L[i].forEach(a=>L[i+1].forEach(b=>h+=`<path d="M${a[0]} ${a[1]}L${b[0]} ${b[1]}" stroke="${c}" stroke-opacity=".45"/>`));L.forEach((l,i)=>l.forEach(([x,y])=>h+=`<circle cx="${x}" cy="${y}" r="${i===3?14:9}" fill="${i===3?'#fff':c}"/>`));return h})()}<path d="M284 130h12M290 124v12" stroke="${c}" stroke-width="3" stroke-linecap="round"/></svg>`,
+};
 const OUT_OF_SCOPE = [{title:'Telecom y Hardware',desc:'Contenido actual del sitio'},{title:'Ecosistema',desc:'Contenido actual del sitio'}];
 
 const ICONS = {
@@ -1868,17 +1928,22 @@ function practiceSection(p, page, idx){
   <!-- ===== ${p.name} ===== -->
   <section id="${id}" ${sectionStyle}>
     <div class="wrap">
-      <div class="practice-head"><div class="ico" style="--pc:${c}">${ICONS[p.num]}</div><div><div class="eyebrow">Práctica ${p.num} · ${esc(SHORT[p.num])}</div><div style="color:var(--muted);font-weight:600">${esc(p.promesa)}</div></div></div>
-      <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);max-width:860px">${esc(p.web_h1)}</h2>
-      <p class="lead">${esc(p.web_texto)}</p>
-      <div class="benefits">${p.web_beneficios.map(b=>`<span>${esc(b)}</span>`).join('')}</div>
+      <div class="manifesto">
+        <div>
+          <div class="practice-head"><div class="ico" style="--pc:${c}">${ICONS[p.num]}</div><div><div class="eyebrow">Nuestra personalidad</div><div class="voice">${esc(PERSONA[p.num].voice)}</div></div></div>
+          <p class="lead">${esc(p.web_texto)}</p>
+          <p class="lead" style="margin-top:10px">${esc(p.definicion)}</p>
+          <div class="benefits">${p.web_beneficios.map(b=>`<span>${esc(b)}</span>`).join('')}</div>
+        </div>
+        <aside class="proof" style="background:${PERSONA[p.num].bg}"><div class="eyebrow" style="color:#fff;opacity:.8">Dato de la industria</div><b>${esc(p.evidencia[0].cifra)}</b><p>${esc(p.web_prueba)}</p></aside>
+      </div>
     </div>
   </section>
 
   <section class="alt" id="${id}-problemas" ${sectionStyle}>
     <div class="wrap">
       <div class="eyebrow">Problemas que resolvemos</div>
-      <h2>¿Le resulta familiar?</h2>
+      <h2>${esc(PERSONA[p.num].hook)}</h2>
       <div class="grid g2" style="margin-top:22px">${p.soluciones.map(s=>`<div class="q"><span class="qm">?</span><p>${esc(question(s.problema))}</p></div>`).join('')}</div>
     </div>
   </section>
@@ -1906,7 +1971,7 @@ function practiceSection(p, page, idx){
     <div class="wrap">
       <div class="eyebrow">Evidencia de impacto</div>
       <h2>Lo que reporta la industria</h2>
-      <div class="grid g3" style="margin-top:22px">${p.evidencia.slice(0,3).map(e=>`<div class="ev"><b>${esc(e.cifra)}</b><p>${esc(e.significa)}</p><cite>${esc(e.fuente)}</cite></div>`).join('')}</div>
+      <div class="grid g3" style="margin-top:22px">${p.evidencia.slice(0,3).map(e=>`<div class="ev" style="background:${PERSONA[p.num].bg}"><b>${esc(e.cifra)}</b><p>${esc(e.significa)}</p><cite>${esc(e.fuente)}</cite></div>`).join('')}</div>
       <div class="market"><h4>Contexto de mercado</h4><ul>${p.contexto.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lect">Lectura Consein: ${esc(cleanLectura(p.lectura))}</p></div>
       <p class="disclaimer">Cifras de referencia de la industria, expresadas “hasta” o “en promedio”; no constituyen garantía. El resultado de cada cliente se determina con el Diagnóstico Consein 360.</p>
     </div>
@@ -1931,18 +1996,19 @@ function practiceSection(p, page, idx){
   </section>`:''}`;
 }
 
-function closing(interest){
-  return `<section class="closing" id="contacto">
+function closing(p){
+  const bg = p ? PERSONA[p.num].bg : '';
+  return `<section class="closing" id="contacto" ${p?`style="background:${bg}"`:''}>
     <div class="wrap">
       <div class="eyebrow" style="color:var(--copper-2)">Primer paso</div>
-      <h2>Solicite su Diagnóstico Consein 360</h2>
+      <h2>${p?esc(noDot(p.web_cta).split(':')[0]):'Solicite su Diagnóstico Consein 360'}</h2>
       <p>Una evaluación ejecutiva gratuita, de 8 horas y 100% remota, que convierte los benchmarks de la industria en una hoja de ruta a la medida de su organización.</p>
       <form class="contact" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset();">
         <label>Nombre y apellido<input required name="nombre" autocomplete="name"></label>
         <label>Empresa<input required name="empresa" autocomplete="organization"></label>
         <label>Correo corporativo<input required type="email" name="email" autocomplete="email"></label>
         <label>País<select name="pais"><option>Venezuela</option><option>Panamá</option><option>República Dominicana</option><option>Estados Unidos</option><option>Otro</option></select></label>
-        <label class="full">Solución de interés<select name="interes" id="interes">${interestOptions(interest)}</select></label>
+        <label class="full">Solución de interés<select name="interes" id="interes">${interestOptions(p)}</select></label>
         <label class="full">¿Qué problema de negocio quiere resolver?<textarea name="mensaje" rows="3"></textarea></label>
         <div class="full"><button class="btn btn-primary" type="submit">${DIAG_CTA}</button></div>
         <div class="ok">Gracias. Un especialista de Consein le contactará para agendar su diagnóstico. (Formulario de muestra: conectar al CRM del sitio.)</div>
@@ -1950,8 +2016,8 @@ function closing(interest){
     </div>
   </section>`;
 }
-function interestOptions(def){
-  let h = `<option>Diagnóstico Consein 360 (general)</option><optgroup label="NortIA">${DATA.nortia.offerings.map(o=>`<option>${esc(o.code+' · '+o.name)}</option>`).join('')}</optgroup>`;
+function interestOptions(p){
+  let h = `<option>Diagnóstico Consein 360 (${p?esc(SHORT[p.num]):'general'})</option><optgroup label="NortIA">${DATA.nortia.offerings.map(o=>`<option>${esc(o.code+' · '+o.name)}</option>`).join('')}</optgroup>`;
   DATA.practicas.forEach(p=>{ h += `<optgroup label="${esc(SHORT[p.num])}">${p.offerings.map(o=>`<option>${esc(o.code+' · '+o.name)}</option>`).join('')}</optgroup>`; });
   return h;
 }
@@ -1979,7 +2045,7 @@ function pageHub(){
     <div class="eyebrow">Siete prácticas, un ecosistema</div>
     <h2>Nuestras soluciones</h2>
     <p class="lead">La infraestructura es el cimiento, la seguridad el perímetro, la automatización el motor y los datos y la IA el cerebro. El valor real está en orquestarlos juntos.</p>
-    <div class="grid g4" style="margin-top:26px">${DATA.practicas.map(p=>{const pg=PAGES.find(x=>x.practices&&x.practices.includes(p.num));return `<div class="card pcard" style="--pc:${COLORS[p.num]}"><div class="ico">${ICONS[p.num]}</div><div class="num">${p.num}</div><h3>${esc(SHORT[p.num])}</h3><p>${esc(p.promesa)} ${esc(p.definicion.split('. ')[0])}.</p><a href="#/${pg.slug}#${ANCHOR[p.num]}">Ver soluciones →</a></div>`}).join('')}
+    <div class="grid g4" style="margin-top:26px">${DATA.practicas.map(p=>{const pg=PAGES.find(x=>x.practices&&x.practices.includes(p.num));return `<div class="card pcard" style="--pc:${COLORS[p.num]};background-image:linear-gradient(180deg,#fff 60%,color-mix(in srgb,${COLORS[p.num]} 7%,#fff))"><div class="ico">${ICONS[p.num]}</div><div class="num">${p.num}</div><h3>${esc(SHORT[p.num])}</h3><p><b style="color:var(--navy)">${esc(p.promesa)}</b><br>${esc(PERSONA[p.num].hook)}</p><div class="tech" style="margin:0 0 14px">${PERSONA[p.num].keywords.map(k=>`<span>${esc(k)}</span>`).join('')}</div><a href="#/${pg.slug}">Ver ${esc(SHORT[p.num])} →</a></div>`}).join('')}
       <div class="card pcard" style="--pc:#B8734A;background:var(--copper-bg)"><div class="ico">${ICONS.compass}</div><div class="num">INSIGNIA</div><h3>NortIA</h3><p>El camino completo hacia una cultura de IA sostenible en el ecosistema Microsoft. Activa a las siete prácticas.</p><a href="#/nortia">Ver NortIA →</a></div>
     </div>
   </div></section>
@@ -1999,36 +2065,42 @@ function pageHub(){
 
   <section class="alt"><div class="wrap">
     <div class="eyebrow">Mapa del menú Soluciones</div>
-    <h2>Dónde encontrar cada especialidad</h2>
-    <table class="table-map" style="margin-top:20px"><thead><tr><th>Página</th><th>Especialidades</th><th>Offerings</th></tr></thead><tbody>
+    <h2>Una página para cada práctica</h2>
+    <table class="table-map" style="margin-top:20px"><thead><tr><th>Página</th><th>Promesa</th><th>Offerings</th></tr></thead><tbody>
       <tr><td><a href="#/nortia">NortIA</a></td><td>Solución insignia transversal</td><td><code>NRT-00 a NRT-05</code></td></tr>
-      <tr><td><a href="#/infraestructura-y-colaboracion">Infraestructura y Colaboración</a></td><td>Infraestructura · Colaboración</td><td><code>INF-01 a INF-07 · COL-01 a COL-06</code></td></tr>
-      <tr><td><a href="#/ciberseguridad">Ciberseguridad</a></td><td>Seguridad</td><td><code>SEG-01 a SEG-06</code></td></tr>
-      <tr><td><a href="#/ia-y-automatizacion-de-procesos">IA y Automatización de procesos</a></td><td>Inteligencia Artificial · Automatización</td><td><code>IA-02 a IA-06 · AUT-01 a AUT-06</code></td></tr>
-      <tr><td><a href="#/financieras-y-gobierno-corporativo">Data y Soluciones Empresariales</a></td><td>Data · Servicios Empresariales</td><td><code>DAT-01 a DAT-06 · EMP-01 a EMP-06</code></td></tr>
+      ${PAGES.filter(x=>x.practices).map(x=>{const m=x.practices[0],o=P(m).offerings.filter(f=>!(x.skip||[]).includes(f.code));return `<tr><td><a href="#/${x.slug}" style="color:${COLORS[m]}">${esc(x.title)}</a></td><td>${esc(P(m).promesa)}</td><td><code>${o[0].code} a ${o[o.length-1].code}</code></td></tr>`}).join('')}
     </tbody></table>
   </div></section>
   ${closing()}`;
 }
 
 function pageSolution(page){
-  const nums = page.practices;
-  setColor(document.documentElement, COLORS[nums[0]]);
-  const first = P(nums[0]);
-  const hero = page.hero || {h1:first.web_h1, sub:first.web_sub};
-  const sub = nums.map(n=>{const p=P(n),a=ANCHOR[n];return `<a href="#${a}" style="color:${COLORS[n]}">● ${esc(SHORT[n])}</a><a href="#${a}-problemas">Problemas</a><a href="#${a}-soluciones">Soluciones</a><a href="#${a}-offerings">Offerings</a><a href="#${a}-evidencia">Evidencia</a><a href="#${a}-respaldo">Respaldo</a>`}).join('') + `<a href="#contacto"><b>Diagnóstico 360</b></a>`;
+  const n = page.practices[0], p = P(n), c = COLORS[n], per = PERSONA[n], a = ANCHOR[n];
+  setColor(document.documentElement, c);
+  const sub = `<a href="#${a}" style="color:${c}">● ${esc(SHORT[n])}</a><a href="#${a}-problemas">Problemas</a><a href="#${a}-soluciones">Soluciones</a><a href="#${a}-offerings">Offerings</a><a href="#${a}-evidencia">Evidencia</a><a href="#${a}-respaldo">Respaldo</a><a href="#contacto" style="color:${c}"><b>Primer paso →</b></a>`;
+  const others = PAGES.filter(x=>x.practices && x!==page);
   return `${crumbs(page.title)}
-  <section class="hero"><div class="wrap">
-    <div class="eyebrow">Soluciones · ${esc(page.title)}</div>
-    <h1>${esc(hero.h1)}</h1>
-    <p>${esc(hero.sub)}</p>
-    <div class="actions"><a class="btn btn-primary" href="#contacto">${DIAG_CTA}</a></div>
-    <div class="note">Gratuito · 8 horas · 100% remoto</div>
+  <section class="hero practice" style="background-color:${per.bg};background-image:${patternURI(per.pattern,c)}"><div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" style="color:${c};opacity:1;filter:brightness(1.6)">Práctica ${n} · ${esc(SHORT[n])}</div>
+      <div class="promesa">${esc(p.promesa)}</div>
+      <h1>${esc(p.web_h1)}</h1>
+      <p>${esc(p.web_sub)}</p>
+      <div class="kw">${per.keywords.map(k=>`<span style="border-color:${c}">${esc(k)}</span>`).join('')}</div>
+      <div class="actions"><a class="btn" style="background:${c};color:#fff" href="#contacto">${esc(noDot(p.web_cta).split(':')[0])}</a></div>
+      <div class="note">Primer paso: Diagnóstico Consein 360 · gratuito, 8 horas, 100% remoto</div>
+    </div>
+    <div class="art" aria-hidden="true">${ART[n](c)}</div>
   </div></section>
   <nav class="subnav" aria-label="En esta página"><div class="wrap">${sub}</div></nav>
   ${page.banner?`<section style="padding-bottom:0"><div class="wrap"><div class="banner-nortia"><div><div class="eyebrow" style="color:var(--copper-2)">Solución insignia · IA-01</div><h3 style="font-size:1.5rem">NortIA: de la licencia al valor gobernado</h3><p>Cuatro fases que forman un ciclo continuo: Radar, Norte, Vector y Brújula. Activa y gobierna la IA en toda su organización.</p></div><a class="btn btn-copper" href="#/nortia">Conozca NortIA</a></div></div></section>`:''}
-  ${nums.map((n,i)=>practiceSection(P(n),page,i)).join('')}
-  ${closing()}`;
+  ${practiceSection(p,page,0)}
+  <section style="padding:48px 0"><div class="wrap">
+    <div class="eyebrow" style="color:var(--muted)">Un ecosistema, no piezas sueltas</div>
+    <h2 style="font-size:1.3rem">Explore las otras prácticas</h2>
+    <div class="others">${others.map(o=>{const m=o.practices[0];return `<a href="#/${o.slug}" style="--pc:${COLORS[m]}"><span class="ico">${ICONS[m]}</span><b>${esc(SHORT[m])}</b><small>${esc(P(m).promesa)}</small></a>`}).join('')}</div>
+  </div></section>
+  ${closing(p)}`;
 }
 
 function pageNortia(){
@@ -2126,7 +2198,7 @@ function pageNortia(){
     <h2>Cómo NortIA impulsa a todas las especialidades</h2>
     <p class="lead">Ninguna iniciativa de IA funciona en el vacío. Cada fase de NortIA genera necesidades concretas que resuelven las demás prácticas.</p>
     <table class="table-map" style="margin-top:20px"><thead><tr><th>Especialidad</th><th>Qué necesita NortIA de ella</th><th>Offerings que se activan</th></tr></thead><tbody>
-      ${N.puentes.map(b=>{const n=pracNum[b.esp];const pg=PAGES.find(x=>x.practices&&x.practices.includes(n));return `<tr><td><a href="#/${pg.slug}#${ANCHOR[n]}" style="color:${COLORS[n]}">${esc(SHORT[n])}</a></td><td>${esc(b.necesita)}</td><td><code>${esc(b.offerings)}</code></td></tr>`}).join('')}
+      ${N.puentes.map(b=>{const n=pracNum[b.esp];const pg=PAGES.find(x=>x.practices&&x.practices.includes(n));return `<tr><td><a href="#/${pg.slug}" style="color:${COLORS[n]}">${esc(SHORT[n])}</a></td><td>${esc(b.necesita)}</td><td><code>${esc(b.offerings)}</code></td></tr>`}).join('')}
     </tbody></table>
   </div></section>
   ${closing()}`;
