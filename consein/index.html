@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consein · Modelo Servicios</title>
+  <meta name="description" content="Índice del modelo de página web para la sección Servicios de Consein: Dirección de Innovación y Servicios Digitales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/consein.css">
+  <style>
+    .index-hero { padding: 72px 0 56px; }
+    .index-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 8px; }
+    .index-card { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: box-shadow .2s, transform .2s, border-color .2s; }
+    .index-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: var(--blue-soft-2); }
+    .index-card__num { font-family: var(--font-head); font-weight: 700; color: var(--blue); font-size: 14px; }
+    .index-card p { color: var(--muted); font-size: 15px; }
+    .index-card__go { margin-top: auto; font-weight: 800; color: var(--blue); }
+    .index-card--dark { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .index-card--dark .index-card__num { color: var(--green); }
+    .index-card--dark p { color: #d7e3f1; }
+    .index-card--dark .index-card__go { color: #fff; }
+    .index-card--muted { background: var(--bg-alt); border-style: dashed; }
+    .index-card--muted:hover { transform: none; box-shadow: none; }
+    .index-steps { display: flex; flex-wrap: wrap; gap: 8px; }
+    .index-steps span { font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--muted); }
+    .index-steps span.is-ready { background: var(--green-soft); border-color: var(--green); color: var(--navy); }
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo-mark" viewBox="0 0 32 32" fill="none" stroke-linecap="round"><path d="M26 9.5A12 12 0 1 0 26 22.5" stroke="#0b5cad" stroke-width="4"/><path d="M20.5 12.5a5 5 0 1 0 0 7" stroke="#2bb673" stroke-width="4"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="Consein, índice del modelo">
+      <svg aria-hidden="true"><use href="#logo-mark"/></svg>consein
+    </a>
+    <a class="btn btn--navy btn--sm" href="servicios/innovacion-y-servicios-digitales.html#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero index-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--line">Modelo de página · Sección Servicios</span>
+      <h1 class="h1 hero__title">Innovación y Servicios Digitales</h1>
+      <p class="hero__lead">Índice de las páginas del modelo para la opción <strong>Servicios</strong> de www.consein.com, construidas a partir del documento de la Dirección de Innovación y Servicios Digitales / PMO.</p>
+      <div class="hero__actions">
+        <a class="btn btn--green" href="servicios/innovacion-y-servicios-digitales.html">Ver página principal</a>
+        <a class="btn btn--ghost" href="servicios/evaluamos.html">Ver 01 · Evaluamos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="t-paginas">
+    <div class="container">
+      <span class="eyebrow">Páginas del modelo</span>
+      <h2 class="h2" id="t-paginas" style="margin-bottom:32px">Navega por el sitio</h2>
+
+      <div class="index-list">
+        <a class="index-card index-card--dark" href="servicios/innovacion-y-servicios-digitales.html">
+          <span class="index-card__num">Servicios › Innovación y Servicios Digitales</span>
+          <h3 class="h3">Página de la Dirección</h3>
+          <p>Portada, quiénes somos, los 7 pasos en 3 fases, Oficina de Proyectos (PMO), líneas de especialidad, innovación y reconocimientos, y contacto.</p>
+          <span class="index-card__go">Abrir página →</span>
+        </a>
+
+        <a class="index-card" href="servicios/evaluamos.html">
+          <span class="index-card__num">01 · Fase 1 · Solución</span>
+          <h3 class="h3">Evaluamos</h3>
+          <p>Diagnóstico tecnológico en seis dimensiones, comparado con el estándar de la industria. Entregables: mapa de brechas y hoja de ruta priorizada.</p>
+          <span class="index-card__go">Abrir página →</span>
+        </a>
+
+        <div class="index-card index-card--muted">
+          <span class="index-card__num">02 – 07</span>
+          <h3 class="h3">Resto de servicios de valor</h3>
+          <p>Se construirán a partir de la plantilla de Evaluamos cuando se defina su contenido.</p>
+          <div class="index-steps" aria-label="Estado de los servicios">
+            <span class="is-ready">01 Evaluamos ✓</span>
+            <span>02 Diseñamos</span>
+            <span>03 Actualizamos</span>
+            <span>04 Transformamos</span>
+            <span>05 Optimizamos</span>
+            <span>06 Administramos</span>
+            <span>07 Aseguramos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__simple">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html">consein</a>
+        <p>Servicios tecnológicos que transforman empresas</p>
+      </div>
+      <ul class="footer__inline">
+        <li><a href="servicios/innovacion-y-servicios-digitales.html">Innovación y Servicios Digitales</a></li>
+        <li><a href="servicios/evaluamos.html">01 · Evaluamos</a></li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <span>CONSEIN © 2026 | TODOS LOS DERECHOS RESERVADOS</span>
+      <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

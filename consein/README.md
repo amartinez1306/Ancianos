@@ -5,6 +5,8 @@ Modelo de página web para la opción **Servicios** de www.consein.com, basado e
 
 | Archivo | Contenido |
 |---|---|
+| `index.html` | Índice del modelo con acceso a todas las páginas. |
+| `servicios/index.html` | Redirige a la página de la Dirección (para abrir `/servicios/`). |
 | `servicios/innovacion-y-servicios-digitales.html` | Página de la Dirección: portada, quiénes somos, 7 pasos en 3 fases, PMO, líneas de especialidad, innovación y reconocimientos, contacto. |
 | `servicios/evaluamos.html` | Subpágina del servicio **01 · Evaluamos** (plantilla para los servicios 02–07). |
 | `assets/consein.css` | Estilos compartidos (paleta, tipografía, componentes, responsive). |
