@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 · Evaluamos | Innovación y Servicios Digitales | Consein</title>
+  <meta name="description" content="Diagnóstico tecnológico que conecta tu TI con tus metas de negocio. Evaluamos seis dimensiones de tu empresa y las comparamos con el estándar de tu industria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/consein.css">
+</head>
+<body>
+
+<!-- Sprite de iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8h-1"/><path d="M12 20v-8m-3 3 3-3 3 3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1"/><path d="M16 4a4 4 0 0 1 0 8"/><path d="M22 21v-1a5 5 0 0 0-4-4.9"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8m-4-5v5"/><path d="M7 10h3l1.5-2.5 1.5 5 1.5-2.5H17"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M7 16v-4m4 4V7m4 9v-6m4 6V4"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="logo-mark" viewBox="0 0 32 32" fill="none" stroke-linecap="round"><path d="M26 9.5A12 12 0 1 0 26 22.5" stroke="#0b5cad" stroke-width="4"/><path d="M20.5 12.5a5 5 0 1 0 0 7" stroke="#2bb673" stroke-width="4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6l6 10h6"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-basket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 11h-13L4 9Z"/><path d="m9 9 3-5 3 5"/></symbol>
+  </defs>
+</svg>
+
+<a class="visually-hidden" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ Header ============ -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="https://www.consein.com/" aria-label="Consein, ir al inicio">
+      <svg aria-hidden="true"><use href="#logo-mark"/></svg>consein
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="https://www.consein.com/">Inicio</a></li>
+        <li class="main-nav__item">
+          <button class="main-nav__link" aria-expanded="false">Acerca de <svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown">
+            <a href="https://www.consein.com/nosotros">Nosotros</a>
+            <a href="https://www.consein.com/casos-de-exito">Casos de Éxito</a>
+            <a href="https://www.consein.com/blog">Blog</a>
+          </div>
+        </li>
+        <li class="main-nav__item">
+          <button class="main-nav__link" aria-expanded="false">Soluciones <svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown">
+            <a href="#">Infraestructura y colaboración</a>
+            <a href="#">IA y automatización de procesos</a>
+            <a href="#">Financieras y de gobierno corporativo</a>
+            <a href="#">Hardware</a>
+            <a href="#">Ciberseguridad</a>
+            <a href="#">Ecosistema</a>
+          </div>
+        </li>
+        <li class="main-nav__item"><a class="main-nav__link" href="innovacion-y-servicios-digitales.html" aria-current="page">Servicios</a></li>
+      </ul>
+      <a class="btn btn--navy btn--sm" href="innovacion-y-servicios-digitales.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="container">
+    <ol>
+      <li><a href="https://www.consein.com/">Inicio</a></li>
+      <li><a href="innovacion-y-servicios-digitales.html">Innovación y Servicios</a></li>
+      <li><a href="innovacion-y-servicios-digitales.html#servicios-de-valor">Servicios de Valor</a></li>
+      <li><span aria-current="page">Evaluamos</span></li>
+    </ol>
+  </div>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ Hero del servicio ============ -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="hero__badges">
+          <span class="badge badge--green">01 · Evaluamos</span>
+          <span class="badge badge--outline">Fase 1 · Solución</span>
+        </div>
+        <h1 class="h1 hero__title">Antes de invertir, entiende dónde estás.</h1>
+        <p class="hero__sub">Diagnóstico tecnológico que conecta tu TI con tus metas de negocio.</p>
+        <p class="hero__lead">Evaluamos seis dimensiones de tu empresa y las comparamos con el estándar de tu industria. Sabrás exactamente dónde están tus brechas, qué riesgos corres y qué conviene resolver primero.</p>
+        <div class="hero__actions">
+          <a class="btn btn--green" href="#diagnostico">Solicita tu diagnóstico</a>
+        </div>
+      </div>
+
+      <figure class="hero__visual" style="flex-direction:column;align-items:center;margin:0">
+        <svg class="radar" viewBox="-50 30 540 350" role="img" aria-labelledby="radar-title radar-desc">
+          <title id="radar-title">Ejemplo de diagnóstico en seis dimensiones</title>
+          <desc id="radar-desc">Gráfico radial ilustrativo que compara el estado actual de una empresa con el estado ideal de su industria en infraestructura, ciberseguridad, datos, procesos, talento e innovación.</desc>
+          <polygon points="220,80 332.6,145 332.6,275 220,340 107.4,275 107.4,145" fill="#0f2d4f" stroke="rgba(255,255,255,.22)"/>
+          <polygon points="220,123.3 295.1,166.7 295.1,253.3 220,296.7 144.9,253.3 144.9,166.7" fill="none" stroke="rgba(255,255,255,.14)"/>
+          <polygon points="220,166.7 257.5,188.3 257.5,231.7 220,253.3 182.5,231.7 182.5,188.3" fill="none" stroke="rgba(255,255,255,.14)"/>
+          <g stroke="rgba(255,255,255,.14)">
+            <line x1="220" y1="210" x2="220" y2="80"/><line x1="220" y1="210" x2="332.6" y2="145"/><line x1="220" y1="210" x2="332.6" y2="275"/>
+            <line x1="220" y1="210" x2="220" y2="340"/><line x1="220" y1="210" x2="107.4" y2="275"/><line x1="220" y1="210" x2="107.4" y2="145"/>
+          </g>
+          <polygon points="220,93 321.3,151.5 321.3,268.5 220,327 118.7,268.5 118.7,151.5" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="5 5"/>
+          <polygon points="220,138.5 298.8,164.5 327,271.8 220,275 163.7,242.5 135.6,161.2" fill="rgba(43,182,115,.45)" stroke="#2bb673" stroke-width="2.5" stroke-linejoin="round"/>
+          <text x="220" y="62" text-anchor="middle">Infraestructura</text>
+          <text x="346" y="140" text-anchor="start">Ciberseguridad</text>
+          <text x="346" y="290" text-anchor="start">Datos</text>
+          <text x="220" y="364" text-anchor="middle">Procesos</text>
+          <text x="94" y="290" text-anchor="end">Talento</text>
+          <text x="94" y="140" text-anchor="end">Innovación</text>
+        </svg>
+        <figcaption class="radar__legend">
+          <span><i></i>Tu estado actual</span>
+          <span><i class="ideal"></i>Estado ideal de tu industria</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Navegación entre los 7 servicios -->
+  <nav class="steps-nav" aria-label="Servicios de valor">
+    <div class="container">
+      <ul class="steps-nav__list">
+        <li><a class="steps-nav__link" href="evaluamos.html" aria-current="page"><b>01</b> Evaluamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>02</b> Diseñamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>03</b> Actualizamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>04</b> Transformamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>05</b> Optimizamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>06</b> Administramos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>07</b> Aseguramos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ Qué hacemos ============ -->
+  <section class="section section--alt" aria-labelledby="t-que">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Qué hacemos</span>
+          <h2 class="h2" id="t-que" style="margin-bottom:20px">Primero entender, después decidir.</h2>
+          <p class="lead" style="font-size:16px">Analizamos a fondo la tecnología actual de la empresa —infraestructura, ciberseguridad, datos y analítica, procesos, talento e innovación— y la comparamos con lo que el negocio necesita para crecer. El resultado es un mapa claro de brechas y una hoja de ruta priorizada, que conecta cada decisión técnica con un objetivo comercial.</p>
+        </div>
+        <div class="reveal">
+          <h3 class="pains__title">¿Te suena familiar?</h3>
+          <ul class="pains">
+            <li class="pain"><svg aria-hidden="true"><use href="#i-clock"/></svg>Se invierte en tecnología sin saber qué genera valor y qué no.</li>
+            <li class="pain"><svg aria-hidden="true"><use href="#i-split"/></svg>TI y negocio hablan idiomas distintos; los proyectos no se conectan con las metas.</li>
+            <li class="pain"><svg aria-hidden="true"><use href="#i-eye-off"/></svg>No hay visibilidad real de la infraestructura ni de los riesgos.</li>
+            <li class="pain"><svg aria-hidden="true"><use href="#i-basket"/></svg>Las compras se deciden por urgencia o por el catálogo de un proveedor.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="result reveal">
+        <span class="eyebrow">Resultado para tu empresa</span>
+        <p class="result__text">Decisiones de inversión con fundamento, prioridades claras y un punto de partida medible.</p>
+        <div class="deliverable"><small>Entregable</small><strong>Mapa de brechas</strong></div>
+        <div class="deliverable"><small>Entregable</small><strong>Hoja de ruta priorizada</strong></div>
+      </div>
+
+      <div class="next-step">
+        <span>Después del diagnóstico, el siguiente paso es</span>
+        <a href="innovacion-y-servicios-digitales.html#servicios-de-valor">02 · Diseñamos: arquitectura digital a la medida →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA / formulario ============ -->
+  <section class="section section--alt" id="diagnostico" style="padding-top:0" aria-labelledby="t-cta">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2 class="h2" id="t-cta">¿Conversamos sobre tu diagnóstico?</h2>
+          <p>Déjanos tus datos y un especialista de la Dirección te contactará para agendar la evaluación.</p>
+        </div>
+        <form data-demo-form novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="d-nombre">Nombre</label><input id="d-nombre" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label for="d-empresa">Empresa</label><input id="d-empresa" name="empresa" autocomplete="organization" required></div>
+            <div class="field field--full"><label for="d-correo">Correo</label><input id="d-correo" name="correo" type="email" autocomplete="email" required></div>
+            <input type="hidden" name="servicio" value="01 · Evaluamos">
+          </div>
+          <div class="form-actions"><button class="btn btn--green" type="submit">Solicita tu diagnóstico</button></div>
+          <p class="form-status" role="status" aria-live="polite" style="color:#7fe0b0"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__simple">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="https://www.consein.com/">consein</a>
+        <p>Servicios tecnológicos que transforman empresas</p>
+      </div>
+      <ul class="footer__inline">
+        <li><a href="https://www.consein.com/">Inicio</a></li>
+        <li><a href="https://www.consein.com/nosotros">Nosotros</a></li>
+        <li><a href="innovacion-y-servicios-digitales.html" aria-current="page">Servicios</a></li>
+        <li><a href="https://www.consein.com/blog">Blog</a></li>
+        <li><a href="innovacion-y-servicios-digitales.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <span>CONSEIN © 2026 | TODOS LOS DERECHOS RESERVADOS</span>
+      <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/consein.js"></script>
+</body>
+</html>
