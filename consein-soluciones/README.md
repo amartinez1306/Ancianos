@@ -1,5 +1,7 @@
 # Consein · Soluciones (modelo para desarrollo y producción)
 
+**Versión de un solo archivo:** `consein-soluciones.html` (todo incluido; abrir con doble clic).
+
 Modelo HTML/CSS/JS estático, sin dependencias ni build. Abrir `index.html` en el navegador
 o servir la carpeta con cualquier servidor web (`npx serve .`, `python3 -m http.server`).
 
