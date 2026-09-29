@@ -1098,7 +1098,7 @@ window.CONSEIN_DATA = {
           "microsoft": "Azure OpenAI, Azure AI Search, Microsoft Foundry.",
           "puente": "Lleva a producción los agentes de la fase Vector y aplica la gobernanza de la fase Brújula en la atención al cliente.",
           "resultado": "Una sucursal que nunca cierra: atención 24/7, respuestas naturales, conocimiento gobernado por el banco y una plataforma lista para nuevos agentes y canales.",
-          "prueba": "Caso María: un posible fraude con tarjeta un domingo a las 11:00 p. m. se atiende en 7 segundos, con número de caso, siguiente paso y trazabilidad total (Consein + Microsoft).",
+          "prueba": "Ganadora del WITSA Global AI Award for Infrastructure, en su versión Enterprise Multi-Agent Generative AI Infrastructure. Caso María: un posible fraude con tarjeta un domingo a las 11:00 p. m. se atiende en 7 segundos, con número de caso, siguiente paso y trazabilidad total (Consein + Microsoft).",
           "cta": "Conozca BanIA en acción."
         }
       ]
