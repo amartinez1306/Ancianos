@@ -1,6 +1,6 @@
-/* Consein · Dirección de Innovación y Servicios Digitales
-   Interacciones compartidas: menú móvil, sub-navegación activa,
-   animaciones de entrada y formularios de muestra. */
+/* Consein · Servicios
+   Interacciones: menú móvil, sub-navegación activa, animaciones de entrada,
+   subpantallas «Ver servicio» y formulario de contacto. */
 (function () {
   "use strict";
 
@@ -14,11 +14,10 @@
     });
   }
 
-  // ---- Desplegables (clic / teclado; en escritorio también hover por CSS) ----
+  // ---- Desplegables del menú (clic / teclado; en escritorio también hover por CSS) ----
   document.querySelectorAll(".main-nav__item > button").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var item = btn.parentElement;
-      var open = item.classList.toggle("is-open");
+      var open = btn.parentElement.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", String(open));
     });
   });
@@ -62,11 +61,9 @@
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  // ---- Subpantallas de servicio ("Ver servicio") ----
-  // Se abren al hacer clic en cualquier enlace con data-service="<id>" o al
-  // entrar con #<id> en la URL (p. ej. innovacion-y-servicios-digitales.html#csc-03).
-  // CONSEIN_BASE permite usar las fichas desde páginas fuera de /servicios (p. ej. el índice).
-  var BASE = window.CONSEIN_BASE || "";
+  // ---- Subpantallas «Ver servicio» ----
+  // Se abren con cualquier elemento data-service="<id>" o al entrar con #<id>
+  // en la URL (p. ej. index.html#etapa-03). El contenido está en servicios-data.js.
   var SERVICIOS = window.CONSEIN_SERVICIOS || [];
   var byService = {};
   SERVICIOS.forEach(function (s) { byService[s.id] = s; });
@@ -76,9 +73,6 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-
-  var dialog = null;
-  var lastTrigger = null;
 
   function row(label, value, cls) {
     return '<tr class="' + (cls || "") + '"><th scope="row">' + label + "</th><td>" + value + "</td></tr>";
@@ -94,71 +88,74 @@
         '<button class="svc__close" type="button" data-close aria-label="Cerrar">&times;</button>' +
       "</header>" +
       '<div class="svc__body"><table class="svc__table"><tbody>' +
-        row("En una frase", "<strong><em>" + esc(s.frase) + "</em></strong>", "svc__row--lead") +
+        row("En una frase", "<strong><em>" + esc(s.frase) + "</em></strong>") +
         row("Ideal para", esc(s.ideal)) +
         row("Qué resuelve", esc(s.resuelve)) +
         row("Incluye", incluye) +
-        row("Aporte Cisco", esc(s.cisco), "svc__row--cisco") +
-        row("Núcleo Microsoft", esc(s.microsoft), "svc__row--ms") +
+        row("Cómo lo hacemos", esc(s.como), "svc__row--hl") +
+        row("Entregables", esc(s.entregables), "svc__row--hl") +
         row("Resultado", "<strong>" + esc(s.resultado) + "</strong>") +
-        row("Prueba", "<em>" + esc(s.prueba) + "</em>", "svc__row--proof") +
+        row("Cómo medimos el éxito", esc(s.exito), "svc__row--kpi") +
       "</tbody></table></div>" +
       '<footer class="svc__foot">' +
-        (s.pagina ? '<a class="svc__more" href="' + esc(BASE + s.pagina) + '">Ver página completa del servicio</a>' : "<span></span>") +
         '<a class="svc__cta" href="#contacto" data-cta="' + esc(s.id) + '">' + esc(s.cta) + "</a>" +
       "</footer>"
     );
   }
 
+  var dialog = null;
+  var lastTrigger = null;
+
+  function closeService() {
+    if (dialog && dialog.open) dialog.close();
+  }
+
+  function selectService(svc) {
+    var form = document.querySelector("#contacto form");
+    if (!form) return;
+    var hidden = form.querySelector('input[name="servicio"]');
+    if (hidden) hidden.value = svc.titulo;
+    var note = form.querySelector(".form-service");
+    if (note) { note.hidden = false; note.textContent = "Servicio seleccionado: " + svc.titulo; }
+    document.getElementById("contacto").scrollIntoView();
+    var first = form.querySelector("input:not([type=hidden])");
+    if (first) first.focus({ preventScroll: true });
+  }
+
   function openService(id, trigger) {
     var s = byService[id];
-    if (!s) return false;
+    if (!s || !window.HTMLDialogElement) return false;
     if (!dialog) {
       dialog = document.createElement("dialog");
       dialog.className = "svc";
       dialog.setAttribute("aria-labelledby", "svc-title");
       document.body.appendChild(dialog);
       dialog.addEventListener("click", function (e) {
-        if (e.target === dialog || e.target.closest("[data-close]")) closeService();
+        if (e.target === dialog || e.target.closest("[data-close]")) { closeService(); return; }
         var cta = e.target.closest("[data-cta]");
         if (cta) {
-          var form = document.querySelector("#contacto form");
-          lastTrigger = null;
-          if (!form) { cta.setAttribute("href", BASE + "innovacion-y-servicios-digitales.html#contacto"); closeService(); return; }
           e.preventDefault();
+          lastTrigger = null;
           closeService();
-          var svc = byService[cta.dataset.cta];
-          var hidden = form.querySelector('input[name="servicio"]');
-          if (hidden) hidden.value = svc.titulo;
-          var note = form.querySelector(".form-service");
-          if (note) { note.hidden = false; note.textContent = "Servicio seleccionado: " + svc.titulo; }
-          document.getElementById("contacto").scrollIntoView();
-          var first = form.querySelector("input:not([type=hidden])");
-          if (first) first.focus({ preventScroll: true });
+          selectService(byService[cta.dataset.cta]);
         }
       });
       dialog.addEventListener("close", function () {
-        if (/^#(csc-|nortia)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
+        if (byService[location.hash.slice(1)]) history.replaceState(null, "", location.pathname + location.search);
         if (lastTrigger) lastTrigger.focus();
       });
     }
     dialog.innerHTML = renderService(s);
     lastTrigger = trigger || null;
-    if (dialog.showModal) { if (!dialog.open) dialog.showModal(); } else { dialog.setAttribute("open", ""); }
+    if (!dialog.open) dialog.showModal();
     if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
     dialog.querySelector(".svc__body").scrollTop = 0;
     return true;
   }
 
-  function closeService() {
-    if (!dialog) return;
-    if (dialog.close) dialog.close(); else dialog.removeAttribute("open");
-  }
-
   document.addEventListener("click", function (e) {
     var link = e.target.closest("[data-service]");
-    if (!link) return;
-    if (openService(link.dataset.service, link)) e.preventDefault();
+    if (link && openService(link.dataset.service, link)) e.preventDefault();
   });
   function fromHash() {
     var id = location.hash.slice(1);
@@ -167,10 +164,25 @@
   window.addEventListener("hashchange", fromHash);
   fromHash();
 
-  // ---- Formularios (modelo: sin backend conectado) ----
-  // Para producción, sustituir el bloque "demo" por el envío al CRM / endpoint de Consein.
-  document.querySelectorAll("form[data-demo-form]").forEach(function (form) {
+  // ---- Formulario de contacto ----
+  // Si el formulario tiene data-endpoint="https://…", los datos se envían por POST
+  // (FormData) a ese endpoint. Sin endpoint, solo se valida y se muestra la
+  // confirmación (útil en el ambiente de desarrollo).
+  document.querySelectorAll("form[data-contact-form]").forEach(function (form) {
     var status = form.querySelector(".form-status");
+    var submit = form.querySelector('[type="submit"]');
+
+    function done(ok, msg) {
+      status.dataset.state = ok ? "ok" : "error";
+      status.textContent = msg;
+      if (submit) submit.disabled = false;
+      if (ok) {
+        form.reset();
+        var note = form.querySelector(".form-service");
+        if (note) note.hidden = true;
+      }
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var firstInvalid = null;
@@ -180,16 +192,25 @@
         if (!ok && !firstInvalid) firstInvalid = field;
       });
       if (firstInvalid) {
-        status.dataset.state = "error";
-        status.textContent = "Revisa los campos marcados: son obligatorios y el correo debe ser válido.";
+        done(false, "Revisa los campos marcados: son obligatorios y el correo debe ser válido.");
         firstInvalid.focus();
         return;
       }
+
+      var okMsg = "¡Gracias! Un especialista te contactará muy pronto.";
+      var endpoint = form.dataset.endpoint;
+      if (!endpoint) { done(true, okMsg); return; }
+
+      if (submit) submit.disabled = true;
       status.dataset.state = "ok";
-      status.textContent = "¡Gracias! Un especialista de la Dirección te contactará muy pronto.";
-      form.reset();
-      var note = form.querySelector(".form-service");
-      if (note) note.hidden = true;
+      status.textContent = "Enviando…";
+      fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+        .then(function (res) {
+          done(res.ok, res.ok ? okMsg : "No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos por correo.");
+        })
+        .catch(function () {
+          done(false, "No pudimos enviar tu mensaje. Revisa tu conexión e inténtalo de nuevo.");
+        });
     });
   });
 })();

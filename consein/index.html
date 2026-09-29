@@ -3,198 +3,429 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Consein · Presentación al Comité</title>
-  <meta name="description" content="Índice para el comité: modelo de la sección Servicios de Consein, con las fichas de los 7 servicios de valor y NortIA.">
+  <title>Servicios | Consein</title>
+  <meta name="description" content="Servicio Consein en 7 etapas: diseñamos, implementamos, acompañamos y protegemos la transformación tecnológica de tu empresa, de principio a fin.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/consein.css">
-  <style>
-    .cm-hero { padding: 64px 0 56px; }
-    .cm-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .cm-meta span { font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); color: #d7e3f1; }
-    .cm-route { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: route; }
-    .cm-route li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; counter-increment: route; }
-    .cm-route li::before { content: "Paso " counter(route); display: block; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 8px; }
-    .cm-route h3 { font-size: 18px; margin-bottom: 8px; }
-    .cm-route p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
-    .cm-route a { font-weight: 800; color: var(--blue); font-size: 14px; }
-    .cm-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .cm-card {
-      display: flex; flex-direction: column; gap: 8px; text-align: left;
-      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px;
-      cursor: pointer; font: inherit; color: inherit; transition: box-shadow .2s, transform .2s, border-color .2s;
-    }
-    .cm-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: #9bd3ee; }
-    .cm-card__code { font-size: 12px; font-weight: 800; color: #049fd9; }
-    .cm-card__step { font-family: var(--font-head); font-size: 18px; font-weight: 700; }
-    .cm-card__title { font-size: 14px; font-weight: 700; color: var(--navy); }
-    .cm-card__fmt { font-size: 13px; color: var(--muted); font-style: italic; }
-    .cm-card__go { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 800; color: #049fd9; }
-    .cm-card--ia { background: linear-gradient(135deg, var(--navy), #0b5cad); border-color: var(--navy); color: #fff; }
-    .cm-card--ia .cm-card__code, .cm-card--ia .cm-card__go { color: var(--green); }
-    .cm-card--ia .cm-card__title { color: #fff; }
-    .cm-card--ia .cm-card__fmt { color: #d7e3f1; }
-    .cm-phase { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; align-self: flex-start; }
-    .cm-phase--1 { background: var(--blue-soft); color: var(--blue); }
-    .cm-phase--2 { background: #dcebfa; color: #1d6fc2; }
-    .cm-phase--3 { background: #e3e8ef; color: var(--navy); }
-    .cm-phase--ia { background: rgba(43,182,115,.18); color: var(--green); }
-    .cm-pages { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .cm-page { display: block; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: box-shadow .2s; }
-    .cm-page:hover { box-shadow: var(--shadow); }
-    .cm-page small { font-size: 12px; font-weight: 800; color: var(--blue); }
-    .cm-page h3 { font-size: 19px; margin: 6px 0 8px; }
-    .cm-page p { font-size: 14px; color: var(--muted); }
-    .cm-decide { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .cm-decide li { display: flex; gap: 12px; background: #fff; border-radius: var(--radius-sm); padding: 16px 18px; font-size: 15px; border-left: 4px solid var(--green); }
-    .cm-decide b { font-family: var(--font-head); color: var(--blue); }
-    @media (max-width: 1000px) { .cm-grid { grid-template-columns: repeat(2, 1fr); } .cm-route { grid-template-columns: 1fr; } }
-    @media (max-width: 640px) { .cm-grid, .cm-pages, .cm-decide { grid-template-columns: 1fr; } }
-  </style>
 </head>
 <body>
 
+<!-- Iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8h-1"/><path d="M12 20v-8m-3 3 3-3 3 3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1"/><path d="M16 4a4 4 0 0 1 0 8"/><path d="M22 21v-1a5 5 0 0 0-4-4.9"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8m-4-5v5"/><path d="M7 10h3l1.5-2.5 1.5 5 1.5-2.5H17"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M7 16v-4m4 4V7m4 9v-6m4 6V4"/></symbol>
+    <symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M9 8h6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+<a class="visually-hidden skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ Encabezado ============ -->
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="logo" href="index.html" aria-label="Consein, índice para el comité">
+    <a class="logo" href="https://www.consein.com/" aria-label="Consein, ir al inicio">
       <img src="assets/logo-consein.png" alt="Consein" width="155" height="26">
     </a>
-    <a class="btn btn--navy btn--sm" href="servicios/innovacion-y-servicios-digitales.html">Ver sitio</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="https://www.consein.com/">Inicio</a></li>
+        <li class="main-nav__item">
+          <button class="main-nav__link" aria-expanded="false">Acerca de <svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown">
+            <a href="https://www.consein.com/nosotros">Nosotros</a>
+            <a href="https://www.consein.com/casos-de-exito">Casos de Éxito</a>
+            <a href="https://www.consein.com/blog">Blog</a>
+          </div>
+        </li>
+        <li class="main-nav__item">
+          <button class="main-nav__link" aria-expanded="false">Soluciones <svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown">
+            <a href="#">Infraestructura y colaboración</a>
+            <a href="#">IA y automatización de procesos</a>
+            <a href="#">Financieras y de gobierno corporativo</a>
+            <a href="#">Hardware</a>
+            <a href="#">Ciberseguridad</a>
+            <a href="#">Ecosistema</a>
+          </div>
+        </li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html" aria-current="page">Servicios</a></li>
+      </ul>
+      <a class="btn btn--navy btn--sm" href="#contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="container">
+    <ol>
+      <li><a href="https://www.consein.com/">Inicio</a></li>
+      <li><span aria-current="page">Servicios</span></li>
+    </ol>
+  </div>
+</nav>
+
 <main id="contenido">
-  <section class="hero cm-hero">
-    <div class="container">
-      <span class="eyebrow eyebrow--line">Presentación al Comité</span>
-      <h1 class="h1 hero__title">Sección Servicios · Innovación y Servicios Digitales</h1>
-      <p class="hero__lead">Modelo de la opción <strong>Servicios</strong> de www.consein.com: la página principal, los 7 servicios de valor en 3 fases, la nueva oferta de IA <strong>NortIA</strong> y la ficha comercial de cada uno, que se abre al hacer clic en <em>Ver servicio</em>.</p>
-      <div class="hero__actions">
-        <a class="btn btn--green" href="servicios/innovacion-y-servicios-digitales.html">Abrir la página principal</a>
-        <a class="btn btn--ghost" href="#fichas">Ver las 8 fichas</a>
+
+  <!-- ============ Portada ============ -->
+  <section class="hero" id="portada">
+    <div class="container hero__grid">
+      <div>
+        <h1 class="visually-hidden">Servicios Consein</h1>
+        <p class="hero__lead">Diseñamos, implementamos, acompañamos y protegemos la transformación tecnológica de tu empresa, de principio a fin.</p>
+        <div class="hero__actions">
+          <a class="btn btn--green" href="#contacto">Conversemos sobre tu reto</a>
+          <a class="btn btn--ghost" href="#servicio">Ver las 7 etapas</a>
+        </div>
+        <p class="hero__tagline">Nos hacemos cargo del resultado, no solo del proyecto.</p>
       </div>
-      <div class="cm-meta" aria-label="Contenido del modelo">
-        <span>2 páginas</span><span>8 fichas de servicio</span><span>Logo original Consein</span><span>Versión escritorio y móvil</span>
+
+      <div class="hero__visual">
+        <svg viewBox="0 0 420 440" role="img" aria-labelledby="shield-title">
+          <title id="shield-title">Siete etapas en tres fases, protegidas por un escudo transversal de ciberseguridad</title>
+          <path d="M210 30 370 80v130c0 110-70 180-160 210C120 390 50 320 50 210V80Z" fill="#0f2d4f" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
+          <path d="M210 52 350 96v114c0 98-62 160-140 186C132 370 70 308 70 210V96Z" fill="none" stroke="#2bb673" stroke-width="2" stroke-dasharray="6 7"/>
+          <circle cx="210" cy="225" r="105" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+          <text x="210" y="218" text-anchor="middle" fill="#fff" font-family="Bricolage Grotesque, sans-serif" font-size="30" font-weight="700">7 etapas</text>
+          <text x="210" y="242" text-anchor="middle" fill="#c8d6e6" font-family="Nunito Sans, sans-serif" font-size="12.5">3 fases</text>
+          <text x="210" y="259" text-anchor="middle" fill="#c8d6e6" font-family="Nunito Sans, sans-serif" font-size="12.5">1 escudo transversal</text>
+          <g font-family="Bricolage Grotesque, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#fff">
+            <a href="#etapa-01" data-service="etapa-01" aria-label="01 Evaluamos"><g class="step-node"><circle cx="210" cy="120" r="21" fill="#0b5cad"/><text x="210" y="125">01</text></g></a>
+            <a href="#etapa-02" data-service="etapa-02" aria-label="02 Diseñamos"><g class="step-node"><circle cx="292.1" cy="159.5" r="21" fill="#0b5cad"/><text x="292.1" y="164.5">02</text></g></a>
+            <a href="#etapa-03" data-service="etapa-03" aria-label="03 Actualizamos"><g class="step-node"><circle cx="312.4" cy="248.4" r="21" fill="#0b5cad"/><text x="312.4" y="253.4">03</text></g></a>
+            <a href="#etapa-04" data-service="etapa-04" aria-label="04 Transformamos"><g class="step-node"><circle cx="255.6" cy="319.6" r="21" fill="#2e7fd1"/><text x="255.6" y="324.6">04</text></g></a>
+            <a href="#etapa-05" data-service="etapa-05" aria-label="05 Optimizamos"><g class="step-node"><circle cx="164.4" cy="319.6" r="21" fill="#2e7fd1"/><text x="164.4" y="324.6">05</text></g></a>
+            <a href="#etapa-06" data-service="etapa-06" aria-label="06 Administramos"><g class="step-node"><circle cx="107.6" cy="248.4" r="21" fill="#2bb673"/><text x="107.6" y="253.4" fill="#0a2540">06</text></g></a>
+            <a href="#etapa-07" data-service="etapa-07" aria-label="07 Aseguramos"><g class="step-node"><circle cx="127.9" cy="159.5" r="21" fill="#2bb673"/><text x="127.9" y="164.5" fill="#0a2540">07</text></g></a>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- Recorrido sugerido -->
-  <section class="section section--alt" aria-labelledby="t-recorrido" style="padding:72px 0">
+  <!-- Sub-navegación -->
+  <nav class="subnav" aria-label="Secciones de Servicios">
     <div class="container">
-      <span class="eyebrow">Recorrido sugerido</span>
-      <h2 class="h2" id="t-recorrido" style="margin-bottom:28px">Cómo revisar el modelo en 5 minutos</h2>
-      <ol class="cm-route" style="list-style:none;padding:0;margin:0">
-        <li>
-          <h3>La propuesta de valor</h3>
-          <p>Portada, quiénes somos y los 7 pasos en 3 fases, con el escudo transversal de ciberseguridad y NortIA.</p>
-          <a href="servicios/innovacion-y-servicios-digitales.html#servicios-de-valor">Ir a Servicios de Valor →</a>
+      <div class="subnav__list">
+        <a class="subnav__link is-active" href="#portada">Portada</a>
+        <a class="subnav__link" href="#propuesta-de-valor">Propuesta de valor</a>
+        <a class="subnav__link" href="#servicio">Servicio en 7 etapas</a>
+        <a class="subnav__link" href="#pmo">Oficina de Proyectos</a>
+        <a class="subnav__link" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ Propuesta de valor ============ -->
+  <section class="section" id="propuesta-de-valor" aria-labelledby="t-valor">
+    <div class="container">
+      <div class="value__intro reveal">
+        <div>
+          <span class="eyebrow">Propuesta de valor</span>
+          <h2 class="h2" id="t-valor">El éxito se mide en el valor que obtienes cada día.</h2>
+        </div>
+        <p class="value__statement">En <strong>CONSEIN</strong>, el éxito no se mide por la entrega de una solución o por el cierre de un proyecto, sino por el valor real que el cliente obtiene en su operación diaria. Nuestro compromiso se extiende más allá del go live y se mantiene hasta que la solución está siendo utilizada correctamente y opera de forma estable.</p>
+      </div>
+
+      <ul class="pillars reveal">
+        <li class="pillar">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-ear"/></svg></span>
+          <h3 class="pillar__title">Escuchamos</h3>
+          <p>Escuchamos significa comprender profundamente el negocio del cliente antes de proponer cualquier iniciativa: sus prioridades, dolores, restricciones, riesgos y objetivos estratégicos. No proponemos tecnología por tecnología, sino soluciones alineadas a resultados de negocio.</p>
         </li>
-        <li>
-          <h3>La ficha de cada servicio</h3>
-          <p>Clic en <em>Ver servicio</em> abre la subpantalla con frase, público ideal, alcance, aporte Cisco, núcleo Microsoft, resultado y prueba.</p>
-          <a href="servicios/innovacion-y-servicios-digitales.html#csc-01">Abrir la ficha CSC-01 →</a>
+        <li class="pillar">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-book"/></svg></span>
+          <h3 class="pillar__title">Aprendemos</h3>
+          <p>Aprendemos implica convertir cada proyecto, experiencia o incidente en conocimiento reutilizable. Documentamos, estandarizamos y compartimos aprendizajes para repetir resultados, reducir riesgos y mejorar continuamente nuestra forma de trabajar.</p>
         </li>
-        <li>
-          <h3>La garantía y el contacto</h3>
-          <p>Oficina de Proyectos (PMO), líneas de especialidad, reconocimientos y formulario, que recibe el servicio elegido en la ficha.</p>
-          <a href="servicios/innovacion-y-servicios-digitales.html#pmo">Ir a la Oficina de Proyectos →</a>
+        <li class="pillar">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-target"/></svg></span>
+          <h3 class="pillar__title">Ejecutamos</h3>
+          <p>Ejecutamos supone disciplina, gobierno, planificación por hitos, criterios claros de aceptación y métricas de éxito. No confundimos actividad con avance; priorizamos impacto real.</p>
+        </li>
+        <li class="pillar pillar--dark">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-pulse"/></svg></span>
+          <h3 class="pillar__title">Acompañamos</h3>
+          <span class="pillar__tag">Diferencial clave</span>
+          <p>El acompañamiento proactivo y sostenido es un diferencial clave: monitoreamos el uso, el desempeño y la estabilidad de lo implementado, anticipándonos a problemas y optimizando continuamente para asegurar continuidad, confiabilidad y adopción efectiva.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Servicio Consein en 7 etapas ============ -->
+  <section class="section section--alt" id="servicio" aria-labelledby="t-servicio">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Servicio Consein · Cómo trabajamos</span>
+          <h2 class="h2" id="t-servicio">7 etapas en 3 fases. Empezamos por tu problema, terminamos en tu resultado.</h2>
+        </div>
+        <p class="section-head__aside">Cada tarjeta parte de lo que dice tu empresa hoy. Elige la que más se parece a tu situación.</p>
+      </div>
+
+      <div class="phases reveal">
+        <!-- Fase 1 -->
+        <div class="phase phase--1">
+          <div class="phase__bar"><strong>Fase 1 · Solución</strong><span>Fundación</span></div>
+          <div class="phase__cards">
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">01</span><svg aria-hidden="true"><use href="#i-search"/></svg></div>
+              <h3 class="step-card__title">Evaluamos</h3>
+              <p class="step-card__quote">“Invertimos en tecnología, pero no sabemos si está sirviendo.”</p>
+              <p class="step-card__desc">Descubrimos tus brechas tecnológicas y las conectamos con tus metas de negocio.</p>
+              <a class="step-card__link" href="#etapa-01" data-service="etapa-01">Ver servicio →</a>
+            </article>
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">02</span><svg aria-hidden="true"><use href="#i-layers"/></svg></div>
+              <h3 class="step-card__title">Diseñamos</h3>
+              <p class="step-card__quote">“Compramos soluciones que no encajan o que tenemos que rehacer.”</p>
+              <p class="step-card__desc">Arquitecturas a la medida, integradas y preparadas para crecer.</p>
+              <a class="step-card__link" href="#etapa-02" data-service="etapa-02">Ver servicio →</a>
+            </article>
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">03</span><svg aria-hidden="true"><use href="#i-cloud"/></svg></div>
+              <h3 class="step-card__title">Actualizamos</h3>
+              <p class="step-card__quote">“Nuestros sistemas son viejos, caros y nos da miedo migrar.”</p>
+              <p class="step-card__desc">Modernizamos y migramos tu infraestructura sin detener tu operación.</p>
+              <a class="step-card__link" href="#etapa-03" data-service="etapa-03">Ver servicio →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="phase phase--2">
+          <div class="phase__bar"><strong>Fase 2 · Transformación</strong><span>Valor máximo</span></div>
+          <div class="phase__cards">
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">04</span><svg aria-hidden="true"><use href="#i-users"/></svg></div>
+              <h3 class="step-card__title">Transformamos</h3>
+              <p class="step-card__quote">“Pagamos licencias que nadie usa.”</p>
+              <p class="step-card__desc">Convertimos la tecnología en hábito y en productividad medible.</p>
+              <span class="step-card__tag">Nuestro diferenciador</span>
+              <a class="step-card__link" href="#etapa-04" data-service="etapa-04">Ver servicio →</a>
+            </article>
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">05</span><svg aria-hidden="true"><use href="#i-trend"/></svg></div>
+              <h3 class="step-card__title">Optimizamos</h3>
+              <p class="step-card__quote">“Los costos suben y la solución se quedó estancada.”</p>
+              <p class="step-card__desc">Mejoramos rendimiento, procesos y costos de forma continua.</p>
+              <a class="step-card__link" href="#etapa-05" data-service="etapa-05">Ver servicio →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="phase phase--3">
+          <div class="phase__bar"><strong>Fase 3 · Gobernanza</strong><span>Sostenibilidad</span></div>
+          <div class="phase__cards">
+            <article class="step-card">
+              <div class="step-card__top"><span class="step-card__num">06</span><svg aria-hidden="true"><use href="#i-monitor"/></svg></div>
+              <h3 class="step-card__title">Administramos</h3>
+              <p class="step-card__quote">“TI vive apagando incendios y todo depende de una persona.”</p>
+              <p class="step-card__desc">Monitoreo, gestión de incidentes y soporte especializado 24/7.</p>
+              <a class="step-card__link" href="#etapa-06" data-service="etapa-06">Ver servicio →</a>
+            </article>
+            <article class="step-card step-card--dark">
+              <div class="step-card__top"><span class="step-card__num">07</span><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+              <h3 class="step-card__title">Aseguramos</h3>
+              <p class="step-card__quote">“Nos preocupa un ataque o una fuga de información.”</p>
+              <p class="step-card__desc">Ciberseguridad bajo el principio de confianza cero, presente en cada etapa.</p>
+              <a class="step-card__link" href="#etapa-07" data-service="etapa-07">Ver servicio →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <p class="shield-note reveal">
+        <svg aria-hidden="true"><use href="#i-shield"/></svg>
+        <span><strong>El escudo transversal:</strong> la ciberseguridad no es una fase aislada. Está presente en las siete etapas, desde el diagnóstico hasta la operación diaria.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Oficina de Proyectos (PMO) ============ -->
+  <section class="section section--soft" id="pmo" aria-labelledby="t-pmo">
+    <div class="container">
+      <div class="split split--center">
+        <div class="pmo__intro reveal">
+          <span class="eyebrow">Oficina de Proyectos (PMO)</span>
+          <h2 class="h2" id="t-pmo">Lo que prometemos es lo que entregamos. Y alguien lo verifica.</h2>
+          <p class="lead">La Oficina de Proyectos acompaña cada servicio desde afuera del equipo que lo ejecuta. No construye la solución: vigila que el resultado comprometido al inicio sea el mismo que recibes al final, en alcance, tiempo, costo y valor.</p>
+        </div>
+        <div class="formula reveal">
+          <span class="eyebrow">Nuestra fórmula de servicio</span>
+          <div class="formula__eq" role="img" aria-label="7 etapas, qué hacemos, más PMO, cómo lo garantizamos, igual a Resultado, el prometido">
+            <div class="formula__box formula__box--blue"><strong>7 etapas</strong><span>qué hacemos</span></div>
+            <span class="formula__op" aria-hidden="true">+</span>
+            <div class="formula__box formula__box--navy"><strong>PMO</strong><span>cómo lo garantizamos</span></div>
+            <span class="formula__op" aria-hidden="true">=</span>
+            <div class="formula__box formula__box--green"><strong>Resultado</strong><span>el prometido</span></div>
+          </div>
+          <p>Es el mecanismo que convierte nuestra frase de marca en un compromiso verificable: nos hacemos cargo del resultado, no solo del proyecto.</p>
+        </div>
+      </div>
+
+      <ol class="pmo-steps reveal">
+        <li class="pmo-card">
+          <div class="pmo-card__top"><span class="pmo-card__num">01</span><svg aria-hidden="true"><use href="#i-doc"/></svg></div>
+          <h3 class="h3">Fijamos la promesa</h3>
+          <p>Antes de empezar, acordamos por escrito el resultado esperado, cómo se medirá y en qué plazos.</p>
+          <p class="pmo-card__get"><strong>Recibes:</strong> línea base e indicadores de éxito acordados.</p>
+        </li>
+        <li class="pmo-card">
+          <div class="pmo-card__top"><span class="pmo-card__num">02</span><svg aria-hidden="true"><use href="#i-eye"/></svg></div>
+          <h3 class="h3">Seguimos desde afuera</h3>
+          <p>Una mirada independiente del equipo técnico controla avance, riesgos y cambios, y alerta antes de que haya desvíos.</p>
+          <p class="pmo-card__get"><strong>Recibes:</strong> reportes de estado claros y un solo interlocutor.</p>
+        </li>
+        <li class="pmo-card">
+          <div class="pmo-card__top"><span class="pmo-card__num">03</span><svg aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h3 class="h3">Validamos en cada hito</h3>
+          <p>No avanzamos de etapa sin comprobar que lo entregado cumple lo acordado. Si algo cambia, se decide contigo.</p>
+          <p class="pmo-card__get"><strong>Recibes:</strong> aprobaciones por hito y cambios controlados.</p>
+        </li>
+        <li class="pmo-card pmo-card--dark">
+          <div class="pmo-card__top"><span class="pmo-card__num">04</span><svg aria-hidden="true"><use href="#i-bars"/></svg></div>
+          <h3 class="h3">Cerramos con evidencia</h3>
+          <p>Medimos el resultado contra los indicadores iniciales. Lo aprendido alimenta el siguiente proyecto y nuestros nuevos servicios.</p>
+          <p class="pmo-card__get"><strong>Recibes:</strong> informe de cierre con valor demostrado.</p>
         </li>
       </ol>
-    </div>
-  </section>
 
-  <!-- Fichas -->
-  <section class="section" id="fichas" aria-labelledby="t-fichas" style="padding:72px 0">
-    <div class="container">
-      <span class="eyebrow">Subpantallas «Ver servicio»</span>
-      <h2 class="h2" id="t-fichas" style="margin-bottom:12px">Las 8 fichas de servicio</h2>
-      <p class="lead" style="font-size:16px;margin-bottom:28px">Haga clic en cualquier tarjeta para abrir la ficha tal como la verá el cliente.</p>
-      <div class="cm-grid" id="cm-grid"></div>
-      <noscript><p>Active JavaScript para ver las fichas, o abra la <a href="servicios/innovacion-y-servicios-digitales.html#servicios-de-valor">página principal</a>.</p></noscript>
-    </div>
-  </section>
-
-  <!-- Páginas -->
-  <section class="section section--alt" aria-labelledby="t-paginas" style="padding:72px 0">
-    <div class="container">
-      <span class="eyebrow">Páginas del modelo</span>
-      <h2 class="h2" id="t-paginas" style="margin-bottom:28px">Navegar el sitio</h2>
-      <div class="cm-pages">
-        <a class="cm-page" href="servicios/innovacion-y-servicios-digitales.html">
-          <small>Servicios › Innovación y Servicios Digitales</small>
-          <h3>Página principal de la sección</h3>
-          <p>Portada, quiénes somos, 7 servicios de valor y NortIA, Oficina de Proyectos (PMO), líneas de especialidad, innovación y reconocimientos, y contacto.</p>
-        </a>
-        <a class="cm-page" href="servicios/evaluamos.html">
-          <small>Servicios de Valor › 01 · Evaluamos</small>
-          <h3>Página completa de un servicio</h3>
-          <p>Ejemplo de página extendida para un servicio: diagnóstico en seis dimensiones, dolores del cliente, entregables y formulario propio.</p>
-        </a>
+      <div class="avoid reveal">
+        <strong>Lo que evitamos:</strong>
+        <span class="chip">Proyectos que se desvían en alcance, plazo o presupuesto</span>
+        <span class="chip">Entregas que no coinciden con lo vendido</span>
+        <span class="chip">Cierres sin medir el resultado</span>
+        <span class="chip">Clientes sin visibilidad del avance</span>
       </div>
     </div>
   </section>
 
-  <!-- Para decisión -->
-  <section class="section" aria-labelledby="t-decidir" style="padding:72px 0">
-    <div class="container">
-      <span class="eyebrow">Para decisión del comité</span>
-      <h2 class="h2" id="t-decidir" style="margin-bottom:28px">Puntos a validar antes de publicar</h2>
-      <ul class="cm-decide">
-        <li><b>1</b><span>Nombres comerciales, formatos y duraciones de cada ficha.</span></li>
-        <li><b>2</b><span>Alcance y posicionamiento de NortIA como oferta de IA de Consein.</span></li>
-        <li><b>3</b><span>Uso de las cifras de «Prueba» y sus fuentes en material público.</span></li>
-        <li><b>4</b><span>Conexión de los formularios al CRM y URL definitivas del menú del sitio.</span></li>
-      </ul>
+  <!-- ============ Contacto ============ -->
+  <section class="section section--alt" id="contacto" aria-labelledby="t-contacto">
+    <div class="container split">
+      <div class="contact__info reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2 class="h2" id="t-contacto">¿Qué reto tecnológico quieres resolver?</h2>
+        <p class="lead">Cuéntanos tu situación y un especialista te contactará.</p>
+        <div class="contact__links">
+          <a href="mailto:ventas@consein.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>ventas@consein.com</a>
+          <a href="https://wa.me/50768398680" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp +507 6839 8680</a>
+        </div>
+      </div>
+
+      <!-- data-endpoint: URL que recibe el formulario (POST). Vacío = solo validación, sin envío. -->
+      <form class="form-card reveal" data-contact-form data-endpoint="" novalidate>
+        <p class="form-service" role="status" hidden></p>
+        <input type="hidden" name="servicio" value="">
+        <div class="form-grid">
+          <div class="field"><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" autocomplete="name" required></div>
+          <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" name="empresa" autocomplete="organization" required></div>
+          <div class="field"><label for="c-cargo">Cargo</label><input id="c-cargo" name="cargo" autocomplete="organization-title"></div>
+          <div class="field"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" autocomplete="email" required></div>
+          <div class="field field--full">
+            <label for="c-pais">País</label>
+            <select id="c-pais" name="pais" required>
+              <option value="">Selecciona tu país</option>
+              <option>Venezuela</option>
+              <option>Panamá</option>
+              <option>Estados Unidos</option>
+              <option>España</option>
+              <option>Colombia</option>
+              <option>México</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <fieldset class="field field--full">
+            <legend>¿Qué quieres resolver?</legend>
+            <div class="radios">
+              <label class="radio"><input type="radio" name="reto" value="Diagnóstico"><span>Diagnóstico</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Migración"><span>Migración</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Adopción"><span>Adopción</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Costos"><span>Costos</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Soporte"><span>Soporte</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Seguridad"><span>Seguridad</span></label>
+              <label class="radio"><input type="radio" name="reto" value="Otro"><span>Otro</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-actions"><button class="btn btn--navy" type="submit">Enviar</button></div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>
 
+<!-- ============ Pie de página ============ -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer__simple">
+    <div class="footer__grid">
       <div class="footer__brand">
-        <a class="logo logo--light" href="index.html"><img src="assets/logo-consein-blanco.png" alt="Consein" width="167" height="28"></a>
+        <a class="logo" href="https://www.consein.com/"><img src="assets/logo-consein-blanco.png" alt="Consein" width="167" height="28"></a>
         <p>Servicios tecnológicos que transforman empresas</p>
+        <small>Rif: J-002545909</small>
       </div>
-      <ul class="footer__inline">
-        <li><a href="servicios/innovacion-y-servicios-digitales.html">Innovación y Servicios Digitales</a></li>
-        <li><a href="servicios/evaluamos.html">01 · Evaluamos</a></li>
-      </ul>
+      <div>
+        <h2 class="footer__title">Navegación</h2>
+        <ul class="footer__list">
+          <li><a href="https://www.consein.com/">Inicio</a></li>
+          <li><a href="https://www.consein.com/nosotros">Nosotros</a></li>
+          <li><a href="https://www.consein.com/blog">Blog</a></li>
+          <li><a href="https://www.consein.com/casos-de-exito">Casos de Éxito</a></li>
+          <li><a href="index.html" aria-current="page">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">Soluciones</h2>
+        <ul class="footer__list">
+          <li><a href="#">Infraestructura y colaboración</a></li>
+          <li><a href="#">IA y automatización de procesos</a></li>
+          <li><a href="#">Financieras y de gobierno corporativo</a></li>
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">Ciberseguridad</a></li>
+          <li><a href="#">Ecosistema</a></li>
+        </ul>
+      </div>
+      <div class="footer__addr">
+        <h2 class="footer__title">Ubícanos</h2>
+        <p><strong>Venezuela:</strong> Av. Orinoco, Centro Empresarial Roca, piso 2, Las Mercedes, Caracas. Tel: +58 212 9934411</p>
+        <p><strong>Panamá:</strong> Calle 71 Este con Calle 50, PH Plaza Morica, piso 8, of. 807. Tel: +507 397-3200</p>
+        <p><strong>Estados Unidos:</strong> Tel: +1 954 228 7363</p>
+        <p><strong>España:</strong> Tel: +34 919 26 83 57</p>
+      </div>
     </div>
     <div class="footer__bottom">
       <span>CONSEIN © 2026 | TODOS LOS DERECHOS RESERVADOS</span>
-      <span>Documento de trabajo · uso interno</span>
+      <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
     </div>
   </div>
 </footer>
 
-<script>window.CONSEIN_BASE = "servicios/";</script>
 <script src="assets/servicios-data.js"></script>
-<script>
-  // Tarjetas de las fichas a partir de los mismos datos que usa el sitio.
-  (function () {
-    var fases = { "csc-01": 1, "csc-02": 1, "csc-03": 1, "csc-04": 2, "csc-05": 2, "csc-06": 3, "csc-07": 3 };
-    var grid = document.getElementById("cm-grid");
-    (window.CONSEIN_SERVICIOS || []).forEach(function (s) {
-      var ia = s.id === "nortia";
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "cm-card" + (ia ? " cm-card--ia" : "");
-      b.dataset.service = s.id;
-      var fase = ia ? '<span class="cm-phase cm-phase--ia">Inteligencia artificial</span>'
-                    : '<span class="cm-phase cm-phase--' + fases[s.id] + '">Fase ' + fases[s.id] + "</span>";
-      b.innerHTML = fase +
-        '<span class="cm-card__code">' + s.codigo + "</span>" +
-        '<span class="cm-card__step">' + s.paso + "</span>" +
-        '<span class="cm-card__title">' + s.titulo + "</span>" +
-        '<span class="cm-card__fmt">' + s.formato + "</span>" +
-        '<span class="cm-card__go">Ver ficha →</span>';
-      grid.appendChild(b);
-    });
-  })();
-</script>
 <script src="assets/consein.js"></script>
 </body>
 </html>
