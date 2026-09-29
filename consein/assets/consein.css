@@ -371,7 +371,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .radar__legend i.ideal { background: #fff; }
 
 .steps-nav { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: var(--header-h); z-index: 40; }
-.steps-nav__list { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; padding: 12px 0; overflow-x: auto; }
+.steps-nav__list { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; padding: 12px 0; overflow-x: auto; }
 .steps-nav__link {
   display: flex; align-items: center; gap: 6px; padding: 9px 10px; border-radius: 8px;
   background: var(--bg-alt); font-size: 13px; font-weight: 800; color: var(--navy); white-space: nowrap;
@@ -486,3 +486,80 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 
 /* Evita que el contenido de las rejillas desborde en pantallas pequeñas */
 .split > *, .hero__grid > *, .innov > *, .cta-band > * { min-width: 0; }
+
+
+/* ==========================================================================
+   Logo original
+   ========================================================================== */
+.logo img { height: 26px; width: auto; display: block; }
+.site-footer .logo img { height: 28px; }
+
+/* ==========================================================================
+   Subpantalla de servicio (modelo "Consein 360")
+   ========================================================================== */
+:root {
+  --svc-cyan: #049fd9;
+  --svc-cyan-dark: #0387b8;
+  --svc-label-bg: #f1f4f9;
+  --svc-label: #5b6477;
+  --svc-cisco-bg: #e6f4fb;
+  --svc-cisco: #0a6d8f;
+  --svc-ms-bg: #e3eefb;
+  --svc-ms: #0b5cad;
+}
+.svc {
+  width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+  padding: 0; border: 0; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(10, 37, 64, .35);
+  color: #1f2937; font-family: "Segoe UI", var(--font-body);
+}
+.svc[open] { display: flex; flex-direction: column; animation: svc-in .22s ease-out; }
+.svc::backdrop { background: rgba(10, 37, 64, .55); backdrop-filter: blur(2px); }
+@keyframes svc-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+.svc__head { position: relative; background: var(--svc-cyan); color: #fff; padding: 14px 64px 14px 20px; }
+.svc__code { font-size: 13px; font-weight: 800; }
+.svc__tag { display: inline-block; margin-left: 8px; background: var(--green); color: var(--navy); font-size: 11px; padding: 2px 10px; border-radius: 999px; vertical-align: 1px; }
+.svc__title { font-family: "Segoe UI", var(--font-body); font-size: 19px; font-weight: 700; letter-spacing: 0; margin: 4px 0 2px; }
+.svc__format { font-size: 13px; font-style: italic; opacity: .95; }
+.svc__close {
+  position: absolute; top: 12px; right: 14px; width: 34px; height: 34px; border-radius: 6px;
+  border: 0; background: rgba(255,255,255,.18); color: #fff; font-size: 24px; line-height: 1; cursor: pointer;
+}
+.svc__close:hover { background: rgba(255,255,255,.3); }
+.svc__body { overflow-y: auto; }
+.svc__table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.svc__table th, .svc__table td { padding: 12px 16px; border-bottom: 1px solid #e5e9f0; vertical-align: top; text-align: left; }
+.svc__table th { width: 150px; background: var(--svc-label-bg); color: var(--svc-label); font-size: 14px; font-weight: 700; }
+.svc__table ul { margin: 0; padding-left: 18px; list-style: disc; }
+.svc__table li + li { margin-top: 3px; }
+.svc__row--cisco th { background: var(--svc-cisco-bg); color: var(--svc-cisco); }
+.svc__row--cisco td { color: var(--svc-cisco); }
+.svc__row--ms th { background: var(--svc-ms-bg); color: var(--svc-ms); }
+.svc__row--ms td { color: var(--svc-ms); }
+.svc__row--proof td { font-size: 13px; color: #4b5563; }
+.svc__foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px; border-top: 1px solid #e5e9f0; background: #fff; }
+.svc__more { font-size: 14px; font-weight: 700; color: var(--svc-ms); text-decoration: underline; }
+.svc__cta { background: var(--svc-cyan); color: #fff; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 6px; transition: background .2s; }
+.svc__cta:hover { background: var(--svc-cyan-dark); }
+@media (max-width: 640px) {
+  .svc { max-height: calc(100vh - 24px); }
+  .svc__table th, .svc__table td { display: block; width: 100%; border-bottom: 0; }
+  .svc__table th { padding: 10px 16px 6px; }
+  .svc__table td { padding: 4px 16px 12px; border-bottom: 1px solid #e5e9f0; }
+  .svc__cta { width: 100%; text-align: center; }
+}
+
+/* ---------- Tarjeta NortIA ---------- */
+.nortia {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  margin-top: 16px; padding: 24px 28px; border-radius: var(--radius);
+  background: linear-gradient(120deg, var(--navy) 0%, #0d3a6b 60%, #0b5cad 100%); color: #fff;
+}
+.nortia__mark { width: 56px; height: 56px; border-radius: 14px; background: rgba(43,182,115,.16); color: var(--green); display: grid; place-items: center; }
+.nortia__mark svg { width: 30px; height: 30px; }
+.nortia__kicker { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
+.nortia h3 { font-size: 24px; margin: 4px 0 6px; }
+.nortia p { color: #d7e3f1; font-size: 15px; }
+@media (max-width: 760px) { .nortia { grid-template-columns: 1fr; } }
+
+.form-service { margin-bottom: 16px; padding: 10px 14px; border-radius: 8px; background: var(--green-soft); border: 1px solid var(--green); font-size: 14px; font-weight: 700; }

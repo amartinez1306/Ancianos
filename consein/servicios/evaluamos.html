@@ -31,7 +31,6 @@
     <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/></symbol>
     <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="logo-mark" viewBox="0 0 32 32" fill="none" stroke-linecap="round"><path d="M26 9.5A12 12 0 1 0 26 22.5" stroke="#0b5cad" stroke-width="4"/><path d="M20.5 12.5a5 5 0 1 0 0 7" stroke="#2bb673" stroke-width="4"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-split" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6l6 10h6"/></symbol>
     <symbol id="i-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></symbol>
@@ -45,7 +44,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="logo" href="https://www.consein.com/" aria-label="Consein, ir al inicio">
-      <svg aria-hidden="true"><use href="#logo-mark"/></svg>consein
+      <img src="../assets/logo-consein.png" alt="Consein" width="155" height="26">
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
       <svg aria-hidden="true"><use href="#i-menu"/></svg>
@@ -105,6 +104,7 @@
         <p class="hero__lead">Evaluamos seis dimensiones de tu empresa y las comparamos con el estándar de tu industria. Sabrás exactamente dónde están tus brechas, qué riesgos corres y qué conviene resolver primero.</p>
         <div class="hero__actions">
           <a class="btn btn--green" href="#diagnostico">Solicita tu diagnóstico</a>
+          <a class="btn btn--ghost" href="#csc-01" data-service="csc-01">Ver ficha del servicio</a>
         </div>
       </div>
 
@@ -141,12 +141,13 @@
     <div class="container">
       <ul class="steps-nav__list">
         <li><a class="steps-nav__link" href="evaluamos.html" aria-current="page"><b>01</b> Evaluamos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>02</b> Diseñamos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>03</b> Actualizamos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>04</b> Transformamos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>05</b> Optimizamos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>06</b> Administramos</a></li>
-        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#servicios-de-valor"><b>07</b> Aseguramos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-02" data-service="csc-02"><b>02</b> Diseñamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-03" data-service="csc-03"><b>03</b> Actualizamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-04" data-service="csc-04"><b>04</b> Transformamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-05" data-service="csc-05"><b>05</b> Optimizamos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-06" data-service="csc-06"><b>06</b> Administramos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#csc-07" data-service="csc-07"><b>07</b> Aseguramos</a></li>
+        <li><a class="steps-nav__link" href="innovacion-y-servicios-digitales.html#nortia" data-service="nortia"><b>IA</b> NortIA</a></li>
       </ul>
     </div>
   </nav>
@@ -180,7 +181,7 @@
 
       <div class="next-step">
         <span>Después del diagnóstico, el siguiente paso es</span>
-        <a href="innovacion-y-servicios-digitales.html#servicios-de-valor">02 · Diseñamos: arquitectura digital a la medida →</a>
+        <a href="innovacion-y-servicios-digitales.html#csc-02" data-service="csc-02">02 · Diseñamos: arquitectura digital a la medida →</a>
       </div>
     </div>
   </section>
@@ -213,7 +214,7 @@
   <div class="container">
     <div class="footer__simple">
       <div class="footer__brand">
-        <a class="logo logo--light" href="https://www.consein.com/">consein</a>
+        <a class="logo logo--light" href="https://www.consein.com/"><img src="../assets/logo-consein-blanco.png" alt="Consein" width="167" height="28"></a>
         <p>Servicios tecnológicos que transforman empresas</p>
       </div>
       <ul class="footer__inline">
@@ -231,6 +232,7 @@
   </div>
 </footer>
 
+<script src="../assets/servicios-data.js"></script>
 <script src="../assets/consein.js"></script>
 </body>
 </html>
