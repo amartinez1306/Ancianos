@@ -1,6 +1,6 @@
 # Consein · Soluciones (modelo para desarrollo y producción)
 
-**Versión de un solo archivo:** `consein-soluciones.html` (todo incluido; abrir con doble clic).
+**Versión de un solo archivo:** `consein-soluciones.html` (todo incluido; abrir con doble clic). Se regenera con `python3 build_single.py`.
 
 Modelo HTML/CSS/JS estático, sin dependencias ni build. Abrir `index.html` en el navegador
 o servir la carpeta con cualquier servidor web (`npx serve .`, `python3 -m http.server`).
@@ -8,7 +8,8 @@ o servir la carpeta con cualquier servidor web (`npx serve .`, `python3 -m http.
 ## Estructura
 
 ```
-index.html                 Estructura de la página (header, hero, NortIA, 7 especialidades, contacto, footer)
+index.html                 Estructura: header, propuesta de valor y cifras, NortIA, 7 especialidades,
+                           mapa del menú, por qué Consein, contacto, footer
 assets/css/styles.css      Estilos (colores de marca del logo: #000F76 y #61FC22)
 assets/js/data.js          Contenido: NortIA + 7 especialidades y sus fichas (offerings)
 assets/js/app.js           Presentación: tarjetas, subpantalla con fichas, rutas y formulario

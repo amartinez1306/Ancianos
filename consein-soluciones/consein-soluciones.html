@@ -84,7 +84,8 @@ a { color: inherit; }
 .hero-note { font-size: .85rem; color: #AEB6DD; margin: 12px 0 0; }
 
 /* ---------- NortIA ---------- */
-.nortia-band-wrap { margin-top: -56px; position: relative; z-index: 2; }
+.nortia-band-wrap { position: relative; z-index: 2; }
+.section-tight { padding-top: 32px; }
 .nortia-band {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
   background: linear-gradient(100deg, #1B2A4A, #3A2A2A); color: var(--white);
@@ -94,6 +95,37 @@ a { color: inherit; }
 .nortia-band h2 { color: var(--white); font-size: 1.5rem; margin-bottom: 6px; }
 .nortia-band p { margin: 0; color: #E6DCD4; }
 .nortia-band .eyebrow { color: #E9C9B2; }
+
+/* ---------- Propuesta de valor: botones y cifras ---------- */
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-ghost { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px rgba(255,255,255,.6); }
+.stats-wrap { margin-top: -64px; position: relative; z-index: 2; }
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.stat { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 16px; text-align: center; }
+.stat b { display: block; font: 800 2.1rem 'Sora', sans-serif; color: var(--brand); line-height: 1.1; }
+.stat span { display: block; margin-top: 6px; font-size: .85rem; color: var(--muted); }
+
+/* ---------- Información 1: mapa ---------- */
+.section-soft { background: var(--soft); }
+.table-wrap { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.map-table { width: 100%; border-collapse: collapse; }
+.map-table th, .map-table td { padding: 16px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: .93rem; vertical-align: top; }
+.map-table thead th { background: var(--soft); color: var(--brand); font: 700 .78rem 'Sora', sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.map-table tbody tr:last-child td { border-bottom: 0; }
+.map-table a { font-weight: 700; color: var(--area); }
+.map-table code { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+
+/* ---------- Información 2: por qué Consein ---------- */
+.lead { font-size: 1.08rem; color: var(--muted); max-width: 780px; margin: -12px 0 28px; }
+.steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; }
+.steps li { counter-increment: step; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--brand); border-radius: 12px; padding: 16px 14px; }
+.steps b { display: block; font: 700 .98rem 'Sora', sans-serif; color: var(--brand); }
+.steps b::before { content: counter(step) ". "; color: #2F5BEA; }
+.steps span { display: block; margin-top: 6px; font-size: .84rem; color: var(--muted); }
+.success { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.success div { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; border-left: 5px solid var(--accent); }
+.success h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.success p { margin: 0; color: var(--muted); }
 
 /* ---------- Tarjetas de especialidad ---------- */
 .areas-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
@@ -185,6 +217,8 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .areas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .panel-body { grid-template-columns: 1fr; }
   .offer-tabs { position: static; display: flex; overflow-x: auto; padding-bottom: 4px; }
@@ -196,11 +230,16 @@ a { color: inherit; }
   .nav-toggle { display: block; }
   .main-nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; padding: 12px 16px; border-bottom: 1px solid var(--line); }
   .main-nav.open { display: flex; }
-  .areas-grid, .contact-inner { grid-template-columns: 1fr; }
+  .areas-grid, .contact-inner, .success { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .map-table thead { display: none; }
+  .map-table tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .map-table td { display: block; border: 0; padding: 4px 18px; }
   .nortia-band { flex-direction: column; align-items: flex-start; }
   .panel-sheet { inset: 0; border-radius: 0; }
   .panel-head { padding: 20px 0; }
-  .hero::after { width: 56px; height: 56px; top: 24px; right: 16px; }
+  .hero::after { display: none; }
   .ficha-table th, .ficha-table td { display: block; width: 100%; border-bottom: 0; }
   .ficha-table th { padding-bottom: 4px; }
   .ficha-table tr { display: block; border-bottom: 1px solid var(--line); }
@@ -227,19 +266,33 @@ a { color: inherit; }
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero · Propuesta de valor -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">Soluciones</p>
+        <p class="eyebrow">Soluciones · Dirección de Innovación y Servicios Digitales</p>
         <h1>Soluciones que resuelven problemas de negocio</h1>
-        <p class="hero-sub">Siete especialidades sobre la nube de Microsoft y una metodología propia para la IA. Nos hacemos cargo del resultado, no solo del proyecto.</p>
-        <a class="btn btn-accent" href="#contacto">Solicite su Diagnóstico Consein 360</a>
+        <p class="hero-sub">Construimos la plataforma tecnológica, protegemos los activos digitales, conectamos a las personas, optimizamos los procesos, transformamos los datos en valor, automatizamos la operación e incorporamos inteligencia artificial para acelerar su crecimiento.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#contacto">Solicite su Diagnóstico Consein 360</a>
+          <a class="btn btn-ghost" href="#/nortia">Conozca NortIA</a>
+        </div>
         <p class="hero-note">Gratuito · 8 horas · 100% remoto</p>
       </div>
     </section>
 
+    <!-- Cifras -->
+    <section class="container stats-wrap" aria-label="Consein en cifras">
+      <div class="stats">
+        <div class="stat"><b>+39</b><span>años en el mercado (desde 1987)</span></div>
+        <div class="stat"><b>82</b><span>certificaciones Microsoft vigentes</span></div>
+        <div class="stat"><b>25</b><span>especialistas certificados</span></div>
+        <div class="stat"><b>7</b><span>prácticas especializadas</span></div>
+        <div class="stat"><b>4</b><span>designaciones Solutions Partner</span></div>
+      </div>
+    </section>
+
     <!-- NortIA destacado -->
-    <section class="container nortia-band-wrap">
+    <section class="container nortia-band-wrap section-tight">
       <div class="nortia-band">
         <div>
           <p class="eyebrow eyebrow-light">Solución insignia</p>
@@ -256,6 +309,43 @@ a { color: inherit; }
         <p class="eyebrow">Siete especialidades, un ecosistema</p>
         <h2 class="section-title">Nuestras soluciones</h2>
         <div id="areas-grid" class="areas-grid"></div>
+      </div>
+    </section>
+
+    <!-- Información 1 · Mapa del menú Soluciones -->
+    <section id="mapa" class="section section-soft">
+      <div class="container">
+        <p class="eyebrow">Mapa del menú Soluciones</p>
+        <h2 class="section-title">Una página para cada práctica</h2>
+        <div class="table-wrap">
+          <table class="map-table">
+            <thead><tr><th scope="col">Página</th><th scope="col">Promesa</th><th scope="col">Offerings</th></tr></thead>
+            <tbody id="map-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información 2 · Por qué Consein -->
+    <section id="por-que" class="section">
+      <div class="container">
+        <p class="eyebrow">Por qué Consein</p>
+        <h2 class="section-title">Nos hacemos cargo del resultado, no solo del proyecto</h2>
+        <p class="lead">Desde 1987 transformamos empresas con tecnología Microsoft en Venezuela, Panamá, República Dominicana y Estados Unidos. Somos Microsoft Solutions Partner en Infrastructure (Azure), Modern Work, Data &amp; AI y Digital &amp; App Innovation, con especialización en migración de infraestructura y bases de datos a Azure.</p>
+        <ol class="steps">
+          <li><b>Evaluamos</b><span>Descubrimos el potencial oculto de su tecnología.</span></li>
+          <li><b>Diseñamos</b><span>Plataformas a la medida de hoy y de mañana.</span></li>
+          <li><b>Actualizamos</b><span>Modernizamos con agilidad y precisión.</span></li>
+          <li><b>Transformamos</b><span>Impulsamos el cambio cultural y digital.</span></li>
+          <li><b>Optimizamos</b><span>Más rendimiento, menos costo.</span></li>
+          <li><b>Administramos</b><span>Continuidad y confianza.</span></li>
+          <li><b>Aseguramos</b><span>Gestión total para que usted crezca.</span></li>
+        </ol>
+        <div class="success">
+          <div><h3>Uso correcto</h3><p>La solución fue adoptada por los usuarios.</p></div>
+          <div><h3>Operación estable</h3><p>Funciona sin interrupciones críticas y con alto rendimiento.</p></div>
+          <div><h3>Evolución</h3><p>Puede optimizarse y escalar en el tiempo.</p></div>
+        </div>
       </div>
     </section>
 
@@ -1447,6 +1537,16 @@ window.CONSEIN_DATA = {
       </article>`).join('');
   }
 
+  /* ---------- Información 1: mapa del menú ---------- */
+  const MAP_LABEL = { nortia: 'NortIA', seguridad: 'Ciberseguridad', automatizacion: 'Automatización de procesos' };
+  function renderMap() {
+    $('#map-body').innerHTML = AREAS.map((a) => {
+      const first = a.offerings[0].code, last = a.offerings[a.offerings.length - 1].code;
+      const promesa = a.slug === 'nortia' ? 'Solución insignia transversal' : a.promesa;
+      return `<tr style="--area:${a.color}"><td><a href="#/${a.slug}">${esc(MAP_LABEL[a.slug] || a.short)}</a></td><td>${esc(promesa)}</td><td><code>${esc(first)} a ${esc(last)}</code></td></tr>`;
+    }).join('');
+  }
+
   /* ---------- Selector de interés del formulario ---------- */
   function renderInterestOptions() {
     const sel = $('#interes');
@@ -1568,6 +1668,7 @@ window.CONSEIN_DATA = {
   }
 
   renderCards();
+  renderMap();
   renderInterestOptions();
   bindEvents();
   route();

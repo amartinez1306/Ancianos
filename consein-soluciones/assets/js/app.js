@@ -45,6 +45,16 @@
       </article>`).join('');
   }
 
+  /* ---------- Información 1: mapa del menú ---------- */
+  const MAP_LABEL = { nortia: 'NortIA', seguridad: 'Ciberseguridad', automatizacion: 'Automatización de procesos' };
+  function renderMap() {
+    $('#map-body').innerHTML = AREAS.map((a) => {
+      const first = a.offerings[0].code, last = a.offerings[a.offerings.length - 1].code;
+      const promesa = a.slug === 'nortia' ? 'Solución insignia transversal' : a.promesa;
+      return `<tr style="--area:${a.color}"><td><a href="#/${a.slug}">${esc(MAP_LABEL[a.slug] || a.short)}</a></td><td>${esc(promesa)}</td><td><code>${esc(first)} a ${esc(last)}</code></td></tr>`;
+    }).join('');
+  }
+
   /* ---------- Selector de interés del formulario ---------- */
   function renderInterestOptions() {
     const sel = $('#interes');
@@ -166,6 +176,7 @@
   }
 
   renderCards();
+  renderMap();
   renderInterestOptions();
   bindEvents();
   route();
