@@ -17,8 +17,8 @@ Modelo de página web para la opción **Servicios** de www.consein.com, basado e
 **Política de forma aplicada:** navy `#0a2540`, azul `#0b5cad` / `#2e7fd1`, verde `#2bb673`,
 fondos `#f4f8fb` / `#e8f0fb`; títulos en *Bricolage Grotesque* y texto en *Nunito Sans* (Google Fonts).
 
-**Subpantallas «Ver servicio»:** cada botón *Ver servicio* abre la ficha del servicio (modelo
-«Consein 360 · Diagnóstico Red + Nube»). También se abren por URL: `innovacion-y-servicios-digitales.html#csc-01` … `#csc-07` y `#nortia`.
+**Subpantallas «Ver servicio»:** cada botón *Ver servicio* abre la ficha del servicio (misma estructura
+que la subpantalla modelo, con contenido propio de cada servicio). También se abren por URL: `innovacion-y-servicios-digitales.html#csc-01` … `#csc-07` y `#nortia`.
 El botón de la ficha lleva al formulario de contacto con el servicio ya seleccionado.
 
 **Pendiente para producción:** conectar los formularios al CRM/endpoint (hoy solo validan y muestran

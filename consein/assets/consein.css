@@ -495,7 +495,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .site-footer .logo img { height: 28px; }
 
 /* ==========================================================================
-   Subpantalla de servicio (modelo "Consein 360")
+   Subpantalla de servicio ("Ver servicio")
    ========================================================================== */
 :root {
   --svc-cyan: #049fd9;
