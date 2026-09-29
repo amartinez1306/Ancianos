@@ -1,43 +1,34 @@
-# Modelo web · Consein › Soluciones
+# Consein · Soluciones (modelo para desarrollo y producción)
 
-Modelo de página para el menú **Soluciones** de www.consein.com, construido a partir de
-`Consein_Soluciones_DISD_Offerings_NortIA_ver_1.docx` (DISD, septiembre 2026).
+Modelo HTML/CSS/JS estático, sin dependencias ni build. Abrir `index.html` en el navegador
+o servir la carpeta con cualquier servidor web (`npx serve .`, `python3 -m http.server`).
 
-Abrir `index.html` en el navegador (archivo único, sin dependencias salvo Google Fonts).
+## Estructura
 
-## Páginas
+```
+index.html                 Estructura de la página (header, hero, NortIA, 7 especialidades, contacto, footer)
+assets/css/styles.css      Estilos (colores de marca del logo: #000F76 y #61FC22)
+assets/js/data.js          Contenido: NortIA + 7 especialidades y sus fichas (offerings)
+assets/js/app.js           Presentación: tarjetas, subpantalla con fichas, rutas y formulario
+assets/img/                Logo oficial (color y blanco, PNG transparente)
+```
 
-Una página por cada una de las 7 prácticas, más la portada y NortIA.
+## Funcionamiento
 
-| Ruta | Página | Offerings | Personalidad |
-|---|---|---|---|
-| `#/soluciones` | Portada del menú Soluciones | — | Institucional |
-| `#/nortia` | NortIA (solución insignia) | NRT-00 a 05 | Cobre / brújula |
-| `#/infraestructura` | Infraestructura | INF-01 a 07 | Azul · cuadrícula · Resiliencia, Escala, Costo justo |
-| `#/ciberseguridad` | Seguridad | SEG-01 a 06 | Verde · hexágonos · Zero Trust, Detección, Respuesta |
-| `#/colaboracion` | Colaboración | COL-01 a 06 | Turquesa · red de personas · Personas, Conocimiento, Copilot |
-| `#/servicios-empresariales` | Servicios Empresariales | EMP-01 a 06 | Naranja · barras · Control, Visibilidad, Decisión |
-| `#/data` | Data | DAT-01 a 06 | Celeste · puntos · Unificar, Gobernar, Activar |
-| `#/automatizacion` | Automatización de procesos | AUT-01 a 06 | Violeta · flujos · Menos manual, Más velocidad, Trazabilidad |
-| `#/inteligencia-artificial` | Inteligencia Artificial | IA-02 a 06 (+ banner NortIA) | Índigo · red neuronal · Activar, Escalar, Gobernar |
+- Cada tarjeta de especialidad tiene su botón **Ver …** que abre una **subpantalla** con sus fichas.
+- La subpantalla muestra la lista de offerings de la especialidad y la ficha seleccionada con:
+  En una frase · Ideal para · Qué resuelve · Incluye · Núcleo Microsoft · Puente NortIA ·
+  Resultado · Prueba · Respaldo · botón de CTA.
+- Enlaces directos: `index.html#/infraestructura`, `#/seguridad`, `#/colaboracion`,
+  `#/servicios-empresariales`, `#/data`, `#/automatizacion`, `#/inteligencia-artificial`, `#/nortia`.
+  Con ficha: `#/infraestructura/INF-04`.
+- Cerrar: botón ×, clic fuera o tecla Esc.
+- El CTA de cada ficha lleva al formulario de contacto con la solución preseleccionada.
 
-Cada práctica tiene su propio color, fondo, patrón gráfico, ilustración, pregunta gancho, tono de voz,
-palabras clave, dato destacado y llamado a la acción (tomado de sus "Mensajes listos para publicar").
+## Para producción
 
-Estructura de cada página: Hero · Personalidad y dato destacado · Problemas (como preguntas) · Soluciones ·
-Offerings · Evidencia (con fuente y año) · Respaldo · Puente NortIA · Otras prácticas · Cierre con un único CTA.
+- Conectar el formulario (`#contact-form` en `app.js`) al CRM o endpoint del sitio.
+- Validar con los líderes de cada práctica los nombres y alcances de los offerings de `data.js`.
+- Reemplazar los PNG del logo por la versión SVG oficial, si existe.
 
-> Nota: el documento proponía agrupar prácticas en las páginas actuales del sitio
-> (p. ej. /infraestructura-y-colaboracion). Este modelo separa las 7 prácticas en páginas propias.
-
-## Editar contenido
-
-Todos los textos están en el objeto `DATA` dentro de `index.html`. La configuración de páginas,
-colores y personalidad por práctica están en `PAGES`, `COLORS`, `PERSONA` y `ART`.
-
-## Pendiente antes de publicar (notas internas del documento)
-
-- Validar nombres y alcances de los 43 offerings con los líderes de cada práctica.
-- Confirmar con cada cliente los testimonios asociados a offerings (Digitel, Banco Plaza, Aiwa Latam).
-- Sustituir el logotipo provisional por el oficial y conectar el formulario al CRM del sitio.
-- Ajustar tipografía y colores a la guía de marca vigente del sitio si difiere de la del documento.
+Contenido basado en `Consein_Soluciones_DISD_Offerings_NortIA_ver_1.docx` (DISD, septiembre 2026).
