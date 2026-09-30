@@ -203,6 +203,10 @@ a { color: inherit; }
 .ficha-table .prueba td { font-style: italic; color: var(--muted); font-size: .88rem; }
 .ficha-foot { display: flex; justify-content: flex-end; padding: 18px 22px; }
 
+/* ---------- Nota "Condiciones aplican" ---------- */
+.cond { display:block; font-size:.62rem; line-height:1.3; opacity:.75; margin-top:4px; font-weight:400; font-style:normal; letter-spacing:0; text-transform:none}
+.ficha-foot { flex-direction: column; align-items: flex-end; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }

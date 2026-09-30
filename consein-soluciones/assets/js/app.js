@@ -70,7 +70,7 @@
       <header class="ficha-head">
         <p class="ficha-code">${esc(o.code)} · ${esc(area.short)}</p>
         <h3>${esc(o.name)}</h3>
-        <p class="ficha-type">${esc(o.tipo)}</p>
+        <p class="ficha-type">${esc(o.tipo)}</p>${o.tipo.includes('*') ? '<small class="cond">*Condiciones aplican.</small>' : ''}
       </header>
       <table class="ficha-table">
         <tbody>
@@ -86,7 +86,7 @@
         </tbody>
       </table>
       <footer class="ficha-foot">
-        <a class="btn btn-area" href="#contacto" data-interest="${esc(o.code + ' · ' + o.name)}">${esc(noDot(o.cta))}</a>
+        <a class="btn btn-area" href="#contacto" data-interest="${esc(o.code + ' · ' + o.name)}">${esc(noDot(o.cta))}</a>${o.cta.includes('*') ? '<small class="cond">*Condiciones aplican.</small>' : ''}
       </footer>`;
   }
 

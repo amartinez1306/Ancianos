@@ -259,6 +259,8 @@ form.contact .ok{grid-column:1/-1;display:none;background:#E8F6EE;color:#1d6b3d;
 @media (max-width:980px){.hero-grid,.manifesto{grid-template-columns:1fr}.hero .art{max-width:320px}.others{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:640px){.others{grid-template-columns:1fr 1fr}.hero .art{display:none}}
 
+.cond{display:block;font-size:.62rem;line-height:1.3;opacity:.75;margin-top:4px;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none}
+
 /* Footer */
 footer{background:#0f1936;color:#aab4cc;font-size:.88rem;padding:48px 0 24px}
 footer h4{color:#fff;font-size:.9rem}
@@ -336,7 +338,7 @@ const DATA = {
    {
     "code": "NRT-00",
     "name": "Consein 360 · Diagnóstico Cero Fricción",
-    "tipo": "Fase 0 Radar · assessment sin costo, 8 horas, 100% remoto",
+    "tipo": "Fase 0 Radar · assessment sin costo*, 8 horas, 100% remoto",
     "incluye": [
      "Medición de madurez organizacional y readiness tecnológico.",
      "Revisión de licencias, uso actual, datos y riesgos.",
@@ -506,7 +508,7 @@ const DATA = {
    ],
    "oferta": "Migramos su infraestructura a Azure con responsabilidad de extremo a extremo: nos hacemos cargo de que su nube funcione, escale y se optimice, no solo de migrarla, bajo los estándares CAF y WAF de Microsoft. Acompañamos al cliente desde el diagnóstico hasta la operación continua.",
    "entrega": [
-    "Diagnóstico Consein 360 del estado actual de la infraestructura (gratuito, 8 horas, 100% remoto).",
+    "Diagnóstico Consein 360 del estado actual de la infraestructura (gratuito*, 8 horas, 100% remoto).",
     "Arquitectura Azure optimizada para costos y preparada para IA desde el primer día.",
     "Migración gestionada desde on-premises con mínima fricción y continuidad garantizada.",
     "Servicios gestionados de infraestructura: monitoreo, optimización y evolución continua.",
@@ -517,7 +519,7 @@ const DATA = {
     {
      "code": "INF-01",
      "name": "Consein 360 · Diagnóstico de Infraestructura",
-     "tipo": "Assessment · gratuito, 8 horas, 100% remoto",
+     "tipo": "Assessment · gratuito*, 8 horas, 100% remoto",
      "incluye": [
       "Inventario y evaluación del entorno actual.",
       "Análisis de costos y oportunidades de ahorro.",
@@ -679,7 +681,7 @@ const DATA = {
     "Plataforma escalable y preparada para la IA"
    ],
    "web_prueba": "Las organizaciones que gestionan su entorno híbrido con Azure Arc reportan un ROI de 304% en tres años (Forrester TEI, 2025).",
-   "web_cta": "Solicite su Diagnóstico Consein 360: gratuito, 8 horas, 100% remoto."
+   "web_cta": "Solicite su Diagnóstico Consein 360: gratuito*, 8 horas, 100% remoto."
   },
   {
    "num": "02",
@@ -1907,7 +1909,7 @@ function offerCard(o, opts={}){
   ].join('');
   return `<article class="offer${star?' star':''}" data-type="${esc(typeKey(o.tipo))}">
     ${star?'<div class="ribbon">PUENTE HACIA NORTIA</div>':''}
-    <div class="top"><div class="code">${esc(o.code)}</div><span class="type">${esc(o.tipo)}</span>
+    <div class="top"><div class="code">${esc(o.code)}</div><span class="type">${esc(o.tipo)}</span>${o.tipo.includes('*')?'<small class="cond">*Condiciones aplican.</small>':''}
     <h3>${esc(o.name)}</h3><p class="frase">${esc(o.frase)}</p></div>
     <dl>
       <dt>Ideal para</dt><dd>${esc(o.ideal)}</dd>
@@ -2019,7 +2021,7 @@ function closing(p){
     <div class="wrap">
       <div class="eyebrow" style="color:var(--copper-2)">Primer paso</div>
       <h2>${p?esc(noDot(p.web_cta).split(':')[0]):'Solicite su Diagnóstico Consein 360'}</h2>
-      <p>Una evaluación ejecutiva gratuita, de 8 horas y 100% remota, que convierte los benchmarks de la industria en una hoja de ruta a la medida de su organización.</p>
+      <p>Una evaluación ejecutiva gratuita*, de 8 horas y 100% remota, que convierte los benchmarks de la industria en una hoja de ruta a la medida de su organización.<small class="cond">*Condiciones aplican.</small></p>
       <form class="contact" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset();">
         <label>Nombre y apellido<input required name="nombre" autocomplete="name"></label>
         <label>Empresa<input required name="empresa" autocomplete="organization"></label>
@@ -2050,7 +2052,7 @@ function pageHub(){
     <h1>Soluciones que resuelven problemas de negocio</h1>
     <p>Construimos la plataforma tecnológica, protegemos los activos digitales, conectamos a las personas, optimizamos los procesos, transformamos los datos en valor, automatizamos la operación e incorporamos inteligencia artificial para acelerar su crecimiento.</p>
     <div class="actions"><a class="btn btn-primary" href="#contacto">${DIAG_CTA}</a><a class="btn btn-ghost" href="#/nortia">Conozca NortIA</a></div>
-    <div class="note">Gratuito · 8 horas · 100% remoto</div>
+    <div class="note">Gratuito* · 8 horas · 100% remoto<small class="cond">*Condiciones aplican.</small></div>
   </div></section>
   <div class="wrap"><div class="stats">${stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('')}</div></div>
 
@@ -2105,7 +2107,7 @@ function pageSolution(page){
       <p>${esc(p.web_sub)}</p>
       <div class="kw">${per.keywords.map(k=>`<span style="border-color:${c}">${esc(k)}</span>`).join('')}</div>
       <div class="actions"><a class="btn" style="background:${c};color:#fff" href="#contacto">${esc(noDot(p.web_cta).split(':')[0])}</a></div>
-      <div class="note">Primer paso: Diagnóstico Consein 360 · gratuito, 8 horas, 100% remoto</div>
+      <div class="note">Primer paso: Diagnóstico Consein 360 · gratuito*, 8 horas, 100% remoto<small class="cond">*Condiciones aplican.</small></div>
     </div>
     <div class="art" aria-hidden="true">${ART[n](c)}</div>
   </div></section>
@@ -2138,7 +2140,7 @@ function pageNortia(){
     <div class="phases-inline">Radar → Norte → Vector → Brújula</div>
     <p>La metodología de Consein para pasar de la licencia al valor gobernado: cuatro fases, una sola dirección.</p>
     <div class="actions"><a class="btn btn-copper" href="#contacto">Inicie su Consein 360 · Diagnóstico Cero Fricción</a></div>
-    <div class="note">Sin costo · 8 horas · 100% remoto</div>
+    <div class="note">Sin costo* · 8 horas · 100% remoto<small class="cond">*Condiciones aplican.</small></div>
   </div></section>
   <nav class="subnav" aria-label="En esta página"><div class="wrap"><a href="#problema">El problema</a><a href="#paradigma">Paradigma</a><a href="#fases">Las 4 fases</a><a href="#norte">Método N-O-R-T-E</a><a href="#ciclo">Ciclo</a><a href="#prueba">Respaldo</a><a href="#offerings">Offerings</a><a href="#ecosistema">Especialidades</a><a href="#contacto"><b>Diagnóstico</b></a></div></nav>
 

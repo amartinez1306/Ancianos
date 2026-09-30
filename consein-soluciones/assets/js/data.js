@@ -25,7 +25,7 @@ window.CONSEIN_DATA = {
       {
         "code": "NRT-00",
         "name": "Consein 360 · Diagnóstico Cero Fricción",
-        "tipo": "Fase 0 Radar · assessment sin costo, 8 horas, 100% remoto",
+        "tipo": "Fase 0 Radar · assessment sin costo*, 8 horas, 100% remoto",
         "frase": "El primer paso hacia su autonomía en IA.",
         "ideal": "Cualquier organización que tenga o evalúe licencias de Copilot o proyectos de IA.",
         "resuelve": "Inversión en IA sin punto de partida claro ni prioridades de negocio.",
@@ -156,12 +156,12 @@ window.CONSEIN_DATA = {
       "promesa": "La plataforma donde corre el negocio digital.",
       "h1": "Una infraestructura que no se detiene y que cuesta lo justo",
       "sub": "Diseñamos, migramos y operamos su plataforma en Microsoft Azure con responsabilidad de extremo a extremo.",
-      "cta": "Solicite su Diagnóstico Consein 360: gratuito, 8 horas, 100% remoto.",
+      "cta": "Solicite su Diagnóstico Consein 360: gratuito*, 8 horas, 100% remoto.",
       "offerings": [
         {
           "code": "INF-01",
           "name": "Consein 360 · Diagnóstico de Infraestructura",
-          "tipo": "Assessment · gratuito, 8 horas, 100% remoto",
+          "tipo": "Assessment · gratuito*, 8 horas, 100% remoto",
           "frase": "Conozca el estado real, el costo y los riesgos de su infraestructura antes de invertir.",
           "ideal": "Empresas con servidores propios, nubes sin gobierno o sin claridad sobre lo que pagan.",
           "resuelve": "Decisiones de inversión tomadas sin datos y riesgos de continuidad que nadie ha medido.",
