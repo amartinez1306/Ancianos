@@ -13,6 +13,84 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 URL_BASE = "https://www.consein.com/cisco/"  # ajustar a la URL definitiva
 E = html.escape
+TEMA = "minimal"   # "minimal" o "digital" (ver __main__)
+GEN = {}           # páginas generadas en memoria para la versión de un solo archivo
+
+
+def D(fragmento):
+    """Devuelve el fragmento solo en el tema digital."""
+    return fragmento if TEMA == "digital" else ""
+
+
+_ICONOS = {
+    "infraestructura": '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
+    "seguridad": '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+    "colaboracion": '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>',
+    "data-analitica": '<path d="M4 20h16"/><path d="M7 16v-4M11 16V8M15 16v-6M19 16V5"/>',
+    "servicios-empresariales": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2M3 13h18"/>',
+    "automatizacion": '<path d="M20 12a8 8 0 01-14.3 4.9M4 12a8 8 0 0114.3-4.9"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/>',
+    "inteligencia-artificial": '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/>',
+    "integral": '<path d="M12 12c-2-2.7-3.6-4-5.3-4C4.6 8 3 9.8 3 12s1.6 4 3.7 4c1.7 0 3.3-1.3 5.3-4zm0 0c2 2.7 3.6 4 5.3 4 2.1 0 3.7-1.8 3.7-4s-1.6-4-3.7-4c-1.7 0-3.3 1.3-5.3 4z"/>',
+    "calendario": '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+    "certificado": '<circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/>',
+    "trofeo": '<path d="M8 4h8v5a4 4 0 01-8 0zM8 6H5a3 3 0 003 4M16 6h3a3 3 0 01-3 4M12 13v4M9 21h6M10 17h4v4h-4z"/>',
+    "objetivo": '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/>',
+}
+
+
+def icono(nombre):
+    return ('<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{_ICONOS[nombre]}</svg></span>')
+
+
+def arte_hero():
+    """Diagrama de red animado: Microsoft al centro, nodos Cisco y el anillo integrador de Consein."""
+    import math
+    cx, cy, r = 280, 260, 160
+    nodos = ["SD&#45;WAN", "Zero Trust", "Teams Rooms", "ThousandEyes", "AI Defense", "Meraki"]
+    lineas, paquetes, puntos = [], [], []
+    for i, n in enumerate(nodos):
+        a = math.radians(-90 + 60 * i)
+        x, y = cx + r * math.cos(a), cy + r * math.sin(a)
+        lineas.append(f'<path class="flow" d="M{cx} {cy} L{x:.1f} {y:.1f}"/>')
+        paquetes.append(f'<circle r="3.2" class="packet"><animateMotion dur="{2.2 + i * 0.35:.2f}s" repeatCount="indefinite" '
+                        f'path="M{cx} {cy} L{x:.1f} {y:.1f}"/></circle>')
+        lx, ly = cx + (r + 50) * math.cos(a), cy + (r + 50) * math.sin(a) + 4
+        anchor = "middle" if abs(math.cos(a)) < 0.2 else ("start" if math.cos(a) > 0 else "end")
+        if anchor != "middle":
+            lx = x + (42 if anchor == "start" else -42)
+            ly = y + 4
+        puntos.append(f'<circle class="pulse" cx="{x:.1f}" cy="{y:.1f}" r="22"/>'
+                      f'<circle class="node" cx="{x:.1f}" cy="{y:.1f}" r="22"/>'
+                      f'<circle class="node-dot" cx="{x:.1f}" cy="{y:.1f}" r="5"/>'
+                      f'<text class="node-label" x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}">{n}</text>')
+    return f"""<div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 560 520" role="img">
+  <defs>
+    <radialGradient id="g-core" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#2d3a8c"/><stop offset="1" stop-color="#1b245b"/></radialGradient>
+    <radialGradient id="g-glow"><stop offset="0" stop-color="#58bb47" stop-opacity=".35"/><stop offset="1" stop-color="#58bb47" stop-opacity="0"/></radialGradient>
+    <path id="arco" d="M{cx} {cy} m-232 0 a232 232 0 1 1 464 0 a232 232 0 1 1 -464 0"/>
+  </defs>
+  <circle cx="{cx}" cy="{cy}" r="200" fill="url(#g-glow)"/>
+  <g class="orbit"><circle cx="{cx}" cy="{cy}" r="232" class="ring-outer"/>
+    <text class="ring-text"><textPath href="#arco" startOffset="2%">CONSEIN · INTEGRAMOS Y OPERAMOS · UN SOLO RESPONSABLE · CONSEIN · INTEGRAMOS Y OPERAMOS · UN SOLO RESPONSABLE ·</textPath></text></g>
+  <circle cx="{cx}" cy="{cy}" r="{r}" class="ring-mid"/>
+  {''.join(lineas)}
+  {''.join(paquetes)}
+  {''.join(puntos)}
+  <circle cx="{cx}" cy="{cy}" r="78" class="core-halo"/>
+  <circle cx="{cx}" cy="{cy}" r="66" fill="url(#g-core)" class="core"/>
+  <path d="M258 262a14 14 0 0 1 3-27.6 19 19 0 0 1 36.5 4.6 12 12 0 0 1 2.5 23z" class="cloud" transform="translate(0 -12)"/>
+  <text x="{cx}" y="{cy + 22}" text-anchor="middle" class="core-label">MICROSOFT</text>
+  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">núcleo</text>
+</svg></div>"""
+
+
+ARTE_CAPAS = """<div class="stack" aria-hidden="true">
+  <div class="layer l1"><span class="tag">Núcleo</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
+  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad perimetral · Salas · Observabilidad</small></div>
+  <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
+</div>"""
 
 # ---------------------------------------------------------------------------
 # Especialidades (7) — cada una apunta a un grupo de palabras clave SEO
@@ -426,7 +504,7 @@ def menu(actual):
     prod = "".join(f'<li><a href="productos.html#{slug(p["code"])}">{E(p["titulo"])}</a></li>' for p in PRODUCTOS)
     return f"""<header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="Consein, inicio"><img src="assets/img/logo-consein.png" alt="Consein" width="166" height="28"></a>
+    <a class="logo" href="index.html" aria-label="Consein, inicio"><img src="assets/img/{'logo-consein-blanco.png' if TEMA == 'digital' else 'logo-consein.png'}" alt="Consein" width="166" height="28"></a>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
     <nav class="nav" id="nav" aria-label="Principal">
       <ul>
@@ -537,8 +615,10 @@ def pagina(archivo, actual, titulo, descripcion, cuerpo, jsonld):
     cabeza, cuerpo_html = doc.split("<body>", 1)
     cuerpo_html = re.sub(r">([^<]*)<", lambda m: ">" + m.group(1).replace("SD-WAN", '<span class="nw">SD-WAN</span>') + "<", cuerpo_html)
     doc = cabeza + "<body>" + cuerpo_html
-    (RAIZ / archivo).write_text(doc, encoding="utf-8")
-    print("✔", archivo)
+    GEN[archivo] = doc
+    if TEMA == "minimal":
+        (RAIZ / archivo).write_text(doc, encoding="utf-8")
+        print("✔", archivo)
 
 def banda(titulo, cta, href):
     return f"""<section class="band"><div class="wrap">
@@ -556,11 +636,11 @@ def servicio_ld(o, cat):
 # ---------------------------------------------------------------------------
 def inicio():
     tiles = ""
-    for e in ESPECIALIDADES:
+    for i, e in enumerate(ESPECIALIDADES, 1):
         n = sum(1 for o in SOLUCIONES if o["esp"] == e["id"])
-        tiles += f"""<a class="tile" href="soluciones.html#{e['id']}">
+        tiles += f"""<a class="tile" href="soluciones.html#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
   <h3>{E(e['h2'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'solución' if n == 1 else 'soluciones'}</span></a>"""
-    tiles += """<a class="tile" href="soluciones.html#integral" style="border-color:var(--navy)">
+    tiles += f"""<a class="tile featured" href="soluciones.html#integral" style="border-color:var(--navy)">{D(icono('integral'))}
   <h3>Consein Connected</h3><p>Operamos su plataforma Microsoft y su red Cisco como un solo servicio gestionado.</p><span class="count">Servicio integral</span></a>"""
 
     faq = "".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in FAQ)
@@ -574,7 +654,8 @@ def inicio():
 
     cuerpo = f"""
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div class="hero-copy">
     <p class="eyebrow">Soluciones Cisco · Consein</p>
     <h1><em>Sinergia exponencial:</em><span>su plataforma Microsoft, potenciada por una red Cisco</span></h1>
     <p class="lead">Integramos redes, ciberseguridad, salas de reunión y observabilidad Cisco con Microsoft 365, Azure y Dynamics 365, en un solo servicio gestionado y con un solo responsable.</p>
@@ -588,14 +669,19 @@ def inicio():
       <div><b>8</b><span>productos de renovación</span></div>
       <div><b>26</b><span>productos Cisco integrados</span></div>
     </div>
+   </div>
+   {D(arte_hero())}
   </div>
 </section>
 
 <section class="soft" id="enfoque">
-  <div class="wrap">
+  <div class="wrap enfoque-grid">
+   <div>
     <p class="eyebrow">Nuestro enfoque</p>
     <p class="statement">Microsoft es donde trabaja su negocio. Cisco es por donde viaja. En Consein los hacemos funcionar como uno solo.</p>
     <p class="statement-text">Construimos cada proyecto sobre su plataforma Microsoft e incorporamos Cisco en las capas que la potencian: la red, las salas, la observabilidad y la seguridad especializada.</p>
+   </div>
+   {D(ARTE_CAPAS)}
   </div>
 </section>
 
@@ -618,9 +704,9 @@ def inicio():
       <p class="lead">Reemplazamos sus equipos Cisco obsoletos por una red segura y gestionable, conectada a Teams, Azure e Intune, con planes de pago y por fases.</p>
     </div>
     <div class="grid g3">
-      <div class="stat"><b>71%</b><p>de las organizaciones tiene una red mayormente envejecida u obsoleta.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat"><b>42,5%</b><p>de las vulnerabilidades explotadas en el borde afectó a equipos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
+      <div class="stat" style="--p:71"><b>71%</b><p>de las organizaciones tiene una red mayormente envejecida u obsoleta.</p><cite>NTT DATA, 2024</cite></div>
+      <div class="stat" style="--p:69"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
+      <div class="stat" style="--p:42.5"><b>42,5%</b><p>de las vulnerabilidades explotadas en el borde afectó a equipos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
     </div>
     <div class="actions"><a class="btn btn-line" href="productos.html">Conocer el Programa Renueva</a></div>
   </div>
@@ -656,10 +742,10 @@ def inicio():
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Nosotros</p><h2>Por qué Consein</h2></div>
     <div class="grid g4 proof">
-      <div><b>Desde 1987</b><p>Operamos en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
-      <div><b>82 certificaciones</b><p>Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p></div>
-      <div><b>WITSA 2026</b><p>ARIA IA Generativa, que desarrollamos con Bancaribe, recibió el reconocimiento de los Global AI Awards.</p></div>
-      <div><b>Un responsable</b><p>Operamos ambos mundos y validamos cada producto Cisco contra su plataforma Microsoft.</p></div>
+      <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Operamos en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
+      <div>{D(icono('certificado'))}<b>82 certificaciones</b><p>Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p></div>
+      <div>{D(icono('trofeo'))}<b>WITSA 2026</b><p>ARIA IA Generativa, que desarrollamos con Bancaribe, recibió el reconocimiento de los Global AI Awards.</p></div>
+      <div>{D(icono('objetivo'))}<b>Un responsable</b><p>Operamos ambos mundos y validamos cada producto Cisco contra su plataforma Microsoft.</p></div>
     </div>
   </div>
 </section>
@@ -714,7 +800,7 @@ def soluciones():
         areas += f"""<section class="area" id="{e['id']}">
   <div class="wrap">
     <div class="area-head">
-      <div><p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
+      <div>{D(icono(e['id']))}<p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
       <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(e['cisco'])} · <b>Microsoft:</b> {E(e['microsoft'])}</p></div>
     </div>
     <div class="grid g3">{cards}</div>
@@ -734,7 +820,7 @@ def soluciones():
 <section class="area" id="integral">
   <div class="wrap">
     <div class="integral" id="{slug(integral['code'])}">
-      <div><p class="eyebrow">Servicio integral</p><h2>{E(integral['titulo'])}</h2><p class="lead" style="margin:0">{E(integral['valor'])}</p></div>
+      <div>{D(icono('integral'))}<p class="eyebrow">Servicio integral</p><h2>{E(integral['titulo'])}</h2><p class="lead" style="margin:0">{E(integral['valor'])}</p></div>
       <div><a class="more" href="#{slug(integral['code'])}">Seguir leyendo…</a>{detalle(integral, 'Servicio integral')}</div>
     </div>
   </div>
@@ -791,10 +877,10 @@ def productos():
     <div class="section-head"><p class="eyebrow">Por qué renovar ahora</p><h2>La red define el ritmo de su plataforma</h2>
       <p class="lead">Mientras Microsoft evoluciona cada trimestre, los equipos desactualizados frenan la experiencia, limitan las integraciones y elevan el riesgo.</p></div>
     <div class="grid g4">
-      <div class="stat"><b>71%</b><p>de las organizaciones tiene activos de red mayormente envejecidos u obsoletos.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat"><b>42,5%</b><p>de las vulnerabilidades explotadas en equipos de borde afectó a dispositivos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
-      <div class="stat"><b>31%</b><p>de las brechas comenzó por la explotación de vulnerabilidades.</p><cite>Verizon DBIR, 2026</cite></div>
+      <div class="stat" style="--p:71"><b>71%</b><p>de las organizaciones tiene activos de red mayormente envejecidos u obsoletos.</p><cite>NTT DATA, 2024</cite></div>
+      <div class="stat" style="--p:69"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
+      <div class="stat" style="--p:42.5"><b>42,5%</b><p>de las vulnerabilidades explotadas en equipos de borde afectó a dispositivos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
+      <div class="stat" style="--p:31"><b>31%</b><p>de las brechas comenzó por la explotación de vulnerabilidades.</p><cite>Verizon DBIR, 2026</cite></div>
     </div>
     <p class="note" style="margin-top:40px">En febrero de 2026, la CISA de Estados Unidos emitió la directiva BOD 26-02, que ordena reemplazar los equipos de borde sin soporte del fabricante. Auditorías, contratos y pólizas de ciberseguro ya la toman como referencia.</p>
   </div>
@@ -818,7 +904,7 @@ def productos():
 <section id="rutas">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Rutas de renovación</p><h2>De lo obsoleto a lo que potencia Microsoft</h2></div>
-    <div class="table-scroll"><table class="table">
+    <div class="table-scroll"><table class="table routes">
       <thead><tr><th>Renovamos</th><th>Hacia</th><th>Beneficio en Microsoft</th></tr></thead>
       <tbody>{filas}</tbody></table></div>
     <p class="small" style="margin-top:16px">Validamos las fechas de fin de venta y de soporte de cada modelo contra los anuncios oficiales de Cisco durante el inventario.</p>
@@ -860,7 +946,7 @@ def productos():
 # ---------------------------------------------------------------------------
 # Versión de un solo archivo (para abrir con doble clic o enviar por correo)
 # ---------------------------------------------------------------------------
-def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
+def version_unica(nombre="Consein_Cisco_sitio_completo.html", digital=False):
     import base64
     import re
 
@@ -870,7 +956,7 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
     paginas = {"index": "inicio", "soluciones": "soluciones", "productos": "productos"}
     fuentes = {}
     for archivo, pag in paginas.items():
-        fuentes[pag] = (RAIZ / f"{archivo}.html").read_text(encoding="utf-8")
+        fuentes[pag] = GEN[f"{archivo}.html"]
 
     def reescribir(fragmento, actual):
         def rw(m):
@@ -906,10 +992,14 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
     pie_html = reescribir(re.search(r"<footer.*?</dialog>", base, re.S).group(0), None)
 
     css = (RAIZ / "assets/css/estilos.css").read_text(encoding="utf-8")
+    if digital:
+        css += "\n" + (RAIZ / "assets/css/digital.css").read_text(encoding="utf-8")
     css = re.sub(r'url\("\.\./fonts/(poppins-[\w-]+\.woff2)"\)',
                  lambda m: 'url("' + data_uri("assets/fonts/" + m.group(1), "font/woff2") + '")', css)
     css = re.sub(r',url\("\.\./fonts/Haltto[^)]*\) format\("woff2"\)', "", css)  # Haltto: solo si está instalada
     js = (RAIZ / "assets/js/app.js").read_text(encoding="utf-8")
+    if digital:
+        js += "\n" + (RAIZ / "assets/js/digital.js").read_text(encoding="utf-8")
     logo = data_uri("assets/img/logo-consein.png", "image/png")
     logo_blanco = data_uri("assets/img/logo-consein-blanco.png", "image/png")
 
@@ -925,7 +1015,7 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
 </style>
 <script type="application/json" id="paginas">{json.dumps(meta, ensure_ascii=False)}</script>
 </head>
-<body data-single>
+<body data-single{' class="theme-digital"' if digital else ''}>
 <a class="skip" href="#contenido">Saltar al contenido</a>
 {cabecera}
 <main id="contenido">
@@ -946,7 +1036,15 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
 
 
 if __name__ == "__main__":
+    # Tema minimal: sitio de 3 páginas + versión de un solo archivo
     inicio()
     soluciones()
     productos()
     version_unica()
+    # Tema digital: versión de ejemplo en un solo archivo (paleta #1b245b / #58bb47)
+    TEMA = "digital"
+    GEN.clear()
+    inicio()
+    soluciones()
+    productos()
+    version_unica("Consein_Cisco_diseno_digital.html", digital=True)

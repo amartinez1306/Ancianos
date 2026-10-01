@@ -5,6 +5,8 @@ Sitio de la sección Cisco de consein.com: Microsoft como núcleo, Cisco como ac
 ## Cómo verlo
 - **Versión de un solo archivo (recomendada para presentar):** abra `Consein_Cisco_sitio_completo.html` con doble clic.
   Incluye las tres páginas, las fuentes y el logotipo; funciona sin internet y puede enviarse por correo.
+- **Diseño digital (ejemplo):** abra `Consein_Cisco_diseno_digital.html`. Mismo contenido con un diseño moderno y
+  tecnológico en la paleta Consein: azul oscuro `#1b245b` y verde `#58bb47`. Un solo archivo, sin internet.
 - **Versión de sitio (para publicar):** abra `index.html`. Usa la carpeta `assets/` y tiene una página por sección para SEO.
 Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en `_fuente/generar_sitio.py`).
 
@@ -29,7 +31,13 @@ Todo el contenido está en `_fuente/generar_sitio.py`. Después de editar:
 ```
 python3 _fuente/generar_sitio.py
 ```
-El comando regenera las tres páginas y la versión de un solo archivo.
+El comando regenera las tres páginas, la versión de un solo archivo y el diseño digital.
+
+## Diseño digital
+- Estilos: `assets/css/digital.css` (se aplica sobre `estilos.css`); animaciones: `assets/js/digital.js`.
+- Recursos gráficos (diagrama de red, capas, iconos) en `_fuente/generar_sitio.py` (`arte_hero`, `ARTE_CAPAS`, `_ICONOS`).
+- Texto azul oscuro sobre verde; nunca texto blanco sobre verde (contraste insuficiente).
+- Respeta la preferencia del sistema "reducir movimiento".
 
 ## SEO
 `Palabras_clave_SEO_Consein_Cisco.docx` lista 93 palabras clave por especialidad para el equipo SEO.
