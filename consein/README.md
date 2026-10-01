@@ -1,60 +1,70 @@
 # Consein · Página de Servicios
 
-Página estática (HTML, CSS y JavaScript sin dependencias ni compilación) para la opción
-**Servicios** de www.consein.com. Lista para desplegar en los ambientes de desarrollo y producción.
+Página estática (HTML, CSS y JavaScript, sin dependencias ni compilación) para la opción
+**Servicios** de www.consein.com. Lista para los ambientes de desarrollo y producción.
 
 ## Estructura
 
 ```
 consein/
-├── index.html                  Página de Servicios (punto de entrada)
+├── index.html               Página de Servicios (incluye las 7 fichas y los datos estructurados SEO)
 └── assets/
-    ├── consein.css             Estilos
-    ├── consein.js              Interacciones (menú, subpantallas, formulario)
-    ├── servicios-data.js       Contenido de las 7 subpantallas «Ver servicio»
-    ├── logo-consein.png        Logo original (fondo claro)
-    └── logo-consein-blanco.png Logo original (fondo oscuro)
+    ├── consein.css          Estilos (look minimalista)
+    ├── consein.js           Menú, fichas «Ver servicio» y formulario
+    ├── logo-consein.png     Logo original
+    └── fonts/               Archivos de la tipografía Haltto (ver LEEME.txt)
 ```
 
-## Secciones de la página
+## Tipografías
 
-1. **Portada** – mensaje principal y escudo con las 7 etapas (cada número abre su subpantalla).
-2. **Propuesta de valor** – compromiso de Consein y los pilares Escuchamos, Aprendemos, Ejecutamos y Acompañamos.
-3. **Servicio en 7 etapas** – 3 fases (Solución, Transformación, Gobernanza) y el escudo transversal de ciberseguridad.
-4. **Oficina de Proyectos (PMO)** – cómo se garantiza el resultado.
-5. **Contacto** – formulario y canales directos.
+- **Títulos: Haltto.** Tipografía con licencia comercial. Copiar `Haltto-Bold.woff2` y `Haltto-Bold.woff`
+  en `assets/fonts/`. Mientras no estén, los títulos se muestran con Poppins.
+- **Párrafos: Poppins** (Google Fonts, pesos 300, 400 y 500).
 
-## Subpantallas «Ver servicio»
+## Secciones
 
-Cada botón *Ver servicio* abre la ficha de su etapa en una ventana modal. Estructura de la ficha:
-En una frase · Ideal para · Qué resuelve · Incluye · Cómo lo hacemos · Entregables · Resultado · Cómo medimos el éxito.
+1. **Portada** – H1 principal y gráfico de las 7 etapas (cada número abre su ficha).
+2. **Propuesta de valor** – Escuchamos, Aprendemos, Ejecutamos y Acompañamos.
+3. **Servicio en 7 etapas** – tres fases; cada etapa enlaza a su especialidad.
+4. **Oficina de Proyectos (PMO)** – cómo garantizamos el resultado.
+5. **Preguntas frecuentes** – contenido para búsquedas de tipo pregunta.
+6. **Contacto** – formulario y canales directos.
 
-- El contenido se edita en `assets/servicios-data.js` (un objeto por etapa, sin tocar el HTML).
-- Cada ficha tiene enlace directo: `index.html#etapa-01` … `index.html#etapa-07`.
-- El botón de la ficha lleva al formulario de contacto con el servicio ya seleccionado (campo oculto `servicio`).
+## Fichas «Ver servicio»
+
+Cada ficha es un `<dialog class="svc" id="etapa-0X">` dentro de `index.html`, por lo que los buscadores
+leen su contenido. Se abren con *Ver servicio* o con enlace directo: `index.html#etapa-01` … `#etapa-07`.
+El botón de la ficha lleva al formulario con el servicio ya seleccionado (campo oculto `servicio`).
+
+## SEO incluido
+
+- `title`, `meta description`, `canonical`, Open Graph y un solo H1.
+- Encabezados con las palabras clave de cada especialidad.
+- Datos estructurados JSON-LD: `Organization`, `BreadcrumbList`, `ItemList` de `Service` y `FAQPage`.
+- La lista de palabras clave para el equipo SEO está en el documento
+  *Consein_Servicios_Palabras_Clave_SEO.docx*.
+
+Antes de publicar, confirmar que la URL definitiva sea `https://www.consein.com/servicios`
+(se usa en `canonical`, Open Graph y JSON-LD).
 
 ## Formulario de contacto
 
-En `index.html`, el formulario tiene el atributo `data-endpoint`:
-
 ```html
-<form class="form-card reveal" data-contact-form data-endpoint="" novalidate>
+<form data-contact-form data-endpoint="" novalidate>
 ```
 
 - **Vacío (desarrollo):** valida los campos y muestra la confirmación, sin enviar datos.
-- **Con URL (producción):** envía los datos por `POST` como `FormData` a esa URL y muestra éxito o error
-  según la respuesta HTTP.
+- **Con URL (producción):** envía los datos por `POST` (`FormData`) y muestra éxito o error según la respuesta.
 
-Campos enviados: `nombre`, `empresa`, `cargo`, `correo`, `pais`, `reto`, `servicio`.
+Campos: `nombre`, `empresa`, `cargo`, `correo`, `pais`, `reto`, `servicio`.
 
 ## Despliegue
 
-- Copiar la carpeta `consein/` completa al servidor web (o a la ruta `/servicios` del sitio).
-- No requiere compilación ni instalación de paquetes.
-- Recursos externos: tipografías de Google Fonts (*Bricolage Grotesque* y *Nunito Sans*).
-- Para probar en local: `python3 -m http.server 8000` desde la carpeta y abrir `http://localhost:8000`.
+Copiar la carpeta `consein/` al servidor. Para probar en local:
+`python3 -m http.server 8000` desde la carpeta y abrir `http://localhost:8000`.
 
 ## Pendiente antes de producción
 
-- Definir la URL del `data-endpoint` del formulario.
-- Reemplazar los enlaces `#` del menú y pie «Soluciones» por las URL reales del sitio.
+- Archivos de la tipografía Haltto con licencia.
+- URL del `data-endpoint` del formulario.
+- Enlaces reales del menú «Soluciones» (hoy apuntan a `#`).
