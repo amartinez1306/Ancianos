@@ -13,18 +13,14 @@
     });
   }
 
-  // ---- Desplegables del menú (clic / teclado; en escritorio también hover por CSS) ----
-  document.querySelectorAll(".main-nav__item > button").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var open = btn.parentElement.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", String(open));
-    });
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key !== "Escape") return;
-    document.querySelectorAll(".main-nav__item.is-open").forEach(function (item) {
-      item.classList.remove("is-open");
-      item.querySelector("button").setAttribute("aria-expanded", "false");
+  // ---- Enlace de la página actual (Servicios): permanece en la página ----
+  document.querySelectorAll('a[aria-current="page"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (nav && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
     });
   });
 
