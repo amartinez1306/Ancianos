@@ -7,8 +7,11 @@ Es un sitio estático (HTML + CSS + JS), sin dependencias ni proceso de compilac
 consein-hardware/
 ├── index.html              # Página
 ├── assets/css/styles.css   # Estilos (colores del logo: #000F76 / #61FC22)
-├── assets/js/main.js       # Menú móvil, pestañas, navegación por secciones
+├── assets/js/main.js       # Menú móvil y botón "volver arriba"
 ├── assets/img/logo-consein.jpg
+├── assets/fonts/           # Colocar aquí Haltto.woff2 (fuente de títulos)
+├── build.py                # Genera consein-hardware-standalone.html
+├── seo/                    # Palabras clave SEO (docx) para el equipo de SEO
 ├── Dockerfile + nginx.conf # Opción contenedor (sirve en /hardware/)
 └── README.md
 ```
@@ -43,6 +46,18 @@ docker run --rm -p 8080:80 consein-hardware
 
 **Opción B — Contenedor** (Docker / Kubernetes / Cloud Run / App Service)
 Construir la imagen con el `Dockerfile` y publicar el puerto 80. La página queda en `/hardware/`.
+
+## Tipografías
+
+- **Títulos: Haltto.** No es una fuente pública de Google Fonts: copie el archivo licenciado
+  (`Haltto.woff2`, `.woff`, `.otf` o `.ttf`) en `assets/fonts/` y ejecute `python3 build.py`
+  para incrustarla también en la versión de un solo archivo. Mientras no esté, los títulos usan Poppins.
+- **Párrafos: Poppins**, cargada desde Google Fonts.
+
+## Versión de un solo archivo
+
+`python3 build.py` regenera `consein-hardware-standalone.html` (CSS, JS, logo y fuente incrustados).
+Ejecútelo después de cada cambio en `index.html` o `assets/`.
 
 ## Antes de publicar
 
