@@ -87,6 +87,18 @@ section.soft{background:var(--soft)}
 .mega li a{display:block;padding:4px 0;font-size:.9rem;color:var(--ink);text-decoration:none;line-height:1.4}
 .mega li a:hover{color:var(--navy);text-decoration:underline}
 .mega .all{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+/* Menú Soluciones Cisco: nivel 2 (Soluciones de Valor / Ofertas de Productos) y nivel 3 */
+.mega-cisco{width:min(680px,92vw);padding:24px 8px}
+.has-menu.open .mega-cisco{display:grid;grid-template-columns:1fr 1fr}
+.mega-group{padding:0 24px}
+.mega-group+.mega-group{border-left:1px solid var(--line)}
+.mega-l2{display:block;text-decoration:none;padding:10px 12px;margin:0 -12px 12px;border-radius:var(--r);transition:background .15s}
+.mega-l2:hover{background:var(--soft)}
+.mega-l2 b{display:flex;align-items:center;gap:8px;font-family:var(--title);font-weight:600;font-size:1.02rem;color:var(--navy)}
+.mega-l2 b::before{content:"";width:8px;height:8px;background:var(--green);flex:none}
+.mega-l2 b::after{content:"→";margin-left:auto;font-family:var(--text);font-weight:400}
+.mega-l2 small{display:block;margin:2px 0 0 16px;font-size:.8rem;color:var(--muted)}
+.mega-group ul{border-left:2px solid var(--line);padding-left:14px;margin-left:4px}
 
 /* Portada */
 .hero{padding:112px 0 96px}
@@ -244,6 +256,9 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
   .nav .btn{margin:12px 0 0}
   .mega,.has-menu.open .mega{position:static;transform:none;box-shadow:none;border:0;padding:4px 0 12px 14px;width:auto}
   .has-menu.open .mega-sol,.has-menu.open .mega-prod{grid-template-columns:1fr;gap:14px}
+  .has-menu.open .mega-cisco{grid-template-columns:1fr;gap:14px}
+  .mega-group{padding:0}
+  .mega-group+.mega-group{border-left:0}
 }
 @media (max-width:860px){
   section{padding:72px 0}

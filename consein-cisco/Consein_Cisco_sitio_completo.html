@@ -95,6 +95,18 @@ section.soft{background:var(--soft)}
 .mega li a{display:block;padding:4px 0;font-size:.9rem;color:var(--ink);text-decoration:none;line-height:1.4}
 .mega li a:hover{color:var(--navy);text-decoration:underline}
 .mega .all{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+/* Menú Soluciones Cisco: nivel 2 (Soluciones de Valor / Ofertas de Productos) y nivel 3 */
+.mega-cisco{width:min(680px,92vw);padding:24px 8px}
+.has-menu.open .mega-cisco{display:grid;grid-template-columns:1fr 1fr}
+.mega-group{padding:0 24px}
+.mega-group+.mega-group{border-left:1px solid var(--line)}
+.mega-l2{display:block;text-decoration:none;padding:10px 12px;margin:0 -12px 12px;border-radius:var(--r);transition:background .15s}
+.mega-l2:hover{background:var(--soft)}
+.mega-l2 b{display:flex;align-items:center;gap:8px;font-family:var(--title);font-weight:600;font-size:1.02rem;color:var(--navy)}
+.mega-l2 b::before{content:"";width:8px;height:8px;background:var(--green);flex:none}
+.mega-l2 b::after{content:"→";margin-left:auto;font-family:var(--text);font-weight:400}
+.mega-l2 small{display:block;margin:2px 0 0 16px;font-size:.8rem;color:var(--muted)}
+.mega-group ul{border-left:2px solid var(--line);padding-left:14px;margin-left:4px}
 
 /* Portada */
 .hero{padding:112px 0 96px}
@@ -252,6 +264,9 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
   .nav .btn{margin:12px 0 0}
   .mega,.has-menu.open .mega{position:static;transform:none;box-shadow:none;border:0;padding:4px 0 12px 14px;width:auto}
   .has-menu.open .mega-sol,.has-menu.open .mega-prod{grid-template-columns:1fr;gap:14px}
+  .has-menu.open .mega-cisco{grid-template-columns:1fr;gap:14px}
+  .mega-group{padding:0}
+  .mega-group+.mega-group{border-left:0}
 }
 @media (max-width:860px){
   section{padding:72px 0}
@@ -289,22 +304,16 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
       <ul>
         <li><a class="nav-link" data-nav="inicio" href="#inicio">Inicio</a></li>
         <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-nav="soluciones">Soluciones de Valor<span class="caret">▾</span></button>
-          <div class="mega mega-sol">
-            <div><h4><a href="#soluciones:infraestructura">Infraestructura</a></h4><ul><li><a href="#soluciones:csc-01">Diagnóstico Red + Nube</a></li><li><a href="#soluciones:csc-02">Red híbrida para Azure</a></li><li><a href="#soluciones:csc-03">Campus y datacenter modernos</a></li><li><a href="#soluciones:csc-04">Red gestionada Meraki</a></li><li><a href="#soluciones:csc-05">Operación híbrida unificada</a></li></ul></div><div><h4><a href="#soluciones:seguridad">Seguridad</a></h4><ul><li><a href="#soluciones:csc-06">Zero Trust de red</a></li><li><a href="#soluciones:csc-07">Perímetro protegido</a></li><li><a href="#soluciones:csc-08">Detección de amenazas en la red</a></li></ul></div><div><h4><a href="#soluciones:colaboracion">Colaboración</a></h4><ul><li><a href="#soluciones:csc-10">Salas Microsoft Teams Rooms</a></li><li><a href="#soluciones:csc-11">Experiencia Teams garantizada</a></li></ul></div><div><h4><a href="#soluciones:data-analitica">Data y Analítica</a></h4><ul><li><a href="#soluciones:csc-12">Observabilidad de aplicaciones</a></li></ul></div><div><h4><a href="#soluciones:servicios-empresariales">Servicios Empresariales</a></h4><ul><li><a href="#soluciones:csc-09">Acceso seguro a aplicaciones</a></li></ul></div><div><h4><a href="#soluciones:automatizacion">Automatización</a></h4><ul><li><a href="#soluciones:csc-13">NetOps automatizado</a></li></ul></div><div><h4><a href="#soluciones:inteligencia-artificial">Inteligencia Artificial</a></h4><ul><li><a href="#soluciones:csc-14">Red y seguridad para IA</a></li></ul></div><div><h4><a href="#soluciones:integral">Servicio integral</a></h4><ul><li><a href="#soluciones:csc-15">Consein Connected</a></li></ul></div>
-            <p class="all"><a class="arrow" href="#soluciones">Ver las 15 soluciones</a></p>
-          </div>
-        </li>
-        <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-nav="productos">Ofertas de Productos<span class="caret">▾</span></button>
-          <div class="mega mega-prod">
-            <div><h4><a href="#productos">Programa Renueva</a></h4><ul>
-              <li><a href="#productos:por-que-renovar">Por qué renovar ahora</a></li>
-              <li><a href="#productos:autodiagnostico">Autodiagnóstico</a></li>
-              <li><a href="#productos:rutas">Rutas de renovación</a></li>
-              <li><a href="#productos:como-renovamos">Cómo renovamos</a></li>
-            </ul></div>
-            <div><h4><a href="#productos:ofertas">Ofertas de renovación</a></h4><ul><li><a href="#productos:ren-01">Inventario de obsolescencia</a></li><li><a href="#productos:ren-02">Campus y WiFi renovados</a></li><li><a href="#productos:ren-03">Sucursales con <span class="nw">SD-WAN</span></a></li><li><a href="#productos:ren-04">Renovación de firewalls</a></li><li><a href="#productos:ren-05">Datacenter híbrido</a></li><li><a href="#productos:ren-06">Salas y voz para Teams</a></li><li><a href="#productos:ren-07">Renovación financiada</a></li><li><a href="#productos:ren-08">Ciclo de vida gestionado</a></li></ul></div>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-nav="soluciones productos">Soluciones Cisco<span class="caret">▾</span></button>
+          <div class="mega mega-cisco">
+            <div class="mega-group">
+              <a class="mega-l2" href="#soluciones"><b>Soluciones de Valor</b><small>15 soluciones en 7 especialidades</small></a>
+              <ul><li><a href="#soluciones:infraestructura">Infraestructura</a></li><li><a href="#soluciones:seguridad">Seguridad</a></li><li><a href="#soluciones:colaboracion">Colaboración</a></li><li><a href="#soluciones:data-analitica">Data y Analítica</a></li><li><a href="#soluciones:servicios-empresariales">Servicios Empresariales</a></li><li><a href="#soluciones:automatizacion">Automatización</a></li><li><a href="#soluciones:inteligencia-artificial">Inteligencia Artificial</a></li><li><a href="#soluciones:integral">Consein Connected</a></li></ul>
+            </div>
+            <div class="mega-group">
+              <a class="mega-l2" href="#productos"><b>Ofertas de Productos</b><small>Programa Renueva · 8 ofertas de renovación</small></a>
+              <ul><li><a href="#productos:ren-01">Inventario de obsolescencia</a></li><li><a href="#productos:ren-02">Campus y WiFi renovados</a></li><li><a href="#productos:ren-03">Sucursales con <span class="nw">SD-WAN</span></a></li><li><a href="#productos:ren-04">Renovación de firewalls</a></li><li><a href="#productos:ren-05">Datacenter híbrido</a></li><li><a href="#productos:ren-06">Salas y voz para Teams</a></li><li><a href="#productos:ren-07">Renovación financiada</a></li><li><a href="#productos:ren-08">Ciclo de vida gestionado</a></li></ul>
+            </div>
           </div>
         </li>
         <li><a class="nav-link" href="#inicio:nosotros">Nosotros</a></li>
@@ -1010,7 +1019,7 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
       document.title = meta[page].title;
       document.querySelector('meta[name="description"]').setAttribute("content", meta[page].description);
       document.querySelectorAll("[data-nav]").forEach(function (a) {
-        if (a.getAttribute("data-nav") === page) a.setAttribute("aria-current", "page");
+        if (a.getAttribute("data-nav").split(" ").indexOf(page) >= 0) a.setAttribute("aria-current", "page");
         else a.removeAttribute("aria-current");
       });
       var interes = new URLSearchParams(q).get("interes");

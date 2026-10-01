@@ -14,8 +14,11 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 | Archivo | Menú | Contenido |
 |---|---|---|
 | `index.html` | Inicio | Sinergia exponencial, enfoque, 7 especialidades, Programa Renueva (resumen), método, resultados, nosotros, preguntas frecuentes, contacto |
-| `soluciones.html` | Soluciones de Valor | 15 soluciones agrupadas en 7 especialidades |
-| `productos.html` | Ofertas de Productos | Programa Renueva: por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
+| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | 15 soluciones agrupadas en 7 especialidades |
+| `productos.html` | Soluciones Cisco › Ofertas de Productos | Programa Renueva: por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
+
+Menú: **Inicio · Soluciones Cisco · Nosotros · Contacto**. Soluciones Cisco despliega dos opciones de segundo nivel,
+Soluciones de Valor (7 especialidades y Consein Connected) y Ofertas de Productos (8 ofertas del Programa Renueva).
 
 Cada oferta muestra solo **título y valor**. "Seguir leyendo…" abre la subpantalla con Ideal para, Qué resolvemos,
 Qué incluye y Resultado. Los submenús enlazan directo a cada oferta (por ejemplo `soluciones.html#csc-06`).

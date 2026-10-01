@@ -492,16 +492,11 @@ def tarjeta(o, etiqueta, renovacion=False):
 </article>"""
 
 def menu(actual):
-    def cur(p):
-        return ' aria-current="page"' if p == actual else ""
-    cols = []
-    for e in ESPECIALIDADES:
-        items = "".join(f'<li><a href="soluciones.html#{slug(o["code"])}">{E(o["titulo"])}</a></li>'
-                        for o in SOLUCIONES if o["esp"] == e["id"])
-        cols.append(f'<div><h4><a href="soluciones.html#{e["id"]}">{E(e["nombre"])}</a></h4><ul>{items}</ul></div>')
-    cols.append('<div><h4><a href="soluciones.html#integral">Servicio integral</a></h4><ul>'
-                '<li><a href="soluciones.html#csc-15">Consein Connected</a></li></ul></div>')
-    prod = "".join(f'<li><a href="productos.html#{slug(p["code"])}">{E(p["titulo"])}</a></li>' for p in PRODUCTOS)
+    def cur(*paginas):
+        return ' aria-current="page"' if actual in paginas else ""
+    especialidades = "".join(f'<li><a href="soluciones.html#{e["id"]}">{E(e["nombre"])}</a></li>' for e in ESPECIALIDADES)
+    especialidades += '<li><a href="soluciones.html#integral">Consein Connected</a></li>'
+    productos_menu = "".join(f'<li><a href="productos.html#{slug(p["code"])}">{E(p["titulo"])}</a></li>' for p in PRODUCTOS)
     return f"""<header class="site-header">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Consein, inicio"><img src="assets/img/{'logo-consein-blanco.png' if TEMA == 'digital' else 'logo-consein.png'}" alt="Consein" width="166" height="28"></a>
@@ -510,22 +505,16 @@ def menu(actual):
       <ul>
         <li><a class="nav-link" href="index.html"{cur('index')}>Inicio</a></li>
         <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('soluciones')}>Soluciones de Valor<span class="caret">▾</span></button>
-          <div class="mega mega-sol">
-            {''.join(cols)}
-            <p class="all"><a class="arrow" href="soluciones.html">Ver las 15 soluciones</a></p>
-          </div>
-        </li>
-        <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('productos')}>Ofertas de Productos<span class="caret">▾</span></button>
-          <div class="mega mega-prod">
-            <div><h4><a href="productos.html">Programa Renueva</a></h4><ul>
-              <li><a href="productos.html#por-que-renovar">Por qué renovar ahora</a></li>
-              <li><a href="productos.html#autodiagnostico">Autodiagnóstico</a></li>
-              <li><a href="productos.html#rutas">Rutas de renovación</a></li>
-              <li><a href="productos.html#como-renovamos">Cómo renovamos</a></li>
-            </ul></div>
-            <div><h4><a href="productos.html#ofertas">Ofertas de renovación</a></h4><ul>{prod}</ul></div>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('soluciones', 'productos')}>Soluciones Cisco<span class="caret">▾</span></button>
+          <div class="mega mega-cisco">
+            <div class="mega-group">
+              <a class="mega-l2" href="soluciones.html"><b>Soluciones de Valor</b><small>15 soluciones en 7 especialidades</small></a>
+              <ul>{especialidades}</ul>
+            </div>
+            <div class="mega-group">
+              <a class="mega-l2" href="productos.html"><b>Ofertas de Productos</b><small>Programa Renueva · 8 ofertas de renovación</small></a>
+              <ul>{productos_menu}</ul>
+            </div>
           </div>
         </li>
         <li><a class="nav-link" href="index.html#nosotros">Nosotros</a></li>
@@ -986,8 +975,7 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html", digital=False):
     cabecera = re.search(r'<header class="site-header">.*?</header>', base, re.S).group(0)
     cabecera = cabecera.replace(' aria-current="page"', "")
     cabecera = cabecera.replace('<a class="nav-link" href="index.html"', '<a class="nav-link" data-nav="inicio" href="index.html"')
-    cabecera = cabecera.replace('aria-haspopup="true">Soluciones de Valor', 'aria-haspopup="true" data-nav="soluciones">Soluciones de Valor')
-    cabecera = cabecera.replace('aria-haspopup="true">Ofertas de Productos', 'aria-haspopup="true" data-nav="productos">Ofertas de Productos')
+    cabecera = cabecera.replace('aria-haspopup="true">Soluciones Cisco', 'aria-haspopup="true" data-nav="soluciones productos">Soluciones Cisco')
     cabecera = reescribir(cabecera, None)
     pie_html = reescribir(re.search(r"<footer.*?</dialog>", base, re.S).group(0), None)
 

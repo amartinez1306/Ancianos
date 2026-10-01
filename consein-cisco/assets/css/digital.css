@@ -279,3 +279,12 @@ dialog.detail{border-radius:20px;overflow:hidden}
 .hero .figures{gap:40px;flex-wrap:nowrap}
 .area-head .ico,.integral .ico{display:grid}
 @media (max-width:600px){.hero .figures{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}}
+
+/* Menú Soluciones Cisco (tema digital) */
+.mega-group+.mega-group{border-left-color:rgba(255,255,255,.1)}
+.mega-l2:hover{background:rgba(255,255,255,.06)}
+.mega-l2 b{color:#fff}
+.mega-l2 b::before{box-shadow:0 0 10px rgba(88,187,71,.8);border-radius:2px}
+.mega-l2 b::after{color:var(--green-2)}
+.mega-l2 small{color:var(--on-dark-muted)}
+.mega-group ul{border-left-color:rgba(88,187,71,.35)}

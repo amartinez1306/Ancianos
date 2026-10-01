@@ -100,7 +100,7 @@
       document.title = meta[page].title;
       document.querySelector('meta[name="description"]').setAttribute("content", meta[page].description);
       document.querySelectorAll("[data-nav]").forEach(function (a) {
-        if (a.getAttribute("data-nav") === page) a.setAttribute("aria-current", "page");
+        if (a.getAttribute("data-nav").split(" ").indexOf(page) >= 0) a.setAttribute("aria-current", "page");
         else a.removeAttribute("aria-current");
       });
       var interes = new URLSearchParams(q).get("interes");
