@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones Microsoft para empresas | Consein</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Consein","url":"https://www.consein.com","foundingDate":"1987","areaServed":["Venezuela","Panamá","República Dominicana","Estados Unidos"],"knowsAbout":["Microsoft Azure","Ciberseguridad","Microsoft 365","Dynamics 365","Microsoft Fabric","Power Platform","Inteligencia artificial"]}</script>
+<style>
+/* Tipografías corporativas
+   - Títulos: Haltto. Es una fuente con licencia: coloque los archivos en ./fonts/ junto a este HTML
+     (Haltto-Bold.woff2 / Haltto-Bold.otf) o instálela en el equipo. Si no está disponible se usa Poppins.
+   - Párrafos: Poppins (Google Fonts). */
+@font-face{font-family:'Haltto';font-weight:700;font-display:swap;
+  src:local('Haltto Bold'),local('Haltto-Bold'),local('Haltto'),url('fonts/Haltto-Bold.woff2') format('woff2'),url('fonts/Haltto-Bold.otf') format('opentype')}
+@font-face{font-family:'Haltto';font-weight:400;font-display:swap;
+  src:local('Haltto Regular'),local('Haltto-Regular'),url('fonts/Haltto-Regular.woff2') format('woff2'),url('fonts/Haltto-Regular.otf') format('opentype')}
+
+:root{
+  --brand:#000F76; --accent:#61FC22; --ink:#1A1D29; --muted:#5E6474; --line:#E7E9EF; --soft:#F7F8FA; --white:#fff;
+  --title:'Haltto','Poppins',Arial,sans-serif; --body:'Poppins',Arial,sans-serif;
+  --c:var(--brand);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-weight:400;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+h1,h2,h3{font-family:var(--title);font-weight:700;color:var(--brand);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.1rem,5vw,3.6rem)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1.1rem}
+p{margin:0 0 1em}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.tight{padding:56px 0}
+.kicker{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:10px;height:10px;background:var(--accent);display:inline-block}
+.lead{font-size:1.12rem;font-weight:300;color:var(--muted);max-width:640px}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+.cond{display:block;font-size:.62rem;line-height:1.3;color:var(--muted);opacity:.85;margin-top:4px;font-weight:400}
+
+/* Botones y enlaces */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--body);font-weight:500;font-size:.95rem;text-decoration:none;cursor:pointer;
+  padding:13px 26px;border-radius:999px;border:1.5px solid var(--brand);background:var(--brand);color:#fff;transition:background .2s,color .2s}
+.btn:hover{background:#fff;color:var(--brand)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.btn.ghost:hover{background:var(--brand);color:#fff}
+.link{font-weight:500;color:var(--c);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.link:hover{opacity:.75}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.site .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo img{height:26px;width:auto}
+nav.main{display:flex;gap:28px;align-items:center}
+nav.main a{text-decoration:none;font-size:.9rem;color:var(--ink)}
+nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
+.dd{position:relative}
+.dd-menu{position:absolute;right:-20px;top:calc(100% + 18px);background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;min-width:280px;display:none}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
+.dd-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.dd-menu a{display:flex;gap:10px;align-items:center;padding:9px 12px;border-radius:8px;font-size:.88rem}
+.dd-menu a:hover{background:var(--soft)}
+.dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px}
+.burger{display:none;background:none;border:0;font-size:1.5rem;color:var(--brand);cursor:pointer}
+
+/* Hero */
+.hero{padding:96px 0 72px;position:relative}
+.hero .lead{font-size:1.2rem}
+.hero h1{max-width:calc(100% - 96px)}
+.hero .note{font-size:.82rem;color:var(--muted);margin-top:14px}
+.hero::after{content:"";position:absolute;right:max(24px,calc((100vw - 1120px)/2 + 24px));top:104px;width:48px;height:48px;background:var(--accent)}
+.hero.p::after{background:var(--c)}
+
+/* Cifras */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:28px 12px;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font-family:var(--title);font-size:2.2rem;color:var(--brand);line-height:1}
+.stats span{font-size:.8rem;color:var(--muted)}
+
+/* Tarjetas de especialidad */
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.area{display:flex;flex-direction:column;gap:10px;padding:28px 0 0;border-top:2px solid var(--pc);text-decoration:none}
+.area h3{margin:0}
+.area p{margin:0;color:var(--muted);font-size:.95rem;flex:1}
+.area .link{--c:var(--pc);align-self:flex-start;margin-top:6px}
+.band{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:36px 40px;border:1px solid var(--line);border-left:4px solid #B8734A;border-radius:16px}
+.band h2{margin:0 0 6px;font-size:1.5rem}
+.band p{margin:0;color:var(--muted)}
+
+/* Listas minimalistas */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline}
+.list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c);flex:0 0 6px;transform:translateY(-3px)}
+.sol{padding:24px 0;border-top:1px solid var(--line)}
+.sol h3{margin-bottom:6px}
+.sol p{margin:0;color:var(--muted)}
+
+/* Ofertas: solo título y valor */
+.offer{display:flex;flex-direction:column;gap:10px;padding:28px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:border-color .2s}
+.offer:hover{border-color:var(--c)}
+.offer h3{margin:0;font-size:1.12rem}
+.offer p{margin:0;color:var(--muted);flex:1}
+.offer .more{align-self:flex-start;background:none;border:0;padding:0;font:500 .9rem var(--body);color:var(--c);cursor:pointer;border-bottom:1px solid currentColor}
+.badge{align-self:flex-start;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--c);background:color-mix(in srgb,var(--c) 9%,#fff);padding:4px 10px;border-radius:99px}
+
+/* Evidencia */
+.ev b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--c);line-height:1.05;margin-bottom:8px}
+.ev p{margin:0 0 6px;color:var(--ink);font-size:.95rem}
+.ev small{color:var(--muted);font-size:.75rem}
+.fine{font-size:.75rem;color:var(--muted);margin-top:28px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 12px}
+
+/* NortIA */
+.phase{border-top:2px solid #B8734A;padding-top:20px}
+.phase small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#B8734A;font-weight:600}
+.phase h3{font-size:1.4rem;margin:6px 0}
+.phase p{margin:0;color:var(--muted);font-size:.95rem}
+.norte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.norte div{border:1px solid var(--line);border-radius:14px;padding:20px}
+.norte b{font-family:var(--title);font-size:2rem;color:#B8734A;line-height:1}
+.norte h3{font-size:.95rem;margin:8px 0 4px}
+.norte p{margin:0;font-size:.82rem;color:var(--muted)}
+
+/* Por qué Consein */
+.steps{display:flex;flex-wrap:wrap;gap:8px 0;margin:28px 0 0;padding:0;list-style:none;font-family:var(--title);color:var(--brand);font-size:1.05rem}
+.steps li:not(:last-child)::after{content:"·";margin:0 14px;color:var(--accent)}
+
+/* Contacto */
+.contact{background:var(--soft)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:.8rem;font-weight:500;color:var(--brand)}
+input,select{font:inherit;font-size:.95rem;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;width:100%;min-width:0}
+.ok{display:none;font-size:.9rem;color:#1D6B3D}
+
+/* Footer */
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer img{height:20px;width:auto}
+
+/* Subpantalla "Seguir leyendo" */
+.modal{position:fixed;inset:0;z-index:60;display:none}
+.modal.open{display:block}
+.modal .bg{position:absolute;inset:0;background:rgba(0,15,118,.35)}
+.sheet{position:absolute;right:0;top:0;bottom:0;width:min(560px,100%);background:#fff;overflow-y:auto;padding:40px;animation:in .25s ease-out;border-left:4px solid var(--c)}
+@keyframes in{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.close{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:1.3rem;cursor:pointer;color:var(--brand)}
+.sheet .tipo{font-size:.8rem;color:var(--muted);margin:-4px 0 24px}
+.sheet h4{font-family:var(--body);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin:24px 0 6px}
+.sheet p{margin:0}
+.sheet ul{margin:0;padding-left:18px}
+.sheet li{margin:4px 0}
+.sheet .btn{margin-top:32px}
+
+@media (max-width:960px){
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stats div:nth-child(4){border-left:0}
+  .norte{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .contact .wrap{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  section{padding:56px 0}
+  .hero{padding:56px 0 40px}
+  .hero::after{width:28px;height:28px;top:24px;right:16px}
+  .hero h1{max-width:calc(100% - 36px)}
+  .burger{display:block}
+  nav.main{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 16px;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  nav.main>a,.dd>a{padding:12px 0}
+  .dd-menu{position:static;display:block;border:0;padding:0 0 0 8px;min-width:0}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div{border-left:0!important;border-top:1px solid var(--line)}
+  .norte{grid-template-columns:1fr 1fr}
+  .band{flex-direction:column;align-items:flex-start;padding:28px}
+  .sheet{padding:56px 22px 32px;border-left:0;border-top:4px solid var(--c)}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#/" aria-label="Consein, Soluciones"><img src="__LOGO__" alt="Consein" width="155" height="26"></a>
+    <button class="burger" aria-label="Menú" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
+    <nav class="main" aria-label="Principal">
+      <a href="https://www.consein.com/">Inicio</a>
+      <div class="dd"><a href="#/" class="on">Soluciones</a><div class="dd-menu" id="dd"></div></div>
+      <a href="https://www.consein.com/">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Primer paso</p>
+      <h2>Diagnóstico Consein 360</h2>
+      <p class="lead">Evaluamos su tecnología en 8 horas, 100% remoto y sin costo*, y le entregamos una hoja de ruta con prioridades claras.<small class="cond">*Condiciones aplican.</small></p>
+    </div>
+    <form id="form" novalidate>
+      <label>Nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Empresa<input name="empresa" required autocomplete="organization"></label>
+      <label>Correo corporativo<input name="email" type="email" required autocomplete="email"></label>
+      <label>Solución de interés<select name="interes" id="interes"></select></label>
+      <div><button class="btn" type="submit">Quiero mi diagnóstico</button></div>
+      <p class="ok" role="status">Gracias. Le contactaremos muy pronto.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="__LOGO__" alt="Consein" width="120" height="20">
+    <span>© 2026 Consein · Microsoft Solutions Partner · Venezuela · Panamá · República Dominicana · Estados Unidos</span>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="bg" data-close></div>
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+const DATA = __DATA__;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COND = '<small class="cond">*Condiciones aplican.</small>';
+const withCond = s => esc(s) + (String(s).includes('*') ? COND : '');
+const PAGES = [DATA.nortia, ...DATA.practicas];
+const bySlug = s => PAGES.find(p => p.slug === s);
+let current = null;
+
+function setMeta(title, desc){
+  document.title = title;
+  document.querySelector('meta[name="description"]').setAttribute('content', desc);
+}
+
+/* ---------- Menú ---------- */
+function menu(){
+  $('#dd').innerHTML = PAGES.map(p => `<a href="#/${p.slug}"><span class="dot" style="background:${p.color}"></span>${esc(p.nav)}</a>`).join('');
+  $('#interes').innerHTML = '<option>Diagnóstico Consein 360</option>' + PAGES.map(p =>
+    `<optgroup label="${esc(p.nav)}">${p.offerings.map(o => `<option>${esc(o.name)}</option>`).join('')}</optgroup>`).join('');
+}
+
+/* ---------- Ofertas: título + valor + "Seguir leyendo…" ---------- */
+function offers(page){
+  return `<div class="grid g3">${page.offerings.map(o => `
+    <article class="offer">
+      ${o.code === page.star ? `<span class="badge">${o.reconocimiento ? 'Premio WITSA' : 'Destacada'}</span>` : ''}
+      <h3>${esc(o.name)}</h3>
+      <p>${esc(o.valor)}</p>
+      <button class="more" data-offer="${esc(o.code)}">Seguir leyendo…</button>
+    </article>`).join('')}</div>`;
+}
+
+function openOffer(code){
+  const o = current.offerings.find(x => x.code === code); if (!o) return;
+  $('#sheet').style.setProperty('--c', current.color);
+  $('#sheet').innerHTML = `
+    <button class="close" data-close aria-label="Cerrar">×</button>
+    <h2 id="m-title" style="font-size:1.6rem">${esc(o.name)}</h2>
+    <p class="tipo">${withCond(o.tipo)}</p>
+    <p class="lead" style="font-size:1.02rem">${esc(o.valor)}</p>
+    <h4>Ideal para</h4><p>${esc(o.ideal)}</p>
+    <h4>Qué resuelve</h4><p>${esc(o.resuelve)}</p>
+    <h4>Incluye</h4><ul>${o.incluye.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+    <h4>Resultado</h4><p>${esc(o.resultado)}</p>
+    ${o.reconocimiento ? `<h4>Reconocimiento</h4><p>${esc(o.reconocimiento)}</p>` : ''}
+    <a class="btn" href="#contacto" data-interest="${esc(o.name)}">Quiero esta solución</a>`;
+  $('#modal').classList.add('open'); document.body.classList.add('lock');
+  $('#sheet .close').focus();
+}
+function closeOffer(){ $('#modal').classList.remove('open'); document.body.classList.remove('lock'); }
+
+/* ---------- Portada ---------- */
+function home(){
+  const h = DATA.hub;
+  setMeta(h.title, h.meta);
+  document.documentElement.style.setProperty('--c', 'var(--brand)');
+  return `
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Soluciones Consein</p>
+    <h1>${esc(h.h1)}</h1>
+    <p class="lead">${esc(h.sub)}</p>
+    <div class="actions"><a class="btn" href="#contacto">${esc(h.cta)}</a><a class="btn ghost" href="#/nortia">Conocer NortIA</a></div>
+    <p class="note">Gratuito* · 8 horas · 100% remoto${COND}</p>
+  </div></section>
+
+  <div class="wrap"><div class="stats">
+    <div><b>+39</b><span>años de experiencia</span></div>
+    <div><b>82</b><span>certificaciones Microsoft</span></div>
+    <div><b>25</b><span>especialistas certificados</span></div>
+    <div><b>7</b><span>especialidades</span></div>
+    <div><b>4</b><span>designaciones Solutions Partner</span></div>
+  </div></div>
+
+  <section><div class="wrap">
+    <p class="kicker">Especialidades</p>
+    <h2>Siete especialidades, un solo ecosistema</h2>
+    <div class="grid g4" style="margin-top:40px">${DATA.practicas.map(p => `
+      <a class="area" href="#/${p.slug}" style="--pc:${p.color}">
+        <h3>${esc(p.nav)}</h3><p>${esc(p.promesa)}</p><span class="link">Ver solución</span>
+      </a>`).join('')}
+    </div>
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <div class="band"><div><p class="kicker" style="--c:#B8734A">Metodología propia</p><h2>NortIA</h2><p>Adoptamos la inteligencia artificial con método: Radar, Norte, Vector y Brújula.</p></div>
+    <a class="btn ghost" href="#/nortia">Conocer NortIA</a></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <p class="kicker">Por qué Consein</p>
+    <h2>Nos hacemos cargo del resultado</h2>
+    <p class="lead">Desde 1987 acompañamos a empresas de Venezuela, Panamá, República Dominicana y Estados Unidos con tecnología Microsoft. Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p>
+    <ul class="steps"><li>Evaluamos</li><li>Diseñamos</li><li>Actualizamos</li><li>Transformamos</li><li>Optimizamos</li><li>Administramos</li><li>Aseguramos</li></ul>
+    <div class="grid g3" style="margin-top:48px">
+      <div class="sol"><h3>Uso correcto</h3><p>Su equipo adopta la solución.</p></div>
+      <div class="sol"><h3>Operación estable</h3><p>Funciona sin interrupciones críticas.</p></div>
+      <div class="sol"><h3>Evolución</h3><p>Crece y se optimiza en el tiempo.</p></div>
+    </div>
+  </div></section>`;
+}
+
+/* ---------- Página de especialidad ---------- */
+function practice(p){
+  setMeta(p.title, p.meta);
+  return `
+  <section class="hero p"><div class="wrap">
+    <p class="kicker">${esc(p.nav)}</p>
+    <h1>${esc(p.h1)}</h1>
+    <p class="lead">${esc(p.sub)}</p>
+    <div class="actions"><a class="btn" href="#contacto" data-interest="Diagnóstico Consein 360">${esc(p.cta)}</a></div>
+    <p class="note">Diagnóstico Consein 360 · gratuito* · 8 horas · 100% remoto${COND}</p>
+  </div></section>
+  <hr class="rule">
+
+  <section><div class="wrap grid g2" style="gap:56px">
+    <div><p class="kicker">Lo que resolvemos</p><h2>Retos que atendemos</h2></div>
+    <ul class="list">${p.problemas.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <p class="kicker">Cómo lo hacemos</p>
+    <div class="grid g${p.soluciones.length === 4 ? 4 : 3}" style="margin-top:24px">${p.soluciones.map(s => `<div class="sol"><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p></div>`).join('')}</div>
+  </div></section>
+
+  <section><div class="wrap">
+    <p class="kicker">Ofertas</p>
+    <h2>Elija por dónde empezar</h2>
+    <div style="margin-top:36px">${offers(p)}</div>
+    ${p.num === '07' ? `<p style="margin-top:28px"><a class="link" href="#/nortia">Conozca también NortIA, nuestra metodología de adopción de IA</a></p>` : ''}
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <p class="kicker">Resultados de la industria</p>
+    <div class="grid g3" style="margin-top:24px">${p.evidencia.map(e => `<div class="ev"><b>${esc(e.cifra)}</b><p>${esc(e.texto)}</p><small>${esc(e.fuente)}</small></div>`).join('')}</div>
+    <p class="fine">Cifras de referencia de estudios independientes. El resultado de cada empresa se define en el Diagnóstico Consein 360.</p>
+  </div></section>
+
+  <section class="tight"><div class="wrap grid g2" style="gap:56px">
+    <div><p class="kicker">Respaldo</p><p>${esc(p.respaldo)}</p><div class="tags">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
+    <div><p class="kicker" style="--c:#B8734A">Conexión con NortIA</p><p>${esc(p.puente)}</p><a class="link" style="--c:#B8734A" href="#/nortia">Ver NortIA</a></div>
+  </div></section>`;
+}
+
+/* ---------- NortIA ---------- */
+function nortia(n){
+  setMeta(n.title, n.meta);
+  return `
+  <section class="hero p"><div class="wrap">
+    <p class="kicker">Metodología Consein</p>
+    <h1>${esc(n.h1)}</h1>
+    <p class="lead">${esc(n.sub)}</p>
+    <div class="actions"><a class="btn" href="#contacto" data-interest="Consein 360 · Diagnóstico Cero Fricción">${esc(n.cta)}</a></div>
+    <p class="note">Sin costo* · 8 horas · 100% remoto${COND}</p>
+  </div></section>
+  <hr class="rule">
+
+  <section><div class="wrap grid g2" style="gap:56px">
+    <div><p class="kicker">El reto</p><h2>De la licencia al valor</h2><p class="lead">${esc(n.problema)}</p></div>
+    <div class="grid" style="gap:28px">${n.datos.map(d => `<div class="ev"><b>${esc(d[0])}</b><p>${esc(d[1])}</p><small>${esc(d[2])}</small></div>`).join('')}</div>
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <p class="kicker">Cuatro fases</p>
+    <div class="grid g4" style="margin-top:24px">${n.fases.map((f,i) => `<div class="phase"><small>Fase ${i}</small><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p></div>`).join('')}</div>
+    <p class="lead" style="margin-top:32px">${esc(n.ciclo)}</p>
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <p class="kicker">Método N-O-R-T-E</p>
+    <div class="norte" style="margin-top:24px">${n.norte.map(x => `<div><b>${x[0]}</b><h3>${esc(x[1])}</h3><p>${esc(x[2])}</p></div>`).join('')}</div>
+  </div></section>
+
+  <section><div class="wrap">
+    <p class="kicker">Ofertas</p>
+    <h2>Por fases o como programa completo</h2>
+    <div style="margin-top:36px">${offers(n)}</div>
+  </div></section>
+
+  <section class="tight"><div class="wrap">
+    <p class="kicker">Respaldo</p><p>${esc(n.respaldo)}</p>
+  </div></section>`;
+}
+
+/* ---------- Rutas ---------- */
+function render(){
+  const slug = location.hash.replace(/^#\/?/, '').split('/')[0];
+  if (location.hash && !location.hash.startsWith('#/')) return;   // anclas internas
+  const page = bySlug(slug);
+  current = page || null;
+  document.documentElement.style.setProperty('--c', page ? page.color : '#000F76');
+  $('#app').innerHTML = !page ? home() : page.slug === 'nortia' ? nortia(page) : practice(page);
+  document.querySelector('nav.main').classList.remove('open');
+  closeOffer();
+  window.scrollTo(0, 0);
+}
+
+document.addEventListener('click', e => {
+  const more = e.target.closest('[data-offer]');
+  if (more) { openOffer(more.dataset.offer); return; }
+  if (e.target.closest('[data-close]')) { closeOffer(); return; }
+  const a = e.target.closest('a[href="#contacto"]');
+  if (a) {
+    e.preventDefault(); closeOffer();
+    if (a.dataset.interest) { const s = $('#interes'); [...s.options].forEach(o => { if (o.text === a.dataset.interest) s.value = o.value; }); }
+    $('#contacto').scrollIntoView({ behavior: 'smooth' });
+  }
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOffer(); });
+$('#form').addEventListener('submit', e => {   // Formulario de muestra: conectar al CRM en producción
+  e.preventDefault(); const f = e.currentTarget;
+  if (!f.checkValidity()) { f.reportValidity(); return; }
+  f.querySelector('.ok').style.display = 'block'; f.reset();
+});
+window.addEventListener('hashchange', render);
+menu(); render();
+</script>
+</body>
+</html>
