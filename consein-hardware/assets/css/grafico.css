@@ -1,7 +1,7 @@
 /* =========================================================
    Consein · Hardware — versión gráfica
    Se carga después de styles.css. Mantiene la identidad:
-   azul #000F76, verde #61FC22, cuadro verde del logo como motivo,
+   azul oscuro #1B245B, verde #58BB47, cuadro verde del logo como motivo,
    iconos de trazo 1.75 px, Haltto en títulos y Poppins en textos.
    ========================================================= */
 
@@ -24,7 +24,7 @@
 .head-split .intro { margin: 0; }
 
 /* ---------- Tarjetas con icono ---------- */
-.tile { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: #F3F5FC; margin-bottom: 20px; }
+.tile { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 12px; background: #F3F4F8; margin-bottom: 20px; }
 .tile-lg { width: 72px; height: 72px; border-radius: 16px; background: #fff; border: 1px solid var(--line); }
 .tile-lg .ic { width: 40px; height: 40px; }
 .icon-cards > div { border-top: 0; padding-top: 0; }
@@ -33,7 +33,7 @@
 .sol { display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: center; padding: 64px 0; border-bottom: 1px solid var(--line); }
 .sol:last-child { border-bottom: 0; padding-bottom: 0; }
 .sol-rev .sol-art { order: 2; }
-.sol-art { margin: 0; background: #F3F5FC; border-radius: 20px; padding: 28px; position: relative; }
+.sol-art { margin: 0; background: #F3F4F8; border-radius: 20px; padding: 28px; position: relative; }
 .sol-art::after { content: ""; position: absolute; top: 20px; right: 20px; width: 12px; height: 12px; background: var(--green); }
 .sol-art svg { width: 100%; height: auto; display: block; }
 .sol-body > p { color: var(--muted); }

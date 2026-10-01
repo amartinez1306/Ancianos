@@ -1,7 +1,6 @@
-"""Genera las versiones de un solo archivo (CSS, JS, logo y, si existe en
+"""Genera la versión de un solo archivo (CSS, JS, logo y, si existe en
 assets/fonts/, la fuente Haltto incrustados):
-  index.html          -> consein-hardware-standalone.html
-  index-grafico.html  -> consein-hardware-grafico-standalone.html
+  index.html  -> consein-hardware-standalone.html
 
 Uso: python3 build.py
 """
@@ -19,7 +18,6 @@ def data_uri(path, mime):
 
 PAGES = {
     'index.html': 'consein-hardware-standalone.html',
-    'index-grafico.html': 'consein-hardware-grafico-standalone.html',
 }
 
 

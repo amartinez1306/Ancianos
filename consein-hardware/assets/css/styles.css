@@ -1,7 +1,7 @@
 /* =========================================================
    Consein · Hardware empresarial — estilo minimalista
    Títulos: Haltto · Párrafos: Poppins
-   Colores del logo: azul #000F76 · verde #61FC22
+   Paleta Consein: azul oscuro #1B245B · verde #58BB47
    ========================================================= */
 
 /* Haltto: coloque el archivo de la fuente en assets/fonts/.
@@ -17,9 +17,9 @@
 }
 
 :root {
-  --navy: #000F76;
-  --green: #61FC22;
-  --ink: #0F1535;
+  --navy: #1B245B;
+  --green: #58BB47;
+  --ink: #151A3A;
   --muted: #5B6280;
   --line: #E6E8F0;
   --soft: #F7F8FB;
@@ -63,7 +63,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
   text-decoration: none; border: 1px solid transparent; transition: background .15s, color .15s, border-color .15s;
 }
 .btn-primary { background: var(--navy); color: #fff; }
-.btn-primary:hover { background: #00095A; }
+.btn-primary:hover { background: #121941; }
 .btn-ghost { border-color: var(--line); color: var(--navy); }
 .btn-ghost:hover { border-color: var(--navy); }
 .btn-accent { background: var(--green); color: var(--navy); }

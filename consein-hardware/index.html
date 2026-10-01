@@ -12,11 +12,12 @@
   <meta property="og:image" content="https://www.consein.com/hardware/assets/img/logo-consein.jpg">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_LA">
-  <meta name="theme-color" content="#000F76">
+  <meta name="theme-color" content="#1B245B">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/grafico.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,7 +41,31 @@
   }
   </script>
 </head>
-<body>
+<body class="grafico">
+
+  <!-- Iconografía Consein: trazo azul de 1.75 px + cuadro verde (tomado del punto de la "i" del logo) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arquitectura" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="24" height="24" rx="2"/><path d="M4 12h24M12 28V12"/></g><rect x="17" y="17" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-ciclo" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M26 16a10 10 0 1 1-2.93-7.07"/><path d="M26 5v5h-5"/></g><rect x="13" y="13" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-camion" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h16v13H3z"/><path d="M19 12h5l5 5v4h-10"/><circle cx="8" cy="24" r="2.5"/><circle cx="23" cy="24" r="2.5"/></g><rect x="8" y="11" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-carrito" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h4l3 15h15l3-11H9"/><circle cx="12" cy="25" r="2"/><circle cx="23" cy="25" r="2"/></g><rect x="15" y="11" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-fabrica" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 28V14l7 4v-4l7 4v-4l7 4V6h5v22z"/></g><rect x="8" y="21" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-cajas" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="4" y="16" width="11" height="11"/><rect x="17" y="16" width="11" height="11"/><rect x="10.5" y="4" width="11" height="11"/></g><rect x="13.5" y="4" width="5" height="4" fill="#58BB47"/></symbol>
+      <symbol id="i-avion" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M29 6 3 15l9 3 3 9 4-6 6 4z"/><path d="m12 18 9-6"/></g><rect x="4" y="24" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-documento" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h13l6 6v20H7z"/><path d="M20 3v6h6M11 15h10M11 20h6"/></g><rect x="18" y="21" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-ubicacion" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29s9-8.5 9-15a9 9 0 0 0-18 0c0 6.5 9 15 9 15z"/></g><rect x="13" y="11" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-edificio" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 28V5h15v23M20 12h7v16M3 28h26"/><path d="M9 10h2M14 10h2M9 15h2M14 15h2M9 20h2M14 20h2"/></g><rect x="10.5" y="23" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-engranaje" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8"/><circle cx="16" cy="16" r="7"/></g><rect x="13" y="13" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-persona" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="10" r="5"/><path d="M6 28c0-5.5 4.5-9 10-9s10 3.5 10 9"/></g><rect x="22" y="3" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-simple" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M5 9h22M5 16h14M5 23h8"/></g><rect x="22" y="20" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-ojo" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16s5-9 14-9 14 9 14 9-5 9-14 9S2 16 2 16z"/><circle cx="16" cy="16" r="5"/></g><rect x="14" y="14" width="4" height="4" fill="#58BB47"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7z"/><path d="m11 16 4 4 6-7"/></g><rect x="23" y="3" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-calendario" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="22" rx="2"/><path d="M4 13h24M10 3v6M22 3v6"/></g><rect x="17" y="18" width="6" height="6" fill="#58BB47"/></symbol>
+      <symbol id="i-encendido" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M10 8.5a10 10 0 1 0 12 0M16 3v11"/></g><rect x="13.5" y="19" width="5" height="5" fill="#58BB47"/></symbol>
+      <symbol id="i-soporte" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19v-3a11 11 0 0 1 22 0v3"/><rect x="4" y="18" width="5" height="8" rx="1.5"/><rect x="23" y="18" width="5" height="8" rx="1.5"/><path d="M25 26c0 2-2 3-5 3h-2"/></g><rect x="13" y="26" width="5" height="5" fill="#58BB47"/></symbol>
+    </defs>
+  </svg>
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -66,22 +91,73 @@
 
   <main id="contenido">
 
-    <!-- HERO -->
+    <!-- HERO: ecosistema de hardware conectado -->
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Hardware empresarial</p>
-        <h1>Hardware confiable, <span class="accent">entrega integral.</span></h1>
-        <p class="lead">Diseñamos la arquitectura de la solución, importamos sus equipos y los entregamos con configuración e instalación incluidas. Después, los mantenemos operando con soporte especializado.</p>
-        <div class="actions">
-          <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
-          <a href="#soluciones" class="btn btn-ghost">Ver soluciones</a>
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Hardware empresarial</p>
+          <h1>Hardware confiable, <span class="accent">entrega integral.</span></h1>
+          <p class="lead">Diseñamos la arquitectura de la solución, importamos sus equipos y los entregamos con configuración e instalación incluidas. Después, los mantenemos operando con soporte especializado.</p>
+          <div class="actions">
+            <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+            <a href="#soluciones" class="btn btn-ghost">Ver soluciones</a>
+          </div>
         </div>
-        <ol class="steps" aria-label="Nuestro proceso">
-          <li>Arquitectura de la solución</li>
-          <li>Importación</li>
-          <li>Entrega</li>
-          <li>Configuración e Instalación</li>
-          <li>Soporte</li>
+        <figure class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 480 400">
+            <rect x="40" y="30" width="420" height="340" rx="24" fill="#F3F4F8"/>
+            <!-- conexiones -->
+            <g fill="none" stroke="#1B245B" stroke-width="1.5" stroke-dasharray="4 6">
+              <path d="M150 140 C 200 140, 210 200, 250 210"/>
+              <path d="M330 150 C 330 180, 320 190, 310 205"/>
+              <path d="M190 310 C 230 330, 300 330, 340 300"/>
+            </g>
+            <!-- rack de servidores -->
+            <g>
+              <rect x="70" y="70" width="100" height="170" rx="6" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+              <g fill="#1B245B"><rect x="82" y="84" width="76" height="24" rx="3"/><rect x="82" y="116" width="76" height="24" rx="3"/><rect x="82" y="148" width="76" height="24" rx="3"/><rect x="82" y="180" width="76" height="24" rx="3"/></g>
+              <g fill="#58BB47"><rect x="144" y="93" width="6" height="6"/><rect x="144" y="125" width="6" height="6"/><rect x="144" y="157" width="6" height="6"/><rect x="144" y="189" width="6" height="6"/></g>
+              <g stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".5"><path d="M90 96h30M90 128h30M90 160h30M90 192h30"/></g>
+              <path d="M82 222h76" stroke="#1B245B" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <!-- pantalla de videoconferencia -->
+            <g>
+              <rect x="262" y="60" width="160" height="96" rx="8" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+              <rect x="326" y="50" width="32" height="8" rx="3" fill="#1B245B"/>
+              <rect x="274" y="72" width="64" height="34" rx="3" fill="#1B245B"/>
+              <rect x="346" y="72" width="64" height="34" rx="3" fill="#1B245B" opacity=".75"/>
+              <rect x="274" y="112" width="64" height="34" rx="3" fill="#1B245B" opacity=".55"/>
+              <rect x="346" y="112" width="64" height="34" rx="3" fill="#58BB47"/>
+              <g fill="#fff"><circle cx="306" cy="85" r="6"/><path d="M294 102a12 9 0 0 1 24 0z"/><circle cx="378" cy="85" r="6"/><path d="M366 102a12 9 0 0 1 24 0z"/><circle cx="306" cy="125" r="6"/><path d="M294 142a12 9 0 0 1 24 0z"/></g>
+              <circle cx="378" cy="125" r="6" fill="#1B245B"/><path d="M366 142a12 9 0 0 1 24 0z" fill="#1B245B"/>
+            </g>
+            <!-- laptop -->
+            <g>
+              <rect x="210" y="200" width="160" height="100" rx="8" fill="#1B245B"/>
+              <rect x="222" y="212" width="136" height="76" rx="3" fill="#2A3575"/>
+              <rect x="234" y="224" width="16" height="16" fill="#58BB47"/>
+              <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M260 228h70M260 238h44M234 256h110M234 268h80"/></g>
+              <path d="M190 300h200l-14 16H204z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M272 300h36" stroke="#1B245B" stroke-width="2"/>
+            </g>
+            <!-- caja de importación -->
+            <g>
+              <path d="M84 280l46-20 46 20-46 20z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M84 280v44l46 20v-44zM176 280v44l-46 20v-44z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M107 270l46 20v14" fill="none" stroke="#58BB47" stroke-width="5"/>
+            </g>
+            <!-- nodos -->
+            <g fill="#58BB47"><rect x="146" y="134" width="10" height="10"/><rect x="325" y="160" width="10" height="10"/><rect x="335" y="296" width="10" height="10"/></g>
+          </svg>
+        </figure>
+      </div>
+      <div class="container">
+        <ol class="steps steps-icons" aria-label="Nuestro proceso">
+          <li><svg class="ic"><use href="#i-arquitectura"/></svg>Arquitectura de la solución</li>
+          <li><svg class="ic"><use href="#i-avion"/></svg>Importación</li>
+          <li><svg class="ic"><use href="#i-camion"/></svg>Entrega</li>
+          <li><svg class="ic"><use href="#i-engranaje"/></svg>Configuración e Instalación</li>
+          <li><svg class="ic"><use href="#i-soporte"/></svg>Soporte</li>
         </ol>
       </div>
     </section>
@@ -89,19 +165,26 @@
     <!-- PROPUESTA DE VALOR -->
     <section class="section" id="valor">
       <div class="container">
-        <p class="eyebrow">Propuesta de valor</p>
-        <h2>Un solo aliado, de principio a fin</h2>
-        <p class="intro">Suministramos, implementamos y damos soporte a hardware empresarial de Dell, HP, Lenovo y Logitech, además de Marcas Bajo Demanda. Su tecnología llega coordinada, segura y lista para operar desde el primer día.</p>
-        <div class="cols-3">
+        <div class="head-split">
           <div>
+            <p class="eyebrow">Propuesta de valor</p>
+            <h2>Un solo aliado, de principio a fin</h2>
+          </div>
+          <p class="intro">Suministramos, implementamos y damos soporte a hardware empresarial de Dell, HP, Lenovo y Logitech, además de Marcas Bajo Demanda. Su tecnología llega coordinada, segura y lista para operar desde el primer día.</p>
+        </div>
+        <div class="cols-3 icon-cards">
+          <div>
+            <span class="tile"><svg class="ic"><use href="#i-arquitectura"/></svg></span>
             <h3>Tecnología adecuada</h3>
             <p>Dimensionamos cada equipo según sus necesidades operativas, técnicas y de presupuesto.</p>
           </div>
           <div>
+            <span class="tile"><svg class="ic"><use href="#i-ciclo"/></svg></span>
             <h3>Ciclo de vida completo</h3>
             <p>Lo acompañamos desde la compra hasta la renovación, con soporte y mantenimiento.</p>
           </div>
           <div>
+            <span class="tile"><svg class="ic"><use href="#i-camion"/></svg></span>
             <h3>Logística simplificada</h3>
             <p>Importamos y entregamos puerta a puerta. Usted habla con un solo equipo.</p>
           </div>
@@ -113,174 +196,254 @@
     <!-- SOLUCIONES -->
     <section class="section section-line" id="soluciones">
       <div class="container">
-        <p class="eyebrow">Soluciones</p>
-        <h2>Soluciones de hardware empresarial</h2>
-        <p class="intro">Modernizamos su plataforma tecnológica para aumentar la productividad, mejorar la experiencia de sus usuarios y asegurar la continuidad operativa.</p>
+        <div class="head-split">
+          <div>
+            <p class="eyebrow">Soluciones</p>
+            <h2>Soluciones de hardware empresarial</h2>
+          </div>
+          <p class="intro">Modernizamos su plataforma tecnológica para aumentar la productividad, mejorar la experiencia de sus usuarios y asegurar la continuidad operativa.</p>
+        </div>
         <ul class="brands" aria-label="Marcas">
           <li>Dell</li><li>HP</li><li>Lenovo</li><li>Logitech</li><li>Marcas Bajo Demanda</li>
         </ul>
 
-        <article class="solution" id="computacion-empresarial">
-          <div class="solution-head">
+        <article class="sol" id="computacion-empresarial">
+          <figure class="sol-art" aria-hidden="true">
+            <svg viewBox="0 0 360 260">
+              <rect x="150" y="40" width="170" height="112" rx="8" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+              <rect x="162" y="52" width="146" height="84" rx="3" fill="#1B245B"/>
+              <rect x="174" y="64" width="40" height="28" fill="#58BB47"/>
+              <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M224 70h70M224 82h50M174 110h120M174 122h80"/></g>
+              <path d="M222 152h26l6 26h-38z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M200 178h70" stroke="#1B245B" stroke-width="2" stroke-linecap="round"/>
+              <rect x="40" y="110" width="150" height="92" rx="7" fill="#1B245B"/>
+              <rect x="50" y="120" width="130" height="72" rx="3" fill="#2A3575"/>
+              <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M62 134h60M62 146h96M62 158h40"/></g>
+              <rect x="140" y="168" width="28" height="16" fill="#58BB47"/>
+              <path d="M24 202h182l-12 14H36z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <rect x="256" y="168" width="60" height="70" rx="8" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+              <rect x="264" y="176" width="44" height="50" rx="2" fill="#1B245B" opacity=".12"/>
+              <rect x="278" y="192" width="16" height="16" fill="#58BB47"/>
+            </svg>
+          </figure>
+          <div class="sol-body">
             <span class="num">01</span>
             <h3>Computación empresarial</h3>
             <p>Proveemos dispositivos corporativos para el trabajo híbrido y de alta exigencia.</p>
             <p class="tags">Dell · HP · Lenovo · Marcas Bajo Demanda</p>
-          </div>
-          <div>
-            <h4>Ofrecemos</h4>
-            <ul class="list">
-              <li>Laptops empresariales</li>
-              <li>Computadoras de escritorio</li>
-              <li>Workstations profesionales</li>
-              <li>Tablets corporativas</li>
-              <li>Monitores profesionales</li>
-              <li>Periféricos y accesorios</li>
-              <li>Renovación del parque tecnológico</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Usted logra</h4>
-            <ul class="list list-accent">
-              <li>Más productividad individual</li>
-              <li>Mejor experiencia de trabajo híbrido</li>
-              <li>Mayor movilidad y flexibilidad</li>
-              <li>Menos costos por equipos obsoletos</li>
-              <li>Preparación para inteligencia artificial y colaboración digital</li>
-            </ul>
+            <div class="sol-lists">
+              <div>
+                <h4>Ofrecemos</h4>
+                <ul class="list">
+                  <li>Laptops empresariales</li>
+                  <li>Computadoras de escritorio</li>
+                  <li>Workstations profesionales</li>
+                  <li>Tablets corporativas</li>
+                  <li>Monitores profesionales</li>
+                  <li>Periféricos y accesorios</li>
+                  <li>Renovación del parque tecnológico</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Usted logra</h4>
+                <ul class="list list-accent">
+                  <li>Más productividad individual</li>
+                  <li>Mejor experiencia de trabajo híbrido</li>
+                  <li>Mayor movilidad y flexibilidad</li>
+                  <li>Menos costos por equipos obsoletos</li>
+                  <li>Preparación para inteligencia artificial y colaboración digital</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </article>
 
-        <article class="solution" id="servidores-infraestructura">
-          <div class="solution-head">
+        <article class="sol sol-rev" id="servidores-infraestructura">
+          <figure class="sol-art" aria-hidden="true">
+            <svg viewBox="0 0 360 260">
+              <path d="M226 74a30 30 0 0 1 57-10 24 24 0 1 1 7 47h-60a20 20 0 0 1-4-37z" fill="#fff" stroke="#1B245B" stroke-width="2" stroke-linejoin="round"/>
+              <rect x="252" y="80" width="12" height="12" fill="#58BB47"/>
+              <g fill="none" stroke="#1B245B" stroke-width="1.5" stroke-dasharray="4 5"><path d="M190 120 C 220 120, 240 120, 250 112"/><path d="M190 180 C 240 180, 270 160, 270 112"/></g>
+              <g>
+                <rect x="60" y="40" width="130" height="190" rx="8" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+                <g fill="#1B245B"><rect x="74" y="56" width="102" height="26" rx="3"/><rect x="74" y="90" width="102" height="26" rx="3"/><rect x="74" y="124" width="102" height="26" rx="3"/><rect x="74" y="158" width="102" height="26" rx="3"/></g>
+                <g fill="#58BB47"><rect x="160" y="66" width="7" height="7"/><rect x="160" y="100" width="7" height="7"/><rect x="160" y="134" width="7" height="7"/></g>
+                <rect x="160" y="168" width="7" height="7" fill="#fff"/>
+                <g stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".45"><path d="M84 69h40M84 103h40M84 137h40M84 171h40"/></g>
+                <path d="M74 204h102M74 214h60" stroke="#1B245B" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <rect x="210" y="160" width="100" height="56" rx="6" fill="#1B245B"/>
+              <g fill="#58BB47"><rect x="222" y="172" width="10" height="10"/></g>
+              <g stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".6"><path d="M240 177h56M222 196h74"/></g>
+            </svg>
+          </figure>
+          <div class="sol-body">
             <span class="num">02</span>
             <h3>Servidores e infraestructura</h3>
             <p>Implementamos la infraestructura que sostiene sus aplicaciones críticas, bases de datos y servicios.</p>
             <p class="tags">Dell · HP · Lenovo · Marcas Bajo Demanda</p>
-          </div>
-          <div>
-            <h4>Ofrecemos</h4>
-            <ul class="list">
-              <li>Servidores empresariales</li>
-              <li>Infraestructura para virtualización</li>
-              <li>Plataformas de procesamiento</li>
-              <li>Equipamiento para centros de datos</li>
-              <li>Actualización tecnológica</li>
-              <li>Integración con entornos híbridos y nube</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Usted logra</h4>
-            <ul class="list list-accent">
-              <li>Mayor disponibilidad operativa</li>
-              <li>Escalabilidad para crecer</li>
-              <li>Consolidación tecnológica</li>
-              <li>Mejor rendimiento de sus aplicaciones</li>
-              <li>Mejor uso de sus recursos de infraestructura</li>
-            </ul>
+            <div class="sol-lists">
+              <div>
+                <h4>Ofrecemos</h4>
+                <ul class="list">
+                  <li>Servidores empresariales</li>
+                  <li>Infraestructura para virtualización</li>
+                  <li>Plataformas de procesamiento</li>
+                  <li>Equipamiento para centros de datos</li>
+                  <li>Actualización tecnológica</li>
+                  <li>Integración con entornos híbridos y nube</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Usted logra</h4>
+                <ul class="list list-accent">
+                  <li>Mayor disponibilidad operativa</li>
+                  <li>Escalabilidad para crecer</li>
+                  <li>Consolidación tecnológica</li>
+                  <li>Mejor rendimiento de sus aplicaciones</li>
+                  <li>Mejor uso de sus recursos de infraestructura</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </article>
 
-        <article class="solution" id="espacios-colaboracion">
-          <div class="solution-head">
+        <article class="sol" id="espacios-colaboracion">
+          <figure class="sol-art" aria-hidden="true">
+            <svg viewBox="0 0 360 260">
+              <rect x="60" y="30" width="240" height="136" rx="8" fill="#fff" stroke="#1B245B" stroke-width="2"/>
+              <rect x="150" y="18" width="60" height="10" rx="4" fill="#1B245B"/>
+              <rect x="176" y="20" width="8" height="6" fill="#58BB47"/>
+              <rect x="74" y="44" width="102" height="52" rx="3" fill="#1B245B"/>
+              <rect x="184" y="44" width="102" height="52" rx="3" fill="#1B245B" opacity=".75"/>
+              <rect x="74" y="102" width="102" height="52" rx="3" fill="#1B245B" opacity=".5"/>
+              <rect x="184" y="102" width="102" height="52" rx="3" fill="#58BB47"/>
+              <g fill="#fff"><circle cx="125" cy="62" r="9"/><path d="M107 90a18 13 0 0 1 36 0z"/><circle cx="235" cy="62" r="9"/><path d="M217 90a18 13 0 0 1 36 0z"/><circle cx="125" cy="120" r="9"/><path d="M107 148a18 13 0 0 1 36 0z"/></g>
+              <circle cx="235" cy="120" r="9" fill="#1B245B"/><path d="M217 148a18 13 0 0 1 36 0z" fill="#1B245B"/>
+              <path d="M180 166v24" stroke="#1B245B" stroke-width="2"/>
+              <path d="M40 210h280" stroke="#1B245B" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="180" cy="210" rx="110" ry="18" fill="#F3F4F8" stroke="#1B245B" stroke-width="2"/>
+              <rect x="164" y="200" width="32" height="12" rx="6" fill="#1B245B"/>
+              <rect x="176" y="203" width="8" height="6" fill="#58BB47"/>
+              <g fill="#fff" stroke="#1B245B" stroke-width="2"><circle cx="70" cy="236" r="10"/><circle cx="130" cy="244" r="10"/><circle cx="230" cy="244" r="10"/><circle cx="290" cy="236" r="10"/></g>
+            </svg>
+          </figure>
+          <div class="sol-body">
             <span class="num">03</span>
             <h3>Espacios de colaboración</h3>
             <p>Diseñamos salas de reunión listas para la colaboración híbrida.</p>
             <p class="tags">Logitech · Marcas Bajo Demanda</p>
-          </div>
-          <div>
-            <h4>Ofrecemos</h4>
-            <ul class="list">
-              <li>Sistemas de videoconferencia</li>
-              <li>Cámaras para salas de reuniones</li>
-              <li>Audio profesional</li>
-              <li>Equipos para Microsoft Teams Rooms</li>
-              <li>Salas híbridas</li>
-              <li>Dispositivos de presentación y colaboración</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Usted logra</h4>
-            <ul class="list list-accent">
-              <li>Reuniones más efectivas</li>
-              <li>Mejor comunicación entre equipos remotos y presenciales</li>
-              <li>Mayor participación</li>
-              <li>Audio y video de calidad profesional</li>
-            </ul>
+            <div class="sol-lists">
+              <div>
+                <h4>Ofrecemos</h4>
+                <ul class="list">
+                  <li>Sistemas de videoconferencia</li>
+                  <li>Cámaras para salas de reuniones</li>
+                  <li>Audio profesional</li>
+                  <li>Equipos para Microsoft Teams Rooms</li>
+                  <li>Salas híbridas</li>
+                  <li>Dispositivos de presentación y colaboración</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Usted logra</h4>
+                <ul class="list list-accent">
+                  <li>Reuniones más efectivas</li>
+                  <li>Mejor comunicación entre equipos remotos y presenciales</li>
+                  <li>Mayor participación</li>
+                  <li>Audio y video de calidad profesional</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- PUERTA A PUERTA -->
-    <section class="section section-soft" id="puerta-a-puerta">
+    <!-- PUERTA A PUERTA: ruta logística -->
+    <section class="section section-navy" id="puerta-a-puerta">
       <div class="container">
-        <p class="eyebrow">Nuestro diferencial</p>
-        <h2>Importación puerta a puerta</h2>
-        <p class="intro">Coordinamos la cadena logística completa, desde la compra internacional hasta la entrega en sus instalaciones, y reducimos su carga administrativa.</p>
-
-        <div class="split">
+        <div class="head-split">
           <div>
-            <h3>Cómo lo hacemos</h3>
-            <ol class="numbered">
-              <li>Gestionamos las compras internacionales.</li>
-              <li>Coordinamos con fabricantes y distribuidores.</li>
-              <li>Consolidamos las órdenes.</li>
-              <li>Coordinamos el transporte internacional.</li>
-              <li>Gestionamos la documentación y el proceso aduanal.</li>
-              <li>Hacemos el seguimiento logístico.</li>
-              <li>Entregamos puerta a puerta.</li>
-              <li>Coordinamos la configuración e instalación y la puesta en marcha.</li>
-            </ol>
+            <p class="eyebrow">Nuestro diferencial</p>
+            <h2>Importación puerta a puerta</h2>
           </div>
-          <div>
-            <h3>Ideal para</h3>
-            <ul class="list">
-              <li>Renovaciones masivas de equipos</li>
-              <li>Apertura y dotación de nuevas oficinas</li>
-              <li>Modernización de centros de datos</li>
-              <li>Equipamiento de sedes distribuidas</li>
-              <li>Proyectos con varios fabricantes o distribuidores</li>
-            </ul>
-          </div>
+          <p class="intro">Coordinamos la cadena logística completa, desde la compra internacional hasta la entrega en sus instalaciones, y reducimos su carga administrativa.</p>
         </div>
 
-        <div class="cols-3 benefits">
-          <div>
-            <h3>Un único responsable</h3>
-            <p>Coordinamos la parte comercial, logística y técnica. Usted no gestiona varios proveedores.</p>
-          </div>
-          <div>
-            <h3>Menos gestiones</h3>
-            <p>Reducimos trámites, interacciones y seguimientos internos durante la compra.</p>
-          </div>
-          <div>
-            <h3>Visibilidad del pedido</h3>
-            <p>Le informamos cada avance para que planifique la recepción y la entrada en operación.</p>
-          </div>
-          <div>
-            <h3>Menos riesgos</h3>
-            <p>Evitamos errores de coordinación, documentación incompleta y entregas fragmentadas.</p>
-          </div>
-          <div>
-            <h3>Mejor planificación</h3>
-            <p>Alineamos la entrega con sus renovaciones, aperturas de oficinas y despliegues.</p>
-          </div>
-          <div>
-            <h3>Lista para operar</h3>
-            <p>Unimos la entrega con la configuración e instalación, el soporte y la puesta en marcha.</p>
-          </div>
+        <figure class="route" aria-hidden="true">
+          <svg viewBox="0 0 960 120" preserveAspectRatio="xMidYMid meet">
+            <path d="M40 70 H920" stroke="#58BB47" stroke-width="2" stroke-dasharray="6 8" fill="none"/>
+            <g fill="#1B245B" stroke="#fff" stroke-width="2">
+              <circle cx="60" cy="70" r="30"/><circle cx="270" cy="70" r="30"/><circle cx="480" cy="70" r="30"/><circle cx="690" cy="70" r="30"/><circle cx="900" cy="70" r="30"/>
+            </g>
+            <g fill="none" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <!-- globo -->
+              <circle cx="60" cy="70" r="14"/><path d="M46 70h28M60 56c-6 8-6 20 0 28M60 56c6 8 6 20 0 28"/>
+              <!-- avión -->
+              <path d="M286 58 254 70l11 3 4 11 5-7 8 5z"/>
+              <!-- documento -->
+              <path d="M470 56h14l6 6v22h-20z"/><path d="M475 70h10M475 76h6"/>
+              <!-- camión -->
+              <path d="M672 62h20v14h-20zM692 66h7l5 5v5h-12"/><circle cx="678" cy="80" r="2.5"/><circle cx="698" cy="80" r="2.5"/>
+              <!-- edificio -->
+              <path d="M890 84V56h14v28M904 64h8v20M886 84h30"/>
+            </g>
+            <g fill="#58BB47"><rect x="54" y="20" width="12" height="12"/><rect x="264" y="20" width="12" height="12"/><rect x="474" y="20" width="12" height="12"/><rect x="684" y="20" width="12" height="12"/><rect x="894" y="20" width="12" height="12"/></g>
+          </svg>
+          <figcaption class="route-labels"><span>Compra internacional</span><span>Transporte</span><span>Aduana</span><span>Entrega</span><span>Sus instalaciones</span></figcaption>
+        </figure>
+
+        <h3 class="sub">Cómo lo hacemos</h3>
+        <ol class="flow-grid">
+          <li><svg class="ic"><use href="#i-carrito"/></svg><span>01</span>Gestionamos las compras internacionales.</li>
+          <li><svg class="ic"><use href="#i-fabrica"/></svg><span>02</span>Coordinamos con fabricantes y distribuidores.</li>
+          <li><svg class="ic"><use href="#i-cajas"/></svg><span>03</span>Consolidamos las órdenes.</li>
+          <li><svg class="ic"><use href="#i-avion"/></svg><span>04</span>Coordinamos el transporte internacional.</li>
+          <li><svg class="ic"><use href="#i-documento"/></svg><span>05</span>Gestionamos la documentación y el proceso aduanal.</li>
+          <li><svg class="ic"><use href="#i-ubicacion"/></svg><span>06</span>Hacemos el seguimiento logístico.</li>
+          <li><svg class="ic"><use href="#i-edificio"/></svg><span>07</span>Entregamos puerta a puerta.</li>
+          <li><svg class="ic"><use href="#i-engranaje"/></svg><span>08</span>Coordinamos la configuración e instalación y la puesta en marcha.</li>
+        </ol>
+
+        <div class="ideal">
+          <h3 class="sub">Ideal para</h3>
+          <ul class="chips">
+            <li>Renovaciones masivas de equipos</li>
+            <li>Apertura y dotación de nuevas oficinas</li>
+            <li>Modernización de centros de datos</li>
+            <li>Equipamiento de sedes distribuidas</li>
+            <li>Proyectos con varios fabricantes o distribuidores</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section" id="beneficios">
+      <div class="container">
+        <p class="eyebrow">Valor para usted</p>
+        <h2>Lo que gana con un solo aliado</h2>
+        <div class="cols-3 icon-rows">
+          <div><svg class="ic"><use href="#i-persona"/></svg><div><h3>Un único responsable</h3><p>Coordinamos la parte comercial, logística y técnica. Usted no gestiona varios proveedores.</p></div></div>
+          <div><svg class="ic"><use href="#i-simple"/></svg><div><h3>Menos gestiones</h3><p>Reducimos trámites, interacciones y seguimientos internos durante la compra.</p></div></div>
+          <div><svg class="ic"><use href="#i-ojo"/></svg><div><h3>Visibilidad del pedido</h3><p>Le informamos cada avance para que planifique la recepción y la entrada en operación.</p></div></div>
+          <div><svg class="ic"><use href="#i-escudo"/></svg><div><h3>Menos riesgos</h3><p>Evitamos errores de coordinación, documentación incompleta y entregas fragmentadas.</p></div></div>
+          <div><svg class="ic"><use href="#i-calendario"/></svg><div><h3>Mejor planificación</h3><p>Alineamos la entrega con sus renovaciones, aperturas de oficinas y despliegues.</p></div></div>
+          <div><svg class="ic"><use href="#i-encendido"/></svg><div><h3>Lista para operar</h3><p>Unimos la entrega con la configuración e instalación, el soporte y la puesta en marcha.</p></div></div>
         </div>
       </div>
     </section>
 
     <!-- SERVICIOS -->
-    <section class="section" id="servicios-incluidos">
+    <section class="section section-soft" id="servicios-incluidos">
       <div class="container">
         <p class="eyebrow">Servicios incluidos</p>
         <h2>Lo acompañamos en cada etapa</h2>
-        <div class="cols-3 services">
-          <div id="arquitectura-solucion">
+        <div class="stages">
+          <div class="stage" id="arquitectura-solucion">
+            <span class="stage-n">01</span>
+            <span class="tile tile-lg"><svg class="ic"><use href="#i-arquitectura"/></svg></span>
             <h3>Arquitectura de la solución</h3>
             <p>Definimos la tecnología correcta antes de comprar.</p>
             <ul class="list">
@@ -289,7 +452,9 @@
               <li>Dimensionamiento de equipos</li>
             </ul>
           </div>
-          <div id="configuracion-instalacion">
+          <div class="stage" id="configuracion-instalacion">
+            <span class="stage-n">02</span>
+            <span class="tile tile-lg"><svg class="ic"><use href="#i-engranaje"/></svg></span>
             <h3>Configuración e instalación</h3>
             <p>Dejamos su tecnología lista para operar.</p>
             <ul class="list">
@@ -298,7 +463,9 @@
               <li>Migración tecnológica</li>
             </ul>
           </div>
-          <div id="soporte-mantenimiento">
+          <div class="stage" id="soporte-mantenimiento">
+            <span class="stage-n">03</span>
+            <span class="tile tile-lg"><svg class="ic"><use href="#i-soporte"/></svg></span>
             <h3>Soporte y mantenimiento</h3>
             <p>Mantenemos su operación activa.</p>
             <ul class="list">
@@ -325,6 +492,7 @@
           <a class="btn btn-ghost-light" href="https://www.consein.com/">Ir a consein.com</a>
         </div>
       </div>
+      <div class="cta-squares" aria-hidden="true"><span></span><span></span><span></span></div>
     </section>
   </main>
 
