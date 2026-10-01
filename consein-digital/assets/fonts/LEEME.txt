@@ -1,0 +1,4 @@
+Copiar aquí los archivos de la tipografía Haltto con la licencia comercial de Consein:
+  Haltto-Bold.woff2
+  Haltto-Bold.woff
+Mientras no estén, los títulos se muestran con Poppins.
