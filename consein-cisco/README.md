@@ -1,17 +1,41 @@
-# Consein · Soluciones › Cisco + Microsoft (maqueta)
+# Consein · Soluciones Cisco (sitio)
 
-Modelo de la página que se activaría desde **Soluciones › Cisco** en consein.com, basado en el documento DISD
-*Consein_Cisco_Microsoft_Offerings_Renovacion* (septiembre 2026).
+Sitio de la sección Cisco de consein.com: Microsoft como núcleo, Cisco como acelerador.
 
-## Cómo verla
-Abra `index.html` directamente en el navegador (doble clic). Es un solo archivo autocontenido (el logo va incrustado), sin dependencias ni conexión a internet: puede copiarse solo a una memoria USB o enviarse por correo.
+## Cómo verlo
+Descomprima la carpeta completa y abra `index.html` con doble clic. No requiere internet ni instalación.
+Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en `_fuente/generar_sitio.py`).
 
-## Contenido
-Hero y propuesta de valor · enfoque Microsoft núcleo / Cisco acelerador · 5 pilares · 15 offerings (CSC-01 a CSC-15, filtrables y con detalle)
-· modelo End-to-End · evidencia con fuentes · matriz de 26 productos · programa Renueva tu Red (estadísticas, autodiagnóstico,
-rutas, 5 pasos, REN-01 a REN-08) · respaldo · formulario de contacto (simulado).
+## Páginas
+| Archivo | Menú | Contenido |
+|---|---|---|
+| `index.html` | Inicio | Sinergia exponencial, enfoque, 7 especialidades, Programa Renueva (resumen), método, resultados, nosotros, preguntas frecuentes, contacto |
+| `soluciones.html` | Soluciones | 15 soluciones agrupadas en 7 especialidades |
+| `productos.html` | Productos | Programa Renueva: por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
-## Para el comité
-- La banda amarilla superior y el botón "Ver validaciones pendientes" son solo para la presentación; se eliminan al publicar.
-- Se excluyó todo lo marcado como *uso interno* en el documento (estrategia comercial, playbook de renovación, reglas de posicionamiento).
-- El logotipo oficial de Consein está incrustado en `index.html` (copias en `assets/`).
+Cada oferta muestra solo **título y valor**. "Seguir leyendo…" abre la subpantalla con Ideal para, Qué resolvemos,
+Qué incluye y Resultado. Los submenús enlazan directo a cada oferta (por ejemplo `soluciones.html#csc-06`).
+
+## Tipografías
+- **Párrafos: Poppins**, incluida en `assets/fonts/` (licencia SIL OFL 1.1).
+- **Títulos: Haltto.** Es una fuente comercial que no está incluida. Copie los archivos con licencia como
+  `assets/fonts/Haltto-Bold.woff2` y `assets/fonts/Haltto-Regular.woff2`: el sitio los toma automáticamente.
+  Mientras no estén, los títulos se muestran en Poppins.
+
+## Editar textos
+Todo el contenido está en `_fuente/generar_sitio.py`. Después de editar:
+```
+python3 _fuente/generar_sitio.py
+```
+
+## SEO
+`Palabras_clave_SEO_Consein_Cisco.docx` lista 93 palabras clave por especialidad para el equipo SEO.
+El sitio ya incluye títulos y descripciones por página, un H2 por especialidad, canonical, Open Graph
+y datos estructurados schema.org (Organization, Service, BreadcrumbList, FAQPage).
+
+## Antes de publicar
+- Confirmar el nivel de partnership y las certificaciones Cisco vigentes de Consein.
+- Validar la capacidad de entrega de cada oferta (en especial AI Defense, Hypershield y Secure AI Factory).
+- Revisar CSC-09 frente a Microsoft Entra Global Secure Access.
+- Confirmar con Cisco Capital los programas de financiamiento por país.
+- Conectar el formulario de contacto al CRM (hoy es una maqueta).
