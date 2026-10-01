@@ -65,6 +65,6 @@ Ejecútelo después de cada cambio en `index.html` o `assets/`.
 
 ## Antes de publicar
 
-- Revisar los enlaces a `https://www.consein.com/#contacto`, `#servicios` y `#nosotros`
+- Revisar los enlaces a `https://www.consein.com/#contacto` y `#nosotros`
   y ajustarlos a las URLs reales del sitio.
 - Ajustar el menú superior (`<nav class="main-nav">`) para que coincida con el del sitio principal.
