@@ -432,14 +432,14 @@ def menu(actual):
       <ul>
         <li><a class="nav-link" href="index.html"{cur('index')}>Inicio</a></li>
         <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('soluciones')}>Soluciones<span class="caret">▾</span></button>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('soluciones')}>Soluciones de Valor<span class="caret">▾</span></button>
           <div class="mega mega-sol">
             {''.join(cols)}
             <p class="all"><a class="arrow" href="soluciones.html">Ver las 15 soluciones</a></p>
           </div>
         </li>
         <li class="has-menu">
-          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('productos')}>Productos<span class="caret">▾</span></button>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('productos')}>Ofertas de Productos<span class="caret">▾</span></button>
           <div class="mega mega-prod">
             <div><h4><a href="productos.html">Programa Renueva</a></h4><ul>
               <li><a href="productos.html#por-que-renovar">Por qué renovar ahora</a></li>
@@ -467,8 +467,8 @@ def pie():
         <a class="logo" href="index.html"><img src="assets/img/logo-consein-blanco.png" alt="Consein" width="154" height="26"></a>
         <p>Integramos Cisco y Microsoft para empresas en {', '.join(PAISES[:-1])} y {PAISES[-1]} desde 1987.</p>
       </div>
-      <div><h4>Soluciones</h4><ul>{esp}</ul></div>
-      <div><h4>Productos</h4><ul>
+      <div><h4>Soluciones de Valor</h4><ul>{esp}</ul></div>
+      <div><h4>Ofertas de Productos</h4><ul>
         <li><a href="productos.html">Programa Renueva</a></li>
         <li><a href="productos.html#autodiagnostico">Autodiagnóstico</a></li>
         <li><a href="productos.html#ofertas">Ofertas de renovación</a></li>
@@ -602,7 +602,7 @@ def inicio():
 <section id="especialidades">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Soluciones</p>
+      <p class="eyebrow">Soluciones de Valor</p>
       <h2>Siete especialidades</h2>
       <p class="lead">Cada especialidad combina tecnología Cisco con su núcleo Microsoft.</p>
     </div>
@@ -613,7 +613,7 @@ def inicio():
 <section class="soft" id="renueva">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Productos · Programa Renueva</p>
+      <p class="eyebrow">Ofertas de Productos · Programa Renueva</p>
       <h2>Renovamos su red al ritmo de Microsoft</h2>
       <p class="lead">Reemplazamos sus equipos Cisco obsoletos por una red segura y gestionable, conectada a Teams, Azure e Intune, con planes de pago y por fases.</p>
     </div>
@@ -724,7 +724,7 @@ def soluciones():
     cuerpo = f"""
 <section class="page-head">
   <div class="wrap">
-    <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones</p>
+    <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones de Valor</p>
     <h1>Soluciones Cisco para su plataforma Microsoft</h1>
     <p class="lead">Quince soluciones en siete especialidades. Cada una suma tecnología Cisco a Azure, Microsoft 365, Teams o Dynamics 365.</p>
     <nav class="chips" aria-label="Especialidades">{chips}</nav>
@@ -743,7 +743,7 @@ def soluciones():
     ld = [{"@type": "WebPage", "name": "Soluciones Cisco para su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
-               {"@type": "ListItem", "position": 2, "name": "Soluciones", "item": URL_BASE + "soluciones"}]}},
+               {"@type": "ListItem", "position": 2, "name": "Soluciones de Valor", "item": URL_BASE + "soluciones"}]}},
           {"@type": "ItemList", "name": "Soluciones Cisco + Microsoft",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": servicio_ld(o, nombre_esp(o["esp"]))} for i, o in enumerate(SOLUCIONES)]}]
     pagina("soluciones.html", "soluciones",
@@ -779,7 +779,7 @@ def productos():
     cuerpo = f"""
 <section class="page-head">
   <div class="wrap">
-    <p class="crumbs"><a href="index.html">Inicio</a> › Productos</p>
+    <p class="crumbs"><a href="index.html">Inicio</a> › Ofertas de Productos</p>
     <h1>Programa Renueva: renovación de redes Cisco</h1>
     <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo y migramos por fases, con planes de pago.</p>
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
@@ -848,7 +848,7 @@ def productos():
     ld = [{"@type": "WebPage", "name": "Programa Renueva: renovación de redes Cisco", "url": URL_BASE + "productos", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
-               {"@type": "ListItem", "position": 2, "name": "Productos", "item": URL_BASE + "productos"}]}},
+               {"@type": "ListItem", "position": 2, "name": "Ofertas de Productos", "item": URL_BASE + "productos"}]}},
           {"@type": "ItemList", "name": "Programa Renueva",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": servicio_ld(p, "Renovación de infraestructura Cisco")} for i, p in enumerate(PRODUCTOS)]}]
     pagina("productos.html", "productos",
@@ -900,8 +900,8 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
     cabecera = re.search(r'<header class="site-header">.*?</header>', base, re.S).group(0)
     cabecera = cabecera.replace(' aria-current="page"', "")
     cabecera = cabecera.replace('<a class="nav-link" href="index.html"', '<a class="nav-link" data-nav="inicio" href="index.html"')
-    cabecera = cabecera.replace('aria-haspopup="true">Soluciones', 'aria-haspopup="true" data-nav="soluciones">Soluciones')
-    cabecera = cabecera.replace('aria-haspopup="true">Productos', 'aria-haspopup="true" data-nav="productos">Productos')
+    cabecera = cabecera.replace('aria-haspopup="true">Soluciones de Valor', 'aria-haspopup="true" data-nav="soluciones">Soluciones de Valor')
+    cabecera = cabecera.replace('aria-haspopup="true">Ofertas de Productos', 'aria-haspopup="true" data-nav="productos">Ofertas de Productos')
     cabecera = reescribir(cabecera, None)
     pie_html = reescribir(re.search(r"<footer.*?</dialog>", base, re.S).group(0), None)
 

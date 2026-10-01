@@ -14,7 +14,7 @@
 
   // Submenús Soluciones y Productos
   var menus = document.querySelectorAll(".has-menu");
-  var hoverable = window.matchMedia("(hover:hover) and (min-width:861px)");
+  var hoverable = window.matchMedia("(hover:hover) and (min-width:1001px)");
   function closeAll(except) {
     menus.forEach(function (m) {
       if (m !== except) {
