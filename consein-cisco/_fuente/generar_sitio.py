@@ -445,7 +445,7 @@ def menu(actual):
               <li><a href="productos.html#por-que-renovar">Por qué renovar ahora</a></li>
               <li><a href="productos.html#autodiagnostico">Autodiagnóstico</a></li>
               <li><a href="productos.html#rutas">Rutas de renovación</a></li>
-              <li><a href="productos.html#metodo">Cómo renovamos</a></li>
+              <li><a href="productos.html#como-renovamos">Cómo renovamos</a></li>
             </ul></div>
             <div><h4><a href="productos.html#ofertas">Ofertas de renovación</a></h4><ul>{prod}</ul></div>
           </div>
@@ -825,7 +825,7 @@ def productos():
   </div>
 </section>
 
-<section class="soft" id="metodo">
+<section class="soft" id="como-renovamos">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Cómo renovamos</p><h2>Cinco pasos, con su operación activa</h2></div>
     <ol class="steps">
@@ -857,7 +857,96 @@ def productos():
            cuerpo, ld)
 
 
+# ---------------------------------------------------------------------------
+# Versión de un solo archivo (para abrir con doble clic o enviar por correo)
+# ---------------------------------------------------------------------------
+def version_unica(nombre="Consein_Cisco_sitio_completo.html"):
+    import base64
+    import re
+
+    def data_uri(ruta, tipo):
+        return f"data:{tipo};base64," + base64.b64encode((RAIZ / ruta).read_bytes()).decode()
+
+    paginas = {"index": "inicio", "soluciones": "soluciones", "productos": "productos"}
+    fuentes = {}
+    for archivo, pag in paginas.items():
+        fuentes[pag] = (RAIZ / f"{archivo}.html").read_text(encoding="utf-8")
+
+    def reescribir(fragmento, actual):
+        def rw(m):
+            href = m.group(1)
+            a = re.match(r"(index|soluciones|productos)\.html(?:\?interes=([\w-]+))?(?:#([\w-]+))?$", href)
+            if a:
+                destino = "#" + paginas[a.group(1)]
+                if a.group(3):
+                    destino += ":" + a.group(3)
+                if a.group(2):
+                    destino += "?interes=" + a.group(2)
+                return f'href="{destino}"'
+            if href.startswith("#") and actual:
+                return f'href="#{actual}:{href[1:]}"'
+            return m.group(0)
+        return re.sub(r'href="([^"]*)"', rw, fragmento)
+
+    meta, cuerpos = {}, []
+    for pag, doc in fuentes.items():
+        meta[pag] = {"title": html.unescape(re.search(r"<title>(.*?)</title>", doc).group(1)),
+                     "description": html.unescape(re.search(r'<meta name="description" content="(.*?)">', doc).group(1))}
+        main = re.search(r'<main id="contenido">(.*?)</main>', doc, re.S).group(1)
+        oculto = "" if pag == "inicio" else " hidden"
+        cuerpos.append(f'<div class="page" data-page="{pag}"{oculto}>{reescribir(main, pag)}</div>')
+
+    base = fuentes["inicio"]
+    cabecera = re.search(r'<header class="site-header">.*?</header>', base, re.S).group(0)
+    cabecera = cabecera.replace(' aria-current="page"', "")
+    cabecera = cabecera.replace('<a class="nav-link" href="index.html"', '<a class="nav-link" data-nav="inicio" href="index.html"')
+    cabecera = cabecera.replace('aria-haspopup="true">Soluciones', 'aria-haspopup="true" data-nav="soluciones">Soluciones')
+    cabecera = cabecera.replace('aria-haspopup="true">Productos', 'aria-haspopup="true" data-nav="productos">Productos')
+    cabecera = reescribir(cabecera, None)
+    pie_html = reescribir(re.search(r"<footer.*?</dialog>", base, re.S).group(0), None)
+
+    css = (RAIZ / "assets/css/estilos.css").read_text(encoding="utf-8")
+    css = re.sub(r'url\("\.\./fonts/(poppins-[\w-]+\.woff2)"\)',
+                 lambda m: 'url("' + data_uri("assets/fonts/" + m.group(1), "font/woff2") + '")', css)
+    css = re.sub(r',url\("\.\./fonts/Haltto[^)]*\) format\("woff2"\)', "", css)  # Haltto: solo si está instalada
+    js = (RAIZ / "assets/js/app.js").read_text(encoding="utf-8")
+    logo = data_uri("assets/img/logo-consein.png", "image/png")
+    logo_blanco = data_uri("assets/img/logo-consein-blanco.png", "image/png")
+
+    doc = f"""<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(meta['inicio']['title'])}</title>
+<meta name="description" content="{E(meta['inicio']['description'])}">
+<style>
+{css}
+</style>
+<script type="application/json" id="paginas">{json.dumps(meta, ensure_ascii=False)}</script>
+</head>
+<body data-single>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+{cabecera}
+<main id="contenido">
+{''.join(cuerpos)}
+</main>
+{pie_html.replace('<script src="assets/js/app.js"></script>', '')}
+<script>
+{js}
+</script>
+</body>
+</html>
+"""
+    doc = doc.replace('src="assets/img/logo-consein.png"', f'src="{logo}"')
+    doc = doc.replace('src="assets/img/logo-consein-blanco.png"', f'src="{logo_blanco}"')
+    assert "assets/" not in doc.replace("assets/fonts/", ""), "quedó una referencia externa"
+    (RAIZ / nombre).write_text(doc, encoding="utf-8")
+    print("✔", nombre, f"({len(doc) // 1024} KB, un solo archivo)")
+
+
 if __name__ == "__main__":
     inicio()
     soluciones()
     productos()
+    version_unica()

@@ -3,7 +3,9 @@
 Sitio de la sección Cisco de consein.com: Microsoft como núcleo, Cisco como acelerador.
 
 ## Cómo verlo
-Descomprima la carpeta completa y abra `index.html` con doble clic. No requiere internet ni instalación.
+- **Versión de un solo archivo (recomendada para presentar):** abra `Consein_Cisco_sitio_completo.html` con doble clic.
+  Incluye las tres páginas, las fuentes y el logotipo; funciona sin internet y puede enviarse por correo.
+- **Versión de sitio (para publicar):** abra `index.html`. Usa la carpeta `assets/` y tiene una página por sección para SEO.
 Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en `_fuente/generar_sitio.py`).
 
 ## Páginas
@@ -27,6 +29,7 @@ Todo el contenido está en `_fuente/generar_sitio.py`. Después de editar:
 ```
 python3 _fuente/generar_sitio.py
 ```
+El comando regenera las tres páginas y la versión de un solo archivo.
 
 ## SEO
 `Palabras_clave_SEO_Consein_Cisco.docx` lista 93 palabras clave por especialidad para el equipo SEO.

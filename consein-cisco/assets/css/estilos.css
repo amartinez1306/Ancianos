@@ -263,3 +263,4 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
   .site-header,.menu-toggle,dialog,.form{display:none!important}
 }
 .nw{white-space:nowrap}
+[id]{scroll-margin-top:88px}

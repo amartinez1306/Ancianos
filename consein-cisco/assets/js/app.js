@@ -42,7 +42,7 @@
   });
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".has-menu")) closeAll();
-    if (e.target.closest(".mega a") && nav) { closeAll(); nav.classList.remove("open"); }
+    if (e.target.closest("#nav a") && nav) { closeAll(); nav.classList.remove("open"); }
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeAll(); });
 
@@ -50,6 +50,8 @@
   var dialog = document.getElementById("detalle");
   var dialogBody = dialog ? dialog.querySelector(".detail-body") : null;
   var lastHash = "";
+  var single = document.body.hasAttribute("data-single");
+  var currentPage = "inicio";
 
   function openDetail(id) {
     var src = document.getElementById("detalle-" + id);
@@ -70,13 +72,49 @@
     dialog.querySelector(".detail-close").addEventListener("click", function () { dialog.close(); });
     dialog.addEventListener("click", function (e) { if (e.target === dialog) dialog.close(); });
     dialog.addEventListener("close", function () {
-      if (lastHash && location.hash.slice(1) === lastHash) {
+      if (single) {
+        if (lastHash) history.replaceState(null, "", "#" + currentPage);
+      } else if (lastHash && location.hash.slice(1) === lastHash) {
         history.replaceState(null, "", location.pathname + location.search);
       }
       lastHash = "";
     });
-    window.addEventListener("hashchange", fromHash);
-    fromHash();
+    if (!single) {
+      window.addEventListener("hashchange", fromHash);
+      fromHash();
+    }
+  }
+
+  // Versión de un solo archivo: navegación entre Inicio, Soluciones y Productos
+  // Enlaces con la forma  #pagina  ·  #pagina:seccion  ·  #pagina:seccion?interes=CSC-01
+  if (single) {
+    var meta = JSON.parse(document.getElementById("paginas").textContent);
+    var route = function () {
+      var h = decodeURIComponent(location.hash.slice(1)), q = "", i = h.indexOf("?");
+      if (i >= 0) { q = h.slice(i + 1); h = h.slice(0, i); }
+      var parts = h.split(":"), page = parts[0] || "inicio", target = parts[1] || "";
+      if (!meta[page]) return; // anclas internas, por ejemplo #contenido
+      var changed = page !== currentPage;
+      currentPage = page;
+      document.querySelectorAll(".page").forEach(function (el) { el.hidden = el.getAttribute("data-page") !== page; });
+      document.title = meta[page].title;
+      document.querySelector('meta[name="description"]').setAttribute("content", meta[page].description);
+      document.querySelectorAll("[data-nav]").forEach(function (a) {
+        if (a.getAttribute("data-nav") === page) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+      var interes = new URLSearchParams(q).get("interes");
+      var sel = document.getElementById("f-interes");
+      if (interes && sel) sel.value = interes;
+      if (dialog && dialog.open) { lastHash = ""; dialog.close(); }
+      var pageEl = document.querySelector('.page[data-page="' + page + '"]');
+      var el = target ? pageEl.querySelector("#" + CSS.escape(target)) : null;
+      if (el) el.scrollIntoView();
+      else if (changed || !target) window.scrollTo(0, 0);
+      if (target && document.getElementById("detalle-" + target)) { lastHash = target; openDetail(target); }
+    };
+    window.addEventListener("hashchange", route);
+    route();
   }
 
   // Autodiagnóstico Programa Renueva
