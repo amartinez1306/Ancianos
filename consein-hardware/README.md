@@ -6,12 +6,14 @@ Es un sitio estático (HTML + CSS + JS), sin dependencias ni proceso de compilac
 ```
 consein-hardware/
 ├── index.html              # Página (iconos e ilustraciones por sección)
+├── index-digital.html      # Variante moderna y tecnológica (ejemplo)
 ├── assets/css/styles.css   # Estilos base (paleta: azul oscuro #1B245B / verde #58BB47)
 ├── assets/css/grafico.css  # Estilos de iconos, ilustraciones y bloques gráficos
+├── assets/css/digital.css  # Estilos de la variante digital
 ├── assets/js/main.js       # Menú móvil y botón "volver arriba"
 ├── assets/img/logo-consein.jpg
 ├── assets/fonts/           # Colocar aquí Haltto.woff2 (fuente de títulos)
-├── build.py                # Genera la versión de un solo archivo
+├── build.py                # Genera las versiones de un solo archivo
 ├── seo/                    # Palabras clave SEO (docx) para el equipo de SEO
 ├── Dockerfile + nginx.conf # Opción contenedor (sirve en /hardware/)
 └── README.md
@@ -57,7 +59,8 @@ Construir la imagen con el `Dockerfile` y publicar el puerto 80. La página qued
 
 ## Versión de un solo archivo
 
-`python3 build.py` regenera `consein-hardware-standalone.html` (CSS, JS, logo y fuente incrustados).
+`python3 build.py` regenera `consein-hardware-standalone.html` y `consein-hardware-digital-standalone.html`
+(CSS, JS, logo y fuente incrustados).
 Ejecútelo después de cada cambio en `index.html` o `assets/`.
 
 ## Antes de publicar
