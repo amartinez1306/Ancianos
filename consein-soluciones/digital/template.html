@@ -173,6 +173,11 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .offer:hover .more::after{width:28px}
 .badge{align-self:flex-start;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:rgba(88,187,71,.18);padding:5px 10px;border-radius:99px}
 
+.line-h{grid-column:1/-1;margin:26px 0 -4px;display:flex;align-items:center;gap:14px;font:600 .76rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
+.line-h::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--green)}
+.line-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(88,187,71,.6),transparent)}
+.line-h:first-child{margin-top:0}
+
 /* Evidencia */
 .metric{padding:30px;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-line);position:relative;overflow:hidden}
 .metric b{display:block;font-family:var(--title);font-size:2.1rem;line-height:1.05;color:#fff;margin-bottom:10px}
@@ -388,7 +393,7 @@ function menu(){
 
 /* ---------- Ofertas: título + valor + "Seguir leyendo…" ---------- */
 function offers(page){
-  return `<div class="g g3">${page.offerings.map(o => `
+  return `<div class="g g3">${page.offerings.map((o, i, all) => `${o.linea && o.linea !== (all[i-1] || {}).linea ? `<h3 class="line-h">${esc(o.linea)}</h3>` : ''}
     <article class="offer">
       ${o.code === page.star ? `<span class="badge">${o.reconocimiento ? '★ Premio WITSA' : 'Destacada'}</span>` : ''}
       <h3>${esc(o.name)}</h3>

@@ -285,6 +285,21 @@
      "resultado": "Cargas operando en Azure con continuidad y una ruta de modernización."
     },
     {
+     "code": "INF-08",
+     "name": "MAC: Migración Ágil Corporativa",
+     "tipo": "Programa de migración · empresas corporativas",
+     "valor": "Migramos sus aplicaciones estratégicas a Azure de forma rápida, segura y sin interrupciones.",
+     "ideal": "Empresas corporativas con operaciones críticas y aplicaciones como onboarding digital, ERP, BI o autenticación sobre Hyper-V o VMware.",
+     "resuelve": "Infraestructura virtualizada compleja, altas exigencias de seguridad y cumplimiento normativo, y costos difíciles de controlar.",
+     "incluye": [
+      "Evaluación técnica y de negocio.",
+      "Diseño de arquitectura en Azure con redes, seguridad y monitoreo.",
+      "Migración y pruebas con Azure Migrate, Azure Monitor y Defender for Cloud.",
+      "Transferencia operativa, capacitación avanzada y soporte con SLA."
+     ],
+     "resultado": "Aplicaciones críticas en Azure con alta disponibilidad, recuperación ante desastres y control de costos."
+    },
+    {
      "code": "INF-04",
      "name": "Resiliencia Azure: Respaldo y Recuperación",
      "tipo": "Implementación + servicio gestionado",
@@ -915,6 +930,21 @@
      "resultado": "Mejor rendimiento y una base de datos preparada para analítica e IA."
     },
     {
+     "code": "DAT-07",
+     "name": "Diagnóstico SQL Server: Health Check y riesgos",
+     "tipo": "Assessment · 4 horas por instancia",
+     "valor": "Evaluamos su plataforma SQL Server y convertimos los hallazgos técnicos en un plan priorizado.",
+     "ideal": "Empresas con SQL Server en producción, en especial con versiones sin soporte como SQL Server 2016, cuyo soporte extendido terminó el 14 de julio de 2026.",
+     "resuelve": "Consultas lentas, configuraciones de riesgo, respaldos sin probar, accesos sin control y versiones sin actualizaciones de seguridad.",
+     "incluye": [
+      "Cuestionario inicial y ejecución de scripts de diagnóstico.",
+      "Evaluación de rendimiento, configuración, seguridad, disponibilidad, respaldos e integridad.",
+      "11 evidencias técnicas: inventario, backups, jobs, índices, HA/DR, CHECKDB y más.",
+      "Informe ejecutivo, matriz de riesgos priorizada y roadmap de mejoras."
+     ],
+     "resultado": "Decisiones priorizadas por impacto, riesgo y costo, con evidencia técnica para cada recomendación."
+    },
+    {
      "code": "DAT-04",
      "name": "Gobierno y Calidad de Datos con Purview",
      "tipo": "Implementación",
@@ -1183,7 +1213,8 @@
       "Construcción en Copilot Studio o Microsoft Foundry.",
       "Pruebas, evaluación, publicación y monitoreo."
      ],
-     "resultado": "Agentes integrados a sus sistemas y orientados a resultados."
+     "resultado": "Agentes integrados a sus sistemas y orientados a resultados.",
+     "linea": "Plataforma de IA"
     },
     {
      "code": "IA-03",
@@ -1198,7 +1229,8 @@
       "Controles de acceso y trazabilidad.",
       "Evaluación y mejora continua de respuestas."
      ],
-     "resultado": "Conocimiento accesible, confiable y útil para toda la organización."
+     "resultado": "Conocimiento accesible, confiable y útil para toda la organización.",
+     "linea": "Plataforma de IA"
     },
     {
      "code": "IA-04",
@@ -1213,7 +1245,8 @@
       "Integración con sistemas y canales.",
       "Monitoreo, seguridad y evolución."
      ],
-     "resultado": "Experiencias conversacionales escalables y seguras."
+     "resultado": "Experiencias conversacionales escalables y seguras.",
+     "linea": "Plataforma de IA"
     },
     {
      "code": "IA-05",
@@ -1228,7 +1261,8 @@
       "Buenas prácticas de seguridad y publicación.",
       "Transferencia de conocimiento."
      ],
-     "resultado": "Un agente en uso y un equipo que sabe cómo construir el siguiente."
+     "resultado": "Un agente en uso y un equipo que sabe cómo construir el siguiente.",
+     "linea": "Plataforma de IA"
     },
     {
      "code": "IA-06",
@@ -1243,7 +1277,8 @@
       "Revisión de seguridad y cumplimiento.",
       "Mejoras y nuevos casos de uso."
      ],
-     "resultado": "IA confiable, segura y sostenible en el tiempo."
+     "resultado": "IA confiable, segura y sostenible en el tiempo.",
+     "linea": "Plataforma de IA"
     },
     {
      "code": "IA-07",
@@ -1259,7 +1294,136 @@
       "Integración con el backoffice: apertura de reclamos, asignación de prioridad y trazabilidad para auditoría."
      ],
      "resultado": "Una sucursal que nunca cierra: atención 24/7, respuestas naturales, conocimiento gobernado por el banco y una plataforma lista para nuevos agentes y canales.",
-     "reconocimiento": "Ganadora del WITSA Global AI Award for Infrastructure, en su versión Enterprise Multi-Agent Generative AI Infrastructure."
+     "reconocimiento": "Ganadora del WITSA Global AI Award for Infrastructure, en su versión Enterprise Multi-Agent Generative AI Infrastructure.",
+     "linea": "Banca"
+    },
+    {
+     "code": "IA-08",
+     "name": "FabrizIA: propuestas comerciales en minutos",
+     "tipo": "Agente de IA · piloto y suscripción mensual",
+     "valor": "Convertimos el conocimiento de su equipo comercial en propuestas consistentes y personalizadas en minutos.",
+     "ideal": "Consultoras, integradores tecnológicos, firmas de servicios profesionales y equipos de preventa que emiten más de 10 propuestas al mes.",
+     "resuelve": "Propuestas armadas desde cero, calidad que depende de quién redacta y respuestas lentas que dejan la venta al competidor.",
+     "incluye": [
+      "Diagnóstico del proceso comercial y recopilación de propuestas ganadoras.",
+      "Plantilla maestra y biblioteca de bloques reutilizables.",
+      "Agente configurado con la voz de marca y las reglas comerciales, con captura por voz y texto.",
+      "Piloto con el equipo comercial y capacitación."
+     ],
+     "resultado": "Propuestas estandarizadas en minutos y vendedores dedicados a vender.",
+     "linea": "Comercial y consultoría"
+    },
+    {
+     "code": "IA-09",
+     "name": "Connor / Scopey: visión y alcance en un clic",
+     "tipo": "Agente de IA · piloto y licencia por equipo",
+     "valor": "Generamos documentos de visión y alcance estandarizados que alinean expectativas desde el primer día.",
+     "ideal": "PMOs, consultoras tecnológicas, fábricas de software y áreas de TI que inician varios proyectos por trimestre.",
+     "resuelve": "Proyectos que arrancan con alcance ambiguo, días de consultor senior dedicados a redactar y cambios de alcance no facturados.",
+     "incluye": [
+      "Levantamiento de la metodología y los documentos de alcance existentes.",
+      "Plantilla estándar de visión y alcance organizada por módulos.",
+      "Agente configurado con los parámetros del proyecto y edición por sección.",
+      "Piloto con 2 o 3 proyectos reales y capacitación."
+     ],
+     "resultado": "Proyectos que inician con alcance aprobado y un margen protegido.",
+     "linea": "Comercial y consultoría"
+    },
+    {
+     "code": "IA-10",
+     "name": "Daily: el cerebro digital de sus proyectos",
+     "tipo": "Agente de IA · piloto y suscripción mensual",
+     "valor": "Convertimos notas de voz diarias en conocimiento clasificado, resúmenes y lecciones aprendidas.",
+     "ideal": "Empresas de servicios por proyectos, consultoras, constructoras, ingenierías y equipos de TI con varios proyectos en paralelo.",
+     "resuelve": "Decisiones y acuerdos que se pierden, conocimiento que depende de personas clave y lecciones aprendidas que nunca se registran.",
+     "incluye": [
+      "Mapeo de clientes, proyectos, roles y taxonomía de clasificación.",
+      "Agente con captura por voz y texto y clasificación automática.",
+      "Plantillas de bitácora, resumen semanal y lección aprendida.",
+      "Integración con SharePoint y piloto con un equipo de proyecto."
+     ],
+     "resultado": "Una memoria organizacional que permanece en la empresa y reportes de avance basados en el día a día real.",
+     "linea": "Gestión del conocimiento"
+    },
+    {
+     "code": "IA-11",
+     "name": "Orbi: encuentre cualquier documento en segundos",
+     "tipo": "Agente de IA · implementación y soporte mensual",
+     "valor": "Convertimos repositorios SharePoint masivos en conocimiento que se encuentra por cliente, proyecto o tipo de documento.",
+     "ideal": "Organizaciones con Microsoft 365 y miles de documentos en SharePoint: consultoras, despachos legales, aseguradoras e ingenierías.",
+     "resuelve": "Carpetas laberínticas, búsquedas lentas, versiones duplicadas y conocimiento que existe pero nadie encuentra.",
+     "incluye": [
+      "Auditoría de la estructura documental y de los patrones de búsqueda.",
+      "Modelo de metadatos por designación, cliente, proyecto y tipo de documento.",
+      "Capa intermedia en Listas SharePoint o Dataverse.",
+      "Agente Orbi con indexación inicial y actualización continua."
+     ],
+     "resultado": "Documentos localizados en segundos sobre su Microsoft 365 actual, sin migrar el repositorio.",
+     "linea": "Gestión del conocimiento"
+    },
+    {
+     "code": "IA-12",
+     "name": "LexiBot: búsqueda legal inteligente",
+     "tipo": "Agente de IA legal · modalidades Starter, Pro y Enterprise",
+     "valor": "Encontramos contratos, cláusulas y precedentes legales en segundos, dentro de un entorno seguro.",
+     "ideal": "Firmas de abogados, departamentos legales corporativos y banca y servicios financieros con alto volumen contractual.",
+     "resuelve": "Horas o días buscando contratos, baja precisión al identificar normativas y riesgo de reutilizar documentos desactualizados.",
+     "incluye": [
+      "Búsqueda semántica y RAG con Azure OpenAI y Azure AI Search.",
+      "Extracción de cláusulas y resumen de contratos.",
+      "Seguridad nativa de Microsoft 365: permisos por rol, etiquetas de sensibilidad y auditoría.",
+      "Consultas desde Teams, Word, Outlook y SharePoint, sin migrar documentos."
+     ],
+     "resultado": "Un equipo legal que encuentra y reutiliza su conocimiento jurídico en segundos y se enfoca en el trabajo estratégico.",
+     "linea": "Legal"
+    },
+    {
+     "code": "IA-13",
+     "name": "LexiForm: documentos legales automáticos",
+     "tipo": "Agente de IA legal · modalidades Starter, Pro y Enterprise",
+     "valor": "Generamos contratos, actas y poderes a partir de los datos de su operación, listos para revisión.",
+     "ideal": "Banca y seguros, firmas de abogados y empresas con área legal que producen contratos, NDAs y actas en volumen.",
+     "resuelve": "Redacción manual lenta, errores por reingreso de datos e inconsistencias de lenguaje entre documentos.",
+     "incluye": [
+      "Plantillas legales parametrizadas con lógica condicional.",
+      "Datos desde SharePoint, Excel, Dataverse, ERP o CRM.",
+      "Flujos de aprobación con Power Automate y firma digital con Adobe Sign o DocuSign.",
+      "Integración con LexiBot para generar borradores coherentes con sus precedentes."
+     ],
+     "resultado": "Documentos legales estandarizados en minutos, con trazabilidad de quién los generó, con qué datos y cuándo.",
+     "linea": "Legal"
+    },
+    {
+     "code": "IA-14",
+     "name": "PrudencIA: emisión de pólizas RCV sin errores",
+     "tipo": "Automatización de seguros · implementación",
+     "valor": "Automatizamos la emisión de pólizas RCV de punta a punta, desde la captura de datos hasta la póliza validada.",
+     "ideal": "Aseguradoras, corredores y agencias que emiten pólizas de Responsabilidad Civil Vehicular en volumen.",
+     "resuelve": "Captura manual de datos, errores de transcripción, anulaciones y un back-office saturado en los picos de demanda.",
+     "incluye": [
+      "Levantamiento del proceso de emisión y de las reglas de suscripción RCV.",
+      "Flujo de extracción, validación inteligente y emisión.",
+      "Integración con el sistema de emisión de pólizas.",
+      "Piloto en paralelo y tablero de emisiones y excepciones."
+     ],
+     "resultado": "Pólizas emitidas al instante, con menos errores y un back-office que absorbe la demanda sin sumar personal.",
+     "linea": "Seguros"
+    },
+    {
+     "code": "IA-15",
+     "name": "AuxilIA: perito virtual 24/7",
+     "tipo": "Automatización de seguros · implementación",
+     "valor": "Atendemos a sus asegurados al instante ante un siniestro vehicular, con declaración guiada y seguimiento hasta la resolución.",
+     "ideal": "Aseguradoras de automóviles, corredores con área de siniestros y empresas de asistencia vial.",
+     "resuelve": "Atención limitada por horarios, formularios de siniestro extensos y asegurados sin información sobre su reclamo.",
+     "incluye": [
+      "Mapeo del proceso de siniestros y de sus puntos de fricción.",
+      "Flujo conversacional de declaración y mensajes de seguimiento.",
+      "AuxilIA en web, WhatsApp u otros canales, integrado al sistema de siniestros.",
+      "Escalamiento a peritos y agentes humanos, y tablero de seguimiento."
+     ],
+     "resultado": "Expedientes completos desde el primer contacto, menos llamadas al call center y asegurados que renuevan.",
+     "linea": "Seguros"
     }
    ]
   }
