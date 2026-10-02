@@ -447,6 +447,7 @@
     "Microsoft Defender XDR",
     "Microsoft Sentinel",
     "Microsoft Entra",
+    "Microsoft Intune",
     "Microsoft Purview",
     "Security Copilot",
     "Defender for Cloud"
@@ -484,6 +485,21 @@
       "Revisiones periódicas de acceso."
      ],
      "resultado": "Menos riesgo de cuentas comprometidas y menos tickets de soporte."
+    },
+    {
+     "code": "SEG-07",
+     "name": "Microsoft Intune: gestión segura de dispositivos",
+     "tipo": "Implementación",
+     "valor": "Gestionamos y protegemos todos sus dispositivos desde una sola plataforma en la nube, estén donde estén.",
+     "ideal": "Empresas con teletrabajo, modelo BYOD o equipos Windows, macOS, iOS y Android que acceden a información corporativa.",
+     "resuelve": "Dispositivos sin control ni visibilidad, configuración manual equipo por equipo, equipos perdidos con datos sensibles y accesos que siguen activos tras una desvinculación.",
+     "incluye": [
+      "Gestión de dispositivos (MDM) y de aplicaciones (MAM) para equipos corporativos y personales.",
+      "Acceso condicional con Microsoft Entra ID, cifrado y políticas de cumplimiento.",
+      "Borrado remoto selectivo, despliegue automático de apps y Windows Autopilot.",
+      "Integración con Microsoft Defender, piloto, documentación y capacitación al equipo de TI."
+     ],
+     "resultado": "Visibilidad total y control centralizado de sus dispositivos, con menor riesgo de fuga de información y menos carga operativa para TI."
     },
     {
      "code": "SEG-03",
