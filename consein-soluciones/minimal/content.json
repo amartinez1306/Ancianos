@@ -360,6 +360,21 @@
      "resultado": "Operación estable y un equipo interno enfocado en el negocio."
     },
     {
+     "code": "INF-10",
+     "name": "Apoyo a TI: asistencia en nube Microsoft",
+     "tipo": "Servicio gestionado · planes Bronce, Plata, Oro y a la medida",
+     "valor": "Acompañamos a su equipo de TI con especialistas certificados cuando necesita experticia, manos o tiempo.",
+     "ideal": "Organizaciones con área de TI propia que operan Azure, Microsoft 365 o Microsoft Security e Intune y necesitan respaldo experto.",
+     "resuelve": "Falta puntual de experticia o de personal, incidentes que frenan la operación y cambios de Microsoft que toman por sorpresa.",
+     "incluye": [
+      "Levantamiento inicial de la plataforma, informe de estado y roadmap de mejoras.",
+      "Modelo 80% proactivo y 20% reactivo: monitoreo, sesiones de trabajo y talleres sobre novedades de Microsoft.",
+      "Soporte de segundo nivel en horario 5x8, con escalamiento a Microsoft según severidad.",
+      "Reportes mensuales y avisos de cambios del fabricante; especialista dedicado en el plan Oro."
+     ],
+     "resultado": "Una plataforma estable y documentada, con incidentes críticos atendidos en máximo 1 hora y un equipo de TI que gana tiempo para lo estratégico."
+    },
+    {
      "code": "INF-07",
      "name": "AI-Ready Infrastructure",
      "tipo": "Acelerador",
