@@ -1141,6 +1141,21 @@
      "resultado": "Un proceso automatizado y medido que sirve de modelo para escalar."
     },
     {
+     "code": "AUT-08",
+     "name": "Consein FlowControl 360: solicitudes y aprobaciones",
+     "tipo": "Solución modular · Power Platform",
+     "valor": "Transformamos correos y seguimientos manuales en procesos visibles, medibles y controlados.",
+     "ideal": "Áreas de compras, finanzas, administración, TI y legal que gestionan solicitudes y aprobaciones por correo, formularios aislados u hojas de cálculo.",
+     "resuelve": "Solicitudes perdidas o sin responsable, aprobaciones que hay que perseguir y la pregunta constante de «¿dónde está mi trámite?».",
+     "incluye": [
+      "Portal de solicitudes con formularios dinámicos por tipo de trámite.",
+      "Flujos de aprobación multinivel con matrices por monto, área o proceso.",
+      "Control de estados, notificaciones, escalamiento e historial de decisiones.",
+      "Indicadores de volumen, tiempos y cumplimiento en Power BI."
+     ],
+     "resultado": "Cada solicitud con un responsable, un estado y una historia, en un solo lugar para solicitar, aprobar, consultar y medir."
+    },
+    {
      "code": "AUT-03",
      "name": "Aplicaciones y Portales Low-Code",
      "tipo": "Implementación",
@@ -1156,6 +1171,36 @@
      "resultado": "Aplicaciones web y móviles adaptadas al negocio."
     },
     {
+     "code": "AUT-09",
+     "name": "Consein PeopleFlow: ciclo de vida del colaborador",
+     "tipo": "Aplicación modular · Recursos Humanos",
+     "valor": "Damos una experiencia simple al colaborador y una visión completa a Recursos Humanos.",
+     "ideal": "Áreas de Recursos Humanos que gestionan vacaciones, permisos, viáticos, ingresos y expedientes con formatos y archivos dispersos.",
+     "resuelve": "Carga administrativa de Recursos Humanos, solicitudes incompletas, saldos sin validar y expedientes repartidos en distintos archivos.",
+     "incluye": [
+      "Portal de autoservicio para colaboradores y aplicación para líderes y Recursos Humanos.",
+      "Vacaciones, permisos, ausencias, viáticos, onboarding y offboarding con aprobaciones.",
+      "Expediente digital, historial por colaborador y seguridad basada en roles.",
+      "Reportes por área y período, con integración opcional a nómina o ERP."
+     ],
+     "resultado": "Toda la vida laboral en una experiencia digital integrada, con reglas claras y trazabilidad completa. Puede iniciar con un módulo y crecer."
+    },
+    {
+     "code": "AUT-10",
+     "name": "Consein SmartOps: operación e inventario en tiempo real",
+     "tipo": "Aplicación web y móvil · Power Platform",
+     "valor": "Convertimos operaciones dispersas en información disponible, confiable y accionable.",
+     "ideal": "Empresas con almacenes, activos, inspecciones u operaciones de campo que se controlan con hojas de cálculo o formularios manuales.",
+     "resuelve": "Inventarios poco confiables, movimientos sin trazabilidad, errores y duplicaciones, y conciliaciones lentas.",
+     "incluye": [
+      "Aplicación web y móvil para registrar entradas, salidas y transferencias donde ocurren.",
+      "Catálogo de productos o activos, ubicaciones y responsables.",
+      "Evidencias fotográficas, validaciones y alertas de stock o eventos.",
+      "Reportes automáticos y panel operativo con control por roles."
+     ],
+     "resultado": "Inventario confiable, movimientos trazables y decisiones oportunas, con la operación conectada en tiempo real."
+    },
+    {
      "code": "AUT-04",
      "name": "Procesamiento Inteligente de Documentos",
      "tipo": "Implementación",
@@ -1169,6 +1214,21 @@
       "Tablero de seguimiento."
      ],
      "resultado": "Documentos procesados más rápido y con menos errores."
+    },
+    {
+     "code": "AUT-07",
+     "name": "Consein DocFlow IA: documentos que se procesan solos",
+     "tipo": "Automatización inteligente · Power Platform y Azure AI",
+     "valor": "Convertimos documentos que consumen tiempo en datos que activan decisiones.",
+     "ideal": "Empresas que procesan facturas, órdenes de compra, expedientes, pólizas, contratos o formularios regulatorios en volumen.",
+     "resuelve": "Captura manual de información, errores de transcripción, ciclos de aprobación lentos y documentos dispersos difíciles de auditar.",
+     "incluye": [
+      "Recepción automática por correo, formulario o carpeta, con clasificación del documento.",
+      "Extracción inteligente de campos con Azure AI Document Intelligence y Azure OpenAI.",
+      "Validación contra reglas de negocio, gestión de excepciones y flujos de aprobación.",
+      "Registro en SharePoint o Dataverse, consulta de estados e historial y panel opcional en Power BI."
+     ],
+     "resultado": "Del documento al proceso sin volver a escribir la información: la IA lee y las personas deciden, con más velocidad, control y trazabilidad."
     },
     {
      "code": "AUT-05",
