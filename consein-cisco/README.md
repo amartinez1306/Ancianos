@@ -13,15 +13,21 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial, enfoque, 7 especialidades, Programa Renueva (resumen), método, resultados, nosotros, preguntas frecuentes, contacto |
+| `index.html` | Inicio | Sinergia exponencial, aviso de renovación de hardware, enfoque, 7 especialidades, método, resultados, nosotros, preguntas frecuentes, contacto |
 | `soluciones.html` | Soluciones Cisco › Soluciones de Valor | 15 soluciones agrupadas en 7 especialidades |
-| `productos.html` | Soluciones Cisco › Ofertas de Productos | Programa Renueva: por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
+| `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
 Menú: **Inicio · Soluciones Cisco · Nosotros · Contacto**. Soluciones Cisco despliega dos opciones de segundo nivel,
 Soluciones de Valor (7 especialidades y Consein Connected) y Ofertas de Productos (8 ofertas del Programa Renueva).
 
 Cada oferta muestra solo **título y valor**. "Seguir leyendo…" abre la subpantalla con Ideal para, Qué resolvemos,
 Qué incluye y Resultado. Los submenús enlazan directo a cada oferta (por ejemplo `soluciones.html#csc-06`).
+
+## Aviso de renovación de hardware
+Bloque destacado en Inicio (justo después de la portada) y en Ofertas de Productos (después del encabezado),
+con dos mensajes complementarios. Textos en `AVISOS` e ilustración en `arte_hardware()` dentro de
+`_fuente/generar_sitio.py`; estilos al final de `estilos.css` (y ajustes en `digital.css`). El menú
+muestra la etiqueta "Destacado · Renovación de hardware" en Ofertas de Productos.
 
 ## Tipografías
 - **Párrafos: Poppins**, incluida en `assets/fonts/` (licencia SIL OFL 1.1).

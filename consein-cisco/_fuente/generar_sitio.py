@@ -512,7 +512,7 @@ def menu(actual):
               <ul>{especialidades}</ul>
             </div>
             <div class="mega-group">
-              <a class="mega-l2" href="productos.html"><b>Ofertas de Productos</b><small>Programa Renueva · 8 ofertas de renovación</small></a>
+              <a class="mega-l2" href="productos.html"><b>Ofertas de Productos</b><small>Programa Renueva · 8 ofertas de renovación</small><em class="badge">Destacado · Renovación de hardware</em></a>
               <ul>{productos_menu}</ul>
             </div>
           </div>
@@ -620,6 +620,79 @@ def servicio_ld(o, cat):
             "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + ("soluciones" if o["code"].startswith("CSC") else "productos") + "#" + slug(o["code"]),
             "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}
 
+
+# ---------------------------------------------------------------------------
+# Aviso destacado: renovación de hardware (Inicio y Ofertas de Productos)
+# ---------------------------------------------------------------------------
+def arte_hardware():
+    """Equipo legado → equipo nuevo listo para Microsoft, sobre una línea de tiempo hasta 2027."""
+    def equipo(x, y, nuevo):
+        clase = "hw-new" if nuevo else "hw-old"
+        puertos = "".join(f'<rect class="port" x="{x + 14 + i * 13}" y="{y + 18}" width="9" height="9" rx="1.5"/>' for i in range(7))
+        leds = "".join(f'<circle class="led{" led-on" if nuevo else ""}" style="animation-delay:{i * .35:.2f}s" cx="{x + 118 + i * 9}" cy="{y + 22}" r="2.6"/>' for i in range(3))
+        return f'<g class="{clase}"><rect class="chassis" x="{x}" y="{y}" width="150" height="46" rx="7"/>{puertos}{leds}</g>'
+    return f"""<div class="aviso-art" aria-hidden="true">
+<svg viewBox="0 0 440 290" role="img">
+  <text class="hw-label" x="95" y="40" text-anchor="middle">Equipo legado</text>
+  <g transform="translate(70 26)"><rect class="eos" x="-2" y="20" width="54" height="18" rx="9"/><text class="eos-t" x="25" y="33" text-anchor="middle">EoS</text></g>
+  {equipo(20, 70, False)}{equipo(20, 126, False)}
+  <path class="hw-flow" d="M186 125 H252"/><path class="hw-arrow" d="M248 117 l10 8 -10 8"/>
+  <text class="hw-label hw-label-new" x="345" y="40" text-anchor="middle">Cisco actual</text>
+  {equipo(270, 70, True)}{equipo(270, 126, True)}
+  <g transform="translate(412 64)"><circle class="ok" r="15"/><path class="ok-t" d="M-6 0 l4 4 8-8"/></g>
+  <text class="hw-ms" x="345" y="196" text-anchor="middle">Teams · Azure · Intune · Sentinel</text>
+  <line class="tl" x1="20" y1="246" x2="420" y2="246"/>
+  <line class="tl-run" x1="20" y1="246" x2="420" y2="246"/>
+  <circle class="tl-dot" cx="20" cy="246" r="6"/><text class="tl-t" x="20" y="272">Hoy</text>
+  <text class="tl-t tl-mid" x="220" y="236" text-anchor="middle">Renovación por fases</text>
+  <circle class="tl-end" cx="420" cy="246" r="8"/><text class="tl-t tl-year" x="420" y="276" text-anchor="end">2027</text>
+</svg></div>"""
+
+
+AVISOS = {
+    "inicio": {
+        "tag": "Programa Renueva · Renovación de hardware",
+        "titulo": "Renovamos su hardware Cisco antes de 2027",
+        "texto": "Reemplazamos switches, WiFi, routers, firewalls, servidores y salas sin soporte por equipos Cisco actuales, conectados a su plataforma Microsoft.",
+        "cifra": "69%", "cifra_txt": "del hardware con fin de soporte programado quedará sin soporte en 2027.", "fuente": "NTT DATA, 2024",
+        "lista_tipo": "ul",
+        "lista": ["Inventario de obsolescencia gratuito", "Migración por fases, con su operación activa", "Financiamiento en cuotas con Cisco Capital"],
+        "cta2": ("Ver ofertas", "productos.html#ofertas"),
+    },
+    "productos": {
+        "tag": "Oferta destacada · Renovación de hardware",
+        "titulo": "Inventariamos gratis su hardware Cisco",
+        "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y opciones de pago.",
+        "cifra": "<small>hasta</small>10%", "cifra_txt": "de incentivo por reemplazo al entregar sus equipos antiguos con Cisco Lifecycle Pay with Trade-In.", "fuente": "Cisco · sujeto a disponibilidad en cada país",
+        "lista_tipo": "ol",
+        "lista": ["Inventariamos su base instalada y sus fechas de fin de soporte", "Priorizamos por riesgo, criticidad y costo total", "Renovamos por fases, con planes de pago previsibles"],
+        "cta2": ("Autodiagnóstico", "#autodiagnostico"),
+    },
+}
+
+
+def aviso(variante):
+    a = AVISOS[variante]
+    items = "".join(f"<li>{E(i)}</li>" for i in a["lista"])
+    return f"""<section class="aviso-wrap aviso-{variante}" id="{'renueva' if variante == 'inicio' else 'renovacion-hardware'}" aria-label="Renovación de hardware Cisco">
+  <div class="wrap">
+    <div class="aviso">
+      <div class="aviso-copy">
+        <p class="aviso-tag"><span class="aviso-dot"></span>{E(a['tag'])}</p>
+        <h2>{E(a['titulo'])}</h2>
+        <p class="aviso-text">{E(a['texto'])}</p>
+        <div class="aviso-stat"><b>{a['cifra']}</b><p>{E(a['cifra_txt'])}<cite>{E(a['fuente'])}</cite></p></div>
+        <{a['lista_tipo']} class="aviso-list">{items}</{a['lista_tipo']}>
+        <div class="actions">
+          <a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a>
+          <a class="btn btn-line" href="{a['cta2'][1]}">{E(a['cta2'][0])}</a>
+        </div>
+      </div>
+      {arte_hardware()}
+    </div>
+  </div>
+</section>"""
+
 # ---------------------------------------------------------------------------
 # Inicio
 # ---------------------------------------------------------------------------
@@ -662,6 +735,7 @@ def inicio():
    {D(arte_hero())}
   </div>
 </section>
+{aviso('inicio')}
 
 <section class="soft" id="enfoque">
   <div class="wrap enfoque-grid">
@@ -682,22 +756,6 @@ def inicio():
       <p class="lead">Cada especialidad combina tecnología Cisco con su núcleo Microsoft.</p>
     </div>
     <div class="grid g4">{tiles}</div>
-  </div>
-</section>
-
-<section class="soft" id="renueva">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Ofertas de Productos · Programa Renueva</p>
-      <h2>Renovamos su red al ritmo de Microsoft</h2>
-      <p class="lead">Reemplazamos sus equipos Cisco obsoletos por una red segura y gestionable, conectada a Teams, Azure e Intune, con planes de pago y por fases.</p>
-    </div>
-    <div class="grid g3">
-      <div class="stat" style="--p:71"><b>71%</b><p>de las organizaciones tiene una red mayormente envejecida u obsoleta.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat" style="--p:69"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
-      <div class="stat" style="--p:42.5"><b>42,5%</b><p>de las vulnerabilidades explotadas en el borde afectó a equipos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
-    </div>
-    <div class="actions"><a class="btn btn-line" href="productos.html">Conocer el Programa Renueva</a></div>
   </div>
 </section>
 
@@ -860,6 +918,7 @@ def productos():
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
   </div>
 </section>
+{aviso('productos')}
 
 <section id="por-que-renovar">
   <div class="wrap">

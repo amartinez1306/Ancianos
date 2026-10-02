@@ -282,3 +282,80 @@ dialog.detail::backdrop{background:rgba(0,10,82,.45)}
 }
 .nw{white-space:nowrap}
 [id]{scroll-margin-top:88px}
+
+/* ==========================================================================
+   Aviso destacado: renovación de hardware (Inicio y Ofertas de Productos)
+   Usa los colores de marca del tema activo (--navy y --green).
+   ========================================================================== */
+.aviso-wrap{padding:72px 0}
+.aviso{position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:52px;border-radius:20px;color:#fff;
+  background:radial-gradient(600px 360px at 100% 0%,rgba(255,255,255,.10),transparent 60%),linear-gradient(135deg,var(--navy),var(--navy-dark));
+  box-shadow:0 30px 70px rgba(0,10,60,.25)}
+.aviso::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%);mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
+.aviso::after{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--green)}
+.aviso>*{position:relative;z-index:1}
+.aviso-tag{display:inline-flex;align-items:center;gap:10px;margin:0;padding:7px 14px;border-radius:30px;background:var(--green);color:var(--navy);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.aviso-dot{width:8px;height:8px;border-radius:50%;background:var(--navy);animation:aviso-blink 1.4s ease-in-out infinite}
+@keyframes aviso-blink{50%{opacity:.25}}
+.aviso h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.6rem);margin:20px 0 12px}
+.aviso-text{color:rgba(255,255,255,.78);max-width:560px}
+.aviso-stat{display:flex;align-items:center;gap:18px;margin:4px 0 22px;padding:14px 18px;border-radius:0 12px 12px 0;border-left:3px solid var(--green);background:rgba(255,255,255,.07)}
+.aviso-stat b{font-family:var(--title);font-weight:600;font-size:2.6rem;line-height:1;color:var(--green);white-space:nowrap}
+.aviso-stat b small{display:block;font-family:var(--text);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:2px}
+.aviso-stat p{margin:0;font-size:.92rem;color:#fff}
+.aviso-stat cite{display:block;font-style:normal;font-size:.75rem;color:rgba(255,255,255,.6);margin-top:2px}
+.aviso-list{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:10px;counter-reset:av}
+.aviso-list li{position:relative;padding-left:34px;color:#fff;font-size:.95rem}
+.aviso-list li::before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:var(--navy);font-size:.75rem;font-weight:700}
+ol.aviso-list li{counter-increment:av}
+ol.aviso-list li::before{content:counter(av)}
+.aviso .actions{margin-top:28px}
+.aviso .btn-primary{background:var(--green);border-color:var(--green);color:var(--navy);font-weight:600}
+.aviso .btn-primary:hover{filter:brightness(1.08);background:var(--green)}
+.aviso .btn-line{color:#fff;border-color:rgba(255,255,255,.5)}
+.aviso .btn-line:hover{background:#fff;color:var(--navy)}
+/* Ilustración */
+.aviso-art svg{width:100%;height:auto;display:block;overflow:visible}
+.aviso-art .hw-label{fill:rgba(255,255,255,.65);font:500 13px var(--text)}
+.aviso-art .hw-label-new{fill:var(--green)}
+.aviso-art .eos{fill:none;stroke:rgba(255,255,255,.55);stroke-dasharray:3 3}
+.aviso-art .eos-t{fill:rgba(255,255,255,.75);font:700 10px var(--text);letter-spacing:.08em}
+.aviso-art .hw-old .chassis{fill:rgba(255,255,255,.04);stroke:rgba(255,255,255,.35);stroke-dasharray:5 4}
+.aviso-art .hw-old .port{fill:rgba(255,255,255,.18)}
+.aviso-art .hw-old .led{fill:rgba(255,255,255,.25)}
+.aviso-art .hw-new .chassis{fill:rgba(255,255,255,.08);stroke:var(--green);stroke-width:1.5}
+.aviso-art .hw-new .port{fill:rgba(255,255,255,.75)}
+.aviso-art .led-on{fill:var(--green);animation:aviso-led 1.2s ease-in-out infinite}
+@keyframes aviso-led{50%{opacity:.3}}
+.aviso-art .hw-flow{stroke:var(--green);stroke-width:2.5;stroke-dasharray:4 8;fill:none;animation:aviso-flow 1s linear infinite}
+@keyframes aviso-flow{to{stroke-dashoffset:-24}}
+.aviso-art .hw-arrow{fill:none;stroke:var(--green);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.aviso-art .ok{fill:var(--green)}
+.aviso-art .ok-t{fill:none;stroke:var(--navy);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.aviso-art .hw-ms{fill:#fff;font:600 12px var(--text);letter-spacing:.04em}
+.aviso-art .tl{stroke:rgba(255,255,255,.2);stroke-width:2}
+.aviso-art .tl-run{stroke:var(--green);stroke-width:2;stroke-dasharray:400;stroke-dashoffset:400;animation:aviso-tl 3.5s ease-in-out infinite}
+@keyframes aviso-tl{60%,100%{stroke-dashoffset:0}}
+.aviso-art .tl-dot{fill:#fff}
+.aviso-art .tl-end{fill:var(--green);stroke:rgba(255,255,255,.3);stroke-width:6;paint-order:stroke}
+.aviso-art .tl-t{fill:rgba(255,255,255,.7);font:500 12px var(--text)}
+.aviso-art .tl-mid{fill:rgba(255,255,255,.55);font-size:11px}
+.aviso-art .tl-year{fill:var(--green);font:700 18px var(--title)}
+/* Etiqueta en el menú */
+.mega-l2 .badge{margin:8px 0 0 16px}
+.badge{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:20px;background:var(--green);color:var(--navy);font:600 .62rem var(--text);letter-spacing:.06em;text-transform:uppercase;font-style:normal;vertical-align:middle;white-space:nowrap}
+@media (max-width:1000px){
+  .aviso{grid-template-columns:1fr;padding:40px 32px}
+  .aviso-art{max-width:460px}
+}
+@media (max-width:600px){
+  .aviso-wrap{padding:48px 0}
+  .aviso{padding:32px 22px;border-radius:16px}
+  .aviso-stat{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  .aviso-dot,.aviso-art *{animation:none!important}
+  .aviso-art .tl-run{stroke-dashoffset:0}
+}
