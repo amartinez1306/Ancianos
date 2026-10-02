@@ -300,6 +300,21 @@
      "resultado": "Aplicaciones críticas en Azure con alta disponibilidad, recuperación ante desastres y control de costos."
     },
     {
+     "code": "INF-09",
+     "name": "MAP: Migración Ágil Pyme",
+     "tipo": "Programa de migración · pequeñas y medianas empresas",
+     "valor": "Llevamos las aplicaciones clave de su pyme a Azure de forma rápida, segura y sin complicaciones.",
+     "ideal": "Pequeñas y medianas empresas con sistemas de gestión, reportería, facturación, CRM o ERP en servidores locales.",
+     "resuelve": "Servidores físicos costosos de mantener, poca escalabilidad, riesgos de seguridad y soporte técnico limitado.",
+     "incluye": [
+      "Diagnóstico inicial y preparación del entorno en Azure.",
+      "Migración técnica con Azure Migrate a máquinas virtuales en Azure.",
+      "Validación funcional y capacitación básica.",
+      "Soporte post-migración, con planes por horas o paquetes cerrados."
+     ],
+     "resultado": "Aplicaciones disponibles desde cualquier lugar, con respaldo, seguridad y costos ajustados al tamaño de su empresa."
+    },
+    {
      "code": "INF-04",
      "name": "Resiliencia Azure: Respaldo y Recuperación",
      "tipo": "Implementación + servicio gestionado",
@@ -652,6 +667,21 @@
       "Medición mensual de uso e impacto."
      ],
      "resultado": "Copilot integrado en el flujo de trabajo con impacto medible."
+    },
+    {
+     "code": "COL-07",
+     "name": "Copilot365: formación práctica en Copilot",
+     "tipo": "Formación · plan base y especializaciones por área de 8 horas",
+     "valor": "Formamos a sus equipos para usar Microsoft Copilot en el trabajo diario y crear prompts que entregan resultados.",
+     "ideal": "Empresas con Microsoft 365 que invirtieron en licencias de Copilot y buscan adopción real en sus áreas de negocio.",
+     "resuelve": "Desconocimiento de Copilot, prompts poco efectivos, resistencia al cambio y dificultad para medir el retorno de la IA.",
+     "incluye": [
+      "Plan base: Copilot en Word, Excel, PowerPoint y Outlook, y técnicas de creación de prompts.",
+      "Especializaciones para RRHH, Legal, Finanzas y Mercadeo, con 80% de práctica.",
+      "Bibliotecas de prompts por área, guías rápidas y plantillas reutilizables.",
+      "Medición de productividad, adopción y calidad a 30 días."
+     ],
+     "resultado": "Equipos que aplican Copilot con confianza en sus tareas cotidianas y casos de uso priorizados por área."
     },
     {
      "code": "COL-06",
