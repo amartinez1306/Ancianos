@@ -368,6 +368,40 @@ ol.aviso-list li::before{content:counter(av)}
   .aviso-art .tl-run{stroke-dashoffset:0}
 }
 
+/* ==========================================================================
+   Sticker "Renovación de hardware" en la portada de Inicio
+   ========================================================================== */
+.hero>.wrap{position:relative}
+.sticker{position:absolute;right:24px;bottom:-8px;z-index:3;width:150px;height:150px;display:block;text-decoration:none;
+  transform:rotate(-10deg);transition:transform .25s ease;filter:drop-shadow(0 14px 26px rgba(0,10,60,.28))}
+.sticker:hover,.sticker:focus-visible{transform:rotate(0deg) scale(1.06)}
+.sticker svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.sticker .st-bg{fill:var(--green)}
+.sticker .st-in{fill:var(--navy)}
+.sticker .st-t{fill:var(--navy);font:700 11.5px var(--text);letter-spacing:.06em}
+.sticker .st-ring{transform-box:view-box;transform-origin:80px 80px;animation:st-spin 18s linear infinite}
+@keyframes st-spin{to{transform:rotate(360deg)}}
+.sticker .st-core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 38px;line-height:1.1}
+.sticker .st-core small{font:600 .55rem var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:3px}
+.sticker .st-core b{font-family:var(--title);font-weight:600;font-size:.95rem;color:#fff}
+.sticker .st-core i{font-style:normal;font-weight:700;color:var(--green);margin-top:2px}
+@media (max-width:1000px){
+  .sticker{right:16px;bottom:auto;top:-8px;width:118px;height:118px}
+  .sticker .st-core{padding:0 30px}
+  .sticker .st-core b{font-size:.78rem}
+  .sticker .st-core small{font-size:.48rem}
+  .hero h1{padding-right:110px}
+}
+@media (max-width:600px){
+  .sticker{width:92px;height:92px;right:10px;top:-64px}
+  .sticker .st-t{font-size:11.5px}
+  .sticker .st-core{padding:0 24px}
+  .sticker .st-core b{font-size:.66rem}
+  .sticker .st-core small{display:none}
+  .hero h1{padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}
+
 </style>
 <script type="application/json" id="paginas">{"inicio": {"title": "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein", "description": "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU."}, "soluciones": {"title": "Soluciones Cisco para Azure, Microsoft 365 y Teams | Consein", "description": "SD-WAN para Azure, Zero Trust con Cisco ISE e Intune, Microsoft Teams Rooms, observabilidad de aplicaciones, automatización de redes y seguridad para IA. 15 soluciones Consein."}, "productos": {"title": "Programa Renueva: renovación de equipos Cisco obsoletos | Consein", "description": "Renovamos switches, WiFi, routers, firewalls, servidores UCS y salas Cisco en fin de soporte. Inventario de obsolescencia sin costo, migración por fases y financiamiento."}}</script>
 </head>
@@ -419,40 +453,16 @@ ol.aviso-list li::before{content:counter(av)}
       <div><b>26</b><span>productos Cisco integrados</span></div>
     </div>
    </div>
+   <a class="sticker" href="#productos:renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
+  <svg viewBox="0 0 160 160" aria-hidden="true">
+    <defs><path id="st-c" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
+    <circle class="st-bg" cx="80" cy="80" r="78"/>
+    <circle class="st-in" cx="80" cy="80" r="47"/>
+    <g class="st-ring"><text class="st-t"><textPath href="#st-c" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
+  </svg>
+  <span class="st-core"><b>Inventario gratis</b><i>→</i></span>
+</a>
    
-  </div>
-</section>
-<section class="aviso-wrap aviso-inicio" id="renueva" aria-label="Renovación de hardware Cisco">
-  <div class="wrap">
-    <div class="aviso">
-      <div class="aviso-copy">
-        <p class="aviso-tag"><span class="aviso-dot"></span>Programa Renueva · Renovación de hardware</p>
-        <h2>Renovamos su hardware Cisco antes de 2027</h2>
-        <p class="aviso-text">Reemplazamos switches, WiFi, routers, firewalls, servidores y salas sin soporte por equipos Cisco actuales, conectados a su plataforma Microsoft.</p>
-        <div class="aviso-stat"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.<cite>NTT DATA, 2024</cite></p></div>
-        <ul class="aviso-list"><li>Inventario de obsolescencia gratuito</li><li>Migración por fases, con su operación activa</li><li>Financiamiento en cuotas con Cisco Capital</li></ul>
-        <div class="actions">
-          <a class="btn btn-primary" href="#inicio:contacto?interes=REN-01">Solicitar inventario gratuito</a>
-          <a class="btn btn-line" href="#productos:ofertas">Ver ofertas</a>
-        </div>
-      </div>
-      <div class="aviso-art" aria-hidden="true">
-<svg viewBox="0 0 440 290" role="img">
-  <text class="hw-label" x="95" y="40" text-anchor="middle">Equipo legado</text>
-  <g transform="translate(70 26)"><rect class="eos" x="-2" y="20" width="54" height="18" rx="9"/><text class="eos-t" x="25" y="33" text-anchor="middle">EoS</text></g>
-  <g class="hw-old"><rect class="chassis" x="20" y="70" width="150" height="46" rx="7"/><rect class="port" x="34" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="47" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="60" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="73" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="86" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="99" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="112" y="88" width="9" height="9" rx="1.5"/><circle class="led" style="animation-delay:0.00s" cx="138" cy="92" r="2.6"/><circle class="led" style="animation-delay:0.35s" cx="147" cy="92" r="2.6"/><circle class="led" style="animation-delay:0.70s" cx="156" cy="92" r="2.6"/></g><g class="hw-old"><rect class="chassis" x="20" y="126" width="150" height="46" rx="7"/><rect class="port" x="34" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="47" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="60" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="73" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="86" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="99" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="112" y="144" width="9" height="9" rx="1.5"/><circle class="led" style="animation-delay:0.00s" cx="138" cy="148" r="2.6"/><circle class="led" style="animation-delay:0.35s" cx="147" cy="148" r="2.6"/><circle class="led" style="animation-delay:0.70s" cx="156" cy="148" r="2.6"/></g>
-  <path class="hw-flow" d="M186 125 H252"/><path class="hw-arrow" d="M248 117 l10 8 -10 8"/>
-  <text class="hw-label hw-label-new" x="345" y="40" text-anchor="middle">Cisco actual</text>
-  <g class="hw-new"><rect class="chassis" x="270" y="70" width="150" height="46" rx="7"/><rect class="port" x="284" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="297" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="310" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="323" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="336" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="349" y="88" width="9" height="9" rx="1.5"/><rect class="port" x="362" y="88" width="9" height="9" rx="1.5"/><circle class="led led-on" style="animation-delay:0.00s" cx="388" cy="92" r="2.6"/><circle class="led led-on" style="animation-delay:0.35s" cx="397" cy="92" r="2.6"/><circle class="led led-on" style="animation-delay:0.70s" cx="406" cy="92" r="2.6"/></g><g class="hw-new"><rect class="chassis" x="270" y="126" width="150" height="46" rx="7"/><rect class="port" x="284" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="297" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="310" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="323" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="336" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="349" y="144" width="9" height="9" rx="1.5"/><rect class="port" x="362" y="144" width="9" height="9" rx="1.5"/><circle class="led led-on" style="animation-delay:0.00s" cx="388" cy="148" r="2.6"/><circle class="led led-on" style="animation-delay:0.35s" cx="397" cy="148" r="2.6"/><circle class="led led-on" style="animation-delay:0.70s" cx="406" cy="148" r="2.6"/></g>
-  <g transform="translate(412 64)"><circle class="ok" r="15"/><path class="ok-t" d="M-6 0 l4 4 8-8"/></g>
-  <text class="hw-ms" x="345" y="196" text-anchor="middle">Teams · Azure · Intune · Sentinel</text>
-  <line class="tl" x1="20" y1="246" x2="420" y2="246"/>
-  <line class="tl-run" x1="20" y1="246" x2="420" y2="246"/>
-  <circle class="tl-dot" cx="20" cy="246" r="6"/><text class="tl-t" x="20" y="272">Hoy</text>
-  <text class="tl-t tl-mid" x="220" y="236" text-anchor="middle">Renovación por fases</text>
-  <circle class="tl-end" cx="420" cy="246" r="8"/><text class="tl-t tl-year" x="420" y="276" text-anchor="end">2027</text>
-</svg></div>
-    </div>
   </div>
 </section>
 

@@ -650,15 +650,6 @@ def arte_hardware():
 
 
 AVISOS = {
-    "inicio": {
-        "tag": "Programa Renueva · Renovación de hardware",
-        "titulo": "Renovamos su hardware Cisco antes de 2027",
-        "texto": "Reemplazamos switches, WiFi, routers, firewalls, servidores y salas sin soporte por equipos Cisco actuales, conectados a su plataforma Microsoft.",
-        "cifra": "69%", "cifra_txt": "del hardware con fin de soporte programado quedará sin soporte en 2027.", "fuente": "NTT DATA, 2024",
-        "lista_tipo": "ul",
-        "lista": ["Inventario de obsolescencia gratuito", "Migración por fases, con su operación activa", "Financiamiento en cuotas con Cisco Capital"],
-        "cta2": ("Ver ofertas", "productos.html#ofertas"),
-    },
     "productos": {
         "tag": "Oferta destacada · Renovación de hardware",
         "titulo": "Inventariamos gratis su hardware Cisco",
@@ -671,10 +662,23 @@ AVISOS = {
 }
 
 
+def sticker_renueva():
+    """Sticker discreto para Inicio: lleva al aviso completo en Ofertas de Productos."""
+    return """<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
+  <svg viewBox="0 0 160 160" aria-hidden="true">
+    <defs><path id="st-c" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
+    <circle class="st-bg" cx="80" cy="80" r="78"/>
+    <circle class="st-in" cx="80" cy="80" r="47"/>
+    <g class="st-ring"><text class="st-t"><textPath href="#st-c" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
+  </svg>
+  <span class="st-core"><b>Inventario gratis</b><i>→</i></span>
+</a>"""
+
+
 def aviso(variante):
     a = AVISOS[variante]
     items = "".join(f"<li>{E(i)}</li>" for i in a["lista"])
-    return f"""<section class="aviso-wrap aviso-{variante}" id="{'renueva' if variante == 'inicio' else 'renovacion-hardware'}" aria-label="Renovación de hardware Cisco">
+    return f"""<section class="aviso-wrap aviso-{variante}" id="renovacion-hardware" aria-label="Renovación de hardware Cisco">
   <div class="wrap">
     <div class="aviso">
       <div class="aviso-copy">
@@ -732,10 +736,10 @@ def inicio():
       <div><b>26</b><span>productos Cisco integrados</span></div>
     </div>
    </div>
+   {sticker_renueva()}
    {D(arte_hero())}
   </div>
 </section>
-{aviso('inicio')}
 
 <section class="soft" id="enfoque">
   <div class="wrap enfoque-grid">
@@ -1008,7 +1012,7 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html", digital=False):
 
     def reescribir(fragmento, actual):
         def rw(m):
-            href = m.group(1)
+            pre, href = m.group(1), m.group(2)
             a = re.match(r"(index|soluciones|productos)\.html(?:\?interes=([\w-]+))?(?:#([\w-]+))?$", href)
             if a:
                 destino = "#" + paginas[a.group(1)]
@@ -1016,11 +1020,12 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html", digital=False):
                     destino += ":" + a.group(3)
                 if a.group(2):
                     destino += "?interes=" + a.group(2)
-                return f'href="{destino}"'
+                return f'{pre}href="{destino}"'
             if href.startswith("#") and actual:
-                return f'href="#{actual}:{href[1:]}"'
+                return f'{pre}href="#{actual}:{href[1:]}"'
             return m.group(0)
-        return re.sub(r'href="([^"]*)"', rw, fragmento)
+        # Solo enlaces <a>: las referencias internas de SVG (textPath) no se tocan
+        return re.sub(r'(<a\b[^>]*?)href="([^"]*)"', rw, fragmento)
 
     meta, cuerpos = {}, []
     for pag, doc in fuentes.items():

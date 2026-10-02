@@ -359,3 +359,37 @@ ol.aviso-list li::before{content:counter(av)}
   .aviso-dot,.aviso-art *{animation:none!important}
   .aviso-art .tl-run{stroke-dashoffset:0}
 }
+
+/* ==========================================================================
+   Sticker "Renovación de hardware" en la portada de Inicio
+   ========================================================================== */
+.hero>.wrap{position:relative}
+.sticker{position:absolute;right:24px;bottom:-8px;z-index:3;width:150px;height:150px;display:block;text-decoration:none;
+  transform:rotate(-10deg);transition:transform .25s ease;filter:drop-shadow(0 14px 26px rgba(0,10,60,.28))}
+.sticker:hover,.sticker:focus-visible{transform:rotate(0deg) scale(1.06)}
+.sticker svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.sticker .st-bg{fill:var(--green)}
+.sticker .st-in{fill:var(--navy)}
+.sticker .st-t{fill:var(--navy);font:700 11.5px var(--text);letter-spacing:.06em}
+.sticker .st-ring{transform-box:view-box;transform-origin:80px 80px;animation:st-spin 18s linear infinite}
+@keyframes st-spin{to{transform:rotate(360deg)}}
+.sticker .st-core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 38px;line-height:1.1}
+.sticker .st-core small{font:600 .55rem var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:3px}
+.sticker .st-core b{font-family:var(--title);font-weight:600;font-size:.95rem;color:#fff}
+.sticker .st-core i{font-style:normal;font-weight:700;color:var(--green);margin-top:2px}
+@media (max-width:1000px){
+  .sticker{right:16px;bottom:auto;top:-8px;width:118px;height:118px}
+  .sticker .st-core{padding:0 30px}
+  .sticker .st-core b{font-size:.78rem}
+  .sticker .st-core small{font-size:.48rem}
+  .hero h1{padding-right:110px}
+}
+@media (max-width:600px){
+  .sticker{width:92px;height:92px;right:10px;top:-64px}
+  .sticker .st-t{font-size:11.5px}
+  .sticker .st-core{padding:0 24px}
+  .sticker .st-core b{font-size:.66rem}
+  .sticker .st-core small{display:none}
+  .hero h1{padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}

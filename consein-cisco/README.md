@@ -13,7 +13,7 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial, aviso de renovación de hardware, enfoque, 7 especialidades, método, resultados, nosotros, preguntas frecuentes, contacto |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, método, resultados, nosotros, preguntas frecuentes, contacto |
 | `soluciones.html` | Soluciones Cisco › Soluciones de Valor | 15 soluciones agrupadas en 7 especialidades |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
@@ -24,9 +24,11 @@ Cada oferta muestra solo **título y valor**. "Seguir leyendo…" abre la subpan
 Qué incluye y Resultado. Los submenús enlazan directo a cada oferta (por ejemplo `soluciones.html#csc-06`).
 
 ## Aviso de renovación de hardware
-Bloque destacado en Inicio (justo después de la portada) y en Ofertas de Productos (después del encabezado),
-con dos mensajes complementarios. Textos en `AVISOS` e ilustración en `arte_hardware()` dentro de
-`_fuente/generar_sitio.py`; estilos al final de `estilos.css` (y ajustes en `digital.css`). El menú
+- **Inicio:** sticker circular discreto en la portada ("Inventario gratis", con el texto giratorio
+  "Renovación de hardware · Programa Renueva") que lleva al aviso completo. Se edita en `sticker_renueva()`.
+- **Ofertas de Productos:** aviso completo "Inventariamos gratis su hardware Cisco", después del encabezado.
+  Textos en `AVISOS` e ilustración en `arte_hardware()`.
+Estilos al final de `estilos.css` (y ajustes en `digital.css`). El menú
 muestra la etiqueta "Destacado · Renovación de hardware" en Ofertas de Productos.
 
 ## Tipografías
