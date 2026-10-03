@@ -14,14 +14,16 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 | Archivo | Menú | Contenido |
 |---|---|---|
 | `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, método, resultados, nosotros, preguntas frecuentes, contacto |
-| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | 15 soluciones agrupadas en 7 especialidades |
+| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Nueva Matriz de Valor: criterio de selección, vista consolidada y 19 productos Cisco en 7 áreas |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
 Menú: **Inicio · Soluciones Cisco · Nosotros · Contacto**. Soluciones Cisco despliega dos opciones de segundo nivel,
-Soluciones de Valor (7 especialidades y Consein Connected) y Ofertas de Productos (8 ofertas del Programa Renueva).
+Soluciones de Valor (7 áreas de práctica) y Ofertas de Productos (8 ofertas del Programa Renueva).
 
-Cada oferta muestra solo **título y valor**. "Seguir leyendo…" abre la subpantalla con Ideal para, Qué resolvemos,
-Qué incluye y Resultado. Los submenús enlazan directo a cada oferta (por ejemplo `soluciones.html#csc-06`).
+**Soluciones de Valor** se construye únicamente con `Nueva_Matriz_Valor_Cisco_Microsoft_Consein_ver_1.docx`
+(datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`). Cada producto muestra **título y valor**; "Seguir leyendo…"
+abre Capa / función, Producto Microsoft asociado, Cómo agrega valor y Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
+En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.
 
 ## Aviso de renovación de hardware
 - **Inicio:** sticker circular discreto en la portada ("Inventario gratis", con el texto giratorio
