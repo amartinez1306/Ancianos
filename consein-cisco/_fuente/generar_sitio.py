@@ -82,12 +82,12 @@ def arte_hero():
   <circle cx="{cx}" cy="{cy}" r="66" fill="url(#g-core)" class="core"/>
   <path d="M258 262a14 14 0 0 1 3-27.6 19 19 0 0 1 36.5 4.6 12 12 0 0 1 2.5 23z" class="cloud" transform="translate(0 -12)"/>
   <text x="{cx}" y="{cy + 22}" text-anchor="middle" class="core-label">MICROSOFT</text>
-  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">base</text>
+  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">BASE</text>
 </svg></div>"""
 
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
-  <div class="layer l1"><span class="tag">Base</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
+  <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
   <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad perimetral · Salas · Observabilidad</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
@@ -700,7 +700,7 @@ def inicio():
     <div class="section-head">
       <p class="eyebrow">Soluciones de Valor</p>
       <h2>Siete especialidades</h2>
-      <p class="lead">Cada especialidad combina tecnología Cisco con su base Microsoft.</p>
+      <p class="lead">Cada especialidad combina tecnología Cisco con su BASE Microsoft.</p>
     </div>
     <div class="grid g4">{tiles}</div>
   </div>

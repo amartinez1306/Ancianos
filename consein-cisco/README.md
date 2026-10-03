@@ -1,6 +1,6 @@
 # Consein · Soluciones Cisco (sitio)
 
-Sitio de la sección Cisco de consein.com: Microsoft como base, Cisco como acelerador.
+Sitio de la sección Cisco de consein.com: Microsoft como BASE, Cisco como acelerador.
 
 ## Cómo verlo
 - **Versión de un solo archivo (recomendada para presentar):** abra `Consein_Cisco_sitio_completo.html` con doble clic.

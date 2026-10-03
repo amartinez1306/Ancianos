@@ -100,7 +100,7 @@ h1,h2,h3{color:var(--navy)}
 .hero-art .core-halo{fill:none;stroke:rgba(88,187,71,.45);stroke-width:1;stroke-dasharray:1 5}
 .hero-art .cloud{fill:none;stroke:#fff;stroke-width:2.2;stroke-linejoin:round}
 .hero-art .core-label{fill:#fff;font:600 12px "Poppins",sans-serif;letter-spacing:.18em}
-.hero-art .core-sub{fill:var(--green-2);font:400 11px "Poppins",sans-serif}
+.hero-art .core-sub{fill:var(--green-2);font:600 11px "Poppins",sans-serif;letter-spacing:.22em}
 .hero-art .orbit{transform-box:view-box;transform-origin:280px 260px;animation:d-spin 80s linear infinite}
 @keyframes d-dash{to{stroke-dashoffset:-24}}
 @keyframes d-pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.8);opacity:0}}
