@@ -578,30 +578,32 @@ AVISOS = {
 }
 
 
-def servicios_consein():
-    """Los 7 servicios (S1–S7) del Modelo de Servicios Cisco de Consein, derivados de la columna
-    'Servicio de origen' de la Nueva Matriz de Valor: nombre, áreas y productos de cada servicio."""
-    import re
-    serv = {}
-    for m in MATRIZ:
-        for o in m["origen"]:
-            mo = re.match(r"S(\d) · ([^(]+)", o)
-            n, nombre = int(mo.group(1)), mo.group(2).strip()
-            d = serv.setdefault(n, {"nombre": nombre, "areas": [], "productos": []})
-            if m["area"] not in d["areas"]:
-                d["areas"].append(m["area"])
-            if m["nombre"] not in d["productos"]:
-                d["productos"].append(m["nombre"])
-    nombres = {e["id"]: e["nombre"] for e in ESPECIALIDADES}
+PASOS = [
+    ("Evaluamos", "Inventario, postura actual, dependencias, brechas, riesgos y objetivos del negocio."),
+    ("Diseñamos", "Arquitectura objetivo, políticas, integraciones, dimensionamiento, transición y gobierno."),
+    ("Actualizamos", "Implementación, migración, configuración, pruebas, documentación y puesta en producción."),
+    ("Transformamos", "Adopción, formación, comunicación, cambio operativo y transferencia de conocimiento."),
+    ("Optimizamos", "Telemetría, revisión periódica, ajustes, capacidad, experiencia, costo y roadmap."),
+    ("Administramos", "Monitoreo, soporte, incidentes, cambios, reportes y continuidad bajo un servicio recurrente."),
+]
+PASO_TRANSVERSAL = ("Aseguramos", ["Zero Trust", "Hardening", "Control de acceso", "Protección de datos", "Respuesta", "Cumplimiento"])
+
+
+def pasos_consein():
+    """Los siete pasos aplicados a Cisco: 1–6 en secuencia y 7 como capa transversal."""
     items = ""
-    for n in sorted(serv):
-        d = serv[n]
-        areas = " · ".join(nombres[a] for a in d["areas"])
-        k = len(d["productos"])
-        items += (f'<li><a href="soluciones.html#{d["areas"][0]}" title="{E(", ".join(d["productos"]))}">'
-                  f'<b>{E(d["nombre"])}</b><span>{E(areas)}</span>'
-                  f'<small>{k} {"producto" if k == 1 else "productos"}</small></a></li>')
-    return f'<ol class="steps steps-7">{items}</ol>'
+    for i, (t, d) in enumerate(PASOS, 1):
+        tag = '<small>Servicio recurrente</small>' if i == len(PASOS) else ""
+        items += f"<li><b>{E(t)}</b><span>{E(d)}</span>{tag}</li>"
+    nombre, temas = PASO_TRANSVERSAL
+    chips = "".join(f"<li>{E(x)}</li>" for x in temas)
+    return f"""<div class="pasos7">
+      <ol class="steps steps-6">{items}</ol>
+      <div class="capa-transversal">
+        <div class="ct-head"><span class="ct-num">07</span><div><b>{E(nombre)}</b><em>Capa transversal a los seis pasos</em></div></div>
+        <ul class="ct-temas">{chips}</ul>
+      </div>
+    </div>"""
 
 
 def sticker_renueva():
@@ -706,9 +708,9 @@ def inicio():
 
 <section id="metodo">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Siete servicios Consein</h2>
-      <p class="lead">Entregamos la oferta Cisco a través de los siete servicios del Modelo de Servicios Cisco de Consein, cada uno conectado con su plataforma Microsoft.</p></div>
-    {servicios_consein()}
+    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Los siete pasos aplicados a Cisco</h2>
+      <p class="lead">Seis pasos acompañan el ciclo de vida de su red Cisco y un séptimo la protege de principio a fin.</p></div>
+    {pasos_consein()}
   </div>
 </section>
 

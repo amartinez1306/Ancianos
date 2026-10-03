@@ -395,15 +395,20 @@ ol.aviso-list li::before{content:counter(av)}
 @media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}
 
 /* ==========================================================================
-   Cómo trabajamos: los 7 servicios del Modelo de Servicios Cisco de Consein
+   Cómo trabajamos: los siete pasos aplicados a Cisco (1–6 en secuencia, 7 transversal)
    ========================================================================== */
-.steps.steps-7{grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
-.steps.steps-7 li::before{content:"S" counter(s)}
-.steps-7 a{display:block;text-decoration:none;color:inherit}
-.steps-7 a:hover b{color:var(--green-ink,var(--navy));text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px}
-.steps-7 b{display:block;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:6px}
-.steps-7 span{display:block;font-size:.82rem;color:var(--muted);line-height:1.45}
-.steps-7 small{display:inline-block;margin-top:8px;font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--navy);background:var(--soft);border-radius:20px;padding:2px 9px;white-space:nowrap}
-.steps-7 span.nw{display:inline;font-size:inherit;color:inherit;line-height:inherit}
-@media (max-width:1000px){.steps.steps-7{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:32px}}
-@media (max-width:600px){.steps.steps-7{grid-template-columns:1fr}}
+.steps.steps-6{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.steps-6 b{display:block;font-weight:600;color:var(--navy);margin-bottom:6px}
+.steps-6 span{display:block;font-size:.84rem;color:var(--muted);line-height:1.5}
+.steps-6 small{display:inline-block;margin-top:10px;font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);background:var(--soft);border-radius:20px;padding:3px 10px;white-space:nowrap}
+.capa-transversal{position:relative;margin-top:36px;padding:22px 26px;border-radius:14px;color:#fff;
+  background:linear-gradient(135deg,var(--navy),var(--navy-dark));display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.capa-transversal::before{content:"";position:absolute;left:0;right:0;top:-20px;height:12px;border:2px solid var(--green);border-bottom:0;border-radius:10px 10px 0 0;opacity:.7}
+.ct-head{display:flex;align-items:center;gap:14px}
+.ct-num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--navy);font-family:var(--title);font-weight:700;font-size:.95rem;flex:none}
+.ct-head b{display:block;font-family:var(--title);font-weight:600;font-size:1.2rem;line-height:1.2}
+.ct-head em{display:block;font-style:normal;font-size:.8rem;color:rgba(255,255,255,.7)}
+.ct-temas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ct-temas li{font-size:.82rem;padding:5px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06)}
+@media (max-width:1000px){.steps.steps-6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}}
+@media (max-width:600px){.steps.steps-6{grid-template-columns:1fr}.capa-transversal{grid-template-columns:1fr;gap:16px;padding:20px}}

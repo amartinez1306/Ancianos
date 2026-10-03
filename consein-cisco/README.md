@@ -13,7 +13,7 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, Cómo trabajamos (7 servicios S1–S7), resultados, nosotros, preguntas frecuentes, contacto |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, preguntas frecuentes, contacto |
 | `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Nueva Matriz de Valor: criterio de selección, vista consolidada y 19 productos Cisco en 7 áreas |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 

@@ -403,18 +403,23 @@ ol.aviso-list li::before{content:counter(av)}
 @media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}
 
 /* ==========================================================================
-   Cómo trabajamos: los 7 servicios del Modelo de Servicios Cisco de Consein
+   Cómo trabajamos: los siete pasos aplicados a Cisco (1–6 en secuencia, 7 transversal)
    ========================================================================== */
-.steps.steps-7{grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
-.steps.steps-7 li::before{content:"S" counter(s)}
-.steps-7 a{display:block;text-decoration:none;color:inherit}
-.steps-7 a:hover b{color:var(--green-ink,var(--navy));text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px}
-.steps-7 b{display:block;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:6px}
-.steps-7 span{display:block;font-size:.82rem;color:var(--muted);line-height:1.45}
-.steps-7 small{display:inline-block;margin-top:8px;font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--navy);background:var(--soft);border-radius:20px;padding:2px 9px;white-space:nowrap}
-.steps-7 span.nw{display:inline;font-size:inherit;color:inherit;line-height:inherit}
-@media (max-width:1000px){.steps.steps-7{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:32px}}
-@media (max-width:600px){.steps.steps-7{grid-template-columns:1fr}}
+.steps.steps-6{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.steps-6 b{display:block;font-weight:600;color:var(--navy);margin-bottom:6px}
+.steps-6 span{display:block;font-size:.84rem;color:var(--muted);line-height:1.5}
+.steps-6 small{display:inline-block;margin-top:10px;font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);background:var(--soft);border-radius:20px;padding:3px 10px;white-space:nowrap}
+.capa-transversal{position:relative;margin-top:36px;padding:22px 26px;border-radius:14px;color:#fff;
+  background:linear-gradient(135deg,var(--navy),var(--navy-dark));display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.capa-transversal::before{content:"";position:absolute;left:0;right:0;top:-20px;height:12px;border:2px solid var(--green);border-bottom:0;border-radius:10px 10px 0 0;opacity:.7}
+.ct-head{display:flex;align-items:center;gap:14px}
+.ct-num{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--navy);font-family:var(--title);font-weight:700;font-size:.95rem;flex:none}
+.ct-head b{display:block;font-family:var(--title);font-weight:600;font-size:1.2rem;line-height:1.2}
+.ct-head em{display:block;font-style:normal;font-size:.8rem;color:rgba(255,255,255,.7)}
+.ct-temas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ct-temas li{font-size:.82rem;padding:5px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06)}
+@media (max-width:1000px){.steps.steps-6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}}
+@media (max-width:600px){.steps.steps-6{grid-template-columns:1fr}.capa-transversal{grid-template-columns:1fr;gap:16px;padding:20px}}
 
 </style>
 <script type="application/json" id="paginas">{"inicio": {"title": "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein", "description": "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU."}, "soluciones": {"title": "Matriz de valor Cisco + Microsoft: 19 productos en 7 áreas | Consein", "description": "Productos Cisco que suman valor a Microsoft 365, Azure, Teams, Dynamics 365, Power BI y Copilot Studio: Meraki, Cisco SD-WAN, Secure Firewall, ISE, Secure Access, Room Bar, Board Pro y AI Defense."}, "productos": {"title": "Programa Renueva: renovación de equipos Cisco obsoletos | Consein", "description": "Renovamos switches, WiFi, routers, firewalls, servidores UCS y salas Cisco en fin de soporte. Inventario de obsolescencia sin costo, migración por fases y financiamiento."}}</script>
@@ -511,9 +516,15 @@ ol.aviso-list li::before{content:counter(av)}
 
 <section id="metodo">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Siete servicios Consein</h2>
-      <p class="lead">Entregamos la oferta Cisco a través de los siete servicios del Modelo de Servicios Cisco de Consein, cada uno conectado con su plataforma Microsoft.</p></div>
-    <ol class="steps steps-7"><li><a href="#soluciones:seguridad" title="Cisco ISE (Premier), Cisco Secure Network Analytics (NDR), Cisco Telemetry Broker, Cisco Secure Access (SSE)"><b>Protección Avanzada M365</b><span>Seguridad</span><small>4 productos</small></a></li><li><a href="#soluciones:seguridad" title="Cisco Secure Access (SSE), Cisco Secure Access (ZTNA)"><b>Secure Access como Servicio</b><span>Seguridad · Servicios Empresariales</span><small>2 productos</small></a></li><li><a href="#soluciones:infraestructura" title="Meraki MX Security &amp; SD-WAN, Meraki MS (switching) y MR (wireless), Meraki MG (cellular gateways), Meraki MV (cámaras inteligentes), Meraki MT (sensores IoT), Meraki / Cisco SD-WAN multisede, Meraki Dashboard API y webhooks"><b>Meraki Cloud Managed</b><span>Infraestructura · Data y Analítica · Servicios Empresariales · Automatización</span><small>7 productos</small></a></li><li><a href="#soluciones:colaboracion" title="Cisco Room Bar / Room Bar Pro, Cisco Board Pro Series"><b>Espacios Cisco Rooms para Teams</b><span>Colaboración</span><small>2 productos</small></a></li><li><a href="#soluciones:infraestructura" title="Meraki MX Security &amp; SD-WAN, Cisco SD-WAN (Catalyst) para DC/HQ e IaaS, Meraki / Cisco SD-WAN multisede"><b><span class="nw">SD-WAN</span> Seguro</b><span>Infraestructura · Servicios Empresariales</span><small>3 productos</small></a></li><li><a href="#soluciones:seguridad" title="Cisco Secure Firewall"><b>Azure + Cisco Secure Firewall</b><span>Seguridad</span><small>1 producto</small></a></li><li><a href="#soluciones:inteligencia-artificial" title="Cisco AI Defense: AI Inventory y AI Supply Chain Risk Management, Cisco AI Defense: AI Model &amp; App Validation, Cisco AI Defense: AI Runtime Protection"><b>Cisco AI Defense</b><span>Inteligencia Artificial</span><small>3 productos</small></a></li></ol>
+    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Los siete pasos aplicados a Cisco</h2>
+      <p class="lead">Seis pasos acompañan el ciclo de vida de su red Cisco y un séptimo la protege de principio a fin.</p></div>
+    <div class="pasos7">
+      <ol class="steps steps-6"><li><b>Evaluamos</b><span>Inventario, postura actual, dependencias, brechas, riesgos y objetivos del negocio.</span></li><li><b>Diseñamos</b><span>Arquitectura objetivo, políticas, integraciones, dimensionamiento, transición y gobierno.</span></li><li><b>Actualizamos</b><span>Implementación, migración, configuración, pruebas, documentación y puesta en producción.</span></li><li><b>Transformamos</b><span>Adopción, formación, comunicación, cambio operativo y transferencia de conocimiento.</span></li><li><b>Optimizamos</b><span>Telemetría, revisión periódica, ajustes, capacidad, experiencia, costo y roadmap.</span></li><li><b>Administramos</b><span>Monitoreo, soporte, incidentes, cambios, reportes y continuidad bajo un servicio recurrente.</span><small>Servicio recurrente</small></li></ol>
+      <div class="capa-transversal">
+        <div class="ct-head"><span class="ct-num">07</span><div><b>Aseguramos</b><em>Capa transversal a los seis pasos</em></div></div>
+        <ul class="ct-temas"><li>Zero Trust</li><li>Hardening</li><li>Control de acceso</li><li>Protección de datos</li><li>Respuesta</li><li>Cumplimiento</li></ul>
+      </div>
+    </div>
   </div>
 </section>
 
