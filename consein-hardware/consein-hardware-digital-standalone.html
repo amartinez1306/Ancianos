@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hardware empresarial: equipos, servidores y videoconferencia | Consein</title>
-  <meta name="description" content="Suministramos equipos de cómputo empresariales, servidores y salas de videoconferencia Dell, HP, Lenovo y Logitech, con importación puerta a puerta, configuración e instalación y soporte técnico.">
+  <meta name="description" content="Suministramos equipos de cómputo empresariales, servidores, impresoras y salas de videoconferencia Dell, HP, Lenovo y Logitech, con importación puerta a puerta, configuración e instalación y soporte técnico.">
   <link rel="canonical" href="https://www.consein.com/hardware/">
   <meta property="og:title" content="Hardware empresarial | Consein">
   <meta property="og:description" content="Diseñamos, importamos, instalamos y damos soporte a su hardware empresarial. Un solo aliado, de principio a fin.">
@@ -318,9 +318,17 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
 .partner { display: inline-flex; align-items: center; gap: 10px; margin: 48px 0 0; padding: 8px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: .88rem; font-weight: 500; color: var(--navy); }
 
 /* ---------- Soluciones ---------- */
-.d-brands { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: -16px 0 24px; }
-.d-brands li { font-family: var(--font-title); font-weight: 600; color: var(--navy); padding: 10px 20px; border: 1px solid var(--line); border-radius: 10px; }
-.d-brands .on-demand { background: var(--navy); color: #fff; border-color: var(--navy); }
+/* Logos de marcas: se muestran con sus colores oficiales, sin alterar */
+.d-brands { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 0; margin: -16px 0 32px; }
+.d-brands li {
+  display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 88px; padding: 16px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s, box-shadow .2s;
+}
+.d-brands li:hover { border-color: rgba(88,187,71,.5); box-shadow: 0 10px 30px rgba(27,36,91,.08); }
+.d-brands img { width: 48px; height: 48px; }
+.d-brands img.wide { width: 120px; height: 40px; }
+.d-brands .brand-word { font-family: var(--font-title); font-size: 1.35rem; font-weight: 600; color: var(--navy); }
+.d-brands .on-demand { background: var(--navy); border-color: var(--navy); color: #fff; font-size: .9rem; font-weight: 600; text-align: center; line-height: 1.3; }
 
 .d-sol { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
 .d-sol-rev .screen { order: 2; }
@@ -349,7 +357,9 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
 .tag-num { display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--navy); background: rgba(88,187,71,.14); padding: 4px 10px; border-radius: 6px; margin-bottom: 14px; }
 .d-sol-body > p { color: var(--muted); }
 .d-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
-.d-chips li { font-size: .82rem; font-weight: 500; color: var(--navy); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; }
+.d-chips li { font-size: .82rem; font-weight: 500; color: var(--navy); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; display: inline-flex; align-items: center; gap: 6px; }
+.d-chips img { width: 16px; height: 16px; }
+.d-chips img.wide { width: 36px; height: 12px; }
 .sol-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; padding-top: 24px; border-top: 1px dashed var(--line); }
 
 /* ---------- Bloques oscuros ---------- */
@@ -416,6 +426,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
   .metrics { grid-template-columns: 1fr 1fr; }
   .metrics li:nth-child(3) { border-left: 0; padding-left: 0; }
   .d-cards { grid-template-columns: 1fr 1fr; }
+  .d-brands { grid-template-columns: repeat(3, 1fr); }
   .d-steps { grid-template-columns: 1fr 1fr; }
   .d-stages { grid-template-columns: 1fr; gap: 40px; }
   .d-stages::before { top: 32px; bottom: 32px; left: 32px; right: auto; border-top: 0; border-left: 2px dashed rgba(88,187,71,.55); }
@@ -433,6 +444,8 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
   .metrics li { flex-direction: column; align-items: flex-start; gap: 6px; }
   .metrics li + li { border-left: 0; padding-left: 0; }
   .d-cards, .d-steps, .sol-lists { grid-template-columns: 1fr; }
+  .d-brands { grid-template-columns: 1fr 1fr; }
+  .d-brands .on-demand { grid-column: 1 / -1; min-height: 56px; }
   .d-sol { padding: 40px 0; }
   .track li { font-size: .62rem; }
   .tracker { padding: 20px; }
@@ -455,6 +468,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
       "itemListElement": [
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Computación empresarial", "description": "Laptops empresariales, computadoras de escritorio, workstations, tablets corporativas y monitores profesionales."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Servidores e infraestructura", "description": "Servidores empresariales, virtualización y equipamiento para centros de datos."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Impresoras y accesorios", "description": "Impresoras, multifuncionales, consumibles y accesorios para puestos de trabajo."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Espacios de colaboración", "description": "Salas de videoconferencia, Microsoft Teams Rooms, cámaras y audio profesional."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Importación puerta a puerta", "description": "Compra internacional, logística, gestión aduanal y entrega de tecnología en sus instalaciones."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arquitectura de la solución", "description": "Diagnóstico tecnológico, asesoría y dimensionamiento de equipos."}},
@@ -598,7 +612,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
     <!-- CIFRAS (datos de la propia oferta) -->
     <div class="container">
       <ul class="metrics">
-        <li><strong>3</strong><span>líneas de solución</span></li>
+        <li><strong>4</strong><span>líneas de solución</span></li>
         <li><strong>8</strong><span>pasos de importación coordinados</span></li>
         <li><strong>11</strong><span>servicios incluidos</span></li>
         <li><strong>1</strong><span>solo aliado para todo el proyecto</span></li>
@@ -646,8 +660,13 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
           </div>
           <p class="intro">Modernizamos su plataforma tecnológica para aumentar la productividad, mejorar la experiencia de sus usuarios y asegurar la continuidad operativa.</p>
         </div>
-        <ul class="d-brands" aria-label="Marcas">
-          <li>Dell</li><li>HP</li><li>Lenovo</li><li>Logitech</li><li class="on-demand">Marcas Bajo Demanda</li>
+        <ul class="d-brands" aria-label="Marcas que representamos">
+          <li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RGVsbDwvdGl0bGU+PHBhdGggZmlsbD0iIzAwN0RCOCIgZD0iTTE3Ljk2MyAxNC42VjkuMzI0aDEuMjIydjQuMjA0aDIuMTR2MS4wN2gtMy4zNjJ6bS05Ljc4NC0zLjI4OGwyLjk4LTIuMjkyYy4yODEuMjI4LjU2LjQ1OC44NDEuNjg3bC0yLjgyNyAyLjE0LjYxMS41MzUgMi44MjctMi4yMTZjLjI4MS4yMjguNTYuNDU4Ljg0MS42ODhhMjk1LjgzIDI5NS44MyAwIDAgMS0yLjgyNyAyLjIxNmwuNjEuNTM2IDIuODMtMi4yOTUtLjAwMS0xLjk4NmgxLjIyM3Y0LjIwNGgyLjIxNnYxLjA3aC0zLjM2MnYtMS45ODdjLS45OTUuNzYzLTEuOTg3IDEuNTI5LTIuOTgxIDIuMjkybC0yLjk4MS0yLjI5MmMtLjE0NC43MjktLjY1MyAxLjM2LTEuMzEyIDEuNjk0LS4yODUuMTQ3LS41OTcuMjQtLjkxNS4yNzYtLjE4My4wMjItLjM2Ny4wMTctLjU1MS4wMTdIMy41MTZWOS4zMjVINS42OWEyLjU0NCAyLjU0NCAwIDAgMSAxLjU2My41NTdjLjQ1NC4zNi43NzguODcyLjkyNyAxLjQzbS0zLjUxNi0uOTE3djMuMjFsLjk1My0uMDAxYTEuMzc3IDEuMzc3IDAgMCAwIDEuMDM2LS41MjMgMS43NCAxLjc0IDAgMCAwIC4xODItMS44ODkgMS40OTQgMS40OTQgMCAwIDAtLjk3Ni0uNzY2Yy0uMTY2LS4wNC0uMzM4LS4wMy0uNTA3LS4wMzJoLS42ODh6TTExLjgyIDBoLjMzN2ExMS45NCAxMS45NCAwIDAgMSA1LjQwNSAxLjM3MyAxMi4xMDEgMTIuMTAxIDAgMCAxIDQuMTI2IDMuNTU3QTExLjkzIDExLjkzIDAgMCAxIDI0IDExLjgydi4zNmExMS45NjMgMTEuOTYzIDAgMCAxLTMuMjM2IDguMDMzQTExLjk2NyAxMS45NjcgMCAwIDEgMTIuMTgyIDI0aC0uMzYxYTExLjk5MyAxMS45OTMgMCAwIDEtNC4xNDUtLjgwNiAxMi4wNCAxMi4wNCAwIDAgMS00LjI3NC0yLjgzNkExMi4wNTcgMTIuMDU3IDAgMCAxIC41NzYgMTUuNjcgMTIuMDA2IDEyLjAwNiAwIDAgMSAwIDEyLjE4MXYtLjM2MWExMS45MjQgMTEuOTI0IDAgMCAxIDEuOTkyLTYuMzk2IDEyLjIxMSAxMi4yMTEgMCAwIDEgNC43MS00LjE3MkExMS44NzUgMTEuODc1IDAgMCAxIDExLjgyIDBtLS4xNTMgMS4yM2ExMC43MjQgMTAuNzI0IDAgMCAwLTYuNDMgMi4zNzUgMTAuNzggMTAuNzggMCAwIDAtMy4zMTkgNC41NzMgMTAuODU4IDEwLjg1OCAwIDAgMCAuMTkzIDguMTIgMTAuNzg4IDEwLjc4OCAwIDAgMCAzLjU0NiA0LjQyMSAxMC42OTggMTAuNjk4IDAgMCAwIDQuNzg2IDEuOTQ2YzEuNDU2LjIwOSAyLjk1NS4xMjQgNC4zNzYtLjI2YTEwLjc1NiAxMC43NTYgMCAwIDAgNS4wNzUtMy4wNjIgMTAuNzQyIDEwLjc0MiAwIDAgMCAyLjY4Ni01LjI4IDEwLjkxNSAxMC45MTUgMCAwIDAtLjEyMi00LjY4MiAxMC43NyAxMC43NyAwIDAgMC03LjA5OC03LjYyNiAxMC43OCAxMC43OCAwIDAgMC0zLjY5My0uNTI1eiIvPjwvc3ZnPg==" alt="Dell" width="48" height="48"></li>
+          <li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFA8L3RpdGxlPjxwYXRoIGZpbGw9IiMwMDk2RDYiIGQ9Ik0xMi4wMDY5IDI0aC0uMzU3MmwyLjQ1OS02Ljc0NTNoMy4zNzk2Yy41OTA3IDAgMS4yMzY0LS40NTMzIDEuNDQyNC0xLjAxNjZsMi42NjUyLTcuMzA4NWMuNDM5Ni0xLjE5NTItLjI0NzMtMi4xNzA2LTEuNTI1LTIuMTcwNmgtNC42OTgzbC0zLjkyOSAxMC43OTgtMi4yMjU1IDYuMTI3QzMuOTI5IDIyLjQzNCAwIDE3LjY4MDYgMCAxMi4wMDcgMCA2LjQ5OCAzLjcwOTIgMS44NTQ2IDguNzY0Ny40Mzk2TDYuNDcwNSA2Ljc1OSAyLjY1MTQgMTcuMjU0N2gyLjU0MTVMOC40NDg4IDguMzM5aDEuOTA5NWwtMy4yNTU4IDguOTE1OEg5LjY0NGwzLjAyMjMtOC4zMjUxYy40Mzk2LTEuMTk1Mi0uMjQ3My0yLjE3MDYtMS41MjUtMi4xNzA2aC0yLjE0M2wyLjQ1OS02Ljc0NTNDMTEuNjM2IDAgMTEuODE0NSAwIDExLjk5MzEgMCAxOC42Mjg1IDAgMjQgNS4zNzE1IDI0IDEyLjAwN2MuMDEzNyA2LjYyMTYtNS4zNTc4IDExLjk5My0xMS45OTMxIDExLjk5M3pNMTkuMjc0MiA4LjMyNWgtMS45MDk2bC0yLjY3ODkgNy4zMzZoMS45MDk2bDIuNjc4OS03LjMzNnoiLz48L3N2Zz4=" alt="HP" width="48" height="48"></li>
+          <li><img class="wide" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgOCAyNCA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5MZW5vdm88L3RpdGxlPjxwYXRoIGZpbGw9IiNFMjIzMUEiIGQ9Ik0yMS4wNDQgMTIuMjg4YzAgLjUtLjM0My44NjctLjgxNS44NjctLjQ2NCAwLS44MjctLjM4LS44MjctLjg2NyAwLS41MS4zNDMtLjg2OC44MTUtLjg2OC40NjQgMCAuODI3LjM4MS44MjcuODY4em0tMTQuMzA1LS45MmEuNzg3Ljc4NyAwIDAgMC0uNjUxLjMwNy45OTEuOTkxIDAgMCAwLS4xNzIuNzM4bDEuNDc5LS42MTRhLjcwOC43MDggMCAwIDAtLjY1Ni0uNDN6bTYuOTYzLjA1MmMtLjQ3MiAwLS44MTYuMzU4LS44MTYuODY4IDAgLjQ4Ni4zNjQuODY3LjgyOC44NjcuNDcyIDAgLjgxNS0uMzY4LjgxNS0uODY3IDAtLjQ4Ny0uMzYzLS44NjgtLjgyNy0uODY4ek0yNCA3Ljk5N3Y4LjAwNkgwVjcuOTk3aDI0ek01LjAxIDEzLjA1SDMuMDg4VjkuODI1SDIuMjN2NC4wMDNoMi43OHYtLjc3N3ptMS4xMzctLjA5NGwyLjE2My0uODk3YTEuNjY3IDEuNjY3IDAgMCAwLS4zNy0uODZjLS4yODQtLjMzLS43MDQtLjUwNS0xLjIxNi0uNTA1LS45MzEgMC0xLjYzMy42ODYtMS42MzMgMS41OTMgMCAuOTMuNzA0IDEuNTkzIDEuNzI2IDEuNTkzLjU3MiAwIDEuMTU4LS4yNzIgMS40MzItLjU4OWwtLjUzNS0uNDExYy0uMzU3LjI2NC0uNTYuMzI2LS44ODUuMzI2LS4yOTIgMC0uNTItLjA5LS42ODItLjI1em01LjU3LTEuMDM5YzAtLjcwOS0uNTA3LTEuMjIzLTEuMjUyLTEuMjIzYTEuMjggMS4yOCAwIDAgMC0xLjAwNS40OTR2LS40NDJoLS44NDZ2My4wODFoLjg0NnYtMS43NTNjMC0uMzE2LjI0NS0uNjUxLjY5OC0uNjUxLjM1IDAgLjcxMi4yNDMuNzEyLjY1MXYxLjc1M2guODQ3di0xLjkxem0zLjY0Ny4zN2MwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzMgMC0xLjY2My43LTEuNjYzIDEuNTkzIDAgLjkwMy43MjYgMS41OTIgMS42NTEgMS41OTIuOTMyIDAgMS42NjItLjcgMS42NjItMS41OTJ6bTIuMDY2IDEuNTRsMS4yNjgtMy4wODFoLS45NjdsLS43NjUgMi4wOTktLjc2NS0yLjFoLS45NjZsMS4yNjggMy4wODFoLjkyN3ptNC40NDktMS41NGMwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzIgMC0xLjY2Mi43LTEuNjYyIDEuNTkzIDAgLjkwMy43MjUgMS41OTIgMS42NSAxLjU5Mi45MzIgMCAxLjY2Mi0uNyAxLjY2Mi0xLjU5MnoiLz48L3N2Zz4=" alt="Lenovo" width="120" height="40"></li>
+          <!-- Logitech: reemplazar este texto por el logo oficial (assets/img/brands/logitech.svg) -->
+          <li class="brand-word">Logitech</li>
+          <li class="on-demand"><span class="sq" aria-hidden="true"></span>Marcas Bajo Demanda</li>
         </ul>
 
         <article class="d-sol" id="computacion-empresarial">
@@ -670,7 +689,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
             <span class="tag-num">01 · Computación</span>
             <h3>Computación empresarial</h3>
             <p>Proveemos dispositivos corporativos para el trabajo híbrido y de alta exigencia.</p>
-            <ul class="d-chips"><li>Dell</li><li>HP</li><li>Lenovo</li><li>Marcas Bajo Demanda</li></ul>
+            <ul class="d-chips"><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RGVsbDwvdGl0bGU+PHBhdGggZmlsbD0iIzAwN0RCOCIgZD0iTTE3Ljk2MyAxNC42VjkuMzI0aDEuMjIydjQuMjA0aDIuMTR2MS4wN2gtMy4zNjJ6bS05Ljc4NC0zLjI4OGwyLjk4LTIuMjkyYy4yODEuMjI4LjU2LjQ1OC44NDEuNjg3bC0yLjgyNyAyLjE0LjYxMS41MzUgMi44MjctMi4yMTZjLjI4MS4yMjguNTYuNDU4Ljg0MS42ODhhMjk1LjgzIDI5NS44MyAwIDAgMS0yLjgyNyAyLjIxNmwuNjEuNTM2IDIuODMtMi4yOTUtLjAwMS0xLjk4NmgxLjIyM3Y0LjIwNGgyLjIxNnYxLjA3aC0zLjM2MnYtMS45ODdjLS45OTUuNzYzLTEuOTg3IDEuNTI5LTIuOTgxIDIuMjkybC0yLjk4MS0yLjI5MmMtLjE0NC43MjktLjY1MyAxLjM2LTEuMzEyIDEuNjk0LS4yODUuMTQ3LS41OTcuMjQtLjkxNS4yNzYtLjE4My4wMjItLjM2Ny4wMTctLjU1MS4wMTdIMy41MTZWOS4zMjVINS42OWEyLjU0NCAyLjU0NCAwIDAgMSAxLjU2My41NTdjLjQ1NC4zNi43NzguODcyLjkyNyAxLjQzbS0zLjUxNi0uOTE3djMuMjFsLjk1My0uMDAxYTEuMzc3IDEuMzc3IDAgMCAwIDEuMDM2LS41MjMgMS43NCAxLjc0IDAgMCAwIC4xODItMS44ODkgMS40OTQgMS40OTQgMCAwIDAtLjk3Ni0uNzY2Yy0uMTY2LS4wNC0uMzM4LS4wMy0uNTA3LS4wMzJoLS42ODh6TTExLjgyIDBoLjMzN2ExMS45NCAxMS45NCAwIDAgMSA1LjQwNSAxLjM3MyAxMi4xMDEgMTIuMTAxIDAgMCAxIDQuMTI2IDMuNTU3QTExLjkzIDExLjkzIDAgMCAxIDI0IDExLjgydi4zNmExMS45NjMgMTEuOTYzIDAgMCAxLTMuMjM2IDguMDMzQTExLjk2NyAxMS45NjcgMCAwIDEgMTIuMTgyIDI0aC0uMzYxYTExLjk5MyAxMS45OTMgMCAwIDEtNC4xNDUtLjgwNiAxMi4wNCAxMi4wNCAwIDAgMS00LjI3NC0yLjgzNkExMi4wNTcgMTIuMDU3IDAgMCAxIC41NzYgMTUuNjcgMTIuMDA2IDEyLjAwNiAwIDAgMSAwIDEyLjE4MXYtLjM2MWExMS45MjQgMTEuOTI0IDAgMCAxIDEuOTkyLTYuMzk2IDEyLjIxMSAxMi4yMTEgMCAwIDEgNC43MS00LjE3MkExMS44NzUgMTEuODc1IDAgMCAxIDExLjgyIDBtLS4xNTMgMS4yM2ExMC43MjQgMTAuNzI0IDAgMCAwLTYuNDMgMi4zNzUgMTAuNzggMTAuNzggMCAwIDAtMy4zMTkgNC41NzMgMTAuODU4IDEwLjg1OCAwIDAgMCAuMTkzIDguMTIgMTAuNzg4IDEwLjc4OCAwIDAgMCAzLjU0NiA0LjQyMSAxMC42OTggMTAuNjk4IDAgMCAwIDQuNzg2IDEuOTQ2YzEuNDU2LjIwOSAyLjk1NS4xMjQgNC4zNzYtLjI2YTEwLjc1NiAxMC43NTYgMCAwIDAgNS4wNzUtMy4wNjIgMTAuNzQyIDEwLjc0MiAwIDAgMCAyLjY4Ni01LjI4IDEwLjkxNSAxMC45MTUgMCAwIDAtLjEyMi00LjY4MiAxMC43NyAxMC43NyAwIDAgMC03LjA5OC03LjYyNiAxMC43OCAxMC43OCAwIDAgMC0zLjY5My0uNTI1eiIvPjwvc3ZnPg==" alt="" width="16" height="16">Dell</li><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFA8L3RpdGxlPjxwYXRoIGZpbGw9IiMwMDk2RDYiIGQ9Ik0xMi4wMDY5IDI0aC0uMzU3MmwyLjQ1OS02Ljc0NTNoMy4zNzk2Yy41OTA3IDAgMS4yMzY0LS40NTMzIDEuNDQyNC0xLjAxNjZsMi42NjUyLTcuMzA4NWMuNDM5Ni0xLjE5NTItLjI0NzMtMi4xNzA2LTEuNTI1LTIuMTcwNmgtNC42OTgzbC0zLjkyOSAxMC43OTgtMi4yMjU1IDYuMTI3QzMuOTI5IDIyLjQzNCAwIDE3LjY4MDYgMCAxMi4wMDcgMCA2LjQ5OCAzLjcwOTIgMS44NTQ2IDguNzY0Ny40Mzk2TDYuNDcwNSA2Ljc1OSAyLjY1MTQgMTcuMjU0N2gyLjU0MTVMOC40NDg4IDguMzM5aDEuOTA5NWwtMy4yNTU4IDguOTE1OEg5LjY0NGwzLjAyMjMtOC4zMjUxYy40Mzk2LTEuMTk1Mi0uMjQ3My0yLjE3MDYtMS41MjUtMi4xNzA2aC0yLjE0M2wyLjQ1OS02Ljc0NTNDMTEuNjM2IDAgMTEuODE0NSAwIDExLjk5MzEgMCAxOC42Mjg1IDAgMjQgNS4zNzE1IDI0IDEyLjAwN2MuMDEzNyA2LjYyMTYtNS4zNTc4IDExLjk5My0xMS45OTMxIDExLjk5M3pNMTkuMjc0MiA4LjMyNWgtMS45MDk2bC0yLjY3ODkgNy4zMzZoMS45MDk2bDIuNjc4OS03LjMzNnoiLz48L3N2Zz4=" alt="" width="16" height="16">HP</li><li><img class="wide" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgOCAyNCA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5MZW5vdm88L3RpdGxlPjxwYXRoIGZpbGw9IiNFMjIzMUEiIGQ9Ik0yMS4wNDQgMTIuMjg4YzAgLjUtLjM0My44NjctLjgxNS44NjctLjQ2NCAwLS44MjctLjM4LS44MjctLjg2NyAwLS41MS4zNDMtLjg2OC44MTUtLjg2OC40NjQgMCAuODI3LjM4MS44MjcuODY4em0tMTQuMzA1LS45MmEuNzg3Ljc4NyAwIDAgMC0uNjUxLjMwNy45OTEuOTkxIDAgMCAwLS4xNzIuNzM4bDEuNDc5LS42MTRhLjcwOC43MDggMCAwIDAtLjY1Ni0uNDN6bTYuOTYzLjA1MmMtLjQ3MiAwLS44MTYuMzU4LS44MTYuODY4IDAgLjQ4Ni4zNjQuODY3LjgyOC44NjcuNDcyIDAgLjgxNS0uMzY4LjgxNS0uODY3IDAtLjQ4Ny0uMzYzLS44NjgtLjgyNy0uODY4ek0yNCA3Ljk5N3Y4LjAwNkgwVjcuOTk3aDI0ek01LjAxIDEzLjA1SDMuMDg4VjkuODI1SDIuMjN2NC4wMDNoMi43OHYtLjc3N3ptMS4xMzctLjA5NGwyLjE2My0uODk3YTEuNjY3IDEuNjY3IDAgMCAwLS4zNy0uODZjLS4yODQtLjMzLS43MDQtLjUwNS0xLjIxNi0uNTA1LS45MzEgMC0xLjYzMy42ODYtMS42MzMgMS41OTMgMCAuOTMuNzA0IDEuNTkzIDEuNzI2IDEuNTkzLjU3MiAwIDEuMTU4LS4yNzIgMS40MzItLjU4OWwtLjUzNS0uNDExYy0uMzU3LjI2NC0uNTYuMzI2LS44ODUuMzI2LS4yOTIgMC0uNTItLjA5LS42ODItLjI1em01LjU3LTEuMDM5YzAtLjcwOS0uNTA3LTEuMjIzLTEuMjUyLTEuMjIzYTEuMjggMS4yOCAwIDAgMC0xLjAwNS40OTR2LS40NDJoLS44NDZ2My4wODFoLjg0NnYtMS43NTNjMC0uMzE2LjI0NS0uNjUxLjY5OC0uNjUxLjM1IDAgLjcxMi4yNDMuNzEyLjY1MXYxLjc1M2guODQ3di0xLjkxem0zLjY0Ny4zN2MwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzMgMC0xLjY2My43LTEuNjYzIDEuNTkzIDAgLjkwMy43MjYgMS41OTIgMS42NTEgMS41OTIuOTMyIDAgMS42NjItLjcgMS42NjItMS41OTJ6bTIuMDY2IDEuNTRsMS4yNjgtMy4wODFoLS45NjdsLS43NjUgMi4wOTktLjc2NS0yLjFoLS45NjZsMS4yNjggMy4wODFoLjkyN3ptNC40NDktMS41NGMwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzIgMC0xLjY2Mi43LTEuNjYyIDEuNTkzIDAgLjkwMy43MjUgMS41OTIgMS42NSAxLjU5Mi45MzIgMCAxLjY2Mi0uNyAxLjY2Mi0xLjU5MnoiLz48L3N2Zz4=" alt="" width="36" height="12">Lenovo</li><li>Marcas Bajo Demanda</li></ul>
             <div class="sol-lists">
               <div>
                 <h4>Ofrecemos</h4>
@@ -680,7 +699,6 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
                   <li>Workstations profesionales</li>
                   <li>Tablets corporativas</li>
                   <li>Monitores profesionales</li>
-                  <li>Periféricos y accesorios</li>
                   <li>Renovación del parque tecnológico</li>
                 </ul>
               </div>
@@ -723,7 +741,7 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
             <span class="tag-num">02 · Infraestructura</span>
             <h3>Servidores e infraestructura</h3>
             <p>Implementamos la infraestructura que sostiene sus aplicaciones críticas, bases de datos y servicios.</p>
-            <ul class="d-chips"><li>Dell</li><li>HP</li><li>Lenovo</li><li>Marcas Bajo Demanda</li></ul>
+            <ul class="d-chips"><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RGVsbDwvdGl0bGU+PHBhdGggZmlsbD0iIzAwN0RCOCIgZD0iTTE3Ljk2MyAxNC42VjkuMzI0aDEuMjIydjQuMjA0aDIuMTR2MS4wN2gtMy4zNjJ6bS05Ljc4NC0zLjI4OGwyLjk4LTIuMjkyYy4yODEuMjI4LjU2LjQ1OC44NDEuNjg3bC0yLjgyNyAyLjE0LjYxMS41MzUgMi44MjctMi4yMTZjLjI4MS4yMjguNTYuNDU4Ljg0MS42ODhhMjk1LjgzIDI5NS44MyAwIDAgMS0yLjgyNyAyLjIxNmwuNjEuNTM2IDIuODMtMi4yOTUtLjAwMS0xLjk4NmgxLjIyM3Y0LjIwNGgyLjIxNnYxLjA3aC0zLjM2MnYtMS45ODdjLS45OTUuNzYzLTEuOTg3IDEuNTI5LTIuOTgxIDIuMjkybC0yLjk4MS0yLjI5MmMtLjE0NC43MjktLjY1MyAxLjM2LTEuMzEyIDEuNjk0LS4yODUuMTQ3LS41OTcuMjQtLjkxNS4yNzYtLjE4My4wMjItLjM2Ny4wMTctLjU1MS4wMTdIMy41MTZWOS4zMjVINS42OWEyLjU0NCAyLjU0NCAwIDAgMSAxLjU2My41NTdjLjQ1NC4zNi43NzguODcyLjkyNyAxLjQzbS0zLjUxNi0uOTE3djMuMjFsLjk1My0uMDAxYTEuMzc3IDEuMzc3IDAgMCAwIDEuMDM2LS41MjMgMS43NCAxLjc0IDAgMCAwIC4xODItMS44ODkgMS40OTQgMS40OTQgMCAwIDAtLjk3Ni0uNzY2Yy0uMTY2LS4wNC0uMzM4LS4wMy0uNTA3LS4wMzJoLS42ODh6TTExLjgyIDBoLjMzN2ExMS45NCAxMS45NCAwIDAgMSA1LjQwNSAxLjM3MyAxMi4xMDEgMTIuMTAxIDAgMCAxIDQuMTI2IDMuNTU3QTExLjkzIDExLjkzIDAgMCAxIDI0IDExLjgydi4zNmExMS45NjMgMTEuOTYzIDAgMCAxLTMuMjM2IDguMDMzQTExLjk2NyAxMS45NjcgMCAwIDEgMTIuMTgyIDI0aC0uMzYxYTExLjk5MyAxMS45OTMgMCAwIDEtNC4xNDUtLjgwNiAxMi4wNCAxMi4wNCAwIDAgMS00LjI3NC0yLjgzNkExMi4wNTcgMTIuMDU3IDAgMCAxIC41NzYgMTUuNjcgMTIuMDA2IDEyLjAwNiAwIDAgMSAwIDEyLjE4MXYtLjM2MWExMS45MjQgMTEuOTI0IDAgMCAxIDEuOTkyLTYuMzk2IDEyLjIxMSAxMi4yMTEgMCAwIDEgNC43MS00LjE3MkExMS44NzUgMTEuODc1IDAgMCAxIDExLjgyIDBtLS4xNTMgMS4yM2ExMC43MjQgMTAuNzI0IDAgMCAwLTYuNDMgMi4zNzUgMTAuNzggMTAuNzggMCAwIDAtMy4zMTkgNC41NzMgMTAuODU4IDEwLjg1OCAwIDAgMCAuMTkzIDguMTIgMTAuNzg4IDEwLjc4OCAwIDAgMCAzLjU0NiA0LjQyMSAxMC42OTggMTAuNjk4IDAgMCAwIDQuNzg2IDEuOTQ2YzEuNDU2LjIwOSAyLjk1NS4xMjQgNC4zNzYtLjI2YTEwLjc1NiAxMC43NTYgMCAwIDAgNS4wNzUtMy4wNjIgMTAuNzQyIDEwLjc0MiAwIDAgMCAyLjY4Ni01LjI4IDEwLjkxNSAxMC45MTUgMCAwIDAtLjEyMi00LjY4MiAxMC43NyAxMC43NyAwIDAgMC03LjA5OC03LjYyNiAxMC43OCAxMC43OCAwIDAgMC0zLjY5My0uNTI1eiIvPjwvc3ZnPg==" alt="" width="16" height="16">Dell</li><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFA8L3RpdGxlPjxwYXRoIGZpbGw9IiMwMDk2RDYiIGQ9Ik0xMi4wMDY5IDI0aC0uMzU3MmwyLjQ1OS02Ljc0NTNoMy4zNzk2Yy41OTA3IDAgMS4yMzY0LS40NTMzIDEuNDQyNC0xLjAxNjZsMi42NjUyLTcuMzA4NWMuNDM5Ni0xLjE5NTItLjI0NzMtMi4xNzA2LTEuNTI1LTIuMTcwNmgtNC42OTgzbC0zLjkyOSAxMC43OTgtMi4yMjU1IDYuMTI3QzMuOTI5IDIyLjQzNCAwIDE3LjY4MDYgMCAxMi4wMDcgMCA2LjQ5OCAzLjcwOTIgMS44NTQ2IDguNzY0Ny40Mzk2TDYuNDcwNSA2Ljc1OSAyLjY1MTQgMTcuMjU0N2gyLjU0MTVMOC40NDg4IDguMzM5aDEuOTA5NWwtMy4yNTU4IDguOTE1OEg5LjY0NGwzLjAyMjMtOC4zMjUxYy40Mzk2LTEuMTk1Mi0uMjQ3My0yLjE3MDYtMS41MjUtMi4xNzA2aC0yLjE0M2wyLjQ1OS02Ljc0NTNDMTEuNjM2IDAgMTEuODE0NSAwIDExLjk5MzEgMCAxOC42Mjg1IDAgMjQgNS4zNzE1IDI0IDEyLjAwN2MuMDEzNyA2LjYyMTYtNS4zNTc4IDExLjk5My0xMS45OTMxIDExLjk5M3pNMTkuMjc0MiA4LjMyNWgtMS45MDk2bC0yLjY3ODkgNy4zMzZoMS45MDk2bDIuNjc4OS03LjMzNnoiLz48L3N2Zz4=" alt="" width="16" height="16">HP</li><li><img class="wide" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgOCAyNCA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5MZW5vdm88L3RpdGxlPjxwYXRoIGZpbGw9IiNFMjIzMUEiIGQ9Ik0yMS4wNDQgMTIuMjg4YzAgLjUtLjM0My44NjctLjgxNS44NjctLjQ2NCAwLS44MjctLjM4LS44MjctLjg2NyAwLS41MS4zNDMtLjg2OC44MTUtLjg2OC40NjQgMCAuODI3LjM4MS44MjcuODY4em0tMTQuMzA1LS45MmEuNzg3Ljc4NyAwIDAgMC0uNjUxLjMwNy45OTEuOTkxIDAgMCAwLS4xNzIuNzM4bDEuNDc5LS42MTRhLjcwOC43MDggMCAwIDAtLjY1Ni0uNDN6bTYuOTYzLjA1MmMtLjQ3MiAwLS44MTYuMzU4LS44MTYuODY4IDAgLjQ4Ni4zNjQuODY3LjgyOC44NjcuNDcyIDAgLjgxNS0uMzY4LjgxNS0uODY3IDAtLjQ4Ny0uMzYzLS44NjgtLjgyNy0uODY4ek0yNCA3Ljk5N3Y4LjAwNkgwVjcuOTk3aDI0ek01LjAxIDEzLjA1SDMuMDg4VjkuODI1SDIuMjN2NC4wMDNoMi43OHYtLjc3N3ptMS4xMzctLjA5NGwyLjE2My0uODk3YTEuNjY3IDEuNjY3IDAgMCAwLS4zNy0uODZjLS4yODQtLjMzLS43MDQtLjUwNS0xLjIxNi0uNTA1LS45MzEgMC0xLjYzMy42ODYtMS42MzMgMS41OTMgMCAuOTMuNzA0IDEuNTkzIDEuNzI2IDEuNTkzLjU3MiAwIDEuMTU4LS4yNzIgMS40MzItLjU4OWwtLjUzNS0uNDExYy0uMzU3LjI2NC0uNTYuMzI2LS44ODUuMzI2LS4yOTIgMC0uNTItLjA5LS42ODItLjI1em01LjU3LTEuMDM5YzAtLjcwOS0uNTA3LTEuMjIzLTEuMjUyLTEuMjIzYTEuMjggMS4yOCAwIDAgMC0xLjAwNS40OTR2LS40NDJoLS44NDZ2My4wODFoLjg0NnYtMS43NTNjMC0uMzE2LjI0NS0uNjUxLjY5OC0uNjUxLjM1IDAgLjcxMi4yNDMuNzEyLjY1MXYxLjc1M2guODQ3di0xLjkxem0zLjY0Ny4zN2MwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzMgMC0xLjY2My43LTEuNjYzIDEuNTkzIDAgLjkwMy43MjYgMS41OTIgMS42NTEgMS41OTIuOTMyIDAgMS42NjItLjcgMS42NjItMS41OTJ6bTIuMDY2IDEuNTRsMS4yNjgtMy4wODFoLS45NjdsLS43NjUgMi4wOTktLjc2NS0yLjFoLS45NjZsMS4yNjggMy4wODFoLjkyN3ptNC40NDktMS41NGMwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzIgMC0xLjY2Mi43LTEuNjYyIDEuNTkzIDAgLjkwMy43MjUgMS41OTIgMS42NSAxLjU5Mi45MzIgMCAxLjY2Mi0uNyAxLjY2Mi0xLjU5MnoiLz48L3N2Zz4=" alt="" width="36" height="12">Lenovo</li><li>Marcas Bajo Demanda</li></ul>
             <div class="sol-lists">
               <div>
                 <h4>Ofrecemos</h4>
@@ -792,6 +810,59 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
                   <li>Mejor comunicación entre equipos remotos y presenciales</li>
                   <li>Mayor participación</li>
                   <li>Audio y video de calidad profesional</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="d-sol d-sol-rev" id="impresoras-accesorios">
+          <figure class="screen" aria-hidden="true">
+            <span class="screen-bar"><i></i><i></i><i></i><em>impresoras-accesorios</em></span>
+            <svg viewBox="0 0 360 230">
+              <g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+                <path d="M96 36h112v38H96z" stroke-opacity=".7"/>
+                <rect x="60" y="74" width="184" height="74" rx="10"/>
+                <path d="M92 132h120v58H92z"/>
+                <path d="M106 150h70M106 162h92M106 174h50" stroke-opacity=".45"/>
+                <rect x="252" y="40" width="70" height="44" rx="8" stroke-opacity=".8"/>
+                <path d="M262 52h50M262 62h50M262 72h30" stroke-opacity=".4"/>
+                <rect x="40" y="196" width="150" height="24" rx="5" stroke-opacity=".8"/>
+                <path d="M52 204h8M66 204h8M80 204h8M94 204h8M108 204h8M122 204h8M136 204h8M150 204h8M164 204h14M70 212h80" stroke-opacity=".45"/>
+                <rect x="206" y="190" width="24" height="34" rx="12" stroke-opacity=".8"/>
+                <path d="M218 190v10" stroke-opacity=".6"/>
+                <path d="M262 168v-16a26 26 0 0 1 52 0v16"/>
+                <rect x="254" y="164" width="14" height="24" rx="4"/>
+                <rect x="308" y="164" width="14" height="24" rx="4"/>
+              </g>
+              <g fill="#58BB47"><rect x="212" y="92" width="16" height="10"/><rect class="blink" x="190" y="94" width="8" height="6"/></g>
+            </svg>
+          </figure>
+          <div class="d-sol-body">
+            <span class="tag-num">04 · Impresión</span>
+            <h3>Impresoras y accesorios</h3>
+            <p>Equipamos sus oficinas con impresión confiable y los accesorios que completan cada puesto de trabajo.</p>
+            <ul class="d-chips"><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFA8L3RpdGxlPjxwYXRoIGZpbGw9IiMwMDk2RDYiIGQ9Ik0xMi4wMDY5IDI0aC0uMzU3MmwyLjQ1OS02Ljc0NTNoMy4zNzk2Yy41OTA3IDAgMS4yMzY0LS40NTMzIDEuNDQyNC0xLjAxNjZsMi42NjUyLTcuMzA4NWMuNDM5Ni0xLjE5NTItLjI0NzMtMi4xNzA2LTEuNTI1LTIuMTcwNmgtNC42OTgzbC0zLjkyOSAxMC43OTgtMi4yMjU1IDYuMTI3QzMuOTI5IDIyLjQzNCAwIDE3LjY4MDYgMCAxMi4wMDcgMCA2LjQ5OCAzLjcwOTIgMS44NTQ2IDguNzY0Ny40Mzk2TDYuNDcwNSA2Ljc1OSAyLjY1MTQgMTcuMjU0N2gyLjU0MTVMOC40NDg4IDguMzM5aDEuOTA5NWwtMy4yNTU4IDguOTE1OEg5LjY0NGwzLjAyMjMtOC4zMjUxYy40Mzk2LTEuMTk1Mi0uMjQ3My0yLjE3MDYtMS41MjUtMi4xNzA2aC0yLjE0M2wyLjQ1OS02Ljc0NTNDMTEuNjM2IDAgMTEuODE0NSAwIDExLjk5MzEgMCAxOC42Mjg1IDAgMjQgNS4zNzE1IDI0IDEyLjAwN2MuMDEzNyA2LjYyMTYtNS4zNTc4IDExLjk5My0xMS45OTMxIDExLjk5M3pNMTkuMjc0MiA4LjMyNWgtMS45MDk2bC0yLjY3ODkgNy4zMzZoMS45MDk2bDIuNjc4OS03LjMzNnoiLz48L3N2Zz4=" alt="" width="16" height="16">HP</li><li><img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RGVsbDwvdGl0bGU+PHBhdGggZmlsbD0iIzAwN0RCOCIgZD0iTTE3Ljk2MyAxNC42VjkuMzI0aDEuMjIydjQuMjA0aDIuMTR2MS4wN2gtMy4zNjJ6bS05Ljc4NC0zLjI4OGwyLjk4LTIuMjkyYy4yODEuMjI4LjU2LjQ1OC44NDEuNjg3bC0yLjgyNyAyLjE0LjYxMS41MzUgMi44MjctMi4yMTZjLjI4MS4yMjguNTYuNDU4Ljg0MS42ODhhMjk1LjgzIDI5NS44MyAwIDAgMS0yLjgyNyAyLjIxNmwuNjEuNTM2IDIuODMtMi4yOTUtLjAwMS0xLjk4NmgxLjIyM3Y0LjIwNGgyLjIxNnYxLjA3aC0zLjM2MnYtMS45ODdjLS45OTUuNzYzLTEuOTg3IDEuNTI5LTIuOTgxIDIuMjkybC0yLjk4MS0yLjI5MmMtLjE0NC43MjktLjY1MyAxLjM2LTEuMzEyIDEuNjk0LS4yODUuMTQ3LS41OTcuMjQtLjkxNS4yNzYtLjE4My4wMjItLjM2Ny4wMTctLjU1MS4wMTdIMy41MTZWOS4zMjVINS42OWEyLjU0NCAyLjU0NCAwIDAgMSAxLjU2My41NTdjLjQ1NC4zNi43NzguODcyLjkyNyAxLjQzbS0zLjUxNi0uOTE3djMuMjFsLjk1My0uMDAxYTEuMzc3IDEuMzc3IDAgMCAwIDEuMDM2LS41MjMgMS43NCAxLjc0IDAgMCAwIC4xODItMS44ODkgMS40OTQgMS40OTQgMCAwIDAtLjk3Ni0uNzY2Yy0uMTY2LS4wNC0uMzM4LS4wMy0uNTA3LS4wMzJoLS42ODh6TTExLjgyIDBoLjMzN2ExMS45NCAxMS45NCAwIDAgMSA1LjQwNSAxLjM3MyAxMi4xMDEgMTIuMTAxIDAgMCAxIDQuMTI2IDMuNTU3QTExLjkzIDExLjkzIDAgMCAxIDI0IDExLjgydi4zNmExMS45NjMgMTEuOTYzIDAgMCAxLTMuMjM2IDguMDMzQTExLjk2NyAxMS45NjcgMCAwIDEgMTIuMTgyIDI0aC0uMzYxYTExLjk5MyAxMS45OTMgMCAwIDEtNC4xNDUtLjgwNiAxMi4wNCAxMi4wNCAwIDAgMS00LjI3NC0yLjgzNkExMi4wNTcgMTIuMDU3IDAgMCAxIC41NzYgMTUuNjcgMTIuMDA2IDEyLjAwNiAwIDAgMSAwIDEyLjE4MXYtLjM2MWExMS45MjQgMTEuOTI0IDAgMCAxIDEuOTkyLTYuMzk2IDEyLjIxMSAxMi4yMTEgMCAwIDEgNC43MS00LjE3MkExMS44NzUgMTEuODc1IDAgMCAxIDExLjgyIDBtLS4xNTMgMS4yM2ExMC43MjQgMTAuNzI0IDAgMCAwLTYuNDMgMi4zNzUgMTAuNzggMTAuNzggMCAwIDAtMy4zMTkgNC41NzMgMTAuODU4IDEwLjg1OCAwIDAgMCAuMTkzIDguMTIgMTAuNzg4IDEwLjc4OCAwIDAgMCAzLjU0NiA0LjQyMSAxMC42OTggMTAuNjk4IDAgMCAwIDQuNzg2IDEuOTQ2YzEuNDU2LjIwOSAyLjk1NS4xMjQgNC4zNzYtLjI2YTEwLjc1NiAxMC43NTYgMCAwIDAgNS4wNzUtMy4wNjIgMTAuNzQyIDEwLjc0MiAwIDAgMCAyLjY4Ni01LjI4IDEwLjkxNSAxMC45MTUgMCAwIDAtLjEyMi00LjY4MiAxMC43NyAxMC43NyAwIDAgMC03LjA5OC03LjYyNiAxMC43OCAxMC43OCAwIDAgMC0zLjY5My0uNTI1eiIvPjwvc3ZnPg==" alt="" width="16" height="16">Dell</li><li><img class="wide" src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgOCAyNCA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5MZW5vdm88L3RpdGxlPjxwYXRoIGZpbGw9IiNFMjIzMUEiIGQ9Ik0yMS4wNDQgMTIuMjg4YzAgLjUtLjM0My44NjctLjgxNS44NjctLjQ2NCAwLS44MjctLjM4LS44MjctLjg2NyAwLS41MS4zNDMtLjg2OC44MTUtLjg2OC40NjQgMCAuODI3LjM4MS44MjcuODY4em0tMTQuMzA1LS45MmEuNzg3Ljc4NyAwIDAgMC0uNjUxLjMwNy45OTEuOTkxIDAgMCAwLS4xNzIuNzM4bDEuNDc5LS42MTRhLjcwOC43MDggMCAwIDAtLjY1Ni0uNDN6bTYuOTYzLjA1MmMtLjQ3MiAwLS44MTYuMzU4LS44MTYuODY4IDAgLjQ4Ni4zNjQuODY3LjgyOC44NjcuNDcyIDAgLjgxNS0uMzY4LjgxNS0uODY3IDAtLjQ4Ny0uMzYzLS44NjgtLjgyNy0uODY4ek0yNCA3Ljk5N3Y4LjAwNkgwVjcuOTk3aDI0ek01LjAxIDEzLjA1SDMuMDg4VjkuODI1SDIuMjN2NC4wMDNoMi43OHYtLjc3N3ptMS4xMzctLjA5NGwyLjE2My0uODk3YTEuNjY3IDEuNjY3IDAgMCAwLS4zNy0uODZjLS4yODQtLjMzLS43MDQtLjUwNS0xLjIxNi0uNTA1LS45MzEgMC0xLjYzMy42ODYtMS42MzMgMS41OTMgMCAuOTMuNzA0IDEuNTkzIDEuNzI2IDEuNTkzLjU3MiAwIDEuMTU4LS4yNzIgMS40MzItLjU4OWwtLjUzNS0uNDExYy0uMzU3LjI2NC0uNTYuMzI2LS44ODUuMzI2LS4yOTIgMC0uNTItLjA5LS42ODItLjI1em01LjU3LTEuMDM5YzAtLjcwOS0uNTA3LTEuMjIzLTEuMjUyLTEuMjIzYTEuMjggMS4yOCAwIDAgMC0xLjAwNS40OTR2LS40NDJoLS44NDZ2My4wODFoLjg0NnYtMS43NTNjMC0uMzE2LjI0NS0uNjUxLjY5OC0uNjUxLjM1IDAgLjcxMi4yNDMuNzEyLjY1MXYxLjc1M2guODQ3di0xLjkxem0zLjY0Ny4zN2MwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzMgMC0xLjY2My43LTEuNjYzIDEuNTkzIDAgLjkwMy43MjYgMS41OTIgMS42NTEgMS41OTIuOTMyIDAgMS42NjItLjcgMS42NjItMS41OTJ6bTIuMDY2IDEuNTRsMS4yNjgtMy4wODFoLS45NjdsLS43NjUgMi4wOTktLjc2NS0yLjFoLS45NjZsMS4yNjggMy4wODFoLjkyN3ptNC40NDktMS41NGMwLS45MDQtLjcyNS0xLjU5My0xLjY1LTEuNTkzLS45MzIgMC0xLjY2Mi43LTEuNjYyIDEuNTkzIDAgLjkwMy43MjUgMS41OTIgMS42NSAxLjU5Mi45MzIgMCAxLjY2Mi0uNyAxLjY2Mi0xLjU5MnoiLz48L3N2Zz4=" alt="" width="36" height="12">Lenovo</li><li>Logitech</li><li>Marcas Bajo Demanda</li></ul>
+            <div class="sol-lists">
+              <div>
+                <h4>Ofrecemos</h4>
+                <ul class="list">
+                  <li>Impresoras láser y de inyección de tinta</li>
+                  <li>Multifuncionales</li>
+                  <li>Impresoras de alto volumen</li>
+                  <li>Consumibles y repuestos</li>
+                  <li>Teclados, mouse y headsets</li>
+                  <li>Docking stations y cargadores</li>
+                  <li>Accesorios de movilidad y protección</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Usted logra</h4>
+                <ul class="list list-accent">
+                  <li>Impresión confiable en cada área</li>
+                  <li>Puestos de trabajo completos y ergonómicos</li>
+                  <li>Accesorios compatibles con sus equipos</li>
+                  <li>Un solo proveedor para equipos, impresión y accesorios</li>
                 </ul>
               </div>
             </div>

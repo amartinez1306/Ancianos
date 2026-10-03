@@ -12,6 +12,7 @@ consein-hardware/
 ├── assets/css/digital.css  # Estilos de la variante digital
 ├── assets/js/main.js       # Menú móvil y botón "volver arriba"
 ├── assets/img/logo-consein.jpg
+├── assets/img/brands/      # Logos de marcas (Dell, HP, Lenovo); falta Logitech
 ├── assets/fonts/           # Colocar aquí Haltto.woff2 (fuente de títulos)
 ├── build.py                # Genera las versiones de un solo archivo
 ├── seo/                    # Palabras clave SEO (docx) para el equipo de SEO
@@ -62,6 +63,18 @@ Construir la imagen con el `Dockerfile` y publicar el puerto 80. La página qued
 `python3 build.py` regenera `consein-hardware-standalone.html` y `consein-hardware-digital-standalone.html`
 (CSS, JS, logo y fuente incrustados).
 Ejecútelo después de cada cambio en `index.html` o `assets/`.
+
+## Logos de marcas
+
+- **Dell, HP y Lenovo:** SVG vectoriales de [Simple Icons](https://simpleicons.org) (licencia CC0),
+  con el color oficial de cada marca. Las marcas siguen siendo propiedad de sus dueños: su uso en la web
+  debe cumplir las guías de cada fabricante y el acuerdo de canal/partner vigente.
+  Recomendado: reemplazarlos por los archivos oficiales del portal de partners de cada marca
+  (Dell Brand, HP Brand Central, Lenovo Partner Hub) conservando el mismo nombre de archivo.
+- **Logitech:** no está disponible como logo libre. Mientras tanto se muestra el nombre en texto.
+  Para usar el logo oficial, copie el archivo en `assets/img/brands/logitech.svg` y reemplace en
+  `index-digital.html` el elemento `<li class="brand-word">Logitech</li>` por
+  `<li><img src="assets/img/brands/logitech.svg" alt="Logitech" width="120" height="40"></li>`.
 
 ## Antes de publicar
 

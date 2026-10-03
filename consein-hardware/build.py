@@ -1,4 +1,4 @@
-"""Genera las versiones de un solo archivo (CSS, JS, logo y, si existe en
+"""Genera las versiones de un solo archivo (CSS, JS, logos y, si existe en
 assets/fonts/, la fuente Haltto incrustados):
   index.html          -> consein-hardware-standalone.html
   index-digital.html  -> consein-hardware-digital-standalone.html
@@ -47,5 +47,8 @@ for source, target in PAGES.items():
                   lambda m: '<style>\n' + inline_css(m.group(1)) + '</style>', html)
     html = html.replace('<script src="assets/js/main.js" defer></script>', '<script>\n' + js + '</script>')
     html = html.replace('src="assets/img/logo-consein.jpg"', 'src="' + logo + '"')
+    # Logos de marcas (SVG)
+    html = re.sub(r'src="(assets/img/brands/[\w-]+\.svg)"',
+                  lambda m: 'src="' + data_uri(ROOT / m.group(1), 'image/svg+xml') + '"', html)
     (ROOT / target).write_text(html, encoding='utf-8')
     print(f'{target}: {len(html) // 1024} KB')
