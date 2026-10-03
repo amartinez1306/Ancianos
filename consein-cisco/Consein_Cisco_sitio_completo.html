@@ -402,6 +402,20 @@ ol.aviso-list li::before{content:counter(av)}
 }
 @media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}
 
+/* ==========================================================================
+   Cómo trabajamos: los 7 servicios del Modelo de Servicios Cisco de Consein
+   ========================================================================== */
+.steps.steps-7{grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
+.steps.steps-7 li::before{content:"S" counter(s)}
+.steps-7 a{display:block;text-decoration:none;color:inherit}
+.steps-7 a:hover b{color:var(--green-ink,var(--navy));text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px}
+.steps-7 b{display:block;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.steps-7 span{display:block;font-size:.82rem;color:var(--muted);line-height:1.45}
+.steps-7 small{display:inline-block;margin-top:8px;font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--navy);background:var(--soft);border-radius:20px;padding:2px 9px;white-space:nowrap}
+.steps-7 span.nw{display:inline;font-size:inherit;color:inherit;line-height:inherit}
+@media (max-width:1000px){.steps.steps-7{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:32px}}
+@media (max-width:600px){.steps.steps-7{grid-template-columns:1fr}}
+
 </style>
 <script type="application/json" id="paginas">{"inicio": {"title": "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein", "description": "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU."}, "soluciones": {"title": "Matriz de valor Cisco + Microsoft: 19 productos en 7 áreas | Consein", "description": "Productos Cisco que suman valor a Microsoft 365, Azure, Teams, Dynamics 365, Power BI y Copilot Studio: Meraki, Cisco SD-WAN, Secure Firewall, ISE, Secure Access, Room Bar, Board Pro y AI Defense."}, "productos": {"title": "Programa Renueva: renovación de equipos Cisco obsoletos | Consein", "description": "Renovamos switches, WiFi, routers, firewalls, servidores UCS y salas Cisco en fin de soporte. Inventario de obsolescencia sin costo, migración por fases y financiamiento."}}</script>
 </head>
@@ -481,7 +495,7 @@ ol.aviso-list li::before{content:counter(av)}
     <div class="section-head">
       <p class="eyebrow">Soluciones de Valor</p>
       <h2>Siete especialidades</h2>
-      <p class="lead">Cada especialidad combina tecnología Cisco con su núcleo Microsoft.</p>
+      <p class="lead">Cada especialidad combina tecnología Cisco con su base Microsoft.</p>
     </div>
     <div class="grid g4"><a class="tile" href="#soluciones:infraestructura">
   <h3>Conectividad de sedes, WAN y red local</h3><p>Conectamos sedes, WAN y red local: la base sobre la que operan Microsoft 365 y Azure.</p><span class="count">4 productos Cisco</span></a><a class="tile" href="#soluciones:seguridad">
@@ -497,14 +511,9 @@ ol.aviso-list li::before{content:counter(av)}
 
 <section id="metodo">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Un modelo de punta a punta</h2></div>
-    <ol class="steps">
-      <li><b>Evaluamos</b><span>Diagnóstico Red + Nube gratuito, de 8 horas y remoto.</span></li>
-      <li><b>Diseñamos</b><span>Arquitecturas Cisco + Microsoft bajo CAF/WAF y Zero Trust.</span></li>
-      <li><b>Ejecutamos</b><span>Implementamos con mínima interrupción.</span></li>
-      <li><b>Acompañamos</b><span>Servicio gestionado y reporte ejecutivo mensual.</span></li>
-      <li><b>Optimizamos</b><span>Mejora continua de red, seguridad y experiencia.</span></li>
-    </ol>
+    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Siete servicios Consein</h2>
+      <p class="lead">Entregamos la oferta Cisco a través de los siete servicios del Modelo de Servicios Cisco de Consein, cada uno conectado con su plataforma Microsoft.</p></div>
+    <ol class="steps steps-7"><li><a href="#soluciones:seguridad" title="Cisco ISE (Premier), Cisco Secure Network Analytics (NDR), Cisco Telemetry Broker, Cisco Secure Access (SSE)"><b>Protección Avanzada M365</b><span>Seguridad</span><small>4 productos</small></a></li><li><a href="#soluciones:seguridad" title="Cisco Secure Access (SSE), Cisco Secure Access (ZTNA)"><b>Secure Access como Servicio</b><span>Seguridad · Servicios Empresariales</span><small>2 productos</small></a></li><li><a href="#soluciones:infraestructura" title="Meraki MX Security &amp; SD-WAN, Meraki MS (switching) y MR (wireless), Meraki MG (cellular gateways), Meraki MV (cámaras inteligentes), Meraki MT (sensores IoT), Meraki / Cisco SD-WAN multisede, Meraki Dashboard API y webhooks"><b>Meraki Cloud Managed</b><span>Infraestructura · Data y Analítica · Servicios Empresariales · Automatización</span><small>7 productos</small></a></li><li><a href="#soluciones:colaboracion" title="Cisco Room Bar / Room Bar Pro, Cisco Board Pro Series"><b>Espacios Cisco Rooms para Teams</b><span>Colaboración</span><small>2 productos</small></a></li><li><a href="#soluciones:infraestructura" title="Meraki MX Security &amp; SD-WAN, Cisco SD-WAN (Catalyst) para DC/HQ e IaaS, Meraki / Cisco SD-WAN multisede"><b><span class="nw">SD-WAN</span> Seguro</b><span>Infraestructura · Servicios Empresariales</span><small>3 productos</small></a></li><li><a href="#soluciones:seguridad" title="Cisco Secure Firewall"><b>Azure + Cisco Secure Firewall</b><span>Seguridad</span><small>1 producto</small></a></li><li><a href="#soluciones:inteligencia-artificial" title="Cisco AI Defense: AI Inventory y AI Supply Chain Risk Management, Cisco AI Defense: AI Model &amp; App Validation, Cisco AI Defense: AI Runtime Protection"><b>Cisco AI Defense</b><span>Inteligencia Artificial</span><small>3 productos</small></a></li></ol>
   </div>
 </section>
 
@@ -875,7 +884,7 @@ ol.aviso-list li::before{content:counter(av)}
   <div class="wrap">
     <p class="crumbs"><a href="#inicio">Inicio</a> › Ofertas de Productos</p>
     <h1>Programa Renueva: renovación de redes Cisco</h1>
-    <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo y migramos por fases, con planes de pago.</p>
+    <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
     <div class="actions"><a class="btn btn-primary" href="#inicio:contacto?interes=REN-01">Solicitar inventario gratuito</a><a class="btn btn-line" href="#productos:ofertas">Ver ofertas</a></div>
   </div>
 </section>
@@ -885,9 +894,9 @@ ol.aviso-list li::before{content:counter(av)}
       <div class="aviso-copy">
         <p class="aviso-tag"><span class="aviso-dot"></span>Oferta destacada · Renovación de hardware</p>
         <h2>Inventariamos gratis su hardware Cisco</h2>
-        <p class="aviso-text">Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y opciones de pago.</p>
-        <div class="aviso-stat"><b><small>hasta</small>10%</b><p>de incentivo por reemplazo al entregar sus equipos antiguos con Cisco Lifecycle Pay with Trade-In.<cite>Cisco · sujeto a disponibilidad en cada país</cite></p></div>
-        <ol class="aviso-list"><li>Inventariamos su base instalada y sus fechas de fin de soporte</li><li>Priorizamos por riesgo, criticidad y costo total</li><li>Renovamos por fases, con planes de pago previsibles</li></ol>
+        <p class="aviso-text">Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y alternativas de financiamiento bancario.</p>
+        <div class="aviso-stat"><b><small>financiamiento</small>local</b><p>Gestionamos su solicitud ante bancos locales. Cada banco estudia el caso y decide la factibilidad del financiamiento.</p></div>
+        <ol class="aviso-list"><li>Inventariamos su base instalada y sus fechas de fin de soporte</li><li>Priorizamos por riesgo, criticidad y costo total</li><li>Renovamos por fases y gestionamos el financiamiento con bancos locales</li></ol>
         <div class="actions">
           <a class="btn btn-primary" href="#inicio:contacto?interes=REN-01">Solicitar inventario gratuito</a>
           <a class="btn btn-line" href="#productos:autodiagnostico">Autodiagnóstico</a>
@@ -1042,15 +1051,15 @@ ol.aviso-list li::before{content:counter(av)}
 </div>
 </article><article class="card" id="ren-07">
   <h3>Renovación financiada</h3>
-  <p>Financiamos su renovación en cuotas previsibles con Cisco Capital.</p>
+  <p>Gestionamos ante bancos locales el financiamiento de su renovación, para distribuir la inversión en el tiempo.</p>
   <a class="more" href="#productos:ren-07" aria-label="Seguir leyendo: Renovación financiada">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-ren-07">
   <p class="code">REN-07 · Programa Renueva</p>
   <h2>Renovación financiada</h2>
-  <p class="value">Financiamos su renovación en cuotas previsibles con Cisco Capital.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas que necesitan renovar y cuidan su flujo de caja.</dd><dt>Qué resolvemos</dt><dd>Convertimos la renovación en un gasto programado.</dd><dt>Qué incluye</dt><dd><ul><li>Estructuramos planes de pago con Cisco Capital, según disponibilidad en cada país.</li><li>Gestionamos incentivos por entrega de equipos antiguos cuando el programa está vigente.</li><li>Ofrecemos equipos Cisco Refresh, remanufacturados y certificados.</li><li>Retiramos los equipos reemplazados de forma responsable.</li></ul></dd><dt>Resultado</dt><dd><strong>Renovamos su infraestructura con un desembolso inicial reducido.</strong></dd></dl>
-  <div class="extra"><p><b>Renovamos:</b> Todo el proyecto en un esquema de pagos</p><p><b>Valor Microsoft:</b> Combinable con la planificación de licencias Microsoft</p><p><b>Dato:</b> Cisco Lifecycle Pay with Trade-In ofrece hasta 10% de incentivo por reemplazo al entregar equipos existentes (Cisco, condiciones por país).</p></div>
-  <a class="btn btn-primary" href="#inicio:contacto?interes=REN-07">Revisemos sus opciones de pago</a>
+  <p class="value">Gestionamos ante bancos locales el financiamiento de su renovación, para distribuir la inversión en el tiempo.</p>
+  <dl><dt>Ideal para</dt><dd>Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.</dd><dt>Qué resolvemos</dt><dd>Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.</dd><dt>Qué incluye</dt><dd><ul><li>Preparamos el expediente técnico y económico del proyecto: alcance, equipos, costo total y plan por fases.</li><li>Presentamos el proyecto a bancos locales y acompañamos sus solicitudes de información.</li><li>Cada banco estudia el caso y decide la factibilidad, el monto y las condiciones del financiamiento.</li><li>Ajustamos el plan de renovación por fases a las condiciones que apruebe el banco.</li></ul></dd><dt>Resultado</dt><dd><strong>Le facilitamos el acceso a financiamiento bancario local para renovar por fases.</strong></dd></dl>
+  <div class="extra"><p><b>Renovamos:</b> Todo el proyecto de renovación, presentado a bancos locales</p><p><b>Valor Microsoft:</b> Combinable con la planificación de licencias Microsoft</p><p><b>Importante:</b> Consein realiza las gestiones con los bancos; la aprobación, el monto y las condiciones dependen de la evaluación de cada banco.</p></div>
+  <a class="btn btn-primary" href="#inicio:contacto?interes=REN-07">Exploremos su financiamiento</a>
 </div>
 </article><article class="card" id="ren-08">
   <h3>Ciclo de vida gestionado</h3>

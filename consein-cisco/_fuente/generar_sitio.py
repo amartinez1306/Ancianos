@@ -82,12 +82,12 @@ def arte_hero():
   <circle cx="{cx}" cy="{cy}" r="66" fill="url(#g-core)" class="core"/>
   <path d="M258 262a14 14 0 0 1 3-27.6 19 19 0 0 1 36.5 4.6 12 12 0 0 1 2.5 23z" class="cloud" transform="translate(0 -12)"/>
   <text x="{cx}" y="{cy + 22}" text-anchor="middle" class="core-label">MICROSOFT</text>
-  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">núcleo</text>
+  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">base</text>
 </svg></div>"""
 
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
-  <div class="layer l1"><span class="tag">Núcleo</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
+  <div class="layer l1"><span class="tag">Base</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
   <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad perimetral · Salas · Observabilidad</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
@@ -316,17 +316,17 @@ PRODUCTOS = [
      "dato": "Teams Rooms: 342% de ROI (Forrester TEI).",
      "cta": "Renovemos sus salas"},
     {"code": "REN-07", "titulo": "Renovación financiada",
-     "valor": "Financiamos su renovación en cuotas previsibles con Cisco Capital.",
-     "ideal": "Empresas que necesitan renovar y cuidan su flujo de caja.",
-     "resuelve": "Convertimos la renovación en un gasto programado.",
-     "incluye": ["Estructuramos planes de pago con Cisco Capital, según disponibilidad en cada país.",
-                 "Gestionamos incentivos por entrega de equipos antiguos cuando el programa está vigente.",
-                 "Ofrecemos equipos Cisco Refresh, remanufacturados y certificados.",
-                 "Retiramos los equipos reemplazados de forma responsable."],
-     "resultado": "Renovamos su infraestructura con un desembolso inicial reducido.",
-     "tec": ("Todo el proyecto en un esquema de pagos", "Combinable con la planificación de licencias Microsoft"),
-     "dato": "Cisco Lifecycle Pay with Trade-In ofrece hasta 10% de incentivo por reemplazo al entregar equipos existentes (Cisco, condiciones por país).",
-     "cta": "Revisemos sus opciones de pago"},
+     "valor": "Gestionamos ante bancos locales el financiamiento de su renovación, para distribuir la inversión en el tiempo.",
+     "ideal": "Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.",
+     "resuelve": "Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.",
+     "incluye": ["Preparamos el expediente técnico y económico del proyecto: alcance, equipos, costo total y plan por fases.",
+                 "Presentamos el proyecto a bancos locales y acompañamos sus solicitudes de información.",
+                 "Cada banco estudia el caso y decide la factibilidad, el monto y las condiciones del financiamiento.",
+                 "Ajustamos el plan de renovación por fases a las condiciones que apruebe el banco."],
+     "resultado": "Le facilitamos el acceso a financiamiento bancario local para renovar por fases.",
+     "tec": ("Todo el proyecto de renovación, presentado a bancos locales", "Combinable con la planificación de licencias Microsoft"),
+     "nota": "Consein realiza las gestiones con los bancos; la aprobación, el monto y las condiciones dependen de la evaluación de cada banco.",
+     "cta": "Exploremos su financiamiento"},
     {"code": "REN-08", "titulo": "Ciclo de vida gestionado",
      "valor": "Mantenemos su red siempre vigente con un inventario vivo y un plan anual de renovación.",
      "ideal": "Empresas que prefieren planificar la renovación con anticipación.",
@@ -386,6 +386,8 @@ def detalle(o, etiqueta, renovacion=False):
              else f"<p><b>Cisco:</b> {E(t1)} · <b>Microsoft:</b> {E(t2)}</p>")
     if o.get("dato"):
         extra += f"<p><b>Dato:</b> {E(o['dato'])}</p>"
+    if o.get("nota"):
+        extra += f"<p><b>Importante:</b> {E(o['nota'])}</p>"
     if o.get("nortia"):
         extra += f"<p><b>NortIA:</b> {E(o['nortia'])}</p>"
     return f"""<div class="detalle-src" id="detalle-{slug(o['code'])}">
@@ -567,13 +569,39 @@ AVISOS = {
     "productos": {
         "tag": "Oferta destacada · Renovación de hardware",
         "titulo": "Inventariamos gratis su hardware Cisco",
-        "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y opciones de pago.",
-        "cifra": "<small>hasta</small>10%", "cifra_txt": "de incentivo por reemplazo al entregar sus equipos antiguos con Cisco Lifecycle Pay with Trade-In.", "fuente": "Cisco · sujeto a disponibilidad en cada país",
+        "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y alternativas de financiamiento bancario.",
+        "cifra": "<small>financiamiento</small>local", "cifra_txt": "Gestionamos su solicitud ante bancos locales. Cada banco estudia el caso y decide la factibilidad del financiamiento.", "fuente": "",
         "lista_tipo": "ol",
-        "lista": ["Inventariamos su base instalada y sus fechas de fin de soporte", "Priorizamos por riesgo, criticidad y costo total", "Renovamos por fases, con planes de pago previsibles"],
+        "lista": ["Inventariamos su base instalada y sus fechas de fin de soporte", "Priorizamos por riesgo, criticidad y costo total", "Renovamos por fases y gestionamos el financiamiento con bancos locales"],
         "cta2": ("Autodiagnóstico", "#autodiagnostico"),
     },
 }
+
+
+def servicios_consein():
+    """Los 7 servicios (S1–S7) del Modelo de Servicios Cisco de Consein, derivados de la columna
+    'Servicio de origen' de la Nueva Matriz de Valor: nombre, áreas y productos de cada servicio."""
+    import re
+    serv = {}
+    for m in MATRIZ:
+        for o in m["origen"]:
+            mo = re.match(r"S(\d) · ([^(]+)", o)
+            n, nombre = int(mo.group(1)), mo.group(2).strip()
+            d = serv.setdefault(n, {"nombre": nombre, "areas": [], "productos": []})
+            if m["area"] not in d["areas"]:
+                d["areas"].append(m["area"])
+            if m["nombre"] not in d["productos"]:
+                d["productos"].append(m["nombre"])
+    nombres = {e["id"]: e["nombre"] for e in ESPECIALIDADES}
+    items = ""
+    for n in sorted(serv):
+        d = serv[n]
+        areas = " · ".join(nombres[a] for a in d["areas"])
+        k = len(d["productos"])
+        items += (f'<li><a href="soluciones.html#{d["areas"][0]}" title="{E(", ".join(d["productos"]))}">'
+                  f'<b>{E(d["nombre"])}</b><span>{E(areas)}</span>'
+                  f'<small>{k} {"producto" if k == 1 else "productos"}</small></a></li>')
+    return f'<ol class="steps steps-7">{items}</ol>'
 
 
 def sticker_renueva():
@@ -599,7 +627,7 @@ def aviso(variante):
         <p class="aviso-tag"><span class="aviso-dot"></span>{E(a['tag'])}</p>
         <h2>{E(a['titulo'])}</h2>
         <p class="aviso-text">{E(a['texto'])}</p>
-        <div class="aviso-stat"><b>{a['cifra']}</b><p>{E(a['cifra_txt'])}<cite>{E(a['fuente'])}</cite></p></div>
+        <div class="aviso-stat"><b>{a['cifra']}</b><p>{E(a['cifra_txt'])}{f"<cite>{E(a['fuente'])}</cite>" if a['fuente'] else ""}</p></div>
         <{a['lista_tipo']} class="aviso-list">{items}</{a['lista_tipo']}>
         <div class="actions">
           <a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a>
@@ -670,7 +698,7 @@ def inicio():
     <div class="section-head">
       <p class="eyebrow">Soluciones de Valor</p>
       <h2>Siete especialidades</h2>
-      <p class="lead">Cada especialidad combina tecnología Cisco con su núcleo Microsoft.</p>
+      <p class="lead">Cada especialidad combina tecnología Cisco con su base Microsoft.</p>
     </div>
     <div class="grid g4">{tiles}</div>
   </div>
@@ -678,14 +706,9 @@ def inicio():
 
 <section id="metodo">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Un modelo de punta a punta</h2></div>
-    <ol class="steps">
-      <li><b>Evaluamos</b><span>Diagnóstico Red + Nube gratuito, de 8 horas y remoto.</span></li>
-      <li><b>Diseñamos</b><span>Arquitecturas Cisco + Microsoft bajo CAF/WAF y Zero Trust.</span></li>
-      <li><b>Ejecutamos</b><span>Implementamos con mínima interrupción.</span></li>
-      <li><b>Acompañamos</b><span>Servicio gestionado y reporte ejecutivo mensual.</span></li>
-      <li><b>Optimizamos</b><span>Mejora continua de red, seguridad y experiencia.</span></li>
-    </ol>
+    <div class="section-head"><p class="eyebrow">Cómo trabajamos</p><h2>Siete servicios Consein</h2>
+      <p class="lead">Entregamos la oferta Cisco a través de los siete servicios del Modelo de Servicios Cisco de Consein, cada uno conectado con su plataforma Microsoft.</p></div>
+    {servicios_consein()}
   </div>
 </section>
 
@@ -874,7 +897,7 @@ def productos():
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Ofertas de Productos</p>
     <h1>Programa Renueva: renovación de redes Cisco</h1>
-    <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo y migramos por fases, con planes de pago.</p>
+    <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
   </div>
 </section>

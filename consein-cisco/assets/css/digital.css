@@ -302,3 +302,7 @@ dialog.detail{border-radius:20px;overflow:hidden}
 .sticker .st-core small{color:var(--green-2)}
 .sticker .st-core i{color:var(--green)}
 .sticker{filter:drop-shadow(0 0 18px rgba(88,187,71,.45)) drop-shadow(0 14px 30px rgba(0,0,0,.35))}
+
+/* 7 servicios (tema digital) */
+.steps.steps-7 li::before{font-size:.85rem;letter-spacing:.02em}
+.steps-7 small{background:rgba(88,187,71,.14);color:var(--green-ink)}

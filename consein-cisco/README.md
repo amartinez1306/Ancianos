@@ -1,6 +1,6 @@
 # Consein · Soluciones Cisco (sitio)
 
-Sitio de la sección Cisco de consein.com: Microsoft como núcleo, Cisco como acelerador.
+Sitio de la sección Cisco de consein.com: Microsoft como base, Cisco como acelerador.
 
 ## Cómo verlo
 - **Versión de un solo archivo (recomendada para presentar):** abra `Consein_Cisco_sitio_completo.html` con doble clic.
@@ -13,7 +13,7 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, método, resultados, nosotros, preguntas frecuentes, contacto |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 7 especialidades, Cómo trabajamos (7 servicios S1–S7), resultados, nosotros, preguntas frecuentes, contacto |
 | `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Nueva Matriz de Valor: criterio de selección, vista consolidada y 19 productos Cisco en 7 áreas |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
@@ -61,5 +61,5 @@ y datos estructurados schema.org (Organization, Service, BreadcrumbList, FAQPage
 - Confirmar el nivel de partnership y las certificaciones Cisco vigentes de Consein.
 - Validar la capacidad de entrega de cada oferta (en especial AI Defense, Hypershield y Secure AI Factory).
 - Revisar CSC-09 frente a Microsoft Entra Global Secure Access.
-- Confirmar con Cisco Capital los programas de financiamiento por país.
+- Acordar con los bancos locales de cada país el proceso de evaluación para la Renovación financiada (REN-07).
 - Conectar el formulario de contacto al CRM (hoy es una maqueta).

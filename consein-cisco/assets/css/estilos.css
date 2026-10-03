@@ -393,3 +393,17 @@ ol.aviso-list li::before{content:counter(av)}
   .hero h1{padding-right:0}
 }
 @media (prefers-reduced-motion:reduce){.sticker .st-ring{animation:none}}
+
+/* ==========================================================================
+   Cómo trabajamos: los 7 servicios del Modelo de Servicios Cisco de Consein
+   ========================================================================== */
+.steps.steps-7{grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
+.steps.steps-7 li::before{content:"S" counter(s)}
+.steps-7 a{display:block;text-decoration:none;color:inherit}
+.steps-7 a:hover b{color:var(--green-ink,var(--navy));text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px}
+.steps-7 b{display:block;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.steps-7 span{display:block;font-size:.82rem;color:var(--muted);line-height:1.45}
+.steps-7 small{display:inline-block;margin-top:8px;font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--navy);background:var(--soft);border-radius:20px;padding:2px 9px;white-space:nowrap}
+.steps-7 span.nw{display:inline;font-size:inherit;color:inherit;line-height:inherit}
+@media (max-width:1000px){.steps.steps-7{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:32px}}
+@media (max-width:600px){.steps.steps-7{grid-template-columns:1fr}}
