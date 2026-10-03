@@ -215,7 +215,7 @@ section.soft{background:var(--soft)}
 .band h2{margin:0;max-width:640px}
 
 /* Subpantalla de detalle */
-dialog.detail{width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);border:0;border-radius:var(--r);padding:0;box-shadow:0 30px 80px rgba(0,10,82,.25);color:var(--ink)}
+dialog.detail{width:min(760px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;border:0;border-radius:var(--r);padding:0;box-shadow:0 30px 80px rgba(0,10,82,.25);color:var(--ink)}
 dialog.detail::backdrop{background:rgba(0,10,82,.45)}
 .detail-in{padding:44px 44px 36px;position:relative}
 .detail-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border:1px solid var(--line);background:#fff;border-radius:50%;cursor:pointer;font-size:1.3rem;line-height:1;color:var(--navy)}
@@ -422,7 +422,7 @@ ol.aviso-list li::before{content:counter(av)}
 @media (max-width:600px){.steps.steps-6{grid-template-columns:1fr}.capa-transversal{grid-template-columns:1fr;gap:16px;padding:20px}}
 
 </style>
-<script type="application/json" id="paginas">{"inicio": {"title": "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein", "description": "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU."}, "soluciones": {"title": "Matriz de valor Cisco + Microsoft: 19 productos en 7 áreas | Consein", "description": "Productos Cisco que suman valor a Microsoft 365, Azure, Teams, Dynamics 365, Power BI y Copilot Studio: Meraki, Cisco SD-WAN, Secure Firewall, ISE, Secure Access, Room Bar, Board Pro y AI Defense."}, "productos": {"title": "Programa Renueva: renovación de equipos Cisco obsoletos | Consein", "description": "Renovamos switches, WiFi, routers, firewalls, servidores UCS y salas Cisco en fin de soporte. Inventario de obsolescencia sin costo, migración por fases y financiamiento."}}</script>
+<script type="application/json" id="paginas">{"inicio": {"title": "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein", "description": "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU."}, "soluciones": {"title": "Matriz de valor Cisco + Microsoft: 19 productos en 7 áreas | Consein", "description": "Productos Cisco que suman valor a Microsoft 365, Azure, Teams, Dynamics 365, Power BI y Copilot Studio: Meraki, Cisco SD-WAN, Secure Firewall, ISE, Secure Access, Room Bar, Board Pro y AI Defense."}, "productos": {"title": "Programa Renueva: renovación de equipos Cisco obsoletos | Consein", "description": "Renovamos switches, WiFi, routers, firewalls y salas Cisco en fin de soporte con Meraki, Cisco SD-WAN, Secure Firewall, Room Bar y Board Pro. Inventario gratuito, migración por fases y financiamiento con bancos locales."}}</script>
 </head>
 <body data-single>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -442,7 +442,7 @@ ol.aviso-list li::before{content:counter(av)}
             </div>
             <div class="mega-group">
               <a class="mega-l2" href="#productos"><b>Ofertas de Productos</b><small>Programa Renueva · 8 ofertas de renovación</small><em class="badge">Destacado · Renovación de hardware</em></a>
-              <ul><li><a href="#productos:ren-01">Inventario de obsolescencia</a></li><li><a href="#productos:ren-02">Campus y WiFi renovados</a></li><li><a href="#productos:ren-03">Sucursales con <span class="nw">SD-WAN</span></a></li><li><a href="#productos:ren-04">Renovación de firewalls</a></li><li><a href="#productos:ren-05">Datacenter híbrido</a></li><li><a href="#productos:ren-06">Salas y voz para Teams</a></li><li><a href="#productos:ren-07">Renovación financiada</a></li><li><a href="#productos:ren-08">Ciclo de vida gestionado</a></li></ul>
+              <ul><li><a href="#productos:ren-01">Inventario de obsolescencia</a></li><li><a href="#productos:ren-02">Campus y WiFi renovados</a></li><li><a href="#productos:ren-03">Sucursales con <span class="nw">SD-WAN</span></a></li><li><a href="#productos:ren-04">Renovación de firewalls</a></li><li><a href="#productos:ren-05">Conectividad de datacenter y nube</a></li><li><a href="#productos:ren-06">Salas para Teams</a></li><li><a href="#productos:ren-07">Renovación financiada</a></li><li><a href="#productos:ren-08">Ciclo de vida gestionado</a></li></ul>
             </div>
           </div>
         </li>
@@ -577,7 +577,7 @@ ol.aviso-list li::before{content:counter(av)}
         <div><label for="f-pais">País</label><select id="f-pais"><option>Venezuela</option><option>Panamá</option><option>República Dominicana</option><option>Estados Unidos</option><option>Otro</option></select></div>
       </div>
       <label for="f-interes">Solución de interés</label>
-      <select id="f-interes"><option value="">Quiero hablar con un especialista</option><optgroup label="Soluciones de Valor"><option value="infraestructura">Infraestructura</option><option value="seguridad">Seguridad</option><option value="colaboracion">Colaboración</option><option value="data-analitica">Data y Analítica</option><option value="servicios-empresariales">Servicios Empresariales</option><option value="automatizacion">Automatización</option><option value="inteligencia-artificial">Inteligencia Artificial</option></optgroup><optgroup label="Programa Renueva"><option value="REN-01">Inventario de obsolescencia</option><option value="REN-02">Campus y WiFi renovados</option><option value="REN-03">Sucursales con <span class="nw">SD-WAN</span></option><option value="REN-04">Renovación de firewalls</option><option value="REN-05">Datacenter híbrido</option><option value="REN-06">Salas y voz para Teams</option><option value="REN-07">Renovación financiada</option><option value="REN-08">Ciclo de vida gestionado</option></optgroup></select>
+      <select id="f-interes"><option value="">Quiero hablar con un especialista</option><optgroup label="Soluciones de Valor"><option value="infraestructura">Infraestructura</option><option value="seguridad">Seguridad</option><option value="colaboracion">Colaboración</option><option value="data-analitica">Data y Analítica</option><option value="servicios-empresariales">Servicios Empresariales</option><option value="automatizacion">Automatización</option><option value="inteligencia-artificial">Inteligencia Artificial</option></optgroup><optgroup label="Programa Renueva"><option value="REN-01">Inventario de obsolescencia</option><option value="REN-02">Campus y WiFi renovados</option><option value="REN-03">Sucursales con <span class="nw">SD-WAN</span></option><option value="REN-04">Renovación de firewalls</option><option value="REN-05">Conectividad de datacenter y nube</option><option value="REN-06">Salas para Teams</option><option value="REN-07">Renovación financiada</option><option value="REN-08">Ciclo de vida gestionado</option></optgroup></select>
       <label for="f-mensaje">Mensaje</label>
       <textarea id="f-mensaje" rows="3"></textarea>
       <button class="btn btn-primary" type="submit">Enviar</button>
@@ -967,7 +967,7 @@ ol.aviso-list li::before{content:counter(av)}
     <div class="section-head"><p class="eyebrow">Rutas de renovación</p><h2>De lo obsoleto a lo que potencia Microsoft</h2></div>
     <div class="table-scroll"><table class="table routes">
       <thead><tr><th>Renovamos</th><th>Hacia</th><th>Beneficio en Microsoft</th></tr></thead>
-      <tbody><tr><td>Switches de campus legados</td><td>Cisco Catalyst 9000 o Meraki MS</td><td>Segmentación Zero Trust con ISE e Intune y PoE para salas y teléfonos Teams.</td></tr><tr><td>WiFi de generaciones anteriores</td><td>WiFi de nueva generación Catalyst o Meraki</td><td>Mejor experiencia en Teams, Microsoft 365 y Copilot.</td></tr><tr><td>Routers de sucursal y MPLS</td><td>Catalyst 8000 o Meraki MX con <span class="nw">SD-WAN</span></td><td>Conexión directa con Azure Virtual WAN.</td></tr><tr><td>Firewalls legados</td><td>Cisco Secure Firewall</td><td>Eventos en Microsoft Sentinel y complemento de Azure Firewall.</td></tr><tr><td>Switching de datacenter legado</td><td>Nexus 9000 o ACI</td><td>Base para la operación híbrida con Azure Arc.</td></tr><tr><td>Servidores UCS antiguos</td><td>UCS actuales con Intersight</td><td>Azure Arc y Azure Local sobre hardware validado.</td></tr><tr><td>Video y telefonía legada</td><td>Room Kit, Board, Desk y teléfonos Cisco</td><td>Microsoft Teams Rooms y Teams Phone como plataforma única.</td></tr></tbody></table></div>
+      <tbody><tr><td>Switches de campus legados</td><td>Meraki MS (switching)</td><td>Red física con QoS para la voz y el video de Teams; acceso según el cumplimiento de Intune con Cisco ISE.</td></tr><tr><td>WiFi de generaciones anteriores</td><td>Meraki MR (wireless)</td><td>Wi-Fi gestionado en la nube para Microsoft Teams y Microsoft 365.</td></tr><tr><td>Routers de sucursal y MPLS</td><td>Meraki MX Security &amp; <span class="nw">SD-WAN</span></td><td>Conexión con Azure Virtual WAN y prioridad para Microsoft 365 y Teams.</td></tr><tr><td>Sedes sin enlace de respaldo</td><td>Meraki MG (cellular gateways)</td><td>Acceso a Microsoft 365 y Azure cuando falla el enlace principal.</td></tr><tr><td>Firewalls legados</td><td>Cisco Secure Firewall</td><td>Gobierno único de reglas con Azure Firewall y registros en Microsoft Sentinel.</td></tr><tr><td>Routers WAN de datacenter y sede central</td><td>Cisco <span class="nw">SD-WAN</span> (Catalyst) para DC/HQ e IaaS</td><td>Políticas por aplicación hasta Azure IaaS, con Azure Virtual WAN y ExpressRoute.</td></tr><tr><td>Video legado</td><td>Cisco Room Bar / Room Bar Pro y Board Pro Series</td><td>Microsoft Teams Rooms y la pizarra de Teams en hardware certificado.</td></tr></tbody></table></div>
     <p class="small" style="margin-top:16px">Validamos las fechas de fin de venta y de soporte de cada modelo contra los anuncios oficiales de Cisco durante el inventario.</p>
   </div>
 </section>
@@ -1002,26 +1002,26 @@ ol.aviso-list li::before{content:counter(av)}
 </div>
 </article><article class="card" id="ren-02">
   <h3>Campus y WiFi renovados</h3>
-  <p>Renovamos switches y WiFi con Cisco Catalyst 9000 o Meraki, listos para Zero Trust, Teams y Copilot.</p>
+  <p>Renovamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.</p>
   <a class="more" href="#productos:ren-02" aria-label="Seguir leyendo: Campus y WiFi renovados">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-ren-02">
   <p class="code">REN-02 · Programa Renueva</p>
   <h2>Campus y WiFi renovados</h2>
-  <p class="value">Renovamos switches y WiFi con Cisco Catalyst 9000 o Meraki, listos para Zero Trust, Teams y Copilot.</p>
-  <dl><dt>Ideal para</dt><dd>Oficinas y sedes con switches o WiFi de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Aceleramos el WiFi, segmentamos los puertos y habilitamos las políticas modernas de acceso.</dd><dt>Qué incluye</dt><dd><ul><li>Diseñamos con Catalyst 9000 o Meraki MS y WiFi de nueva generación.</li><li>Migramos por oleadas mientras su operación sigue activa.</li><li>Segmentamos con Cisco ISE e integramos Intune.</li><li>Retiramos los equipos antiguos de forma responsable.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos una red de campus segura, gestionable y lista para la IA.</strong></dd></dl>
-  <div class="extra"><p><b>Renovamos:</b> Switches y access points legados → Catalyst 9000 / Meraki</p><p><b>Valor Microsoft:</b> Teams, Microsoft 365, Copilot e Intune</p><p><b>Dato:</b> Con Meraki, 40% menos tiempo de inactividad y 80% menos tickets de red (Forrester TEI, 2025).</p></div>
+  <p class="value">Renovamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.</p>
+  <dl><dt>Ideal para</dt><dd>Oficinas y sedes con switches o WiFi de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Aceleramos la red local y el Wi-Fi y habilitamos el acceso según el cumplimiento de Intune.</dd><dt>Qué incluye</dt><dd><ul><li>Diseñamos la red LAN/WLAN gestionada en la nube con Meraki MS (switching) y Meraki MR (wireless).</li><li>Migramos por oleadas mientras su operación sigue activa.</li><li>Integramos Cisco ISE con el cumplimiento de Microsoft Intune y Entra ID.</li><li>Retiramos los equipos antiguos de forma responsable.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos una red local y un Wi-Fi gestionados en la nube, listos para Teams y Microsoft 365.</strong></dd></dl>
+  <div class="extra"><p><b>Renovamos:</b> Switches y access points legados → Meraki MS y Meraki MR</p><p><b>Valor Microsoft:</b> Microsoft Teams, Microsoft 365, Intune y Entra ID</p><p><b>Dato:</b> Con Meraki, 40% menos tiempo de inactividad y 80% menos tickets de red (Forrester TEI, 2025).</p></div>
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-02">Renovemos su campus</a>
 </div>
 </article><article class="card" id="ren-03">
   <h3>Sucursales con <span class="nw">SD-WAN</span></h3>
-  <p>Reemplazamos routers legados y enlaces MPLS por <span class="nw">SD-WAN</span> Cisco conectada a Azure Virtual WAN.</p>
+  <p>Reemplazamos routers legados y enlaces MPLS por Meraki MX Security &amp; <span class="nw">SD-WAN</span> conectado a Azure Virtual WAN.</p>
   <a class="more" href="#productos:ren-03" aria-label="Seguir leyendo: Sucursales con SD-WAN">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-ren-03">
   <p class="code">REN-03 · Programa Renueva</p>
   <h2>Sucursales con <span class="nw">SD-WAN</span></h2>
-  <p class="value">Reemplazamos routers legados y enlaces MPLS por <span class="nw">SD-WAN</span> Cisco conectada a Azure Virtual WAN.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas con routers de sucursal antiguos o enlaces MPLS.</dd><dt>Qué resolvemos</dt><dd>Protegemos el borde de internet de cada sucursal y reducimos el costo de los enlaces.</dd><dt>Qué incluye</dt><dd><ul><li>Instalamos Catalyst 8000 o Meraki MX con <span class="nw">SD-WAN</span>.</li><li>Conectamos cada sede con Azure Virtual WAN.</li><li>Priorizamos Teams, Microsoft 365 y Dynamics 365.</li><li>Configuramos respaldo por enlace celular cuando aplica.</li></ul></dd><dt>Resultado</dt><dd><strong>Logramos sucursales estables y más económicas de operar.</strong></dd></dl>
-  <div class="extra"><p><b>Renovamos:</b> Routers legados y MPLS → Catalyst 8000 / Meraki MX</p><p><b>Valor Microsoft:</b> Azure Virtual WAN, Microsoft 365</p><p><b>Dato:</b> En el estudio de Forrester sobre Meraki, una organización redujo en más de dos tercios su costo mensual de conectividad por sede al migrar desde MPLS (TEI, 2025).</p></div>
+  <p class="value">Reemplazamos routers legados y enlaces MPLS por Meraki MX Security &amp; <span class="nw">SD-WAN</span> conectado a Azure Virtual WAN.</p>
+  <dl><dt>Ideal para</dt><dd>Empresas con routers de sucursal antiguos o enlaces MPLS.</dd><dt>Qué resolvemos</dt><dd>Protegemos el borde de cada sucursal y priorizamos el tráfico de Microsoft 365 y Teams.</dd><dt>Qué incluye</dt><dd><ul><li>Instalamos Meraki MX Security &amp; <span class="nw">SD-WAN</span> en cada sucursal.</li><li>Conectamos cada sede con Azure Virtual WAN.</li><li>Priorizamos el tráfico de Microsoft 365, Teams y Dynamics 365.</li><li>Agregamos respaldo celular 4G/5G con Meraki MG cuando aplica.</li></ul></dd><dt>Resultado</dt><dd><strong>Logramos sucursales estables, gestionadas en la nube y conectadas a Azure.</strong></dd></dl>
+  <div class="extra"><p><b>Renovamos:</b> Routers legados y MPLS → Meraki MX Security &amp; <span class="nw">SD-WAN</span> y Meraki MG</p><p><b>Valor Microsoft:</b> Azure Virtual WAN, Microsoft 365, Teams y Dynamics 365</p><p><b>Dato:</b> En el estudio de Forrester sobre Meraki, una organización redujo en más de dos tercios su costo mensual de conectividad por sede al migrar desde MPLS (TEI, 2025).</p></div>
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-03">Modernicemos sus sucursales</a>
 </div>
 </article><article class="card" id="ren-04">
@@ -1037,27 +1037,27 @@ ol.aviso-list li::before{content:counter(av)}
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-04">Renovemos su perímetro</a>
 </div>
 </article><article class="card" id="ren-05">
-  <h3>Datacenter híbrido</h3>
-  <p>Renovamos su datacenter con Nexus 9000 y Cisco UCS, integrado con Azure Arc y Azure Local.</p>
-  <a class="more" href="#productos:ren-05" aria-label="Seguir leyendo: Datacenter híbrido">Seguir leyendo…</a>
+  <h3>Conectividad de datacenter y nube</h3>
+  <p>Renovamos la WAN entre su centro de datos, la sede central y Azure con Cisco <span class="nw">SD-WAN</span> (Catalyst).</p>
+  <a class="more" href="#productos:ren-05" aria-label="Seguir leyendo: Conectividad de datacenter y nube">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-ren-05">
   <p class="code">REN-05 · Programa Renueva</p>
-  <h2>Datacenter híbrido</h2>
-  <p class="value">Renovamos su datacenter con Nexus 9000 y Cisco UCS, integrado con Azure Arc y Azure Local.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas con switching de datacenter o servidores Cisco UCS de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Ampliamos la capacidad, renovamos el soporte y habilitamos la operación híbrida.</dd><dt>Qué incluye</dt><dd><ul><li>Renovamos el switching con Nexus 9000 o ACI.</li><li>Instalamos servidores Cisco UCS gestionados con Intersight.</li><li>Integramos Azure Arc y, cuando aplica, Azure Local sobre hardware validado.</li><li>Planificamos en conjunto la renovación de Windows Server.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos un datacenter moderno que opera en conjunto con Azure.</strong></dd></dl>
-  <div class="extra"><p><b>Renovamos:</b> Nexus y UCS legados → Nexus 9000 / ACI y UCS actuales</p><p><b>Valor Microsoft:</b> Azure Arc, Azure Local, Windows Server</p><p><b>Dato:</b> Intersight: 192% de ROI y 50% menos tiempo de resolución (Forrester TEI, 2025).</p></div>
-  <a class="btn btn-primary" href="#inicio:contacto?interes=REN-05">Planifiquemos su datacenter</a>
+  <h2>Conectividad de datacenter y nube</h2>
+  <p class="value">Renovamos la WAN entre su centro de datos, la sede central y Azure con Cisco <span class="nw">SD-WAN</span> (Catalyst).</p>
+  <dl><dt>Ideal para</dt><dd>Empresas con routers WAN de centro de datos o sede central de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Extendemos las políticas por aplicación hasta Azure IaaS, con failover y visibilidad del desempeño.</dd><dt>Qué incluye</dt><dd><ul><li>Diseñamos el overlay WAN entre centro de datos, sedes y nube con Cisco <span class="nw">SD-WAN</span> (Catalyst).</li><li>Conectamos con Azure mediante Azure Virtual WAN o ExpressRoute.</li><li>Configuramos políticas por aplicación y failover.</li><li>Damos visibilidad del desempeño de la WAN de punta a punta.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos una WAN de centro de datos y sede central lista para operar con Azure.</strong></dd></dl>
+  <div class="extra"><p><b>Renovamos:</b> Routers WAN de datacenter y sede central → Cisco <span class="nw">SD-WAN</span> (Catalyst) para DC/HQ e IaaS</p><p><b>Valor Microsoft:</b> Azure Virtual WAN y ExpressRoute</p></div>
+  <a class="btn btn-primary" href="#inicio:contacto?interes=REN-05">Planifiquemos su WAN</a>
 </div>
 </article><article class="card" id="ren-06">
-  <h3>Salas y voz para Teams</h3>
-  <p>Convertimos sus salas y teléfonos legados en experiencias Microsoft Teams con hardware Cisco certificado.</p>
-  <a class="more" href="#productos:ren-06" aria-label="Seguir leyendo: Salas y voz para Teams">Seguir leyendo…</a>
+  <h3>Salas para Teams</h3>
+  <p>Convertimos sus salas de video legadas en salas Microsoft Teams Rooms con Cisco Room Bar y Board Pro Series.</p>
+  <a class="more" href="#productos:ren-06" aria-label="Seguir leyendo: Salas para Teams">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-ren-06">
   <p class="code">REN-06 · Programa Renueva</p>
-  <h2>Salas y voz para Teams</h2>
-  <p class="value">Convertimos sus salas y teléfonos legados en experiencias Microsoft Teams con hardware Cisco certificado.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas con videoconferencia o telefonía IP de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Unificamos la colaboración en una sola plataforma.</dd><dt>Qué incluye</dt><dd><ul><li>Instalamos Cisco Room Kit, Board y Desk certificados para Teams Rooms.</li><li>Incorporamos teléfonos Cisco compatibles con Teams Phone.</li><li>Migramos la telefonía a Teams Phone.</li><li>Capacitamos a los usuarios y damos soporte.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos una sola plataforma de colaboración con el mejor hardware.</strong></dd></dl>
-  <div class="extra"><p><b>Renovamos:</b> Video y telefonía legada → hardware Cisco certificado</p><p><b>Valor Microsoft:</b> Microsoft Teams Rooms, Teams Phone</p><p><b>Dato:</b> Teams Rooms: 342% de ROI (Forrester TEI).</p></div>
+  <h2>Salas para Teams</h2>
+  <p class="value">Convertimos sus salas de video legadas en salas Microsoft Teams Rooms con Cisco Room Bar y Board Pro Series.</p>
+  <dl><dt>Ideal para</dt><dd>Empresas con equipos de videoconferencia de generaciones anteriores.</dd><dt>Qué resolvemos</dt><dd>Unificamos la colaboración en Microsoft Teams Rooms, con hardware certificado.</dd><dt>Qué incluye</dt><dd><ul><li>Instalamos Cisco Room Bar o Room Bar Pro, certificados para Teams Rooms, en salas pequeñas y medianas.</li><li>Llevamos la reunión híbrida y la pizarra de Teams a Cisco Board Pro Series.</li><li>Configuramos Microsoft Teams Rooms y el soporte del hardware de sala.</li><li>Capacitamos a los usuarios y damos soporte.</li></ul></dd><dt>Resultado</dt><dd><strong>Le entregamos salas Microsoft Teams Rooms con hardware Cisco certificado.</strong></dd></dl>
+  <div class="extra"><p><b>Renovamos:</b> Video legado → Cisco Room Bar / Room Bar Pro y Board Pro Series</p><p><b>Valor Microsoft:</b> Microsoft Teams Rooms y Whiteboard</p><p><b>Dato:</b> Teams Rooms: 342% de ROI (Forrester TEI).</p></div>
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-06">Renovemos sus salas</a>
 </div>
 </article><article class="card" id="ren-07">
@@ -1068,7 +1068,7 @@ ol.aviso-list li::before{content:counter(av)}
   <p class="code">REN-07 · Programa Renueva</p>
   <h2>Renovación financiada</h2>
   <p class="value">Gestionamos ante bancos locales el financiamiento de su renovación, para distribuir la inversión en el tiempo.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.</dd><dt>Qué resolvemos</dt><dd>Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.</dd><dt>Qué incluye</dt><dd><ul><li>Preparamos el expediente técnico y económico del proyecto: alcance, equipos, costo total y plan por fases.</li><li>Presentamos el proyecto a bancos locales y acompañamos sus solicitudes de información.</li><li>Cada banco estudia el caso y decide la factibilidad, el monto y las condiciones del financiamiento.</li><li>Ajustamos el plan de renovación por fases a las condiciones que apruebe el banco.</li></ul></dd><dt>Resultado</dt><dd><strong>Le facilitamos el acceso a financiamiento bancario local para renovar por fases.</strong></dd></dl>
+  <dl><dt>Ideal para</dt><dd>Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.</dd><dt>Qué resolvemos</dt><dd>Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.</dd><dt>Qué incluye</dt><dd><ul><li>Ayudamos a preparar el expediente técnico y económico del proyecto: alcance, equipos, costo total y plan por fases.</li><li>Presentamos el proyecto a bancos locales y acompañamos sus solicitudes de información.</li><li>Cada banco estudia el caso y decide la factibilidad, el monto y las condiciones del financiamiento.</li><li>Ajustamos el plan de renovación por fases a las condiciones que apruebe el banco.</li></ul></dd><dt>Resultado</dt><dd><strong>Le facilitamos el acceso a financiamiento bancario local para renovar por fases.</strong></dd></dl>
   <div class="extra"><p><b>Renovamos:</b> Todo el proyecto de renovación, presentado a bancos locales</p><p><b>Valor Microsoft:</b> Combinable con la planificación de licencias Microsoft</p><p><b>Importante:</b> Consein realiza las gestiones con los bancos; la aprobación, el monto y las condiciones dependen de la evaluación de cada banco.</p></div>
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-07">Exploremos su financiamiento</a>
 </div>
@@ -1080,7 +1080,7 @@ ol.aviso-list li::before{content:counter(av)}
   <p class="code">REN-08 · Programa Renueva</p>
   <h2>Ciclo de vida gestionado</h2>
   <p class="value">Mantenemos su red siempre vigente con un inventario vivo y un plan anual de renovación.</p>
-  <dl><dt>Ideal para</dt><dd>Empresas que prefieren planificar la renovación con anticipación.</dd><dt>Qué resolvemos</dt><dd>Anticipamos la obsolescencia antes de que se convierta en una emergencia.</dd><dt>Qué incluye</dt><dd><ul><li>Mantenemos un inventario vivo de la base instalada.</li><li>Emitimos alertas de fin de venta y de soporte.</li><li>Elaboramos el plan anual de renovación y su presupuesto.</li><li>Operamos con Consein Connected.</li></ul></dd><dt>Resultado</dt><dd><strong>Le aseguramos una infraestructura siempre soportada y un presupuesto predecible.</strong></dd></dl>
+  <dl><dt>Ideal para</dt><dd>Empresas que prefieren planificar la renovación con anticipación.</dd><dt>Qué resolvemos</dt><dd>Anticipamos la obsolescencia antes de que se convierta en una emergencia.</dd><dt>Qué incluye</dt><dd><ul><li>Mantenemos un inventario vivo de la base instalada.</li><li>Emitimos alertas de fin de venta y de soporte.</li><li>Elaboramos el plan anual de renovación y su presupuesto.</li><li>Administramos la base instalada como servicio recurrente.</li></ul></dd><dt>Resultado</dt><dd><strong>Le aseguramos una infraestructura siempre soportada y un presupuesto predecible.</strong></dd></dl>
   <div class="extra"><p><b>Renovamos:</b> Renovación planificada y continua</p><p><b>Valor Microsoft:</b> Alineada con el ciclo de vida de su plataforma Microsoft</p></div>
   <a class="btn btn-primary" href="#inicio:contacto?interes=REN-08">Planifiquemos su ciclo de vida</a>
 </div>

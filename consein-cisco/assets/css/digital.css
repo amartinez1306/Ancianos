@@ -226,7 +226,7 @@ section.soft .steps li::before{box-shadow:0 0 0 4px var(--soft),0 0 0 6px var(--
 .table-scroll{overflow:visible}
 
 /* ---------- Subpantalla de detalle ---------- */
-dialog.detail{border-radius:20px;overflow:hidden}
+dialog.detail{border-radius:20px;overflow-y:auto;overscroll-behavior:contain}
 .detail-in{border-top:5px solid var(--green)}
 .detail .code{display:inline-block;background:rgba(88,187,71,.14);color:var(--green-ink);border-radius:20px;padding:4px 12px}
 .detail h2{color:var(--navy)}

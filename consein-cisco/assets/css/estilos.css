@@ -207,7 +207,7 @@ section.soft{background:var(--soft)}
 .band h2{margin:0;max-width:640px}
 
 /* Subpantalla de detalle */
-dialog.detail{width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);border:0;border-radius:var(--r);padding:0;box-shadow:0 30px 80px rgba(0,10,82,.25);color:var(--ink)}
+dialog.detail{width:min(760px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow-y:auto;overscroll-behavior:contain;border:0;border-radius:var(--r);padding:0;box-shadow:0 30px 80px rgba(0,10,82,.25);color:var(--ink)}
 dialog.detail::backdrop{background:rgba(0,10,82,.45)}
 .detail-in{padding:44px 44px 36px;position:relative}
 .detail-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border:1px solid var(--line);background:#fff;border-radius:50%;cursor:pointer;font-size:1.3rem;line-height:1;color:var(--navy)}
