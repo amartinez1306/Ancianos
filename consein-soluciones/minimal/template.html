@@ -94,9 +94,6 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .area h3{margin:0}
 .area p{margin:0;color:var(--muted);font-size:.95rem;flex:1}
 .area .link{--c:var(--pc);align-self:flex-start;margin-top:6px}
-.band{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:36px 40px;border:1px solid var(--line);border-left:4px solid #B8734A;border-radius:16px}
-.band h2{margin:0 0 6px;font-size:1.5rem}
-.band p{margin:0;color:var(--muted)}
 
 /* Listas minimalistas */
 .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -117,6 +114,18 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .line-h{grid-column:1/-1;margin:20px 0 -6px;font:600 .74rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--c);display:flex;align-items:center;gap:12px}
 .line-h::after{content:"";flex:1;height:1px;background:var(--line)}
 .line-h:first-child{margin-top:0}
+
+/* Sticker NortIA (parte de la especialidad IA) */
+.area.has-sticker{position:relative;padding-top:48px}
+.sticker{position:absolute;top:-16px;right:0;display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 7px;border-radius:999px;
+  background:var(--brand);color:#fff;text-decoration:none;cursor:pointer;transform:rotate(-3deg);box-shadow:0 8px 20px rgba(0,15,118,.25);border:2px solid #fff;transition:transform .25s}
+.sticker:hover,.sticker:focus-visible{transform:rotate(0) translateY(-2px);outline:none}
+.sticker .ring{flex:0 0 30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.sticker .ring svg{width:18px;height:18px;color:var(--brand)}
+.sticker b{display:block;font-family:var(--title);font-size:.95rem;line-height:1}
+.sticker small{display:block;font-size:.58rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-top:3px;white-space:nowrap}
+.sticker.inline{position:relative;top:auto;transform:none}
+.dd-menu a.sub{padding-left:32px;font-size:.82rem;color:var(--muted)}
 
 /* Evidencia */
 .ev b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--c);line-height:1.05;margin-bottom:8px}
@@ -191,7 +200,6 @@ footer img{height:20px;width:auto}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stats div{border-left:0!important;border-top:1px solid var(--line)}
   .norte{grid-template-columns:1fr 1fr}
-  .band{flex-direction:column;align-items:flex-start;padding:28px}
   .sheet{padding:56px 22px 32px;border-left:0;border-top:4px solid var(--c)}
 }
 </style>
@@ -260,8 +268,16 @@ function setMeta(title, desc){
 }
 
 /* ---------- Menú ---------- */
+/* Sticker NortIA: programa de adopción dentro de la especialidad IA */
+const COMPASS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>';
+function stickerHTML(inline){
+  const inner = `<span class="ring">${COMPASS}</span><span><b>NortIA</b><small>Programa de adopción IA</small></span>`;
+  return inline ? `<a class="sticker inline" href="#/nortia">${inner}</a>`
+                : `<span class="sticker" role="link" tabindex="0" data-go="#/nortia" aria-label="NortIA, programa de adopción IA">${inner}</span>`;
+}
 function menu(){
-  $('#dd').innerHTML = PAGES.map(p => `<a href="#/${p.slug}"><span class="dot" style="background:${p.color}"></span>${esc(p.nav)}</a>`).join('');
+  $('#dd').innerHTML = DATA.practicas.map(p => `<a href="#/${p.slug}"><span class="dot" style="background:${p.color}"></span>${esc(p.nav)}</a>` +
+    (p.num === '07' ? `<a class="sub" href="#/nortia">↳ NortIA · Programa de adopción IA</a>` : '')).join('');
   $('#interes').innerHTML = '<option>Diagnóstico Consein 360</option>' + PAGES.map(p =>
     `<optgroup label="${esc(p.nav)}">${p.offerings.map(o => `<option>${esc(o.name)}</option>`).join('')}</optgroup>`).join('');
 }
@@ -322,15 +338,10 @@ function home(){
     <p class="kicker">Especialidades</p>
     <h2>Siete especialidades, un solo ecosistema</h2>
     <div class="grid g4" style="margin-top:40px">${DATA.practicas.map(p => `
-      <a class="area" href="#/${p.slug}" style="--pc:${p.color}">
-        <h3>${esc(p.nav)}</h3><p>${esc(p.promesa)}</p><span class="link">Ver solución</span>
+      <a class="area${p.num === '07' ? ' has-sticker' : ''}" href="#/${p.slug}" style="--pc:${p.color}">
+        ${p.num === '07' ? stickerHTML() : ''}<h3>${esc(p.nav)}</h3><p>${esc(p.promesa)}</p><span class="link">Ver solución</span>
       </a>`).join('')}
     </div>
-  </div></section>
-
-  <section class="tight"><div class="wrap">
-    <div class="band"><div><p class="kicker" style="--c:#B8734A">Metodología propia</p><h2>NortIA</h2><p>Adoptamos la inteligencia artificial con método: Radar, Norte, Vector y Brújula.</p></div>
-    <a class="btn ghost" href="#/nortia">Conocer NortIA</a></div>
   </div></section>
 
   <section><div class="wrap">
@@ -373,7 +384,7 @@ function practice(p){
     <p class="kicker">Ofertas</p>
     <h2>Elija por dónde empezar</h2>
     <div style="margin-top:36px">${offers(p)}</div>
-    ${p.num === '07' ? `<p style="margin-top:28px"><a class="link" href="#/nortia">Conozca también NortIA, nuestra metodología de adopción de IA</a></p>` : ''}
+    ${p.num === '07' ? `<div style="margin-top:32px">${stickerHTML(true)}</div>` : ''}
   </div></section>
 
   <section class="tight"><div class="wrap">
@@ -442,6 +453,7 @@ function render(){
 }
 
 document.addEventListener('click', e => {
+  const go = e.target.closest('[data-go]'); if (go) { e.preventDefault(); location.hash = go.dataset.go; return; }
   const more = e.target.closest('[data-offer]');
   if (more) { openOffer(more.dataset.offer); return; }
   if (e.target.closest('[data-close]')) { closeOffer(); return; }
@@ -452,7 +464,11 @@ document.addEventListener('click', e => {
     $('#contacto').scrollIntoView({ behavior: 'smooth' });
   }
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOffer(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeOffer();
+  const go = e.target.closest && e.target.closest('[data-go]');
+  if (go && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); location.hash = go.dataset.go; }
+});
 $('#form').addEventListener('submit', e => {   // Formulario de muestra: conectar al CRM en producción
   e.preventDefault(); const f = e.currentTarget;
   if (!f.checkValidity()) { f.reportValidity(); return; }
