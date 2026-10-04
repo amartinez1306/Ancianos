@@ -1546,7 +1546,25 @@
      "resultado": "Expedientes completos desde el primer contacto, menos llamadas al call center y asegurados que renuevan.",
      "linea": "Seguros"
     }
-   ]
+   ],
+   "oferta_valor": {
+    "titulo": "Inteligencia artificial que genera resultados",
+    "texto": "Llevamos la IA del piloto a la operación. Diseñamos, construimos y operamos agentes y soluciones de IA generativa conectados a sus datos y procesos, con seguridad y gobierno desde el primer día.",
+    "pilares": [
+     [
+      "Agentes en producción",
+      "Convertimos casos de negocio en agentes que operan y se miden."
+     ],
+     [
+      "Soluciones por industria",
+      "Banca, legal, seguros, comercial y gestión del conocimiento."
+     ],
+     [
+      "Adopción con NortIA",
+      "Su equipo usa, construye y gobierna la IA con método."
+     ]
+    ]
+   }
   }
  ]
 }
