@@ -253,6 +253,8 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .phase h3{font-size:1.5rem;margin:8px 0}
 .phase p{margin:0;font-size:.92rem;color:#c3c9e6}
 .phase svg{width:40px;height:40px;color:var(--green);margin-bottom:14px}
+.phase .dur{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 12px;border-radius:12px;line-height:1.35;background:rgba(88,187,71,.15);border:1px solid rgba(88,187,71,.45);color:#fff;font-size:.78rem;font-weight:600}
+.phase .dur::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
 .norte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .norte div{padding:24px 20px;border-radius:var(--r);background:#fff;border:1px solid var(--line);position:relative;overflow:hidden}
 .norte b{font-family:var(--title);font-size:3rem;line-height:1;color:var(--navy)}
@@ -672,7 +674,7 @@ function nortia(n){
   <section class="dark"><div class="grid-bg" aria-hidden="true"></div><div class="wrap">
     <p class="kicker">Cuatro fases</p>
     <h2>Radar · Norte · Vector · <span class="hl">Brújula</span></h2>
-    <div class="phases" style="margin-top:40px">${n.fases.map((f,i) => `<div class="phase">${svg(phIcons[i])}<span class="ph">Fase ${i}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p></div>`).join('')}</div>
+    <div class="phases" style="margin-top:40px">${n.fases.map((f,i) => `<div class="phase">${svg(phIcons[i])}<span class="ph">Fase ${i}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${f[2] ? `<span class="dur">${esc(f[2])}</span>` : ''}</div>`).join('')}</div>
     <p class="lead" style="margin-top:32px">${esc(n.ciclo)}</p>
   </div></section>
 

@@ -164,6 +164,7 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .phase small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#B8734A;font-weight:600}
 .phase h3{font-size:1.4rem;margin:6px 0}
 .phase p{margin:0;color:var(--muted);font-size:.95rem}
+.phase .dur{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:99px;border:1px solid #B8734A;color:#B8734A;font-size:.78rem;font-weight:500}
 .norte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .norte div{border:1px solid var(--line);border-radius:14px;padding:20px}
 .norte b{font-family:var(--title);font-size:2rem;color:#B8734A;line-height:1}
@@ -503,7 +504,7 @@ function nortia(n){
 
   <section class="tight"><div class="wrap">
     <p class="kicker">Cuatro fases</p>
-    <div class="grid g4" style="margin-top:24px">${n.fases.map((f,i) => `<div class="phase"><small>Fase ${i}</small><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p></div>`).join('')}</div>
+    <div class="grid g4" style="margin-top:24px">${n.fases.map((f,i) => `<div class="phase"><small>Fase ${i}</small><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${f[2] ? `<span class="dur">${esc(f[2])}</span>` : ''}</div>`).join('')}</div>
     <p class="lead" style="margin-top:32px">${esc(n.ciclo)}</p>
   </div></section>
 
