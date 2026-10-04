@@ -175,8 +175,7 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
   .area.feature .fside{padding:18px 0 0;border-left:0;border-top:1px dashed rgba(27,36,91,.18)}
   .actions .sticker{margin-left:0}
 }
-.dd-menu a.sub{padding-left:42px;font-size:.84rem;color:#aab1d4}
-.dd-menu a.sub::before{content:"↳";margin-left:-18px;margin-right:6px;color:var(--green)}
+.dd-menu a.sub{padding-left:30px;font-size:.84rem;color:#aab1d4}
 @media (prefers-reduced-motion:reduce){.sticker::after{animation:none}}
 
 
@@ -455,7 +454,7 @@ function stickerHTML(inline){
 }
 function menu(){
   $('#dd').innerHTML = DATA.practicas.map(p => `<a href="#/${p.slug}">${svg(p.num)}${esc(p.nav)}</a>` +
-    (p.num === '07' ? `<a class="sub" href="#/nortia">NortIA · Programa de adopción IA</a>` : '')).join('');
+    (p.num === '07' ? `<a class="sub" href="#/nortia">${svg('nortia')}NortIA · Programa de adopción IA</a>` : '')).join('');
   $('#interes').innerHTML = '<option>Diagnóstico Consein 360</option>' + PAGES.map(p =>
     `<optgroup label="${esc(p.nav)}">${p.offerings.map(o => `<option>${esc(o.name)}</option>`).join('')}</optgroup>`).join('');
 }

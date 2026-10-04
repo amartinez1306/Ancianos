@@ -62,7 +62,7 @@ nav.main{display:flex;gap:28px;align-items:center}
 nav.main a{text-decoration:none;font-size:.9rem;color:var(--ink)}
 nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .dd{position:relative}
-.dd-menu{position:absolute;right:-20px;top:calc(100% + 18px);background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;min-width:280px;display:none}
+.dd-menu{position:absolute;right:-20px;top:calc(100% + 18px);background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;min-width:320px;display:none}
 .dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
 .dd-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
 .dd-menu a{display:flex;gap:10px;align-items:center;padding:9px 12px;border-radius:8px;font-size:.88rem}
@@ -149,7 +149,8 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .line-h{scroll-margin-top:96px}
 @media (max-width:960px){.ov-grid{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}}
 @media (max-width:720px){.area.feature{grid-column:auto;flex-direction:column}.area.feature .fside{padding:16px 0 0;border-left:0;border-top:1px solid var(--line)}.actions .sticker{margin-left:0}}
-.dd-menu a.sub{padding-left:32px;font-size:.82rem;color:var(--muted)}
+.dd-menu a.sub{padding-left:26px;font-size:.82rem;color:var(--muted)}
+.dd-menu .compass-ico{width:14px;height:14px;flex:0 0 14px;color:var(--brand)}
 
 /* Evidencia */
 .ev b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--c);line-height:1.05;margin-bottom:8px}
@@ -315,7 +316,7 @@ function stickerHTML(inline){
 }
 function menu(){
   $('#dd').innerHTML = DATA.practicas.map(p => `<a href="#/${p.slug}"><span class="dot" style="background:${p.color}"></span>${esc(p.nav)}</a>` +
-    (p.num === '07' ? `<a class="sub" href="#/nortia">↳ NortIA · Programa de adopción IA</a>` : '')).join('');
+    (p.num === '07' ? `<a class="sub" href="#/nortia"><svg class="compass-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>NortIA · Programa de adopción IA</a>` : '')).join('');
   $('#interes').innerHTML = '<option>Diagnóstico Consein 360</option>' + PAGES.map(p =>
     `<optgroup label="${esc(p.nav)}">${p.offerings.map(o => `<option>${esc(o.name)}</option>`).join('')}</optgroup>`).join('');
 }
