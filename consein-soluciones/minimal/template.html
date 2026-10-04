@@ -115,15 +115,19 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .line-h::after{content:"";flex:1;height:1px;background:var(--line)}
 .line-h:first-child{margin-top:0}
 
-/* Sticker NortIA (programa de adopción dentro de la especialidad IA) */
-.sticker{position:relative;display:inline-flex;align-items:center;gap:10px;padding:7px 18px 7px 7px;border-radius:999px;vertical-align:middle;
-  background:var(--brand);color:#fff;text-decoration:none;cursor:pointer;transform:rotate(-2deg);box-shadow:0 8px 20px rgba(0,15,118,.22);border:2px solid #fff;transition:transform .25s}
-.sticker:hover,.sticker:focus-visible{transform:rotate(0) translateY(-2px);outline:none}
-.sticker .ring{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
-.sticker .ring svg{width:18px;height:18px;color:var(--brand)}
-.sticker b{display:block;font-family:var(--title);font-size:1rem;line-height:1}
-.sticker small{display:block;font-size:.58rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-top:3px;white-space:nowrap}
-.actions .sticker{margin-left:6px}
+/* Sello NortIA: insignia redonda del programa de adopción IA (parte de la especialidad IA) */
+.sticker{position:relative;display:inline-grid;place-items:center;width:var(--seal,112px);height:var(--seal,112px);flex:0 0 auto;border-radius:50%;
+  text-decoration:none;cursor:pointer;transform:rotate(-8deg);transition:transform .3s;filter:drop-shadow(0 10px 18px rgba(0,0,0,.22));vertical-align:middle}
+.sticker:hover,.sticker:focus-visible{transform:rotate(0) scale(1.06);outline:none}
+.sticker:focus-visible{box-shadow:0 0 0 3px #61FC22}
+.sticker svg{width:100%;height:100%;display:block;overflow:visible}
+.sticker .spin{transform-origin:60px 60px;animation:sealspin 22s linear infinite}
+.sticker:hover .spin{animation-duration:8s}
+@keyframes sealspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sticker .spin{animation:none}}
+.actions{align-items:center}
+.actions .sticker{--seal:118px;margin-left:12px}
+.area.feature .fside .sticker{--seal:128px}
 /* Tarjeta destacada de IA en la portada */
 .area.feature{grid-column:span 2;flex-direction:row;gap:28px;align-items:stretch}
 .area.feature .fmain{display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
@@ -290,11 +294,23 @@ function setMeta(title, desc){
 /* ---------- Menú ---------- */
 const lineId = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 /* Sticker NortIA: programa de adopción dentro de la especialidad IA */
-const COMPASS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>';
+let sealN = 0;
 function stickerHTML(inline){
-  const inner = `<span class="ring">${COMPASS}</span><span><b>NortIA</b><small>Programa de adopción IA</small></span>`;
-  return inline ? `<a class="sticker" href="#/nortia">${inner}</a>`
-                : `<span class="sticker" role="link" tabindex="0" data-go="#/nortia" aria-label="NortIA, programa de adopción IA">${inner}</span>`;
+  const id = 'seal' + (++sealN);
+  const ring = 'PROGRAMA DE ADOPCIÓN IA • PROGRAMA DE ADOPCIÓN IA • ';
+  const svgSeal = `<svg viewBox="0 0 120 120" aria-hidden="true">
+    <defs><path id="${id}" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+    <circle cx="60" cy="60" r="58" fill="#fff"/>
+    <circle cx="60" cy="60" r="58" fill="none" stroke="#000F76" stroke-width="2"/>
+    <circle cx="60" cy="60" r="53.5" fill="none" stroke="#61FC22" stroke-width="1" stroke-dasharray="1.5 3"/>
+    <g class="spin"><text font-family="Poppins,Arial,sans-serif" font-size="9" font-weight="700" fill="#000F76"><textPath href="#${id}" textLength="282" lengthAdjust="spacing">${ring}</textPath></text></g>
+    <circle cx="60" cy="60" r="35" fill="#000F76"/>
+    <circle cx="60" cy="60" r="35" fill="none" stroke="#61FC22" stroke-width="2.5"/>
+    <g transform="translate(51 35) scale(.75)" fill="none" stroke="#61FC22" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="#61FC22"/></g>
+    <text x="60" y="73" text-anchor="middle" font-family="Haltto,Poppins,Arial,sans-serif" font-size="15.5" font-weight="700" fill="#fff">NortIA</text>
+  </svg>`;
+  return inline ? `<a class="sticker" href="#/nortia" aria-label="NortIA, programa de adopción IA">${svgSeal}</a>`
+                : `<span class="sticker" role="link" tabindex="0" data-go="#/nortia" aria-label="NortIA, programa de adopción IA">${svgSeal}</span>`;
 }
 function menu(){
   $('#dd').innerHTML = DATA.practicas.map(p => `<a href="#/${p.slug}"><span class="dot" style="background:${p.color}"></span>${esc(p.nav)}</a>` +
