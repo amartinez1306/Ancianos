@@ -556,23 +556,102 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .step--sec { border-color: var(--green); }
 .step--wide { grid-column: span 2; }
 
-/* Panel MAC T-12 */
-.mac { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
-.mac > * { min-width: 0; }
-.months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; margin: 6px 0 10px; }
-.months span { position: relative; height: 34px; border-radius: 6px; background: rgba(255,255,255,.08); transform-origin: bottom; transform: scaleY(.2); transition: transform .8s cubic-bezier(.2,.8,.2,1); }
-.dash.is-visible .months span { transform: scaleY(1); }
-.months span.is-mesa { background: var(--green); }
-.months span.is-kick { background: var(--blue-soft); }
-.months__axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; font-family: var(--font-mono); font-size: 10.5px; color: rgba(255,255,255,.45); text-align: center; }
-.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 6px; font-size: 12.5px; }
-.legend span { display: inline-flex; align-items: center; gap: 8px; }
-.legend i { width: 10px; height: 10px; border-radius: 3px; background: rgba(255,255,255,.2); }
-.legend .k { background: var(--blue-soft); }
-.legend .m { background: var(--green); }
-.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
-.team div { padding: 12px; border-radius: 10px; background: rgba(255,255,255,.05); border: 1px solid var(--line-dark); font-size: 12.5px; line-height: 1.4; }
-.team b { display: block; font-family: var(--font-title); font-size: 20px; color: #fff; }
+/* MAC T-12 · Línea de tiempo */
+.hl--navy { background: linear-gradient(90deg, var(--navy-600), var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mac-head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: end; margin-bottom: 48px; }
+.mac-head > * { min-width: 0; }
+.mac-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mac-kpis li { padding: 18px 20px; border-radius: var(--radius-sm); background: var(--navy-50); border: 1px solid var(--line); font-size: 13.5px; line-height: 1.45; }
+.mac-kpis b { display: block; font-family: var(--font-title); font-size: 34px; line-height: 1.05; color: var(--navy); }
+.mac-kpis li:first-child { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
+.mac-kpis li:first-child b { color: var(--green); }
+.ms--inline { gap: 5px; font-size: 13px; color: var(--ink); vertical-align: -2px; }
+.ms--inline svg { width: 13px; height: 13px; }
+
+.tl-panel { position: relative; padding: 28px 32px 22px; border-radius: 24px; background-color: var(--navy); color: var(--text-light); box-shadow: 0 30px 70px rgba(27,36,91,.28); overflow: hidden; }
+.tl-panel::before { content: ""; position: absolute; right: -120px; top: -160px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(rgba(88,187,71,.22), transparent 65%); pointer-events: none; }
+.tl-panel__bar { position: relative; display: flex; align-items: center; gap: 8px; }
+.tl-panel__bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.2); }
+.tl-panel__bar i:first-child { background: var(--green); }
+.tl-panel__bar span { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.55); }
+.tl-legend { position: relative; display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 18px 0 8px; font-size: 12.5px; }
+.tl-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.tl-legend i, .tl__item li::before { flex: none; width: 18px; height: 18px; border-radius: 5px; background-position: center; background-size: 12px; background-repeat: no-repeat; }
+
+/* Marcadores por tipo de hito */
+.tl__item li.t-gov::before, i.t-gov { background-color: rgba(111,134,255,.18); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f86ff' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M4 6h16M4 12h10M4 18h13'/%3E%3C/svg%3E"); }
+.tl__item li.t-ms::before, i.t-ms { background-color: rgba(255,255,255,.95); background-size: 11px !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 23'%3E%3Crect x='1' y='1' width='10' height='10' fill='%23f25022'/%3E%3Crect x='12' y='1' width='10' height='10' fill='%237fba00'/%3E%3Crect x='1' y='12' width='10' height='10' fill='%2300a4ef'/%3E%3Crect x='12' y='12' width='10' height='10' fill='%23ffb900'/%3E%3C/svg%3E"); }
+.tl__item li.t-check::before, i.t-check { background-color: rgba(88,187,71,.2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358bb47' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E"); }
+.tl__item li.t-review::before, i.t-review { background-color: rgba(255,255,255,.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 17 6-6 4 4 8-8'/%3E%3Cpath d='M15 7h6v6'/%3E%3C/svg%3E"); }
+
+/* Rejilla: fila 1 hitos superiores · fila 2 eje · fila 3 hitos inferiores */
+.tl { --gap: 26px; position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto 72px auto; column-gap: 10px; margin-top: 18px; }
+.tl__list { display: contents; }
+.tl__axis { grid-column: 1 / -1; grid-row: 2; position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 10px; align-items: center; z-index: 2; }
+.tl__rail { position: absolute; left: 0; right: 0; top: 50%; height: 6px; margin-top: -3px; border-radius: 999px; background: rgba(255,255,255,.08); }
+.tl__rail::after { content: ""; position: absolute; right: -14px; top: 50%; margin-top: -9px; border: 9px solid transparent; border-left: 14px solid var(--green); border-right: 0; }
+.tl__fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--blue-soft), var(--green)); box-shadow: 0 0 18px rgba(88,187,71,.45); transition: width 2.6s cubic-bezier(.4,.1,.2,1); }
+.tl__spark { position: absolute; top: 50%; left: 0; width: 70px; height: 2px; margin-top: -1px; background: linear-gradient(90deg, transparent, #fff, transparent); opacity: 0; }
+.is-visible .tl__fill { width: 100%; }
+.is-visible .tl__spark { animation: spark 4s 2.6s linear infinite; }
+@keyframes spark { 0% { left: 0; opacity: 0; } 10% { opacity: .9; } 90% { opacity: .9; } 100% { left: calc(100% - 70px); opacity: 0; } }
+
+.tl__m { grid-column: var(--m); grid-row: 1; justify-self: center; position: relative; display: grid; place-items: center; }
+.tl__m b { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; transform: rotate(45deg) scale(.6); background: var(--navy-800); border: 1.5px solid rgba(255,255,255,.25); opacity: .4; transition: transform .5s cubic-bezier(.3,1.6,.5,1), opacity .4s, background .4s, border-color .4s, box-shadow .4s; transition-delay: calc(var(--i) * .36s + .2s); }
+.is-visible .tl__m b { transform: rotate(45deg) scale(1); opacity: 1; background: var(--navy-600); border-color: var(--green); box-shadow: 0 0 0 6px rgba(88,187,71,.12), 0 0 24px rgba(88,187,71,.35); }
+.tl__m--end b { background: var(--green) !important; border-color: var(--green) !important; }
+.tl__m--minor { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.35); }
+.tl__label { transition: opacity .4s; transition-delay: calc(var(--i) * .36s + .2s); opacity: .4; }
+.is-visible .tl__label { opacity: 1; }
+.tl__label { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-title); font-weight: 700; font-size: 13px; color: #fff; pointer-events: none; }
+.tl__m--end .tl__label { color: var(--navy); }
+
+/* Tarjetas de hito */
+.tl__item { grid-column: var(--c) / span var(--s); position: relative; padding: 16px 16px 14px; border-radius: 14px; background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.03)); border: 1px solid var(--line-dark); backdrop-filter: blur(2px); opacity: 0; transition: opacity .6s, transform .6s, border-color .25s, box-shadow .25s; transition-delay: calc(var(--i) * .36s + .35s); }
+.tl__item--up { grid-row: 1; align-self: end; margin-bottom: var(--gap); transform: translateY(-14px); }
+.tl__item--down { grid-row: 3; align-self: start; margin-top: var(--gap); transform: translateY(14px); }
+.is-visible .tl__item { opacity: 1; transform: none; }
+.tl__item:hover { border-color: rgba(88,187,71,.6); box-shadow: 0 18px 40px rgba(0,0,0,.28); transition-delay: 0s; }
+/* Conector hacia el eje */
+.tl__item::after { content: ""; position: absolute; left: var(--x); width: 2px; margin-left: -1px; height: calc(var(--gap) + 10px); background: linear-gradient(var(--c1, rgba(88,187,71,.9)), var(--c2, rgba(88,187,71,.1))); }
+.tl__item--up::after { top: 100%; }
+.tl__item--down::after { bottom: 100%; --c1: rgba(88,187,71,.1); --c2: rgba(88,187,71,.9); }
+.tl__item::before { content: ""; position: absolute; left: var(--x); width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(88,187,71,.18); }
+.tl__item--up::before { bottom: -4px; }
+.tl__item--down::before { top: -4px; }
+.tl__when { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
+.tl__when span { padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--text-light); font-size: 10.5px; letter-spacing: .04em; }
+.tl__item h3 { font-size: 16.5px; color: #fff; margin-bottom: 8px; line-height: 1.25; }
+.tl__item ul { display: grid; gap: 6px; }
+.tl__item li { display: flex; gap: 9px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: var(--text-light); }
+.tl__item li::before { content: ""; margin-top: 1px; }
+.tl__item--end { border-color: rgba(88,187,71,.5); background: linear-gradient(160deg, rgba(88,187,71,.18), rgba(88,187,71,.04)); }
+
+@media (max-width: 1080px) {
+  .mac-head { grid-template-columns: 1fr; gap: 32px; }
+}
+/* Móvil/tableta: línea de tiempo vertical */
+@media (max-width: 960px) {
+  .tl { display: block; position: relative; padding-left: 34px; margin-top: 22px; }
+  .tl::before { content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: linear-gradient(var(--blue-soft), var(--green)); }
+  .tl__axis { display: none; }
+  .tl__list { display: grid; gap: 14px; }
+  .tl__item, .tl__item--up, .tl__item--down { grid-column: auto; grid-row: auto; margin: 0; transform: translateX(12px); }
+  .is-visible .tl__item { transform: none; }
+  .tl__item::after { display: none; }
+  .tl__item::before, .tl__item--up::before, .tl__item--down::before { left: -28px; top: 18px; bottom: auto; width: 14px; height: 14px; margin-left: 0; border-radius: 4px; transform: rotate(45deg); background: var(--navy-600); border: 1.5px solid var(--green); }
+  .tl__item--end::before { background: var(--green); }
+  .tl-panel { padding: 22px 18px 18px; }
+}
+@media (max-width: 600px) {
+  .mac-kpis { grid-template-columns: 1fr 1fr; }
+  .mac-kpis b { font-size: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tl__fill { width: 100%; }
+  .tl__item { opacity: 1; transform: none; }
+  .tl__m b { opacity: 1; transform: rotate(45deg); }
+}
 
 /* Fuentes */
 .sources { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; }
@@ -584,7 +663,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
 
 @media (max-width: 1080px) {
-  .why, .mac, .included, .sources { grid-template-columns: 1fr; gap: 48px; }
+  .why, .included, .sources { grid-template-columns: 1fr; gap: 48px; }
   .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .conclusion.conclusion--in { grid-column: span 2; }
@@ -602,14 +681,12 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .figures, .route, .checklist, .sources ol { grid-template-columns: 1fr; }
   .fig--wide, .step--wide, .conclusion.conclusion--in, .figures > .fig:nth-last-of-type(1) { grid-column: auto; }
-  .team { grid-template-columns: 1fr; }
   .conclusion { grid-template-columns: 1fr; padding: 20px; }
   .trust { padding: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ring__val { stroke-dasharray: var(--p) 100; }
   .roi__fill { width: var(--w); }
-  .months span { transform: none; }
 }
 </style>
 
@@ -791,7 +868,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <p class="lead" style="margin:18px 0 22px">Las licencias no generan valor por existir: lo generan cuando están bien asignadas, se usan, se miden y se gobiernan.</p>
           <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a su organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
           <p>Con 40 años de trayectoria, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que su negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
-          <div class="mac-card"><b>MAC</b><span>Modelo de Atención al Cliente de Consein: un equipo multidisciplinario da seguimiento a su inversión durante <strong>12 meses</strong> y la transforma en resultados medibles.</span></div>
+          <div class="mac-card"><b>MAC</b><span>Modelo de Atención al Cliente de Consein: un equipo multidisciplinario da seguimiento a su inversión durante <strong>12 meses</strong> y la transforma en resultados medibles. <a href="#mac" style="font-weight:500;color:var(--green-600);white-space:nowrap">Ver línea de tiempo →</a></span></div>
         </div>
 
         <div class="reveal">
@@ -885,6 +962,192 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     </div>
   </section>
 
+  <!-- ============ Ruta en 7 pasos ============ -->
+  <section class="section section--tint dots-bg" id="ruta" aria-labelledby="t-ruta">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <span class="kicker">La ruta Consein</span>
+        <h2 class="title-l" id="t-ruta">7 pasos para un licenciamiento inteligente</h2>
+        <p class="lead">Un recorrido probado del diagnóstico a la mejora continua. Los pasos 5 y 6 se ejecutan bajo el <a href="#mac" style="color:var(--green-600);font-weight:500">MAC durante 12 meses (T-12)</a>.</p>
+      </div>
+
+      <!-- Línea de ruta -->
+      <div class="track reveal" aria-hidden="true">
+        <svg viewBox="0 0 1132 96">
+          <defs><linearGradient id="trk" x1="0" x2="1"><stop offset="0" stop-color="#1b245b"/><stop offset="1" stop-color="#58bb47"/></linearGradient></defs>
+          <line x1="40" y1="62" x2="1092" y2="62" stroke="#dfe3f2" stroke-width="6" stroke-linecap="round"/>
+          <line class="track__line" x1="40" y1="62" x2="1092" y2="62" stroke="url(#trk)" stroke-width="2"/>
+          <path d="M638 22 V12 H930 V22" fill="none" stroke="#58bb47" stroke-width="1.5"/>
+          <rect x="726" y="0" width="116" height="24" rx="12" fill="#58bb47"/>
+          <text x="784" y="16.5" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#1b245b" letter-spacing="1">MAC · T-12</text>
+          <g font-family="Haltto, Poppins, sans-serif" font-weight="700" font-size="13" text-anchor="middle">
+            <circle cx="40" cy="62" r="20" fill="#1b245b"/><text x="40" y="67" fill="#fff">01</text>
+            <circle cx="215" cy="62" r="20" fill="#1b245b"/><text x="215" y="67" fill="#fff">02</text>
+            <circle cx="390" cy="62" r="20" fill="#1b245b"/><text x="390" y="67" fill="#fff">03</text>
+            <circle cx="566" cy="62" r="20" fill="#1b245b"/><text x="566" y="67" fill="#fff">04</text>
+            <circle cx="741" cy="62" r="22" fill="#58bb47"/><text x="741" y="67" fill="#1b245b">05</text>
+            <circle cx="916" cy="62" r="22" fill="#58bb47"/><text x="916" y="67" fill="#1b245b">06</text>
+            <circle cx="1092" cy="62" r="20" fill="#fff" stroke="#58bb47" stroke-width="2"/><text x="1092" y="67" fill="#1b245b">07</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="route">
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-compass"/></svg></span><span class="step__num">01</span></div>
+          <h3>Descubrir</h3>
+          <p>Entendemos sus objetivos, estructura, sedes, usuarios, cargas de trabajo, contratos vigentes y planes de crecimiento.</p>
+          <p class="step__result"><b>Resultado:</b> mapa de necesidades y alcance.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-search"/></svg></span><span class="step__num">02</span></div>
+          <h3>Diagnosticar</h3>
+          <p>Construimos el inventario y la línea base: licencias adquiridas, asignadas y en uso, vencimientos, duplicidades y riesgos de cumplimiento.</p>
+          <p class="step__result"><b>Resultado:</b> radiografía de licenciamiento con hallazgos priorizados.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><span class="step__num">03</span></div>
+          <h3>Diseñar</h3>
+          <p>Definimos perfiles de usuario, capacidades requeridas, modalidad contractual (CSP, MCA o EA) y la arquitectura de licencias alineada al roadmap.</p>
+          <p class="step__result"><b>Resultado:</b> estrategia objetivo y escenarios de decisión.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-cart"/></svg></span><span class="step__num">04</span></div>
+          <h3>Adquirir y activar</h3>
+          <p>Acompañamos la compra, renovación o True-up; asignamos licencias, habilitamos servicios y guiamos la adopción inicial.</p>
+          <p class="step__result"><b>Resultado:</b> entorno habilitado y plan de activación.</p>
+        </article>
+        <article class="step step--mac reveal">
+          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-trend"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">05</span></div>
+          <h3>Optimizar</h3>
+          <p>Durante los 12 meses del MAC revisamos consumo, asignaciones, adopción y crecimiento. Las mesas técnicas periódicas analizan tendencias tecnológicas y priorizan ajustes: reasignar, cambiar de plan, consolidar o activar capacidades que ya están pagadas.</p>
+          <p class="step__result"><b>Resultado:</b> backlog de optimización y ahorros documentados.</p>
+        </article>
+        <article class="step step--mac reveal">
+          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-gov"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">06</span></div>
+          <h3>Administrar y gobernar</h3>
+          <p>Pre-kickoff «base cero», gerente de cuenta y equipo multidisciplinario de Consein. Roles, indicadores, seguimiento periódico, cuatro mesas técnicas anuales y una hoja de ruta para el control, la trazabilidad y la evolución ordenada del licenciamiento.</p>
+          <p class="step__result"><b>Resultado:</b> modelo de gobierno, indicadores, comités y roadmap vivo.</p>
+        </article>
+        <article class="step step--sec step--wide reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--green-100);color:var(--green-600)"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><span class="step__num">07</span></div>
+          <h3>Proteger: datos y privacidad</h3>
+          <p>Alineamos licencias y configuraciones con la protección y la privacidad de los datos: identidad y acceso, clasificación y etiquetado de información sensible, prevención de pérdida de datos, retención, gestión de riesgos de privacidad y controles para el uso seguro de IA y Copilot.</p>
+          <p class="step__result"><b>Resultado:</b> plan de protección y privacidad de datos basado en riesgo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAC T-12 · Línea de tiempo ============ -->
+  <section class="section" id="mac" aria-labelledby="t-mac">
+    <div class="container">
+      <div class="mac-head reveal">
+        <div>
+          <span class="kicker">Modelo de Atención al Cliente (MAC)</span>
+          <h2 class="title-l" id="t-mac">12 meses cuidando <span class="hl hl--navy">su inversión</span></h2>
+          <p class="lead" style="margin-top:18px">Pasos 5 y 6 de la ruta: un gerente de cuenta y un equipo multidisciplinario de Consein dan seguimiento a su licenciamiento con hitos planificados, talleres Microsoft y revisiones proactivas.</p>
+        </div>
+        <ul class="mac-kpis" aria-label="El MAC en cifras">
+          <li><b>12</b><span>meses de acompañamiento</span></li>
+          <li><b>7</b><span>hitos planificados</span></li>
+          <li><b>2</b><span>talleres de tecnología <span class="ms ms--inline"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span></span></li>
+          <li><b>2</b><span>verificaciones de uso de la plataforma</span></li>
+        </ul>
+      </div>
+
+      <div class="tl-panel grid-bg reveal">
+        <div class="tl-panel__bar">
+          <i></i><i></i><i></i>
+          <span>mac · t-12 · línea de tiempo</span>
+        </div>
+
+        <div class="tl-legend" aria-hidden="true">
+          <span><i class="t-gov"></i>Gobierno y planificación</span>
+          <span><i class="t-ms"></i>Taller tecnología Microsoft</span>
+          <span><i class="t-check"></i>Verificación y oportunidades</span>
+          <span><i class="t-review"></i>Revisión proactiva</span>
+        </div>
+
+        <div class="tl">
+          <!-- Eje de 12 meses (decorativo; los hitos están en la lista) -->
+          <div class="tl__axis" aria-hidden="true">
+            <span class="tl__rail"><span class="tl__fill"></span><span class="tl__spark"></span></span>
+            <span class="tl__m" style="--m:1;--i:0"><b></b><span class="tl__label">M1</span></span>
+            <span class="tl__m tl__m--minor" style="--m:3"></span>
+            <span class="tl__m" style="--m:2;--i:1"><b></b><span class="tl__label">M2</span></span>
+            <span class="tl__m" style="--m:4;--i:2"><b></b><span class="tl__label">M4</span></span>
+            <span class="tl__m tl__m--minor" style="--m:5"></span>
+            <span class="tl__m" style="--m:6;--i:3"><b></b><span class="tl__label">M6</span></span>
+            <span class="tl__m tl__m--minor" style="--m:7"></span>
+            <span class="tl__m" style="--m:8;--i:4"><b></b><span class="tl__label">M8</span></span>
+            <span class="tl__m tl__m--minor" style="--m:9"></span>
+            <span class="tl__m" style="--m:10;--i:5"><b></b><span class="tl__label">M10</span></span>
+            <span class="tl__m tl__m--minor" style="--m:11"></span>
+            <span class="tl__m tl__m--end" style="--m:12;--i:6"><b></b><span class="tl__label">M12</span></span>
+          </div>
+
+          <ol class="tl__list">
+            <li class="tl__item tl__item--down" style="--c:1;--s:2;--x:25%;--i:0">
+              <p class="tl__when">Mes 1 <span>Inicio</span></p>
+              <h3>Inicio de convenio / fase</h3>
+              <ul>
+                <li class="t-gov">Pre-kickoff «base cero»: línea base, roles e indicadores.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--up" style="--c:1;--s:3;--x:50%;--i:1">
+              <p class="tl__when">Mes 2 <span>Arranque</span></p>
+              <h3>Plan anual y kickoff</h3>
+              <ul>
+                <li class="t-gov">Plan anual de licenciamiento.</li>
+                <li class="t-gov">KickOff del equipo de trabajo y gerente de cuenta.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--down" style="--c:3;--s:3;--x:50%;--i:2">
+              <p class="tl__when">Mes 4 <span>Adopción</span></p>
+              <h3>Taller tecnología Microsoft</h3>
+              <ul>
+                <li class="t-ms">Capacidades de la plataforma contratada aplicadas a su negocio.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--up" style="--c:5;--s:3;--x:50%;--i:3">
+              <p class="tl__when">Mes 6 <span>Medio término</span></p>
+              <h3>Verificación de uso</h3>
+              <ul>
+                <li class="t-check">Uso correcto de la plataforma adquirida.</li>
+                <li class="t-check">Áreas de oportunidad para el uso de la tecnología.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--down" style="--c:7;--s:3;--x:50%;--i:4">
+              <p class="tl__when">Mes 8 <span>Crecimiento</span></p>
+              <h3>Revisión proactiva del crecimiento</h3>
+              <ul>
+                <li class="t-review">Usuarios, consumo y planes ajustados al crecimiento.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--up" style="--c:9;--s:3;--x:50%;--i:5">
+              <p class="tl__when">Mes 10 <span>Optimización</span></p>
+              <h3>Verificación y taller</h3>
+              <ul>
+                <li class="t-check">Uso correcto de la plataforma adquirida.</li>
+                <li class="t-ms">Taller tecnología Microsoft.</li>
+              </ul>
+            </li>
+            <li class="tl__item tl__item--down tl__item--end" style="--c:10;--s:3;--x:83.33%;--i:6">
+              <p class="tl__when">Mes 12 <span>Cierre</span></p>
+              <h3>Revisión de cumplimiento</h3>
+              <ul>
+                <li class="t-review">Conciliación, True-up / renovación y roadmap del siguiente ciclo.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="dash__foot"><span class="live"></span><span>Licenciamiento <b>gobernado</b> por el MAC de Consein · gerente de cuenta y equipo multidisciplinario durante los 12 meses</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ Cifras ============ -->
   <section class="section section--dark grid-bg" id="cifras" aria-labelledby="t-cifras">
     <div class="container">
@@ -959,122 +1222,6 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============ Ruta en 7 pasos ============ -->
-  <section class="section section--tint dots-bg" id="ruta" aria-labelledby="t-ruta">
-    <div class="container">
-      <div class="section__head section__head--center reveal">
-        <span class="kicker">La ruta Consein</span>
-        <h2 class="title-l" id="t-ruta">7 pasos para un licenciamiento inteligente</h2>
-        <p class="lead">Un recorrido probado del diagnóstico a la mejora continua. Los pasos 5 y 6 se ejecutan bajo el MAC durante 12 meses (T-12).</p>
-      </div>
-
-      <!-- Línea de ruta -->
-      <div class="track reveal" aria-hidden="true">
-        <svg viewBox="0 0 1132 96">
-          <defs><linearGradient id="trk" x1="0" x2="1"><stop offset="0" stop-color="#1b245b"/><stop offset="1" stop-color="#58bb47"/></linearGradient></defs>
-          <line x1="40" y1="62" x2="1092" y2="62" stroke="#dfe3f2" stroke-width="6" stroke-linecap="round"/>
-          <line class="track__line" x1="40" y1="62" x2="1092" y2="62" stroke="url(#trk)" stroke-width="2"/>
-          <path d="M638 22 V12 H930 V22" fill="none" stroke="#58bb47" stroke-width="1.5"/>
-          <rect x="726" y="0" width="116" height="24" rx="12" fill="#58bb47"/>
-          <text x="784" y="16.5" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#1b245b" letter-spacing="1">MAC · T-12</text>
-          <g font-family="Haltto, Poppins, sans-serif" font-weight="700" font-size="13" text-anchor="middle">
-            <circle cx="40" cy="62" r="20" fill="#1b245b"/><text x="40" y="67" fill="#fff">01</text>
-            <circle cx="215" cy="62" r="20" fill="#1b245b"/><text x="215" y="67" fill="#fff">02</text>
-            <circle cx="390" cy="62" r="20" fill="#1b245b"/><text x="390" y="67" fill="#fff">03</text>
-            <circle cx="566" cy="62" r="20" fill="#1b245b"/><text x="566" y="67" fill="#fff">04</text>
-            <circle cx="741" cy="62" r="22" fill="#58bb47"/><text x="741" y="67" fill="#1b245b">05</text>
-            <circle cx="916" cy="62" r="22" fill="#58bb47"/><text x="916" y="67" fill="#1b245b">06</text>
-            <circle cx="1092" cy="62" r="20" fill="#fff" stroke="#58bb47" stroke-width="2"/><text x="1092" y="67" fill="#1b245b">07</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="route">
-        <article class="step reveal">
-          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-compass"/></svg></span><span class="step__num">01</span></div>
-          <h3>Descubrir</h3>
-          <p>Entendemos sus objetivos, estructura, sedes, usuarios, cargas de trabajo, contratos vigentes y planes de crecimiento.</p>
-          <p class="step__result"><b>Resultado:</b> mapa de necesidades y alcance.</p>
-        </article>
-        <article class="step reveal">
-          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-search"/></svg></span><span class="step__num">02</span></div>
-          <h3>Diagnosticar</h3>
-          <p>Construimos el inventario y la línea base: licencias adquiridas, asignadas y en uso, vencimientos, duplicidades y riesgos de cumplimiento.</p>
-          <p class="step__result"><b>Resultado:</b> radiografía de licenciamiento con hallazgos priorizados.</p>
-        </article>
-        <article class="step reveal">
-          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><span class="step__num">03</span></div>
-          <h3>Diseñar</h3>
-          <p>Definimos perfiles de usuario, capacidades requeridas, modalidad contractual (CSP, MCA o EA) y la arquitectura de licencias alineada al roadmap.</p>
-          <p class="step__result"><b>Resultado:</b> estrategia objetivo y escenarios de decisión.</p>
-        </article>
-        <article class="step reveal">
-          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-cart"/></svg></span><span class="step__num">04</span></div>
-          <h3>Adquirir y activar</h3>
-          <p>Acompañamos la compra, renovación o True-up; asignamos licencias, habilitamos servicios y guiamos la adopción inicial.</p>
-          <p class="step__result"><b>Resultado:</b> entorno habilitado y plan de activación.</p>
-        </article>
-        <article class="step step--mac reveal">
-          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-trend"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">05</span></div>
-          <h3>Optimizar</h3>
-          <p>Durante los 12 meses del MAC revisamos consumo, asignaciones, adopción y crecimiento. Las mesas técnicas periódicas analizan tendencias tecnológicas y priorizan ajustes: reasignar, cambiar de plan, consolidar o activar capacidades que ya están pagadas.</p>
-          <p class="step__result"><b>Resultado:</b> backlog de optimización y ahorros documentados.</p>
-        </article>
-        <article class="step step--mac reveal">
-          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-gov"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">06</span></div>
-          <h3>Administrar y gobernar</h3>
-          <p>Pre-kickoff «base cero», gerente de cuenta y equipo multidisciplinario de Consein. Roles, indicadores, seguimiento periódico, cuatro mesas técnicas anuales y una hoja de ruta para el control, la trazabilidad y la evolución ordenada del licenciamiento.</p>
-          <p class="step__result"><b>Resultado:</b> modelo de gobierno, indicadores, comités y roadmap vivo.</p>
-        </article>
-        <article class="step step--sec step--wide reveal">
-          <div class="step__top"><span class="card__icon" style="background:var(--green-100);color:var(--green-600)"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><span class="step__num">07</span></div>
-          <h3>Proteger: datos y privacidad</h3>
-          <p>Alineamos licencias y configuraciones con la protección y la privacidad de los datos: identidad y acceso, clasificación y etiquetado de información sensible, prevención de pérdida de datos, retención, gestión de riesgos de privacidad y controles para el uso seguro de IA y Copilot.</p>
-          <p class="step__result"><b>Resultado:</b> plan de protección y privacidad de datos basado en riesgo.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MAC T-12 ============ -->
-  <section class="section" id="mac" aria-labelledby="t-mac">
-    <div class="container mac">
-      <div class="reveal">
-        <span class="kicker">Modelo de Atención al Cliente (MAC)</span>
-        <h2 class="title-l" id="t-mac">12 meses cuidando su inversión</h2>
-        <p class="lead" style="margin-top:18px">La diferencia está en el acompañamiento continuo: un equipo multidisciplinario que da seguimiento a su licenciamiento y lo transforma en resultados medibles.</p>
-        <ol class="stepper">
-          <li><span class="stepper__dot">00</span><div><h3>Pre-kickoff «base cero»</h3><p>Partimos de una línea base conciliada y acordamos roles e indicadores.</p></div></li>
-          <li><span class="stepper__dot">01</span><div><h3>Gerente de cuenta asignado</h3><p>Atención oportuna y cercana con un equipo multidisciplinario de Consein.</p></div></li>
-          <li><span class="stepper__dot">04</span><div><h3>Mesas técnicas anuales</h3><p>Analizan tendencias tecnológicas y priorizan ajustes de licenciamiento.</p></div></li>
-          <li><span class="stepper__dot">12</span><div><h3>Roadmap vivo</h3><p>Control, trazabilidad y evolución ordenada durante todo el período.</p></div></li>
-        </ol>
-      </div>
-
-      <div class="dash grid-bg reveal" role="img" aria-label="Calendario MAC de 12 meses: pre-kickoff en el mes 1 y mesas técnicas en los meses 3, 6, 9 y 12">
-        <div class="dash__bar"><i></i><i></i><i></i><span>mac · t-12 · seguimiento</span></div>
-        <p class="dash__title">Calendario de acompañamiento</p>
-        <div class="months">
-          <span class="is-kick"></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span>
-        </div>
-        <div class="months__axis"><span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span><span>M7</span><span>M8</span><span>M9</span><span>M10</span><span>M11</span><span>M12</span></div>
-        <div class="legend"><span><i class="k"></i>Pre-kickoff «base cero»</span><span><i class="m"></i>Mesa técnica</span><span><i></i>Seguimiento periódico</span></div>
-        <div class="dash__rows" style="margin-top:18px">
-          <div class="dash__row"><span>Consumo</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
-          <div class="dash__row"><span>Asignación</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
-          <div class="dash__row"><span>Adopción</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
-          <div class="dash__row"><span>Protección</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
-        </div>
-        <div class="team">
-          <div><b>12</b>meses de seguimiento</div>
-          <div><b>4</b>mesas técnicas anuales</div>
-          <div><b>1</b>gerente de cuenta dedicado</div>
-        </div>
-        <div class="dash__foot"><span class="live"></span><span>Licenciamiento <b>gobernado</b> por el MAC de Consein</span></div>
-      </div>
     </div>
   </section>
 
