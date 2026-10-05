@@ -447,6 +447,40 @@
      ],
      "resultado": "Una base lista para los agentes que construye NortIA."
     }
+   ],
+   "faq": [
+    [
+     "¿Por qué migrar nuestra infraestructura a Microsoft Azure?",
+     "Con Azure su empresa gana escalabilidad bajo demanda, reduce la dependencia del hardware físico y prepara su plataforma para la IA. Migramos con responsabilidad de extremo a extremo, bajo los marcos CAF y WAF de Microsoft, y nos quedamos para operar y optimizar."
+    ],
+    [
+     "¿Cuánto tiempo toma una migración a Azure?",
+     "Depende del número de servidores, aplicaciones y dependencias. Inventariamos su entorno con Azure Migrate, planificamos por oleadas y le entregamos un cronograma preciso al cerrar el Diagnóstico de Infraestructura."
+    ],
+    [
+     "¿La migración interrumpe la operación?",
+     "Planificamos por oleadas, probamos en paralelo y acordamos ventanas de cambio con su equipo para que la operación siga funcionando durante la transición."
+    ],
+    [
+     "¿Qué diferencia hay entre MAC y MAP?",
+     "MAC (Migración Ágil Corporativa) está diseñada para empresas corporativas con aplicaciones críticas y altas exigencias de seguridad y cumplimiento. MAP (Migración Ágil Pyme) lleva las aplicaciones clave de las pequeñas y medianas empresas a Azure de forma rápida y con una inversión ajustada a su tamaño."
+    ],
+    [
+     "¿Cómo controlamos los costos de la nube?",
+     "Con Azure FinOps analizamos el consumo, aplicamos Reserved Instances y Azure Hybrid Benefit, eliminamos recursos ociosos y le enviamos un reporte mensual de ahorro. Esta combinación logra hasta 35% menos gasto en la nube durante el primer año (Forrester TEI, 2025)."
+    ],
+    [
+     "¿Pueden operar nuestra infraestructura después de migrarla?",
+     "Sí. Con Azure Managed Services operamos y evolucionamos su plataforma, y con Apoyo a TI acompañamos a su equipo con especialistas certificados en Azure, Microsoft 365 y seguridad."
+    ],
+    [
+     "¿Cómo protegen nuestros respaldos y la recuperación ante desastres?",
+     "Implementamos Azure Backup y Azure Site Recovery, definimos con usted los objetivos de recuperación de cada carga crítica y realizamos pruebas periódicas para que la recuperación sea predecible."
+    ],
+    [
+     "¿Qué respaldo tiene Consein en Azure?",
+     "Somos Microsoft Solutions Partner for Infrastructure (Azure) y contamos con la especialización Infra and Database Migration to Microsoft Azure, que acredita profundidad técnica comprobada en migraciones."
+    ]
    ]
   },
   {
@@ -619,6 +653,40 @@
      ],
      "resultado": "Un stack unificado, más simple y más económico."
     }
+   ],
+   "faq": [
+    [
+     "¿Qué es Zero Trust y por qué lo necesitamos?",
+     "Zero Trust es un enfoque de seguridad que verifica cada acceso según la identidad, el dispositivo y el contexto. Lo implementamos con Microsoft Entra, autenticación multifactor y acceso condicional para reducir el riesgo de cuentas comprometidas."
+    ],
+    [
+     "¿Por dónde empezamos a mejorar nuestra seguridad?",
+     "Con el Security Assessment 360: revisamos su Microsoft Secure Score, identidades, dispositivos, correo, datos y nube, y le entregamos una hoja de ruta priorizada por riesgo e impacto."
+    ],
+    [
+     "¿Podemos aprovechar las licencias de Microsoft que ya tenemos?",
+     "Sí. Muchas organizaciones ya cuentan con capacidades de Defender, Entra y Purview sin activar. Las identificamos y las ponemos a trabajar antes de sumar nuevas herramientas."
+    ],
+    [
+     "¿Qué incluye un SOC moderno?",
+     "Integramos Microsoft Defender XDR y Microsoft Sentinel con casos de uso, reglas, automatización de respuesta y tableros ejecutivos. Con Defender, las organizaciones reducen hasta 67% el tiempo de resolución de incidentes (Forrester TEI, 2025)."
+    ],
+    [
+     "¿Cómo protegemos la información antes de activar Copilot?",
+     "Con Protección de Datos para la Era de la IA clasificamos la información sensible con Microsoft Purview, aplicamos etiquetas y prevención de pérdida de datos (DLP) y revisamos la sobreexposición de contenidos antes de activar la IA."
+    ],
+    [
+     "¿Cómo gestionamos los dispositivos en teletrabajo y BYOD?",
+     "Con Microsoft Intune inscribimos y protegemos equipos Windows, macOS, iOS y Android, aplicamos políticas de cumplimiento y habilitamos el borrado remoto selectivo de la información corporativa."
+    ],
+    [
+     "¿Pueden vigilar nuestra seguridad todos los días?",
+     "Sí. Con Consein Managed Security monitoreamos su entorno de forma continua, respondemos ante incidentes, mejoramos su postura de seguridad y le entregamos reportes ejecutivos mensuales."
+    ],
+    [
+     "¿Podemos reducir el número de herramientas de seguridad?",
+     "Sí. Mapeamos sus herramientas frente a Microsoft Defender y Purview y planificamos una transición sin brechas de protección. Unificar la seguridad en Microsoft puede generar hasta 60% de ahorro (estudios Forrester TEI)."
+    ]
    ]
   },
   {
@@ -787,6 +855,40 @@
      ],
      "resultado": "Un entorno colaborativo limpio, seguro y medible."
     }
+   ],
+   "faq": [
+    [
+     "¿Cómo aprovechamos mejor Microsoft 365?",
+     "Configuramos Teams, SharePoint y OneDrive con orden y gobierno, y acompañamos la adopción por áreas para que su equipo colabore mejor y encuentre la información más rápido."
+    ],
+    [
+     "¿Pueden migrar nuestro correo y archivos a Microsoft 365?",
+     "Sí. Migramos correo, archivos y sitios por etapas, con un plan de comunicación para los usuarios y sin interrumpir la operación."
+    ],
+    [
+     "¿Qué necesitamos antes de activar Microsoft 365 Copilot?",
+     "Ordenar permisos y contenidos. Con Copilot Ready revisamos la información sobreexpuesta, aplicamos controles con Microsoft Purview y preparamos su entorno para activar Copilot con seguridad."
+    ],
+    [
+     "¿Cómo logramos que el equipo use Copilot de verdad?",
+     "Con Adopción de Copilot con NortIA y la formación Copilot365 trabajamos casos de uso por rol, talleres prácticos y medición mensual. Los usuarios de Microsoft 365 Copilot ahorran en promedio 9 horas al mes (Forrester TEI, 2025)."
+    ],
+    [
+     "¿Qué incluye la formación Copilot365?",
+     "Un plan base con Copilot en Word, Excel, PowerPoint y Outlook y especializaciones de 8 horas para Recursos Humanos, Legal, Finanzas y Mercadeo, con bibliotecas de prompts por área y medición a 30 días."
+    ],
+    [
+     "¿Pueden crear nuestra intranet corporativa?",
+     "Sí. Creamos su intranet en SharePoint para centralizar noticias, documentos y conocimiento, con navegación clara, buscador y gobierno de contenidos."
+    ],
+    [
+     "¿Cómo evitamos el desorden en Teams y SharePoint?",
+     "Con Gobierno de Teams y SharePoint definimos políticas de creación, ciclo de vida, permisos y revisiones periódicas para que la colaboración crezca con orden."
+    ],
+    [
+     "¿Cómo medimos el retorno de Microsoft 365 y Copilot?",
+     "Definimos una línea base y medimos cada mes el uso, la adopción por área y el tiempo ahorrado en tareas clave, para demostrar el valor de su inversión."
+    ]
    ]
   },
   {
@@ -941,6 +1043,40 @@
      ],
      "resultado": "Un sistema estable que evoluciona con el negocio."
     }
+   ],
+   "faq": [
+    [
+     "¿Qué es Dynamics 365 Business Central?",
+     "Es el ERP en la nube de Microsoft que integra finanzas, compras, ventas e inventario. Lo implementamos comenzando por sus procesos prioritarios, para que controle su operación con información integrada."
+    ],
+    [
+     "¿Pueden migrar Dynamics GP (Great Plains) a Business Central?",
+     "Sí. Evaluamos su instalación actual, definimos la ruta de migración y llevamos su operación a la nube sin perder información crítica."
+    ],
+    [
+     "¿Cuánto tiempo toma implementar Business Central?",
+     "Depende de sus procesos e integraciones. Con Business Central Quick Start comenzamos por lo esencial y le entregamos un plan detallado al cerrar el diagnóstico."
+    ],
+    [
+     "¿Qué beneficios podemos esperar del nuevo ERP?",
+     "Cierres más rápidos, mayor control financiero y una plataforma preparada para crecer. Con Business Central, las organizaciones reducen hasta 30% el tiempo de cierre mensual (Forrester TEI, 2026)."
+    ],
+    [
+     "¿Pueden implementar un CRM de ventas y servicio?",
+     "Sí. Implementamos Dynamics 365 Sales y Customer Service para unificar la visión del cliente, de la oportunidad al servicio, con indicadores en tiempo real."
+    ],
+    [
+     "¿Cómo construyen los tableros ejecutivos?",
+     "Con Power BI conectamos su ERP, CRM y otras fuentes para que toda la dirección trabaje con una sola versión de las cifras."
+    ],
+    [
+     "¿Podemos usar Copilot en el ERP y el CRM?",
+     "Sí. Con Copilot para Finanzas y Ventas activamos la IA dentro de Business Central, Dynamics 365 y Power BI, en las herramientas que su equipo ya usa."
+    ],
+    [
+     "¿Quién da soporte después de la implementación?",
+     "Nosotros. Con Soporte y Evolución de Dynamics mantenemos su ERP y CRM al día, atendemos solicitudes y mejoramos los procesos de forma continua."
+    ]
    ]
   },
   {
@@ -1108,6 +1244,40 @@
      ],
      "resultado": "Datos disponibles y confiables todos los días."
     }
+   ],
+   "faq": [
+    [
+     "¿Qué es Microsoft Fabric?",
+     "Es la plataforma unificada de datos de Microsoft para integrar, almacenar y analizar información en un solo lugar. Diseñamos su arquitectura en Fabric y OneLake; Fabric genera un ROI de 379% en tres años (Forrester TEI, 2024)."
+    ],
+    [
+     "¿Por dónde empezamos a ordenar nuestros datos?",
+     "Con el Data & AI Readiness Assessment: evaluamos sus fuentes, la calidad y la arquitectura actual, y priorizamos las inversiones con mayor impacto."
+    ],
+    [
+     "¿Qué es el gobierno de datos y por qué importa?",
+     "Es asignar dueños, linaje, clasificación y reglas de calidad a la información. Lo implementamos con Microsoft Purview para que las decisiones y la IA se basen en datos confiables."
+    ],
+    [
+     "¿Cómo preparamos los datos para la inteligencia artificial?",
+     "Con Datos Listos para Agentes organizamos y conectamos el conocimiento correcto de su empresa para que los agentes de IA respondan con información confiable y autorizada."
+    ],
+    [
+     "¿Qué incluye el Diagnóstico SQL Server?",
+     "Evaluamos rendimiento, configuración, seguridad, disponibilidad, respaldos e integridad con 11 evidencias técnicas, y le entregamos un informe ejecutivo, una matriz de riesgos priorizada y un roadmap de mejoras. La estimación base es de 4 horas por instancia."
+    ],
+    [
+     "¿Qué riesgo hay si usamos SQL Server 2016?",
+     "Su soporte extendido terminó el 14 de julio de 2026, por lo que ya no recibe actualizaciones de seguridad. Evaluamos sus riesgos y le proponemos una ruta de modernización."
+    ],
+    [
+     "¿Pueden modernizar nuestras bases de datos?",
+     "Sí. Optimizamos su rendimiento y las llevamos a Azure SQL u otros servicios de Azure, con seguridad y alta disponibilidad."
+    ],
+    [
+     "¿Pueden operar nuestra plataforma de datos?",
+     "Sí. Con Data Platform Managed Service operamos, monitoreamos y mejoramos su plataforma de datos cada mes."
+    ]
    ]
   },
   {
@@ -1318,6 +1488,40 @@
      ],
      "resultado": "Automatización estable que sigue sumando valor."
     }
+   ],
+   "faq": [
+    [
+     "¿Qué procesos conviene automatizar primero?",
+     "Con Automation Discovery identificamos los procesos repetitivos, de alto volumen y con reglas claras que ofrecen mayor retorno, y definimos indicadores desde el inicio."
+    ],
+    [
+     "¿Necesitamos programadores para automatizar?",
+     "Usamos Microsoft Power Platform, una plataforma low-code. Desarrollamos las soluciones y formamos a su equipo como citizen developers para que la automatización siga creciendo."
+    ],
+    [
+     "¿Qué podemos automatizar con Power Automate?",
+     "Aprobaciones, notificaciones, traslado de datos entre sistemas y tareas repetitivas. Power Automate permite ahorrar 200 horas al año por empleado en tareas de alto volumen (Forrester TEI, 2024)."
+    ],
+    [
+     "¿Cómo automatizamos facturas y documentos?",
+     "Con Consein DocFlow IA recibimos, leemos, validamos y aprobamos documentos con Azure AI Document Intelligence y Azure OpenAI, sin volver a digitar la información."
+    ],
+    [
+     "¿Pueden digitalizar nuestras solicitudes y aprobaciones internas?",
+     "Sí. Con Consein FlowControl 360 llevamos los trámites que hoy viven en el correo a una aplicación con responsables, estados, historial e indicadores."
+    ],
+    [
+     "¿Tienen soluciones para Recursos Humanos?",
+     "Sí. Consein PeopleFlow digitaliza vacaciones, permisos, viáticos, onboarding y expedientes, con autoservicio para el colaborador y visión completa para Recursos Humanos."
+    ],
+    [
+     "¿Cómo controlamos inventarios y operaciones de campo?",
+     "Con Consein SmartOps registramos entradas, salidas, activos e inspecciones desde web o móvil, con evidencias, alertas y paneles en tiempo real."
+    ],
+    [
+     "¿Cómo escalamos la automatización con orden?",
+     "Con el Centro de Excelencia Power Platform establecemos gobierno, entornos y buenas prácticas, y con Soporte y Evolución mantenemos sus flujos y aplicaciones funcionando y creciendo."
+    ]
    ]
   },
   {
@@ -1622,7 +1826,41 @@
       "Su equipo usa, construye y gobierna la IA con método."
      ]
     ]
-   }
+   },
+   "faq": [
+    [
+     "¿Cómo llevamos la IA del piloto a producción?",
+     "Con Agent Factory partimos de un caso de negocio, definimos criterios de éxito y construimos, probamos y publicamos el agente integrado a sus sistemas, con monitoreo desde el primer día."
+    ],
+    [
+     "¿Qué diferencia hay entre Copilot y un agente a la medida?",
+     "Microsoft 365 Copilot asiste a las personas en su trabajo diario. Un agente a la medida se construye para un proceso específico, conectado a sus datos y sistemas, con Copilot Studio o Microsoft Foundry."
+    ],
+    [
+     "¿Nuestros datos están seguros al usar IA?",
+     "Diseñamos con gobierno desde el inicio: respetamos los permisos de Microsoft 365, usamos Azure OpenAI dentro de su entorno y protegemos la información sensible con Microsoft Purview."
+    ],
+    [
+     "¿Qué es RAG y para qué sirve?",
+     "RAG (recuperación aumentada por generación) hace que la IA responda con base en los documentos autorizados de su empresa. Lo implementamos con Azure AI Search para obtener respuestas con contexto y control de fuentes."
+    ],
+    [
+     "¿Tienen soluciones de IA para nuestra industria?",
+     "Sí: BanIA para banca, LexiBot y LexiForm para áreas legales, PrudencIA y AuxilIA para seguros, FabrizIA y Connor / Scopey para equipos comerciales y de consultoría, y Daily y Orbi para la gestión del conocimiento."
+    ],
+    [
+     "¿Qué es NortIA y cómo se relaciona con esta especialidad?",
+     "NortIA es nuestro programa de adopción de IA. En cuatro fases (Radar, Norte, Vector y Brújula) su equipo aprende a usar, construir y gobernar la IA con método, y se complementa con las soluciones de esta página."
+    ],
+    [
+     "¿Cuánto tiempo toma tener un primer agente funcionando?",
+     "Con Copilot Studio Quick Start construimos su primer agente funcional junto a su equipo. El plazo depende del caso y lo definimos en el Diagnóstico Cero Fricción."
+    ],
+    [
+     "¿Cómo mantenemos los agentes funcionando después del lanzamiento?",
+     "Con AgentOps monitoreamos el desempeño, la calidad de las respuestas y los costos, y evolucionamos sus agentes de forma continua."
+    ]
+   ]
   }
  ]
 }

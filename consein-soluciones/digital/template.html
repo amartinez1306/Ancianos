@@ -623,7 +623,8 @@ function practiceIA(p){
       <div class="chips">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div class="panel n"><span class="icon" style="background:var(--green);color:#fff;margin-bottom:16px">${svg('nortia')}</span>
       <h3>NortIA · Programa de adopción IA</h3><p>${esc(p.puente)}</p><a href="#/nortia">Ver NortIA →</a></div>
-  </div></section>`;
+  </div></section>
+  ${p.faq ? faqHTML(p.faq) : ''}`;
 }
 
 function practice(p){
@@ -673,7 +674,8 @@ function practice(p){
       <div class="chips">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div class="panel n"><span class="icon" style="background:var(--green);color:#fff;margin-bottom:16px">${svg('nortia')}</span>
       <h3>Conexión con NortIA</h3><p>${esc(p.puente)}</p><a href="#/nortia">Ver NortIA →</a></div>
-  </div></section>`;
+  </div></section>
+  ${p.faq ? faqHTML(p.faq) : ''}`;
 }
 
 

@@ -461,7 +461,8 @@ function practiceIA(p){
   <section class="tight"><div class="wrap grid g2" style="gap:56px">
     <div><p class="kicker">Respaldo</p><p>${esc(p.respaldo)}</p><div class="tags">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div><p class="kicker">NortIA · Programa de adopción IA</p><p>${esc(p.puente)}</p><a class="link" href="#/nortia">Ver NortIA</a></div>
-  </div></section>`;
+  </div></section>
+  ${p.faq ? faqHTML(p.faq) : ''}`;
 }
 
 function practice(p){
@@ -502,7 +503,8 @@ function practice(p){
   <section class="tight"><div class="wrap grid g2" style="gap:56px">
     <div><p class="kicker">Respaldo</p><p>${esc(p.respaldo)}</p><div class="tags">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div><p class="kicker" style="--c:#B8734A">Conexión con NortIA</p><p>${esc(p.puente)}</p><a class="link" style="--c:#B8734A" href="#/nortia">Ver NortIA</a></div>
-  </div></section>`;
+  </div></section>
+  ${p.faq ? faqHTML(p.faq) : ''}`;
 }
 
 
