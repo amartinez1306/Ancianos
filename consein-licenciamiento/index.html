@@ -562,6 +562,16 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .step--sec { border-color: var(--green); }
 .step--wide { grid-column: span 2; }
 
+.faq__group { display: grid; gap: 12px; scroll-margin-top: calc(var(--header-h) + 24px); }
+.faq__group + .faq__group { margin-top: 28px; }
+.faq__title { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12.5px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--green-600); }
+.faq__title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.faq-aside { position: sticky; top: calc(var(--header-h) + 32px); }
+.faq-index { display: grid; gap: 6px; margin-bottom: 28px; }
+.faq-index a { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-radius: 10px; background: #fff; border: 1px solid var(--line); font-size: 14px; color: var(--ink); transition: border-color .2s, transform .2s; }
+.faq-index a:hover { border-color: var(--green); transform: translateX(3px); }
+.faq-index span { min-width: 24px; height: 24px; display: grid; place-items: center; border-radius: 6px; background: var(--navy-100); font-size: 12px; font-weight: 500; }
+
 /* MAC T-12 · Línea de tiempo */
 .hl--navy { background: linear-gradient(90deg, var(--navy-600), var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .mac-head { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; margin-bottom: 40px; }
@@ -675,6 +685,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
 
 @media (max-width: 1080px) {
+  .faq-aside { position: static; }
   .why, .included { grid-template-columns: 1fr; gap: 48px; }
   .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -732,10 +743,18 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad." } },
-          { "@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": { "@type": "Answer", "text": "Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses." } },
-          { "@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": { "@type": "Answer", "text": "Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta." } },
-          { "@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": { "@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad." } }
+          {"@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad."}},
+          {"@type": "Question", "name": "¿Qué gano al contratar mis licencias por CSP con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "Como proveedor CSP, unimos sus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, lo acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen."}},
+          {"@type": "Question", "name": "¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, cuando su escenario lo justifica. En el diagnóstico revisamos sus convenios vigentes, vencidos y por vencer, y si otra modalidad le conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft."}},
+          {"@type": "Question", "name": "¿Trabajan con empresas que tienen sedes en varios países?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Atendemos empresas en Venezuela, Panamá, Estados Unidos y España, y en el diagnóstico consideramos la dispersión geográfica de su organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país."}},
+          {"@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": {"@type": "Answer", "text": "Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses."}},
+          {"@type": "Question", "name": "¿Qué necesitan de mi empresa para hacer el diagnóstico?", "acceptedAnswer": {"@type": "Answer", "text": "Le pedimos acceso de consulta a sus portales de administración Microsoft, la información de sus contratos y convenios, y una persona de contacto en su equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de su empresa."}},
+          {"@type": "Question", "name": "¿Qué pasa si descubrimos que me faltan licencias?", "acceptedAnswer": {"@type": "Answer", "text": "Se lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y le proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos con usted."}},
+          {"@type": "Question", "name": "¿Qué es el MAC y cuánto dura?", "acceptedAnswer": {"@type": "Answer", "text": "Es nuestro Modelo de Atención al Cliente: durante 12 meses lo acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos su licenciamiento."}},
+          {"@type": "Question", "name": "¿Qué hacemos en los talleres de tecnología Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "En los meses 4 y 10 le mostramos a su equipo cómo aprovechar las capacidades de la plataforma que ya tiene contratada, aplicadas a casos de uso de su negocio, para que las licencias se usen de verdad."}},
+          {"@type": "Question", "name": "¿Qué ocurre al terminar los 12 meses del MAC?", "acceptedAnswer": {"@type": "Answer", "text": "En el mes 12 revisamos el cumplimiento y preparamos con usted la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de su empresa en ese momento."}},
+          {"@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta."}},
+          {"@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": {"@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad."}}
         ]
       }
     ]
@@ -1261,36 +1280,6 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     </div>
   </section>
 
-  <!-- ============ Preguntas frecuentes ============ -->
-  <section class="section section--tint dots-bg" id="preguntas" aria-labelledby="t-faq">
-    <div class="container faq-wrap">
-      <div class="reveal">
-        <span class="kicker">Preguntas frecuentes</span>
-        <h2 class="title-l" id="t-faq">Sobre licenciamiento Microsoft</h2>
-        <p class="lead" style="margin:18px 0 32px">Si su pregunta es otra, le respondemos directamente.</p>
-        <a class="btn btn--navy" href="#contacto">Escríbanos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-      <div class="faq reveal">
-        <details>
-          <summary>¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?</summary>
-          <p>Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad.</p>
-        </details>
-        <details>
-          <summary>¿Cómo sé si estoy pagando licencias que no uso?</summary>
-          <p>Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses.</p>
-        </details>
-        <details>
-          <summary>¿Cómo me preparo para una auditoría o un True-up de Microsoft?</summary>
-          <p>Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta.</p>
-        </details>
-        <details>
-          <summary>¿Qué licencias necesito para usar Copilot de forma segura?</summary>
-          <p>Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ Contacto ============ -->
   <section class="section" id="contacto" aria-labelledby="t-contacto">
     <div class="container">
@@ -1353,6 +1342,86 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <div class="form-actions"><button class="btn btn--navy" type="submit">Hablar con un especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Preguntas frecuentes ============ -->
+  <section class="section section--tint dots-bg" id="preguntas" aria-labelledby="t-faq">
+    <div class="container faq-wrap">
+      <div class="faq-aside reveal">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2 class="title-l" id="t-faq">Sobre licenciamiento Microsoft</h2>
+        <p class="lead" style="margin:18px 0 24px">Respondemos las dudas más comunes sobre modalidades, diagnóstico, el MAC, cumplimiento y seguridad. Si su pregunta es otra, le respondemos directamente.</p>
+        <nav class="faq-index" aria-label="Temas de preguntas frecuentes">
+          <a href="#faq-1">Modalidades y contratación<span>4</span></a>
+          <a href="#faq-2">Diagnóstico y costos<span>3</span></a>
+          <a href="#faq-3">MAC: acompañamiento y sostenibilidad<span>3</span></a>
+          <a href="#faq-4">Cumplimiento y seguridad<span>2</span></a>
+        </nav>
+        <a class="btn btn--navy" href="#contacto">Escríbanos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="faq reveal">
+        <div class="faq__group" id="faq-1">
+          <h3 class="faq__title">Modalidades y contratación</h3>
+          <details>
+            <summary>¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?</summary>
+            <p>Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad.</p>
+          </details>
+          <details>
+            <summary>¿Qué gano al contratar mis licencias por CSP con ustedes?</summary>
+            <p>Como proveedor CSP, unimos sus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, lo acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?</summary>
+            <p>Sí, cuando su escenario lo justifica. En el diagnóstico revisamos sus convenios vigentes, vencidos y por vencer, y si otra modalidad le conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft.</p>
+          </details>
+          <details>
+            <summary>¿Trabajan con empresas que tienen sedes en varios países?</summary>
+            <p>Sí. Atendemos empresas en Venezuela, Panamá, Estados Unidos y España, y en el diagnóstico consideramos la dispersión geográfica de su organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país.</p>
+          </details>
+        </div>
+        <div class="faq__group" id="faq-2">
+          <h3 class="faq__title">Diagnóstico y costos</h3>
+          <details>
+            <summary>¿Cómo sé si estoy pagando licencias que no uso?</summary>
+            <p>Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesitan de mi empresa para hacer el diagnóstico?</summary>
+            <p>Le pedimos acceso de consulta a sus portales de administración Microsoft, la información de sus contratos y convenios, y una persona de contacto en su equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de su empresa.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si descubrimos que me faltan licencias?</summary>
+            <p>Se lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y le proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos con usted.</p>
+          </details>
+        </div>
+        <div class="faq__group" id="faq-3">
+          <h3 class="faq__title">MAC: acompañamiento y sostenibilidad</h3>
+          <details>
+            <summary>¿Qué es el MAC y cuánto dura?</summary>
+            <p>Es nuestro Modelo de Atención al Cliente: durante 12 meses lo acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos su licenciamiento.</p>
+          </details>
+          <details>
+            <summary>¿Qué hacemos en los talleres de tecnología Microsoft?</summary>
+            <p>En los meses 4 y 10 le mostramos a su equipo cómo aprovechar las capacidades de la plataforma que ya tiene contratada, aplicadas a casos de uso de su negocio, para que las licencias se usen de verdad.</p>
+          </details>
+          <details>
+            <summary>¿Qué ocurre al terminar los 12 meses del MAC?</summary>
+            <p>En el mes 12 revisamos el cumplimiento y preparamos con usted la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de su empresa en ese momento.</p>
+          </details>
+        </div>
+        <div class="faq__group" id="faq-4">
+          <h3 class="faq__title">Cumplimiento y seguridad</h3>
+          <details>
+            <summary>¿Cómo me preparo para una auditoría o un True-up de Microsoft?</summary>
+            <p>Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta.</p>
+          </details>
+          <details>
+            <summary>¿Qué licencias necesito para usar Copilot de forma segura?</summary>
+            <p>Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad.</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
