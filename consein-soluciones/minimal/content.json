@@ -1200,7 +1200,9 @@
      "resultado": "Decisiones priorizadas por impacto, riesgo y costo, con evidencia técnica para cada recomendación.",
      "alerta": {
       "titulo": "SQL 2016 está fuera de mantenimiento",
-      "detalle": "Sin actualizaciones de seguridad desde el 14 de julio de 2026"
+      "detalle": "Sin actualizaciones de seguridad desde el 14 de julio de 2026",
+      "corto": "SQL 2016",
+      "sub": "Fuera de mantenimiento"
      }
     },
     {
