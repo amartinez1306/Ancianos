@@ -152,6 +152,21 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .dd-menu a.sub{padding-left:26px;font-size:.82rem;color:var(--muted)}
 .dd-menu .compass-ico{width:14px;height:14px;flex:0 0 14px;color:var(--brand)}
 
+/* Preguntas frecuentes */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-aside{position:sticky;top:110px}
+.faq-aside .btn{margin-top:16px}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:20px 44px 20px 0;font-weight:500;color:var(--brand);line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.4rem;font-weight:300;color:var(--c)}
+.faq details[open] summary::after{content:"–"}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:.95rem}
+.faq .ans p{margin:0}
+@media (max-width:960px){.faq-grid{grid-template-columns:1fr;gap:24px}.faq-aside{position:static}}
+
 /* Evidencia */
 .ev b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--c);line-height:1.05;margin-bottom:8px}
 .ev p{margin:0 0 6px;color:var(--ink);font-size:.95rem}
@@ -490,6 +505,27 @@ function practice(p){
   </div></section>`;
 }
 
+
+/* ---------- Preguntas frecuentes (con datos estructurados FAQPage para SEO) ---------- */
+function faqHTML(list){
+  return `<section class="faq-sec" id="faq"><div class="wrap faq-grid">
+    <div class="faq-aside">
+      <p class="kicker">Preguntas frecuentes</p>
+      <h2>Resolvemos sus dudas</h2>
+      <p class="lead">Si su pregunta no está aquí, escríbanos y le respondemos.</p>
+      <a class="btn" href="#contacto">Quiero hablar con un especialista</a>
+    </div>
+    <div class="faq">${list.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q[0])}</summary><div class="ans"><p>${withCond(q[1])}</p></div></details>`).join('')}</div>
+  </div></section>`;
+}
+function setFaqLD(list){
+  let s = document.getElementById('faq-ld');
+  if (!list) { if (s) s.remove(); return; }
+  if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'faq-ld'; document.head.appendChild(s); }
+  s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: list.map(q => ({ '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1].replace(/\*/g, '') } })) });
+}
+
 /* ---------- NortIA ---------- */
 function nortia(n){
   setMeta(n.title, n.meta);
@@ -532,7 +568,8 @@ function nortia(n){
 
   <section class="tight"><div class="wrap">
     <p class="kicker">Respaldo</p><p>${esc(n.respaldo)}</p>
-  </div></section>`;
+  </div></section>
+  ${n.faq ? faqHTML(n.faq) : ''}`;
 }
 
 /* ---------- Rutas ---------- */
@@ -543,6 +580,7 @@ function render(){
   current = page || null;
   document.documentElement.style.setProperty('--c', page ? page.color : '#000F76');
   $('#app').innerHTML = !page ? home() : page.slug === 'nortia' ? nortia(page) : practice(page);
+  setFaqLD(page && page.faq ? page.faq : null);
   document.querySelector('nav.main').classList.remove('open');
   closeOffer();
   window.scrollTo(0, 0);

@@ -188,6 +188,48 @@
     ],
     "resultado": "Una organización que evoluciona con la IA de forma permanente."
    }
+  ],
+  "faq": [
+   [
+    "¿Qué es NortIA?",
+    "Es nuestra metodología para que su organización adopte la inteligencia artificial con método. En cuatro fases (Radar, Norte, Vector y Brújula) medimos su punto de partida, alineamos la estrategia, formamos capacidades internas y gobernamos la IA sobre el ecosistema Microsoft."
+   ],
+   [
+    "¿Por dónde empezamos?",
+    "Empezamos con el Diagnóstico Cero Fricción: una sesión sin costo*, de 8 horas y 100% remota, en la que identificamos su nivel de madurez y los dominios de negocio con mayor potencial. A partir de ese resultado definimos juntos el siguiente paso."
+   ],
+   [
+    "¿Cuánto dura cada fase?",
+    "Radar toma 16 o 40 horas según el alcance. Norte se trabaja en talleres de 4 horas para grupos de hasta 10 asistentes. Vector dura de 6 a 8 semanas con mentoría semanal. Brújula se dimensiona según el alcance de gobierno, datos y seguridad que requiera su organización."
+   ],
+   [
+    "¿Podemos contratar solo una fase?",
+    "Sí. NortIA se contrata como programa completo o por fases. Cada fase entrega resultados por sí misma y prepara el camino para la siguiente; recomendamos iniciar con Radar para priorizar con datos."
+   ],
+   [
+    "¿Necesitamos licencias de Microsoft 365 Copilot?",
+    "En la fase Radar revisamos su licenciamiento actual y le recomendamos qué necesita según los casos de uso priorizados. Para los talleres de Norte y la construcción de agentes en Vector, los participantes requieren acceso a Microsoft 365 Copilot o a Copilot Studio, según el caso."
+   ],
+   [
+    "¿Quiénes participan en el programa?",
+    "La dirección participa en una sesión ejecutiva de alineación; los equipos operativos, en los talleres N-O-R-T-E; los usuarios clave, como AI Champions en Vector; y las áreas de TI, datos y seguridad, en la fase Brújula."
+   ],
+   [
+    "¿Qué es un AI Champion?",
+    "Es un colaborador de su organización que formamos durante la fase Vector. Con mentoría semanal, construye agentes y automatizaciones reales con Copilot Studio y Agent Builder, se certifica y se convierte en referente interno para escalar la IA."
+   ],
+   [
+    "¿Cómo protegemos los datos y la seguridad?",
+    "En la fase Brújula establecemos el gobierno de la información con Microsoft Purview y la arquitectura de confianza con Microsoft Entra y Defender. Revisamos permisos y clasificamos los datos sensibles antes de que la IA acceda a ellos."
+   ],
+   [
+    "¿Cómo medimos los resultados?",
+    "Definimos los indicadores desde la fase Radar, con una línea base: adopción y uso de Copilot, tiempo ahorrado en tareas clave, agentes en producción y satisfacción de los equipos. Los revisamos en cada fase para demostrar el valor."
+   ],
+   [
+    "¿Qué pasa al terminar el ciclo?",
+    "Su equipo queda preparado para repetir el ciclo en cualquier área del negocio. Si lo desea, lo acompañamos con NortIA Continuo para llevar la metodología a nuevos dominios de forma recurrente."
+   ]
   ]
  },
  "practicas": [

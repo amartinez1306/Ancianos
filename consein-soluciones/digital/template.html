@@ -224,6 +224,22 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .line-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(88,187,71,.6),transparent)}
 .line-h:first-child{margin-top:0}
 
+/* Preguntas frecuentes */
+.faq-sec{background:var(--soft)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-aside{position:sticky;top:110px}
+.faq-aside .btn{margin-top:20px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;transition:border-color .2s,box-shadow .2s}
+.faq details[open]{border-color:rgba(88,187,71,.6);box-shadow:0 12px 28px rgba(27,36,91,.08)}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:18px 60px 18px 22px;font-weight:600;color:var(--navy);line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(88,187,71,.15);color:var(--green);display:grid;place-items:center;font-weight:700;font-size:1.1rem;transition:background .2s,color .2s}
+.faq details[open] summary::after{content:"–";background:var(--green);color:#fff}
+.faq summary:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:14px}
+.faq .ans{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .ans p{margin:0}
+@media (max-width:980px){.faq-grid{grid-template-columns:1fr;gap:28px}.faq-aside{position:static}}
+
 /* Evidencia */
 .metric{padding:30px;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-line);position:relative;overflow:hidden}
 .metric b{display:block;font-family:var(--title);font-size:2.1rem;line-height:1.05;color:#fff;margin-bottom:10px}
@@ -660,6 +676,27 @@ function practice(p){
   </div></section>`;
 }
 
+
+/* ---------- Preguntas frecuentes (con datos estructurados FAQPage para SEO) ---------- */
+function faqHTML(list){
+  return `<section class="faq-sec" id="faq"><div class="wrap faq-grid">
+    <div class="faq-aside">
+      <p class="kicker">Preguntas frecuentes</p>
+      <h2>Resolvemos sus <span class="hl">dudas</span></h2>
+      <p class="lead">Si su pregunta no está aquí, escríbanos y le respondemos.</p>
+      <a class="btn" href="#contacto">Quiero hablar con un especialista</a>
+    </div>
+    <div class="faq">${list.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q[0])}</summary><div class="ans"><p>${withCond(q[1])}</p></div></details>`).join('')}</div>
+  </div></section>`;
+}
+function setFaqLD(list){
+  let s = document.getElementById('faq-ld');
+  if (!list) { if (s) s.remove(); return; }
+  if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'faq-ld'; document.head.appendChild(s); }
+  s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: list.map(q => ({ '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1].replace(/\*/g, '') } })) });
+}
+
 /* ---------- NortIA ---------- */
 function nortia(n){
   setMeta(n.title, n.meta);
@@ -707,7 +744,8 @@ function nortia(n){
   </div></section>
 
   <section class="soft" style="padding:56px 0"><div class="wrap"><div class="panel"><div class="ms" aria-hidden="true"><i style="background:#F25022"></i><i style="background:#7FBA00"></i><i style="background:#00A4EF"></i><i style="background:#FFB900"></i></div>
-    <p class="kicker">Respaldo</p><p style="color:var(--navy);font-weight:500;margin:0">${esc(n.respaldo)}</p></div></div></section>`;
+    <p class="kicker">Respaldo</p><p style="color:var(--navy);font-weight:500;margin:0">${esc(n.respaldo)}</p></div></div></section>
+  ${n.faq ? faqHTML(n.faq) : ''}`;
 }
 
 /* ---------- Rutas ---------- */
@@ -716,6 +754,7 @@ function render(){
   const page = bySlug(location.hash.replace(/^#\/?/, '').split('/')[0]);
   current = page || null;
   $('#app').innerHTML = !page ? home() : page.slug === 'nortia' ? nortia(page) : practice(page);
+  setFaqLD(page && page.faq ? page.faq : null);
   document.querySelectorAll('.dd-menu a').forEach(a => a.style.color = page && a.getAttribute('href') === '#/' + page.slug ? '#58bb47' : '');
   document.querySelector('nav.main').classList.remove('open');
   closeOffer(); window.scrollTo(0, 0);
