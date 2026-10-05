@@ -274,7 +274,11 @@ button, input, select { font: inherit; color: inherit; }
    ========================================================================== */
 .faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
 .faq-wrap > * { min-width: 0; }
-.faq { display: grid; gap: 12px; }
+.faq-wrap__aside { position: sticky; top: calc(var(--header-h) + 32px); }
+.faq { display: grid; gap: 36px; }
+.faq-group { display: grid; gap: 12px; }
+.faq-group__title { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+.faq-group__title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--green), transparent); }
 .faq details { border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: border-color .2s, box-shadow .2s; }
 .faq details[open] { border-color: var(--green); box-shadow: 0 10px 30px rgba(27,36,91,.08); }
 .faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 22px; cursor: pointer; list-style: none; font-family: var(--font-title); font-weight: 700; font-size: 17px; color: var(--ink); }
@@ -385,6 +389,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .phase__head { flex-direction: row; justify-content: space-between; align-items: center; }
   .phase__cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .value, .pmo, .faq-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .faq-wrap__aside { position: static; }
   .value__cycle svg { max-width: 380px; }
 }
 
