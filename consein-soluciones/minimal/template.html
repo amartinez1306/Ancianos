@@ -167,6 +167,15 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .faq .ans p{margin:0}
 @media (max-width:960px){.faq-grid{grid-template-columns:1fr;gap:24px}.faq-aside{position:static}}
 
+/* Sticker de alerta en ofertas */
+.alert-sticker{position:relative;align-self:stretch;display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;margin:-4px 0 4px;border-radius:12px;
+  background:var(--brand);color:#fff;border-left:4px solid #F5A623;box-shadow:0 8px 18px rgba(0,15,118,.18);transform:rotate(-1deg)}
+.alert-sticker .as-ico{flex:0 0 32px;height:32px;border-radius:50%;background:#F5A623;color:var(--brand);display:grid;place-items:center}
+.alert-sticker .as-ico svg{width:18px;height:18px}
+.alert-sticker b{display:block;font-family:var(--title);font-size:.85rem;line-height:1.2}
+.alert-sticker small{display:block;font-size:.68rem;opacity:.85;margin-top:2px;line-height:1.3}
+.sheet .alert-sticker{margin:0 0 20px;transform:none}
+
 /* Evidencia */
 .ev b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--c);line-height:1.05;margin-bottom:8px}
 .ev p{margin:0 0 6px;color:var(--ink);font-size:.95rem}
@@ -341,11 +350,16 @@ function menu(){
     `<optgroup label="${esc(p.nav)}">${p.offerings.map(o => `<option>${esc(o.name)}</option>`).join('')}</optgroup>`).join('');
 }
 
+/* Alerta destacada en una oferta (ej.: SQL Server 2016 fuera de mantenimiento) */
+function alertHTML(a){
+  return `<span class="alert-sticker" role="note"><span class="as-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span><span><b>${esc(a.titulo)}</b><small>${esc(a.detalle)}</small></span></span>`;
+}
 /* ---------- Ofertas: título + valor + "Seguir leyendo…" ---------- */
 function offers(page){
   return `<div class="grid g3">${page.offerings.map((o, i, all) => `${o.linea && o.linea !== (all[i-1] || {}).linea ? `<h3 class="line-h" id="line-${lineId(o.linea)}">${esc(o.linea)}</h3>` : ''}
     <article class="offer">
       ${o.code === page.star ? `<span class="badge">${o.reconocimiento ? 'Premio WITSA' : 'Destacada'}</span>` : ''}
+      ${o.alerta ? alertHTML(o.alerta) : ''}
       <h3>${esc(o.name)}</h3>
       <p>${esc(o.valor)}</p>
       <button class="more" data-offer="${esc(o.code)}">Seguir leyendo…</button>
@@ -359,6 +373,7 @@ function openOffer(code){
     <button class="close" data-close aria-label="Cerrar">×</button>
     <h2 id="m-title" style="font-size:1.6rem">${esc(o.name)}</h2>
     <p class="tipo">${withCond(o.tipo)}</p>
+    ${o.alerta ? alertHTML(o.alerta) : ''}
     <p class="lead" style="font-size:1.02rem">${esc(o.valor)}</p>
     <h4>Ideal para</h4><p>${esc(o.ideal)}</p>
     <h4>Qué resuelve</h4><p>${esc(o.resuelve)}</p>

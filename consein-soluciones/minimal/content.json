@@ -1197,7 +1197,11 @@
       "11 evidencias técnicas: inventario, backups, jobs, índices, HA/DR, CHECKDB y más.",
       "Informe ejecutivo, matriz de riesgos priorizada y roadmap de mejoras."
      ],
-     "resultado": "Decisiones priorizadas por impacto, riesgo y costo, con evidencia técnica para cada recomendación."
+     "resultado": "Decisiones priorizadas por impacto, riesgo y costo, con evidencia técnica para cada recomendación.",
+     "alerta": {
+      "titulo": "SQL 2016 está fuera de mantenimiento",
+      "detalle": "Sin actualizaciones de seguridad desde el 14 de julio de 2026"
+     }
     },
     {
      "code": "DAT-04",
