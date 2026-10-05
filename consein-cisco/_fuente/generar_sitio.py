@@ -23,6 +23,8 @@ def D(fragmento):
 
 
 _ICONOS = {
+    "conectividad": '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
+    "usuarios-remotos": '<rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/><path d="M10 10.5v-1a2 2 0 0 1 4 0v1M9.5 10.5h5v3h-5z"/>',
     "infraestructura": '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
     "seguridad": '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
     "colaboracion": '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>',
@@ -47,7 +49,7 @@ def arte_hero():
     """Diagrama de red animado: Microsoft al centro, nodos Cisco y el anillo integrador de Consein."""
     import math
     cx, cy, r = 280, 260, 160
-    nodos = ["SD&#45;WAN", "Zero Trust", "Teams Rooms", "ThousandEyes", "AI Defense", "Meraki"]
+    nodos = ["SD&#45;WAN", "Duo", "Teams Rooms", "Secure Access", "AI Defense", "Meraki"]
     lineas, paquetes, puntos = [], [], []
     for i, n in enumerate(nodos):
         a = math.radians(-90 + 60 * i)
@@ -88,7 +90,7 @@ def arte_hero():
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
   <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
-  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad perimetral · Salas · Observabilidad</small></div>
+  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
 
@@ -96,134 +98,113 @@ ARTE_CAPAS = """<div class="stack" aria-hidden="true">
 # Especialidades (7) — cada una apunta a un grupo de palabras clave SEO
 # ---------------------------------------------------------------------------
 ESPECIALIDADES = [
-    # Fuente única: Nueva Matriz de Valor Cisco + Microsoft (Consein, ver. 1). Sección A y B.
-    {"id": "infraestructura", "nombre": "Infraestructura",
-     "h2": "Conectividad de sedes, WAN y red local",
-     "intro": "Conectamos sedes, WAN y red local: la base sobre la que operan Microsoft 365 y Azure."},
+    # Fuente única: Nueva Matriz de Valor v2 Cisco + Microsoft Better Together (Consein). Secciones A y B.
+    {"id": "conectividad", "nombre": "Conectividad LAN y WAN",
+     "h2": "Conectividad e interconexión de redes LAN y WAN",
+     "intro": "Conectamos sus sedes según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure."},
     {"id": "seguridad", "nombre": "Seguridad",
-     "h2": "Seguridad de red para el stack Microsoft",
-     "intro": "Sumamos controles de red y telemetría que refuerzan su seguridad Microsoft, con una sola consola."},
+     "h2": "Seguridad: usuario, correo, endpoint y red",
+     "intro": "Sumamos Cisco como capa complementaria sobre Microsoft 365, según la licencia de cada cliente."},
     {"id": "colaboracion", "nombre": "Colaboración",
      "h2": "Hardware certificado para Microsoft Teams Rooms",
      "intro": "Implementamos hardware Cisco certificado para la experiencia Microsoft Teams Rooms."},
-    {"id": "data-analitica", "nombre": "Data y Analítica",
-     "h2": "Datos físicos y operativos para Power BI y Fabric",
-     "intro": "Aportamos datos físicos y operativos que enriquecen la analítica de Power BI y Microsoft Fabric."},
-    {"id": "servicios-empresariales", "nombre": "Servicios Empresariales",
-     "h2": "Conectividad y acceso seguro para Dynamics 365",
-     "intro": "Conectamos y protegemos el acceso a sus aplicaciones de negocio en Dynamics 365."},
-    {"id": "automatizacion", "nombre": "Automatización",
-     "h2": "Automatización de red con Power Platform",
-     "intro": "Orquestamos eventos y acciones de red desde Power Platform."},
+    {"id": "usuarios-remotos", "nombre": "Usuarios remotos",
+     "h2": "Conectividad y acceso seguro para usuarios remotos",
+     "intro": "Ofrecemos seguridad 100% en la nube, contratada como servicio recurrente (SECaaS: Security as a Service)."},
     {"id": "inteligencia-artificial", "nombre": "Inteligencia Artificial",
-     "h2": "Seguridad del ciclo de vida de modelos y agentes de IA",
-     "intro": "Aportamos seguridad especializada para el ciclo de vida de sus modelos y agentes de IA."},
+     "h2": "Adopción responsable de IA",
+     "intro": "Acompañamos la adopción de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario y la validación."},
 ]
 
-# Criterio de selección (Nueva Matriz de Valor)
+# Criterio de la matriz (v2, Better Together)
 CRITERIOS = [
-    ("Operan en otra capa", "Productos que trabajan en una capa distinta a la de Microsoft."),
-    ("Se integran de forma nativa", "Productos que se conectan con la plataforma Microsoft de forma nativa."),
-    ("Extienden una capacidad", "Productos que amplían una capacidad con una sola función, consola y licencia por necesidad."),
+    ("Se integra con Microsoft", "Cisco trabaja junto a su plataforma Microsoft como acelerador: red, seguridad y salas."),
+    ("Cubre brechas según su licencia", "Posicionamos cada producto donde aporta valor real, según la licencia Microsoft de cada cliente."),
+    ("Evita duplicar lo que ya paga", "Proponemos solo lo que complementa su inversión Microsoft actual."),
 ]
 
-# Productos Cisco por área (Nueva Matriz de Valor, sección B). 19 entradas.
-# Campos: area, id, nombre, origen (servicio del Modelo de Servicios Cisco de Consein), capa,
-# ms (producto Microsoft asociado), valor (visible en la tarjeta) y extra (se suma en el detalle).
-MATRIZ = [
-    {"area": "infraestructura", "id": "meraki-mx", "nombre": "Meraki MX Security & SD-WAN",
-     "origen": ["S3 · Meraki Cloud Managed", "S5 · SD-WAN Seguro"], "capa": "Seguridad perimetral y SD-WAN de sucursal",
-     "ms": "Azure Virtual WAN / Microsoft 365",
-     "valor": "Conectamos sus sucursales a Azure Virtual WAN con gestión en la nube y priorizamos el tráfico de Microsoft 365 y Teams.",
-     "extra": "Aporta el equipo de borde de cada sede, una capa que complementa a Microsoft."},
-    {"area": "infraestructura", "id": "cisco-sdwan-catalyst", "nombre": "Cisco SD-WAN (Catalyst) para DC/HQ e IaaS",
-     "origen": ["S5 · SD-WAN Seguro"], "capa": "Overlay WAN entre centro de datos, sedes y nube",
-     "ms": "Azure Virtual WAN / ExpressRoute",
-     "valor": "Extendemos las políticas por aplicación hasta Azure IaaS, con failover y visibilidad del desempeño.",
-     "extra": "Azure aporta el destino cloud y Cisco, el transporte."},
-    {"area": "infraestructura", "id": "meraki-ms-mr", "nombre": "Meraki MS (switching) y MR (wireless)",
-     "origen": ["S3 · Meraki Cloud Managed"], "capa": "Red LAN/WLAN gestionada en la nube",
-     "ms": "Microsoft Teams / Microsoft 365",
-     "valor": "Entregamos la red física y el Wi-Fi con QoS para la voz y el video de Teams.",
-     "extra": "Es una capa de red que complementa a Microsoft."},
-    {"area": "infraestructura", "id": "meraki-mg", "nombre": "Meraki MG (cellular gateways)",
-     "origen": ["S3 · Meraki Cloud Managed"], "capa": "Enlace celular 4G/5G de respaldo",
-     "ms": "Microsoft 365 / Azure",
-     "valor": "Mantenemos el acceso a Microsoft 365 y Azure cuando falla el enlace principal de la sede."},
+S1 = "S1 · Protección Avanzada M365"
+S2 = "S2 · Secure Access como Servicio"
+S3 = "S3 · Meraki Cloud Managed"
+S4 = "S4 · Cisco Rooms para Teams"
+S5 = "S5 · SD-WAN Seguro"
+S6 = "S6 · Azure + Cisco Secure Firewall"
+S7 = "S7 · Cisco AI Defense"
 
-    {"area": "seguridad", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
-     "origen": ["S6 · Azure + Cisco Secure Firewall"], "capa": "Firewall NGFW/IPS on-premise y virtual en Azure",
-     "ms": "Azure Firewall / Microsoft Sentinel",
-     "valor": "Protegemos el borde on-premise y la conectividad híbrida con Azure, con un gobierno único de reglas.",
-     "extra": "Sus registros llegan a Microsoft Sentinel."},
-    {"area": "seguridad", "id": "cisco-ise", "nombre": "Cisco ISE (Premier)",
-     "origen": ["S1 · Protección Avanzada M365 (suite User Protection Advantage)"], "capa": "Control de acceso a la red (NAC) y segmentación",
-     "ms": "Microsoft Intune (cumplimiento) / Entra ID",
-     "valor": "Decidimos qué usuario y qué dispositivo entra a la LAN y al Wi-Fi según el estado de cumplimiento de Intune.",
-     "extra": "Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
-    {"area": "seguridad", "id": "secure-network-analytics", "nombre": "Cisco Secure Network Analytics (NDR)",
-     "origen": ["S1 · Protección Avanzada M365 (suite Breach Protection Advantage)"], "capa": "Detección por comportamiento en flujos de red",
-     "ms": "Microsoft Sentinel",
-     "valor": "Enviamos a Sentinel la telemetría de red (NetFlow y comportamiento) para mejorar las detecciones.",
-     "extra": "Complementa a su SIEM actual."},
-    {"area": "seguridad", "id": "telemetry-broker", "nombre": "Cisco Telemetry Broker",
-     "origen": ["S1 · Protección Avanzada M365 (suite Breach Protection Advantage)"], "capa": "Filtrado y enrutamiento de pipelines de telemetría",
-     "ms": "Microsoft Sentinel / Azure Monitor",
-     "valor": "Filtramos y enrutamos la telemetría antes de que llegue a Sentinel: menor costo de ingesta y datos de mejor calidad."},
-    {"area": "seguridad", "id": "secure-access-sse", "nombre": "Cisco Secure Access (SSE)",
-     "origen": ["S2 · Secure Access como Servicio", "S1 · Protección Avanzada M365"], "capa": "Acceso seguro: ZTNA, SWG, DNS y VPNaaS",
+# Productos Cisco por área (Matriz v2, sección B). 16 entradas.
+# mensaje = mensaje comercial (visible en la tarjeta); valor = cómo agrega valor (en el detalle).
+MATRIZ = [
+    {"area": "conectividad", "id": "meraki-mx-secure-access", "nombre": "Meraki MX + Cisco Secure Access",
+     "origen": [S3, S5, S2], "mensaje": "Arquitectura SASE: SD-WAN + seguridad en la nube.",
+     "ms": "Microsoft 365 / Teams",
+     "valor": "Protegemos la red de cada sede y priorizamos el tráfico hacia aplicaciones SaaS como Microsoft 365 y Teams. Meraki MX aporta el SD-WAN y Cisco Secure Access, la seguridad en la nube: juntos forman una arquitectura SASE."},
+    {"area": "conectividad", "id": "catalyst-sdwan", "nombre": "Cisco Catalyst SD-WAN",
+     "origen": [S5], "mensaje": "Conectividad ágil y resiliente hacia IaaS.",
+     "ms": "Azure Virtual WAN / ExpressRoute",
+     "valor": "Conectamos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o GCP, con failover automático y políticas por aplicación."},
+    {"area": "conectividad", "id": "meraki-ms-mr", "nombre": "Meraki MS (Switching) y Meraki MR (Wireless)",
+     "origen": [S3], "mensaje": "Experiencia digital impecable en sus oficinas.",
+     "ms": "Microsoft Teams / Microsoft 365",
+     "valor": "Optimizamos la infraestructura Wi-Fi y cableada para que la colaboración, la voz y el video funcionen de forma continua, con gestión 100% en la nube."},
+    {"area": "conectividad", "id": "meraki-mg", "nombre": "Meraki MG (Cellular Gateways)",
+     "origen": [S3], "mensaje": "Respaldo para que su operación continúe.",
+     "ms": "Microsoft 365 / Azure",
+     "valor": "Integramos enlaces celulares 4G/5G de respaldo que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
+
+    {"area": "seguridad", "id": "cisco-duo", "nombre": "Cisco Duo",
+     "origen": [S1 + " (User Protection)"], "mensaje": "MFA y confianza de dispositivo más allá de Microsoft.",
+     "ms": "Entra ID (método de autenticación externo) / Microsoft Authenticator",
+     "valor": "Extendemos el MFA a servidores on-premise, RDP/SSH y aplicaciones heredadas (RADIUS/LDAP), verificamos la salud de dispositivos no administrados y añadimos políticas contextuales. Duo se integra con Entra ID como capa adicional."},
+    {"area": "seguridad", "id": "email-threat-defense", "nombre": "Cisco Secure Email Threat Defense",
+     "origen": [S1 + " (User Protection y Breach Protection)"], "mensaje": "Protección avanzada del correo.",
+     "ms": "Exchange Online / Defender for Office 365",
+     "valor": "Detectamos, bloqueamos y remediamos phishing, suplantación, BEC y ataques con códigos QR sobre Microsoft 365, vía Graph API. Aporta su mayor valor en licencias E3 y Business Basic/Standard, que no incluyen Defender for Office 365."},
+    {"area": "seguridad", "id": "secure-endpoint", "nombre": "Cisco Secure Endpoint",
+     "origen": [S1 + " (User Protection Advantage y Breach Protection)"], "mensaje": "Detección y respuesta en el puesto de trabajo.",
+     "ms": "Defender for Endpoint P1 (E3)",
+     "valor": "Sumamos EDR, con detección, respuesta e investigación basadas en la inteligencia de Cisco Talos, donde su licencia no lo incluye, como en E3. Lo implementamos como el único EDR activo de cada equipo."},
+    {"area": "seguridad", "id": "secure-access", "nombre": "Cisco Secure Access",
+     "origen": [S2, S1], "mensaje": "Firewall y ZTNA en la nube.",
      "ms": "Entra ID (proveedor de identidad)",
-     "valor": "Ofrecemos acceso Zero Trust a aplicaciones privadas e internet con la identidad de Entra ID."},
+     "valor": "Ofrecemos acceso Zero Trust a aplicaciones privadas e internet, con SWG, DNS Security, firewall en la nube y VPNaaS, usando la identidad de Entra ID."},
+    {"area": "seguridad", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
+     "origen": [S1 + " (User Protection Advantage)"], "mensaje": "Control de acceso a la red (NAC).",
+     "ms": "Microsoft Intune (integración complementaria)",
+     "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y segmentamos el acceso. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
+    {"area": "seguridad", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
+     "origen": [S6], "mensaje": "Gobierno único de la conectividad híbrida.",
+     "ms": "Azure Firewall / Microsoft Sentinel",
+     "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
+    {"area": "seguridad", "id": "cisco-xdr", "nombre": "Cisco XDR",
+     "origen": [S1 + " (Breach Protection)"], "mensaje": "Consola unificada para correlacionar alertas.",
+     "ms": "Defender XDR / Sentinel",
+     "valor": "Correlacionamos en una sola consola alertas de Cisco y de terceros, incluidos Defender, Entra ID e Intune (nivel Advantage). Lo proponemos cuando su organización necesita correlación entre varios proveedores."},
 
     {"area": "colaboracion", "id": "room-bar", "nombre": "Cisco Room Bar / Room Bar Pro",
-     "origen": ["S4 · Espacios Cisco Rooms para Teams"], "capa": "Dispositivo todo en uno para salas pequeñas y medianas",
+     "origen": [S4], "mensaje": "Salas híbridas simples y consistentes.",
      "ms": "Microsoft Teams Rooms",
-     "valor": "Instalamos un dispositivo certificado que ejecuta Microsoft Teams Rooms de forma nativa.",
-     "extra": "En Consein sumamos el hardware de sala, la instalación y el soporte."},
+     "valor": "Instalamos un dispositivo certificado que ejecuta Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."},
     {"area": "colaboracion", "id": "board-pro", "nombre": "Cisco Board Pro Series",
-     "origen": ["S4 · Espacios Cisco Rooms para Teams"], "capa": "Pantalla colaborativa y pizarra interactiva",
+     "origen": [S4], "mensaje": "Colaboración visual en sala.",
      "ms": "Microsoft Teams Rooms / Whiteboard",
      "valor": "Llevamos la reunión híbrida y la pizarra de Teams a una pantalla táctil certificada para salas medianas."},
 
-    {"area": "data-analitica", "id": "meraki-mv", "nombre": "Meraki MV (cámaras inteligentes)",
-     "origen": ["S3 · Meraki Cloud Managed"], "capa": "Video y analítica de ocupación en el borde",
-     "ms": "Power BI / Microsoft Fabric",
-     "valor": "Enviamos por API el conteo de personas y la ocupación a sus tableros ejecutivos en Power BI.",
-     "extra": "Aporta la capa de video, que complementa a Microsoft."},
-    {"area": "data-analitica", "id": "meraki-mt", "nombre": "Meraki MT (sensores IoT)",
-     "origen": ["S3 · Meraki Cloud Managed"], "capa": "Sensores ambientales: temperatura, humedad, puertas y energía",
-     "ms": "Microsoft Fabric / Power BI / Azure IoT",
-     "valor": "Aportamos datos de las condiciones físicas de sedes y centros de datos para análisis y alertas operativas."},
+    {"area": "usuarios-remotos", "id": "secure-access-remoto", "nombre": "Cisco Secure Access (firewall y ZTNA en la nube)",
+     "origen": [S2], "mensaje": "Acceso seguro desde cualquier lugar.",
+     "ms": "Entra ID / Microsoft 365",
+     "valor": "Damos a usuarios remotos y terceros acceso seguro y basado en identidad a aplicaciones privadas, SaaS e internet, como alternativa a las VPN tradicionales."},
+    {"area": "usuarios-remotos", "id": "secaas", "nombre": "Paquete SECaaS: Duo + Secure Endpoint + Secure Access",
+     "origen": [S1 + " (User Protection)", S2], "mensaje": "Seguridad del usuario remoto como servicio.",
+     "ms": "Microsoft 365 Business / Microsoft 365 E3",
+     "valor": "Agrupamos identidad, endpoint y acceso en una oferta 100% en la nube, contratada como servicio recurrente y construida sobre la suite Cisco User Protection. Su nivel Advantage incluye Secure Endpoint, ISE y Email Threat Defense."},
 
-    {"area": "servicios-empresariales", "id": "secure-access-ztna", "nombre": "Cisco Secure Access (ZTNA)",
-     "origen": ["S2 · Secure Access como Servicio"], "capa": "Acceso seguro a aplicaciones privadas y de negocio",
-     "ms": "Dynamics 365 / Business Central",
-     "valor": "Damos acceso basado en identidad y postura a usuarios remotos y terceros que operan Dynamics 365 y sus sistemas relacionados."},
-    {"area": "servicios-empresariales", "id": "sdwan-multisede", "nombre": "Meraki / Cisco SD-WAN multisede",
-     "origen": ["S3 · Meraki Cloud Managed", "S5 · SD-WAN Seguro"], "capa": "Conectividad de sucursales y última milla",
-     "ms": "Dynamics 365 / Azure ExpressRoute",
-     "valor": "Aseguramos un desempeño estable de Dynamics 365 en todas las sedes.",
-     "extra": "Microsoft aloja la aplicación y Cisco transporta el tráfico."},
-
-    {"area": "automatizacion", "id": "meraki-api", "nombre": "Meraki Dashboard API y webhooks",
-     "origen": ["S3 · Meraki Cloud Managed"], "capa": "Automatización de red, alertas y configuración",
-     "ms": "Power Automate / Logic Apps",
-     "valor": "Exponemos alertas y acciones de red (altas, cambios e incidentes de sede) para orquestarlas con Power Automate y Logic Apps."},
-
-    {"area": "inteligencia-artificial", "id": "ai-defense-inventory", "nombre": "Cisco AI Defense: AI Inventory y AI Supply Chain Risk Management",
-     "origen": ["S7 · Cisco AI Defense"], "capa": "Inventario de modelos, agentes, servidores MCP y cadena de suministro",
+    {"area": "inteligencia-artificial", "id": "ai-defense", "nombre": "Cisco AI Defense",
+     "origen": [S7], "mensaje": "Adopción responsable de IA.",
      "ms": "Azure AI Foundry / Copilot Studio",
-     "valor": "Inventariamos sus activos de IA y evaluamos el riesgo de modelos y componentes de terceros antes de desplegarlos en Azure AI Foundry."},
-    {"area": "inteligencia-artificial", "id": "ai-defense-validation", "nombre": "Cisco AI Defense: AI Model & App Validation",
-     "origen": ["S7 · Cisco AI Defense"], "capa": "Pruebas algorítmicas de seguridad de modelos y aplicaciones",
-     "ms": "Azure AI Foundry / Azure OpenAI",
-     "valor": "Validamos modelos y aplicaciones frente a prompt injection, jailbreak y fuga de datos antes de pasarlos a producción."},
-    {"area": "inteligencia-artificial", "id": "ai-defense-runtime", "nombre": "Cisco AI Defense: AI Runtime Protection",
-     "origen": ["S7 · Cisco AI Defense"], "capa": "Protección en tiempo real de agentes y respuestas",
-     "ms": "Copilot Studio / Azure OpenAI",
-     "valor": "Agregamos una capa de protección de red sobre el tráfico de inferencia.",
-     "extra": "Definimos su alcance junto a Prompt Shields y Defender for AI."},
+     "valor": "Empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones. Definimos el alcance de la protección en tiempo real junto a Prompt Shields y Defender for AI."},
 ]
+
+NUMEROS = {1: "un", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
 
 
 def productos_area(area_id):
@@ -232,10 +213,11 @@ def productos_area(area_id):
 
 def tecnologias_area(area_id):
     """Cisco y Microsoft de un área, derivados de la propia matriz."""
+    import re
     ms = []
     for m in productos_area(area_id):
-        for x in m["ms"].replace(" (cumplimiento)", "").replace(" (proveedor de identidad)", "").split(" / "):
-            if x not in ms:
+        for x in re.sub(r"\s*\([^)]*\)", "", m["ms"]).split(" / "):
+            if x and x not in ms:
                 ms.append(x)
     return ", ".join(m["nombre"] for m in productos_area(area_id)), ", ".join(ms)
 
@@ -261,22 +243,22 @@ PRODUCTOS = [
      "resuelve": "Aceleramos la red local y el Wi-Fi y habilitamos el acceso según el cumplimiento de Intune.",
      "incluye": ["Diseñamos la red LAN/WLAN gestionada en la nube con Meraki MS (switching) y Meraki MR (wireless).",
                  "Migramos por oleadas mientras su operación sigue activa.",
-                 "Integramos Cisco ISE con el cumplimiento de Microsoft Intune y Entra ID.",
+                 "Controlamos el acceso a la red con Cisco ISE y Cisco Secure Client, con integración complementaria con Intune.",
                  "Retiramos los equipos antiguos de forma responsable."],
      "resultado": "Le entregamos una red local y un Wi-Fi gestionados en la nube, listos para Teams y Microsoft 365.",
      "tec": ("Switches y access points legados → Meraki MS y Meraki MR", "Microsoft Teams, Microsoft 365, Intune y Entra ID"),
      "dato": "Con Meraki, 40% menos tiempo de inactividad y 80% menos tickets de red (Forrester TEI, 2025).",
      "cta": "Renovemos su campus"},
     {"code": "REN-03", "titulo": "Sucursales con SD-WAN",
-     "valor": "Reemplazamos routers legados y enlaces MPLS por Meraki MX Security & SD-WAN conectado a Azure Virtual WAN.",
+     "valor": "Reemplazamos routers legados y enlaces MPLS por Meraki MX con SD-WAN y, junto a Cisco Secure Access, formamos una arquitectura SASE.",
      "ideal": "Empresas con routers de sucursal antiguos o enlaces MPLS.",
      "resuelve": "Protegemos el borde de cada sucursal y priorizamos el tráfico de Microsoft 365 y Teams.",
-     "incluye": ["Instalamos Meraki MX Security & SD-WAN en cada sucursal.",
+     "incluye": ["Instalamos Meraki MX con SD-WAN en cada sucursal y sumamos la seguridad en la nube de Cisco Secure Access.",
                  "Conectamos cada sede con Azure Virtual WAN.",
                  "Priorizamos el tráfico de Microsoft 365, Teams y Dynamics 365.",
-                 "Agregamos respaldo celular 4G/5G con Meraki MG cuando aplica."],
+                 "Agregamos respaldo celular 4G/5G con Meraki MG, sujeto a la cobertura celular de la sede."],
      "resultado": "Logramos sucursales estables, gestionadas en la nube y conectadas a Azure.",
-     "tec": ("Routers legados y MPLS → Meraki MX Security & SD-WAN y Meraki MG", "Azure Virtual WAN, Microsoft 365, Teams y Dynamics 365"),
+     "tec": ("Routers legados y MPLS → Meraki MX + Cisco Secure Access (SASE) y Meraki MG", "Azure Virtual WAN, Microsoft 365, Teams y Dynamics 365"),
      "dato": "En el estudio de Forrester sobre Meraki, una organización redujo en más de dos tercios su costo mensual de conectividad por sede al migrar desde MPLS (TEI, 2025).",
      "cta": "Modernicemos sus sucursales"},
     {"code": "REN-04", "titulo": "Renovación de firewalls",
@@ -292,15 +274,15 @@ PRODUCTOS = [
      "dato": "42,5% de las vulnerabilidades explotadas en equipos de borde durante 2025 afectó a dispositivos en fin de vida o cerca de él (VulnCheck, 2025).",
      "cta": "Renovemos su perímetro"},
     {"code": "REN-05", "titulo": "Conectividad de datacenter y nube",
-     "valor": "Renovamos la WAN entre su centro de datos, la sede central y Azure con Cisco SD-WAN (Catalyst).",
+     "valor": "Renovamos la WAN entre su centro de datos, la sede central y Azure con Cisco Catalyst SD-WAN.",
      "ideal": "Empresas con routers WAN de centro de datos o sede central de generaciones anteriores.",
      "resuelve": "Extendemos las políticas por aplicación hasta Azure IaaS, con failover y visibilidad del desempeño.",
-     "incluye": ["Diseñamos el overlay WAN entre centro de datos, sedes y nube con Cisco SD-WAN (Catalyst).",
+     "incluye": ["Conectamos de forma segura sedes y centro de datos con las cargas en Azure, AWS o GCP mediante Cisco Catalyst SD-WAN.",
                  "Conectamos con Azure mediante Azure Virtual WAN o ExpressRoute.",
                  "Configuramos políticas por aplicación y failover.",
                  "Damos visibilidad del desempeño de la WAN de punta a punta."],
      "resultado": "Le entregamos una WAN de centro de datos y sede central lista para operar con Azure.",
-     "tec": ("Routers WAN de datacenter y sede central → Cisco SD-WAN (Catalyst) para DC/HQ e IaaS", "Azure Virtual WAN y ExpressRoute"),
+     "tec": ("Routers WAN de datacenter y sede central → Cisco Catalyst SD-WAN", "Azure Virtual WAN y ExpressRoute"),
      "cta": "Planifiquemos su WAN"},
     {"code": "REN-06", "titulo": "Salas para Teams",
      "valor": "Convertimos sus salas de video legadas en salas Microsoft Teams Rooms con Cisco Room Bar y Board Pro Series.",
@@ -343,7 +325,7 @@ FAQ = [
     ("¿Cómo conectan las sucursales de una empresa a Azure?",
      "Implementamos SD-WAN Cisco (Meraki o Catalyst 8000V) integrada con Azure Virtual WAN. Priorizamos Teams, Microsoft 365 y Dynamics 365 y gestionamos todas las sedes desde un solo lugar."),
     ("¿Cómo extienden Zero Trust hasta la red corporativa?",
-     "Integramos Cisco ISE con Microsoft Intune y Entra ID: la red solo admite a usuarios y dispositivos que cumplen las políticas, y todos los eventos llegan a Microsoft Sentinel."),
+     "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall envía sus registros a Microsoft Sentinel."),
     ("¿Qué equipos usan para las salas Microsoft Teams Rooms?",
      "Instalamos Cisco Room Kit, Board y Desk certificados para Microsoft Teams Rooms, configurados en Teams Admin Center y listos para Microsoft 365 Copilot."),
     ("¿Cómo miden el rendimiento de las aplicaciones de negocio?",
@@ -423,7 +405,7 @@ def menu(actual):
           <button class="nav-link" aria-expanded="false" aria-haspopup="true"{cur('soluciones', 'productos')}>Soluciones Cisco<span class="caret">▾</span></button>
           <div class="mega mega-cisco">
             <div class="mega-group">
-              <a class="mega-l2" href="soluciones.html"><b>Soluciones de Valor</b><small>19 productos Cisco en 7 áreas de práctica</small></a>
+              <a class="mega-l2" href="soluciones.html"><b>Soluciones de Valor</b><small>{len(MATRIZ)} productos Cisco en {len(ESPECIALIDADES)} áreas de práctica</small></a>
               <ul>{especialidades}</ul>
             </div>
             <div class="mega-group">
@@ -667,14 +649,14 @@ def inicio():
    <div class="hero-copy">
     <p class="eyebrow">Soluciones Cisco · Consein</p>
     <h1><em>Sinergia exponencial:</em><span>su plataforma Microsoft, potenciada por una red Cisco</span></h1>
-    <p class="lead">Integramos redes, ciberseguridad, salas de reunión y observabilidad Cisco con Microsoft 365, Azure y Dynamics 365, en un solo servicio gestionado y con un solo responsable.</p>
+    <p class="lead">Integramos redes, seguridad y salas de reunión Cisco con Microsoft 365, Entra ID, Azure y Teams, en un solo servicio gestionado y con un solo responsable.</p>
     <div class="actions">
       <a class="btn btn-primary" href="index.html#contacto">Hablar con un especialista</a>
       <a class="btn btn-line" href="soluciones.html">Ver soluciones</a>
     </div>
     <div class="figures">
-      <div><b>19</b><span>productos Cisco</span></div>
-      <div><b>7</b><span>áreas de práctica</span></div>
+      <div><b>{len(MATRIZ)}</b><span>productos Cisco</span></div>
+      <div><b>{len(ESPECIALIDADES)}</b><span>áreas de práctica</span></div>
       <div><b>8</b><span>ofertas de renovación</span></div>
     </div>
    </div>
@@ -688,7 +670,7 @@ def inicio():
    <div>
     <p class="eyebrow">Nuestro enfoque</p>
     <p class="statement">Microsoft es donde trabaja su negocio. Cisco es por donde viaja. En Consein los hacemos funcionar como uno solo.</p>
-    <p class="statement-text">Construimos cada proyecto sobre su plataforma Microsoft e incorporamos Cisco en las capas que la potencian: la red, las salas, la observabilidad y la seguridad especializada.</p>
+    <p class="statement-text">Construimos cada proyecto sobre su plataforma Microsoft e incorporamos Cisco como acelerador en las capas que la potencian: la red, la seguridad y las salas.</p>
    </div>
    {D(ARTE_CAPAS)}
   </div>
@@ -698,8 +680,8 @@ def inicio():
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Soluciones de Valor</p>
-      <h2>Siete especialidades</h2>
-      <p class="lead">Cada especialidad combina tecnología Cisco con su BASE Microsoft.</p>
+      <h2>{NUMEROS[len(ESPECIALIDADES)].capitalize()} áreas de práctica</h2>
+      <p class="lead">Cada área combina tecnología Cisco con su BASE Microsoft.</p>
     </div>
     <div class="grid g4">{tiles}</div>
   </div>
@@ -774,28 +756,26 @@ def inicio():
           {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]
     pagina("index.html", "index",
            "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein",
-           "Integramos redes Cisco con su plataforma Microsoft: SD-WAN para Azure, Zero Trust, Microsoft Teams Rooms, observabilidad e IA segura. Venezuela, Panamá, República Dominicana y EE. UU.",
+           "Integramos redes, seguridad y salas Cisco con su plataforma Microsoft: SASE y SD-WAN, Cisco Duo, Secure Endpoint, ISE, Microsoft Teams Rooms e IA responsable. Venezuela, Panamá, República Dominicana y EE. UU.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
 # Soluciones
 # ---------------------------------------------------------------------------
 def tarjeta_producto(m, area):
-    """Tarjeta: título y valor visibles; el resto en la subpantalla "Seguir leyendo…"."""
-    texto = m["valor"] + (" " + m["extra"] if m.get("extra") else "")
-    filas = [("Capa / función", E(m["capa"])),
-             ("Producto Microsoft asociado", E(m["ms"])),
-             ("Cómo agrega valor", E(texto)),
+    """Tarjeta: producto y mensaje visibles; el resto en la subpantalla "Seguir leyendo…"."""
+    filas = [("Producto Microsoft asociado", E(m["ms"])),
+             ("Cómo agrega valor", E(m["valor"])),
              ("Servicio Consein", "<br>".join(E(o) for o in m["origen"]))]
     dl = "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas)
     return f"""<article class="card" id="{m['id']}">
   <h3>{E(m['nombre'])}</h3>
-  <p>{E(m['valor'])}</p>
+  <p>{E(m['mensaje'])}</p>
   <a class="more" href="#{m['id']}" aria-label="Seguir leyendo: {E(m['nombre'])}">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-{m['id']}">
     <p class="code">{E(area['nombre'])} · Producto Cisco</p>
     <h2>{E(m['nombre'])}</h2>
-    <p class="value">{E(m['valor'])}</p>
+    <p class="value">{E(m['mensaje'])}</p>
     <dl>{dl}</dl>
     <a class="btn btn-primary" href="index.html?interes={area['id']}#contacto">Solicitar información</a>
   </div>
@@ -805,14 +785,14 @@ def tarjeta_producto(m, area):
 def soluciones():
     chips = "".join(f'<a href="#{e["id"]}">{E(e["nombre"])}</a>' for e in ESPECIALIDADES)
     criterios = "".join(f"<div>{D(icono(ic))}<b>{E(t)}</b><p>{E(d)}</p></div>"
-                        for (t, d), ic in zip(CRITERIOS, ("infraestructura", "integral", "objetivo")))
+                        for (t, d), ic in zip(CRITERIOS, ("integral", "seguridad", "objetivo")))
     vista = ""
     for i, e in enumerate(ESPECIALIDADES, 1):
         n = len(productos_area(e["id"]))
         vista += f"""<a class="tile" href="#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
   <h3>{i}. {E(e['nombre'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto' if n == 1 else 'productos'}</span></a>"""
     vista += f"""<div class="tile featured">{D(icono('integral'))}
-  <h3>Total: {len(MATRIZ)} productos</h3><p>Entradas de producto Cisco sin colisión relevante con la plataforma Microsoft. Algunos productos aparecen en más de un área.</p></div>"""
+  <h3>Total: {len(MATRIZ)} productos</h3><p>Entradas de producto Cisco posicionadas junto a la plataforma Microsoft. Cisco Secure Access aparece en dos áreas.</p></div>"""
     areas = ""
     for e in ESPECIALIDADES:
         cisco, ms = tecnologias_area(e["id"])
@@ -830,42 +810,43 @@ def soluciones():
 <section class="page-head">
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones Cisco › Soluciones de Valor</p>
-    <h1>Cisco suma valor a su plataforma Microsoft</h1>
-    <p class="lead">Seleccionamos productos Cisco del Modelo de Servicios Cisco de Consein, filtrados por colisión con los servicios Microsoft y organizados en nuestras 7 áreas de práctica.</p>
+    <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas</p>
+    <h1>Better Together: Cisco suma valor a su plataforma Microsoft</h1>
+    <p class="lead">Seleccionamos productos Cisco del Modelo de Servicios Cisco de Consein y los posicionamos según la licencia Microsoft de cada cliente, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
   </div>
 </section>
 
 <section id="criterio">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Criterio de selección</p><h2>Solo productos que suman valor</h2>
-      <p class="lead">Incluimos productos del Modelo de Servicios (servicios 1 a 7) que cumplen al menos una de estas condiciones y respetan su inversión Microsoft: una sola función, una sola consola y una sola licencia por necesidad.</p></div>
+    <div class="section-head"><p class="eyebrow">Criterio de la matriz</p><h2>Cisco y Microsoft, mejor juntos</h2>
+      <p class="lead">Cisco se integra con Microsoft para cubrir brechas según la licencia de cada cliente: posicionamos cada producto donde aporta valor real y evitamos duplicar lo que usted ya paga.</p></div>
     <div class="grid g3 proof">{criterios}</div>
-    <p class="note" style="margin-top:32px">Excluimos los productos con colisión alta o media frente a Microsoft, como Cisco Duo y Cisco XDR. Cada producto indica el servicio Consein del que proviene.</p>
+    <p class="note" style="margin-top:32px">Cada producto indica el servicio del Modelo de Servicios Cisco de Consein del que proviene, y cada servicio sigue nuestros siete pasos, de Evaluamos a Aseguramos.</p>
   </div>
 </section>
 
 <section class="soft" id="vista">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Vista consolidada</p><h2>Valor agregado por área de práctica</h2></div>
-    <div class="grid g4">{vista}</div>
+    <div class="grid g3">{vista}</div>
   </div>
 </section>
 {areas}
 {banda('Conversemos sobre el valor que Cisco suma a su plataforma Microsoft', 'Hablar con un especialista', 'index.html#contacto')}"""
-    ld = [{"@type": "WebPage", "name": "Cisco suma valor a su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
+    ld = [{"@type": "WebPage", "name": "Better Together: Cisco suma valor a su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
                {"@type": "ListItem", "position": 2, "name": "Soluciones de Valor", "item": URL_BASE + "soluciones"}]}},
           {"@type": "ItemList", "name": "Matriz de valor Cisco + Microsoft",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": {
-               "@type": "Service", "name": m["nombre"], "description": m["valor"],
+               "@type": "Service", "name": m["nombre"], "description": m["mensaje"] + " " + m["valor"],
                "serviceType": next(e["nombre"] for e in ESPECIALIDADES if e["id"] == m["area"]),
                "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones#" + m["id"],
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
-           "Matriz de valor Cisco + Microsoft: 19 productos en 7 áreas | Consein",
-           "Productos Cisco que suman valor a Microsoft 365, Azure, Teams, Dynamics 365, Power BI y Copilot Studio: Meraki, Cisco SD-WAN, Secure Firewall, ISE, Secure Access, Room Bar, Board Pro y AI Defense.",
+           f"Cisco + Microsoft Better Together: {len(MATRIZ)} productos en {len(ESPECIALIDADES)} áreas | Consein",
+           "Productos Cisco que se integran con Microsoft 365, Entra ID, Azure y Teams: Meraki SD-WAN, Catalyst SD-WAN, Cisco Duo, Secure Email Threat Defense, Secure Endpoint, Secure Access, ISE, Secure Firewall, XDR, Room Bar, Board Pro y AI Defense.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -874,12 +855,12 @@ def soluciones():
 def productos():
     cards = "".join(tarjeta(p, "Programa Renueva", renovacion=True) for p in PRODUCTOS)
     rutas = [
-        ("Switches de campus legados", "Meraki MS (switching)", "Red física con QoS para la voz y el video de Teams; acceso según el cumplimiento de Intune con Cisco ISE."),
-        ("WiFi de generaciones anteriores", "Meraki MR (wireless)", "Wi-Fi gestionado en la nube para Microsoft Teams y Microsoft 365."),
-        ("Routers de sucursal y MPLS", "Meraki MX Security & SD-WAN", "Conexión con Azure Virtual WAN y prioridad para Microsoft 365 y Teams."),
-        ("Sedes sin enlace de respaldo", "Meraki MG (cellular gateways)", "Acceso a Microsoft 365 y Azure cuando falla el enlace principal."),
+        ("Switches de campus legados", "Meraki MS (Switching)", "Red cableada para la colaboración, la voz y el video de Teams; control de acceso a la red con Cisco ISE."),
+        ("WiFi de generaciones anteriores", "Meraki MR (Wireless)", "Wi-Fi gestionado en la nube para Microsoft Teams y Microsoft 365."),
+        ("Routers de sucursal y MPLS", "Meraki MX + Cisco Secure Access (SASE)", "Prioridad para el tráfico hacia Microsoft 365 y Teams, con seguridad en la nube."),
+        ("Sedes sin enlace de respaldo", "Meraki MG (Cellular Gateways)", "Acceso a Microsoft 365 y Azure cuando falla el enlace principal, sujeto a cobertura celular."),
         ("Firewalls legados", "Cisco Secure Firewall", "Gobierno único de reglas con Azure Firewall y registros en Microsoft Sentinel."),
-        ("Routers WAN de datacenter y sede central", "Cisco SD-WAN (Catalyst) para DC/HQ e IaaS", "Políticas por aplicación hasta Azure IaaS, con Azure Virtual WAN y ExpressRoute."),
+        ("Routers WAN de datacenter y sede central", "Cisco Catalyst SD-WAN", "Conectividad segura hacia Azure, con failover automático y políticas por aplicación."),
         ("Video legado", "Cisco Room Bar / Room Bar Pro y Board Pro Series", "Microsoft Teams Rooms y la pizarra de Teams en hardware certificado."),
     ]
     filas = "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td></tr>" for a, b, c in rutas)
