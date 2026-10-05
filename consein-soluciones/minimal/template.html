@@ -161,11 +161,16 @@ nav.main a:hover,nav.main a.on{color:var(--brand);font-weight:500}
 .tags span{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 12px}
 
 /* NortIA */
-.phase{border-top:2px solid #B8734A;padding-top:20px}
-.phase small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#B8734A;font-weight:600}
-.phase h3{font-size:1.4rem;margin:6px 0}
-.phase p{margin:0;color:var(--muted);font-size:.95rem}
-.phase .dur{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:99px;border:1px solid #B8734A;color:#B8734A;font-size:.78rem;font-weight:500}
+.phase{display:flex;flex-direction:column;border-top:2px solid #B8734A;padding-top:20px}
+.phase small.f{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#B8734A;font-weight:600}
+.phase h3{font-size:1.4rem;margin:6px 0 2px;letter-spacing:.02em;text-transform:uppercase}
+.phase .subt{font-family:var(--title);color:#B8734A;font-size:.98rem;margin:0 0 14px}
+.phase .q{margin:0 0 12px;padding:10px 0 10px 14px;border-left:2px solid var(--accent);font-style:italic;color:var(--brand);font-size:.9rem;line-height:1.45}
+.phase .q small{display:block;font-style:normal;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.phase p.txt{margin:0;color:var(--muted);font-size:.9rem;flex:1}
+.phase .dur{align-self:flex-start;display:inline-block;margin-top:14px;padding:5px 12px;border-radius:99px;border:1px solid #B8734A;color:#B8734A;font-size:.76rem;font-weight:500}
+.phase .lema{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+@media (min-width:961px){.phase .subt{min-height:3.3em}.phase .lema{min-height:4.6em}.phase .q{min-height:5.6em}}
 .norte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .norte div{border:1px solid var(--line);border-radius:14px;padding:20px}
 .norte b{font-family:var(--title);font-size:2rem;color:#B8734A;line-height:1}
@@ -505,7 +510,12 @@ function nortia(n){
 
   <section class="tight"><div class="wrap">
     <p class="kicker">Cuatro fases</p>
-    <div class="grid g4" style="margin-top:24px">${n.fases.map((f,i) => `<div class="phase"><small>Fase ${i}</small><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${f[2] ? `<span class="dur">${esc(f[2])}</span>` : ''}</div>`).join('')}</div>
+    <div class="grid g4" style="margin-top:24px;gap:32px">${n.fases.map((f,i) => `<div class="phase"><small class="f">Fase ${i}</small>
+      <h3>${esc(f.nombre)}</h3><p class="subt">${esc(f.subtitulo)}</p>
+      <p class="q"><small>Pregunta</small>${esc(f.pregunta)}</p>
+      <p class="txt">${esc(f.texto)}</p>
+      ${f.dur ? `<span class="dur">${esc(f.dur)}</span>` : ''}
+      <div class="lema">${esc(f.lema)}</div></div>`).join('')}</div>
     <p class="lead" style="margin-top:32px">${esc(n.ciclo)}</p>
   </div></section>
 

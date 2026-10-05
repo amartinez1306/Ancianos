@@ -246,14 +246,24 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .panel.n a{color:var(--green);font-weight:600;text-decoration:none}
 
 /* NortIA */
-.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;position:relative}
-.phase{padding:28px 24px;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-line);position:relative}
+.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;position:relative;padding-top:34px}
+.phases::before{content:"";position:absolute;top:14px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--green),rgba(88,187,71,.35),var(--green));opacity:.6}
+.phase{display:flex;flex-direction:column;padding:26px 22px 0;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-line);position:relative;overflow:hidden}
+.phase .node{position:absolute;top:-34px;left:50%;width:28px;height:28px;margin-left:-14px;border-radius:50%;background:var(--navy);border:2px solid var(--green);color:#fff;display:grid;place-items:center;font:700 .74rem var(--body)}
+.phases .phase{overflow:visible}
+.phase .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.phase .top svg{width:34px;height:34px;color:var(--green);margin:0}
 .phase .ph{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600}
-.phase h3{font-size:1.5rem;margin:8px 0}
-.phase p{margin:0;font-size:.92rem;color:#c3c9e6}
-.phase svg{width:40px;height:40px;color:var(--green);margin-bottom:14px}
-.phase .dur{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 12px;border-radius:12px;line-height:1.35;background:rgba(88,187,71,.15);border:1px solid rgba(88,187,71,.45);color:#fff;font-size:.78rem;font-weight:600}
+.phase h3{font-size:1.55rem;margin:0;letter-spacing:.02em;text-transform:uppercase}
+.phase .subt{font-family:var(--title);font-size:1rem;color:var(--green);margin:4px 0 16px;line-height:1.3}
+.phase .q{position:relative;margin:0 0 14px;padding:12px 14px 12px 40px;border-radius:12px;background:rgba(255,255,255,.07);border-left:3px solid var(--green);color:#fff;font-size:.88rem;font-style:italic;line-height:1.45}
+.phase .q::before{content:"?";position:absolute;left:12px;top:11px;width:20px;height:20px;border-radius:50%;background:var(--green);color:var(--navy);font:700 .75rem/20px var(--body);text-align:center;font-style:normal}
+.phase .q small{display:block;font-style:normal;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#aab1d4;margin-bottom:3px}
+.phase p.txt{margin:0;font-size:.88rem;color:#c3c9e6;flex:1}
+.phase .dur{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 12px;border-radius:12px;line-height:1.35;background:rgba(88,187,71,.15);border:1px solid rgba(88,187,71,.45);color:#fff;font-size:.76rem;font-weight:600}
 .phase .dur::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.phase .lema{margin:20px -22px 0;padding:14px 22px;background:linear-gradient(90deg,rgba(88,187,71,.95),rgba(63,154,51,.95));color:var(--navy);font:700 .7rem/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase;border-radius:0 0 var(--r) var(--r)}
+@media (min-width:981px){.phase .subt{min-height:2.6em}.phase .lema{min-height:66px;display:flex;align-items:center}.phase .q{min-height:104px}}
 .norte{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .norte div{padding:24px 20px;border-radius:var(--r);background:#fff;border:1px solid var(--line);position:relative;overflow:hidden}
 .norte b{font-family:var(--title);font-size:3rem;line-height:1;color:var(--navy)}
@@ -303,7 +313,8 @@ footer img{height:20px;width:auto}
   .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stats{grid-template-columns:repeat(3,1fr)}
-  .phases{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phases{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}
+  .phases::before{display:none}
   .norte{grid-template-columns:repeat(3,minmax(0,1fr))}
   .contact .wrap,.backing{grid-template-columns:1fr}
 }
@@ -673,7 +684,13 @@ function nortia(n){
   <section class="dark"><div class="grid-bg" aria-hidden="true"></div><div class="wrap">
     <p class="kicker">Cuatro fases</p>
     <h2>Radar · Norte · Vector · <span class="hl">Brújula</span></h2>
-    <div class="phases" style="margin-top:40px">${n.fases.map((f,i) => `<div class="phase">${svg(phIcons[i])}<span class="ph">Fase ${i}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${f[2] ? `<span class="dur">${esc(f[2])}</span>` : ''}</div>`).join('')}</div>
+    <div class="phases" style="margin-top:40px">${n.fases.map((f,i) => `<div class="phase"><span class="node">${i}</span>
+      <div class="top"><span class="ph">Fase ${i}</span>${svg(phIcons[i])}</div>
+      <h3>${esc(f.nombre)}</h3><p class="subt">${esc(f.subtitulo)}</p>
+      <p class="q"><small>Pregunta</small>${esc(f.pregunta)}</p>
+      <p class="txt">${esc(f.texto)}</p>
+      ${f.dur ? `<span class="dur">${esc(f.dur)}</span>` : ''}
+      <div class="lema">${esc(f.lema)}</div></div>`).join('')}</div>
     <p class="lead" style="margin-top:32px">${esc(n.ciclo)}</p>
   </div></section>
 

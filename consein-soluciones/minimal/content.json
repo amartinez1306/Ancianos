@@ -33,25 +33,38 @@
    ]
   ],
   "fases": [
-   [
-    "Radar",
-    "Medimos su madurez y priorizamos hasta tres dominios de negocio.",
-    "16 horas / 40 horas"
-   ],
-   [
-    "Norte",
-    "Enseñamos a su equipo a comunicarse con la IA con el método N-O-R-T-E.",
-    "Talleres de 4 horas · 10 asistentes"
-   ],
-   [
-    "Vector",
-    "Formamos AI Champions que construyen agentes reales.",
-    "6 a 8 semanas · mentoría semanal"
-   ],
-   [
-    "Brújula",
-    "Gobernamos la IA con cultura, datos y seguridad."
-   ]
+   {
+    "nombre": "Radar",
+    "subtitulo": "Ver el potencial",
+    "pregunta": "¿Dónde estamos y dónde están nuestras mejores oportunidades?",
+    "texto": "Identificamos el nivel de madurez, el readiness tecnológico y los dominios de negocio con mayor potencial de impacto.",
+    "lema": "Dónde estamos",
+    "dur": "16 horas / 40 horas"
+   },
+   {
+    "nombre": "Norte",
+    "subtitulo": "Definir la dirección",
+    "pregunta": "¿Hacia dónde debemos avanzar y cómo aprovechar la IA correctamente?",
+    "texto": "Alineamos estrategia, liderazgo y metodología para que la organización avance con propósito y enfoque.",
+    "lema": "Hacia dónde vamos",
+    "dur": "Talleres de 4 horas · 10 asistentes"
+   },
+   {
+    "nombre": "Vector",
+    "subtitulo": "Transformar la dirección en movimiento",
+    "pregunta": "¿Cómo convertimos la estrategia en resultados reales?",
+    "texto": "Transferimos conocimiento, desarrollamos Champions, construimos agentes y adaptamos procesos para generar capacidades internas sostenibles.",
+    "lema": "Convierte esa dirección en movimiento",
+    "dur": "6 a 8 semanas · mentoría semanal"
+   },
+   {
+    "nombre": "Brújula",
+    "subtitulo": "Mantener el rumbo",
+    "pregunta": "¿Cómo aseguramos que la IA siga generando valor en el tiempo?",
+    "texto": "Establecemos gobernanza, seguridad y liderazgo para sostener la evolución de la IA como una capacidad permanente del negocio.",
+    "lema": "Asegura que permanezcamos en el rumbo correcto",
+    "dur": null
+   }
   ],
   "ciclo": "Al cerrar el ciclo, su equipo lo repite en cualquier área del negocio.",
   "norte": [
