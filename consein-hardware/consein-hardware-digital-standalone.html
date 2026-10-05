@@ -454,6 +454,40 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
 @media (prefers-reduced-motion: reduce) {
   .flow path, path.flow, .core, .pulse::after, .blink, .eq rect, .track li.current::before { animation: none !important; }
 }
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: start; }
+.faq-head { position: sticky; top: calc(var(--header-h) + 32px); }
+.faq-head .intro { margin-bottom: 32px; }
+.faq-card { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.faq-card .d-tile { margin: 0; width: 48px; height: 48px; flex: none; }
+.faq-card strong { display: block; color: var(--navy); }
+.faq-card p { margin: 2px 0 8px; font-size: .9rem; color: var(--muted); }
+.faq-card a { font-weight: 600; font-size: .9rem; color: var(--navy); text-decoration: none; box-shadow: inset 0 -2px 0 var(--green); }
+.faq-list { display: grid; gap: 12px; }
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 14px; transition: border-color .2s, box-shadow .2s; }
+.faq-item[open] { border-color: rgba(88,187,71,.55); box-shadow: 0 12px 32px rgba(27,36,91,.08); }
+.faq-item summary {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px; cursor: pointer; list-style: none;
+  font-family: var(--font-title); font-weight: 600; font-size: 1rem; line-height: 1.35; color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 14px; }
+.faq-n { font-family: var(--font-body); font-size: .72rem; font-weight: 600; color: var(--green); min-width: 20px; }
+.faq-ic { position: relative; margin-left: auto; width: 28px; height: 28px; flex: none; border-radius: 8px; background: #F3F4F8; transition: background .2s, transform .2s; }
+.faq-ic::before, .faq-ic::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--navy); transform: translate(-50%, -50%); transition: transform .2s; }
+.faq-ic::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item[open] .faq-ic { background: var(--green); }
+.faq-item[open] .faq-ic::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq-item p { margin: 0; padding: 0 20px 20px 54px; color: var(--muted); }
+@media (max-width: 960px) {
+  .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+  .faq-head { position: static; }
+}
+@media (max-width: 760px) {
+  .faq-item summary { padding: 16px; font-size: .95rem; }
+  .faq-item p { padding: 0 16px 18px 16px; }
+}
 </style>
   <script type="application/ld+json">
   {
@@ -476,6 +510,102 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soporte técnico y mantenimiento", "description": "Soporte especializado, mantenimiento preventivo y correctivo, garantías y renovación tecnológica."}}
       ]
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué marcas de hardware ofrecen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos con Dell, HP, Lenovo y Logitech. Somos Partner Oficial de Dell. Si su proyecto requiere otro fabricante, lo conseguimos a través de nuestras Marcas Bajo Demanda."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué significa «Marcas Bajo Demanda»?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Conseguimos tecnología de otros fabricantes según el requerimiento de su empresa. La gestionamos con el mismo acompañamiento: compra, importación, configuración e instalación y soporte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo sé qué equipos necesita mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Empezamos por la arquitectura de la solución: hacemos un diagnóstico tecnológico, lo asesoramos y dimensionamos cada equipo según sus necesidades operativas, técnicas y de presupuesto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona la importación puerta a puerta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gestionamos la compra internacional, coordinamos con fabricantes y distribuidores, consolidamos las órdenes, coordinamos el transporte y el proceso aduanal, y entregamos en sus instalaciones. Usted tiene un único punto de contacto durante todo el proceso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo conocer el estado de mi pedido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Hacemos el seguimiento logístico y le informamos cada avance, para que planifique la recepción, la configuración e instalación y la entrada en operación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Configuran e instalan los equipos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Realizamos la configuración e instalación en sitio, la migración tecnológica y la puesta en marcha, para que su tecnología quede lista para operar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué soporte ofrecen después de la entrega?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brindamos soporte técnico especializado, mantenimiento preventivo y correctivo, gestión de garantías, renovación tecnológica planificada y gestión del ciclo de vida de sus activos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿También ofrecen impresoras, consumibles y accesorios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ofrecemos impresoras láser y de inyección de tinta, multifuncionales, equipos de alto volumen, consumibles y repuestos, además de teclados, mouse, headsets, docking stations y otros accesorios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Equipan salas de videoconferencia y Microsoft Teams Rooms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Diseñamos salas de reunión para la colaboración híbrida, con sistemas de videoconferencia, cámaras, audio profesional y equipos para Microsoft Teams Rooms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Atienden proyectos grandes o en varias sedes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Acompañamos renovaciones masivas de equipos, aperturas de nuevas oficinas, sedes distribuidas, modernización de centros de datos y proyectos con varios fabricantes o distribuidores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo solicito una cotización?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Escríbanos desde el botón «Hablar con un asesor». Revisamos su requerimiento y le proponemos la solución adecuada para su empresa."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -989,6 +1119,71 @@ h4 { font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-
               <li>Gestión del ciclo de vida de activos</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="section d-dots" id="preguntas-frecuentes">
+      <div class="container faq-grid">
+        <div class="faq-head">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Resolvemos sus dudas</h2>
+          <p class="intro">Lo que más nos preguntan sobre nuestras soluciones de hardware, la importación y el soporte.</p>
+          <div class="faq-card">
+            <span class="d-tile"><svg class="ic"><use href="#i-soporte"/></svg></span>
+            <div>
+              <strong>¿No encuentra su respuesta?</strong>
+              <p>Un asesor lo atiende directamente.</p>
+              <a href="#contacto">Escríbanos →</a>
+            </div>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span class="faq-n">01</span>¿Qué marcas de hardware ofrecen?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Trabajamos con Dell, HP, Lenovo y Logitech. Somos Partner Oficial de Dell. Si su proyecto requiere otro fabricante, lo conseguimos a través de nuestras Marcas Bajo Demanda.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">02</span>¿Qué significa «Marcas Bajo Demanda»?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Conseguimos tecnología de otros fabricantes según el requerimiento de su empresa. La gestionamos con el mismo acompañamiento: compra, importación, configuración e instalación y soporte.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">03</span>¿Cómo sé qué equipos necesita mi empresa?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Empezamos por la arquitectura de la solución: hacemos un diagnóstico tecnológico, lo asesoramos y dimensionamos cada equipo según sus necesidades operativas, técnicas y de presupuesto.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">04</span>¿Cómo funciona la importación puerta a puerta?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Gestionamos la compra internacional, coordinamos con fabricantes y distribuidores, consolidamos las órdenes, coordinamos el transporte y el proceso aduanal, y entregamos en sus instalaciones. Usted tiene un único punto de contacto durante todo el proceso.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">05</span>¿Puedo conocer el estado de mi pedido?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Sí. Hacemos el seguimiento logístico y le informamos cada avance, para que planifique la recepción, la configuración e instalación y la entrada en operación.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">06</span>¿Configuran e instalan los equipos?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Sí. Realizamos la configuración e instalación en sitio, la migración tecnológica y la puesta en marcha, para que su tecnología quede lista para operar.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">07</span>¿Qué soporte ofrecen después de la entrega?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Brindamos soporte técnico especializado, mantenimiento preventivo y correctivo, gestión de garantías, renovación tecnológica planificada y gestión del ciclo de vida de sus activos.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">08</span>¿También ofrecen impresoras, consumibles y accesorios?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Sí. Ofrecemos impresoras láser y de inyección de tinta, multifuncionales, equipos de alto volumen, consumibles y repuestos, además de teclados, mouse, headsets, docking stations y otros accesorios.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">09</span>¿Equipan salas de videoconferencia y Microsoft Teams Rooms?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Sí. Diseñamos salas de reunión para la colaboración híbrida, con sistemas de videoconferencia, cámaras, audio profesional y equipos para Microsoft Teams Rooms.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">10</span>¿Atienden proyectos grandes o en varias sedes?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Sí. Acompañamos renovaciones masivas de equipos, aperturas de nuevas oficinas, sedes distribuidas, modernización de centros de datos y proyectos con varios fabricantes o distribuidores.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="faq-n">11</span>¿Cómo solicito una cotización?<span class="faq-ic" aria-hidden="true"></span></summary>
+            <p>Escríbanos desde el botón «Hablar con un asesor». Revisamos su requerimiento y le proponemos la solución adecuada para su empresa.</p>
+          </details>
         </div>
       </div>
     </section>
