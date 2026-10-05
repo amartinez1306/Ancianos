@@ -56,18 +56,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "¿Cómo conectan las sucursales de una empresa a Azure?",
+     "name": "¿Cómo conectan las sedes a Microsoft 365 y Azure?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Implementamos SD-WAN Cisco (Meraki o Catalyst 8000V) integrada con Azure Virtual WAN. Priorizamos Teams, Microsoft 365 y Dynamics 365 y gestionamos todas las sedes desde un solo lugar."
+      "text": "Según el destino del tráfico. Para aplicaciones SaaS como Microsoft 365 y Teams combinamos Meraki MX con Cisco Secure Access en una arquitectura SASE; para cargas en Azure usamos Cisco Catalyst SD-WAN con Azure Virtual WAN o ExpressRoute. Meraki MG agrega respaldo 4G/5G, sujeto a la cobertura celular de la sede."
      }
     },
     {
      "@type": "Question",
-     "name": "¿Cómo extienden Zero Trust hasta la red corporativa?",
+     "name": "¿Qué aporta Cisco si ya tengo Microsoft 365?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall envía sus registros a Microsoft Sentinel."
+      "text": "Sumamos Cisco como capa complementaria según su licencia: Cisco Duo extiende el MFA a servidores on-premise y aplicaciones heredadas, Secure Email Threat Defense refuerza la protección del correo y Secure Endpoint suma EDR donde la licencia no lo incluye, como en E3."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo controlan el acceso a la red corporativa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall protege el borde y envía sus registros a Microsoft Sentinel."
      }
     },
     {
@@ -75,39 +83,23 @@
      "name": "¿Qué equipos usan para las salas Microsoft Teams Rooms?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Instalamos Cisco Room Kit, Board y Desk certificados para Microsoft Teams Rooms, configurados en Teams Admin Center y listos para Microsoft 365 Copilot."
+      "text": "Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."
      }
     },
     {
      "@type": "Question",
-     "name": "¿Cómo miden el rendimiento de las aplicaciones de negocio?",
+     "name": "¿Cómo protegen a los usuarios remotos?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Combinamos Cisco AppDynamics y ThousandEyes con Azure Monitor y publicamos los indicadores de disponibilidad en Power BI."
+      "text": "Con Cisco Secure Access damos acceso basado en la identidad de Entra ID a aplicaciones privadas, SaaS e internet. También lo ofrecemos como servicio recurrente en el paquete SECaaS: Duo + Secure Endpoint + Secure Access."
      }
     },
     {
      "@type": "Question",
-     "name": "¿Cómo protegen el acceso remoto a Dynamics 365?",
+     "name": "¿Cómo acompañan la adopción de inteligencia artificial?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Implementamos Cisco Secure Access con identidad de Microsoft Entra y políticas por aplicación para Dynamics 365 y Business Central."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "¿Qué tareas de red pueden automatizar?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Automatizamos altas de sedes, cambios de configuración, alertas y aprobaciones con Power Automate y Logic Apps conectados a las APIs de Meraki y Catalyst Center."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "¿Cómo protegen la inteligencia artificial en Azure?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Protegemos modelos y agentes con Cisco AI Defense, segmentamos las cargas con Hypershield y monitoreamos Copilot y Azure OpenAI con ThousandEyes, alineados con Defender for Cloud y Purview."
+      "text": "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."
      }
     }
    ]
@@ -222,11 +214,11 @@
     <div class="section-head"><p class="eyebrow">Resultados medidos</p><h2>Lo que muestran los estudios</h2></div>
     <div class="grid g4">
       <div class="stat"><b>40%</b><p>menos inactividad de red con Cisco Meraki.</p><cite>Forrester TEI, 2025</cite></div>
-      <div class="stat"><b>50–80%</b><p>menos tiempo para identificar incidentes con ThousandEyes.</p><cite>Forrester TEI</cite></div>
+      <div class="stat"><b>90%</b><p>menos tiempo en actualizaciones y cambios de configuración con Cisco Meraki.</p><cite>Forrester TEI, 2025</cite></div>
+      <div class="stat"><b>195%</b><p>de ROI con Cisco Secure Firewall.</p><cite>Forrester TEI, 2022</cite></div>
       <div class="stat"><b>342%</b><p>de ROI con Microsoft Teams Rooms.</p><cite>Forrester TEI</cite></div>
-      <div class="stat"><b>358%</b><p>de ROI con la observabilidad de Cisco.</p><cite>Forrester TEI, 2024</cite></div>
     </div>
-    <p class="note" style="margin-top:40px">Citamos estudios por componente, encargados por cada fabricante, como referencia de la industria. Estimamos el resultado para su empresa en el Diagnóstico Red + Nube.</p>
+    <p class="note" style="margin-top:40px">Citamos estudios por componente, encargados por cada fabricante, como referencia de la industria. Estimamos el resultado para su empresa en el paso Evaluamos.</p>
   </div>
 </section>
 
@@ -245,7 +237,7 @@
 <section class="soft faq" id="preguntas">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Preguntas frecuentes</p><h2>Respondemos sus dudas</h2></div>
-    <details><summary>¿Cómo conectan las sucursales de una empresa a Azure?</summary><p>Implementamos <span class="nw">SD-WAN</span> Cisco (Meraki o Catalyst 8000V) integrada con Azure Virtual WAN. Priorizamos Teams, Microsoft 365 y Dynamics 365 y gestionamos todas las sedes desde un solo lugar.</p></details><details><summary>¿Cómo extienden Zero Trust hasta la red corporativa?</summary><p>Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall envía sus registros a Microsoft Sentinel.</p></details><details><summary>¿Qué equipos usan para las salas Microsoft Teams Rooms?</summary><p>Instalamos Cisco Room Kit, Board y Desk certificados para Microsoft Teams Rooms, configurados en Teams Admin Center y listos para Microsoft 365 Copilot.</p></details><details><summary>¿Cómo miden el rendimiento de las aplicaciones de negocio?</summary><p>Combinamos Cisco AppDynamics y ThousandEyes con Azure Monitor y publicamos los indicadores de disponibilidad en Power BI.</p></details><details><summary>¿Cómo protegen el acceso remoto a Dynamics 365?</summary><p>Implementamos Cisco Secure Access con identidad de Microsoft Entra y políticas por aplicación para Dynamics 365 y Business Central.</p></details><details><summary>¿Qué tareas de red pueden automatizar?</summary><p>Automatizamos altas de sedes, cambios de configuración, alertas y aprobaciones con Power Automate y Logic Apps conectados a las APIs de Meraki y Catalyst Center.</p></details><details><summary>¿Cómo protegen la inteligencia artificial en Azure?</summary><p>Protegemos modelos y agentes con Cisco AI Defense, segmentamos las cargas con Hypershield y monitoreamos Copilot y Azure OpenAI con ThousandEyes, alineados con Defender for Cloud y Purview.</p></details>
+    <details><summary>¿Cómo conectan las sedes a Microsoft 365 y Azure?</summary><p>Según el destino del tráfico. Para aplicaciones SaaS como Microsoft 365 y Teams combinamos Meraki MX con Cisco Secure Access en una arquitectura SASE; para cargas en Azure usamos Cisco Catalyst <span class="nw">SD-WAN</span> con Azure Virtual WAN o ExpressRoute. Meraki MG agrega respaldo 4G/5G, sujeto a la cobertura celular de la sede.</p></details><details><summary>¿Qué aporta Cisco si ya tengo Microsoft 365?</summary><p>Sumamos Cisco como capa complementaria según su licencia: Cisco Duo extiende el MFA a servidores on-premise y aplicaciones heredadas, Secure Email Threat Defense refuerza la protección del correo y Secure Endpoint suma EDR donde la licencia no lo incluye, como en E3.</p></details><details><summary>¿Cómo controlan el acceso a la red corporativa?</summary><p>Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall protege el borde y envía sus registros a Microsoft Sentinel.</p></details><details><summary>¿Qué equipos usan para las salas Microsoft Teams Rooms?</summary><p>Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte.</p></details><details><summary>¿Cómo protegen a los usuarios remotos?</summary><p>Con Cisco Secure Access damos acceso basado en la identidad de Entra ID a aplicaciones privadas, SaaS e internet. También lo ofrecemos como servicio recurrente en el paquete SECaaS: Duo + Secure Endpoint + Secure Access.</p></details><details><summary>¿Cómo acompañan la adopción de inteligencia artificial?</summary><p>Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio.</p></details>
   </div>
 </section>
 
@@ -254,7 +246,7 @@
     <div>
       <p class="eyebrow">Contacto</p>
       <h2>Un ecosistema, un solo responsable</h2>
-      <p class="lead">Conversemos sobre su red y su plataforma Microsoft. Comenzamos con un Diagnóstico Red + Nube gratuito.</p>
+      <p class="lead">Conversemos sobre su red y su plataforma Microsoft. Comenzamos por el paso Evaluamos: inventario, postura actual, brechas, riesgos y objetivos del negocio.</p>
     </div>
     <form class="form" id="form-contacto">
       <div class="row">
@@ -294,10 +286,10 @@
         <li><a href="index.html#contacto">Hable con un especialista</a></li>
       </ul></div>
     </div>
-    <details class="sources"><summary>Fuentes</summary><ul><li>Forrester Total Economic Impact™, encargados por Cisco: Meraki (2025), Intersight (2025), ThousandEyes End User Monitoring, ThousandEyes for Enterprise Networks (2023), Full-Stack Observability (2024), Secure Firewall (2022).</li><li>Forrester Total Economic Impact™, encargados por Microsoft: Teams Rooms, Projected TEI of Microsoft Teams with Microsoft 365 Copilot (2025), Microsoft Defender (2025), Azure Arc (2025).</li><li>NTT DATA, Lifecycle Management Report, 2024 · NTT, Global Network Insights Report, 2020 · VulnCheck, 2025 · Verizon, Data Breach Investigations Report, 2026.</li><li>CISA, Binding Operational Directive 26-02, febrero 2026.</li><li>Cisco Cybersecurity Readiness Index 2025 · Cisco AI Readiness Index 2025 · Splunk y Oxford Economics, The Hidden Costs of Downtime, 2024.</li><li>Los estudios TEI modelan organizaciones compuestas; los publicamos como referencia de la industria. Estimamos el resultado de cada empresa en el Diagnóstico Red + Nube.</li></ul></details>
+    <details class="sources"><summary>Fuentes</summary><ul><li>Forrester Total Economic Impact™, encargados por Cisco: Cisco Meraki (2025) y Cisco Secure Firewall (2022).</li><li>Forrester Total Economic Impact™, encargado por Microsoft: Microsoft Teams Rooms.</li><li>NTT DATA, Lifecycle Management Report, 2024 · VulnCheck, 2025 · Verizon, Data Breach Investigations Report, 2026.</li><li>CISA, Binding Operational Directive 26-02, febrero 2026.</li><li>Los estudios TEI modelan organizaciones compuestas; los publicamos como referencia de la industria. Estimamos el resultado de cada empresa en el paso Evaluamos.</li></ul></details>
     <div class="foot-legal">
       <span>© <span id="year">2026</span> Consein. Todos los derechos reservados.</span>
-      <span>Cisco, Meraki y ThousandEyes son marcas de Cisco Systems, Inc. Microsoft, Azure, Teams y Dynamics 365 son marcas de Microsoft Corporation.</span>
+      <span>Cisco, Meraki y Duo son marcas de Cisco Systems, Inc. Microsoft, Azure, Teams y Dynamics 365 son marcas de Microsoft Corporation.</span>
     </div>
   </div>
 </footer>

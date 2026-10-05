@@ -322,29 +322,26 @@ PRODUCTOS = [
 ]
 
 FAQ = [
-    ("¿Cómo conectan las sucursales de una empresa a Azure?",
-     "Implementamos SD-WAN Cisco (Meraki o Catalyst 8000V) integrada con Azure Virtual WAN. Priorizamos Teams, Microsoft 365 y Dynamics 365 y gestionamos todas las sedes desde un solo lugar."),
-    ("¿Cómo extienden Zero Trust hasta la red corporativa?",
-     "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall envía sus registros a Microsoft Sentinel."),
+    ("¿Cómo conectan las sedes a Microsoft 365 y Azure?",
+     "Según el destino del tráfico. Para aplicaciones SaaS como Microsoft 365 y Teams combinamos Meraki MX con Cisco Secure Access en una arquitectura SASE; para cargas en Azure usamos Cisco Catalyst SD-WAN con Azure Virtual WAN o ExpressRoute. Meraki MG agrega respaldo 4G/5G, sujeto a la cobertura celular de la sede."),
+    ("¿Qué aporta Cisco si ya tengo Microsoft 365?",
+     "Sumamos Cisco como capa complementaria según su licencia: Cisco Duo extiende el MFA a servidores on-premise y aplicaciones heredadas, Secure Email Threat Defense refuerza la protección del correo y Secure Endpoint suma EDR donde la licencia no lo incluye, como en E3."),
+    ("¿Cómo controlan el acceso a la red corporativa?",
+     "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall protege el borde y envía sus registros a Microsoft Sentinel."),
     ("¿Qué equipos usan para las salas Microsoft Teams Rooms?",
-     "Instalamos Cisco Room Kit, Board y Desk certificados para Microsoft Teams Rooms, configurados en Teams Admin Center y listos para Microsoft 365 Copilot."),
-    ("¿Cómo miden el rendimiento de las aplicaciones de negocio?",
-     "Combinamos Cisco AppDynamics y ThousandEyes con Azure Monitor y publicamos los indicadores de disponibilidad en Power BI."),
-    ("¿Cómo protegen el acceso remoto a Dynamics 365?",
-     "Implementamos Cisco Secure Access con identidad de Microsoft Entra y políticas por aplicación para Dynamics 365 y Business Central."),
-    ("¿Qué tareas de red pueden automatizar?",
-     "Automatizamos altas de sedes, cambios de configuración, alertas y aprobaciones con Power Automate y Logic Apps conectados a las APIs de Meraki y Catalyst Center."),
-    ("¿Cómo protegen la inteligencia artificial en Azure?",
-     "Protegemos modelos y agentes con Cisco AI Defense, segmentamos las cargas con Hypershield y monitoreamos Copilot y Azure OpenAI con ThousandEyes, alineados con Defender for Cloud y Purview."),
+     "Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."),
+    ("¿Cómo protegen a los usuarios remotos?",
+     "Con Cisco Secure Access damos acceso basado en la identidad de Entra ID a aplicaciones privadas, SaaS e internet. También lo ofrecemos como servicio recurrente en el paquete SECaaS: Duo + Secure Endpoint + Secure Access."),
+    ("¿Cómo acompañan la adopción de inteligencia artificial?",
+     "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."),
 ]
 
 FUENTES = [
-    "Forrester Total Economic Impact™, encargados por Cisco: Meraki (2025), Intersight (2025), ThousandEyes End User Monitoring, ThousandEyes for Enterprise Networks (2023), Full-Stack Observability (2024), Secure Firewall (2022).",
-    "Forrester Total Economic Impact™, encargados por Microsoft: Teams Rooms, Projected TEI of Microsoft Teams with Microsoft 365 Copilot (2025), Microsoft Defender (2025), Azure Arc (2025).",
-    "NTT DATA, Lifecycle Management Report, 2024 · NTT, Global Network Insights Report, 2020 · VulnCheck, 2025 · Verizon, Data Breach Investigations Report, 2026.",
+    "Forrester Total Economic Impact™, encargados por Cisco: Cisco Meraki (2025) y Cisco Secure Firewall (2022).",
+    "Forrester Total Economic Impact™, encargado por Microsoft: Microsoft Teams Rooms.",
+    "NTT DATA, Lifecycle Management Report, 2024 · VulnCheck, 2025 · Verizon, Data Breach Investigations Report, 2026.",
     "CISA, Binding Operational Directive 26-02, febrero 2026.",
-    "Cisco Cybersecurity Readiness Index 2025 · Cisco AI Readiness Index 2025 · Splunk y Oxford Economics, The Hidden Costs of Downtime, 2024.",
-    "Los estudios TEI modelan organizaciones compuestas; los publicamos como referencia de la industria. Estimamos el resultado de cada empresa en el Diagnóstico Red + Nube.",
+    "Los estudios TEI modelan organizaciones compuestas; los publicamos como referencia de la industria. Estimamos el resultado de cada empresa en el paso Evaluamos.",
 ]
 
 PAISES = ["Venezuela", "Panamá", "República Dominicana", "Estados Unidos"]
@@ -446,7 +443,7 @@ def pie():
     <details class="sources"><summary>Fuentes</summary><ul>{fuentes}</ul></details>
     <div class="foot-legal">
       <span>© <span id="year">2026</span> Consein. Todos los derechos reservados.</span>
-      <span>Cisco, Meraki y ThousandEyes son marcas de Cisco Systems, Inc. Microsoft, Azure, Teams y Dynamics 365 son marcas de Microsoft Corporation.</span>
+      <span>Cisco, Meraki y Duo son marcas de Cisco Systems, Inc. Microsoft, Azure, Teams y Dynamics 365 son marcas de Microsoft Corporation.</span>
     </div>
   </div>
 </footer>
@@ -700,11 +697,11 @@ def inicio():
     <div class="section-head"><p class="eyebrow">Resultados medidos</p><h2>Lo que muestran los estudios</h2></div>
     <div class="grid g4">
       <div class="stat"><b>40%</b><p>menos inactividad de red con Cisco Meraki.</p><cite>Forrester TEI, 2025</cite></div>
-      <div class="stat"><b>50–80%</b><p>menos tiempo para identificar incidentes con ThousandEyes.</p><cite>Forrester TEI</cite></div>
+      <div class="stat"><b>90%</b><p>menos tiempo en actualizaciones y cambios de configuración con Cisco Meraki.</p><cite>Forrester TEI, 2025</cite></div>
+      <div class="stat"><b>195%</b><p>de ROI con Cisco Secure Firewall.</p><cite>Forrester TEI, 2022</cite></div>
       <div class="stat"><b>342%</b><p>de ROI con Microsoft Teams Rooms.</p><cite>Forrester TEI</cite></div>
-      <div class="stat"><b>358%</b><p>de ROI con la observabilidad de Cisco.</p><cite>Forrester TEI, 2024</cite></div>
     </div>
-    <p class="note" style="margin-top:40px">Citamos estudios por componente, encargados por cada fabricante, como referencia de la industria. Estimamos el resultado para su empresa en el Diagnóstico Red + Nube.</p>
+    <p class="note" style="margin-top:40px">Citamos estudios por componente, encargados por cada fabricante, como referencia de la industria. Estimamos el resultado para su empresa en el paso Evaluamos.</p>
   </div>
 </section>
 
@@ -732,7 +729,7 @@ def inicio():
     <div>
       <p class="eyebrow">Contacto</p>
       <h2>Un ecosistema, un solo responsable</h2>
-      <p class="lead">Conversemos sobre su red y su plataforma Microsoft. Comenzamos con un Diagnóstico Red + Nube gratuito.</p>
+      <p class="lead">Conversemos sobre su red y su plataforma Microsoft. Comenzamos por el paso Evaluamos: inventario, postura actual, brechas, riesgos y objetivos del negocio.</p>
     </div>
     <form class="form" id="form-contacto">
       <div class="row">
