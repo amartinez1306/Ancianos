@@ -464,8 +464,6 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .benefit--featured h3 { color: #fff; }
 .benefit--featured .pillar__icon { background: rgba(88,187,71,.16); color: var(--green); }
 .benefit .pillar__icon { margin: 0; }
-.mac-card { margin-top: 32px; display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-radius: var(--radius-sm); background: var(--green-100); color: var(--ink); font-size: 14.5px; }
-.mac-card b { font-family: var(--font-title); font-size: 22px; color: var(--green-600); line-height: 1; }
 
 /* Solución: productos */
 .products-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
@@ -558,11 +556,22 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 
 /* MAC T-12 · Línea de tiempo */
 .hl--navy { background: linear-gradient(90deg, var(--navy-600), var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.mac-head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: end; margin-bottom: 48px; }
+.mac-head { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; margin-bottom: 40px; }
 .mac-head > * { min-width: 0; }
-.mac-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.mac-kpis li { padding: 18px 20px; border-radius: var(--radius-sm); background: var(--navy-50); border: 1px solid var(--line); font-size: 13.5px; line-height: 1.45; }
-.mac-kpis b { display: block; font-family: var(--font-title); font-size: 34px; line-height: 1.05; color: var(--navy); }
+.mac-def { color: var(--ink); font-weight: 500; }
+.mac-sub { margin-top: 14px; font-size: 15px; }
+.mac-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.mac-pillars li { padding: 20px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.mac-pillars li:hover { transform: translateY(-4px); border-color: transparent; box-shadow: 0 18px 40px rgba(27,36,91,.10); }
+.mac-pillars .pillar__icon { margin-bottom: 14px; }
+.mac-pillars h3 { font-size: 16.5px; margin-bottom: 4px; }
+.mac-pillars p { font-size: 13.5px; line-height: 1.55; }
+.mac-bridge { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; margin-bottom: 28px; padding: 24px 28px; border-radius: var(--radius); background: var(--navy-50); border: 1px solid var(--line); }
+.mac-bridge > * { min-width: 0; }
+.mac-bridge p { font-size: 15px; }
+.mac-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.mac-kpis li { padding: 14px 16px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); font-size: 12.5px; line-height: 1.4; }
+.mac-kpis b { display: block; font-family: var(--font-title); font-size: 30px; line-height: 1.05; color: var(--navy); }
 .mac-kpis li:first-child { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
 .mac-kpis li:first-child b { color: var(--green); }
 .ms--inline { gap: 5px; font-size: 13px; color: var(--ink); vertical-align: -2px; }
@@ -628,7 +637,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .tl__item--end { border-color: rgba(88,187,71,.5); background: linear-gradient(160deg, rgba(88,187,71,.18), rgba(88,187,71,.04)); }
 
 @media (max-width: 1080px) {
-  .mac-head { grid-template-columns: 1fr; gap: 32px; }
+  .mac-head, .mac-bridge { grid-template-columns: 1fr; gap: 28px; }
 }
 /* Móvil/tableta: línea de tiempo vertical */
 @media (max-width: 960px) {
@@ -644,8 +653,10 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .tl-panel { padding: 22px 18px 18px; }
 }
 @media (max-width: 600px) {
-  .mac-kpis { grid-template-columns: 1fr 1fr; }
-  .mac-kpis b { font-size: 28px; }
+  .mac-kpis, .mac-pillars { grid-template-columns: 1fr 1fr; }
+  .mac-pillars { gap: 10px; }
+  .mac-pillars li { padding: 16px; }
+  .mac-bridge { padding: 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tl__fill { width: 100%; }
@@ -653,17 +664,10 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .tl__m b { opacity: 1; transform: rotate(45deg); }
 }
 
-/* Fuentes */
-.sources { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; }
-.sources > * { min-width: 0; }
-.sources ol { counter-reset: s; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; font-size: 13.5px; }
-.sources li { counter-increment: s; position: relative; padding-left: 30px; }
-.sources li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 0; top: 1px; font-family: var(--font-mono); font-size: 11.5px; color: var(--green-600); }
-.note { margin-top: 28px; padding: 16px 18px; border-left: 3px solid var(--green); background: var(--navy-50); border-radius: 0 10px 10px 0; font-size: 13px; }
 .trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
 
 @media (max-width: 1080px) {
-  .why, .included, .sources { grid-template-columns: 1fr; gap: 48px; }
+  .why, .included { grid-template-columns: 1fr; gap: 48px; }
   .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .conclusion.conclusion--in { grid-column: span 2; }
@@ -679,7 +683,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 }
 @media (max-width: 600px) {
   .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .figures, .route, .checklist, .sources ol { grid-template-columns: 1fr; }
+  .figures, .route, .checklist { grid-template-columns: 1fr; }
   .fig--wide, .step--wide, .conclusion.conclusion--in, .figures > .fig:nth-last-of-type(1) { grid-column: auto; }
   .conclusion { grid-template-columns: 1fr; padding: 20px; }
   .trust { padding: 22px; }
@@ -868,7 +872,6 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <p class="lead" style="margin:18px 0 22px">Las licencias no generan valor por existir: lo generan cuando están bien asignadas, se usan, se miden y se gobiernan.</p>
           <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a su organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
           <p>Con 40 años de trayectoria, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que su negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
-          <div class="mac-card"><b>MAC</b><span>Modelo de Atención al Cliente de Consein: un equipo multidisciplinario da seguimiento a su inversión durante <strong>12 meses</strong> y la transforma en resultados medibles. <a href="#mac" style="font-weight:500;color:var(--green-600);white-space:nowrap">Ver línea de tiempo →</a></span></div>
         </div>
 
         <div class="reveal">
@@ -1046,7 +1049,21 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <div>
           <span class="kicker">Modelo de Atención al Cliente (MAC)</span>
           <h2 class="title-l" id="t-mac">12 meses cuidando <span class="hl hl--navy">su inversión</span></h2>
-          <p class="lead" style="margin-top:18px">Pasos 5 y 6 de la ruta: un gerente de cuenta y un equipo multidisciplinario de Consein dan seguimiento a su licenciamiento con hitos planificados, talleres Microsoft y revisiones proactivas.</p>
+          <p class="lead" style="margin-top:18px">El <strong class="mac-def">MAC — Modelo de Atención al Cliente de Consein</strong> es nuestro modelo de acompañamiento continuo después de la compra: un equipo multidisciplinario da seguimiento a su inversión en licencias Microsoft durante 12 meses y la transforma en resultados medibles.</p>
+          <p class="mac-sub">Comienza con una reunión de pre-kickoff «base cero» y mantiene el control, la trazabilidad y la evolución ordenada de su licenciamiento.</p>
+        </div>
+        <ul class="mac-pillars">
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-id"/></svg></span><div><h3>Gerente de cuenta</h3><p>Un punto de contacto para una atención oportuna y cercana.</p></div></li>
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span><div><h3>Equipo multidisciplinario</h3><p>Especialistas en licenciamiento, tecnología y seguridad de Consein.</p></div></li>
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-chart"/></svg></span><div><h3>Roles e indicadores</h3><p>Seguimiento periódico de consumo, asignaciones, adopción y crecimiento.</p></div></li>
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-trend"/></svg></span><div><h3>Hoja de ruta viva</h3><p>Ajustes priorizados: reasignar, cambiar de plan, consolidar o activar capacidades.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="mac-bridge reveal">
+        <div>
+          <span class="kicker" style="margin-bottom:10px">Cómo funciona</span>
+          <p>El MAC ejecuta los pasos 5 y 6 de la ruta Consein con hitos planificados, talleres Microsoft y revisiones proactivas a lo largo del año.</p>
         </div>
         <ul class="mac-kpis" aria-label="El MAC en cifras">
           <li><b>12</b><span>meses de acompañamiento</span></li>
@@ -1321,29 +1338,6 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     </div>
   </section>
 
-  <!-- ============ Fuentes ============ -->
-  <section class="section" id="fuentes" aria-labelledby="t-fuentes" style="padding-top:0">
-    <div class="container sources">
-      <div>
-        <span class="kicker">Referencias</span>
-        <h2 class="title-l" id="t-fuentes" style="font-size:28px">Fuentes</h2>
-      </div>
-      <div>
-        <ol>
-          <li>Forrester TEI of Microsoft 365 for Business (2025)</li>
-          <li>Microsoft Data Security Index 2026 – Microsoft Security Blog</li>
-          <li>ERP Today – Microsoft Data Security Index 2026</li>
-          <li>Gartner MQ for SaaS Management Platforms 2026 (análisis USU)</li>
-          <li>Flexera 2026 State of ITAM Report</li>
-          <li>Nexthink – Soft-WASTE Report</li>
-          <li>KPMG – Software asset management and spend optimization</li>
-          <li>Microsoft – Enterprise Agreement</li>
-          <li>Microsoft – Cloud Solution Provider program</li>
-        </ol>
-        <p class="note"><strong>Nota:</strong> información orientativa. La elegibilidad, disponibilidad, precios y condiciones dependen del país, tipo de organización, programa y términos vigentes de Microsoft. Consein valida cada escenario antes de emitir una recomendación.</p>
-      </div>
-    </div>
-  </section>
 </main>
 
 <!-- ============ Pie de página ============ -->
@@ -1388,7 +1382,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <p><strong>España:</strong> Tel: +34 919 26 83 57</p>
       </div>
     </div>
-    <p class="trademark">Microsoft, Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview, Priva y el logotipo de Microsoft son marcas comerciales del grupo de compañías Microsoft.</p>
+    <p class="trademark">Información orientativa: la elegibilidad, disponibilidad, precios y condiciones dependen del país, tipo de organización, programa y términos vigentes de Microsoft. Consein valida cada escenario antes de emitir una recomendación. Microsoft, Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview, Priva y el logotipo de Microsoft son marcas comerciales del grupo de compañías Microsoft.</p>
     <div class="footer__bottom">
       <span>CONSEIN © 2026 · Todos los derechos reservados</span>
       <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
