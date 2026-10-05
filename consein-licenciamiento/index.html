@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asesoría en Licenciamiento Microsoft | Consein</title>
+  <meta name="description" content="Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Partner Microsoft y proveedor CSP: Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365 y seguridad.">
+  <link rel="canonical" href="https://www.consein.com/asesoria-licenciamiento">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b245b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Consein">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:title" content="Licenciamiento Microsoft: cada licencia trabajando para su negocio | Consein">
+  <meta property="og:description" content="De la compra al valor, durante todo el ciclo de vida. Diagnóstico, diseño, adquisición, optimización, gobierno y protección de datos.">
+  <meta property="og:url" content="https://www.consein.com/asesoria-licenciamiento">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================================
+   Consein · Asesoría Licenciamiento Microsoft — Versión digital
+   Misma imagen que consein.com/servicios
+   Paleta: Azul oscuro #1b245b (principal) · Verde #58bb47 (principal)
+   Títulos: Haltto · Textos: Poppins
+   ========================================================================== */
+
+@font-face {
+  font-family: "Haltto";
+  src: local("Haltto Bold"), local("Haltto-Bold"),
+       url("assets/fonts/Haltto-Bold.woff2") format("woff2"),
+       url("assets/fonts/Haltto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --navy: #1b245b;
+  --navy-900: #111739;
+  --navy-800: #151d4b;
+  --navy-600: #2b3780;
+  --navy-100: #e9ebf5;
+  --navy-50: #f4f5fa;
+  --green: #58bb47;
+  --green-600: #3f9a30;
+  --green-100: #e6f5e2;
+  --blue-soft: #6f86ff;
+
+  --ink: #1b245b;
+  --text: #4a5275;
+  --text-light: #c9cde6;
+  --line: #e3e6f1;
+  --line-dark: rgba(255, 255, 255, .12);
+  --danger: #d64545;
+
+  /* Microsoft (solo para el logotipo) */
+  --ms-red: #f25022; --ms-green: #7fba00; --ms-blue: #00a4ef; --ms-yellow: #ffb900; --ms-gray: #737373;
+
+  --font-title: "Haltto", "Poppins", system-ui, sans-serif;
+  --font-text: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --container: 1180px;
+  --header-h: 76px;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --glow: 0 0 0 1px rgba(88, 187, 71, .35), 0 12px 40px rgba(88, 187, 71, .18);
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+body { margin: 0; font-family: var(--font-text); font-size: 16px; line-height: 1.7; color: var(--text); background: #fff; -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-title); font-weight: 700; color: var(--ink); line-height: 1.12; margin: 0; letter-spacing: -.01em; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.section { position: relative; padding: 120px 0; overflow: hidden; }
+.section--tint { background: var(--navy-50); }
+.section--dark { background: var(--navy); color: var(--text-light); }
+.section--dark h2, .section--dark h3 { color: #fff; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-link:focus { position: fixed !important; top: 12px; left: 12px; width: auto; height: auto; clip: auto; z-index: 200; background: #fff; color: var(--ink); padding: 10px 16px; border-radius: 8px; }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+
+/* Patrones tecnológicos reutilizables */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.dots-bg {
+  background-image: radial-gradient(rgba(27,36,91,.12) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* ---------- Tipos ---------- */
+.kicker {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--green-600);
+}
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--green); box-shadow: 0 0 0 4px rgba(88,187,71,.18); }
+.section--dark .kicker, .hero .kicker { color: var(--green); }
+.title-xl { font-size: clamp(38px, 5.4vw, 66px); color: #fff; }
+.title-l { font-size: clamp(30px, 3.6vw, 44px); }
+.title-s { font-size: 20px; }
+.hl { background: linear-gradient(90deg, var(--green), #9fe08f); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { font-size: 18px; max-width: 640px; }
+.section__head { max-width: 700px; margin-bottom: 64px; }
+.section__head .lead { margin-top: 18px; }
+.section__head--center { margin-left: auto; margin-right: auto; text-align: center; }
+.section__head--center .lead { margin-left: auto; margin-right: auto; }
+
+/* ---------- Botones ---------- */
+.btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 28px; border-radius: 999px; border: 1.5px solid transparent;
+  font-family: var(--font-text); font-weight: 500; font-size: 15px; cursor: pointer;
+  transition: transform .2s, background .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+.btn svg { width: 18px; height: 18px; transition: transform .2s; }
+.btn:hover svg { transform: translateX(3px); }
+.btn--green { background: var(--green); color: var(--navy); }
+.btn--green:hover { box-shadow: var(--glow); transform: translateY(-2px); }
+.btn--navy { background: var(--navy); color: #fff; }
+.btn--navy:hover { background: var(--navy-600); transform: translateY(-2px); }
+.btn--ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+.btn--ghost:hover { border-color: var(--green); color: var(--green); }
+.btn--sm { padding: 10px 20px; font-size: 14px; }
+.btn[disabled] { opacity: .6; cursor: wait; transform: none; }
+
+/* ==========================================================================
+   Encabezado
+   ========================================================================== */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background .3s, box-shadow .3s;
+}
+.site-header.is-scrolled { background: rgba(17, 23, 57, .88); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line-dark); }
+.site-header__inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+.logo img { height: 26px; width: auto; }
+.main-nav { display: flex; align-items: center; gap: 34px; }
+.main-nav__list { display: flex; align-items: center; gap: 30px; }
+.main-nav__item { position: relative; }
+.main-nav__link {
+  display: inline-flex; align-items: center; gap: 6px; height: var(--header-h);
+  font-size: 15px; color: rgba(255,255,255,.82); background: none; border: 0; padding: 0; cursor: pointer;
+}
+.main-nav__link:hover { color: #fff; }
+.main-nav__link[aria-current="page"] { color: #fff; font-weight: 500; box-shadow: inset 0 -2px 0 var(--green); }
+.nav-toggle { display: none; background: none; border: 0; padding: 8px; color: #fff; cursor: pointer; }
+.nav-toggle svg { width: 26px; height: 26px; }
+
+/* ==========================================================================
+   Portada
+   ========================================================================== */
+.hero {
+  position: relative; overflow: hidden; color: var(--text-light);
+  background:
+    radial-gradient(900px 500px at 85% 20%, rgba(88,187,71,.20), transparent 60%),
+    radial-gradient(700px 500px at 0% 100%, rgba(43,55,128,.9), transparent 60%),
+    var(--navy);
+  padding: calc(var(--header-h) + 72px) 0 0;
+}
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; mask-image: linear-gradient(to bottom, #000 40%, transparent); -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent); }
+.hero.grid-bg { background-blend-mode: normal; }
+.hero__grid { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+.hero__grid > * { min-width: 0; }
+.breadcrumb ol { display: flex; gap: 8px; margin-bottom: 28px; font-size: 13px; color: rgba(255,255,255,.55); }
+.breadcrumb li + li::before { content: "/"; margin-right: 8px; }
+.breadcrumb a:hover { color: #fff; }
+.hero .title-xl { margin-bottom: 24px; }
+.hero .lead { color: var(--text-light); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+
+/* Orbita de las 7 etapas */
+.orbit { position: relative; width: 100%; max-width: 480px; margin: 0 auto; aspect-ratio: 1; }
+.orbit svg { width: 100%; height: 100%; overflow: visible; }
+.orbit__spin { transform-origin: 250px 250px; animation: spin 40s linear infinite; }
+.orbit__spin--rev { animation-duration: 60s; animation-direction: reverse; }
+.orbit__pulse { transform-origin: 250px 250px; animation: pulse 3.2s ease-in-out infinite; }
+.orbit__link line { stroke-dasharray: 3 6; animation: flow 1.6s linear infinite; }
+.orbit__node circle { transition: transform .25s, filter .25s; transform-box: fill-box; transform-origin: center; }
+.orbit__node:hover circle, .orbit__node:focus circle { transform: scale(1.12); filter: drop-shadow(0 0 10px rgba(88,187,71,.8)); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+@keyframes flow { to { stroke-dashoffset: -18; } }
+
+/* Barra de datos */
+.stats { position: relative; margin-top: 88px; border-top: 1px solid var(--line-dark); }
+.stats__list { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stats__item { padding: 28px 24px; border-left: 1px solid var(--line-dark); }
+.stats__item:first-child { border-left: 0; padding-left: 0; }
+.stats__value { display: block; font-family: var(--font-title); font-weight: 700; font-size: 34px; color: #fff; line-height: 1.1; }
+.stats__value em { font-style: normal; color: var(--green); }
+.stats__label { font-size: 14px; color: rgba(255,255,255,.65); }
+
+/* ==========================================================================
+   Propuesta de valor
+   ========================================================================== */
+.value { display: grid; grid-template-columns: .95fr 1.05fr; gap: 72px; align-items: center; }
+.value > * { min-width: 0; }
+.value__cycle { position: relative; }
+.value__cycle svg { width: 100%; max-width: 460px; margin: 0 auto; }
+.cycle__arc { stroke-dasharray: 6 8; animation: flow 2.4s linear infinite; }
+.pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.pillar {
+  position: relative; padding: 26px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.pillar::before { content: ""; position: absolute; left: 26px; right: 26px; top: -1px; height: 3px; border-radius: 0 0 3px 3px; background: linear-gradient(90deg, var(--navy), var(--green)); opacity: 0; transition: opacity .25s; }
+.pillar:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(27,36,91,.10); border-color: transparent; }
+.pillar:hover::before { opacity: 1; }
+.pillar__icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; background: var(--navy-100); color: var(--navy); margin-bottom: 18px; }
+.pillar__icon svg { width: 22px; height: 22px; }
+.pillar .title-s { margin-bottom: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.pillar p { font-size: 14.5px; }
+.pillar--featured { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
+.pillar--featured .title-s { color: #fff; }
+.pillar--featured .pillar__icon { background: rgba(88,187,71,.16); color: var(--green); }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--green); color: var(--navy); font-family: var(--font-text); font-size: 11px; font-weight: 500; letter-spacing: .02em; }
+
+/* ==========================================================================
+   Servicio en 7 etapas
+   ========================================================================== */
+.phases { display: grid; gap: 20px; }
+.phase { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 28px; min-width: 0; padding: 24px; border-radius: var(--radius); background: rgba(255,255,255,.03); border: 1px solid var(--line-dark); }
+.phase__head { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 6px; font-size: 15px; }
+.phase__head strong { font-weight: 500; color: #fff; }
+.phase__head span { padding: 3px 10px; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--text-light); font-size: 12px; }
+.phase--1 .phase__head strong { color: #9aabff; }
+.phase--3 .phase__head strong { color: var(--green); }
+.phase__cards { display: grid; gap: 14px; }
+.phase__cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.card {
+  position: relative; display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  padding: 22px 18px; border-radius: var(--radius-sm); overflow: hidden;
+  background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border: 1px solid var(--line-dark);
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.card::after { content: ""; position: absolute; inset: auto -30% -60% auto; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(rgba(88,187,71,.35), transparent 70%); opacity: 0; transition: opacity .3s; pointer-events: none; }
+.card:hover { transform: translateY(-4px); border-color: rgba(88,187,71,.55); box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+.card:hover::after { opacity: 1; }
+.card__top { display: flex; justify-content: space-between; align-items: center; }
+.card__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(88,187,71,.14); color: var(--green); }
+.card__icon svg { width: 20px; height: 20px; }
+.card__num { font-family: var(--font-title); font-weight: 700; font-size: 30px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.35); }
+.card .title-s { font-size: 19px; color: #fff; overflow-wrap: anywhere; }
+.card__area { align-self: flex-start; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,.08); font-size: 12.5px; color: #dfe3f7; line-height: 1.5; }
+.card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+.card__link { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--green); }
+.card__link svg { width: 16px; height: 16px; transition: transform .2s; }
+.card__link:hover svg { transform: translateX(3px); }
+
+/* ==========================================================================
+   Oficina de Proyectos (panel)
+   ========================================================================== */
+.pmo { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.pmo > * { min-width: 0; }
+.stepper { display: grid; gap: 4px; margin-top: 36px; }
+.stepper li { position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding-bottom: 22px; }
+.stepper li:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 44px; bottom: 0; width: 2px; background: linear-gradient(var(--green), var(--navy-100)); }
+.stepper__dot { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: var(--navy); color: var(--green); font-family: var(--font-title); font-weight: 700; font-size: 15px; }
+.stepper h3 { font-size: 18px; margin: 2px 0 4px; }
+.stepper p { font-size: 15px; }
+
+.dash {
+  position: relative; padding: 26px; border-radius: 22px; background: var(--navy); color: var(--text-light);
+  box-shadow: 0 30px 70px rgba(27,36,91,.28);
+}
+.dash.grid-bg { background-color: var(--navy); }
+.dash__bar { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
+.dash__bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.2); }
+.dash__bar i:first-child { background: var(--green); }
+.dash__bar span { margin-left: auto; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; color: rgba(255,255,255,.55); }
+.dash__title { font-family: var(--font-title); font-weight: 700; font-size: 20px; color: #fff; margin-bottom: 18px; }
+.dash__rows { display: grid; gap: 14px; }
+.dash__row { display: grid; grid-template-columns: 80px 1fr 28px; align-items: center; gap: 14px; font-size: 14px; }
+.dash__track { height: 8px; border-radius: 999px; background: rgba(255,255,255,.1); overflow: hidden; }
+.dash__fill { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #6f86ff, var(--green)); transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+.dash.is-visible .dash__fill { width: var(--w); }
+.dash__check { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(88,187,71,.18); color: var(--green); }
+.dash__check svg { width: 14px; height: 14px; }
+.dash__foot { display: flex; align-items: center; gap: 10px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line-dark); font-size: 13px; }
+.dash__foot b { color: #fff; font-weight: 500; }
+.live { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(88,187,71,.6); animation: live 2s infinite; }
+@keyframes live { 70% { box-shadow: 0 0 0 10px rgba(88,187,71,0); } 100% { box-shadow: 0 0 0 0 rgba(88,187,71,0); } }
+
+/* ==========================================================================
+   Preguntas frecuentes
+   ========================================================================== */
+.faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+.faq-wrap > * { min-width: 0; }
+.faq { display: grid; gap: 12px; }
+.faq details { border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: border-color .2s, box-shadow .2s; }
+.faq details[open] { border-color: var(--green); box-shadow: 0 10px 30px rgba(27,36,91,.08); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 22px; cursor: pointer; list-style: none; font-family: var(--font-title); font-weight: 700; font-size: 17px; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: var(--navy-100); color: var(--navy); font-family: var(--font-text); font-weight: 400; font-size: 18px; transition: transform .2s, background .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); background: var(--green); }
+.faq details p { padding: 0 22px 22px; }
+
+/* ==========================================================================
+   Contacto
+   ========================================================================== */
+.contact-band {
+  position: relative; display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center;
+  padding: 56px; border-radius: 28px; overflow: hidden; color: var(--text-light);
+  background: radial-gradient(600px 400px at 0% 0%, rgba(88,187,71,.22), transparent 60%), var(--navy);
+}
+.contact-band > * { position: relative; min-width: 0; }
+.contact-band h2 { color: #fff; }
+.contact-band .lead { margin-top: 16px; color: var(--text-light); }
+.contact__links { margin-top: 32px; display: grid; gap: 14px; }
+.contact__links a { display: inline-flex; align-items: center; gap: 12px; color: #fff; }
+.contact__links a span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; background: rgba(255,255,255,.08); color: var(--green); }
+.contact__links svg { width: 18px; height: 18px; }
+.contact__links a:hover { color: var(--green); }
+
+.form-card { padding: 30px; border-radius: 20px; background: #fff; color: var(--text); box-shadow: 0 30px 60px rgba(0,0,0,.25); }
+.form-service { margin-bottom: 18px; padding: 10px 14px; border-radius: 10px; background: var(--green-100); color: var(--green-600); font-size: 14px; font-weight: 500; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field--full { grid-column: 1 / -1; }
+.field label, .field legend { font-size: 13px; font-weight: 500; color: var(--ink); }
+.field input, .field select { width: 100%; height: 48px; padding: 0 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--navy-50); font-size: 15px; transition: border-color .2s, box-shadow .2s, background .2s; }
+.field input:focus, .field select:focus { outline: none; border-color: var(--green); background: #fff; box-shadow: 0 0 0 4px rgba(88,187,71,.15); }
+.field [aria-invalid="true"] { border-color: var(--danger); }
+fieldset.field { border: 0; margin: 0; padding: 0; }
+.radios { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.radio { position: relative; }
+.radio input { position: absolute; opacity: 0; }
+.radio span { display: inline-block; padding: 7px 15px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; cursor: pointer; transition: .2s; }
+.radio span:hover { border-color: var(--navy); }
+.radio input:checked + span { background: var(--navy); border-color: var(--navy); color: #fff; }
+.radio input:focus-visible + span { outline: 2px solid var(--green); outline-offset: 2px; }
+.form-actions { margin-top: 24px; }
+.form-status { margin-top: 14px; font-size: 14px; font-weight: 500; color: var(--green-600); }
+.form-status[data-state="error"] { color: var(--danger); }
+
+/* ==========================================================================
+   Pie de página
+   ========================================================================== */
+.site-footer { background: var(--navy-900); color: var(--text-light); padding: 72px 0 32px; font-size: 14px; }
+.footer__grid { display: grid; grid-template-columns: 1.2fr .8fr 1fr 1.4fr; gap: 40px; }
+.footer__brand p { margin-top: 16px; }
+.footer__brand small { display: block; margin-top: 8px; color: rgba(255,255,255,.5); }
+.footer__title { font-family: var(--font-text); font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 14px; }
+.footer__list { display: grid; gap: 8px; }
+.footer__list a:hover { color: var(--green); }
+.footer__addr p { margin-bottom: 8px; font-size: 13px; line-height: 1.6; }
+.footer__addr strong { font-weight: 500; color: #fff; }
+.footer__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line-dark); font-size: 12px; color: rgba(255,255,255,.5); }
+.footer__bottom a:hover { color: #fff; }
+
+/* ==========================================================================
+   Animaciones de entrada
+   ========================================================================== */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .dash__fill { width: var(--w); }
+}
+
+/* ==========================================================================
+   Adaptación a pantallas
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .phase { grid-template-columns: 1fr; gap: 16px; }
+  .phase__head { flex-direction: row; justify-content: space-between; align-items: center; }
+  .phase__cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .value, .pmo, .faq-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .value__cycle svg { max-width: 380px; }
+}
+
+@media (max-width: 880px) {
+  .section { padding: 88px 0; }
+  .nav-toggle { display: block; }
+  .site-header { background: rgba(17,23,57,.95); }
+  .main-nav { position: absolute; top: var(--header-h); left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 24px; background: var(--navy-900); border-bottom: 1px solid var(--line-dark); }
+  .main-nav.is-open { display: flex; }
+  .main-nav__list { flex-direction: column; align-items: stretch; gap: 0; }
+  .main-nav__link { height: auto; width: 100%; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line-dark); }
+  .main-nav__link[aria-current="page"] { box-shadow: none; color: var(--green); }
+  .main-nav > .btn { margin-top: 16px; }
+  .hero__grid, .contact-band { grid-template-columns: 1fr; gap: 40px; }
+  .orbit { max-width: 340px; }
+  .stats__list { grid-template-columns: 1fr 1fr; }
+  .stats__item:nth-child(3) { border-left: 0; padding-left: 0; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .contact-band { padding: 36px 24px; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .pillars, .form-grid { grid-template-columns: 1fr; }
+  .phase__cards { grid-template-columns: 1fr; }
+  .phase { padding: 16px; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .form-card { padding: 22px; }
+  .dash__row { grid-template-columns: 64px 1fr 24px; gap: 10px; }
+}
+
+/* ==========================================================================
+   Componentes propios de Licenciamiento
+   ========================================================================== */
+
+/* Logotipo Microsoft (cuatro cuadros + palabra) */
+.ms { display: inline-flex; align-items: center; gap: 10px; font-family: "Segoe UI", "Poppins", system-ui, sans-serif; font-weight: 600; letter-spacing: -.01em; color: var(--ms-gray); line-height: 1; white-space: nowrap; }
+.ms svg { width: 22px; height: 22px; flex: none; }
+.ms--light { color: #fff; }
+.ms--lg { font-size: 22px; gap: 12px; }
+.ms--lg svg { width: 28px; height: 28px; }
+.ms-chip { display: inline-flex; align-items: center; gap: 12px; padding: 8px 16px 8px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line-dark); font-size: 13px; color: var(--text-light); }
+.ms-chip .ms { font-size: 15px; }
+.ms-chip i { width: 1px; height: 18px; background: var(--line-dark); }
+
+/* Portada */
+.hero__badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.hero .title-xl { font-size: clamp(34px, 4.6vw, 58px); }
+
+/* Ecosistema (órbita de productos) */
+.eco { position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 1; }
+.eco svg { width: 100%; height: 100%; overflow: visible; }
+.eco__spin { transform-origin: 250px 250px; animation: spin 50s linear infinite; }
+.eco__spin--rev { animation-duration: 70s; animation-direction: reverse; }
+.eco__node rect { transition: filter .25s, stroke .25s; }
+.eco__node:hover rect { stroke: var(--green); filter: drop-shadow(0 0 8px rgba(88,187,71,.7)); }
+.eco__link line { stroke-dasharray: 3 6; animation: flow 1.6s linear infinite; }
+
+/* Partner (franja de confianza) */
+.trust { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 32px; padding: 26px 32px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(27,36,91,.06); }
+.trust__text { font-size: 15px; }
+.trust__text strong { color: var(--ink); font-weight: 500; }
+.trust__tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.tag { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--navy-100); color: var(--navy); font-size: 12.5px; font-weight: 500; }
+.tag--green { background: var(--green-100); color: var(--green-600); }
+
+/* Por qué Consein */
+.why { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.why > * { min-width: 0; }
+.why__text p + p { margin-top: 16px; }
+.why__text strong { color: var(--ink); font-weight: 500; }
+.benefits { display: grid; gap: 12px; }
+.benefit { display: grid; grid-template-columns: 46px 1fr; gap: 18px; align-items: center; padding: 18px 20px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.benefit:hover { transform: translateX(4px); border-color: var(--green); box-shadow: 0 12px 30px rgba(27,36,91,.08); }
+.benefit h3 { font-size: 17px; margin-bottom: 2px; }
+.benefit p { font-size: 14.5px; line-height: 1.55; }
+.benefit--featured { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
+.benefit--featured h3 { color: #fff; }
+.benefit--featured .pillar__icon { background: rgba(88,187,71,.16); color: var(--green); }
+.benefit .pillar__icon { margin: 0; }
+.mac-card { margin-top: 32px; display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-radius: var(--radius-sm); background: var(--green-100); color: var(--ink); font-size: 14.5px; }
+.mac-card b { font-family: var(--font-title); font-size: 22px; color: var(--green-600); line-height: 1; }
+
+/* Solución: productos */
+.products-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+.products-head .section__head { margin-bottom: 0; }
+.products { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.product { position: relative; padding: 22px 18px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.product:hover { transform: translateY(-4px); border-color: transparent; box-shadow: 0 18px 40px rgba(27,36,91,.10); }
+.product__icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: var(--navy-100); color: var(--navy); margin-bottom: 14px; }
+.product__icon svg { width: 20px; height: 20px; }
+.product small { display: block; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--green-600); margin-bottom: 2px; }
+.product h3 { font-size: 16px; }
+.product--sec .product__icon { background: var(--green-100); color: var(--green-600); }
+
+/* Modalidades */
+.modes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 72px; }
+.mode { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: var(--radius); background: var(--navy-50); border: 1px solid var(--line); overflow: hidden; }
+.mode__code { font-family: var(--font-title); font-weight: 700; font-size: 44px; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px var(--navy); }
+.mode h3 { font-size: 19px; }
+.mode dl { margin: 0; display: grid; gap: 12px; font-size: 14.5px; }
+.mode dt { font-size: 12px; font-family: var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--green-600); }
+.mode dd { margin: 0; }
+.mode--featured { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
+.mode--featured h3 { color: #fff; }
+.mode--featured .mode__code { -webkit-text-stroke-color: var(--green); }
+.mode--featured dt { color: var(--green); }
+.mode--featured::after { content: ""; position: absolute; right: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(rgba(88,187,71,.35), transparent 70%); pointer-events: none; }
+.mode__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+
+/* Servicios incluidos */
+.included { margin-top: 72px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+.included > * { min-width: 0; }
+.checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.checklist li { position: relative; padding: 18px 18px 18px 52px; border-radius: var(--radius-sm); border: 1px solid var(--line); font-size: 14.5px; line-height: 1.55; }
+.checklist li::before { content: ""; position: absolute; left: 18px; top: 20px; width: 20px; height: 20px; border-radius: 6px; background: var(--green-100) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f9a30' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-9'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.checklist strong { display: block; color: var(--ink); font-weight: 500; }
+
+/* Cifras */
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.fig { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 24px 22px; border-radius: var(--radius-sm); background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); border: 1px solid var(--line-dark); transition: transform .25s, border-color .25s; }
+.fig:hover { transform: translateY(-4px); border-color: rgba(88,187,71,.55); }
+.fig__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.fig__value { font-family: var(--font-title); font-weight: 700; font-size: 40px; line-height: 1; color: #fff; letter-spacing: -.02em; }
+.fig__value small { font-size: .55em; color: var(--green); margin-left: 2px; }
+.fig p { font-size: 14px; line-height: 1.55; color: var(--text-light); }
+.fig cite { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line-dark); font-style: normal; font-size: 11.5px; line-height: 1.5; color: rgba(255,255,255,.5); }
+.fig--wide { grid-column: span 2; }
+.conclusion.conclusion--in { margin-top: 0; grid-column: span 3; align-self: stretch; }
+
+/* Medidor circular (una sola serie: valor frente al 100 %) */
+.ring { width: 64px; height: 64px; flex: none; transform: rotate(-90deg); }
+.ring circle { fill: none; stroke-width: 6; }
+.ring__track { stroke: rgba(255,255,255,.10); }
+.ring__val { stroke: var(--green); stroke-linecap: round; stroke-dasharray: 0 100; transition: stroke-dasharray 1.4s cubic-bezier(.2,.8,.2,1); }
+.ring--risk .ring__val { stroke: var(--blue-soft); }
+.is-visible .ring__val { stroke-dasharray: var(--p) 100; }
+
+/* Barras ROI */
+.roi { display: grid; gap: 10px; margin-top: 4px; }
+.roi__row { display: grid; grid-template-columns: 92px 1fr 52px; align-items: center; gap: 12px; font-size: 13px; color: var(--text-light); }
+.roi__row b { font-weight: 500; color: #fff; text-align: right; }
+.roi__track { height: 10px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden; }
+.roi__fill { display: block; height: 100%; width: 0; border-radius: 4px; background: rgba(255,255,255,.45); transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+.roi__fill--g { background: linear-gradient(90deg, var(--blue-soft), var(--green)); }
+.is-visible .roi__fill { width: var(--w); }
+
+.conclusion { margin-top: 48px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 24px 28px; border-radius: var(--radius); border: 1px solid rgba(88,187,71,.4); background: rgba(88,187,71,.07); color: #fff; font-size: 17px; }
+.conclusion svg { width: 28px; height: 28px; color: var(--green); }
+
+/* Ruta 7 pasos */
+.track { position: relative; margin-bottom: 40px; }
+.track svg { width: 100%; height: auto; overflow: visible; }
+.track__line { stroke-dasharray: 4 6; animation: flow 1.6s linear infinite; }
+.route { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.step { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 24px 20px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.step:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(27,36,91,.10); border-color: transparent; }
+.step__top { display: flex; align-items: center; justify-content: space-between; }
+.step__num { font-family: var(--font-title); font-weight: 700; font-size: 30px; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px var(--navy); }
+.step h3 { font-size: 19px; }
+.step p { font-size: 14px; line-height: 1.6; }
+.step__result { margin-top: auto; padding: 10px 12px; border-radius: 8px; background: var(--navy-50); font-size: 13px; color: var(--ink); line-height: 1.5; }
+.step__result b { font-weight: 500; color: var(--green-600); }
+.step--mac { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
+.step--mac h3 { color: #fff; }
+.step--mac .step__num { -webkit-text-stroke-color: var(--green); }
+.step--mac .step__result { background: rgba(255,255,255,.06); color: #fff; }
+.step--mac .step__result b { color: var(--green); }
+.step--mac .card__icon { background: rgba(88,187,71,.16); }
+.step--sec { border-color: var(--green); }
+.step--wide { grid-column: span 2; }
+
+/* Panel MAC T-12 */
+.mac { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
+.mac > * { min-width: 0; }
+.months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; margin: 6px 0 10px; }
+.months span { position: relative; height: 34px; border-radius: 6px; background: rgba(255,255,255,.08); transform-origin: bottom; transform: scaleY(.2); transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.dash.is-visible .months span { transform: scaleY(1); }
+.months span.is-mesa { background: var(--green); }
+.months span.is-kick { background: var(--blue-soft); }
+.months__axis { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; font-family: var(--font-mono); font-size: 10.5px; color: rgba(255,255,255,.45); text-align: center; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 6px; font-size: 12.5px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; background: rgba(255,255,255,.2); }
+.legend .k { background: var(--blue-soft); }
+.legend .m { background: var(--green); }
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+.team div { padding: 12px; border-radius: 10px; background: rgba(255,255,255,.05); border: 1px solid var(--line-dark); font-size: 12.5px; line-height: 1.4; }
+.team b { display: block; font-family: var(--font-title); font-size: 20px; color: #fff; }
+
+/* Fuentes */
+.sources { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; }
+.sources > * { min-width: 0; }
+.sources ol { counter-reset: s; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; font-size: 13.5px; }
+.sources li { counter-increment: s; position: relative; padding-left: 30px; }
+.sources li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 0; top: 1px; font-family: var(--font-mono); font-size: 11.5px; color: var(--green-600); }
+.note { margin-top: 28px; padding: 16px 18px; border-left: 3px solid var(--green); background: var(--navy-50); border-radius: 0 10px 10px 0; font-size: 13px; }
+.trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
+
+@media (max-width: 1080px) {
+  .why, .mac, .included, .sources { grid-template-columns: 1fr; gap: 48px; }
+  .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .conclusion.conclusion--in { grid-column: span 2; }
+  .figures > .fig:nth-last-of-type(1) { grid-column: span 2; }
+  .route { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .trust { grid-template-columns: 1fr; gap: 16px; }
+  .trust__tags { justify-content: flex-start; }
+}
+@media (max-width: 880px) {
+  .eco { max-width: 380px; }
+  .modes { grid-template-columns: 1fr; }
+  .track { display: none; }
+}
+@media (max-width: 600px) {
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .figures, .route, .checklist, .sources ol { grid-template-columns: 1fr; }
+  .fig--wide, .step--wide, .conclusion.conclusion--in, .figures > .fig:nth-last-of-type(1) { grid-column: auto; }
+  .team { grid-template-columns: 1fr; }
+  .conclusion { grid-template-columns: 1fr; padding: 20px; }
+  .trust { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ring__val { stroke-dasharray: var(--p) 100; }
+  .roi__fill { width: var(--w); }
+  .months span { transform: none; }
+}
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.consein.com/#organization",
+        "name": "Consein",
+        "url": "https://www.consein.com/",
+        "email": "ventas@consein.com",
+        "areaServed": ["VE", "PA", "US", "ES"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.consein.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Asesoría Licenciamiento", "item": "https://www.consein.com/asesoria-licenciamiento" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Asesoría en licenciamiento Microsoft",
+        "serviceType": "Licenciamiento de software Microsoft (CSP, MCA, EA)",
+        "provider": { "@id": "https://www.consein.com/#organization" },
+        "description": "Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. De la compra al valor, durante todo el ciclo de vida."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Consein valida su escenario antes de recomendar." } },
+          { "@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": { "@type": "Answer", "text": "Con un diagnóstico de licenciamiento que compare licencias adquiridas, asignadas y en uso. A partir de esa línea base, el MAC da seguimiento a la optimización durante 12 meses." } },
+          { "@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": { "@type": "Answer", "text": "Manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubren los pasos 2, 5 y 6 de la ruta Consein." } },
+          { "@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": { "@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de protección y privacidad de datos." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Logotipo Microsoft (cuatro cuadros) -->
+    <symbol id="ms-logo" viewBox="0 0 23 23"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="12" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="12" width="10" height="10" fill="#00a4ef"/><rect x="12" y="12" width="10" height="10" fill="#ffb900"/></symbol>
+
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M8 11h6M11 8v6"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8H7Z"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8m-4-5v5"/><path d="M7 12V9m4 3V7m4 5v-2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2m0 8v2"/></symbol>
+    <symbol id="i-zero" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="m9 13 6 4m0-4-6 4"/></symbol>
+    <symbol id="i-check-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l2.5 2.5m7 7L18 18M6 18l2.5-2.5m7-7L18 6"/></symbol>
+    <symbol id="i-apps" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H15a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v2m4-6v6m4-9v9m4-12v12"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 16.5a3.5 3.5 0 0 1 7 0M15 10h3m-3 3h3"/></symbol>
+    <symbol id="i-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12 18 6"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 3h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+<a class="visually-hidden skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ Encabezado ============ -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="https://www.consein.com/" aria-label="Consein, ir al inicio">
+      <img src="data:image/png;base64,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" alt="Consein" width="155" height="26">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="https://www.consein.com/">Inicio</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="https://www.consein.com/servicios">Servicios</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#" aria-current="page">Asesoría Licenciamiento</a></li>
+      </ul>
+      <a class="btn btn--green btn--sm" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ Portada ============ -->
+  <section class="hero grid-bg" aria-labelledby="t-hero">
+    <div class="container hero__grid">
+      <div>
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="https://www.consein.com/">Inicio</a></li>
+            <li><span aria-current="page">Asesoría Licenciamiento</span></li>
+          </ol>
+        </nav>
+        <div class="hero__badges">
+          <span class="ms-chip"><span class="ms ms--light"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span><i></i>Partner · Proveedor CSP</span>
+        </div>
+        <span class="kicker">Soluciones · Licenciamiento Microsoft</span>
+        <h1 class="title-xl" id="t-hero">Cada licencia <span class="hl">trabajando para su negocio</span></h1>
+        <p class="lead">Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. De la compra al valor, durante todo el ciclo de vida.</p>
+        <div class="hero__actions">
+          <a class="btn btn--green" href="#contacto">Solicitar diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#ruta">Conozca la ruta en 7 pasos</a>
+        </div>
+      </div>
+
+      <!-- Ecosistema Microsoft alrededor del licenciamiento -->
+      <div class="eco">
+        <svg viewBox="0 0 500 500" role="img" aria-labelledby="eco-title">
+          <title id="eco-title">Ecosistema Microsoft que asesoramos: Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview y Priva</title>
+          <defs>
+            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#58bb47" stop-opacity=".5"/>
+              <stop offset="60%" stop-color="#2b3780" stop-opacity=".9"/>
+              <stop offset="100%" stop-color="#1b245b"/>
+            </radialGradient>
+            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6f86ff"/>
+              <stop offset="100%" stop-color="#58bb47"/>
+            </linearGradient>
+          </defs>
+          <g class="eco__spin"><circle cx="250" cy="250" r="232" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-dasharray="2 10" opacity=".7"/></g>
+          <circle cx="250" cy="250" r="185" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+          <g class="eco__spin eco__spin--rev"><circle cx="250" cy="250" r="122" fill="none" stroke="rgba(88,187,71,.5)" stroke-width="1.2" stroke-dasharray="40 18"/></g>
+          <g class="eco__link" stroke="rgba(255,255,255,.2)" stroke-width="1" id="eco-links"></g>
+          <circle class="orbit__pulse" cx="250" cy="250" r="92" fill="url(#core)"/>
+          <circle cx="250" cy="250" r="76" fill="#1b245b" stroke="rgba(88,187,71,.6)" stroke-width="1.5"/>
+          <use href="#ms-logo" x="227" y="200" width="46" height="46"/>
+          <text x="250" y="270" text-anchor="middle" fill="#fff" font-family="Segoe UI, Poppins, sans-serif" font-weight="600" font-size="17">Microsoft</text>
+          <text x="250" y="290" text-anchor="middle" fill="#58bb47" font-family="Poppins, sans-serif" font-size="10.5" letter-spacing="1.5">LICENCIAMIENTO</text>
+          <g id="eco-nodes" font-family="Poppins, sans-serif" font-size="11.5" font-weight="500" text-anchor="middle"></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container stats">
+      <ul class="stats__list">
+        <li class="stats__item"><span class="stats__value">40</span><span class="stats__label">años de trayectoria en tecnología empresarial</span></li>
+        <li class="stats__item"><span class="stats__value">3</span><span class="stats__label">modalidades: CSP, MCA y EA</span></li>
+        <li class="stats__item"><span class="stats__value">12<em> m</em></span><span class="stats__label">de acompañamiento con el MAC (T-12)</span></li>
+        <li class="stats__item"><span class="stats__value">7</span><span class="stats__label">pasos para un licenciamiento inteligente</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Por qué Consein ============ -->
+  <section class="section section--tint" id="por-que" aria-labelledby="t-why">
+    <div class="container">
+      <div class="trust reveal">
+        <span class="ms ms--lg"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span>
+        <p class="trust__text"><strong>Partner Microsoft y proveedor CSP.</strong> Asesoría, adquisición, adopción, optimización, gobierno y seguridad en un solo modelo de servicio.</p>
+        <div class="trust__tags"><span class="tag">Banca</span><span class="tag">Seguros</span><span class="tag">Telecomunicaciones</span><span class="tag">Energía</span><span class="tag">Retail</span><span class="tag">Servicios profesionales</span></div>
+      </div>
+
+      <div class="why" style="margin-top:88px">
+        <div class="why__text reveal">
+          <span class="kicker">Por qué Consein</span>
+          <h2 class="title-l" id="t-why">Su partner de licenciamiento Microsoft</h2>
+          <p class="lead" style="margin:18px 0 22px">Las licencias no generan valor por existir: lo generan cuando están bien asignadas, se usan, se miden y se gobiernan.</p>
+          <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a su organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
+          <p>Con 40 años de trayectoria, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que su negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
+          <div class="mac-card"><b>MAC</b><span>Modelo de Atención al Cliente de Consein: un equipo multidisciplinario da seguimiento a su inversión durante <strong>12 meses</strong> y la transforma en resultados medibles.</span></div>
+        </div>
+
+        <div class="reveal">
+          <p class="kicker" style="margin-bottom:14px">Lo que usted obtiene · Cómo lo logramos</p>
+          <ul class="benefits">
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-coin"/></svg></span><div><h3>Costos predecibles</h3><p>Arquitectura de licencias por perfil de usuario y proyección de crecimiento.</p></div></li>
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-zero"/></svg></span><div><h3>Cero licencias ociosas</h3><p>Revisión continua de asignación, uso y consumo con recomendaciones accionables.</p></div></li>
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-check-doc"/></svg></span><div><h3>Cumplimiento sin sorpresas</h3><p>Línea base, conciliación y preparación para True-up, renovaciones y auditorías.</p></div></li>
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-spark"/></svg></span><div><h3>Valor real de lo contratado</h3><p>Activación de capacidades y adopción guiada por casos de uso de negocio.</p></div></li>
+            <li class="benefit benefit--featured"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-lock"/></svg></span><div><h3>Datos protegidos <span class="badge">Diferencial</span></h3><p>Licencias alineadas con identidad, protección de datos y privacidad.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ La solución ============ -->
+  <section class="section" id="solucion" aria-labelledby="t-sol">
+    <div class="container">
+      <div class="products-head reveal">
+        <div class="section__head">
+          <span class="kicker">La solución</span>
+          <h2 class="title-l" id="t-sol">Licenciamiento Microsoft de punta a punta</h2>
+          <p class="lead">Asesoramos y gestionamos licencias de todo el ecosistema. Validamos elegibilidad, disponibilidad y términos para cada país y escenario.</p>
+        </div>
+        <span class="ms ms--lg" aria-label="Ecosistema Microsoft"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span>
+      </div>
+
+      <ul class="products reveal">
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-apps"/></svg></span><small>Productividad</small><h3>Microsoft 365</h3></li>
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><small>IA</small><h3>Microsoft Copilot</h3></li>
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span><small>Nube</small><h3>Azure</h3></li>
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-flow"/></svg></span><small>Low-code</small><h3>Power Platform</h3></li>
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><small>Negocio</small><h3>Dynamics 365</h3></li>
+        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-id"/></svg></span><small>Identidad</small><h3>Microsoft Entra</h3></li>
+        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-device"/></svg></span><small>Dispositivos</small><h3>Microsoft Intune</h3></li>
+        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-radar"/></svg></span><small>Amenazas</small><h3>Microsoft Defender</h3></li>
+        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span><small>Cumplimiento</small><h3>Microsoft Purview</h3></li>
+        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-eye"/></svg></span><small>Privacidad</small><h3>Microsoft Priva</h3></li>
+      </ul>
+
+      <!-- Modalidades -->
+      <div class="section__head reveal" style="margin:96px 0 0">
+        <span class="kicker">Modalidades de contratación</span>
+        <h2 class="title-l">Elegimos con usted la más conveniente</h2>
+      </div>
+      <div class="modes reveal" style="margin-top:40px">
+        <article class="mode mode--featured">
+          <div class="mode__top"><span class="mode__code">CSP</span><span class="badge">Consein es proveedor CSP</span></div>
+          <h3>Cloud Solution Provider</h3>
+          <dl>
+            <div><dt>Ideal para</dt><dd>Organizaciones que quieren flexibilidad y un partner a su lado.</dd></div>
+            <div><dt>Valor principal</dt><dd>Une licencias Microsoft con implementación, soporte y servicios administrados.</dd></div>
+          </dl>
+        </article>
+        <article class="mode">
+          <div class="mode__top"><span class="mode__code">MCA</span></div>
+          <h3>Microsoft Customer Agreement</h3>
+          <dl>
+            <div><dt>Ideal para</dt><dd>Empresas que buscan un acuerdo de compra simplificado.</dd></div>
+            <div><dt>Valor principal</dt><dd>Acuerdo digital que facilita comprar y administrar servicios.</dd></div>
+          </dl>
+        </article>
+        <article class="mode">
+          <div class="mode__top"><span class="mode__code">EA</span><span class="tag">500+ usuarios · 3 años</span></div>
+          <h3>Enterprise Agreement</h3>
+          <dl>
+            <div><dt>Ideal para</dt><dd>Organizaciones comerciales desde 500 usuarios o dispositivos, con horizonte de tres años.</dd></div>
+            <div><dt>Valor principal</dt><dd>Software y nube en un solo acuerdo, pagos anuales y conciliación True-up.</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <!-- Servicios incluidos -->
+      <div class="included">
+        <div class="reveal">
+          <span class="kicker">Servicios incluidos</span>
+          <h2 class="title-l">Todo el ciclo de vida, en un solo modelo</h2>
+          <p class="lead" style="margin:18px 0 28px">Desde el inventario hasta la protección de datos, con un equipo que acompaña cada decisión.</p>
+          <a class="btn btn--navy" href="#contacto">Hablar con un especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="checklist reveal">
+          <li><strong>Diagnóstico de licenciamiento</strong>Inventario, línea base, licencias subutilizadas y riesgos de cumplimiento.</li>
+          <li><strong>Asesoría Microsoft 365 y Copilot</strong>Planes Business, Enterprise y Frontline diseñados por perfil de usuario.</li>
+          <li><strong>Azure</strong>Gobierno de suscripciones y optimización de costos en la nube.</li>
+          <li><strong>Power Platform y Dynamics 365</strong>Licencias por usuario, capacidad, proceso y escenario.</li>
+          <li><strong>Gestión de contratos EA</strong>True-up, renovaciones y cambios de modalidad.</li>
+          <li><strong>Seguridad y privacidad</strong>Licencias alineadas con protección, gobierno y cumplimiento.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Cifras ============ -->
+  <section class="section section--dark grid-bg" id="cifras" aria-labelledby="t-cifras">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <span class="kicker">Datos de la industria</span>
+        <h2 class="title-l" id="t-cifras">Las cifras que <span class="hl">cambian la conversación</span></h2>
+        <p class="lead">Lo que dicen Microsoft, los analistas de la industria y las firmas globales sobre el valor y el riesgo del licenciamiento.</p>
+      </div>
+
+      <div class="figures">
+        <article class="fig fig--wide reveal">
+          <div class="fig__top"><span class="fig__value" data-count="223">223<small>%</small></span><span class="kicker" style="margin:0">Valor</span></div>
+          <p>Retorno sobre la inversión estimado para una pyme compuesta que adoptó Microsoft 365 for Business.</p>
+          <div class="roi" role="img" aria-label="Por cada 1 invertido, 3,23 de beneficio total (ROI de 223 %)">
+            <div class="roi__row"><span>Inversión</span><span class="roi__track"><span class="roi__fill" style="--w:31%"></span></span><b>1,00×</b></div>
+            <div class="roi__row"><span>Beneficio</span><span class="roi__track"><span class="roi__fill roi__fill--g" style="--w:100%"></span></span><b>3,23×</b></div>
+          </div>
+          <cite>Forrester, The Total Economic Impact of Microsoft 365 for Business, estudio encargado por Microsoft, 2025</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="64">64<small>%</small></span>
+            <svg class="ring ring--risk" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:64"/></svg></div>
+          <p>De las organizaciones reportó una auditoría de Microsoft en los últimos tres años; 48% fue auditada en el último año.</p>
+          <cite>Flexera 2026 State of ITAM Report</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="36">36<small>%</small></span>
+            <svg class="ring" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:36"/></svg></div>
+          <p>Solo este porcentaje de organizaciones tiene visibilidad completa de sus activos de TI.</p>
+          <cite>Flexera 2026 State of ITAM Report</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value">49,96<small>%</small></span>
+            <svg class="ring ring--risk" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:49.96"/></svg></div>
+          <p>Del software instalado y de las aplicaciones SaaS licenciadas no era utilizado por los empleados (análisis de 6 millones de dispositivos).</p>
+          <cite>Nexthink, Soft-WASTE Report, 2023</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="35">35<small>%</small></span>
+            <svg class="ring ring--risk" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:35"/></svg></div>
+          <p>Del gasto en nube se estima desperdiciado por instancias sobredimensionadas o no optimizadas.</p>
+          <cite>KPMG, Software asset management and spend optimization</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="25">25<small>%+</small></span>
+            <svg class="ring ring--risk" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:25"/></svg></div>
+          <p>Sobrecosto proyectado hasta 2028 para organizaciones sin visibilidad centralizada ni coordinación del ciclo de vida de su software SaaS.</p>
+          <cite>Gartner, Magic Quadrant for SaaS Management Platforms 2026</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="32">32<small>%</small></span>
+            <svg class="ring ring--risk" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:32"/></svg></div>
+          <p>De los incidentes de seguridad de datos ya involucran IA generativa (estudio a más de 1.700 líderes de seguridad).</p>
+          <cite>Microsoft Data Security Index 2026 (reportado por ERP Today)</cite>
+        </article>
+
+        <article class="fig reveal">
+          <div class="fig__top"><span class="fig__value" data-count="47">47<small>%</small></span>
+            <svg class="ring" viewBox="-2 -2 40 40" aria-hidden="true"><circle class="ring__track" cx="18" cy="18" r="15.9155"/><circle class="ring__val" cx="18" cy="18" r="15.9155" pathLength="100" style="--p:47"/></svg></div>
+          <p>De las organizaciones encuestadas implementa controles específicos para cargas de trabajo de IA generativa.</p>
+          <cite>Microsoft Data Security Index 2026</cite>
+        </article>
+        <div class="conclusion conclusion--in reveal">
+          <svg aria-hidden="true"><use href="#i-bulb"/></svg>
+          <p>La conclusión es clara: sin visibilidad, gobierno y protección, la inversión en licencias se diluye. Con el acompañamiento correcto, se convierte en <strong style="color:var(--green);font-weight:500">productividad, seguridad y ventaja competitiva</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ Ruta en 7 pasos ============ -->
+  <section class="section section--tint dots-bg" id="ruta" aria-labelledby="t-ruta">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <span class="kicker">La ruta Consein</span>
+        <h2 class="title-l" id="t-ruta">7 pasos para un licenciamiento inteligente</h2>
+        <p class="lead">Un recorrido probado del diagnóstico a la mejora continua. Los pasos 5 y 6 se ejecutan bajo el MAC durante 12 meses (T-12).</p>
+      </div>
+
+      <!-- Línea de ruta -->
+      <div class="track reveal" aria-hidden="true">
+        <svg viewBox="0 0 1132 96">
+          <defs><linearGradient id="trk" x1="0" x2="1"><stop offset="0" stop-color="#1b245b"/><stop offset="1" stop-color="#58bb47"/></linearGradient></defs>
+          <line x1="40" y1="62" x2="1092" y2="62" stroke="#dfe3f2" stroke-width="6" stroke-linecap="round"/>
+          <line class="track__line" x1="40" y1="62" x2="1092" y2="62" stroke="url(#trk)" stroke-width="2"/>
+          <path d="M638 22 V12 H930 V22" fill="none" stroke="#58bb47" stroke-width="1.5"/>
+          <rect x="726" y="0" width="116" height="24" rx="12" fill="#58bb47"/>
+          <text x="784" y="16.5" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#1b245b" letter-spacing="1">MAC · T-12</text>
+          <g font-family="Haltto, Poppins, sans-serif" font-weight="700" font-size="13" text-anchor="middle">
+            <circle cx="40" cy="62" r="20" fill="#1b245b"/><text x="40" y="67" fill="#fff">01</text>
+            <circle cx="215" cy="62" r="20" fill="#1b245b"/><text x="215" y="67" fill="#fff">02</text>
+            <circle cx="390" cy="62" r="20" fill="#1b245b"/><text x="390" y="67" fill="#fff">03</text>
+            <circle cx="566" cy="62" r="20" fill="#1b245b"/><text x="566" y="67" fill="#fff">04</text>
+            <circle cx="741" cy="62" r="22" fill="#58bb47"/><text x="741" y="67" fill="#1b245b">05</text>
+            <circle cx="916" cy="62" r="22" fill="#58bb47"/><text x="916" y="67" fill="#1b245b">06</text>
+            <circle cx="1092" cy="62" r="20" fill="#fff" stroke="#58bb47" stroke-width="2"/><text x="1092" y="67" fill="#1b245b">07</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="route">
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-compass"/></svg></span><span class="step__num">01</span></div>
+          <h3>Descubrir</h3>
+          <p>Entendemos sus objetivos, estructura, sedes, usuarios, cargas de trabajo, contratos vigentes y planes de crecimiento.</p>
+          <p class="step__result"><b>Resultado:</b> mapa de necesidades y alcance.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-search"/></svg></span><span class="step__num">02</span></div>
+          <h3>Diagnosticar</h3>
+          <p>Construimos el inventario y la línea base: licencias adquiridas, asignadas y en uso, vencimientos, duplicidades y riesgos de cumplimiento.</p>
+          <p class="step__result"><b>Resultado:</b> radiografía de licenciamiento con hallazgos priorizados.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><span class="step__num">03</span></div>
+          <h3>Diseñar</h3>
+          <p>Definimos perfiles de usuario, capacidades requeridas, modalidad contractual (CSP, MCA o EA) y la arquitectura de licencias alineada al roadmap.</p>
+          <p class="step__result"><b>Resultado:</b> estrategia objetivo y escenarios de decisión.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-cart"/></svg></span><span class="step__num">04</span></div>
+          <h3>Adquirir y activar</h3>
+          <p>Acompañamos la compra, renovación o True-up; asignamos licencias, habilitamos servicios y guiamos la adopción inicial.</p>
+          <p class="step__result"><b>Resultado:</b> entorno habilitado y plan de activación.</p>
+        </article>
+        <article class="step step--mac reveal">
+          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-trend"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">05</span></div>
+          <h3>Optimizar</h3>
+          <p>Durante los 12 meses del MAC revisamos consumo, asignaciones, adopción y crecimiento. Las mesas técnicas periódicas analizan tendencias tecnológicas y priorizan ajustes: reasignar, cambiar de plan, consolidar o activar capacidades que ya están pagadas.</p>
+          <p class="step__result"><b>Resultado:</b> backlog de optimización y ahorros documentados.</p>
+        </article>
+        <article class="step step--mac reveal">
+          <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-gov"/></svg></span><span class="badge">MAC T-12</span><span class="step__num">06</span></div>
+          <h3>Administrar y gobernar</h3>
+          <p>Pre-kickoff «base cero», gerente de cuenta y equipo multidisciplinario de Consein. Roles, indicadores, seguimiento periódico, cuatro mesas técnicas anuales y una hoja de ruta para el control, la trazabilidad y la evolución ordenada del licenciamiento.</p>
+          <p class="step__result"><b>Resultado:</b> modelo de gobierno, indicadores, comités y roadmap vivo.</p>
+        </article>
+        <article class="step step--sec step--wide reveal">
+          <div class="step__top"><span class="card__icon" style="background:var(--green-100);color:var(--green-600)"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><span class="step__num">07</span></div>
+          <h3>Proteger: datos y privacidad</h3>
+          <p>Alineamos licencias y configuraciones con la protección y la privacidad de los datos: identidad y acceso, clasificación y etiquetado de información sensible, prevención de pérdida de datos, retención, gestión de riesgos de privacidad y controles para el uso seguro de IA y Copilot.</p>
+          <p class="step__result"><b>Resultado:</b> plan de protección y privacidad de datos basado en riesgo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAC T-12 ============ -->
+  <section class="section" id="mac" aria-labelledby="t-mac">
+    <div class="container mac">
+      <div class="reveal">
+        <span class="kicker">Modelo de Atención al Cliente (MAC)</span>
+        <h2 class="title-l" id="t-mac">12 meses cuidando su inversión</h2>
+        <p class="lead" style="margin-top:18px">La diferencia está en el acompañamiento continuo: un equipo multidisciplinario que da seguimiento a su licenciamiento y lo transforma en resultados medibles.</p>
+        <ol class="stepper">
+          <li><span class="stepper__dot">00</span><div><h3>Pre-kickoff «base cero»</h3><p>Partimos de una línea base conciliada y acordamos roles e indicadores.</p></div></li>
+          <li><span class="stepper__dot">01</span><div><h3>Gerente de cuenta asignado</h3><p>Atención oportuna y cercana con un equipo multidisciplinario de Consein.</p></div></li>
+          <li><span class="stepper__dot">04</span><div><h3>Mesas técnicas anuales</h3><p>Analizan tendencias tecnológicas y priorizan ajustes de licenciamiento.</p></div></li>
+          <li><span class="stepper__dot">12</span><div><h3>Roadmap vivo</h3><p>Control, trazabilidad y evolución ordenada durante todo el período.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="dash grid-bg reveal" role="img" aria-label="Calendario MAC de 12 meses: pre-kickoff en el mes 1 y mesas técnicas en los meses 3, 6, 9 y 12">
+        <div class="dash__bar"><i></i><i></i><i></i><span>mac · t-12 · seguimiento</span></div>
+        <p class="dash__title">Calendario de acompañamiento</p>
+        <div class="months">
+          <span class="is-kick"></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span><span></span><span></span><span class="is-mesa"></span>
+        </div>
+        <div class="months__axis"><span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span><span>M7</span><span>M8</span><span>M9</span><span>M10</span><span>M11</span><span>M12</span></div>
+        <div class="legend"><span><i class="k"></i>Pre-kickoff «base cero»</span><span><i class="m"></i>Mesa técnica</span><span><i></i>Seguimiento periódico</span></div>
+        <div class="dash__rows" style="margin-top:18px">
+          <div class="dash__row"><span>Consumo</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
+          <div class="dash__row"><span>Asignación</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
+          <div class="dash__row"><span>Adopción</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
+          <div class="dash__row"><span>Protección</span><span class="dash__track"><span class="dash__fill" style="--w:100%"></span></span><span class="dash__check"><svg><use href="#i-check"/></svg></span></div>
+        </div>
+        <div class="team">
+          <div><b>12</b>meses de seguimiento</div>
+          <div><b>4</b>mesas técnicas anuales</div>
+          <div><b>1</b>gerente de cuenta dedicado</div>
+        </div>
+        <div class="dash__foot"><span class="live"></span><span>Licenciamiento <b>gobernado</b> por el MAC de Consein</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Preguntas frecuentes ============ -->
+  <section class="section section--tint dots-bg" id="preguntas" aria-labelledby="t-faq">
+    <div class="container faq-wrap">
+      <div class="reveal">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2 class="title-l" id="t-faq">Sobre licenciamiento Microsoft</h2>
+        <p class="lead" style="margin:18px 0 32px">Si su pregunta es otra, nuestros especialistas le responden directamente.</p>
+        <a class="btn btn--navy" href="#contacto">Escríbanos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?</summary>
+          <p>Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Consein valida su escenario antes de recomendar.</p>
+        </details>
+        <details>
+          <summary>¿Cómo sé si estoy pagando licencias que no uso?</summary>
+          <p>Con un diagnóstico de licenciamiento que compare licencias adquiridas, asignadas y en uso. A partir de esa línea base, el MAC da seguimiento a la optimización durante 12 meses.</p>
+        </details>
+        <details>
+          <summary>¿Cómo me preparo para una auditoría o un True-up de Microsoft?</summary>
+          <p>Manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubren los pasos 2, 5 y 6 de la ruta Consein.</p>
+        </details>
+        <details>
+          <summary>¿Qué licencias necesito para usar Copilot de forma segura?</summary>
+          <p>Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de protección y privacidad de datos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contacto ============ -->
+  <section class="section" id="contacto" aria-labelledby="t-contacto">
+    <div class="container">
+      <div class="contact-band grid-bg reveal">
+        <div>
+          <span class="ms-chip" style="margin-bottom:22px"><span class="ms ms--light"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span><i></i>Partner · CSP</span>
+          <span class="kicker" style="display:flex">Diagnóstico de licenciamiento</span>
+          <h2 class="title-l" id="t-contacto">Licencie con propósito. Gobierne con control. <span class="hl">Crezca con Consein.</span></h2>
+          <p class="lead">Nuestros especialistas evaluarán su escenario y diseñarán una estrategia alineada con sus objetivos, presupuesto, seguridad y planes de crecimiento.</p>
+          <div class="contact__links">
+            <a href="mailto:ventas@consein.com"><span><svg aria-hidden="true"><use href="#i-mail"/></svg></span>ventas@consein.com</a>
+            <a href="https://wa.me/50768398680" target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#i-chat"/></svg></span>WhatsApp +507 6839 8680</a>
+          </div>
+        </div>
+
+        <!-- data-endpoint: URL que recibe el formulario (POST). Vacío = solo validación, sin envío. -->
+        <form class="form-card" data-contact-form data-endpoint="" novalidate>
+          <p class="form-service">Solicitud: Diagnóstico de licenciamiento Microsoft</p>
+          <input type="hidden" name="servicio" value="Asesoría Licenciamiento Microsoft">
+          <div class="form-grid">
+            <div class="field"><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label for="c-empresa">Empresa</label><input id="c-empresa" name="empresa" autocomplete="organization" required></div>
+            <div class="field"><label for="c-cargo">Cargo</label><input id="c-cargo" name="cargo" autocomplete="organization-title"></div>
+            <div class="field"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" autocomplete="email" required></div>
+            <div class="field">
+              <label for="c-pais">País</label>
+              <select id="c-pais" name="pais" required>
+                <option value="">Seleccione su país</option>
+                <option>Venezuela</option>
+                <option>Panamá</option>
+                <option>Estados Unidos</option>
+                <option>España</option>
+                <option>Colombia</option>
+                <option>México</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-usuarios">Usuarios aprox.</label>
+              <select id="c-usuarios" name="usuarios">
+                <option value="">Seleccione</option>
+                <option>1 – 50</option>
+                <option>51 – 300</option>
+                <option>301 – 499</option>
+                <option>500 o más</option>
+              </select>
+            </div>
+            <fieldset class="field field--full">
+              <legend>¿Qué necesita?</legend>
+              <div class="radios">
+                <label class="radio"><input type="radio" name="reto" value="Diagnóstico"><span>Diagnóstico</span></label>
+                <label class="radio"><input type="radio" name="reto" value="Microsoft 365 y Copilot"><span>M365 y Copilot</span></label>
+                <label class="radio"><input type="radio" name="reto" value="Azure"><span>Azure</span></label>
+                <label class="radio"><input type="radio" name="reto" value="Power Platform / Dynamics 365"><span>Power Platform / D365</span></label>
+                <label class="radio"><input type="radio" name="reto" value="EA / True-up / Auditoría"><span>EA · True-up · Auditoría</span></label>
+                <label class="radio"><input type="radio" name="reto" value="Seguridad y privacidad"><span>Seguridad y privacidad</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-actions"><button class="btn btn--navy" type="submit">Hablar con un especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Fuentes ============ -->
+  <section class="section" id="fuentes" aria-labelledby="t-fuentes" style="padding-top:0">
+    <div class="container sources">
+      <div>
+        <span class="kicker">Referencias</span>
+        <h2 class="title-l" id="t-fuentes" style="font-size:28px">Fuentes</h2>
+      </div>
+      <div>
+        <ol>
+          <li>Forrester TEI of Microsoft 365 for Business (2025)</li>
+          <li>Microsoft Data Security Index 2026 – Microsoft Security Blog</li>
+          <li>ERP Today – Microsoft Data Security Index 2026</li>
+          <li>Gartner MQ for SaaS Management Platforms 2026 (análisis USU)</li>
+          <li>Flexera 2026 State of ITAM Report</li>
+          <li>Nexthink – Soft-WASTE Report</li>
+          <li>KPMG – Software asset management and spend optimization</li>
+          <li>Microsoft – Enterprise Agreement</li>
+          <li>Microsoft – Cloud Solution Provider program</li>
+        </ol>
+        <p class="note"><strong>Nota:</strong> información orientativa. La elegibilidad, disponibilidad, precios y condiciones dependen del país, tipo de organización, programa y términos vigentes de Microsoft. Consein valida cada escenario antes de emitir una recomendación.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Pie de página ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="https://www.consein.com/"><img src="data:image/png;base64,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" alt="Consein" width="167" height="28"></a>
+        <p>Servicios tecnológicos que transforman empresas.</p>
+        <p style="margin-top:20px"><span class="ms ms--light" style="font-size:14px"><svg aria-hidden="true" style="width:18px;height:18px"><use href="#ms-logo"/></svg>Microsoft Partner · CSP</span></p>
+        <small>Rif: J-002545909</small>
+      </div>
+      <div>
+        <h2 class="footer__title">Navegación</h2>
+        <ul class="footer__list">
+          <li><a href="https://www.consein.com/">Inicio</a></li>
+          <li><a href="https://www.consein.com/nosotros">Nosotros</a></li>
+          <li><a href="https://www.consein.com/blog">Blog</a></li>
+          <li><a href="https://www.consein.com/casos-de-exito">Casos de éxito</a></li>
+          <li><a href="https://www.consein.com/servicios">Servicios</a></li>
+          <li><a href="#" aria-current="page">Asesoría Licenciamiento</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__title">Soluciones</h2>
+        <ul class="footer__list">
+          <li><a href="#">Infraestructura y colaboración</a></li>
+          <li><a href="#">IA y automatización de procesos</a></li>
+          <li><a href="#">Financieras y de gobierno corporativo</a></li>
+          <li><a href="#" aria-current="page">Licenciamiento Microsoft</a></li>
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">Ciberseguridad</a></li>
+          <li><a href="#">Ecosistema</a></li>
+        </ul>
+      </div>
+      <div class="footer__addr">
+        <h2 class="footer__title">Ubícanos</h2>
+        <p><strong>Venezuela:</strong> Av. Orinoco, Centro Empresarial Roca, piso 2, Las Mercedes, Caracas. Tel: +58 212 9934411</p>
+        <p><strong>Panamá:</strong> Calle 71 Este con Calle 50, PH Plaza Morica, piso 8, of. 807. Tel: +507 397-3200</p>
+        <p><strong>Estados Unidos:</strong> Tel: +1 954 228 7363</p>
+        <p><strong>España:</strong> Tel: +34 919 26 83 57</p>
+      </div>
+    </div>
+    <p class="trademark">Microsoft, Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview, Priva y el logotipo de Microsoft son marcas comerciales del grupo de compañías Microsoft.</p>
+    <div class="footer__bottom">
+      <span>CONSEIN © 2026 · Todos los derechos reservados</span>
+      <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Consein · Asesoría Licenciamiento — Versión digital
+   Interacciones: encabezado al hacer scroll, menú móvil, órbita del ecosistema,
+   animaciones de entrada (medidores, barras y contadores) y formulario de contacto. */
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---- Encabezado: fondo sólido al hacer scroll ----
+  var header = document.querySelector(".site-header");
+  function onScroll() { header.classList.toggle("is-scrolled", window.scrollY > 24); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // ---- Menú móvil ----
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.querySelector(".main-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a") && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+  // ---- Enlace de la página actual: permanece en la página ----
+  document.querySelectorAll('a[aria-current="page"]').forEach(function (link) {
+    link.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
+  });
+
+  // ---- Órbita del ecosistema Microsoft ----
+  var products = [
+    ["Microsoft 365", 0], ["Copilot", 0], ["Azure", 0], ["Power Platform", 0], ["Dynamics 365", 0],
+    ["Entra", 1], ["Intune", 1], ["Defender", 1], ["Purview", 1], ["Priva", 1]
+  ];
+  var nodes = document.getElementById("eco-nodes");
+  var links = document.getElementById("eco-links");
+  var NS = "http://www.w3.org/2000/svg";
+  if (nodes && links) {
+    products.forEach(function (p, i) {
+      var a = (-90 + i * 36) * Math.PI / 180, r = 185;
+      var x = 250 + r * Math.cos(a), y = 250 + r * Math.sin(a);
+      var w = Math.max(64, p[0].length * 7.2 + 22);
+      var line = document.createElementNS(NS, "line");
+      line.setAttribute("x1", 250); line.setAttribute("y1", 250);
+      line.setAttribute("x2", x.toFixed(1)); line.setAttribute("y2", y.toFixed(1));
+      links.appendChild(line);
+      var g = document.createElementNS(NS, "g");
+      g.setAttribute("class", "eco__node");
+      var rect = document.createElementNS(NS, "rect");
+      rect.setAttribute("x", (x - w / 2).toFixed(1)); rect.setAttribute("y", (y - 15).toFixed(1));
+      rect.setAttribute("width", w.toFixed(1)); rect.setAttribute("height", 30); rect.setAttribute("rx", 15);
+      rect.setAttribute("fill", p[1] ? "#58bb47" : "#151d4b");
+      rect.setAttribute("stroke", p[1] ? "#58bb47" : "#6f86ff"); rect.setAttribute("stroke-width", "1.5");
+      var t = document.createElementNS(NS, "text");
+      t.setAttribute("x", x.toFixed(1)); t.setAttribute("y", (y + 4).toFixed(1));
+      t.setAttribute("fill", p[1] ? "#1b245b" : "#fff");
+      t.textContent = p[0];
+      g.appendChild(rect); g.appendChild(t);
+      nodes.appendChild(g);
+    });
+  }
+
+  // ---- Contadores ----
+  function countUp(el) {
+    var target = parseFloat(el.dataset.count), small = el.querySelector("small");
+    var suffix = small ? small.outerHTML : "";
+    if (reduce) return;
+    var t0 = null, dur = 1200;
+    function frame(t) {
+      if (!t0) t0 = t;
+      var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.innerHTML = Math.round(target * e) + suffix;
+      if (k < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // ---- Animaciones de entrada ----
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        entry.target.querySelectorAll("[data-count]").forEach(countUp);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  // ---- Formulario de contacto ----
+  // Con data-endpoint="https://…" los datos se envían por POST (FormData).
+  // Sin endpoint solo se valida y se muestra la confirmación (ambiente de desarrollo).
+  document.querySelectorAll("form[data-contact-form]").forEach(function (form) {
+    var status = form.querySelector(".form-status");
+    var submit = form.querySelector('[type="submit"]');
+    var okMsg = "Gracias. Un especialista en licenciamiento Microsoft le contactará muy pronto.";
+    var errMsg = "No pudimos enviar su mensaje. Inténtelo de nuevo o escríbanos a ventas@consein.com.";
+
+    function done(ok, msg) {
+      status.dataset.state = ok ? "ok" : "error";
+      status.textContent = msg;
+      if (submit) submit.disabled = false;
+      if (ok) form.reset();
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var firstInvalid = null;
+      form.querySelectorAll("[required]").forEach(function (field) {
+        var ok = field.checkValidity();
+        field.setAttribute("aria-invalid", ok ? "false" : "true");
+        if (!ok && !firstInvalid) firstInvalid = field;
+      });
+      if (firstInvalid) {
+        done(false, "Revise los campos marcados: son obligatorios y el correo debe ser válido.");
+        firstInvalid.focus();
+        return;
+      }
+      var endpoint = form.dataset.endpoint;
+      if (!endpoint) { done(true, okMsg); return; }
+      if (submit) submit.disabled = true;
+      status.dataset.state = "ok";
+      status.textContent = "Enviando…";
+      fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+        .then(function (res) { done(res.ok, res.ok ? okMsg : errMsg); })
+        .catch(function () { done(false, errMsg); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
