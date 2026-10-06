@@ -39,14 +39,14 @@ def inline_css(name):
 
 
 js = (ROOT / 'assets/js/main.js').read_text(encoding='utf-8')
-logo = data_uri(ROOT / 'assets/img/logo-consein.jpg', 'image/jpeg')
 
 for source, target in PAGES.items():
     html = (ROOT / source).read_text(encoding='utf-8')
     html = re.sub(r'<link rel="stylesheet" href="assets/css/([\w-]+\.css)">',
                   lambda m: '<style>\n' + inline_css(m.group(1)) + '</style>', html)
     html = html.replace('<script src="assets/js/main.js" defer></script>', '<script>\n' + js + '</script>')
-    html = html.replace('src="assets/img/logo-consein.jpg"', 'src="' + logo + '"')
+    html = re.sub(r'src="(assets/img/[\w-]+\.jpg)"',
+                  lambda m: 'src="' + data_uri(ROOT / m.group(1), 'image/jpeg') + '"', html)
     # Logos de marcas (SVG)
     html = re.sub(r'src="(assets/img/brands/[\w-]+\.svg)"',
                   lambda m: 'src="' + data_uri(ROOT / m.group(1), 'image/svg+xml') + '"', html)

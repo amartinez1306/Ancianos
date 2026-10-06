@@ -11,11 +11,12 @@ consein-hardware/
 ├── assets/css/grafico.css  # Estilos de iconos, ilustraciones y bloques gráficos
 ├── assets/css/digital.css  # Estilos de la variante digital
 ├── assets/js/main.js       # Menú móvil y botón "volver arriba"
-├── assets/img/logo-consein.jpg
+├── assets/img/logo-consein.jpg      # Logo original (2000 px)
+├── assets/img/logo-consein-500.jpg  # Logo optimizado para la web
 ├── assets/img/brands/      # Logos de marcas (Dell, HP, Lenovo); falta Logitech
 ├── assets/fonts/           # Colocar aquí Haltto.woff2 (fuente de títulos)
 ├── build.py                # Genera las versiones de un solo archivo
-├── seo/                    # Palabras clave SEO (docx) para el equipo de SEO
+├── seo/                    # Manual SEO y palabras clave (docx), sitemap y robots de ejemplo
 ├── Dockerfile + nginx.conf # Opción contenedor (sirve en /hardware/)
 └── README.md
 ```

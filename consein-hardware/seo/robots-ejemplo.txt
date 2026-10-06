@@ -1,0 +1,10 @@
+# Ejemplo de robots.txt para la raíz de www.consein.com
+# (si ya existe uno, solo agregar las líneas que falten)
+User-agent: *
+Allow: /
+
+# Archivos internos que no deben indexarse
+Disallow: /hardware/build.py
+Disallow: /hardware/seo/
+
+Sitemap: https://www.consein.com/sitemap.xml
