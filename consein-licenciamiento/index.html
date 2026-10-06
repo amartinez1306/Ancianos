@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Asesoría en Licenciamiento Microsoft | Consein</title>
-  <meta name="description" content="Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Partner Microsoft y proveedor CSP: Microsoft 365, Copilot, Azure, Power Platform, Power BI y seguridad.">
-  <link rel="canonical" href="https://www.consein.com/asesoria-licenciamiento">
-  <meta name="robots" content="index, follow">
+  <title>Licenciamiento Microsoft en Venezuela y Panamá | Consein</title>
+  <meta name="description" content="Licenciamiento Microsoft para empresas en Venezuela y Panamá: compra, renovación y optimización de licencias Microsoft 365, Copilot y Azure. Partner CSP.">
+  <link rel="canonical" href="https://www.consein.com/licenciamiento-microsoft">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#1b245b">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Consein">
   <meta property="og:locale" content="es_LA">
-  <meta property="og:title" content="Licenciamiento Microsoft: cada licencia trabajando para tu negocio | Consein">
-  <meta property="og:description" content="De la compra al valor, durante todo el ciclo de vida. Diagnóstico, diseño, adquisición, optimización, gobierno y protección de datos.">
-  <meta property="og:url" content="https://www.consein.com/asesoria-licenciamiento">
+  <meta property="og:locale:alternate" content="es_VE">
+  <meta property="og:locale:alternate" content="es_PA">
+  <meta property="og:title" content="Licenciamiento Microsoft en Venezuela y Panamá | Consein, partner Microsoft CSP">
+  <meta property="og:description" content="Compramos, renovamos y optimizamos tus licencias Microsoft 365, Copilot y Azure. Diagnóstico de licenciamiento y acompañamiento MAC en ciclos de 12 meses.">
+  <meta property="og:url" content="https://www.consein.com/licenciamiento-microsoft">
+  <meta property="og:image" content="https://www.consein.com/servicios/assets/logo-consein.png">
+  <meta property="og:image:alt" content="Consein, partner Microsoft">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Licenciamiento Microsoft en Venezuela y Panamá | Consein">
+  <meta name="twitter:description" content="Compra, renovación y optimización de licencias Microsoft 365, Copilot y Azure con un partner CSP.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -432,6 +438,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 /* Portada */
 .hero__badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
 .hero .title-xl { font-size: clamp(34px, 4.6vw, 58px); }
+.h1-pre { display: block; margin-bottom: 14px; font-family: var(--font-text); font-size: clamp(16px, 1.6vw, 20px); font-weight: 500; letter-spacing: .01em; color: var(--text-light); }
 
 /* Ecosistema (órbita de productos) */
 .eco { position: relative; width: 100%; max-width: 500px; margin: 0 auto; aspect-ratio: 1; }
@@ -601,6 +608,17 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .mac-pillars li { padding: 16px; }
 }
 
+.local { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+.local > * { min-width: 0; }
+.local-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.local-card { display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); }
+.local-card .pillar__icon { margin-bottom: 6px; }
+.local-card h3 { font-size: 18px; }
+.local-card__where { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--green-600); }
+.local-card p:not(.local-card__where) { font-size: 14.5px; line-height: 1.6; }
+.local-card a { margin-top: auto; padding-top: 6px; font-weight: 500; color: var(--navy); }
+@media (max-width: 1080px) { .local { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 600px) { .local-cards { grid-template-columns: 1fr; } }
 .trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
 
 @media (max-width: 1080px) {
@@ -634,49 +652,348 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 </style>
 
   <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.consein.com/#organization",
-        "name": "Consein",
-        "url": "https://www.consein.com/",
-        "email": "ventas@consein.com",
-        "areaServed": ["VE", "PA", "US", "ES"]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.consein.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Asesoría Licenciamiento", "item": "https://www.consein.com/asesoria-licenciamiento" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Asesoría en licenciamiento Microsoft",
-        "serviceType": "Licenciamiento de software Microsoft (CSP, EA, Open Value)",
-        "provider": { "@id": "https://www.consein.com/#organization" },
-        "description": "Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. De la compra al valor, durante todo el ciclo de vida."
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesites. CSP aporta flexibilidad y servicios de partner; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años; Open Value simplifica el control de costos y la gestión de TI para pymes, con previsibilidad financiera. Validamos tu escenario antes de recomendarte una modalidad."}},
-          {"@type": "Question", "name": "¿Qué gano al contratar mis licencias por CSP con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "Como proveedor CSP, unimos tus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, te acompañamos con nuestro MAC, en ciclos de 12 meses, para que las licencias se usen, se optimicen y se gobiernen."}},
-          {"@type": "Question", "name": "¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, cuando tu escenario lo justifica. En el diagnóstico revisamos tus convenios vigentes, vencidos y por vencer, y si otra modalidad te conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft."}},
-          {"@type": "Question", "name": "¿Trabajan con empresas que tienen sedes en varios países?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Atendemos empresas en Venezuela y Panamá, y en el diagnóstico consideramos la dispersión geográfica de tu organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país."}},
-          {"@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": {"@type": "Answer", "text": "Lo sabrás con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización en ciclos de 12 meses, mientras tus convenios estén vigentes."}},
-          {"@type": "Question", "name": "¿Qué necesitan de mi empresa para hacer el diagnóstico?", "acceptedAnswer": {"@type": "Answer", "text": "Te pedimos acceso de consulta a tus portales de administración Microsoft, la información de tus contratos y convenios, y una persona de contacto en tu equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de tu empresa."}},
-          {"@type": "Question", "name": "¿Qué pasa si descubrimos que me faltan licencias?", "acceptedAnswer": {"@type": "Answer", "text": "Te lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y te proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos contigo."}},
-          {"@type": "Question", "name": "¿Qué es el MAC y cuánto dura?", "acceptedAnswer": {"@type": "Answer", "text": "Es nuestro Modelo de Atención al Cliente: te acompañamos con un gerente de cuenta y un equipo multidisciplinario en ciclos de 12 meses, que se reinician mientras tus convenios estén vigentes. En cada ciclo ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos tu licenciamiento."}},
-          {"@type": "Question", "name": "¿Qué ocurre al terminar los 12 meses del MAC?", "acceptedAnswer": {"@type": "Answer", "text": "Al cierre de cada ciclo revisamos el cumplimiento y preparamos contigo la hoja de ruta del siguiente: renovación, True-up o ajustes de convenio y planes, según la situación real de tu empresa en ese momento. Luego el MAC se reinicia con un nuevo ciclo de 12 meses, y así sucesivamente mientras tus convenios estén vigentes."}},
-          {"@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "Te preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta."}},
-          {"@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": {"@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que activamos los componentes de seguridad de tu licenciamiento."}}
-        ]
-      }
+   "@type": "Organization",
+   "@id": "https://www.consein.com/#organization",
+   "name": "Consein",
+   "url": "https://www.consein.com/",
+   "logo": "https://www.consein.com/servicios/assets/logo-consein.png",
+   "email": "ventas@consein.com",
+   "description": "Partner Microsoft y proveedor CSP con 40 años de trayectoria en tecnología empresarial.",
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "Venezuela"
+    },
+    {
+     "@type": "Country",
+     "name": "Panamá"
+    },
+    {
+     "@type": "Country",
+     "name": "Estados Unidos"
+    },
+    {
+     "@type": "Country",
+     "name": "España"
+    }
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ventas@consein.com",
+    "telephone": "+507-6839-8680",
+    "availableLanguage": [
+     "es",
+     "en"
     ]
+   },
+   "subOrganization": [
+    {
+     "@id": "https://www.consein.com/#venezuela"
+    },
+    {
+     "@id": "https://www.consein.com/#panama"
+    }
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://www.consein.com/#venezuela",
+   "name": "Consein Venezuela",
+   "parentOrganization": {
+    "@id": "https://www.consein.com/#organization"
+   },
+   "url": "https://www.consein.com/licenciamiento-microsoft",
+   "telephone": "+58-212-9934411",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Orinoco, Centro Empresarial Roca, piso 2, Las Mercedes",
+    "addressLocality": "Caracas",
+    "addressCountry": "VE"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Venezuela"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://www.consein.com/#panama",
+   "name": "Consein Panamá",
+   "parentOrganization": {
+    "@id": "https://www.consein.com/#organization"
+   },
+   "url": "https://www.consein.com/licenciamiento-microsoft",
+   "telephone": "+507-397-3200",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 71 Este con Calle 50, PH Plaza Morica, piso 8, of. 807",
+    "addressLocality": "Ciudad de Panamá",
+    "addressCountry": "PA"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Panamá"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.consein.com/licenciamiento-microsoft#webpage",
+   "url": "https://www.consein.com/licenciamiento-microsoft",
+   "name": "Licenciamiento Microsoft en Venezuela y Panamá | Consein",
+   "inLanguage": "es",
+   "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://www.consein.com/",
+    "name": "Consein"
+   },
+   "about": {
+    "@id": "https://www.consein.com/licenciamiento-microsoft#service"
+   },
+   "breadcrumb": {
+    "@id": "https://www.consein.com/licenciamiento-microsoft#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://www.consein.com/licenciamiento-microsoft#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://www.consein.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Asesoría en licenciamiento Microsoft",
+     "item": "https://www.consein.com/licenciamiento-microsoft"
+    }
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.consein.com/licenciamiento-microsoft#service",
+   "name": "Asesoría en licenciamiento Microsoft",
+   "serviceType": "Licenciamiento de software Microsoft (CSP, Enterprise Agreement, Open Value)",
+   "provider": {
+    "@id": "https://www.consein.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "Venezuela"
+    },
+    {
+     "@type": "Country",
+     "name": "Panamá"
+    },
+    {
+     "@type": "Country",
+     "name": "Estados Unidos"
+    },
+    {
+     "@type": "Country",
+     "name": "España"
+    }
+   ],
+   "description": "Diagnóstico, diseño, compra, activación, optimización, gobierno y seguridad de licencias Microsoft 365, Copilot, Azure, Power Platform y Power BI, con acompañamiento MAC en ciclos de 12 meses.",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de licenciamiento Microsoft",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Diagnóstico y auditoría de licencias Microsoft"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Licencias Microsoft 365 y Copilot"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Licencias Azure y optimización de costos en la nube"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Licencias Power Platform y Power BI"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Gestión de Enterprise Agreement y True-up"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Licencias Open Value para pymes"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Activación de componentes de seguridad (Entra, Intune, Defender, Purview)"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "MAC: acompañamiento y sostenibilidad"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.consein.com/licenciamiento-microsoft#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cómo compro licencias Microsoft para mi empresa en Venezuela o Panamá?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A través de un partner Microsoft como nosotros. Como proveedor CSP te vendemos y administramos licencias Microsoft 365, Copilot, Azure y más, y también gestionamos Enterprise Agreement y Open Value. Empezamos con un diagnóstico para que compres solo lo que necesitas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto cuesta una licencia de Microsoft 365 para empresas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende del plan (Business, Enterprise o Frontline), de la modalidad de contratación, del plazo y del país. Por eso no publicamos una lista única: en el diagnóstico te preparamos una propuesta con el costo por usuario y el total, y te mostramos dónde puedes ahorrar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué es un partner CSP de Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Es un socio autorizado por Microsoft para vender, facturar y administrar suscripciones de su nube, y para dar implementación y soporte. Al contratar por CSP con nosotros tienes un solo interlocutor para tus licencias, el soporte y el acompañamiento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué es el True-up de Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Es la conciliación anual de un Enterprise Agreement: reportas las licencias adicionales que empezaste a usar durante el año y las regularizas. Te ayudamos a prepararlo con una línea base conciliada para evitar sorpresas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesites. CSP aporta flexibilidad y servicios de partner; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años; Open Value simplifica el control de costos y la gestión de TI para pymes, con previsibilidad financiera. Validamos tu escenario antes de recomendarte una modalidad."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué gano al contratar mis licencias por CSP con ustedes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Como proveedor CSP, unimos tus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, te acompañamos con nuestro MAC, en ciclos de 12 meses, para que las licencias se usen, se optimicen y se gobiernen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí, cuando tu escenario lo justifica. En el diagnóstico revisamos tus convenios vigentes, vencidos y por vencer, y si otra modalidad te conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Trabajan con empresas que tienen sedes en varios países?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Atendemos empresas en Venezuela y Panamá, y en el diagnóstico consideramos la dispersión geográfica de tu organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo sé si estoy pagando licencias que no uso?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lo sabrás con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización en ciclos de 12 meses, mientras tus convenios estén vigentes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué necesitan de mi empresa para hacer el diagnóstico?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Te pedimos acceso de consulta a tus portales de administración Microsoft, la información de tus contratos y convenios, y una persona de contacto en tu equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de tu empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa si descubrimos que me faltan licencias?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Te lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y te proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos contigo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué es el MAC y cuánto dura?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Es nuestro Modelo de Atención al Cliente: te acompañamos con un gerente de cuenta y un equipo multidisciplinario en ciclos de 12 meses, que se reinician mientras tus convenios estén vigentes. En cada ciclo ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos tu licenciamiento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué ocurre al terminar los 12 meses del MAC?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Al cierre de cada ciclo revisamos el cumplimiento y preparamos contigo la hoja de ruta del siguiente: renovación, True-up o ajustes de convenio y planes, según la situación real de tu empresa en ese momento. Luego el MAC se reinicia con un nuevo ciclo de 12 meses, y así sucesivamente mientras tus convenios estén vigentes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Te preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué licencias necesito para usar Copilot de forma segura?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que activamos los componentes de seguridad de tu licenciamiento."
+     }
+    }
+   ]
   }
+ ]
+}
   </script>
 </head>
 <body>
@@ -710,6 +1027,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6m-5 3h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></symbol>
     <symbol id="i-cycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-13.7 5.7M4 12a8 8 0 0 1 13.7-5.7"/><path d="M18 2.5v4h-4M6 21.5v-4h4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.3A8.5 8.5 0 1 1 21 12Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -749,15 +1067,15 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <nav class="breadcrumb" aria-label="Ruta de navegación">
           <ol>
             <li><a href="https://www.consein.com/">Inicio</a></li>
-            <li><span aria-current="page">Asesoría Licenciamiento</span></li>
+            <li><span aria-current="page">Asesoría en licenciamiento Microsoft</span></li>
           </ol>
         </nav>
         <div class="hero__badges">
           <span class="ms-chip"><span class="ms ms--light"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span><i></i>Partner · Proveedor CSP</span>
         </div>
-        <span class="kicker">Soluciones · Licenciamiento Microsoft</span>
-        <h1 class="title-xl" id="t-hero">Cada licencia <span class="hl">trabajando para tu negocio</span></h1>
-        <p class="lead">Gestionamos tu licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Te acompañamos desde la compra del licenciamiento hasta sacarle el mayor provecho para generar valor en tu organización, durante todo el ciclo de vida.</p>
+        <span class="kicker">Partner Microsoft en Venezuela y Panamá</span>
+        <h1 class="title-xl" id="t-hero"><span class="h1-pre">Licenciamiento Microsoft para empresas</span> Cada licencia <span class="hl">trabajando para tu negocio</span></h1>
+        <p class="lead">Gestionamos tu licenciamiento Microsoft —licencias Microsoft 365, Copilot y Azure— con estrategia, control de costos, gobierno y protección de datos. Te acompañamos desde la compra del licenciamiento hasta sacarle el mayor provecho para generar valor en tu organización, durante todo el ciclo de vida.</p>
         <div class="hero__actions">
           <a class="btn btn--green" href="#contacto">Solicitar diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn--ghost" href="#ruta">Conoce la ruta en 7 pasos</a>
@@ -817,7 +1135,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <h2 class="title-l" id="t-why">Somos tu partner de licenciamiento Microsoft</h2>
           <p class="lead" style="margin:18px 0 22px">Sabemos que las licencias no generan valor por existir: lo generan cuando están bien asignadas, se usan, se miden y se gobiernan.</p>
           <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a tu organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
-          <p>Con 40 años de trayectoria en tecnología empresarial, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que tu negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
+          <p>Con 40 años de trayectoria en tecnología empresarial y oficinas en Caracas y Ciudad de Panamá, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que tu negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes. Conoce también nuestros <a href="https://www.consein.com/servicios" style="color:var(--green-600);font-weight:500">servicios de tecnología para empresas</a>.</p>
         </div>
 
         <div class="reveal">
@@ -841,7 +1159,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <div class="section__head">
           <span class="kicker">La solución</span>
           <h2 class="title-l" id="t-sol">Licenciamiento Microsoft de punta a punta</h2>
-          <p class="lead">Asesoramos y gestionamos tus licencias Microsoft. Validamos elegibilidad, disponibilidad y términos para cada país y escenario.</p>
+          <p class="lead">Asesoramos y gestionamos la compra, renovación y optimización de tus licencias Microsoft 365, Copilot, Azure, Power BI y seguridad. Validamos elegibilidad, disponibilidad y términos para cada país y escenario.</p>
         </div>
         <span class="ms ms--lg" aria-label="Ecosistema Microsoft"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span>
       </div>
@@ -861,8 +1179,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 
       <!-- Modalidades -->
       <div class="section__head reveal" style="margin:96px 0 0">
-        <span class="kicker">Modalidades de contratación</span>
-        <h2 class="title-l">Elegimos contigo la más conveniente</h2>
+        <span class="kicker">Modalidades: CSP, Enterprise Agreement y Open Value</span>
+        <h2 class="title-l">Elegimos contigo la modalidad de licenciamiento más conveniente</h2>
       </div>
       <div class="modes reveal" style="margin-top:40px">
         <article class="mode mode--featured">
@@ -900,11 +1218,11 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <a class="btn btn--navy" href="#contacto">Hablar con un especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <ul class="checklist reveal">
-          <li><strong>Diagnóstico de licenciamiento</strong>Levantamos inventario y línea base, licencias faltantes o dormidas y riesgos de cumplimiento.</li>
-          <li><strong>Asesoría Microsoft 365 y Copilot</strong>Diseñamos planes Business, Enterprise y Frontline por perfil de usuario.</li>
+          <li><strong>Diagnóstico y auditoría de licencias</strong>Levantamos inventario y línea base, licencias faltantes o dormidas y riesgos de cumplimiento.</li>
+          <li><strong>Licencias Microsoft 365 y Copilot</strong>Diseñamos planes Business, Enterprise y Frontline por perfil de usuario.</li>
           <li><strong>Azure</strong>Gobernamos tus suscripciones y optimizamos los costos en la nube.</li>
           <li><strong>Power Platform</strong>Definimos licencias por usuario, capacidad, proceso y escenario.</li>
-          <li><strong>Gestión de contratos EA</strong>Gestionamos True-up, renovaciones y cambios de convenio.</li>
+          <li><strong>Gestión de Enterprise Agreement (EA)</strong>Gestionamos True-up, renovaciones y cambios de convenio.</li>
           <li><strong>Seguridad y privacidad</strong>Alineamos licencias con protección, gobierno y cumplimiento.</li>
         </ul>
       </div>
@@ -1097,6 +1415,33 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     </div>
   </section>
 
+  <!-- ============ Cobertura local ============ -->
+  <section class="section section--tint" id="cobertura" aria-labelledby="t-cobertura">
+    <div class="container local">
+      <div class="reveal">
+        <span class="kicker">Cobertura</span>
+        <h2 class="title-l" id="t-cobertura">Licenciamiento Microsoft en Venezuela y Panamá</h2>
+        <p class="lead" style="margin-top:18px">Somos partner Microsoft con oficinas en Caracas y Ciudad de Panamá. Te ayudamos a comprar, renovar y optimizar tus licencias Microsoft con el respaldo de un equipo local, y también atendemos operaciones en Estados Unidos y España.</p>
+      </div>
+      <div class="local-cards reveal">
+        <article class="local-card">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <h3>Licencias Microsoft en Venezuela</h3>
+          <p class="local-card__where">Caracas · Las Mercedes</p>
+          <p>Proveedor CSP de licencias Microsoft 365, Copilot y Azure; renovación de Enterprise Agreement y Open Value; auditoría y optimización de licencias.</p>
+          <a href="tel:+582129934411">+58 212 9934411</a>
+        </article>
+        <article class="local-card">
+          <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <h3>Licencias Microsoft en Panamá</h3>
+          <p class="local-card__where">Ciudad de Panamá · Calle 50</p>
+          <p>Proveedor CSP de licencias Microsoft 365, Copilot y Azure; renovación de Enterprise Agreement y Open Value; auditoría y optimización de licencias.</p>
+          <a href="tel:+5073973200">+507 397-3200</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ Contacto ============ -->
   <section class="section" id="contacto" aria-labelledby="t-contacto">
     <div class="container">
@@ -1168,9 +1513,10 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     <div class="container faq-wrap">
       <div class="faq-aside reveal">
         <span class="kicker">Preguntas frecuentes</span>
-        <h2 class="title-l" id="t-faq">Sobre licenciamiento Microsoft</h2>
-        <p class="lead" style="margin:18px 0 24px">Respondemos las dudas más comunes sobre modalidades, diagnóstico, el MAC, cumplimiento y seguridad. Si tu pregunta es otra, te respondemos directamente.</p>
+        <h2 class="title-l" id="t-faq">Preguntas sobre licenciamiento Microsoft</h2>
+        <p class="lead" style="margin:18px 0 24px">Respondemos las dudas más comunes sobre compra y precios de licencias, modalidades, diagnóstico, el MAC, cumplimiento y seguridad. Si tu pregunta es otra, te respondemos directamente.</p>
         <nav class="faq-index" aria-label="Temas de preguntas frecuentes">
+          <a href="#faq-0">Compra y precios<span>4</span></a>
           <a href="#faq-1">Modalidades y contratación<span>4</span></a>
           <a href="#faq-2">Diagnóstico y costos<span>3</span></a>
           <a href="#faq-3">MAC: acompañamiento y sostenibilidad<span>2</span></a>
@@ -1179,6 +1525,25 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <a class="btn btn--navy" href="#contacto">Escríbenos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="faq reveal">
+        <div class="faq__group" id="faq-0">
+          <h3 class="faq__title">Compra y precios</h3>
+          <details>
+            <summary>¿Cómo compro licencias Microsoft para mi empresa en Venezuela o Panamá?</summary>
+            <p>A través de un partner Microsoft como nosotros. Como proveedor CSP te vendemos y administramos licencias Microsoft 365, Copilot, Azure y más, y también gestionamos Enterprise Agreement y Open Value. Empezamos con un diagnóstico para que compres solo lo que necesitas.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta una licencia de Microsoft 365 para empresas?</summary>
+            <p>Depende del plan (Business, Enterprise o Frontline), de la modalidad de contratación, del plazo y del país. Por eso no publicamos una lista única: en el diagnóstico te preparamos una propuesta con el costo por usuario y el total, y te mostramos dónde puedes ahorrar.</p>
+          </details>
+          <details>
+            <summary>¿Qué es un partner CSP de Microsoft?</summary>
+            <p>Es un socio autorizado por Microsoft para vender, facturar y administrar suscripciones de su nube, y para dar implementación y soporte. Al contratar por CSP con nosotros tienes un solo interlocutor para tus licencias, el soporte y el acompañamiento.</p>
+          </details>
+          <details>
+            <summary>¿Qué es el True-up de Microsoft?</summary>
+            <p>Es la conciliación anual de un Enterprise Agreement: reportas las licencias adicionales que empezaste a usar durante el año y las regularizas. Te ayudamos a prepararlo con una línea base conciliada para evitar sorpresas.</p>
+          </details>
+        </div>
         <div class="faq__group" id="faq-1">
           <h3 class="faq__title">Modalidades y contratación</h3>
           <details>
@@ -1252,7 +1617,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <small>Rif: J-002545909</small>
       </div>
       <div>
-        <h2 class="footer__title">Navegación</h2>
+        <p class="footer__title">Navegación</p>
         <ul class="footer__list">
           <li><a href="https://www.consein.com/">Inicio</a></li>
           <li><a href="https://www.consein.com/nosotros">Nosotros</a></li>
@@ -1264,7 +1629,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         </ul>
       </div>
       <div>
-        <h2 class="footer__title">Soluciones</h2>
+        <p class="footer__title">Soluciones</p>
         <ul class="footer__list">
           <li><a href="#">Infraestructura y colaboración</a></li>
           <li><a href="#">IA y automatización de procesos</a></li>
@@ -1276,7 +1641,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         </ul>
       </div>
       <div class="footer__addr">
-        <h2 class="footer__title">Ubícanos</h2>
+        <p class="footer__title">Ubícanos</p>
         <p><strong>Venezuela:</strong> Av. Orinoco, Centro Empresarial Roca, piso 2, Las Mercedes, Caracas. Tel: +58 212 9934411</p>
         <p><strong>Panamá:</strong> Calle 71 Este con Calle 50, PH Plaza Morica, piso 8, of. 807. Tel: +507 397-3200</p>
         <p><strong>Estados Unidos:</strong> Tel: +1 954 228 7363</p>
