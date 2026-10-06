@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Asesoría en Licenciamiento Microsoft | Consein</title>
-  <meta name="description" content="Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Partner Microsoft y proveedor CSP: Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365 y seguridad.">
+  <meta name="description" content="Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Partner Microsoft y proveedor CSP: Microsoft 365, Copilot, Azure, Power Platform, Power BI y seguridad.">
   <link rel="canonical" href="https://www.consein.com/asesoria-licenciamiento">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1b245b">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Consein">
   <meta property="og:locale" content="es_LA">
-  <meta property="og:title" content="Licenciamiento Microsoft: cada licencia trabajando para su negocio | Consein">
+  <meta property="og:title" content="Licenciamiento Microsoft: cada licencia trabajando para tu negocio | Consein">
   <meta property="og:description" content="De la compra al valor, durante todo el ciclo de vida. Diagnóstico, diseño, adquisición, optimización, gobierno y protección de datos.">
   <meta property="og:url" content="https://www.consein.com/asesoria-licenciamiento">
   <meta name="twitter:card" content="summary">
@@ -438,6 +438,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .eco svg { width: 100%; height: 100%; overflow: visible; }
 .eco__spin { transform-origin: 250px 250px; animation: spin 50s linear infinite; }
 .eco__spin--rev { animation-duration: 70s; animation-direction: reverse; }
+.eco__node { cursor: help; }
 .eco__node rect { transition: filter .25s, stroke .25s; }
 .eco__node:hover rect { stroke: var(--green); filter: drop-shadow(0 0 8px rgba(88,187,71,.7)); }
 .eco__link line { stroke-dasharray: 3 6; animation: flow 1.6s linear infinite; }
@@ -475,6 +476,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .product__icon svg { width: 20px; height: 20px; }
 .product small { display: block; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--green-600); margin-bottom: 2px; }
 .product h3 { font-size: 16px; }
+.product--more { border-style: dashed; }
 .product--sec .product__icon { background: var(--green-100); color: var(--green-600); }
 
 /* Modalidades */
@@ -572,7 +574,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .faq-index a:hover { border-color: var(--green); transform: translateX(3px); }
 .faq-index span { min-width: 24px; height: 24px; display: grid; place-items: center; border-radius: 6px; background: var(--navy-100); font-size: 12px; font-weight: 500; }
 
-/* MAC T-12 · Línea de tiempo */
+/* MAC · Acompañamiento y sostenibilidad */
 .hl--navy { background: linear-gradient(90deg, var(--navy-600), var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .mac-head { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; margin-bottom: 40px; }
 .mac-head > * { min-width: 0; }
@@ -584,102 +586,16 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .mac-pillars .pillar__icon { margin-bottom: 14px; }
 .mac-pillars h3 { font-size: 16.5px; margin-bottom: 4px; }
 .mac-pillars p { font-size: 13.5px; line-height: 1.55; }
-.mac-bridge { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; margin-bottom: 28px; padding: 24px 28px; border-radius: var(--radius); background: var(--navy-50); border: 1px solid var(--line); }
-.mac-bridge > * { min-width: 0; }
-.mac-bridge p { font-size: 15px; }
-.mac-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
-.mac-kpis li { padding: 14px 16px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--line); font-size: 12.5px; line-height: 1.4; }
-.mac-kpis b { display: block; font-family: var(--font-title); font-size: 30px; line-height: 1.05; color: var(--navy); }
-.mac-kpis li:first-child { background: var(--navy); border-color: var(--navy); color: var(--text-light); }
-.mac-kpis li:first-child b { color: var(--green); }
 .ms--inline { gap: 5px; font-size: 13px; color: var(--ink); vertical-align: -2px; }
 .ms--inline svg { width: 13px; height: 13px; }
 
-.tl-panel { position: relative; padding: 28px 32px 22px; border-radius: 24px; background-color: var(--navy); color: var(--text-light); box-shadow: 0 30px 70px rgba(27,36,91,.28); overflow: hidden; }
-.tl-panel::before { content: ""; position: absolute; right: -120px; top: -160px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(rgba(88,187,71,.22), transparent 65%); pointer-events: none; }
-.tl-panel__bar { position: relative; display: flex; align-items: center; gap: 8px; }
-.tl-panel__bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.2); }
-.tl-panel__bar i:first-child { background: var(--green); }
-.tl-panel__bar span { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,.55); }
-.tl-legend { position: relative; display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 18px 0 8px; font-size: 12.5px; }
-.tl-legend span { display: inline-flex; align-items: center; gap: 8px; }
-.tl-legend i, .tl__item li::before { flex: none; width: 18px; height: 18px; border-radius: 5px; background-position: center; background-size: 12px; background-repeat: no-repeat; }
-
-/* Marcadores por tipo de hito */
-.tl__item li.t-gov::before, i.t-gov { background-color: rgba(111,134,255,.18); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f86ff' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M4 6h16M4 12h10M4 18h13'/%3E%3C/svg%3E"); }
-.tl__item li.t-ms::before, i.t-ms { background-color: rgba(255,255,255,.95); background-size: 11px !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 23'%3E%3Crect x='1' y='1' width='10' height='10' fill='%23f25022'/%3E%3Crect x='12' y='1' width='10' height='10' fill='%237fba00'/%3E%3Crect x='1' y='12' width='10' height='10' fill='%2300a4ef'/%3E%3Crect x='12' y='12' width='10' height='10' fill='%23ffb900'/%3E%3C/svg%3E"); }
-.tl__item li.t-check::before, i.t-check { background-color: rgba(88,187,71,.2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358bb47' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E"); }
-.tl__item li.t-review::before, i.t-review { background-color: rgba(255,255,255,.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 17 6-6 4 4 8-8'/%3E%3Cpath d='M15 7h6v6'/%3E%3C/svg%3E"); }
-
-/* Rejilla: fila 1 hitos superiores · fila 2 eje · fila 3 hitos inferiores */
-.tl { --gap: 26px; position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto 72px auto; column-gap: 10px; margin-top: 18px; }
-.tl__list { display: contents; }
-.tl__axis { grid-column: 1 / -1; grid-row: 2; position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 10px; align-items: center; z-index: 2; }
-.tl__rail { position: absolute; left: 0; right: 0; top: 50%; height: 6px; margin-top: -3px; border-radius: 999px; background: rgba(255,255,255,.08); }
-.tl__rail::after { content: ""; position: absolute; right: -14px; top: 50%; margin-top: -9px; border: 9px solid transparent; border-left: 14px solid var(--green); border-right: 0; }
-.tl__fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--blue-soft), var(--green)); box-shadow: 0 0 18px rgba(88,187,71,.45); transition: width 2.6s cubic-bezier(.4,.1,.2,1); }
-.tl__spark { position: absolute; top: 50%; left: 0; width: 70px; height: 2px; margin-top: -1px; background: linear-gradient(90deg, transparent, #fff, transparent); opacity: 0; }
-.is-visible .tl__fill { width: 100%; }
-.is-visible .tl__spark { animation: spark 4s 2.6s linear infinite; }
-@keyframes spark { 0% { left: 0; opacity: 0; } 10% { opacity: .9; } 90% { opacity: .9; } 100% { left: calc(100% - 70px); opacity: 0; } }
-
-.tl__m { grid-column: var(--m); grid-row: 1; justify-self: center; position: relative; display: grid; place-items: center; }
-.tl__m b { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; transform: rotate(45deg) scale(.6); background: var(--navy-800); border: 1.5px solid rgba(255,255,255,.25); opacity: .4; transition: transform .5s cubic-bezier(.3,1.6,.5,1), opacity .4s, background .4s, border-color .4s, box-shadow .4s; transition-delay: calc(var(--i) * .36s + .2s); }
-.is-visible .tl__m b { transform: rotate(45deg) scale(1); opacity: 1; background: var(--navy-600); border-color: var(--green); box-shadow: 0 0 0 6px rgba(88,187,71,.12), 0 0 24px rgba(88,187,71,.35); }
-.tl__m--end b { background: var(--green) !important; border-color: var(--green) !important; }
-.tl__m--minor { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.35); }
-.tl__label { transition: opacity .4s; transition-delay: calc(var(--i) * .36s + .2s); opacity: .4; }
-.is-visible .tl__label { opacity: 1; }
-.tl__label { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-title); font-weight: 700; font-size: 13px; color: #fff; pointer-events: none; }
-.tl__m--end .tl__label { color: var(--navy); }
-
-/* Tarjetas de hito */
-.tl__item { grid-column: var(--c) / span var(--s); position: relative; padding: 16px 16px 14px; border-radius: 14px; background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.03)); border: 1px solid var(--line-dark); backdrop-filter: blur(2px); opacity: 0; transition: opacity .6s, transform .6s, border-color .25s, box-shadow .25s; transition-delay: calc(var(--i) * .36s + .35s); }
-.tl__item--up { grid-row: 1; align-self: end; margin-bottom: var(--gap); transform: translateY(-14px); }
-.tl__item--down { grid-row: 3; align-self: start; margin-top: var(--gap); transform: translateY(14px); }
-.is-visible .tl__item { opacity: 1; transform: none; }
-.tl__item:hover { border-color: rgba(88,187,71,.6); box-shadow: 0 18px 40px rgba(0,0,0,.28); transition-delay: 0s; }
-/* Conector hacia el eje */
-.tl__item::after { content: ""; position: absolute; left: var(--x); width: 2px; margin-left: -1px; height: calc(var(--gap) + 10px); background: linear-gradient(var(--c1, rgba(88,187,71,.9)), var(--c2, rgba(88,187,71,.1))); }
-.tl__item--up::after { top: 100%; }
-.tl__item--down::after { bottom: 100%; --c1: rgba(88,187,71,.1); --c2: rgba(88,187,71,.9); }
-.tl__item::before { content: ""; position: absolute; left: var(--x); width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(88,187,71,.18); }
-.tl__item--up::before { bottom: -4px; }
-.tl__item--down::before { top: -4px; }
-.tl__when { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
-.tl__when span { padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--text-light); font-size: 10.5px; letter-spacing: .04em; }
-.tl__item h3 { font-size: 16.5px; color: #fff; margin-bottom: 8px; line-height: 1.25; }
-.tl__item ul { display: grid; gap: 6px; }
-.tl__item li { display: flex; gap: 9px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: var(--text-light); }
-.tl__item li::before { content: ""; margin-top: 1px; }
-.tl__item--end { border-color: rgba(88,187,71,.5); background: linear-gradient(160deg, rgba(88,187,71,.18), rgba(88,187,71,.04)); }
-
 @media (max-width: 1080px) {
-  .mac-head, .mac-bridge { grid-template-columns: 1fr; gap: 28px; }
-}
-/* Móvil/tableta: línea de tiempo vertical */
-@media (max-width: 960px) {
-  .tl { display: block; position: relative; padding-left: 34px; margin-top: 22px; }
-  .tl::before { content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: linear-gradient(var(--blue-soft), var(--green)); }
-  .tl__axis { display: none; }
-  .tl__list { display: grid; gap: 14px; }
-  .tl__item, .tl__item--up, .tl__item--down { grid-column: auto; grid-row: auto; margin: 0; transform: translateX(12px); }
-  .is-visible .tl__item { transform: none; }
-  .tl__item::after { display: none; }
-  .tl__item::before, .tl__item--up::before, .tl__item--down::before { left: -28px; top: 18px; bottom: auto; width: 14px; height: 14px; margin-left: 0; border-radius: 4px; transform: rotate(45deg); background: var(--navy-600); border: 1.5px solid var(--green); }
-  .tl__item--end::before { background: var(--green); }
-  .tl-panel { padding: 22px 18px 18px; }
+  .mac-head { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 600px) {
-  .mac-kpis, .mac-pillars { grid-template-columns: 1fr 1fr; }
+  .mac-pillars { grid-template-columns: 1fr 1fr; }
   .mac-pillars { gap: 10px; }
   .mac-pillars li { padding: 16px; }
-  .mac-bridge { padding: 20px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .tl__fill { width: 100%; }
-  .tl__item { opacity: 1; transform: none; }
-  .tl__m b { opacity: 1; transform: rotate(45deg); }
 }
 
 .trademark { margin-top: 18px; font-size: 11.5px; color: rgba(255,255,255,.4); }
@@ -736,25 +652,24 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       {
         "@type": "Service",
         "name": "Asesoría en licenciamiento Microsoft",
-        "serviceType": "Licenciamiento de software Microsoft (CSP, MCA, EA)",
+        "serviceType": "Licenciamiento de software Microsoft (CSP, EA, Open Value)",
         "provider": { "@id": "https://www.consein.com/#organization" },
         "description": "Licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. De la compra al valor, durante todo el ciclo de vida."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad."}},
-          {"@type": "Question", "name": "¿Qué gano al contratar mis licencias por CSP con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "Como proveedor CSP, unimos sus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, lo acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen."}},
-          {"@type": "Question", "name": "¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, cuando su escenario lo justifica. En el diagnóstico revisamos sus convenios vigentes, vencidos y por vencer, y si otra modalidad le conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft."}},
-          {"@type": "Question", "name": "¿Trabajan con empresas que tienen sedes en varios países?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Atendemos empresas en Venezuela, Panamá, Estados Unidos y España, y en el diagnóstico consideramos la dispersión geográfica de su organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país."}},
-          {"@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": {"@type": "Answer", "text": "Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses."}},
-          {"@type": "Question", "name": "¿Qué necesitan de mi empresa para hacer el diagnóstico?", "acceptedAnswer": {"@type": "Answer", "text": "Le pedimos acceso de consulta a sus portales de administración Microsoft, la información de sus contratos y convenios, y una persona de contacto en su equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de su empresa."}},
-          {"@type": "Question", "name": "¿Qué pasa si descubrimos que me faltan licencias?", "acceptedAnswer": {"@type": "Answer", "text": "Se lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y le proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos con usted."}},
-          {"@type": "Question", "name": "¿Qué es el MAC y cuánto dura?", "acceptedAnswer": {"@type": "Answer", "text": "Es nuestro Modelo de Atención al Cliente: durante 12 meses lo acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos su licenciamiento."}},
-          {"@type": "Question", "name": "¿Qué hacemos en los talleres de tecnología Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "En los meses 4 y 10 le mostramos a su equipo cómo aprovechar las capacidades de la plataforma que ya tiene contratada, aplicadas a casos de uso de su negocio, para que las licencias se usen de verdad."}},
-          {"@type": "Question", "name": "¿Qué ocurre al terminar los 12 meses del MAC?", "acceptedAnswer": {"@type": "Answer", "text": "En el mes 12 revisamos el cumplimiento y preparamos con usted la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de su empresa en ese momento."}},
-          {"@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta."}},
-          {"@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": {"@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad."}}
+          {"@type": "Question", "name": "¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesites. CSP aporta flexibilidad y servicios de partner; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años; Open Value simplifica el control de costos y la gestión de TI para pymes, con previsibilidad financiera. Validamos tu escenario antes de recomendarte una modalidad."}},
+          {"@type": "Question", "name": "¿Qué gano al contratar mis licencias por CSP con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "Como proveedor CSP, unimos tus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, te acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen."}},
+          {"@type": "Question", "name": "¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, cuando tu escenario lo justifica. En el diagnóstico revisamos tus convenios vigentes, vencidos y por vencer, y si otra modalidad te conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft."}},
+          {"@type": "Question", "name": "¿Trabajan con empresas que tienen sedes en varios países?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Atendemos empresas en Venezuela y Panamá, y en el diagnóstico consideramos la dispersión geográfica de tu organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país."}},
+          {"@type": "Question", "name": "¿Cómo sé si estoy pagando licencias que no uso?", "acceptedAnswer": {"@type": "Answer", "text": "Lo sabrás con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses."}},
+          {"@type": "Question", "name": "¿Qué necesitan de mi empresa para hacer el diagnóstico?", "acceptedAnswer": {"@type": "Answer", "text": "Te pedimos acceso de consulta a tus portales de administración Microsoft, la información de tus contratos y convenios, y una persona de contacto en tu equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de tu empresa."}},
+          {"@type": "Question", "name": "¿Qué pasa si descubrimos que me faltan licencias?", "acceptedAnswer": {"@type": "Answer", "text": "Te lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y te proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos contigo."}},
+          {"@type": "Question", "name": "¿Qué es el MAC y cuánto dura?", "acceptedAnswer": {"@type": "Answer", "text": "Es nuestro Modelo de Atención al Cliente: durante 12 meses te acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos tu licenciamiento."}},
+          {"@type": "Question", "name": "¿Qué ocurre al terminar los 12 meses del MAC?", "acceptedAnswer": {"@type": "Answer", "text": "En el mes 12 revisamos el cumplimiento y preparamos contigo la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de tu empresa en ese momento."}},
+          {"@type": "Question", "name": "¿Cómo me preparo para una auditoría o un True-up de Microsoft?", "acceptedAnswer": {"@type": "Answer", "text": "Te preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta."}},
+          {"@type": "Question", "name": "¿Qué licencias necesito para usar Copilot de forma segura?", "acceptedAnswer": {"@type": "Answer", "text": "Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que activamos los componentes de seguridad de tu licenciamiento."}}
         ]
       }
     ]
@@ -837,18 +752,17 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <span class="ms-chip"><span class="ms ms--light"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span><i></i>Partner · Proveedor CSP</span>
         </div>
         <span class="kicker">Soluciones · Licenciamiento Microsoft</span>
-        <h1 class="title-xl" id="t-hero">Cada licencia <span class="hl">trabajando para su negocio</span></h1>
-        <p class="lead">Gestionamos su licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Lo acompañamos de la compra al valor, durante todo el ciclo de vida.</p>
+        <h1 class="title-xl" id="t-hero">Cada licencia <span class="hl">trabajando para tu negocio</span></h1>
+        <p class="lead">Gestionamos tu licenciamiento Microsoft con estrategia, control de costos, gobierno y protección de datos. Te acompañamos desde la compra del licenciamiento hasta sacarle el mayor provecho para generar valor en tu organización, durante todo el ciclo de vida.</p>
         <div class="hero__actions">
           <a class="btn btn--green" href="#contacto">Solicitar diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost" href="#ruta">Conozca la ruta en 7 pasos</a>
+          <a class="btn btn--ghost" href="#ruta">Conoce la ruta en 7 pasos</a>
         </div>
       </div>
 
       <!-- Ecosistema Microsoft alrededor del licenciamiento -->
       <div class="eco">
-        <svg viewBox="0 0 500 500" role="img" aria-labelledby="eco-title">
-          <title id="eco-title">Ecosistema Microsoft que asesoramos: Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview y Priva</title>
+        <svg viewBox="0 0 500 500" role="img" aria-label="Soluciones Microsoft que licenciamos: Microsoft 365, Copilot, Azure, Power Platform, Entra, Intune, Defender y Purview">
           <defs>
             <radialGradient id="core" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#58bb47" stop-opacity=".5"/>
@@ -877,7 +791,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     <div class="container stats">
       <ul class="stats__list">
         <li class="stats__item"><span class="stats__value">40</span><span class="stats__label">años de trayectoria en tecnología empresarial</span></li>
-        <li class="stats__item"><span class="stats__value">3</span><span class="stats__label">modalidades: CSP, MCA y EA</span></li>
+        <li class="stats__item"><span class="stats__value">3</span><span class="stats__label">modalidades: CSP, EA y Open Value</span></li>
         <li class="stats__item"><span class="stats__value">12<em> m</em></span><span class="stats__label">de acompañamiento con el MAC (T-12)</span></li>
         <li class="stats__item"><span class="stats__value">7</span><span class="stats__label">pasos para un licenciamiento inteligente</span></li>
       </ul>
@@ -889,27 +803,27 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     <div class="container">
       <div class="trust reveal">
         <span class="ms ms--lg"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span>
-        <p class="trust__text"><strong>Somos partner Microsoft y proveedor CSP.</strong> Integramos asesoría, adquisición, adopción, optimización, gobierno y seguridad en un solo modelo de servicio.</p>
+        <p class="trust__text"><strong>Somos Partner Microsoft:</strong> asesoramos en la adquisición, adopción, optimización, gobierno y seguridad en un solo modelo de servicio.</p>
         <div class="trust__tags"><span class="tag">Banca</span><span class="tag">Seguros</span><span class="tag">Telecomunicaciones</span><span class="tag">Energía</span><span class="tag">Retail</span><span class="tag">Servicios profesionales</span></div>
       </div>
 
       <div class="why" style="margin-top:88px">
         <div class="why__text reveal">
           <span class="kicker">Por qué elegirnos</span>
-          <h2 class="title-l" id="t-why">Somos su partner de licenciamiento Microsoft</h2>
+          <h2 class="title-l" id="t-why">Somos tu partner de licenciamiento Microsoft</h2>
           <p class="lead" style="margin:18px 0 22px">Sabemos que las licencias no generan valor por existir: lo generan cuando están bien asignadas, se usan, se miden y se gobiernan.</p>
-          <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a su organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
-          <p>Con 40 años de trayectoria en tecnología empresarial, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que su negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
+          <p>En Consein convertimos el licenciamiento Microsoft en una decisión de negocio: <strong>pagar lo justo, aprovechar todo lo contratado, reducir riesgos de cumplimiento</strong> y preparar a tu organización para crecer con la nube, la inteligencia artificial y Copilot.</p>
+          <p>Con 40 años de trayectoria en tecnología empresarial, acompañamos a organizaciones de banca, seguros, telecomunicaciones, energía, retail y servicios profesionales a comprar mejor, usar más y gobernar con control sus licencias Microsoft. <strong>No vendemos licencias: diseñamos la estrategia de licenciamiento que tu negocio necesita</strong>, la ejecutamos y la cuidamos mes a mes.</p>
         </div>
 
         <div class="reveal">
-          <p class="kicker" style="margin-bottom:14px">Lo que usted obtiene · Cómo lo logramos</p>
+          <p class="kicker" style="margin-bottom:14px">Lo que obtienes · Cómo lo logramos</p>
           <ul class="benefits">
             <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-coin"/></svg></span><div><h3>Costos predecibles</h3><p>Diseñamos la arquitectura de licencias por perfil de usuario y proyección de crecimiento.</p></div></li>
-            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-zero"/></svg></span><div><h3>Cero licencias ociosas</h3><p>Revisamos continuamente la asignación, el uso y el consumo, y le damos recomendaciones accionables.</p></div></li>
-            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-check-doc"/></svg></span><div><h3>Cumplimiento sin sorpresas</h3><p>Construimos la línea base, conciliamos y lo preparamos para True-up, renovaciones y auditorías.</p></div></li>
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-trend"/></svg></span><div><h3>Optimización del uso de tus licencias</h3><p>Revisamos continuamente la asignación, el uso y el consumo, y te damos recomendaciones.</p></div></li>
+            <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-check-doc"/></svg></span><div><h3>Cumplimiento sin sorpresas</h3><p>Construimos la línea base, conciliamos y te preparamos para True-up, renovaciones y auditorías.</p></div></li>
             <li class="benefit"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-spark"/></svg></span><div><h3>Valor real de lo contratado</h3><p>Activamos capacidades y guiamos la adopción con casos de uso de negocio.</p></div></li>
-            <li class="benefit benefit--featured"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-lock"/></svg></span><div><h3>Datos protegidos <span class="badge">Diferencial</span></h3><p>Alineamos sus licencias con identidad, protección de datos y privacidad.</p></div></li>
+            <li class="benefit benefit--featured"><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-lock"/></svg></span><div><h3>Activación de los componentes de seguridad de tu licenciamiento <span class="badge">Diferencial</span></h3><p>Alineamos tus licencias con identidad, protección de datos y privacidad.</p></div></li>
           </ul>
         </div>
       </div>
@@ -923,7 +837,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <div class="section__head">
           <span class="kicker">La solución</span>
           <h2 class="title-l" id="t-sol">Licenciamiento Microsoft de punta a punta</h2>
-          <p class="lead">Asesoramos y gestionamos licencias de todo el ecosistema. Validamos elegibilidad, disponibilidad y términos para cada país y escenario.</p>
+          <p class="lead">Asesoramos y gestionamos tus licencias Microsoft. Validamos elegibilidad, disponibilidad y términos para cada país y escenario.</p>
         </div>
         <span class="ms ms--lg" aria-label="Ecosistema Microsoft"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span>
       </div>
@@ -933,18 +847,18 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><small>IA</small><h3>Microsoft Copilot</h3></li>
         <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span><small>Nube</small><h3>Azure</h3></li>
         <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-flow"/></svg></span><small>Low-code</small><h3>Power Platform</h3></li>
-        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><small>Negocio</small><h3>Dynamics 365</h3></li>
+        <li class="product"><span class="product__icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><small>Análisis</small><h3>Power BI</h3></li>
         <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-id"/></svg></span><small>Identidad</small><h3>Microsoft Entra</h3></li>
         <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-device"/></svg></span><small>Dispositivos</small><h3>Microsoft Intune</h3></li>
         <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-radar"/></svg></span><small>Amenazas</small><h3>Microsoft Defender</h3></li>
         <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span><small>Cumplimiento</small><h3>Microsoft Purview</h3></li>
-        <li class="product product--sec"><span class="product__icon"><svg aria-hidden="true"><use href="#i-eye"/></svg></span><small>Privacidad</small><h3>Microsoft Priva</h3></li>
+        <li class="product product--more"><span class="product__icon"><svg aria-hidden="true"><use href="#i-apps"/></svg></span><small>Y más</small><h3>Otras soluciones Microsoft</h3></li>
       </ul>
 
       <!-- Modalidades -->
       <div class="section__head reveal" style="margin:96px 0 0">
         <span class="kicker">Modalidades de contratación</span>
-        <h2 class="title-l">Elegimos con usted la más conveniente</h2>
+        <h2 class="title-l">Elegimos contigo la más conveniente</h2>
       </div>
       <div class="modes reveal" style="margin-top:40px">
         <article class="mode mode--featured">
@@ -952,15 +866,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <h3>Cloud Solution Provider</h3>
           <dl>
             <div><dt>Ideal para</dt><dd>Organizaciones que quieren flexibilidad y un partner a su lado.</dd></div>
-            <div><dt>Valor principal</dt><dd>Unimos sus licencias Microsoft con implementación, soporte y servicios administrados.</dd></div>
-          </dl>
-        </article>
-        <article class="mode">
-          <div class="mode__top"><span class="mode__code">MCA</span></div>
-          <h3>Microsoft Customer Agreement</h3>
-          <dl>
-            <div><dt>Ideal para</dt><dd>Empresas que buscan un acuerdo de compra simplificado.</dd></div>
-            <div><dt>Valor principal</dt><dd>Acuerdo digital que facilita comprar y administrar servicios.</dd></div>
+            <div><dt>Valor principal</dt><dd>Unimos tus licencias Microsoft con implementación, soporte y servicios administrados.</dd></div>
           </dl>
         </article>
         <article class="mode">
@@ -971,6 +877,14 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
             <div><dt>Valor principal</dt><dd>Software y nube en un solo acuerdo, pagos anuales y conciliación True-up.</dd></div>
           </dl>
         </article>
+        <article class="mode">
+          <div class="mode__top"><span class="mode__code">OV</span><span class="tag">Pymes</span></div>
+          <h3>Open Value</h3>
+          <dl>
+            <div><dt>Ideal para</dt><dd>Pymes que buscan previsibilidad financiera y una gestión de TI simple.</dd></div>
+            <div><dt>Valor principal</dt><dd>Simplifica el control de costos y la gestión de TI: Microsoft diseñó este programa bajo el valor de la previsibilidad financiera.</dd></div>
+          </dl>
+        </article>
       </div>
 
       <!-- Servicios incluidos -->
@@ -978,15 +892,15 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <div class="reveal">
           <span class="kicker">Servicios incluidos</span>
           <h2 class="title-l">Todo el ciclo de vida, en un solo modelo</h2>
-          <p class="lead" style="margin:18px 0 28px">Desde el inventario hasta la protección de datos, lo acompañamos en cada decisión con nuestro equipo.</p>
+          <p class="lead" style="margin:18px 0 28px">Desde el inventario hasta la protección de datos, te acompañamos en cada decisión con nuestro equipo.</p>
           <a class="btn btn--navy" href="#contacto">Hablar con un especialista <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
         <ul class="checklist reveal">
           <li><strong>Diagnóstico de licenciamiento</strong>Levantamos inventario y línea base, licencias faltantes o dormidas y riesgos de cumplimiento.</li>
           <li><strong>Asesoría Microsoft 365 y Copilot</strong>Diseñamos planes Business, Enterprise y Frontline por perfil de usuario.</li>
-          <li><strong>Azure</strong>Gobernamos sus suscripciones y optimizamos los costos en la nube.</li>
-          <li><strong>Power Platform y Dynamics 365</strong>Definimos licencias por usuario, capacidad, proceso y escenario.</li>
-          <li><strong>Gestión de contratos EA</strong>Gestionamos True-up, renovaciones y cambios de modalidad.</li>
+          <li><strong>Azure</strong>Gobernamos tus suscripciones y optimizamos los costos en la nube.</li>
+          <li><strong>Power Platform</strong>Definimos licencias por usuario, capacidad, proceso y escenario.</li>
+          <li><strong>Gestión de contratos EA</strong>Gestionamos True-up, renovaciones y cambios de convenio.</li>
           <li><strong>Seguridad y privacidad</strong>Alineamos licencias con protección, gobierno y cumplimiento.</li>
         </ul>
       </div>
@@ -1000,7 +914,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <span class="kicker">Nuestra ruta</span>
         <h2 class="title-l" id="t-ruta">7 pasos para un licenciamiento inteligente</h2>
         <p class="ruta-mac"><span class="ruta-mac__tag">+ MAC</span> Acompañamiento y sostenibilidad</p>
-        <p class="lead">Lo llevamos del diagnóstico a la mejora continua. Los pasos 4, 5 y 6 los ejecutamos dentro de nuestro <a href="#mac" style="color:var(--green-600);font-weight:500">MAC durante 12 meses</a>, para que su licenciamiento genere valor y se mantenga en el tiempo.</p>
+        <p class="lead">Te llevamos del diagnóstico a la mejora continua. Los pasos 4, 5 y 6 los ejecutamos dentro de nuestro <a href="#mac" style="color:var(--green-600);font-weight:500">MAC durante 12 meses</a>, para que tu licenciamiento genere valor y se mantenga en el tiempo.</p>
       </div>
 
       <!-- Línea de ruta -->
@@ -1028,19 +942,19 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <article class="step reveal">
           <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-search"/></svg></span><span class="step__num">01</span></div>
           <h3>Diagnosticamos</h3>
-          <p>Entendemos su situación actual: licencias que faltan, licencias que no se usan (dormidas), dispersión geográfica de su empresa, cantidad de usuarios y estado de sus convenios: vigentes, vencidos y por vencer.</p>
-          <p class="step__result"><b>Resultado:</b> radiografía de su licenciamiento con hallazgos priorizados.</p>
+          <p>Entendemos tu situación actual: licencias que faltan, licencias que no se usan (dormidas), dispersión geográfica de tu empresa, cantidad de usuarios y estado de tus convenios: vigentes, vencidos y por vencer.</p>
+          <p class="step__result"><b>Resultado:</b> radiografía de tu licenciamiento con hallazgos priorizados.</p>
         </article>
         <article class="step reveal">
           <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><span class="step__num">02</span></div>
           <h3>Diseñamos la arquitectura</h3>
-          <p>Arquitectamos la solución más conveniente para su empresa: perfiles de usuario, capacidades requeridas y el tipo de convenio adecuado (CSP, MCA o EA), alineados con su hoja de ruta.</p>
+          <p>Arquitectamos la solución más conveniente para tu empresa: perfiles de usuario, capacidades requeridas y el tipo de convenio adecuado (CSP, EA u Open Value), alineados con tu hoja de ruta.</p>
           <p class="step__result"><b>Resultado:</b> arquitectura de licencias y escenarios de decisión.</p>
         </article>
         <article class="step reveal">
           <div class="step__top"><span class="card__icon" style="background:var(--navy-100);color:var(--navy)"><svg aria-hidden="true"><use href="#i-cart"/></svg></span><span class="step__num">03</span></div>
           <h3>Adquirimos y activamos</h3>
-          <p>Lo acompañamos en la compra, renovación o True-up; asignamos licencias, habilitamos servicios y guiamos la adopción inicial.</p>
+          <p>Te acompañamos en la compra, renovación o True-up; asignamos licencias, habilitamos servicios y guiamos la adopción inicial.</p>
           <p class="step__result"><b>Resultado:</b> entorno habilitado y plan de activación.</p>
         </article>
       </div>
@@ -1051,19 +965,19 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
           <article class="step step--mac">
             <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><span class="step__num">04</span></div>
             <h3>Transformamos</h3>
-            <p>Nos aseguramos de que las licencias adquiridas sean efectivamente usadas por su empresa: guiamos la adopción con casos de uso, talleres de tecnología Microsoft y verificaciones de uso de la plataforma.</p>
+            <p>Nos aseguramos de que las licencias adquiridas sean efectivamente usadas por tu empresa: guiamos la adopción con casos de uso, talleres de tecnología Microsoft y verificaciones de uso de la plataforma.</p>
             <p class="step__result"><b>Resultado:</b> licencias en uso real y adopción medible.</p>
           </article>
           <article class="step step--mac">
             <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-trend"/></svg></span><span class="step__num">05</span></div>
             <h3>Optimizamos</h3>
-            <p>Realizamos chequeos planificados para entender si la plataforma adquirida, con el paso del tiempo, se adecua a la situación real de su empresa en ese momento, y le proponemos los ajustes pertinentes.</p>
+            <p>Realizamos chequeos planificados para entender si la plataforma adquirida, con el paso del tiempo, se adecua a la situación real de tu empresa en ese momento, y te proponemos los ajustes pertinentes.</p>
             <p class="step__result"><b>Resultado:</b> ajustes priorizados y ahorros documentados.</p>
           </article>
           <article class="step step--mac">
             <div class="step__top"><span class="card__icon"><svg aria-hidden="true"><use href="#i-gov"/></svg></span><span class="step__num">06</span></div>
             <h3>Administramos</h3>
-            <p>Gobernamos sus licencias: analizamos la situación de su empresa, la cantidad de licencias adquiridas frente a la plataforma que realmente se usa y las personas que la administran.</p>
+            <p>Gobernamos tus licencias: analizamos la situación de tu empresa, la cantidad de licencias adquiridas frente a la plataforma que realmente se usa y las personas que la administran.</p>
             <p class="step__result"><b>Resultado:</b> modelo de gobierno de licencias, indicadores y hoja de ruta viva.</p>
           </article>
         </div>
@@ -1072,7 +986,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       <div class="route route--last">
         <article class="step step--sec reveal">
           <div class="step__top"><span class="card__icon" style="background:var(--green-100);color:var(--green-600)"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><span class="step__num">07</span></div>
-          <h3>Protegemos datos y privacidad</h3>
+          <h3>Activación de los componentes de seguridad de tu licenciamiento</h3>
           <p>Alineamos licencias y configuraciones con la protección y la privacidad de los datos: identidad y acceso, clasificación y etiquetado de información sensible, prevención de pérdida de datos, retención, gestión de riesgos de privacidad y controles para el uso seguro de IA y Copilot.</p>
           <p class="step__result"><b>Resultado:</b> plan de protección y privacidad de datos basado en riesgo.</p>
         </article>
@@ -1080,126 +994,24 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
     </div>
   </section>
 
-  <!-- ============ MAC T-12 · Línea de tiempo ============ -->
+  <!-- ============ MAC · Acompañamiento y sostenibilidad ============ -->
   <section class="section" id="mac" aria-labelledby="t-mac">
     <div class="container">
       <div class="mac-head reveal">
         <div>
           <span class="kicker">MAC · Acompañamiento y sostenibilidad</span>
-          <h2 class="title-l" id="t-mac">12 meses cuidando <span class="hl hl--navy">su inversión</span></h2>
-          <p class="lead" style="margin-top:18px">El <strong class="mac-def">MAC — nuestro Modelo de Atención al Cliente</strong> — es la forma en que lo acompañamos después de la compra: con un equipo multidisciplinario damos seguimiento a su inversión en licencias Microsoft durante 12 meses y la transformamos en resultados medibles.</p>
-          <p class="mac-sub">Comenzamos con una reunión de pre-kickoff «base cero» y mantenemos el control, la trazabilidad y la evolución ordenada de su licenciamiento.</p>
+          <h2 class="title-l" id="t-mac">12 meses cuidando <span class="hl hl--navy">tu inversión</span></h2>
+          <p class="lead" style="margin-top:18px">El <strong class="mac-def">MAC — nuestro Modelo de Atención al Cliente</strong> — es la forma en que te acompañamos después de la compra: con un equipo multidisciplinario damos seguimiento a tu inversión en licencias Microsoft durante 12 meses y la transformamos en resultados medibles.</p>
+          <p class="mac-sub">Comenzamos con una reunión de pre-kickoff «base cero» y mantenemos el control, la trazabilidad y la evolución ordenada de tu licenciamiento.</p>
         </div>
         <ul class="mac-pillars">
-          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-id"/></svg></span><div><h3>Gerente de cuenta</h3><p>Le asignamos un punto de contacto para una atención oportuna y cercana.</p></div></li>
-          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span><div><h3>Equipo multidisciplinario</h3><p>Ponemos a su disposición nuestros especialistas en licenciamiento, tecnología y seguridad.</p></div></li>
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-id"/></svg></span><div><h3>Gerente de cuenta</h3><p>Te asignamos un punto de contacto para una atención oportuna y cercana.</p></div></li>
+          <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span><div><h3>Equipo multidisciplinario</h3><p>Ponemos a tu disposición nuestros especialistas en licenciamiento, tecnología y seguridad.</p></div></li>
           <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-chart"/></svg></span><div><h3>Roles e indicadores</h3><p>Damos seguimiento periódico al consumo, las asignaciones, la adopción y el crecimiento.</p></div></li>
           <li><span class="pillar__icon" aria-hidden="true"><svg><use href="#i-trend"/></svg></span><div><h3>Hoja de ruta viva</h3><p>Priorizamos ajustes: reasignar, cambiar de plan, consolidar o activar capacidades.</p></div></li>
         </ul>
       </div>
 
-      <div class="mac-bridge reveal">
-        <div>
-          <span class="kicker" style="margin-bottom:10px">Cómo funciona</span>
-          <p>Con el MAC ejecutamos los pasos 4, 5 y 6 de nuestra ruta —transformamos, optimizamos y administramos— con hitos planificados, talleres Microsoft y revisiones proactivas a lo largo del año.</p>
-        </div>
-        <ul class="mac-kpis" aria-label="El MAC en cifras">
-          <li><b>12</b><span>meses de acompañamiento</span></li>
-          <li><b>7</b><span>hitos planificados</span></li>
-          <li><b>2</b><span>talleres de tecnología <span class="ms ms--inline"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span></span></li>
-          <li><b>2</b><span>verificaciones de uso de la plataforma</span></li>
-        </ul>
-      </div>
-
-      <div class="tl-panel grid-bg reveal">
-        <div class="tl-panel__bar">
-          <i></i><i></i><i></i>
-          <span>mac · t-12 · línea de tiempo</span>
-        </div>
-
-        <div class="tl-legend" aria-hidden="true">
-          <span><i class="t-gov"></i>Gobierno y planificación</span>
-          <span><i class="t-ms"></i>Taller tecnología Microsoft</span>
-          <span><i class="t-check"></i>Verificación y oportunidades</span>
-          <span><i class="t-review"></i>Revisión proactiva</span>
-        </div>
-
-        <div class="tl">
-          <!-- Eje de 12 meses (decorativo; los hitos están en la lista) -->
-          <div class="tl__axis" aria-hidden="true">
-            <span class="tl__rail"><span class="tl__fill"></span><span class="tl__spark"></span></span>
-            <span class="tl__m" style="--m:1;--i:0"><b></b><span class="tl__label">M1</span></span>
-            <span class="tl__m tl__m--minor" style="--m:3"></span>
-            <span class="tl__m" style="--m:2;--i:1"><b></b><span class="tl__label">M2</span></span>
-            <span class="tl__m" style="--m:4;--i:2"><b></b><span class="tl__label">M4</span></span>
-            <span class="tl__m tl__m--minor" style="--m:5"></span>
-            <span class="tl__m" style="--m:6;--i:3"><b></b><span class="tl__label">M6</span></span>
-            <span class="tl__m tl__m--minor" style="--m:7"></span>
-            <span class="tl__m" style="--m:8;--i:4"><b></b><span class="tl__label">M8</span></span>
-            <span class="tl__m tl__m--minor" style="--m:9"></span>
-            <span class="tl__m" style="--m:10;--i:5"><b></b><span class="tl__label">M10</span></span>
-            <span class="tl__m tl__m--minor" style="--m:11"></span>
-            <span class="tl__m tl__m--end" style="--m:12;--i:6"><b></b><span class="tl__label">M12</span></span>
-          </div>
-
-          <ol class="tl__list">
-            <li class="tl__item tl__item--down" style="--c:1;--s:2;--x:25%;--i:0">
-              <p class="tl__when">Mes 1 <span>Inicio</span></p>
-              <h3>Inicio de convenio / fase</h3>
-              <ul>
-                <li class="t-gov">Iniciamos con el pre-kickoff «base cero»: línea base, roles e indicadores.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--up" style="--c:1;--s:3;--x:50%;--i:1">
-              <p class="tl__when">Mes 2 <span>Arranque</span></p>
-              <h3>Plan anual y kickoff</h3>
-              <ul>
-                <li class="t-gov">Elaboramos el plan anual de licenciamiento.</li>
-                <li class="t-gov">Hacemos el kickoff con el equipo de trabajo y su gerente de cuenta.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--down" style="--c:3;--s:3;--x:50%;--i:2">
-              <p class="tl__when">Mes 4 <span>Adopción</span></p>
-              <h3>Taller tecnología Microsoft</h3>
-              <ul>
-                <li class="t-ms">Le mostramos cómo aplicar a su negocio las capacidades de la plataforma contratada.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--up" style="--c:5;--s:3;--x:50%;--i:3">
-              <p class="tl__when">Mes 6 <span>Medio término</span></p>
-              <h3>Verificación de uso</h3>
-              <ul>
-                <li class="t-check">Verificamos el uso correcto de la plataforma adquirida.</li>
-                <li class="t-check">Identificamos áreas de oportunidad para el uso de la tecnología.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--down" style="--c:7;--s:3;--x:50%;--i:4">
-              <p class="tl__when">Mes 8 <span>Crecimiento</span></p>
-              <h3>Revisión proactiva del crecimiento</h3>
-              <ul>
-                <li class="t-review">Revisamos usuarios, consumo y planes frente a su crecimiento.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--up" style="--c:9;--s:3;--x:50%;--i:5">
-              <p class="tl__when">Mes 10 <span>Optimización</span></p>
-              <h3>Verificación y taller</h3>
-              <ul>
-                <li class="t-check">Verificamos nuevamente el uso correcto de la plataforma.</li>
-                <li class="t-ms">Realizamos un nuevo taller de tecnología Microsoft.</li>
-              </ul>
-            </li>
-            <li class="tl__item tl__item--down tl__item--end" style="--c:10;--s:3;--x:83.33%;--i:6">
-              <p class="tl__when">Mes 12 <span>Cierre</span></p>
-              <h3>Revisión de cumplimiento</h3>
-              <ul>
-                <li class="t-review">Revisamos el cumplimiento: conciliación, True-up o renovación y hoja de ruta del siguiente ciclo.</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-
-        <div class="dash__foot"><span class="live"></span><span>Gobernamos su licenciamiento con el <b>MAC</b>: gerente de cuenta y equipo multidisciplinario durante los 12 meses</span></div>
-      </div>
     </div>
   </section>
 
@@ -1209,7 +1021,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       <div class="section__head section__head--center reveal">
         <span class="kicker">Datos de la industria</span>
         <h2 class="title-l" id="t-cifras">Las cifras que <span class="hl">cambian la conversación</span></h2>
-        <p class="lead">Compartimos lo que dicen Microsoft, los analistas de la industria y las firmas globales sobre el valor y el riesgo del licenciamiento.</p>
+        <p class="lead">Compartimos lo que dice Microsoft, junto con los analistas de la industria y las firmas globales, sobre el valor y el riesgo del licenciamiento.</p>
       </div>
 
       <div class="figures">
@@ -1287,8 +1099,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <div>
           <span class="ms-chip" style="margin-bottom:22px"><span class="ms ms--light"><svg aria-hidden="true"><use href="#ms-logo"/></svg>Microsoft</span><i></i>Partner · CSP</span>
           <span class="kicker" style="display:flex">Diagnóstico de licenciamiento</span>
-          <h2 class="title-l" id="t-contacto">Licencie con propósito. Gobierne con control. <span class="hl">Crezca con nosotros.</span></h2>
-          <p class="lead">Evaluamos su escenario y diseñamos una estrategia alineada con sus objetivos, presupuesto, seguridad y planes de crecimiento.</p>
+          <h2 class="title-l" id="t-contacto">Licencia con propósito. Gobierna con control. <span class="hl">Crece con nosotros.</span></h2>
+          <p class="lead">Evaluamos tu escenario y diseñamos una estrategia alineada con tus objetivos, presupuesto, seguridad y planes de crecimiento.</p>
           <div class="contact__links">
             <a href="mailto:ventas@consein.com"><span><svg aria-hidden="true"><use href="#i-mail"/></svg></span>ventas@consein.com</a>
             <a href="https://wa.me/50768398680" target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#i-chat"/></svg></span>WhatsApp +507 6839 8680</a>
@@ -1307,7 +1119,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
             <div class="field">
               <label for="c-pais">País</label>
               <select id="c-pais" name="pais" required>
-                <option value="">Seleccione su país</option>
+                <option value="">Selecciona tu país</option>
                 <option>Venezuela</option>
                 <option>Panamá</option>
                 <option>Estados Unidos</option>
@@ -1320,7 +1132,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
             <div class="field">
               <label for="c-usuarios">Usuarios aprox.</label>
               <select id="c-usuarios" name="usuarios">
-                <option value="">Seleccione</option>
+                <option value="">Selecciona</option>
                 <option>1 – 50</option>
                 <option>51 – 300</option>
                 <option>301 – 499</option>
@@ -1328,12 +1140,12 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
               </select>
             </div>
             <fieldset class="field field--full">
-              <legend>¿Qué necesita?</legend>
+              <legend>¿Qué necesitas?</legend>
               <div class="radios">
                 <label class="radio"><input type="radio" name="reto" value="Diagnóstico"><span>Diagnóstico</span></label>
                 <label class="radio"><input type="radio" name="reto" value="Microsoft 365 y Copilot"><span>M365 y Copilot</span></label>
                 <label class="radio"><input type="radio" name="reto" value="Azure"><span>Azure</span></label>
-                <label class="radio"><input type="radio" name="reto" value="Power Platform / Dynamics 365"><span>Power Platform / D365</span></label>
+                <label class="radio"><input type="radio" name="reto" value="Power Platform y Power BI"><span>Power Platform / Power BI</span></label>
                 <label class="radio"><input type="radio" name="reto" value="EA / True-up / Auditoría"><span>EA · True-up · Auditoría</span></label>
                 <label class="radio"><input type="radio" name="reto" value="Seguridad y privacidad"><span>Seguridad y privacidad</span></label>
               </div>
@@ -1352,74 +1164,70 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       <div class="faq-aside reveal">
         <span class="kicker">Preguntas frecuentes</span>
         <h2 class="title-l" id="t-faq">Sobre licenciamiento Microsoft</h2>
-        <p class="lead" style="margin:18px 0 24px">Respondemos las dudas más comunes sobre modalidades, diagnóstico, el MAC, cumplimiento y seguridad. Si su pregunta es otra, le respondemos directamente.</p>
+        <p class="lead" style="margin:18px 0 24px">Respondemos las dudas más comunes sobre modalidades, diagnóstico, el MAC, cumplimiento y seguridad. Si tu pregunta es otra, te respondemos directamente.</p>
         <nav class="faq-index" aria-label="Temas de preguntas frecuentes">
           <a href="#faq-1">Modalidades y contratación<span>4</span></a>
           <a href="#faq-2">Diagnóstico y costos<span>3</span></a>
-          <a href="#faq-3">MAC: acompañamiento y sostenibilidad<span>3</span></a>
+          <a href="#faq-3">MAC: acompañamiento y sostenibilidad<span>2</span></a>
           <a href="#faq-4">Cumplimiento y seguridad<span>2</span></a>
         </nav>
-        <a class="btn btn--navy" href="#contacto">Escríbanos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--navy" href="#contacto">Escríbenos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="faq reveal">
         <div class="faq__group" id="faq-1">
           <h3 class="faq__title">Modalidades y contratación</h3>
           <details>
             <summary>¿Qué modalidad de licenciamiento Microsoft le conviene a mi empresa?</summary>
-            <p>Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesite. CSP aporta flexibilidad y servicios de partner; MCA simplifica la compra; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años. Validamos su escenario antes de recomendarle una modalidad.</p>
+            <p>Depende del tamaño, el horizonte de inversión y el nivel de acompañamiento que necesites. CSP aporta flexibilidad y servicios de partner; EA está pensado para organizaciones comerciales desde 500 usuarios o dispositivos con un horizonte de tres años; Open Value simplifica el control de costos y la gestión de TI para pymes, con previsibilidad financiera. Validamos tu escenario antes de recomendarte una modalidad.</p>
           </details>
           <details>
             <summary>¿Qué gano al contratar mis licencias por CSP con ustedes?</summary>
-            <p>Como proveedor CSP, unimos sus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, lo acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen.</p>
+            <p>Como proveedor CSP, unimos tus licencias Microsoft con implementación, soporte y servicios administrados en un solo modelo. Además, te acompañamos con nuestro MAC durante 12 meses para que las licencias se usen, se optimicen y se gobiernen.</p>
           </details>
           <details>
             <summary>¿Puedo cambiar de modalidad, por ejemplo de EA a CSP?</summary>
-            <p>Sí, cuando su escenario lo justifica. En el diagnóstico revisamos sus convenios vigentes, vencidos y por vencer, y si otra modalidad le conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft.</p>
+            <p>Sí, cuando tu escenario lo justifica. En el diagnóstico revisamos tus convenios vigentes, vencidos y por vencer, y si otra modalidad te conviene más, planificamos el cambio en el momento adecuado, normalmente al vencimiento o la renovación, según los términos vigentes de Microsoft.</p>
           </details>
           <details>
             <summary>¿Trabajan con empresas que tienen sedes en varios países?</summary>
-            <p>Sí. Atendemos empresas en Venezuela, Panamá, Estados Unidos y España, y en el diagnóstico consideramos la dispersión geográfica de su organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país.</p>
+            <p>Sí. Atendemos empresas en Venezuela y Panamá, y en el diagnóstico consideramos la dispersión geográfica de tu organización. Validamos la elegibilidad, la disponibilidad y las condiciones de Microsoft para cada país.</p>
           </details>
         </div>
         <div class="faq__group" id="faq-2">
           <h3 class="faq__title">Diagnóstico y costos</h3>
           <details>
             <summary>¿Cómo sé si estoy pagando licencias que no uso?</summary>
-            <p>Lo sabemos con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses.</p>
+            <p>Lo sabrás con nuestro diagnóstico de licenciamiento, en el que comparamos licencias adquiridas, asignadas y en uso, e identificamos licencias dormidas o faltantes. A partir de esa línea base, con el MAC damos seguimiento a la optimización durante 12 meses.</p>
           </details>
           <details>
             <summary>¿Qué necesitan de mi empresa para hacer el diagnóstico?</summary>
-            <p>Le pedimos acceso de consulta a sus portales de administración Microsoft, la información de sus contratos y convenios, y una persona de contacto en su equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de su empresa.</p>
+            <p>Te pedimos acceso de consulta a tus portales de administración Microsoft, la información de tus contratos y convenios, y una persona de contacto en tu equipo. Con eso levantamos el inventario y la línea base; el tiempo depende del tamaño y la dispersión de tu empresa.</p>
           </details>
           <details>
             <summary>¿Qué pasa si descubrimos que me faltan licencias?</summary>
-            <p>Se lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y le proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos con usted.</p>
+            <p>Te lo mostramos en el diagnóstico junto con el riesgo de cumplimiento que representa, y te proponemos cómo regularizarlo de la forma más conveniente, dentro de la arquitectura de licencias que diseñamos contigo.</p>
           </details>
         </div>
         <div class="faq__group" id="faq-3">
           <h3 class="faq__title">MAC: acompañamiento y sostenibilidad</h3>
           <details>
             <summary>¿Qué es el MAC y cuánto dura?</summary>
-            <p>Es nuestro Modelo de Atención al Cliente: durante 12 meses lo acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos su licenciamiento.</p>
-          </details>
-          <details>
-            <summary>¿Qué hacemos en los talleres de tecnología Microsoft?</summary>
-            <p>En los meses 4 y 10 le mostramos a su equipo cómo aprovechar las capacidades de la plataforma que ya tiene contratada, aplicadas a casos de uso de su negocio, para que las licencias se usen de verdad.</p>
+            <p>Es nuestro Modelo de Atención al Cliente: durante 12 meses te acompañamos con un gerente de cuenta y un equipo multidisciplinario. En ese período ejecutamos los pasos 4, 5 y 6 de nuestra ruta: transformamos, optimizamos y administramos tu licenciamiento.</p>
           </details>
           <details>
             <summary>¿Qué ocurre al terminar los 12 meses del MAC?</summary>
-            <p>En el mes 12 revisamos el cumplimiento y preparamos con usted la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de su empresa en ese momento.</p>
+            <p>En el mes 12 revisamos el cumplimiento y preparamos contigo la hoja de ruta del siguiente ciclo: renovación, True-up o ajustes de modalidad y planes, según la situación real de tu empresa en ese momento.</p>
           </details>
         </div>
         <div class="faq__group" id="faq-4">
           <h3 class="faq__title">Cumplimiento y seguridad</h3>
           <details>
             <summary>¿Cómo me preparo para una auditoría o un True-up de Microsoft?</summary>
-            <p>Lo preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta.</p>
+            <p>Te preparamos manteniendo un inventario actualizado, una línea base conciliada y un gobierno continuo de asignaciones y consumo, que es exactamente lo que cubrimos en los pasos 1, 5 y 6 de nuestra ruta.</p>
           </details>
           <details>
             <summary>¿Qué licencias necesito para usar Copilot de forma segura?</summary>
-            <p>Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que protegemos sus datos y su privacidad.</p>
+            <p>Copilot requiere una base de licencias compatible y controles de identidad, protección de datos y privacidad. Lo evaluamos por perfil de usuario y lo alineamos con el paso 7 de nuestra ruta, en el que activamos los componentes de seguridad de tu licenciamiento.</p>
           </details>
         </div>
       </div>
@@ -1470,7 +1278,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         <p><strong>España:</strong> Tel: +34 919 26 83 57</p>
       </div>
     </div>
-    <p class="trademark">Información orientativa: la elegibilidad, disponibilidad, precios y condiciones dependen del país, tipo de organización, programa y términos vigentes de Microsoft. Validamos cada escenario antes de emitir una recomendación. Microsoft, Microsoft 365, Copilot, Azure, Power Platform, Dynamics 365, Entra, Intune, Defender, Purview, Priva y el logotipo de Microsoft son marcas comerciales del grupo de compañías Microsoft.</p>
+    <p class="trademark">Información orientativa: la elegibilidad, disponibilidad, precios y condiciones dependen del país, tipo de organización, programa y términos vigentes de Microsoft. Validamos cada escenario antes de emitir una recomendación. Microsoft, Microsoft 365, Copilot, Azure, Power Platform, Power BI, Entra, Intune, Defender, Purview y el logotipo de Microsoft son marcas comerciales del grupo de compañías Microsoft.</p>
     <div class="footer__bottom">
       <span>CONSEIN © 2026 · Todos los derechos reservados</span>
       <a href="https://www.consein.com/politica-de-privacidad">Política de privacidad</a>
@@ -1514,15 +1322,21 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 
   // ---- Órbita del ecosistema Microsoft ----
   var products = [
-    ["Microsoft 365", 0], ["Copilot", 0], ["Azure", 0], ["Power Platform", 0], ["Dynamics 365", 0],
-    ["Entra", 1], ["Intune", 1], ["Defender", 1], ["Purview", 1], ["Priva", 1]
+    ["Microsoft 365", 0, "Microsoft 365: productividad y colaboración (Office, Teams, Exchange, SharePoint y OneDrive)."],
+    ["Copilot", 0, "Microsoft Copilot: asistente de IA integrado en las aplicaciones de Microsoft 365."],
+    ["Azure", 0, "Azure: nube de Microsoft para infraestructura, datos y aplicaciones."],
+    ["Power Platform", 0, "Power Platform: aplicaciones, automatización y análisis low-code."],
+    ["Entra", 1, "Microsoft Entra: identidad y control de acceso."],
+    ["Intune", 1, "Microsoft Intune: gestión y protección de dispositivos."],
+    ["Defender", 1, "Microsoft Defender: protección contra amenazas."],
+    ["Purview", 1, "Microsoft Purview: gobierno, cumplimiento y protección de la información."]
   ];
   var nodes = document.getElementById("eco-nodes");
   var links = document.getElementById("eco-links");
   var NS = "http://www.w3.org/2000/svg";
   if (nodes && links) {
     products.forEach(function (p, i) {
-      var a = (-90 + i * 36) * Math.PI / 180, r = 185;
+      var a = (-90 + i * 360 / products.length) * Math.PI / 180, r = 185;
       var x = 250 + r * Math.cos(a), y = 250 + r * Math.sin(a);
       var w = Math.max(64, p[0].length * 7.2 + 22);
       var line = document.createElementNS(NS, "line");
@@ -1540,7 +1354,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
       t.setAttribute("x", x.toFixed(1)); t.setAttribute("y", (y + 4).toFixed(1));
       t.setAttribute("fill", p[1] ? "#1b245b" : "#fff");
       t.textContent = p[0];
-      g.appendChild(rect); g.appendChild(t);
+      var tip = document.createElementNS(NS, "title");
+      tip.textContent = p[2];
+      g.appendChild(tip); g.appendChild(rect); g.appendChild(t);
       nodes.appendChild(g);
     });
   }
@@ -1582,8 +1398,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   document.querySelectorAll("form[data-contact-form]").forEach(function (form) {
     var status = form.querySelector(".form-status");
     var submit = form.querySelector('[type="submit"]');
-    var okMsg = "Gracias. Le contactaremos muy pronto para conversar sobre su licenciamiento Microsoft.";
-    var errMsg = "No pudimos recibir su mensaje. Inténtelo de nuevo o escríbanos a ventas@consein.com.";
+    var okMsg = "Gracias. Te contactaremos muy pronto para conversar sobre tu licenciamiento Microsoft.";
+    var errMsg = "No pudimos recibir tu mensaje. Inténtalo de nuevo o escríbenos a ventas@consein.com.";
 
     function done(ok, msg) {
       status.dataset.state = ok ? "ok" : "error";
@@ -1601,7 +1417,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
         if (!ok && !firstInvalid) firstInvalid = field;
       });
       if (firstInvalid) {
-        done(false, "Revise los campos marcados: son obligatorios y el correo debe ser válido.");
+        done(false, "Revisa los campos marcados: son obligatorios y el correo debe ser válido.");
         firstInvalid.focus();
         return;
       }
