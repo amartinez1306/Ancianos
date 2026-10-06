@@ -57,7 +57,8 @@ El comando regenera las tres páginas, la versión de un solo archivo y el dise�
 - Respeta la preferencia del sistema "reducir movimiento".
 
 ## SEO
-`Palabras_clave_SEO_Consein_Cisco.docx` lista 93 palabras clave por especialidad para el equipo SEO.
+`Palabras_clave_SEO_Consein_Cisco.docx` (v2) lista 67 palabras clave por área de práctica y para el Programa Renueva,
+los términos retirados respecto a la versión 1 y los títulos, descripciones y H1 vigentes de cada página.
 El sitio ya incluye títulos y descripciones por página, un H2 por especialidad, canonical, Open Graph
 y datos estructurados schema.org (Organization, Service, BreadcrumbList, FAQPage).
 
