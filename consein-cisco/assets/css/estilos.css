@@ -416,3 +416,8 @@ ol.aviso-list li::before{content:counter(av)}
 /* Diferenciadores de SECaaS */
 .secaas-dif{margin-top:28px}
 .secaas-dif>div{padding:22px;border-radius:var(--r);background:var(--soft)}
+
+/* Línea de soluciones Consein (Infraestructura, Seguridad, Colaboración, IA) */
+.linea{display:block;width:max-content;max-width:100%;margin:0 0 10px;padding:4px 12px;border-radius:20px;background:var(--navy);color:#fff;font:600 .72rem var(--text);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.area-head p.linea{color:#fff;margin:0 0 12px}
+.tile .linea{margin-bottom:12px}

@@ -24,7 +24,8 @@ Soluciones de Valor (5 áreas de práctica) y Ofertas de Productos (8 ofertas de
 `Nueva_Matriz_Valor_Cisco_Microsoft_Consein_v2.docx` y con `Iniciativa_SECaaS.docx` (paquetes Essential y Advantage,
 en `MATRIZ` y `SECAAS_DIF`). No se publican: "Better Together", el posicionamiento por licencia, los paquetes
 User Protection / Breach Protection, las secciones internas de la matriz (reglas de uso, C, D, E, F, Estado) ni
-la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada producto muestra su
+la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada área muestra su línea de Soluciones Consein
+(campo `linea`: Infraestructura, Seguridad, Colaboración, IA) como título sobre el encabezado y en las tarjetas. Cada producto muestra su
 **nombre y mensaje comercial**; "Seguir leyendo…" abre Producto Microsoft asociado, Cómo agrega valor y
 Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
 En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.

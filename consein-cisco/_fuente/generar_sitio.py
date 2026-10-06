@@ -100,20 +100,21 @@ ARTE_CAPAS = """<div class="stack" aria-hidden="true">
 # Especialidades (7) — cada una apunta a un grupo de palabras clave SEO
 # ---------------------------------------------------------------------------
 ESPECIALIDADES = [
+    # "linea": línea de soluciones Consein a la que pertenece cada área (título visible en el sitio).
     # Productos: Nueva Matriz de Valor v2 (secciones A y B) + Iniciativa SECaaS de Consein.
-    {"id": "conectividad", "nombre": "Conectividad LAN y WAN",
+    {"id": "conectividad", "linea": "Infraestructura", "nombre": "Conectividad LAN y WAN",
      "h2": "Conectividad e interconexión de redes LAN y WAN",
      "intro": "Conectamos sus sedes según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure."},
-    {"id": "secaas", "nombre": "SECaaS",
+    {"id": "secaas", "linea": "Seguridad", "nombre": "SECaaS",
      "h2": "SECaaS: seguridad como servicio, del endpoint al firewall en la nube",
      "intro": "Convertimos la ciberseguridad en un servicio por consumo: paquetes todo en uno basados en Cisco, administrados por Consein desde Cisco Security Cloud Control."},
-    {"id": "proteccion-red", "nombre": "Red local y perímetro",
+    {"id": "proteccion-red", "linea": "Seguridad", "nombre": "Red local y perímetro",
      "h2": "Control de la red local y protección del perímetro",
      "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local, y Cisco Secure Firewall, para proteger el borde on-premise y la conectividad híbrida."},
-    {"id": "colaboracion", "nombre": "Colaboración",
+    {"id": "colaboracion", "linea": "Colaboración", "nombre": "Colaboración",
      "h2": "Hardware certificado para Microsoft Teams Rooms",
      "intro": "Implementamos hardware Cisco certificado para la experiencia Microsoft Teams Rooms."},
-    {"id": "inteligencia-artificial", "nombre": "Inteligencia Artificial",
+    {"id": "inteligencia-artificial", "linea": "IA", "nombre": "Inteligencia Artificial",
      "h2": "Adopción responsable de IA",
      "intro": "Acompañamos la adopción de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario y la validación."},
 ]
@@ -641,7 +642,7 @@ def inicio():
     for i, e in enumerate(ESPECIALIDADES, 1):
         n = len(productos_area(e["id"]))
         tiles += f"""<a class="tile" href="soluciones.html#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
-  <h3>{E(e['h2'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto Cisco' if n == 1 else 'productos Cisco'}</span></a>"""
+  <span class="linea">{E(e['linea'])}</span><h3>{E(e['h2'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto Cisco' if n == 1 else 'productos Cisco'}</span></a>"""
     tiles += f"""<a class="tile featured" href="soluciones.html#criterio" style="border-color:var(--navy)">{D(icono('integral'))}
   <h3>Matriz de valor</h3><p>{len(MATRIZ)} productos Cisco que suman valor a su plataforma Microsoft, seleccionados con un mismo criterio.</p><span class="count">Ver el criterio</span></a>"""
 
@@ -808,7 +809,7 @@ def soluciones():
     for i, e in enumerate(ESPECIALIDADES, 1):
         n = len(productos_area(e["id"]))
         vista += f"""<a class="tile" href="#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
-  <h3>{i}. {E(e['nombre'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto' if n == 1 else 'productos'}</span></a>"""
+  <span class="linea">{E(e['linea'])}</span><h3>{i}. {E(e['nombre'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto' if n == 1 else 'productos'}</span></a>"""
     vista += f"""<div class="tile featured">{D(icono('integral'))}
   <h3>Total: {len(MATRIZ)} productos</h3><p>Productos y paquetes Cisco que integramos con su plataforma Microsoft.</p></div>"""
     dif = '<div class="grid g3 proof secaas-dif">' + "".join(
@@ -820,7 +821,7 @@ def soluciones():
         areas += f"""<section class="area" id="{e['id']}">
   <div class="wrap">
     <div class="area-head">
-      <div>{D(icono(e['id']))}<p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
+      <div>{D(icono(e['id']))}<p class="linea">Soluciones Consein · {E(e['linea'])}</p><p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
       <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(cisco)} · <b>Microsoft:</b> {E(ms)}</p></div>
     </div>
     <div class="grid g3">{cards}</div>{dif if e["id"] == "secaas" else ""}
@@ -862,6 +863,7 @@ def soluciones():
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": {
                "@type": "Service", "name": m["nombre"], "description": m["mensaje"] + " " + m["valor"],
                "serviceType": next(e["nombre"] for e in ESPECIALIDADES if e["id"] == m["area"]),
+               "category": next(e["linea"] for e in ESPECIALIDADES if e["id"] == m["area"]),
                "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones#" + m["id"],
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
