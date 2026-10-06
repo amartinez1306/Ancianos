@@ -13,16 +13,18 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 5 áreas de práctica, Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, preguntas frecuentes, contacto |
-| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Nueva Matriz de Valor v2 (Better Together): criterio, vista consolidada y 16 productos Cisco en 5 áreas |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 5 áreas de práctica (incluida SECaaS), Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, preguntas frecuentes, contacto |
+| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Criterio, vista consolidada y 11 soluciones en 5 áreas: Conectividad LAN y WAN, SECaaS (Essential y Advantage), Red local y perímetro (ISE y Secure Firewall, por separado), Colaboración e IA |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
 Menú: **Inicio · Soluciones Cisco · Nosotros · Contacto**. Soluciones Cisco despliega dos opciones de segundo nivel,
 Soluciones de Valor (5 áreas de práctica) y Ofertas de Productos (8 ofertas del Programa Renueva).
 
 **Soluciones de Valor** se construye con la parte de productos (secciones A y B) de
-`Nueva_Matriz_Valor_Cisco_Microsoft_Consein_v2.docx`; las secciones internas (reglas de uso, C, D, E, F y la
-columna Estado) no se publican. Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada producto muestra su
+`Nueva_Matriz_Valor_Cisco_Microsoft_Consein_v2.docx` y con `Iniciativa_SECaaS.docx` (paquetes Essential y Advantage,
+en `MATRIZ` y `SECAAS_DIF`). No se publican: "Better Together", el posicionamiento por licencia, los paquetes
+User Protection / Breach Protection, las secciones internas de la matriz (reglas de uso, C, D, E, F, Estado) ni
+la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada producto muestra su
 **nombre y mensaje comercial**; "Seguir leyendo…" abre Producto Microsoft asociado, Cómo agrega valor y
 Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
 En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.

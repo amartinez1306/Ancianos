@@ -24,6 +24,8 @@ def D(fragmento):
 
 _ICONOS = {
     "conectividad": '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
+    "secaas": '<path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9a4 4 0 0 1 0 9z"/><path d="M9.5 13.5l2 2 3.5-3.5"/>',
+    "proteccion-red": '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 11h6M9 14h6M12 8v8"/>',
     "usuarios-remotos": '<rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/><path d="M10 10.5v-1a2 2 0 0 1 4 0v1M9.5 10.5h5v3h-5z"/>',
     "infraestructura": '<rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v3h11V8M12 11v5"/>',
     "seguridad": '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
@@ -49,7 +51,7 @@ def arte_hero():
     """Diagrama de red animado: Microsoft al centro, nodos Cisco y el anillo integrador de Consein."""
     import math
     cx, cy, r = 280, 260, 160
-    nodos = ["SD&#45;WAN", "Duo", "Teams Rooms", "Secure Access", "AI Defense", "Meraki"]
+    nodos = ["SD&#45;WAN", "SECaaS", "Teams Rooms", "Cisco ISE", "AI Defense", "Meraki"]
     lineas, paquetes, puntos = [], [], []
     for i, n in enumerate(nodos):
         a = math.radians(-90 + 60 * i)
@@ -98,28 +100,35 @@ ARTE_CAPAS = """<div class="stack" aria-hidden="true">
 # Especialidades (7) — cada una apunta a un grupo de palabras clave SEO
 # ---------------------------------------------------------------------------
 ESPECIALIDADES = [
-    # Fuente única: Nueva Matriz de Valor v2 Cisco + Microsoft Better Together (Consein). Secciones A y B.
+    # Productos: Nueva Matriz de Valor v2 (secciones A y B) + Iniciativa SECaaS de Consein.
     {"id": "conectividad", "nombre": "Conectividad LAN y WAN",
      "h2": "Conectividad e interconexión de redes LAN y WAN",
      "intro": "Conectamos sus sedes según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure."},
-    {"id": "seguridad", "nombre": "Seguridad",
-     "h2": "Seguridad: usuario, correo, endpoint y red",
-     "intro": "Sumamos Cisco como capa complementaria sobre Microsoft 365, según la licencia de cada cliente."},
+    {"id": "secaas", "nombre": "SECaaS",
+     "h2": "SECaaS: seguridad como servicio, del endpoint al firewall en la nube",
+     "intro": "Convertimos la ciberseguridad en un servicio por consumo: paquetes todo en uno basados en Cisco, administrados por Consein desde Cisco Security Cloud Control."},
+    {"id": "proteccion-red", "nombre": "Red local y perímetro",
+     "h2": "Control de la red local y protección del perímetro",
+     "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local, y Cisco Secure Firewall, para proteger el borde on-premise y la conectividad híbrida."},
     {"id": "colaboracion", "nombre": "Colaboración",
      "h2": "Hardware certificado para Microsoft Teams Rooms",
      "intro": "Implementamos hardware Cisco certificado para la experiencia Microsoft Teams Rooms."},
-    {"id": "usuarios-remotos", "nombre": "Usuarios remotos",
-     "h2": "Conectividad y acceso seguro para usuarios remotos",
-     "intro": "Ofrecemos seguridad 100% en la nube, contratada como servicio recurrente (SECaaS: Security as a Service)."},
     {"id": "inteligencia-artificial", "nombre": "Inteligencia Artificial",
      "h2": "Adopción responsable de IA",
      "intro": "Acompañamos la adopción de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario y la validación."},
 ]
 
+# Diferenciadores de SECaaS (Iniciativa SECaaS)
+SECAAS_DIF = [
+    ("Agnóstico y universal", "Protegemos a sus usuarios sin importar si su empresa usa AWS, Google, servidores locales o aplicaciones a la medida."),
+    ("Un solo servicio", "Consolidamos VPN, antivirus y filtrado web en un servicio unificado, con un menor costo total de propiedad."),
+    ("Valor inmediato", "Al ser 100% nativo de la nube, activamos las políticas de seguridad en horas o días."),
+]
+
 # Criterio de la matriz (v2, Better Together)
 CRITERIOS = [
     ("Se integra con Microsoft", "Cisco trabaja junto a su plataforma Microsoft como acelerador: red, seguridad y salas."),
-    ("Cubre brechas según su licencia", "Posicionamos cada producto donde aporta valor real, según la licencia Microsoft de cada cliente."),
+    ("Cubre brechas de red y seguridad", "Posicionamos cada solución donde aporta valor real a su red y a su seguridad."),
     ("Evita duplicar lo que ya paga", "Proponemos solo lo que complementa su inversión Microsoft actual."),
 ]
 
@@ -131,7 +140,7 @@ S5 = "S5 · SD-WAN Seguro"
 S6 = "S6 · Azure + Cisco Secure Firewall"
 S7 = "S7 · Cisco AI Defense"
 
-# Productos Cisco por área (Matriz v2, sección B). 16 entradas.
+# Productos Cisco por área (Matriz v2, sección B, e Iniciativa SECaaS).
 # mensaje = mensaje comercial (visible en la tarjeta); valor = cómo agrega valor (en el detalle).
 MATRIZ = [
     {"area": "conectividad", "id": "meraki-mx-secure-access", "nombre": "Meraki MX + Cisco Secure Access",
@@ -151,35 +160,43 @@ MATRIZ = [
      "ms": "Microsoft 365 / Azure",
      "valor": "Integramos enlaces celulares 4G/5G de respaldo que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
 
-    {"area": "seguridad", "id": "cisco-duo", "nombre": "Cisco Duo",
-     "origen": [S1 + " (User Protection)"], "mensaje": "MFA y confianza de dispositivo más allá de Microsoft.",
-     "ms": "Entra ID (método de autenticación externo) / Microsoft Authenticator",
-     "valor": "Extendemos el MFA a servidores on-premise, RDP/SSH y aplicaciones heredadas (RADIUS/LDAP), verificamos la salud de dispositivos no administrados y añadimos políticas contextuales. Duo se integra con Entra ID como capa adicional."},
-    {"area": "seguridad", "id": "email-threat-defense", "nombre": "Cisco Secure Email Threat Defense",
-     "origen": [S1 + " (User Protection y Breach Protection)"], "mensaje": "Protección avanzada del correo.",
-     "ms": "Exchange Online / Defender for Office 365",
-     "valor": "Detectamos, bloqueamos y remediamos phishing, suplantación, BEC y ataques con códigos QR sobre Microsoft 365, vía Graph API. Aporta su mayor valor en licencias E3 y Business Basic/Standard, que no incluyen Defender for Office 365."},
-    {"area": "seguridad", "id": "secure-endpoint", "nombre": "Cisco Secure Endpoint",
-     "origen": [S1 + " (User Protection Advantage y Breach Protection)"], "mensaje": "Detección y respuesta en el puesto de trabajo.",
-     "ms": "Defender for Endpoint P1 (E3)",
-     "valor": "Sumamos EDR, con detección, respuesta e investigación basadas en la inteligencia de Cisco Talos, donde su licencia no lo incluye, como en E3. Lo implementamos como el único EDR activo de cada equipo."},
-    {"area": "seguridad", "id": "secure-access", "nombre": "Cisco Secure Access",
-     "origen": [S2, S1], "mensaje": "Firewall y ZTNA en la nube.",
-     "ms": "Entra ID (proveedor de identidad)",
-     "valor": "Ofrecemos acceso Zero Trust a aplicaciones privadas e internet, con SWG, DNS Security, firewall en la nube y VPNaaS, usando la identidad de Entra ID."},
-    {"area": "seguridad", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
-     "origen": [S1 + " (User Protection Advantage)"], "mensaje": "Control de acceso a la red (NAC).",
+    {"area": "secaas", "id": "secaas-essential", "nombre": "SECaaS Essential",
+     "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
+     "mensaje": "Base sólida para la seguridad moderna: identidad, acceso web y cimientos de Zero Trust.",
+     "ms": "Active Directory / Entra ID",
+     "ideal": "Medianas empresas y corporaciones que buscan modernizar su seguridad y prefieren delegar su gestión a Consein.",
+     "componentes": "Duo Essentials · Cisco Secure Access (SWG/DNS)",
+     "incluye": ["MFA avanzado con Cisco Duo (push y OTP).",
+                 "Integración con Active Directory / Entra ID.",
+                 "Seguridad DNS: bloqueo de malware y phishing.",
+                 "SWG (Secure Web Gateway): filtrado web completo.",
+                 "Controles de acceso ZTNA (Zero Trust Network Access).",
+                 "Gestión operativa de altas y bajas.",
+                 "Monitoreo continuo NOC/SOC 24/7."],
+     "valor": "Protegemos la identidad y el acceso web de sus usuarios y establecemos los cimientos de Zero Trust para su organización, como un servicio administrado por Consein."},
+    {"area": "secaas", "id": "secaas-advantage", "nombre": "SECaaS Advantage",
+     "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
+     "mensaje": "Seguridad avanzada y visibilidad total para entornos híbridos y distribuidos.",
+     "ms": "Active Directory / Entra ID",
+     "ideal": "Organizaciones con entornos híbridos y distribuidos que necesitan protección integral del endpoint y control de la nube.",
+     "componentes": "Duo Advantage · Cisco Secure Access (FWaaS/CASB) · Cisco Secure Endpoint (EDR)",
+     "incluye": ["Todo lo incluido en SECaaS Essential.",
+                 "Autenticación basada en riesgo (MFA avanzado).",
+                 "FWaaS (Firewall as a Service) en la nube.",
+                 "CASB (Cloud Access Security Broker) para aplicaciones SaaS.",
+                 "Inspección avanzada del tráfico web.",
+                 "EDR (Endpoint Detection and Response) en el endpoint.",
+                 "Bloqueo avanzado de malware en el dispositivo.",
+                 "Mayor visibilidad y control de aplicaciones."],
+     "valor": "Sumamos a todo lo incluido en Essential la protección integral del endpoint, el firewall en la nube y el control de las aplicaciones SaaS, como un servicio administrado por Consein."},
+    {"area": "proteccion-red", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
+     "origen": [S1], "mensaje": "Control de acceso a la red (NAC).",
      "ms": "Microsoft Intune (integración complementaria)",
      "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y segmentamos el acceso. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
-    {"area": "seguridad", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
+    {"area": "proteccion-red", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
      "origen": [S6], "mensaje": "Gobierno único de la conectividad híbrida.",
      "ms": "Azure Firewall / Microsoft Sentinel",
      "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
-    {"area": "seguridad", "id": "cisco-xdr", "nombre": "Cisco XDR",
-     "origen": [S1 + " (Breach Protection)"], "mensaje": "Consola unificada para correlacionar alertas.",
-     "ms": "Defender XDR / Sentinel",
-     "valor": "Correlacionamos en una sola consola alertas de Cisco y de terceros, incluidos Defender, Entra ID e Intune (nivel Advantage). Lo proponemos cuando su organización necesita correlación entre varios proveedores."},
-
     {"area": "colaboracion", "id": "room-bar", "nombre": "Cisco Room Bar / Room Bar Pro",
      "origen": [S4], "mensaje": "Salas híbridas simples y consistentes.",
      "ms": "Microsoft Teams Rooms",
@@ -188,15 +205,6 @@ MATRIZ = [
      "origen": [S4], "mensaje": "Colaboración visual en sala.",
      "ms": "Microsoft Teams Rooms / Whiteboard",
      "valor": "Llevamos la reunión híbrida y la pizarra de Teams a una pantalla táctil certificada para salas medianas."},
-
-    {"area": "usuarios-remotos", "id": "secure-access-remoto", "nombre": "Cisco Secure Access (firewall y ZTNA en la nube)",
-     "origen": [S2], "mensaje": "Acceso seguro desde cualquier lugar.",
-     "ms": "Entra ID / Microsoft 365",
-     "valor": "Damos a usuarios remotos y terceros acceso seguro y basado en identidad a aplicaciones privadas, SaaS e internet, como alternativa a las VPN tradicionales."},
-    {"area": "usuarios-remotos", "id": "secaas", "nombre": "Paquete SECaaS: Duo + Secure Endpoint + Secure Access",
-     "origen": [S1 + " (User Protection)", S2], "mensaje": "Seguridad del usuario remoto como servicio.",
-     "ms": "Microsoft 365 Business / Microsoft 365 E3",
-     "valor": "Agrupamos identidad, endpoint y acceso en una oferta 100% en la nube, contratada como servicio recurrente y construida sobre la suite Cisco User Protection. Su nivel Advantage incluye Secure Endpoint, ISE y Email Threat Defense."},
 
     {"area": "inteligencia-artificial", "id": "ai-defense", "nombre": "Cisco AI Defense",
      "origen": [S7], "mensaje": "Adopción responsable de IA.",
@@ -219,7 +227,13 @@ def tecnologias_area(area_id):
         for x in re.sub(r"\s*\([^)]*\)", "", m["ms"]).split(" / "):
             if x and x not in ms:
                 ms.append(x)
-    return ", ".join(m["nombre"] for m in productos_area(area_id)), ", ".join(ms)
+    cisco = []
+    for m in productos_area(area_id):
+        partes = re.sub(r"\s*\([^)]*\)", "", m["componentes"]).split(" · ") if m.get("componentes") else [m["nombre"]]
+        for x in partes:
+            if x not in cisco:
+                cisco.append(x)
+    return ", ".join(cisco), ", ".join(ms)
 
 # ---------------------------------------------------------------------------
 # Productos · Programa Renueva (8)
@@ -324,14 +338,14 @@ PRODUCTOS = [
 FAQ = [
     ("¿Cómo conectan las sedes a Microsoft 365 y Azure?",
      "Según el destino del tráfico. Para aplicaciones SaaS como Microsoft 365 y Teams combinamos Meraki MX con Cisco Secure Access en una arquitectura SASE; para cargas en Azure usamos Cisco Catalyst SD-WAN con Azure Virtual WAN o ExpressRoute. Meraki MG agrega respaldo 4G/5G, sujeto a la cobertura celular de la sede."),
-    ("¿Qué aporta Cisco si ya tengo Microsoft 365?",
-     "Sumamos Cisco como capa complementaria según su licencia: Cisco Duo extiende el MFA a servidores on-premise y aplicaciones heredadas, Secure Email Threat Defense refuerza la protección del correo y Secure Endpoint suma EDR donde la licencia no lo incluye, como en E3."),
-    ("¿Cómo controlan el acceso a la red corporativa?",
-     "Controlamos con Cisco ISE qué usuario y qué dispositivo entra a la red, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Cisco Secure Firewall protege el borde y envía sus registros a Microsoft Sentinel."),
+    ("¿Qué es SECaaS de Consein?",
+     "Es seguridad como servicio: paquetes todo en uno basados en Cisco Duo, Secure Access y Secure Endpoint, administrados por Consein desde Cisco Security Cloud Control. SECaaS Essential protege la identidad y el acceso web con Zero Trust; SECaaS Advantage suma firewall en la nube, CASB y EDR."),
+    ("¿Cómo controlan el acceso a la red local?",
+     "Con Cisco ISE controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, evaluamos la postura con Cisco Secure Client y la complementamos con Microsoft Intune. Para el borde on-premise ofrecemos, por separado, Cisco Secure Firewall, que envía sus registros a Microsoft Sentinel."),
     ("¿Qué equipos usan para las salas Microsoft Teams Rooms?",
      "Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."),
     ("¿Cómo protegen a los usuarios remotos?",
-     "Con Cisco Secure Access damos acceso basado en la identidad de Entra ID a aplicaciones privadas, SaaS e internet. También lo ofrecemos como servicio recurrente en el paquete SECaaS: Duo + Secure Endpoint + Secure Access."),
+     "Con SECaaS: acceso ZTNA, filtrado web y seguridad DNS con Cisco Secure Access, MFA con Cisco Duo y, en SECaaS Advantage, EDR con Cisco Secure Endpoint, todo administrado por Consein."),
     ("¿Cómo acompañan la adopción de inteligencia artificial?",
      "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."),
 ]
@@ -753,7 +767,7 @@ def inicio():
           {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]
     pagina("index.html", "index",
            "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein",
-           "Integramos redes, seguridad y salas Cisco con su plataforma Microsoft: SASE y SD-WAN, Cisco Duo, Secure Endpoint, ISE, Microsoft Teams Rooms e IA responsable. Venezuela, Panamá, República Dominicana y EE. UU.",
+           "Integramos redes, seguridad y salas Cisco con su plataforma Microsoft: SASE y SD-WAN, seguridad como servicio (SECaaS), Cisco ISE, Microsoft Teams Rooms e IA responsable. Venezuela, Panamá, República Dominicana y EE. UU.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -761,9 +775,16 @@ def inicio():
 # ---------------------------------------------------------------------------
 def tarjeta_producto(m, area):
     """Tarjeta: producto y mensaje visibles; el resto en la subpantalla "Seguir leyendo…"."""
-    filas = [("Producto Microsoft asociado", E(m["ms"])),
-             ("Cómo agrega valor", E(m["valor"])),
-             ("Servicio Consein", "<br>".join(E(o) for o in m["origen"]))]
+    filas = []
+    if m.get("ideal"):
+        filas.append(("Ideal para", E(m["ideal"])))
+    if m.get("incluye"):
+        filas.append(("Qué incluye", "<ul>" + "".join(f"<li>{E(x)}</li>" for x in m["incluye"]) + "</ul>"))
+    if m.get("componentes"):
+        filas.append(("Componentes Cisco", E(m["componentes"])))
+    filas += [("Se integra con" if m.get("incluye") else "Producto Microsoft asociado", E(m["ms"])),
+              ("Cómo agrega valor", E(m["valor"])),
+              ("Servicio Consein", "<br>".join(E(o) for o in m["origen"]))]
     dl = "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas)
     return f"""<article class="card" id="{m['id']}">
   <h3>{E(m['nombre'])}</h3>
@@ -782,14 +803,16 @@ def tarjeta_producto(m, area):
 def soluciones():
     chips = "".join(f'<a href="#{e["id"]}">{E(e["nombre"])}</a>' for e in ESPECIALIDADES)
     criterios = "".join(f"<div>{D(icono(ic))}<b>{E(t)}</b><p>{E(d)}</p></div>"
-                        for (t, d), ic in zip(CRITERIOS, ("integral", "seguridad", "objetivo")))
+                        for (t, d), ic in zip(CRITERIOS, ("integral", "secaas", "objetivo")))
     vista = ""
     for i, e in enumerate(ESPECIALIDADES, 1):
         n = len(productos_area(e["id"]))
         vista += f"""<a class="tile" href="#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
   <h3>{i}. {E(e['nombre'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto' if n == 1 else 'productos'}</span></a>"""
     vista += f"""<div class="tile featured">{D(icono('integral'))}
-  <h3>Total: {len(MATRIZ)} productos</h3><p>Entradas de producto Cisco posicionadas junto a la plataforma Microsoft. Cisco Secure Access aparece en dos áreas.</p></div>"""
+  <h3>Total: {len(MATRIZ)} productos</h3><p>Productos y paquetes Cisco que integramos con su plataforma Microsoft.</p></div>"""
+    dif = '<div class="grid g3 proof secaas-dif">' + "".join(
+        f"<div>{D(icono(ic))}<b>{E(t)}</b><p>{E(d)}</p></div>" for (t, d), ic in zip(SECAAS_DIF, ("conectividad", "integral", "objetivo"))) + "</div>"
     areas = ""
     for e in ESPECIALIDADES:
         cisco, ms = tecnologias_area(e["id"])
@@ -800,7 +823,7 @@ def soluciones():
       <div>{D(icono(e['id']))}<p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
       <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(cisco)} · <b>Microsoft:</b> {E(ms)}</p></div>
     </div>
-    <div class="grid g3">{cards}</div>
+    <div class="grid g3">{cards}</div>{dif if e["id"] == "secaas" else ""}
   </div>
 </section>"""
     cuerpo = f"""
@@ -808,16 +831,16 @@ def soluciones():
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones Cisco › Soluciones de Valor</p>
     <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas</p>
-    <h1>Better Together: Cisco suma valor a su plataforma Microsoft</h1>
-    <p class="lead">Seleccionamos productos Cisco del Modelo de Servicios Cisco de Consein y los posicionamos según la licencia Microsoft de cada cliente, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
+    <h1>Cisco suma valor a su plataforma Microsoft</h1>
+    <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
   </div>
 </section>
 
 <section id="criterio">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Criterio de la matriz</p><h2>Cisco y Microsoft, mejor juntos</h2>
-      <p class="lead">Cisco se integra con Microsoft para cubrir brechas según la licencia de cada cliente: posicionamos cada producto donde aporta valor real y evitamos duplicar lo que usted ya paga.</p></div>
+    <div class="section-head"><p class="eyebrow">Nuestro criterio</p><h2>Cisco como acelerador de su plataforma Microsoft</h2>
+      <p class="lead">Integramos Cisco con Microsoft para cubrir brechas de red y seguridad: posicionamos cada solución donde aporta valor real y evitamos duplicar lo que usted ya paga.</p></div>
     <div class="grid g3 proof">{criterios}</div>
     <p class="note" style="margin-top:32px">Cada producto indica el servicio del Modelo de Servicios Cisco de Consein del que proviene, y cada servicio sigue nuestros siete pasos, de Evaluamos a Aseguramos.</p>
   </div>
@@ -831,7 +854,7 @@ def soluciones():
 </section>
 {areas}
 {banda('Conversemos sobre el valor que Cisco suma a su plataforma Microsoft', 'Hablar con un especialista', 'index.html#contacto')}"""
-    ld = [{"@type": "WebPage", "name": "Better Together: Cisco suma valor a su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
+    ld = [{"@type": "WebPage", "name": "Cisco suma valor a su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
                {"@type": "ListItem", "position": 2, "name": "Soluciones de Valor", "item": URL_BASE + "soluciones"}]}},
@@ -842,8 +865,8 @@ def soluciones():
                "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones#" + m["id"],
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
-           f"Cisco + Microsoft Better Together: {len(MATRIZ)} productos en {len(ESPECIALIDADES)} áreas | Consein",
-           "Productos Cisco que se integran con Microsoft 365, Entra ID, Azure y Teams: Meraki SD-WAN, Catalyst SD-WAN, Cisco Duo, Secure Email Threat Defense, Secure Endpoint, Secure Access, ISE, Secure Firewall, XDR, Room Bar, Board Pro y AI Defense.",
+           "Soluciones Cisco: SASE, SD-WAN, SECaaS, ISE y Teams Rooms | Consein",
+           "Seguridad como servicio (SECaaS) con Cisco Duo, Secure Access y Secure Endpoint; SASE y SD-WAN con Meraki y Catalyst; Cisco ISE, Secure Firewall, Room Bar, Board Pro y AI Defense, integrados con su plataforma Microsoft.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------

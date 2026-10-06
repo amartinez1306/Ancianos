@@ -412,3 +412,7 @@ ol.aviso-list li::before{content:counter(av)}
 .ct-temas li{font-size:.82rem;padding:5px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06)}
 @media (max-width:1000px){.steps.steps-6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:32px}}
 @media (max-width:600px){.steps.steps-6{grid-template-columns:1fr}.capa-transversal{grid-template-columns:1fr;gap:16px;padding:20px}}
+
+/* Diferenciadores de SECaaS */
+.secaas-dif{margin-top:28px}
+.secaas-dif>div{padding:22px;border-radius:var(--r);background:var(--soft)}
