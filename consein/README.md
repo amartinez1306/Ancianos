@@ -40,9 +40,12 @@ El botón de la ficha lleva al formulario con el servicio ya seleccionado (campo
 
 - `title`, `meta description`, `canonical`, Open Graph y un solo H1.
 - Encabezados con las palabras clave de cada especialidad.
-- Datos estructurados JSON-LD: `Organization`, `BreadcrumbList`, `ItemList` de `Service` y `FAQPage`.
-- La lista de palabras clave para el equipo SEO está en el documento
-  *Consein_Servicios_Palabras_Clave_SEO.docx*.
+- `hreflang`, Twitter Card y encabezados H1/H2/H3 con las palabras clave de cada especialidad.
+- Datos estructurados JSON-LD: `Organization`, `WebPage`, `ProfessionalService` (Caracas y Panamá),
+  `BreadcrumbList`, `ItemList` de `Service` y `FAQPage`.
+- Guías en `docs/`: *Consein_Manual_SEO.docx* (reglas, SEO técnico, local, contenidos y medición) y
+  *Consein_Palabras_Clave_SEO.docx* (palabras clave por especialidad, mercado y ciudad).
+- Plantillas `docs/seo/robots.txt` y `docs/seo/sitemap.xml` para la raíz del dominio.
 
 Antes de publicar, confirmar que la URL definitiva sea `https://www.consein.com/servicios`
 (se usa en `canonical`, Open Graph y JSON-LD).

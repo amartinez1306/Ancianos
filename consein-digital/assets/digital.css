@@ -229,6 +229,7 @@ button, input, select { font: inherit; color: inherit; }
 .card__icon svg { width: 20px; height: 20px; }
 .card__num { font-family: var(--font-title); font-weight: 700; font-size: 30px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.35); }
 .card .title-s { font-size: 19px; color: #fff; overflow-wrap: anywhere; }
+.card .title-s .card__area { display: table; margin-top: 10px; font-family: var(--font-text); font-weight: 400; letter-spacing: 0; }
 .card__area { align-self: flex-start; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,.08); font-size: 12.5px; color: #dfe3f7; line-height: 1.5; }
 .card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
 .card__link { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--green); }

@@ -154,6 +154,7 @@ button, input, select { font: inherit; color: inherit; }
 .phase__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .step { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .step__num { font-size: 13px; font-weight: 500; color: var(--muted); }
+.step .title-s .step__area { display: block; margin-top: 6px; font-family: var(--font-text); letter-spacing: 0; }
 .step__area { font-size: 14px; font-weight: 500; color: var(--blue); line-height: 1.4; }
 .step p { font-size: 14px; line-height: 1.6; }
 .step .link { margin-top: auto; padding-top: 8px; font-size: 14px; }
