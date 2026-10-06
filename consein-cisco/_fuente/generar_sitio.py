@@ -103,20 +103,20 @@ ESPECIALIDADES = [
     # "linea": línea de soluciones Consein a la que pertenece cada área (título visible en el sitio).
     # Productos: Nueva Matriz de Valor v2 (secciones A y B) + Iniciativa SECaaS de Consein.
     {"id": "conectividad", "linea": "Infraestructura", "nombre": "Conectividad LAN y WAN",
-     "h2": "Conectividad e interconexión de redes LAN y WAN",
-     "intro": "Conectamos sus sedes según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure."},
+     "h2": "SD-WAN para empresas y arquitectura SASE",
+     "intro": "Conectamos sus redes LAN y WAN según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure. Su Wi-Fi empresarial, sus switches y sus enlaces, gestionados en la nube con Cisco Meraki."},
     {"id": "secaas", "linea": "Seguridad", "nombre": "SECaaS",
      "h2": "SECaaS: seguridad como servicio, del endpoint al firewall en la nube",
-     "intro": "Convertimos la ciberseguridad en un servicio por consumo: paquetes todo en uno basados en Cisco, administrados por Consein desde Cisco Security Cloud Control."},
+     "intro": "Convertimos la ciberseguridad en un servicio por consumo: ciberseguridad administrada para empresas, en paquetes todo en uno basados en Cisco. Es outsourcing de ciberseguridad operado por Consein desde Cisco Security Cloud Control."},
     {"id": "proteccion-red", "linea": "Seguridad", "nombre": "Red local y perímetro",
-     "h2": "Control de la red local y protección del perímetro",
-     "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local, y Cisco Secure Firewall, para proteger el borde on-premise y la conectividad híbrida."},
+     "h2": "Control de acceso a la red (NAC) y firewall perimetral",
+     "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local y aplicar la segmentación de la red, y Cisco Secure Firewall, un firewall perimetral para empresas que protege el borde on-premise y la conectividad híbrida."},
     {"id": "colaboracion", "linea": "Colaboración", "nombre": "Colaboración",
-     "h2": "Hardware certificado para Microsoft Teams Rooms",
-     "intro": "Implementamos hardware Cisco certificado para la experiencia Microsoft Teams Rooms."},
+     "h2": "Salas Microsoft Teams Rooms con hardware Cisco",
+     "intro": "Hacemos la implementación de Teams Rooms en sus salas de reuniones: videoconferencia empresarial con hardware Cisco certificado, instalación y soporte."},
     {"id": "inteligencia-artificial", "linea": "IA", "nombre": "Inteligencia Artificial",
-     "h2": "Adopción responsable de IA",
-     "intro": "Acompañamos la adopción de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario y la validación."},
+     "h2": "Seguridad para inteligencia artificial",
+     "intro": "Acompañamos la adopción responsable de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario de activos de IA y la validación de modelos."},
 ]
 
 # Diferenciadores de SECaaS (Iniciativa SECaaS)
@@ -147,19 +147,19 @@ MATRIZ = [
     {"area": "conectividad", "id": "meraki-mx-secure-access", "nombre": "Meraki MX + Cisco Secure Access",
      "origen": [S3, S5, S2], "mensaje": "Arquitectura SASE: SD-WAN + seguridad en la nube.",
      "ms": "Microsoft 365 / Teams",
-     "valor": "Protegemos la red de cada sede y priorizamos el tráfico hacia aplicaciones SaaS como Microsoft 365 y Teams. Meraki MX aporta el SD-WAN y Cisco Secure Access, la seguridad en la nube: juntos forman una arquitectura SASE."},
+     "valor": "Protegemos la red de cada sede y priorizamos el tráfico hacia aplicaciones SaaS como Microsoft 365 y Teams. Meraki MX con SD-WAN y Cisco Secure Access, con su seguridad en la nube, forman juntos una arquitectura SASE."},
     {"area": "conectividad", "id": "catalyst-sdwan", "nombre": "Cisco Catalyst SD-WAN",
      "origen": [S5], "mensaje": "Conectividad ágil y resiliente hacia IaaS.",
      "ms": "Azure Virtual WAN / ExpressRoute",
-     "valor": "Conectamos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o GCP, con failover automático y políticas por aplicación."},
+     "valor": "Resolvemos la conectividad de sucursales a Azure: unimos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o GCP, con failover automático y políticas por aplicación."},
     {"area": "conectividad", "id": "meraki-ms-mr", "nombre": "Meraki MS (Switching) y Meraki MR (Wireless)",
      "origen": [S3], "mensaje": "Experiencia digital impecable en sus oficinas.",
      "ms": "Microsoft Teams / Microsoft 365",
-     "valor": "Optimizamos la infraestructura Wi-Fi y cableada para que la colaboración, la voz y el video funcionen de forma continua, con gestión 100% en la nube."},
+     "valor": "Optimizamos su Wi-Fi empresarial y su red cableada para que la colaboración, la voz y el video funcionen de forma continua: una red gestionada en la nube, desde un solo panel."},
     {"area": "conectividad", "id": "meraki-mg", "nombre": "Meraki MG (Cellular Gateways)",
      "origen": [S3], "mensaje": "Respaldo para que su operación continúe.",
      "ms": "Microsoft 365 / Azure",
-     "valor": "Integramos enlaces celulares 4G/5G de respaldo que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
+     "valor": "Sumamos respaldo 4G/5G para sucursales: enlaces celulares que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
 
     {"area": "secaas", "id": "secaas-essential", "nombre": "SECaaS Essential",
      "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
@@ -171,7 +171,7 @@ MATRIZ = [
                  "Integración con Active Directory / Entra ID.",
                  "Seguridad DNS: bloqueo de malware y phishing.",
                  "SWG (Secure Web Gateway): filtrado web completo.",
-                 "Controles de acceso ZTNA (Zero Trust Network Access).",
+                 "Controles de acceso ZTNA (Zero Trust Network Access), una alternativa a la VPN tradicional.",
                  "Gestión operativa de altas y bajas.",
                  "Monitoreo continuo NOC/SOC 24/7."],
      "valor": "Protegemos la identidad y el acceso web de sus usuarios y establecemos los cimientos de Zero Trust para su organización, como un servicio administrado por Consein."},
@@ -193,24 +193,24 @@ MATRIZ = [
     {"area": "proteccion-red", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
      "origen": [S1], "mensaje": "Control de acceso a la red (NAC).",
      "ms": "Microsoft Intune (integración complementaria)",
-     "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y segmentamos el acceso. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
+     "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y aplicamos la segmentación de la red por perfil. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
     {"area": "proteccion-red", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
      "origen": [S6], "mensaje": "Gobierno único de la conectividad híbrida.",
      "ms": "Azure Firewall / Microsoft Sentinel",
-     "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
+     "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un firewall perimetral de nueva generación y un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
     {"area": "colaboracion", "id": "room-bar", "nombre": "Cisco Room Bar / Room Bar Pro",
      "origen": [S4], "mensaje": "Salas híbridas simples y consistentes.",
      "ms": "Microsoft Teams Rooms",
-     "valor": "Instalamos un dispositivo certificado que ejecuta Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."},
+     "valor": "Equipamos sus salas de reuniones para Teams con un dispositivo certificado que ejecuta Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."},
     {"area": "colaboracion", "id": "board-pro", "nombre": "Cisco Board Pro Series",
      "origen": [S4], "mensaje": "Colaboración visual en sala.",
      "ms": "Microsoft Teams Rooms / Whiteboard",
-     "valor": "Llevamos la reunión híbrida y la pizarra de Teams a una pantalla táctil certificada para salas medianas."},
+     "valor": "Llevamos la reunión híbrida y la pizarra digital de Teams (Microsoft Whiteboard) a una pantalla táctil certificada para salas medianas."},
 
     {"area": "inteligencia-artificial", "id": "ai-defense", "nombre": "Cisco AI Defense",
      "origen": [S7], "mensaje": "Adopción responsable de IA.",
      "ms": "Azure AI Foundry / Copilot Studio",
-     "valor": "Empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones. Definimos el alcance de la protección en tiempo real junto a Prompt Shields y Defender for AI."},
+     "valor": "Empezamos por el inventario de activos de IA de su empresa y la validación de modelos y aplicaciones. Definimos el alcance de la protección en tiempo real junto a Prompt Shields y Defender for AI."},
 ]
 
 NUMEROS = {1: "un", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
@@ -241,7 +241,7 @@ def tecnologias_area(area_id):
 # ---------------------------------------------------------------------------
 PRODUCTOS = [
     {"code": "REN-01", "titulo": "Inventario de obsolescencia",
-     "valor": "Identificamos de forma gratuita qué equipos Cisco perdieron soporte y cuánto riesgo representan.",
+     "valor": "Identificamos de forma gratuita sus equipos Cisco en fin de soporte (end of life) y cuánto riesgo representan.",
      "ideal": "Cualquier empresa con switches, routers, firewalls, servidores o salas Cisco de más de cinco años.",
      "resuelve": "Basamos cada decisión de renovación en datos de riesgo y soporte.",
      "incluye": ["Inventariamos su base instalada Cisco.",
@@ -252,8 +252,8 @@ PRODUCTOS = [
      "tec": ("Toda la base instalada, clasificada en renovar ya, planificar o mantener", "Identificamos qué equipos limitan la integración con Azure, Intune, Sentinel o Teams Rooms"),
      "dato": "69% del hardware activo con fecha de fin de soporte programada quedará sin soporte en 2027 (NTT DATA, 2024).",
      "cta": "Inventariemos su red"},
-    {"code": "REN-02", "titulo": "Campus y WiFi renovados",
-     "valor": "Renovamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.",
+    {"code": "REN-02", "titulo": "Campus y Wi-Fi renovados",
+     "valor": "Renovación de switches y Wi-Fi: cambiamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.",
      "ideal": "Oficinas y sedes con switches o WiFi de generaciones anteriores.",
      "resuelve": "Aceleramos la red local y el Wi-Fi y habilitamos el acceso según el cumplimiento de Intune.",
      "incluye": ["Diseñamos la red LAN/WLAN gestionada en la nube con Meraki MS (switching) y Meraki MR (wireless).",
@@ -265,7 +265,7 @@ PRODUCTOS = [
      "dato": "Con Meraki, 40% menos tiempo de inactividad y 80% menos tickets de red (Forrester TEI, 2025).",
      "cta": "Renovemos su campus"},
     {"code": "REN-03", "titulo": "Sucursales con SD-WAN",
-     "valor": "Reemplazamos routers legados y enlaces MPLS por Meraki MX con SD-WAN y, junto a Cisco Secure Access, formamos una arquitectura SASE.",
+     "valor": "Hacemos el reemplazo de MPLS por SD-WAN: cambiamos routers legados y enlaces MPLS por Meraki MX con SD-WAN y, junto a Cisco Secure Access, formamos una arquitectura SASE.",
      "ideal": "Empresas con routers de sucursal antiguos o enlaces MPLS.",
      "resuelve": "Protegemos el borde de cada sucursal y priorizamos el tráfico de Microsoft 365 y Teams.",
      "incluye": ["Instalamos Meraki MX con SD-WAN en cada sucursal y sumamos la seguridad en la nube de Cisco Secure Access.",
@@ -277,7 +277,7 @@ PRODUCTOS = [
      "dato": "En el estudio de Forrester sobre Meraki, una organización redujo en más de dos tercios su costo mensual de conectividad por sede al migrar desde MPLS (TEI, 2025).",
      "cta": "Modernicemos sus sucursales"},
     {"code": "REN-04", "titulo": "Renovación de firewalls",
-     "valor": "Migramos sus firewalls legados a Cisco Secure Firewall, con soporte vigente y eventos en Microsoft Sentinel.",
+     "valor": "Hacemos la migración de Cisco ASA a Secure Firewall y de otros firewalls legados, con soporte vigente y eventos en Microsoft Sentinel.",
      "ideal": "Empresas con firewalls Cisco de generaciones anteriores, como familias ASA legadas.",
      "resuelve": "Actualizamos la protección de la puerta más atacada: el borde de internet.",
      "incluye": ["Migramos las políticas a Cisco Secure Firewall.",
@@ -300,7 +300,7 @@ PRODUCTOS = [
      "tec": ("Routers WAN de datacenter y sede central → Cisco Catalyst SD-WAN", "Azure Virtual WAN y ExpressRoute"),
      "cta": "Planifiquemos su WAN"},
     {"code": "REN-06", "titulo": "Salas para Teams",
-     "valor": "Convertimos sus salas de video legadas en salas Microsoft Teams Rooms con Cisco Room Bar y Board Pro Series.",
+     "valor": "Renovamos sus salas de videoconferencia a Teams Rooms con Cisco Room Bar y Board Pro Series.",
      "ideal": "Empresas con equipos de videoconferencia de generaciones anteriores.",
      "resuelve": "Unificamos la colaboración en Microsoft Teams Rooms, con hardware certificado.",
      "incluye": ["Instalamos Cisco Room Bar o Room Bar Pro, certificados para Teams Rooms, en salas pequeñas y medianas.",
@@ -312,7 +312,7 @@ PRODUCTOS = [
      "dato": "Teams Rooms: 342% de ROI (Forrester TEI).",
      "cta": "Renovemos sus salas"},
     {"code": "REN-07", "titulo": "Renovación financiada",
-     "valor": "Gestionamos ante bancos locales el financiamiento de su renovación, para distribuir la inversión en el tiempo.",
+     "valor": "Gestionamos ante bancos locales el financiamiento para renovación tecnológica, para distribuir la inversión en el tiempo.",
      "ideal": "Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.",
      "resuelve": "Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.",
      "incluye": ["Ayudamos a preparar el expediente técnico y económico del proyecto: alcance, equipos, costo total y plan por fases.",
@@ -346,9 +346,13 @@ FAQ = [
     ("¿Qué equipos usan para las salas Microsoft Teams Rooms?",
      "Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."),
     ("¿Cómo protegen a los usuarios remotos?",
-     "Con SECaaS: acceso ZTNA, filtrado web y seguridad DNS con Cisco Secure Access, MFA con Cisco Duo y, en SECaaS Advantage, EDR con Cisco Secure Endpoint, todo administrado por Consein."),
+     "Con SECaaS, una alternativa a la VPN tradicional: acceso ZTNA, filtrado web y seguridad DNS con Cisco Secure Access, MFA con Cisco Duo y, en SECaaS Advantage, EDR con Cisco Secure Endpoint, todo administrado por Consein."),
     ("¿Cómo acompañan la adopción de inteligencia artificial?",
      "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."),
+    ("¿Qué hacemos con los equipos Cisco en fin de soporte?",
+     "Con el Programa Renueva hacemos un inventario de obsolescencia gratuito, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms. También gestionamos el financiamiento con bancos locales."),
+    ("¿En qué países atienden?",
+     "Somos integrador Cisco y Microsoft para empresas en Venezuela (Caracas, Valencia y Maracaibo), Panamá, República Dominicana y Estados Unidos. Ofrecemos servicios gestionados de red y outsourcing de redes y seguridad en los cuatro países."),
 ]
 
 FUENTES = [
@@ -385,7 +389,7 @@ def detalle(o, etiqueta, renovacion=False):
         extra += f"<p><b>NortIA:</b> {E(o['nortia'])}</p>"
     return f"""<div class="detalle-src" id="detalle-{slug(o['code'])}">
   <p class="code">{o['code']} · {E(etiqueta)}</p>
-  <h2>{E(o['titulo'])}</h2>
+  <h3 class="dt">{E(o['titulo'])}</h3>
   <p class="value">{E(o['valor'])}</p>
   <dl>{dl}</dl>
   <div class="extra">{extra}</div>
@@ -471,11 +475,14 @@ ORG = {
     "@type": "Organization", "@id": URL_BASE + "#consein", "name": "Consein",
     "url": "https://www.consein.com/", "logo": URL_BASE + "assets/img/logo-consein.png",
     "foundingDate": "1987",
+    "description": "Integrador Cisco y Microsoft: SD-WAN, SASE, seguridad como servicio (SECaaS), control de acceso a la red y salas Microsoft Teams Rooms.",
     "areaServed": [{"@type": "Country", "name": p} for p in PAISES],
+    "knowsAbout": ["Cisco Meraki", "Cisco Catalyst SD-WAN", "SASE", "Seguridad como servicio (SECaaS)", "Cisco ISE",
+                   "Cisco Secure Firewall", "Microsoft Teams Rooms", "Cisco AI Defense", "Renovación de equipos Cisco"],
 }
 
 def pagina(archivo, actual, titulo, descripcion, cuerpo, jsonld):
-    url = URL_BASE + ("" if archivo == "index.html" else archivo.replace(".html", ""))
+    url = URL_BASE + ("" if archivo == "index.html" else archivo)
     ld = json.dumps({"@context": "https://schema.org", "@graph": [ORG] + jsonld}, ensure_ascii=False, indent=1)
     doc = f"""<!doctype html>
 <html lang="es">
@@ -484,7 +491,10 @@ def pagina(archivo, actual, titulo, descripcion, cuerpo, jsonld):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(titulo)}</title>
 <meta name="description" content="{E(descripcion)}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="{url}">
+<link rel="alternate" hreflang="es" href="{url}">
+<link rel="alternate" hreflang="x-default" href="{url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_LA">
 <meta property="og:site_name" content="Consein">
@@ -526,7 +536,7 @@ def banda(titulo, cta, href):
 
 def servicio_ld(o, cat):
     return {"@type": "Service", "name": o["titulo"], "description": o["valor"], "serviceType": cat,
-            "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + ("soluciones" if o["code"].startswith("CSC") else "productos") + "#" + slug(o["code"]),
+            "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "productos.html#" + slug(o["code"]),
             "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}
 
 
@@ -660,9 +670,9 @@ def inicio():
 <section class="hero">
   <div class="wrap hero-grid">
    <div class="hero-copy">
-    <p class="eyebrow">Soluciones Cisco · Consein</p>
-    <h1><em>Sinergia exponencial:</em><span>su plataforma Microsoft, potenciada por una red Cisco</span></h1>
-    <p class="lead">Integramos redes, seguridad y salas de reunión Cisco con Microsoft 365, Entra ID, Azure y Teams, en un solo servicio gestionado y con un solo responsable.</p>
+    <p class="eyebrow">Integrador Cisco y Microsoft</p>
+    <h1><em>Sinergia exponencial:</em> <span>su plataforma Microsoft, potenciada por una red Cisco</span></h1>
+    <p class="lead">Integramos soluciones Cisco y Microsoft para empresas en Venezuela, Panamá, República Dominicana y Estados Unidos: redes, seguridad y salas de reunión Cisco con Microsoft 365, Entra ID, Azure y Teams, en un solo servicio gestionado.</p>
     <div class="actions">
       <a class="btn btn-primary" href="index.html#contacto">Hablar con un especialista</a>
       <a class="btn btn-line" href="soluciones.html">Ver soluciones</a>
@@ -725,7 +735,7 @@ def inicio():
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Nosotros</p><h2>Por qué Consein</h2></div>
     <div class="grid g4 proof">
-      <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Operamos en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
+      <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Somos integrador Cisco en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
       <div>{D(icono('certificado'))}<b>82 certificaciones</b><p>Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p></div>
       <div>{D(icono('trofeo'))}<b>WITSA 2026</b><p>ARIA IA Generativa, que desarrollamos con Bancaribe, recibió el reconocimiento de los Global AI Awards.</p></div>
       <div>{D(icono('objetivo'))}<b>Un responsable</b><p>Operamos ambos mundos y validamos cada producto Cisco contra su plataforma Microsoft.</p></div>
@@ -765,11 +775,11 @@ def inicio():
     {faq}
   </div>
 </section>"""
-    ld = [{"@type": "WebPage", "name": "Soluciones Cisco + Microsoft", "url": URL_BASE, "inLanguage": "es"},
+    ld = [{"@type": "WebPage", "name": "Integrador Cisco y Microsoft", "url": URL_BASE, "inLanguage": "es"},
           {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]
     pagina("index.html", "index",
-           "Soluciones Cisco y Microsoft: redes, ciberseguridad e IA | Consein",
-           "Integramos redes, seguridad y salas Cisco con su plataforma Microsoft: SASE y SD-WAN, seguridad como servicio (SECaaS), Cisco ISE, Microsoft Teams Rooms e IA responsable. Venezuela, Panamá, República Dominicana y EE. UU.",
+           "Integrador Cisco y Microsoft en Venezuela y Panamá | Consein",
+           "Soluciones Cisco y Microsoft para empresas: SD-WAN, SASE, SECaaS, Cisco ISE y Teams Rooms. Venezuela, Panamá, República Dominicana y EE. UU.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -794,7 +804,7 @@ def tarjeta_producto(m, area):
   <a class="more" href="#{m['id']}" aria-label="Seguir leyendo: {E(m['nombre'])}">Seguir leyendo…</a>
   <div class="detalle-src" id="detalle-{m['id']}">
     <p class="code">{E(area['nombre'])} · Producto Cisco</p>
-    <h2>{E(m['nombre'])}</h2>
+    <h3 class="dt">{E(m['nombre'])}</h3>
     <p class="value">{E(m['mensaje'])}</p>
     <dl>{dl}</dl>
     <a class="btn btn-primary" href="index.html?interes={area['id']}#contacto">Solicitar información</a>
@@ -833,7 +843,7 @@ def soluciones():
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones Cisco › Soluciones de Valor</p>
     <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas</p>
-    <h1>Cisco suma valor a su plataforma Microsoft</h1>
+    <h1>Soluciones Cisco que suman valor a su plataforma Microsoft</h1>
     <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
     {sticker_renueva("-sol")}
@@ -857,20 +867,20 @@ def soluciones():
 </section>
 {areas}
 {banda('Conversemos sobre el valor que Cisco suma a su plataforma Microsoft', 'Hablar con un especialista', 'index.html#contacto')}"""
-    ld = [{"@type": "WebPage", "name": "Cisco suma valor a su plataforma Microsoft", "url": URL_BASE + "soluciones", "inLanguage": "es",
+    ld = [{"@type": "WebPage", "name": "Soluciones Cisco que suman valor a su plataforma Microsoft", "url": URL_BASE + "soluciones.html", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
-               {"@type": "ListItem", "position": 2, "name": "Soluciones de Valor", "item": URL_BASE + "soluciones"}]}},
+               {"@type": "ListItem", "position": 2, "name": "Soluciones de Valor", "item": URL_BASE + "soluciones.html"}]}},
           {"@type": "ItemList", "name": "Matriz de valor Cisco + Microsoft",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": {
                "@type": "Service", "name": m["nombre"], "description": m["mensaje"] + " " + m["valor"],
                "serviceType": next(e["nombre"] for e in ESPECIALIDADES if e["id"] == m["area"]),
                "category": next(e["linea"] for e in ESPECIALIDADES if e["id"] == m["area"]),
-               "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones#" + m["id"],
+               "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones.html#" + m["id"],
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
-           "Soluciones Cisco: SASE, SD-WAN, SECaaS, ISE y Teams Rooms | Consein",
-           "Seguridad como servicio (SECaaS) con Cisco Duo, Secure Access y Secure Endpoint; SASE y SD-WAN con Meraki y Catalyst; Cisco ISE, Secure Firewall, Room Bar, Board Pro y AI Defense, integrados con su plataforma Microsoft.",
+           "Soluciones Cisco: SD-WAN, SASE, SECaaS y Teams Rooms | Consein",
+           "SD-WAN para empresas, arquitectura SASE, seguridad como servicio (SECaaS), Cisco ISE, Secure Firewall y Teams Rooms, integrados con Microsoft.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -880,7 +890,7 @@ def productos():
     cards = "".join(tarjeta(p, "Programa Renueva", renovacion=True) for p in PRODUCTOS)
     rutas = [
         ("Switches de campus legados", "Meraki MS (Switching)", "Red cableada para la colaboración, la voz y el video de Teams; control de acceso a la red con Cisco ISE."),
-        ("WiFi de generaciones anteriores", "Meraki MR (Wireless)", "Wi-Fi gestionado en la nube para Microsoft Teams y Microsoft 365."),
+        ("Wi-Fi de generaciones anteriores", "Meraki MR (Wireless)", "Wi-Fi gestionado en la nube para Microsoft Teams y Microsoft 365."),
         ("Routers de sucursal y MPLS", "Meraki MX + Cisco Secure Access (SASE)", "Prioridad para el tráfico hacia Microsoft 365 y Teams, con seguridad en la nube."),
         ("Sedes sin enlace de respaldo", "Meraki MG (Cellular Gateways)", "Acceso a Microsoft 365 y Azure cuando falla el enlace principal, sujeto a cobertura celular."),
         ("Firewalls legados", "Cisco Secure Firewall", "Gobierno único de reglas con Azure Firewall y registros en Microsoft Sentinel."),
@@ -890,7 +900,7 @@ def productos():
     filas = "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td></tr>" for a, b, c in rutas)
     senales = [
         "Sus equipos Cisco tienen más de cinco años o ya recibieron un anuncio de fin de venta o de soporte.",
-        "El WiFi se satura en reuniones de Teams o en horas pico.",
+        "El Wi-Fi se satura en reuniones de Teams o en horas pico.",
         "Sus firewalls o routers de sucursal llevan tiempo sin actualizaciones.",
         "Cada cambio de configuración exige visitar sede por sede.",
         "Su red todavía aplica políticas de acceso independientes del cumplimiento de Intune.",
@@ -902,8 +912,8 @@ def productos():
 <section class="page-head">
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Ofertas de Productos</p>
-    <h1>Programa Renueva: renovación de redes Cisco</h1>
-    <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
+    <h1>Programa Renueva: renovación de equipos Cisco</h1>
+    <p class="lead">Hacemos la renovación de hardware Cisco: cambiamos sus equipos Cisco en fin de soporte por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
     {sticker_renueva("-prod")}
   </div>
@@ -920,7 +930,7 @@ def productos():
       <div class="stat" style="--p:42.5"><b>42,5%</b><p>de las vulnerabilidades explotadas en equipos de borde afectó a dispositivos en fin de vida.</p><cite>VulnCheck, 2025</cite></div>
       <div class="stat" style="--p:31"><b>31%</b><p>de las brechas comenzó por la explotación de vulnerabilidades.</p><cite>Verizon DBIR, 2026</cite></div>
     </div>
-    <p class="note" style="margin-top:40px">En febrero de 2026, la CISA de Estados Unidos emitió la directiva BOD 26-02, que ordena reemplazar los equipos de borde sin soporte del fabricante. Auditorías, contratos y pólizas de ciberseguro ya la toman como referencia.</p>
+    <p class="note" style="margin-top:40px">Un equipo Cisco en fin de vida (end of life) deja de recibir parches de seguridad. En febrero de 2026, la CISA de Estados Unidos emitió la directiva BOD 26-02, que ordena reemplazar los equipos de borde sin soporte del fabricante. Auditorías, contratos y pólizas de ciberseguro ya la toman como referencia.</p>
   </div>
 </section>
 
@@ -969,15 +979,15 @@ def productos():
   </div>
 </section>
 {banda('Inventariemos su red gratis', 'Solicitar inventario', 'index.html?interes=REN-01#contacto')}"""
-    ld = [{"@type": "WebPage", "name": "Programa Renueva: renovación de redes Cisco", "url": URL_BASE + "productos", "inLanguage": "es",
+    ld = [{"@type": "WebPage", "name": "Programa Renueva: renovación de equipos Cisco", "url": URL_BASE + "productos.html", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
-               {"@type": "ListItem", "position": 2, "name": "Ofertas de Productos", "item": URL_BASE + "productos"}]}},
+               {"@type": "ListItem", "position": 2, "name": "Ofertas de Productos", "item": URL_BASE + "productos.html"}]}},
           {"@type": "ItemList", "name": "Programa Renueva",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": servicio_ld(p, "Renovación de infraestructura Cisco")} for i, p in enumerate(PRODUCTOS)]}]
     pagina("productos.html", "productos",
-           "Programa Renueva: renovación de equipos Cisco obsoletos | Consein",
-           "Renovamos switches, WiFi, routers, firewalls y salas Cisco en fin de soporte con Meraki, Cisco SD-WAN, Secure Firewall, Room Bar y Board Pro. Inventario gratuito, migración por fases y financiamiento con bancos locales.",
+           "Renovación de equipos Cisco en fin de soporte | Consein",
+           "Renovamos switches, Wi-Fi, routers, firewalls y salas Cisco en fin de soporte. Inventario de obsolescencia gratis, migración por fases y financiamiento.",
            cuerpo, ld)
 
 
@@ -1073,11 +1083,34 @@ def version_unica(nombre="Consein_Cisco_sitio_completo.html", digital=False):
     print("✔", nombre, f"({len(doc) // 1024} KB, un solo archivo)")
 
 
+def archivos_seo():
+    """sitemap.xml y robots.txt para el sitio de tres páginas."""
+    import datetime
+    hoy = datetime.date.today().isoformat()
+    urls = "".join(f"""  <url><loc>{URL_BASE}{a}</loc><lastmod>{hoy}</lastmod><priority>{pr}</priority></url>
+""" for a, pr in (("", "1.0"), ("soluciones.html", "0.9"), ("productos.html", "0.9")))
+    (RAIZ / "sitemap.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{urls}</urlset>
+""", encoding="utf-8")
+    from urllib.parse import urlparse
+    ruta = urlparse(URL_BASE).path
+    (RAIZ / "robots.txt").write_text(f"""# Copie estas reglas en el robots.txt de la raíz del dominio: los buscadores solo leen ese archivo.
+User-agent: *
+Allow: /
+Disallow: {ruta}_fuente/
+
+Sitemap: {URL_BASE}sitemap.xml
+""", encoding="utf-8")
+    print("✔ sitemap.xml y robots.txt")
+
+
 if __name__ == "__main__":
     # Tema minimal: sitio de 3 páginas + versión de un solo archivo
     inicio()
     soluciones()
     productos()
+    archivos_seo()
     version_unica()
     # Tema digital: versión de ejemplo en un solo archivo (paleta #1b245b / #58bb47)
     TEMA = "digital"

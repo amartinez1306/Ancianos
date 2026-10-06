@@ -1,0 +1,6 @@
+# Copie estas reglas en el robots.txt de la raíz del dominio: los buscadores solo leen ese archivo.
+User-agent: *
+Allow: /
+Disallow: /cisco/_fuente/
+
+Sitemap: https://www.consein.com/cisco/sitemap.xml

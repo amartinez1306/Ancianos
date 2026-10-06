@@ -63,10 +63,15 @@ separado, venta directa de User/Breach Protection, Programa Renueva, los siete p
 No se publica en el sitio.
 
 ## SEO
-`Palabras_clave_SEO_Consein_Cisco.docx` (v2) lista 67 palabras clave por área de práctica y para el Programa Renueva,
-los términos retirados respecto a la versión 1 y los títulos, descripciones y H1 vigentes de cada página.
-El sitio ya incluye títulos y descripciones por página, un H2 por especialidad, canonical, Open Graph
-y datos estructurados schema.org (Organization, Service, BreadcrumbList, FAQPage).
+- **`Manual_SEO_Consein_Cisco.docx`** (editable): objetivo y alcance, ajustes aplicados, mapa de palabras clave por página,
+  reglas de redacción, plantillas de metadatos, SEO técnico y local, plan de contenidos, plan de 90 días y pendientes.
+- **`Palabras_clave_SEO_Consein_Cisco.docx`** (v3): la lista de palabras clave por área y para el Programa Renueva.
+- **Lista maestra:** `_fuente/palabras_clave.json`. Los dos documentos se generan desde ahí:
+  `node _fuente/generar_docs_seo.js .` (requiere `npm install docx`).
+- **Verificación:** `python3 _fuente/verificar_seo.py` confirma que cada palabra clave aparece en su página.
+- El sitio genera `sitemap.xml` y `robots.txt` (copie sus reglas en el robots.txt de la raíz del dominio), e incluye
+  title y description por página, canonical, hreflang, Open Graph y datos estructurados schema.org
+  (Organization, WebPage, BreadcrumbList, Service, FAQPage).
 
 ## Antes de publicar
 - Confirmar el nivel de partnership y las certificaciones Cisco vigentes de Consein.
