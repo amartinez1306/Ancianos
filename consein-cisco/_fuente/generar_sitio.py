@@ -600,7 +600,7 @@ def pasos_consein():
 
 
 def sticker_renueva(sufijo=""):
-    """Sticker discreto (Inicio y Soluciones de Valor): lleva al aviso completo en Ofertas de Productos.
+    """Sticker discreto (Inicio, Soluciones de Valor y Ofertas de Productos): lleva al aviso completo en Ofertas de Productos.
     El sufijo evita ids repetidos cuando todas las páginas conviven en la versión de un solo archivo."""
     return f"""<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
   <svg viewBox="0 0 160 160" aria-hidden="true">
@@ -905,6 +905,7 @@ def productos():
     <h1>Programa Renueva: renovación de redes Cisco</h1>
     <p class="lead">Renovamos sus equipos Cisco obsoletos por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
+    {sticker_renueva("-prod")}
   </div>
 </section>
 {aviso('productos')}

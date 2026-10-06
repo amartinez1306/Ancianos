@@ -31,7 +31,7 @@ Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
 En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.
 
 ## Aviso de renovación de hardware
-- **Inicio y Soluciones de Valor:** sticker circular discreto en el encabezado ("Inventario gratis", con el texto giratorio
+- **Inicio, Soluciones de Valor y Ofertas de Productos:** sticker circular discreto en el encabezado ("Inventario gratis", con el texto giratorio
   "Renovación de hardware · Programa Renueva") que lleva al aviso completo. Se edita en `sticker_renueva()`.
 - **Ofertas de Productos:** aviso completo "Inventariamos gratis su hardware Cisco", después del encabezado.
   Textos en `AVISOS` e ilustración en `arte_hardware()`.
