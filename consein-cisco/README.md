@@ -56,6 +56,11 @@ El comando regenera las tres páginas, la versión de un solo archivo y el dise�
 - Texto azul oscuro sobre verde; nunca texto blanco sobre verde (contraste insuficiente).
 - Respeta la preferencia del sistema "reducir movimiento".
 
+## Matriz de valor (uso interno)
+`Nueva_Matriz_Valor_Cisco_Microsoft_Consein_v3.docx` consolida lo incorporado: SECaaS, ISE y Secure Firewall por
+separado, venta directa de User/Breach Protection, Programa Renueva, los siete pasos, decisiones pendientes y cambios.
+No se publica en el sitio.
+
 ## SEO
 `Palabras_clave_SEO_Consein_Cisco.docx` (v2) lista 67 palabras clave por área de práctica y para el Programa Renueva,
 los términos retirados respecto a la versión 1 y los títulos, descripciones y H1 vigentes de cada página.
