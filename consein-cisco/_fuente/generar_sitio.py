@@ -599,14 +599,15 @@ def pasos_consein():
     </div>"""
 
 
-def sticker_renueva():
-    """Sticker discreto para Inicio: lleva al aviso completo en Ofertas de Productos."""
-    return """<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
+def sticker_renueva(sufijo=""):
+    """Sticker discreto (Inicio y Soluciones de Valor): lleva al aviso completo en Ofertas de Productos.
+    El sufijo evita ids repetidos cuando todas las páginas conviven en la versión de un solo archivo."""
+    return f"""<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
   <svg viewBox="0 0 160 160" aria-hidden="true">
-    <defs><path id="st-c" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
+    <defs><path id="st-c{sufijo}" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
     <circle class="st-bg" cx="80" cy="80" r="78"/>
     <circle class="st-in" cx="80" cy="80" r="47"/>
-    <g class="st-ring"><text class="st-t"><textPath href="#st-c" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
+    <g class="st-ring"><text class="st-t"><textPath href="#st-c{sufijo}" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
   </svg>
   <span class="st-core"><b>Inventario gratis</b><i>→</i></span>
 </a>"""
@@ -835,6 +836,7 @@ def soluciones():
     <h1>Cisco suma valor a su plataforma Microsoft</h1>
     <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
+    {sticker_renueva("-sol")}
   </div>
 </section>
 

@@ -430,6 +430,20 @@ ol.aviso-list li::before{content:counter(av)}
 .area-head p.linea{color:#fff;margin:0 0 12px}
 .tile .linea{margin-bottom:12px}
 
+/* Sticker en el encabezado de Soluciones de Valor */
+.page-head>.wrap{position:relative}
+.page-head .sticker{top:8px;bottom:auto}
+.page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:180px}
+@media (max-width:1000px){
+  .page-head .sticker{top:-8px}
+  .page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:110px}
+}
+@media (max-width:600px){
+  .page-head .sticker{top:-56px}
+  .page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:0}
+  .page-head:has(.sticker) .crumbs,.page-head:has(.sticker) .eyebrow{padding-right:96px}
+}
+
 /* ==========================================================================
    Consein · Tema digital (moderno y tecnológico)
    Paleta principal: Azul oscuro #1b245b · Verde #58bb47
@@ -941,6 +955,15 @@ dialog.detail{border-radius:20px;overflow-y:auto;overscroll-behavior:contain}
     <h1>Cisco suma valor a su plataforma Microsoft</h1>
     <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft, en cinco áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica"><a href="#soluciones:conectividad">Conectividad LAN y WAN</a><a href="#soluciones:secaas">SECaaS</a><a href="#soluciones:proteccion-red">Red local y perímetro</a><a href="#soluciones:colaboracion">Colaboración</a><a href="#soluciones:inteligencia-artificial">Inteligencia Artificial</a></nav>
+    <a class="sticker" href="#productos:renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
+  <svg viewBox="0 0 160 160" aria-hidden="true">
+    <defs><path id="st-c-sol" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
+    <circle class="st-bg" cx="80" cy="80" r="78"/>
+    <circle class="st-in" cx="80" cy="80" r="47"/>
+    <g class="st-ring"><text class="st-t"><textPath href="#st-c-sol" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
+  </svg>
+  <span class="st-core"><b>Inventario gratis</b><i>→</i></span>
+</a>
   </div>
 </section>
 

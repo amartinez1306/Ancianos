@@ -421,3 +421,17 @@ ol.aviso-list li::before{content:counter(av)}
 .linea{display:block;width:max-content;max-width:100%;margin:0 0 10px;padding:4px 12px;border-radius:20px;background:var(--navy);color:#fff;font:600 .72rem var(--text);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 .area-head p.linea{color:#fff;margin:0 0 12px}
 .tile .linea{margin-bottom:12px}
+
+/* Sticker en el encabezado de Soluciones de Valor */
+.page-head>.wrap{position:relative}
+.page-head .sticker{top:8px;bottom:auto}
+.page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:180px}
+@media (max-width:1000px){
+  .page-head .sticker{top:-8px}
+  .page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:110px}
+}
+@media (max-width:600px){
+  .page-head .sticker{top:-56px}
+  .page-head:has(.sticker) h1,.page-head:has(.sticker) .lead{padding-right:0}
+  .page-head:has(.sticker) .crumbs,.page-head:has(.sticker) .eyebrow{padding-right:96px}
+}
