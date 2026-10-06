@@ -733,13 +733,6 @@ def inicio():
   </div>
 </section>
 
-<section class="soft faq" id="preguntas">
-  <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Preguntas frecuentes</p><h2>Respondemos sus dudas</h2></div>
-    {faq}
-  </div>
-</section>
-
 <section id="contacto">
   <div class="wrap contact">
     <div>
@@ -763,6 +756,13 @@ def inicio():
       <button class="btn btn-primary" type="submit">Enviar</button>
       <p class="ok" id="form-ok">Gracias. Le contactaremos en breve. (Maqueta: en producción conectamos este formulario al CRM).</p>
     </form>
+  </div>
+</section>
+
+<section class="soft faq" id="preguntas">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Preguntas frecuentes</p><h2>Respondemos sus dudas</h2></div>
+    {faq}
   </div>
 </section>"""
     ld = [{"@type": "WebPage", "name": "Soluciones Cisco + Microsoft", "url": URL_BASE, "inLanguage": "es"},

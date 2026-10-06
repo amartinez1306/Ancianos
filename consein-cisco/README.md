@@ -13,7 +13,7 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 5 áreas de práctica (incluida SECaaS), Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, preguntas frecuentes, contacto |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 5 áreas de práctica (incluida SECaaS), Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, contacto (llamado a la acción) y preguntas frecuentes |
 | `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Criterio, vista consolidada y 11 soluciones en 5 áreas: Conectividad LAN y WAN, SECaaS (Essential y Advantage), Red local y perímetro (ISE y Secure Firewall, por separado), Colaboración e IA |
 | `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
 
