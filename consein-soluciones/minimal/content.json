@@ -1201,8 +1201,9 @@
      "alerta": {
       "titulo": "SQL 2016 está fuera de mantenimiento",
       "detalle": "Sin actualizaciones de seguridad desde el 14 de julio de 2026",
-      "corto": "SQL 2016",
-      "sub": "Fuera de mantenimiento"
+      "anillo": "SQL 2016 · FUERA DE MANTENIMIENTO ·",
+      "nucleo_small": "Sin parches",
+      "nucleo": "SQL 2016"
      }
     },
     {

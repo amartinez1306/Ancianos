@@ -240,17 +240,33 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .faq .ans p{margin:0}
 @media (max-width:980px){.faq-grid{grid-template-columns:1fr;gap:28px}.faq-aside{position:static}}
 
-/* Sello de alerta en ofertas (discreto, redondo) */
-.offer.has-alert h3{padding-right:84px;min-height:64px}
-.alert-badge{position:absolute;top:16px;right:16px;width:72px;height:72px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;text-align:center;
-  background:#1b245b;color:#fff;border:1.5px solid #F5A623;box-shadow:0 0 0 3px #fff,0 6px 14px rgba(27,36,91,.18);transform:rotate(-8deg);z-index:2}
-.alert-badge svg{width:13px;height:13px;color:#F5A623;margin-bottom:1px}
-.alert-badge b{font-family:var(--title);font-size:.66rem;line-height:1}
-.alert-badge small{font-size:.4rem;line-height:1.2;letter-spacing:0;text-transform:uppercase;color:#d8dcf0;max-width:62px}
-.alert-row{display:flex;align-items:center;gap:14px;margin-top:16px}
-.alert-row .alert-badge{position:static;flex:0 0 72px;box-shadow:none}
-.alert-row p{margin:0;font-size:.8rem;color:#c3c9e6;line-height:1.4}
-.alert-row p b{display:block;color:#fff;font-size:.86rem}
+/* Sticker de alerta en ofertas (modelo sitio Cisco) */
+.offer.has-alert{overflow:visible;position:relative}
+.offer.has-alert h3{padding-right:96px;min-height:72px}
+.st-alert{position:absolute;top:-22px;right:-12px;z-index:3;width:112px;height:112px;padding:0;border:0;background:none;cursor:pointer;
+  transform:rotate(-10deg);transition:transform .25s ease;filter:drop-shadow(0 10px 20px rgba(0,10,60,.25))}
+.st-alert:hover,.st-alert:focus-visible{transform:rotate(0deg) scale(1.06);outline:none}
+.st-alert svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.st-alert .st-bg{fill:#58bb47}
+.st-alert .st-in{fill:#1b245b}
+.st-alert .st-t{fill:#1b245b;font:700 11.5px Poppins,Arial,sans-serif;letter-spacing:.06em}
+.st-alert .st-ring{transform-box:view-box;transform-origin:80px 80px;animation:st-spin 18s linear infinite}
+@keyframes st-spin{to{transform:rotate(360deg)}}
+.st-alert .st-core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 26px;line-height:1.1}
+.st-alert .st-core small{font:600 .42rem Poppins,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7fd06f;margin-bottom:2px}
+.st-alert .st-core b{font-family:var(--title);font-weight:700;font-size:.74rem;color:#fff}
+.st-alert .st-core i{font-style:normal;font-weight:700;color:#58bb47;margin-top:1px;font-size:.8rem}
+.alert-row{display:flex;align-items:center;gap:16px;margin:16px 0 0}
+.alert-row .st-alert{position:relative;top:auto;right:auto;flex:0 0 96px;width:96px;height:96px;cursor:default}
+.alert-row p{margin:0;font-size:.82rem;line-height:1.4}
+.alert-row .st-core{padding:0 14px}
+.alert-row .st-core small{font-size:.36rem;white-space:nowrap}
+.alert-row .st-core b{font-size:.64rem;white-space:nowrap}
+.alert-row p b{display:block;font-size:.88rem}
+.sheet-head .alert-row p{color:#c3c9e6}
+.sheet-head .alert-row p b{color:#fff}
+@media (prefers-reduced-motion:reduce){.st-alert .st-ring{animation:none}}
+@media (max-width:720px){.st-alert{right:-6px;width:100px;height:100px}.offer.has-alert h3{padding-right:88px}}
 
 /* Evidencia */
 .metric{padding:30px;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-line);position:relative;overflow:hidden}
@@ -499,16 +515,27 @@ function menu(){
 }
 
 /* Alerta destacada en una oferta (ej.: SQL Server 2016 fuera de mantenimiento) */
-function alertHTML(a, inModal){
-  const badge = `<span class="alert-badge" role="note" title="${esc(a.titulo)}. ${esc(a.detalle)}" aria-label="${esc(a.titulo)}. ${esc(a.detalle)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><b>${esc(a.corto)}</b><small>${esc(a.sub)}</small></span>`;
-  return inModal ? `<div class="alert-row">${badge}<p><b>${esc(a.titulo)}</b>${esc(a.detalle)}</p></div>` : badge;
+/* Sticker de alerta (modelo del sitio Cisco: disco con anillo de texto giratorio y núcleo) */
+let stN = 0;
+function alertHTML(a, inModal, code){
+  const id = 'stc' + (++stN);
+  const st = `<button type="button" class="st-alert" ${code ? `data-offer="${esc(code)}"` : 'tabindex="-1"'} aria-label="${esc(a.titulo)}. ${esc(a.detalle)}" title="${esc(a.titulo)}. ${esc(a.detalle)}">
+    <svg viewBox="0 0 160 160" aria-hidden="true">
+      <defs><path id="${id}" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
+      <circle class="st-bg" cx="80" cy="80" r="78"/>
+      <circle class="st-in" cx="80" cy="80" r="47"/>
+      <g class="st-ring"><text class="st-t"><textPath href="#${id}" textLength="378" lengthAdjust="spacing">${esc(a.anillo)}</textPath></text></g>
+    </svg>
+    <span class="st-core"><small>${esc(a.nucleo_small)}</small><b>${esc(a.nucleo)}</b><i>${code ? '→' : '!'}</i></span>
+  </button>`;
+  return inModal ? `<div class="alert-row">${st}<p><b>${esc(a.titulo)}</b>${esc(a.detalle)}</p></div>` : st;
 }
 /* ---------- Ofertas: título + valor + "Seguir leyendo…" ---------- */
 function offers(page){
   return `<div class="g g3">${page.offerings.map((o, i, all) => `${o.linea && o.linea !== (all[i-1] || {}).linea ? `<h3 class="line-h" id="line-${lineId(o.linea)}">${esc(o.linea)}</h3>` : ''}
     <article class="offer${o.alerta ? ' has-alert' : ''}">
       ${o.code === page.star ? `<span class="badge">${o.reconocimiento ? '★ Premio WITSA' : 'Destacada'}</span>` : ''}
-      ${o.alerta ? alertHTML(o.alerta) : ''}
+      ${o.alerta ? alertHTML(o.alerta, false, o.code) : ''}
       <h3>${esc(o.name)}</h3>
       <p>${esc(o.valor)}</p>
       <button class="more" data-offer="${esc(o.code)}">Seguir leyendo…</button>
