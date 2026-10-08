@@ -131,7 +131,7 @@ c.push(h1("2. Ajustes que aplicamos en el sitio"),
     ["Robots y hreflang", "Meta robots index, follow y hreflang es / x-default en cada página."],
     ["sitemap.xml y robots.txt", "Se generan automáticamente con el sitio."],
     ["Datos estructurados", "Organization con descripción y temas de especialidad (knowsAbout), WebPage, BreadcrumbList, ItemList de Service (11 + 8) con categoría y FAQPage (9 preguntas)."],
-    ["Mensaje multinube", "Microsoft sigue como BASE en todos los titulares. Cada ficha suma la fila “También en otras plataformas” (AWS, Google Cloud, Google Workspace, Webex, otras MDM y SIEM), cada área muestra “También en:”, el Programa Renueva lo repite en el aviso, la tabla de rutas, la introducción de las ofertas y cada oferta, y hay una pregunta frecuente nueva: “¿Trabajan solo con Microsoft?”."],
+    ["Mensaje multinube", "Microsoft sigue como BASE en todos los titulares. Cada ficha suma la fila “También en otras plataformas” (AWS, Google Cloud, Google Workspace, Webex, otras MDM y SIEM), cada área muestra “También en:”, el Programa Renueva lo repite en el aviso, la tabla de rutas, la introducción de las ofertas y cada oferta, hay una pregunta frecuente nueva (“¿Trabajan solo con Microsoft?”) y los gráficos del diseño digital muestran una nota discreta “*AWS / Google Cloud” bajo Microsoft · BASE."],
     ["Verificador", "Script _fuente/verificar_seo.py: confirma que cada palabra clave aparece en su página después de cualquier cambio de texto."],
   ], [2400, 6960]));
 
