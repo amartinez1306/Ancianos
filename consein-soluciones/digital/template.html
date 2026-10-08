@@ -274,6 +274,16 @@ nav.main .cta{background:var(--green);color:#fff;padding:9px 18px;border-radius:
 .alert-row p b{display:block;font-size:.88rem}
 .sheet-head .alert-row p{color:#c3c9e6}
 .sheet-head .alert-row p b{color:#fff}
+.st-award .st-bg{fill:#fff;stroke:#C9952B;stroke-width:1.6}
+.st-award .st-in{fill:#fff;stroke:#C9952B;stroke-width:.6;stroke-dasharray:1.5 2.5}
+.st-award .st-t{fill:#A9791F;font:700 10px Poppins,Arial,sans-serif;letter-spacing:.08em}
+.st-award{filter:drop-shadow(0 6px 16px rgba(27,36,91,.16))}
+.st-award{width:132px;height:132px;top:-34px;right:-16px}
+.st-award .st-core{padding:0 12px}
+.st-award .st-core img{width:88%;height:auto;display:block}
+.alert-row .st-award{flex-basis:112px;width:112px;height:112px}
+.award-row{background:rgba(201,149,43,.08);border:1px solid rgba(201,149,43,.45);border-radius:14px;padding:12px 16px}
+.award-row p b{color:#E6C47A}
 @media (prefers-reduced-motion:reduce){.st-alert .st-ring{animation:none}}
 @media (max-width:720px){.st-alert{right:-6px;width:100px;height:100px}.offer.has-alert h3{padding-right:88px}}
 
@@ -565,12 +575,26 @@ function alertHTML(a, inModal, code){
   </button>`;
   return inModal ? `<div class="alert-row">${st}<p><b>${esc(a.titulo)}</b>${esc(a.detalle)}</p></div>` : st;
 }
+/* Sello de premio (mismo modelo de sticker: anillo de texto giratorio y logo del premio al centro) */
+function awardHTML(a, inModal, code){
+  const id = 'stw' + (++stN);
+  const st = `<button type="button" class="st-alert st-award" ${code ? `data-offer="${esc(code)}"` : 'tabindex="-1"'} aria-label="${esc(a.titulo)}. ${esc(a.detalle)}" title="${esc(a.titulo)}">
+    <svg viewBox="0 0 160 160" aria-hidden="true">
+      <defs><path id="${id}" d="M80 80 m-67 0 a67 67 0 1 1 134 0 a67 67 0 1 1 -134 0"/></defs>
+      <circle class="st-bg" cx="80" cy="80" r="78"/>
+      <circle class="st-in" cx="80" cy="80" r="57"/>
+      <g class="st-ring"><text class="st-t"><textPath href="#${id}" textLength="414" lengthAdjust="spacing">${esc(a.anillo)}</textPath></text></g>
+    </svg>
+    <span class="st-core"><img src="__WITSA__" alt="WITSA Global AI Awards 2026" width="84" height="44"></span>
+  </button>`;
+  return inModal ? `<div class="alert-row award-row">${st}<p><b>${esc(a.titulo)}</b>${esc(a.detalle)}</p></div>` : st;
+}
 /* ---------- Ofertas: título + valor + "Seguir leyendo…" ---------- */
 function offers(page){
   return `<div class="g g3">${page.offerings.map((o, i, all) => `${o.linea && o.linea !== (all[i-1] || {}).linea ? `<h3 class="line-h" id="line-${lineId(o.linea)}">${esc(o.linea)}</h3>` : ''}
-    <article class="offer${o.alerta ? ' has-alert' : ''}">
+    <article class="offer${o.alerta || o.premio ? ' has-alert' : ''}">
       ${o.code === page.star ? `<span class="badge">${o.reconocimiento ? '★ Premio WITSA' : 'Destacada'}</span>` : ''}
-      ${o.alerta ? alertHTML(o.alerta, false, o.code) : ''}
+      ${o.alerta ? alertHTML(o.alerta, false, o.code) : ''}${o.premio ? awardHTML(o.premio, false, o.code) : ''}
       <h3>${esc(o.name)}</h3>
       <p>${esc(o.valor)}</p>
       <button class="more" data-offer="${esc(o.code)}">Seguir leyendo…</button>
@@ -585,7 +609,7 @@ function openOffer(code){
       <h2 id="m-title">${esc(o.name)}</h2>
       <p class="tipo">${withCond(o.tipo)}</p>
       <p class="val">${esc(o.valor)}</p>
-      ${o.alerta ? alertHTML(o.alerta, true) : ''}
+      ${o.alerta ? alertHTML(o.alerta, true) : ''}${o.premio ? awardHTML(o.premio, true) : ''}
     </div>
     <div class="sheet-body">
       ${blk('ideal','Ideal para',`<p>${esc(o.ideal)}</p>`)}

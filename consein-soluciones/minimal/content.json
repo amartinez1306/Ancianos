@@ -1818,7 +1818,12 @@
      ],
      "resultado": "Una sucursal que nunca cierra: atención 24/7, respuestas naturales, conocimiento gobernado por el banco y una plataforma lista para nuevos agentes y canales.",
      "reconocimiento": "Ganadora del WITSA Global AI Award for Infrastructure, en su versión Enterprise Multi-Agent Generative AI Infrastructure.",
-     "linea": "Banca"
+     "linea": "Banca",
+     "premio": {
+      "titulo": "Ganadora del WITSA Global AI Award for Infrastructure",
+      "detalle": "Categoría Enterprise Multi-Agent Generative AI Infrastructure · WITSA Global AI Awards 2026",
+      "anillo": "GANADORA · GLOBAL AI AWARD FOR INFRASTRUCTURE ·"
+     }
     },
     {
      "code": "IA-08",
