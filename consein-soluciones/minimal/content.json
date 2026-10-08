@@ -975,16 +975,17 @@
    "slug": "dynamics-365-erp-crm",
    "nav": "Servicios Empresariales",
    "color": "#D9731A",
-   "promesa": "Integramos ERP, CRM y Power BI.",
+   "promesa": "Integramos ERP, CRM, Power BI y gobierno corporativo.",
    "title": "Dynamics 365 Business Central, CRM y Power BI | Consein",
-   "meta": "Implementación de Dynamics 365 Business Central, migración de Dynamics GP, CRM y tableros Power BI. Partner Microsoft en Venezuela, Panamá y la región.",
+   "meta": "Dynamics 365 Business Central, CRM, Power BI y software para mercado de capitales y registro de accionistas (SIMC, SIAC). Partner Microsoft en la región.",
    "h1": "ERP Dynamics 365, CRM y Power BI",
-   "sub": "Implementamos Dynamics 365 Business Central, CRM y tableros Power BI para que controle su operación y decida con cifras confiables.",
+   "sub": "Implementamos Dynamics 365 Business Central, CRM, Power BI y nuestros sistemas de mercado de capitales y accionistas para que controle su operación y decida con cifras confiables.",
    "problemas": [
     "Cierres contables que tardan semanas",
     "Reportes armados a mano",
     "Clientes gestionados en hojas de cálculo",
-    "Dynamics GP sin ruta a la nube"
+    "Dynamics GP sin ruta a la nube",
+    "Accionistas y valores gestionados a mano"
    ],
    "soluciones": [
     [
@@ -1021,13 +1022,15 @@
      "fuente": "Forrester TEI — Dynamics 365 Business Central, 2026"
     }
    ],
-   "respaldo": "Microsoft Solutions Partner for Data & AI (Azure), con analítica en Power BI.",
+   "respaldo": "Microsoft Solutions Partner for Data & AI (Azure), con analítica en Power BI. Desarrollamos SIMC y SIAC, nuestros sistemas para el sector financiero.",
    "tecnologias": [
     "Dynamics 365 Business Central",
     "Dynamics GP",
     "Dynamics 365 Sales",
     "Dynamics 365 Customer Service",
-    "Power BI"
+    "Power BI",
+    "SIMC",
+    "SIAC"
    ],
    "puente": "Conectamos Copilot y agentes a su ERP, CRM y tableros.",
    "cta": "Quiero modernizar mi ERP",
@@ -1045,7 +1048,8 @@
       "Migración inicial de datos.",
       "Capacitación, pruebas y salida en vivo."
      ],
-     "resultado": "Procesos integrados y mayor control financiero."
+     "resultado": "Procesos integrados y mayor control financiero.",
+     "linea": "Dynamics 365 y Power BI"
     },
     {
      "code": "EMP-02",
@@ -1060,7 +1064,8 @@
       "Estrategia de datos y migración.",
       "Piloto y plan de transición."
      ],
-     "resultado": "Una ruta clara y de bajo riesgo hacia Business Central."
+     "resultado": "Una ruta clara y de bajo riesgo hacia Business Central.",
+     "linea": "Dynamics 365 y Power BI"
     },
     {
      "code": "EMP-03",
@@ -1075,7 +1080,8 @@
       "Integraciones y automatizaciones básicas.",
       "Tableros, capacitación y adopción."
      ],
-     "resultado": "Trazabilidad comercial e indicadores en tiempo real."
+     "resultado": "Trazabilidad comercial e indicadores en tiempo real.",
+     "linea": "Dynamics 365 y Power BI"
     },
     {
      "code": "EMP-04",
@@ -1090,7 +1096,8 @@
       "Tableros ejecutivos.",
       "Publicación, seguridad y transferencia."
      ],
-     "resultado": "Visibilidad ejecutiva y menos esfuerzo de reportería."
+     "resultado": "Visibilidad ejecutiva y menos esfuerzo de reportería.",
+     "linea": "Dynamics 365 y Power BI"
     },
     {
      "code": "EMP-05",
@@ -1105,7 +1112,8 @@
       "Talleres N-O-R-T-E para cada equipo.",
       "Medición de impacto."
      ],
-     "resultado": "Menos tiempo operativo y decisiones más rápidas."
+     "resultado": "Menos tiempo operativo y decisiones más rápidas.",
+     "linea": "Dynamics 365 y Power BI"
     },
     {
      "code": "EMP-06",
@@ -1120,7 +1128,45 @@
       "Gestión de actualizaciones.",
       "Capacitación continua."
      ],
-     "resultado": "Un sistema estable que evoluciona con el negocio."
+     "resultado": "Un sistema estable que evoluciona con el negocio.",
+     "linea": "Dynamics 365 y Power BI"
+    },
+    {
+     "code": "EMP-07",
+     "name": "SIMC: Sistema Integrado de Mercado de Capitales",
+     "tipo": "Software propio para mercado de valores · implementación y soporte",
+     "valor": "Gestionamos su operación de valores, de la orden a la custodia, con trazabilidad y cumplimiento normativo.",
+     "ideal": "Casas de bolsa, sociedades de corretaje, administradoras de fondos y tesorerías que invierten en el mercado de valores.",
+     "resuelve": "Operaciones de valores en hojas de cálculo, conciliaciones manuales con custodios y reportes regulatorios que toman días.",
+     "incluye": [
+      "Carga de precios de mercado y valoración de posiciones.",
+      "Gestión de clientes con la información que exige la normativa.",
+      "Colocación y registro de órdenes de compra y venta.",
+      "Custodios y cuentas custodias.",
+      "Back office: registro y control de operaciones.",
+      "Eventos de valores: cupones, rescates, dividendos, suscripciones y derechos de suscripción.",
+      "Reportes de movimientos y posiciones."
+     ],
+     "resultado": "Una operación de valores centralizada, trazable y lista para auditoría, con menos errores y tareas manuales.",
+     "linea": "Mercado de capitales y gobierno corporativo"
+    },
+    {
+     "code": "EMP-08",
+     "name": "SIAC: Sistema Integrado de Accionistas",
+     "tipo": "Software propio de gobierno corporativo · implementación y soporte",
+     "valor": "Administramos su registro de accionistas, emisiones, dividendos y asambleas en una sola plataforma.",
+     "ideal": "Empresas emisoras, sociedades anónimas, agentes de registro y transferencia, y grupos corporativos con muchos accionistas.",
+     "resuelve": "Libros de accionistas en papel o en hojas de cálculo, pagos de dividendos con errores y asambleas difíciles de preparar.",
+     "incluye": [
+      "Emisiones de acciones y bonos.",
+      "Registro de accionistas.",
+      "Operaciones de compra, venta y traspaso.",
+      "Dividendos, cupones y rescates.",
+      "Libro de traspasos generado por el sistema.",
+      "Gestión de asambleas de accionistas."
+     ],
+     "resultado": "Un gobierno corporativo ordenado: registro confiable, pagos exactos y asambleas preparadas, con trazabilidad completa.",
+     "linea": "Mercado de capitales y gobierno corporativo"
     }
    ],
    "faq": [
@@ -1157,14 +1203,22 @@
      "Nosotros. Con Soporte y Evolución de Dynamics mantenemos su ERP y CRM al día, atendemos solicitudes y mejoramos los procesos de forma continua."
     ],
     [
+     "¿Tienen software para casas de bolsa y operaciones de valores?",
+     "Sí. SIMC, nuestro Sistema Integrado de Mercado de Capitales, gestiona precios de mercado, órdenes, custodios, back office, eventos de valores como cupones y dividendos, y reportes de posiciones, con trazabilidad y cumplimiento normativo."
+    ],
+    [
+     "¿Cómo llevamos el registro de accionistas y las asambleas?",
+     "Con SIAC, nuestro Sistema Integrado de Accionistas. Registra accionistas, emisiones de acciones y bonos, compras, ventas y traspasos, calcula dividendos y cupones, genera el libro de traspasos y organiza las asambleas."
+    ],
+    [
      "¿Implementan Business Central en Venezuela y Panamá?",
      "Sí. Implementamos Dynamics 365 Business Central y damos soporte a empresas en Venezuela, Panamá, República Dominicana y Estados Unidos."
     ]
    ],
    "seo": {
     "kw": "Dynamics 365 Business Central",
-    "h2_retos": "Retos de gestión que atendemos",
-    "h2_ofertas": "Servicios de Dynamics 365 y Power BI",
+    "h2_retos": "Retos de gestión y gobierno corporativo",
+    "h2_ofertas": "Soluciones empresariales y Dynamics 365",
     "h2_faq": "Dudas sobre Dynamics 365",
     "secundarias": [
      "ERP en la nube",
@@ -1172,7 +1226,11 @@
      "migración de Dynamics GP",
      "CRM Dynamics 365",
      "tableros Power BI",
-     "partner Dynamics 365"
+     "partner Dynamics 365",
+     "software para casas de bolsa",
+     "sistema de mercado de capitales",
+     "software de registro de accionistas",
+     "gobierno corporativo"
     ]
    }
   },
