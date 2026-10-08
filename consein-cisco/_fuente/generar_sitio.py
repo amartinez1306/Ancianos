@@ -151,7 +151,7 @@ MATRIZ = [
     {"area": "conectividad", "id": "catalyst-sdwan", "nombre": "Cisco Catalyst SD-WAN",
      "origen": [S5], "mensaje": "Conectividad ágil y resiliente hacia IaaS.",
      "ms": "Azure Virtual WAN / ExpressRoute", "otras": "Conectividad a AWS y Google Cloud, con la misma red y las mismas políticas por aplicación.",
-     "valor": "Resolvemos la conectividad de sucursales a Azure: unimos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o GCP, con failover automático y políticas por aplicación."},
+     "valor": "Resolvemos la conectividad de sucursales a Azure: unimos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o Google Cloud, con failover automático y políticas por aplicación."},
     {"area": "conectividad", "id": "meraki-ms-mr", "nombre": "Meraki MS (Switching) y Meraki MR (Wireless)",
      "origen": [S3], "mensaje": "Experiencia digital impecable en sus oficinas.",
      "ms": "Microsoft Teams / Microsoft 365", "otras": "Google Workspace, Webex, Zoom y cualquier aplicación de colaboración.",
@@ -240,7 +240,7 @@ def tecnologias_area(area_id):
 # Productos · Programa Renueva (8)
 # ---------------------------------------------------------------------------
 PRODUCTOS = [
-    {"code": "REN-01", "titulo": "Inventario de obsolescencia",
+    {"code": "REN-01", "otras": "También evaluamos la conexión con AWS, Google Cloud y Google Workspace", "titulo": "Inventario de obsolescencia",
      "valor": "Identificamos de forma gratuita sus equipos Cisco en fin de soporte (end of life) y cuánto riesgo representan.",
      "ideal": "Cualquier empresa con switches, routers, firewalls, servidores o salas Cisco de más de cinco años.",
      "resuelve": "Basamos cada decisión de renovación en datos de riesgo y soporte.",
@@ -249,10 +249,10 @@ PRODUCTOS = [
                  "Calculamos el riesgo por equipo: vulnerabilidades, soporte y criticidad.",
                  "Entregamos un plan priorizado con costo total y opciones de financiamiento."],
      "resultado": "Le entregamos un mapa de obsolescencia y una hoja de ruta de renovación por fases.",
-     "tec": ("Toda la base instalada, clasificada en renovar ya, planificar o mantener", "Identificamos qué equipos limitan la integración con Azure, Intune, Sentinel o Teams Rooms"),
+     "tec": ("Toda la base instalada, clasificada en renovar ya, planificar o mantener", "Identificamos qué equipos limitan la integración con Azure, Intune, Sentinel o Teams Rooms, y con AWS o Google Cloud"),
      "dato": "69% del hardware activo con fecha de fin de soporte programada quedará sin soporte en 2027 (NTT DATA, 2024).",
      "cta": "Inventariemos su red"},
-    {"code": "REN-02", "titulo": "Campus y Wi-Fi renovados",
+    {"code": "REN-02", "otras": "Google Workspace, Webex y Zoom", "titulo": "Campus y Wi-Fi renovados",
      "valor": "Renovación de switches y Wi-Fi: cambiamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.",
      "ideal": "Oficinas y sedes con switches o WiFi de generaciones anteriores.",
      "resuelve": "Aceleramos la red local y el Wi-Fi y habilitamos el acceso según el cumplimiento de Intune.",
@@ -264,7 +264,7 @@ PRODUCTOS = [
      "tec": ("Switches y access points legados → Meraki MS y Meraki MR", "Microsoft Teams, Microsoft 365, Intune y Entra ID"),
      "dato": "Con Meraki, 40% menos tiempo de inactividad y 80% menos tickets de red (Forrester TEI, 2025).",
      "cta": "Renovemos su campus"},
-    {"code": "REN-03", "titulo": "Sucursales con SD-WAN",
+    {"code": "REN-03", "otras": "Aplicaciones en AWS y Google Cloud; Meraki vMX en ambas nubes", "titulo": "Sucursales con SD-WAN",
      "valor": "Hacemos el reemplazo de MPLS por SD-WAN: cambiamos routers legados y enlaces MPLS por Meraki MX con SD-WAN y, junto a Cisco Secure Access, formamos una arquitectura SASE.",
      "ideal": "Empresas con routers de sucursal antiguos o enlaces MPLS.",
      "resuelve": "Protegemos el borde de cada sucursal y priorizamos el tráfico de Microsoft 365 y Teams.",
@@ -272,11 +272,11 @@ PRODUCTOS = [
                  "Conectamos cada sede con Azure Virtual WAN.",
                  "Priorizamos el tráfico de Microsoft 365, Teams y Dynamics 365.",
                  "Agregamos respaldo celular 4G/5G con Meraki MG, sujeto a la cobertura celular de la sede."],
-     "resultado": "Logramos sucursales estables, gestionadas en la nube y conectadas a Azure.",
+     "resultado": "Logramos sucursales estables, gestionadas en la nube y conectadas a Azure y, si lo necesita, a AWS o Google Cloud.",
      "tec": ("Routers legados y MPLS → Meraki MX + Cisco Secure Access (SASE) y Meraki MG", "Azure Virtual WAN, Microsoft 365, Teams y Dynamics 365"),
      "dato": "En el estudio de Forrester sobre Meraki, una organización redujo en más de dos tercios su costo mensual de conectividad por sede al migrar desde MPLS (TEI, 2025).",
      "cta": "Modernicemos sus sucursales"},
-    {"code": "REN-04", "titulo": "Renovación de firewalls",
+    {"code": "REN-04", "otras": "Versión virtual de Cisco Secure Firewall en AWS y Google Cloud; registros hacia Splunk u otro SIEM", "titulo": "Renovación de firewalls",
      "valor": "Hacemos la migración de Cisco ASA a Secure Firewall y de otros firewalls legados, con soporte vigente y eventos en Microsoft Sentinel.",
      "ideal": "Empresas con firewalls Cisco de generaciones anteriores, como familias ASA legadas.",
      "resuelve": "Actualizamos la protección de la puerta más atacada: el borde de internet.",
@@ -288,18 +288,18 @@ PRODUCTOS = [
      "tec": ("Firewalls legados → Cisco Secure Firewall", "Microsoft Sentinel, Azure Firewall"),
      "dato": "42,5% de las vulnerabilidades explotadas en equipos de borde durante 2025 afectó a dispositivos en fin de vida o cerca de él (VulnCheck, 2025).",
      "cta": "Renovemos su perímetro"},
-    {"code": "REN-05", "titulo": "Conectividad de datacenter y nube",
-     "valor": "Renovamos la WAN entre su centro de datos, la sede central y Azure con Cisco Catalyst SD-WAN.",
+    {"code": "REN-05", "otras": "Conectividad a AWS y Google Cloud con Cisco Catalyst SD-WAN", "titulo": "Conectividad de datacenter y nube",
+     "valor": "Renovamos la WAN entre su centro de datos, la sede central y la nube (Azure, AWS o Google Cloud) con Cisco Catalyst SD-WAN.",
      "ideal": "Empresas con routers WAN de centro de datos o sede central de generaciones anteriores.",
-     "resuelve": "Extendemos las políticas por aplicación hasta Azure IaaS, con failover y visibilidad del desempeño.",
-     "incluye": ["Conectamos de forma segura sedes y centro de datos con las cargas en Azure, AWS o GCP mediante Cisco Catalyst SD-WAN.",
+     "resuelve": "Extendemos las políticas por aplicación hasta Azure IaaS y, si su operación lo requiere, hasta AWS o Google Cloud, con failover y visibilidad del desempeño.",
+     "incluye": ["Conectamos de forma segura sedes y centro de datos con las cargas en Azure, AWS o Google Cloud mediante Cisco Catalyst SD-WAN.",
                  "Conectamos con Azure mediante Azure Virtual WAN o ExpressRoute.",
                  "Configuramos políticas por aplicación y failover.",
                  "Damos visibilidad del desempeño de la WAN de punta a punta."],
-     "resultado": "Le entregamos una WAN de centro de datos y sede central lista para operar con Azure.",
+     "resultado": "Le entregamos una WAN de centro de datos y sede central lista para operar con Azure, AWS o Google Cloud.",
      "tec": ("Routers WAN de datacenter y sede central → Cisco Catalyst SD-WAN", "Azure Virtual WAN y ExpressRoute"),
      "cta": "Planifiquemos su WAN"},
-    {"code": "REN-06", "titulo": "Salas para Teams",
+    {"code": "REN-06", "otras": "Webex y, según el dispositivo, otras plataformas de video", "titulo": "Salas para Teams",
      "valor": "Renovamos sus salas de videoconferencia a Teams Rooms con Cisco Room Bar y Board Pro Series.",
      "ideal": "Empresas con equipos de videoconferencia de generaciones anteriores.",
      "resuelve": "Unificamos la colaboración en Microsoft Teams Rooms, con hardware certificado.",
@@ -311,7 +311,7 @@ PRODUCTOS = [
      "tec": ("Video legado → Cisco Room Bar / Room Bar Pro y Board Pro Series", "Microsoft Teams Rooms y Whiteboard"),
      "dato": "Teams Rooms: 342% de ROI (Forrester TEI).",
      "cta": "Renovemos sus salas"},
-    {"code": "REN-07", "titulo": "Renovación financiada",
+    {"code": "REN-07", "otras": "Proyectos con infraestructura conectada a AWS o Google Cloud", "titulo": "Renovación financiada",
      "valor": "Gestionamos ante bancos locales el financiamiento para renovación tecnológica, para distribuir la inversión en el tiempo.",
      "ideal": "Empresas que necesitan renovar su hardware Cisco y prefieren financiar la inversión.",
      "resuelve": "Abrimos una vía de financiamiento bancario cuando el presupuesto de capital del año no alcanza.",
@@ -323,7 +323,7 @@ PRODUCTOS = [
      "tec": ("Todo el proyecto de renovación, presentado a bancos locales", "Combinable con la planificación de licencias Microsoft"),
      "nota": "Consein realiza las gestiones con los bancos; la aprobación, el monto y las condiciones dependen de la evaluación de cada banco.",
      "cta": "Exploremos su financiamiento"},
-    {"code": "REN-08", "titulo": "Ciclo de vida gestionado",
+    {"code": "REN-08", "otras": "Inventario y alertas que también cubren la conectividad hacia AWS y Google Cloud", "titulo": "Ciclo de vida gestionado",
      "valor": "Mantenemos su red siempre vigente con un inventario vivo y un plan anual de renovación.",
      "ideal": "Empresas que prefieren planificar la renovación con anticipación.",
      "resuelve": "Anticipamos la obsolescencia antes de que se convierta en una emergencia.",
@@ -352,7 +352,7 @@ FAQ = [
     ("¿Trabajan solo con Microsoft?",
      "Microsoft es nuestra BASE y nuestra especialidad. Si su empresa también usa AWS, Google Cloud o Google Workspace, llevamos ahí la misma red y la misma seguridad Cisco: Catalyst SD-WAN conecta sus sedes con AWS y Google Cloud, SECaaS protege a sus usuarios en cualquier nube y Cisco Secure Firewall tiene versión virtual para ambas."),
     ("¿Qué hacemos con los equipos Cisco en fin de soporte?",
-     "Con el Programa Renueva hacemos un inventario de obsolescencia gratuito, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms. También gestionamos el financiamiento con bancos locales."),
+     "Con el Programa Renueva hacemos un inventario de obsolescencia gratuito, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms, con una red lista para Microsoft, AWS o Google Cloud. También gestionamos el financiamiento con bancos locales."),
     ("¿En qué países atienden?",
      "Somos integrador Cisco y Microsoft para empresas en Venezuela (Caracas, Valencia y Maracaibo), Panamá, República Dominicana y Estados Unidos. Ofrecemos servicios gestionados de red y outsourcing de redes y seguridad en los cuatro países."),
 ]
@@ -381,7 +381,7 @@ def detalle(o, etiqueta, renovacion=False):
              ("Resultado", f"<strong>{E(o['resultado'])}</strong>")]
     dl = "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas)
     t1, t2 = o["tec"]
-    extra = (f"<p><b>Renovamos:</b> {E(t1)}</p><p><b>Valor en Microsoft:</b> {E(t2)}</p>" if renovacion
+    extra = (f"<p><b>Renovamos:</b> {E(t1)}</p><p><b>Valor en Microsoft:</b> {E(t2)}</p><p><b>También en:</b> {E(o['otras'])}</p>" if renovacion
              else f"<p><b>Cisco:</b> {E(t1)} · <b>Microsoft:</b> {E(t2)}</p>")
     if o.get("dato"):
         extra += f"<p><b>Dato:</b> {E(o['dato'])}</p>"
@@ -562,7 +562,7 @@ def arte_hardware():
   <text class="hw-label hw-label-new" x="345" y="40" text-anchor="middle">Cisco actual</text>
   {equipo(270, 70, True)}{equipo(270, 126, True)}
   <g transform="translate(412 64)"><circle class="ok" r="15"/><path class="ok-t" d="M-6 0 l4 4 8-8"/></g>
-  <text class="hw-ms" x="345" y="196" text-anchor="middle">Teams · Azure · Intune · Sentinel</text>
+  <text class="hw-ms" x="345" y="196" text-anchor="middle">Microsoft · AWS · Google Cloud</text>
   <line class="tl" x1="20" y1="246" x2="420" y2="246"/>
   <line class="tl-run" x1="20" y1="246" x2="420" y2="246"/>
   <circle class="tl-dot" cx="20" cy="246" r="6"/><text class="tl-t" x="20" y="272">Hoy</text>
@@ -575,7 +575,7 @@ AVISOS = {
     "productos": {
         "tag": "Oferta destacada · Renovación de hardware",
         "titulo": "Inventariamos gratis su hardware Cisco",
-        "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y alternativas de financiamiento bancario.",
+        "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y alternativas de financiamiento bancario. Renovamos hacia una red lista para Microsoft y también para AWS o Google Cloud.",
         "cifra": "<small>financiamiento</small>local", "cifra_txt": "Gestionamos su solicitud ante bancos locales. Cada banco estudia el caso y decide la factibilidad del financiamiento.", "fuente": "",
         "lista_tipo": "ol",
         "lista": ["Inventariamos su base instalada y sus fechas de fin de soporte", "Priorizamos por riesgo, criticidad y costo total", "Renovamos por fases y gestionamos el financiamiento con bancos locales"],
@@ -911,6 +911,7 @@ def productos():
         "Cada cambio de configuración exige visitar sede por sede.",
         "Su red todavía aplica políticas de acceso independientes del cumplimiento de Intune.",
         "Sus salas de video funcionan fuera de Microsoft Teams.",
+        "Su red debe conectar con AWS o Google Cloud, además de Azure.",
         "Su auditor o su aseguradora preguntó por equipos sin soporte.",
     ]
     checks = "".join(f'<label><input type="checkbox"> {E(s)}</label>' for s in senales)
@@ -929,7 +930,7 @@ def productos():
 <section id="por-que-renovar">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Por qué renovar ahora</p><h2>La red define el ritmo de su plataforma</h2>
-      <p class="lead">Mientras Microsoft evoluciona cada trimestre, los equipos desactualizados frenan la experiencia, limitan las integraciones y elevan el riesgo.</p></div>
+      <p class="lead">Mientras Microsoft, AWS y Google Cloud evolucionan cada trimestre, los equipos desactualizados frenan la experiencia, limitan las integraciones y elevan el riesgo.</p></div>
     <div class="grid g4">
       <div class="stat" style="--p:71"><b>71%</b><p>de las organizaciones tiene activos de red mayormente envejecidos u obsoletos.</p><cite>NTT DATA, 2024</cite></div>
       <div class="stat" style="--p:69"><b>69%</b><p>del hardware con fin de soporte programado quedará sin soporte en 2027.</p><cite>NTT DATA, 2024</cite></div>
@@ -980,7 +981,8 @@ def productos():
 
 <section id="ofertas">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Ofertas de renovación</p><h2>Ocho productos del Programa Renueva</h2></div>
+    <div class="section-head"><p class="eyebrow">Ofertas de renovación</p><h2>Ocho productos del Programa Renueva</h2>
+      <p class="lead">Microsoft es nuestra BASE. Cada oferta aplica también si su operación está en AWS o Google Cloud: renovamos una red lista para todas sus nubes.</p></div>
     <div class="grid g4">{cards}</div>
   </div>
 </section>
@@ -993,7 +995,7 @@ def productos():
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": servicio_ld(p, "Renovación de infraestructura Cisco")} for i, p in enumerate(PRODUCTOS)]}]
     pagina("productos.html", "productos",
            "Renovación de equipos Cisco en fin de soporte | Consein",
-           "Renovamos switches, Wi-Fi, routers, firewalls y salas Cisco en fin de soporte. Inventario de obsolescencia gratis, migración por fases y financiamiento.",
+           "Renovamos equipos Cisco en fin de soporte hacia una red lista para Microsoft, AWS y Google Cloud. Inventario de obsolescencia gratis y financiamiento.",
            cuerpo, ld)
 
 

@@ -28,7 +28,8 @@ la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Dato
 (campo `linea`: Infraestructura, Seguridad, Colaboración, IA) como título sobre el encabezado y en las tarjetas. Cada producto muestra su
 **nombre y mensaje comercial**; "Seguir leyendo…" abre En Microsoft (nuestra BASE), También en otras plataformas
 (AWS, Google Cloud y otras; campo `otras`), Cómo agrega valor y Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
-En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.
+En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye, Resultado, Valor en Microsoft
+y También en (AWS, Google Cloud y otras plataformas; campo `otras` de `PRODUCTOS`).
 
 ## Aviso de renovación de hardware
 - **Inicio, Soluciones de Valor y Ofertas de Productos:** sticker circular discreto en el encabezado ("Inventario gratis", con el texto giratorio
