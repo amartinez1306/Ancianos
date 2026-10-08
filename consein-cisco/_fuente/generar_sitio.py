@@ -92,7 +92,7 @@ def arte_hero():
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
   <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
-  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas</small></div>
+  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas, también en AWS y Google Cloud</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
 
@@ -102,19 +102,19 @@ ARTE_CAPAS = """<div class="stack" aria-hidden="true">
 ESPECIALIDADES = [
     # "linea": línea de soluciones Consein a la que pertenece cada área (título visible en el sitio).
     # Productos: Nueva Matriz de Valor v2 (secciones A y B) + Iniciativa SECaaS de Consein.
-    {"id": "conectividad", "linea": "Infraestructura", "nombre": "Conectividad LAN y WAN",
+    {"id": "conectividad", "linea": "Infraestructura", "otras": "AWS, Google Cloud y Google Workspace", "nombre": "Conectividad LAN y WAN",
      "h2": "SD-WAN para empresas y arquitectura SASE",
      "intro": "Conectamos sus redes LAN y WAN según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure. Su Wi-Fi empresarial, sus switches y sus enlaces, gestionados en la nube con Cisco Meraki."},
-    {"id": "secaas", "linea": "Seguridad", "nombre": "SECaaS",
+    {"id": "secaas", "linea": "Seguridad", "otras": "AWS, Google Cloud, Google Workspace y Okta", "nombre": "SECaaS",
      "h2": "SECaaS: seguridad como servicio, del endpoint al firewall en la nube",
      "intro": "Convertimos la ciberseguridad en un servicio por consumo: ciberseguridad administrada para empresas, en paquetes todo en uno basados en Cisco. Es outsourcing de ciberseguridad operado por Consein desde Cisco Security Cloud Control."},
-    {"id": "proteccion-red", "linea": "Seguridad", "nombre": "Red local y perímetro",
+    {"id": "proteccion-red", "linea": "Seguridad", "otras": "AWS, Google Cloud y otras plataformas MDM y SIEM", "nombre": "Red local y perímetro",
      "h2": "Control de acceso a la red (NAC) y firewall perimetral",
      "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local y aplicar la segmentación de la red, y Cisco Secure Firewall, un firewall perimetral para empresas que protege el borde on-premise y la conectividad híbrida."},
-    {"id": "colaboracion", "linea": "Colaboración", "nombre": "Colaboración",
+    {"id": "colaboracion", "linea": "Colaboración", "otras": "Webex y otras plataformas de video", "nombre": "Colaboración",
      "h2": "Salas Microsoft Teams Rooms con hardware Cisco",
      "intro": "Hacemos la implementación de Teams Rooms en sus salas de reuniones: videoconferencia empresarial con hardware Cisco certificado, instalación y soporte."},
-    {"id": "inteligencia-artificial", "linea": "IA", "nombre": "Inteligencia Artificial",
+    {"id": "inteligencia-artificial", "linea": "IA", "otras": "AWS y Google Cloud", "nombre": "Inteligencia Artificial",
      "h2": "Seguridad para inteligencia artificial",
      "intro": "Acompañamos la adopción responsable de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario de activos de IA y la validación de modelos."},
 ]
@@ -128,9 +128,9 @@ SECAAS_DIF = [
 
 # Criterio de la matriz (v2, Better Together)
 CRITERIOS = [
-    ("Se integra con Microsoft", "Cisco trabaja junto a su plataforma Microsoft como acelerador: red, seguridad y salas."),
-    ("Cubre brechas de red y seguridad", "Posicionamos cada solución donde aporta valor real a su red y a su seguridad."),
-    ("Evita duplicar lo que ya paga", "Proponemos solo lo que complementa su inversión Microsoft actual."),
+    ("Microsoft como BASE", "Construimos sobre su plataforma Microsoft y sumamos Cisco como acelerador: red, seguridad y salas."),
+    ("Abiertos a AWS y Google Cloud", "Si su operación también vive en AWS, Google Cloud o en su centro de datos, llevamos ahí la misma red y la misma seguridad."),
+    ("Evita duplicar lo que ya paga", "Proponemos solo lo que complementa su inversión actual en Microsoft y en otras nubes."),
 ]
 
 S1 = "S1 · Protección Avanzada M365"
@@ -146,25 +146,25 @@ S7 = "S7 · Cisco AI Defense"
 MATRIZ = [
     {"area": "conectividad", "id": "meraki-mx-secure-access", "nombre": "Meraki MX + Cisco Secure Access",
      "origen": [S3, S5, S2], "mensaje": "Arquitectura SASE: SD-WAN + seguridad en la nube.",
-     "ms": "Microsoft 365 / Teams",
+     "ms": "Microsoft 365 / Teams", "otras": "Google Workspace y otras aplicaciones SaaS; Meraki vMX en AWS y Google Cloud.",
      "valor": "Protegemos la red de cada sede y priorizamos el tráfico hacia aplicaciones SaaS como Microsoft 365 y Teams. Meraki MX con SD-WAN y Cisco Secure Access, con su seguridad en la nube, forman juntos una arquitectura SASE."},
     {"area": "conectividad", "id": "catalyst-sdwan", "nombre": "Cisco Catalyst SD-WAN",
      "origen": [S5], "mensaje": "Conectividad ágil y resiliente hacia IaaS.",
-     "ms": "Azure Virtual WAN / ExpressRoute",
+     "ms": "Azure Virtual WAN / ExpressRoute", "otras": "Conectividad a AWS y Google Cloud, con la misma red y las mismas políticas por aplicación.",
      "valor": "Resolvemos la conectividad de sucursales a Azure: unimos de forma segura sus sedes y su centro de datos con las cargas de trabajo en Azure, AWS o GCP, con failover automático y políticas por aplicación."},
     {"area": "conectividad", "id": "meraki-ms-mr", "nombre": "Meraki MS (Switching) y Meraki MR (Wireless)",
      "origen": [S3], "mensaje": "Experiencia digital impecable en sus oficinas.",
-     "ms": "Microsoft Teams / Microsoft 365",
+     "ms": "Microsoft Teams / Microsoft 365", "otras": "Google Workspace, Webex, Zoom y cualquier aplicación de colaboración.",
      "valor": "Optimizamos su Wi-Fi empresarial y su red cableada para que la colaboración, la voz y el video funcionen de forma continua: una red gestionada en la nube, desde un solo panel."},
     {"area": "conectividad", "id": "meraki-mg", "nombre": "Meraki MG (Cellular Gateways)",
      "origen": [S3], "mensaje": "Respaldo para que su operación continúe.",
-     "ms": "Microsoft 365 / Azure",
+     "ms": "Microsoft 365 / Azure", "otras": "Aplicaciones críticas en AWS, Google Cloud o su centro de datos.",
      "valor": "Sumamos respaldo 4G/5G para sucursales: enlaces celulares que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
 
     {"area": "secaas", "id": "secaas-essential", "nombre": "SECaaS Essential",
      "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
      "mensaje": "Base sólida para la seguridad moderna: identidad, acceso web y cimientos de Zero Trust.",
-     "ms": "Active Directory / Entra ID",
+     "ms": "Active Directory / Entra ID", "otras": "Google Workspace, Okta y otros proveedores de identidad; aplicaciones en AWS, Google Cloud o servidores locales.",
      "ideal": "Medianas empresas y corporaciones que buscan modernizar su seguridad y prefieren delegar su gestión a Consein.",
      "componentes": "Duo Essentials · Cisco Secure Access (SWG/DNS)",
      "incluye": ["MFA avanzado con Cisco Duo (push y OTP).",
@@ -178,7 +178,7 @@ MATRIZ = [
     {"area": "secaas", "id": "secaas-advantage", "nombre": "SECaaS Advantage",
      "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
      "mensaje": "Seguridad avanzada y visibilidad total para entornos híbridos y distribuidos.",
-     "ms": "Active Directory / Entra ID",
+     "ms": "Active Directory / Entra ID", "otras": "Google Workspace, Okta y otros proveedores de identidad; aplicaciones en AWS, Google Cloud o servidores locales.",
      "ideal": "Organizaciones con entornos híbridos y distribuidos que necesitan protección integral del endpoint y control de la nube.",
      "componentes": "Duo Advantage · Cisco Secure Access (FWaaS/CASB) · Cisco Secure Endpoint (EDR)",
      "incluye": ["Todo lo incluido en SECaaS Essential.",
@@ -192,24 +192,24 @@ MATRIZ = [
      "valor": "Sumamos a todo lo incluido en Essential la protección integral del endpoint, el firewall en la nube y el control de las aplicaciones SaaS, como un servicio administrado por Consein."},
     {"area": "proteccion-red", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
      "origen": [S1], "mensaje": "Control de acceso a la red (NAC).",
-     "ms": "Microsoft Intune (integración complementaria)",
+     "ms": "Microsoft Intune (integración complementaria)", "otras": "Otras plataformas de gestión de dispositivos (MDM), como Jamf o Workspace ONE.",
      "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y aplicamos la segmentación de la red por perfil. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
     {"area": "proteccion-red", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
      "origen": [S6], "mensaje": "Gobierno único de la conectividad híbrida.",
-     "ms": "Azure Firewall / Microsoft Sentinel",
+     "ms": "Azure Firewall / Microsoft Sentinel", "otras": "Versión virtual en AWS y Google Cloud; registros hacia Splunk u otro SIEM.",
      "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un firewall perimetral de nueva generación y un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
     {"area": "colaboracion", "id": "room-bar", "nombre": "Cisco Room Bar / Room Bar Pro",
      "origen": [S4], "mensaje": "Salas híbridas simples y consistentes.",
-     "ms": "Microsoft Teams Rooms",
+     "ms": "Microsoft Teams Rooms", "otras": "Webex y, según el dispositivo, otras plataformas de video.",
      "valor": "Equipamos sus salas de reuniones para Teams con un dispositivo certificado que ejecuta Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."},
     {"area": "colaboracion", "id": "board-pro", "nombre": "Cisco Board Pro Series",
      "origen": [S4], "mensaje": "Colaboración visual en sala.",
-     "ms": "Microsoft Teams Rooms / Whiteboard",
+     "ms": "Microsoft Teams Rooms / Whiteboard", "otras": "Webex y, según el dispositivo, otras plataformas de video.",
      "valor": "Llevamos la reunión híbrida y la pizarra digital de Teams (Microsoft Whiteboard) a una pantalla táctil certificada para salas medianas."},
 
     {"area": "inteligencia-artificial", "id": "ai-defense", "nombre": "Cisco AI Defense",
      "origen": [S7], "mensaje": "Adopción responsable de IA.",
-     "ms": "Azure AI Foundry / Copilot Studio",
+     "ms": "Azure AI Foundry / Copilot Studio", "otras": "Modelos y aplicaciones de IA en AWS y Google Cloud.",
      "valor": "Empezamos por el inventario de activos de IA de su empresa y la validación de modelos y aplicaciones. Definimos el alcance de la protección en tiempo real junto a Prompt Shields y Defender for AI."},
 ]
 
@@ -332,7 +332,7 @@ PRODUCTOS = [
                  "Elaboramos el plan anual de renovación y su presupuesto.",
                  "Administramos la base instalada como servicio recurrente."],
      "resultado": "Le aseguramos una infraestructura siempre soportada y un presupuesto predecible.",
-     "tec": ("Renovación planificada y continua", "Alineada con el ciclo de vida de su plataforma Microsoft"),
+     "tec": ("Renovación planificada y continua", "Alineada con el ciclo de vida de Microsoft y de sus otras nubes"),
      "cta": "Planifiquemos su ciclo de vida"},
 ]
 
@@ -349,6 +349,8 @@ FAQ = [
      "Con SECaaS, una alternativa a la VPN tradicional: acceso ZTNA, filtrado web y seguridad DNS con Cisco Secure Access, MFA con Cisco Duo y, en SECaaS Advantage, EDR con Cisco Secure Endpoint, todo administrado por Consein."),
     ("¿Cómo acompañan la adopción de inteligencia artificial?",
      "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."),
+    ("¿Trabajan solo con Microsoft?",
+     "Microsoft es nuestra BASE y nuestra especialidad. Si su empresa también usa AWS, Google Cloud o Google Workspace, llevamos ahí la misma red y la misma seguridad Cisco: Catalyst SD-WAN conecta sus sedes con AWS y Google Cloud, SECaaS protege a sus usuarios en cualquier nube y Cisco Secure Firewall tiene versión virtual para ambas."),
     ("¿Qué hacemos con los equipos Cisco en fin de soporte?",
      "Con el Programa Renueva hacemos un inventario de obsolescencia gratuito, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms. También gestionamos el financiamiento con bancos locales."),
     ("¿En qué países atienden?",
@@ -379,7 +381,7 @@ def detalle(o, etiqueta, renovacion=False):
              ("Resultado", f"<strong>{E(o['resultado'])}</strong>")]
     dl = "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas)
     t1, t2 = o["tec"]
-    extra = (f"<p><b>Renovamos:</b> {E(t1)}</p><p><b>Valor Microsoft:</b> {E(t2)}</p>" if renovacion
+    extra = (f"<p><b>Renovamos:</b> {E(t1)}</p><p><b>Valor en Microsoft:</b> {E(t2)}</p>" if renovacion
              else f"<p><b>Cisco:</b> {E(t1)} · <b>Microsoft:</b> {E(t2)}</p>")
     if o.get("dato"):
         extra += f"<p><b>Dato:</b> {E(o['dato'])}</p>"
@@ -478,7 +480,8 @@ ORG = {
     "description": "Integrador Cisco y Microsoft: SD-WAN, SASE, seguridad como servicio (SECaaS), control de acceso a la red y salas Microsoft Teams Rooms.",
     "areaServed": [{"@type": "Country", "name": p} for p in PAISES],
     "knowsAbout": ["Cisco Meraki", "Cisco Catalyst SD-WAN", "SASE", "Seguridad como servicio (SECaaS)", "Cisco ISE",
-                   "Cisco Secure Firewall", "Microsoft Teams Rooms", "Cisco AI Defense", "Renovación de equipos Cisco"],
+                   "Cisco Secure Firewall", "Microsoft Teams Rooms", "Cisco AI Defense", "Renovación de equipos Cisco",
+                   "Microsoft Azure", "AWS", "Google Cloud", "Multinube"],
 }
 
 def pagina(archivo, actual, titulo, descripcion, cuerpo, jsonld):
@@ -655,7 +658,7 @@ def inicio():
         tiles += f"""<a class="tile" href="soluciones.html#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
   <span class="linea">{E(e['linea'])}</span><h3>{E(e['h2'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto Cisco' if n == 1 else 'productos Cisco'}</span></a>"""
     tiles += f"""<a class="tile featured" href="soluciones.html#criterio" style="border-color:var(--navy)">{D(icono('integral'))}
-  <h3>Matriz de valor</h3><p>{len(MATRIZ)} productos Cisco que suman valor a su plataforma Microsoft, seleccionados con un mismo criterio.</p><span class="count">Ver el criterio</span></a>"""
+  <h3>Matriz de valor</h3><p>{len(MATRIZ)} productos Cisco que suman valor a su plataforma Microsoft y a sus otras nubes, seleccionados con un mismo criterio.</p><span class="count">Ver el criterio</span></a>"""
 
     faq = "".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in FAQ)
 
@@ -672,7 +675,7 @@ def inicio():
    <div class="hero-copy">
     <p class="eyebrow">Integrador Cisco y Microsoft</p>
     <h1><em>Sinergia exponencial:</em> <span>su plataforma Microsoft, potenciada por una red Cisco</span></h1>
-    <p class="lead">Integramos soluciones Cisco y Microsoft para empresas en Venezuela, Panamá, República Dominicana y Estados Unidos: redes, seguridad y salas de reunión Cisco con Microsoft 365, Entra ID, Azure y Teams, en un solo servicio gestionado.</p>
+    <p class="lead">Integramos soluciones Cisco y Microsoft para empresas en Venezuela, Panamá, República Dominicana y Estados Unidos. Microsoft es nuestra BASE; si su empresa también opera en AWS o Google Cloud, llevamos ahí la misma red y la misma seguridad Cisco.</p>
     <div class="actions">
       <a class="btn btn-primary" href="index.html#contacto">Hablar con un especialista</a>
       <a class="btn btn-line" href="soluciones.html">Ver soluciones</a>
@@ -693,7 +696,7 @@ def inicio():
    <div>
     <p class="eyebrow">Nuestro enfoque</p>
     <p class="statement">Microsoft es donde trabaja su negocio. Cisco es por donde viaja. En Consein los hacemos funcionar como uno solo.</p>
-    <p class="statement-text">Construimos cada proyecto sobre su plataforma Microsoft e incorporamos Cisco como acelerador en las capas que la potencian: la red, la seguridad y las salas.</p>
+    <p class="statement-text">Construimos cada proyecto sobre su plataforma Microsoft e incorporamos Cisco como acelerador en las capas que la potencian: la red, la seguridad y las salas. Cisco es agnóstico: si parte de su operación vive en AWS, Google Cloud o su propio centro de datos, también la conectamos y la protegemos.</p>
    </div>
    {D(ARTE_CAPAS)}
   </div>
@@ -704,7 +707,7 @@ def inicio():
     <div class="section-head">
       <p class="eyebrow">Soluciones de Valor</p>
       <h2>{NUMEROS[len(ESPECIALIDADES)].capitalize()} áreas de práctica</h2>
-      <p class="lead">Cada área combina tecnología Cisco con su BASE Microsoft.</p>
+      <p class="lead">Cada área combina tecnología Cisco con su BASE Microsoft y se extiende a AWS y Google Cloud cuando su operación lo requiere.</p>
     </div>
     <div class="grid g4">{tiles}</div>
   </div>
@@ -738,7 +741,7 @@ def inicio():
       <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Somos integrador Cisco en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
       <div>{D(icono('certificado'))}<b>82 certificaciones</b><p>Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p></div>
       <div>{D(icono('trofeo'))}<b>WITSA 2026</b><p>ARIA IA Generativa, que desarrollamos con Bancaribe, recibió el reconocimiento de los Global AI Awards.</p></div>
-      <div>{D(icono('objetivo'))}<b>Un responsable</b><p>Operamos ambos mundos y validamos cada producto Cisco contra su plataforma Microsoft.</p></div>
+      <div>{D(icono('objetivo'))}<b>Un responsable</b><p>Validamos cada producto Cisco contra su plataforma Microsoft y también contra AWS y Google Cloud cuando forman parte de su operación.</p></div>
     </div>
   </div>
 </section>
@@ -748,7 +751,7 @@ def inicio():
     <div>
       <p class="eyebrow">Contacto</p>
       <h2>Un ecosistema, un solo responsable</h2>
-      <p class="lead">Conversemos sobre su red y su plataforma Microsoft. Comenzamos por el paso Evaluamos: inventario, postura actual, brechas, riesgos y objetivos del negocio.</p>
+      <p class="lead">Conversemos sobre su red y sus plataformas: Microsoft, AWS o Google Cloud. Comenzamos por el paso Evaluamos: inventario, postura actual, brechas, riesgos y objetivos del negocio.</p>
     </div>
     <form class="form" id="form-contacto">
       <div class="row">
@@ -779,7 +782,7 @@ def inicio():
           {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]
     pagina("index.html", "index",
            "Integrador Cisco y Microsoft en Venezuela y Panamá | Consein",
-           "Soluciones Cisco y Microsoft para empresas: SD-WAN, SASE, SECaaS, Cisco ISE y Teams Rooms. Venezuela, Panamá, República Dominicana y EE. UU.",
+           "Soluciones Cisco y Microsoft para empresas, también en AWS y Google Cloud: SD-WAN, SASE, SECaaS y Teams Rooms. Venezuela, Panamá, R. Dominicana y EE. UU.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -794,7 +797,8 @@ def tarjeta_producto(m, area):
         filas.append(("Qué incluye", "<ul>" + "".join(f"<li>{E(x)}</li>" for x in m["incluye"]) + "</ul>"))
     if m.get("componentes"):
         filas.append(("Componentes Cisco", E(m["componentes"])))
-    filas += [("Se integra con" if m.get("incluye") else "Producto Microsoft asociado", E(m["ms"])),
+    filas += [("En Microsoft, nuestra BASE", E(m["ms"])),
+              ("También en otras plataformas", E(m["otras"])),
               ("Cómo agrega valor", E(m["valor"])),
               ("Servicio Consein", "<br>".join(E(o) for o in m["origen"]))]
     dl = "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in filas)
@@ -822,7 +826,7 @@ def soluciones():
         vista += f"""<a class="tile" href="#{e['id']}">{D(icono(e['id']) + f'<span class="idx">0{i}</span>')}
   <span class="linea">{E(e['linea'])}</span><h3>{i}. {E(e['nombre'])}</h3><p>{E(e['intro'])}</p><span class="count">{n} {'producto' if n == 1 else 'productos'}</span></a>"""
     vista += f"""<div class="tile featured">{D(icono('integral'))}
-  <h3>Total: {len(MATRIZ)} productos</h3><p>Productos y paquetes Cisco que integramos con su plataforma Microsoft.</p></div>"""
+  <h3>Total: {len(MATRIZ)} productos</h3><p>Productos y paquetes Cisco que integramos con su plataforma Microsoft y, cuando lo necesita, con AWS y Google Cloud.</p></div>"""
     dif = '<div class="grid g3 proof secaas-dif">' + "".join(
         f"<div>{D(icono(ic))}<b>{E(t)}</b><p>{E(d)}</p></div>" for (t, d), ic in zip(SECAAS_DIF, ("conectividad", "integral", "objetivo"))) + "</div>"
     areas = ""
@@ -833,7 +837,7 @@ def soluciones():
   <div class="wrap">
     <div class="area-head">
       <div>{D(icono(e['id']))}<p class="linea">Soluciones Consein · {E(e['linea'])}</p><p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
-      <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(cisco)} · <b>Microsoft:</b> {E(ms)}</p></div>
+      <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(cisco)} · <b>Microsoft:</b> {E(ms)} · <b>También en:</b> {E(e['otras'])}</p></div>
     </div>
     <div class="grid g3">{cards}</div>{dif if e["id"] == "secaas" else ""}
   </div>
@@ -844,7 +848,7 @@ def soluciones():
     <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones Cisco › Soluciones de Valor</p>
     <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas</p>
     <h1>Soluciones Cisco que suman valor a su plataforma Microsoft</h1>
-    <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft, en {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
+    <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft y, cuando su operación lo requiere, con AWS y Google Cloud. Son {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
     {sticker_renueva("-sol")}
   </div>
@@ -853,7 +857,7 @@ def soluciones():
 <section id="criterio">
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Nuestro criterio</p><h2>Cisco como acelerador de su plataforma Microsoft</h2>
-      <p class="lead">Integramos Cisco con Microsoft para cubrir brechas de red y seguridad: posicionamos cada solución donde aporta valor real y evitamos duplicar lo que usted ya paga.</p></div>
+      <p class="lead">Integramos Cisco con Microsoft para cubrir brechas de red y seguridad. Si su operación también está en AWS o Google Cloud, sumamos SD-WAN multinube y seguridad multinube con la misma gestión. Evitamos duplicar lo que usted ya paga.</p></div>
     <div class="grid g3 proof">{criterios}</div>
     <p class="note" style="margin-top:32px">Cada producto indica el servicio del Modelo de Servicios Cisco de Consein del que proviene, y cada servicio sigue nuestros siete pasos, de Evaluamos a Aseguramos.</p>
   </div>
@@ -866,7 +870,7 @@ def soluciones():
   </div>
 </section>
 {areas}
-{banda('Conversemos sobre el valor que Cisco suma a su plataforma Microsoft', 'Hablar con un especialista', 'index.html#contacto')}"""
+{banda('Conversemos sobre el valor que Cisco suma a su plataforma Microsoft y a sus otras nubes', 'Hablar con un especialista', 'index.html#contacto')}"""
     ld = [{"@type": "WebPage", "name": "Soluciones Cisco que suman valor a su plataforma Microsoft", "url": URL_BASE + "soluciones.html", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
@@ -880,7 +884,7 @@ def soluciones():
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
            "Soluciones Cisco: SD-WAN, SASE, SECaaS y Teams Rooms | Consein",
-           "SD-WAN para empresas, arquitectura SASE, seguridad como servicio (SECaaS), Cisco ISE, Secure Firewall y Teams Rooms, integrados con Microsoft.",
+           "SD-WAN, SASE, seguridad como servicio (SECaaS), Cisco ISE y Teams Rooms, integrados con Microsoft y extendidos a AWS y Google Cloud.",
            cuerpo, ld)
 
 # ---------------------------------------------------------------------------
@@ -897,7 +901,9 @@ def productos():
         ("Routers WAN de datacenter y sede central", "Cisco Catalyst SD-WAN", "Conectividad segura hacia Azure, con failover automático y políticas por aplicación."),
         ("Video legado", "Cisco Room Bar / Room Bar Pro y Board Pro Series", "Microsoft Teams Rooms y la pizarra de Teams en hardware certificado."),
     ]
-    filas = "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td></tr>" for a, b, c in rutas)
+    otras_rutas = ["Google Workspace, Webex y Zoom", "Google Workspace, Webex y Zoom", "Google Workspace; Meraki vMX en AWS y Google Cloud",
+                   "Aplicaciones en AWS y Google Cloud", "Versión virtual en AWS y Google Cloud", "AWS y Google Cloud", "Webex"]
+    filas = "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td><td>{E(d)}</td></tr>" for (a, b, c), d in zip(rutas, otras_rutas))
     senales = [
         "Sus equipos Cisco tienen más de cinco años o ya recibieron un anuncio de fin de venta o de soporte.",
         "El Wi-Fi se satura en reuniones de Teams o en horas pico.",
@@ -913,7 +919,7 @@ def productos():
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Ofertas de Productos</p>
     <h1>Programa Renueva: renovación de equipos Cisco</h1>
-    <p class="lead">Hacemos la renovación de hardware Cisco: cambiamos sus equipos Cisco en fin de soporte por una red segura, gestionable y conectada a Teams, Azure e Intune. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
+    <p class="lead">Hacemos la renovación de hardware Cisco: cambiamos sus equipos Cisco en fin de soporte por una red segura y gestionable, conectada a Microsoft 365, Azure y Teams, y también a AWS o Google Cloud. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
     <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
     {sticker_renueva("-prod")}
   </div>
@@ -951,9 +957,9 @@ def productos():
 
 <section id="rutas">
   <div class="wrap">
-    <div class="section-head"><p class="eyebrow">Rutas de renovación</p><h2>De lo obsoleto a lo que potencia Microsoft</h2></div>
+    <div class="section-head"><p class="eyebrow">Rutas de renovación</p><h2>De lo obsoleto a una red lista para Microsoft y la nube</h2></div>
     <div class="table-scroll"><table class="table routes">
-      <thead><tr><th>Renovamos</th><th>Hacia</th><th>Beneficio en Microsoft</th></tr></thead>
+      <thead><tr><th>Renovamos</th><th>Hacia</th><th>Beneficio en Microsoft</th><th>También en</th></tr></thead>
       <tbody>{filas}</tbody></table></div>
     <p class="small" style="margin-top:16px">Validamos las fechas de fin de venta y de soporte de cada modelo contra los anuncios oficiales de Cisco durante el inventario.</p>
   </div>

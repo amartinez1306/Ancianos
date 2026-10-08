@@ -214,7 +214,7 @@ section.soft .steps li::before{box-shadow:0 0 0 4px var(--soft),0 0 0 6px var(--
 
 /* Rutas de renovación como trayectos de migración */
 .table.routes,.table.routes tbody{display:block}
-.table.routes thead tr,.table.routes tbody tr{display:grid;grid-template-columns:1fr 1fr 1.35fr;column-gap:56px;align-items:center}
+.table.routes thead tr,.table.routes tbody tr{display:grid;grid-template-columns:1fr 1fr 1.35fr 1fr;column-gap:56px;align-items:center}
 .table.routes thead th{border-bottom:0;padding:0 0 10px;font-size:.72rem;color:var(--muted)}
 .table.routes tbody tr{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin-bottom:12px;transition:border-color .2s,box-shadow .2s}
 .table.routes tbody tr:hover{border-color:rgba(88,187,71,.55);box-shadow:0 14px 30px rgba(27,36,91,.08)}
@@ -315,3 +315,5 @@ dialog.detail{border-radius:20px;overflow-y:auto;overscroll-behavior:contain}
   .steps-6 small{justify-self:start}
 }
 .detail .code{max-width:calc(100% - 52px)}
+.table.routes td:nth-child(4){font-size:.85rem;color:var(--green-ink);font-weight:500}
+@media (max-width:860px){.table.routes td:nth-child(4)::before{content:"También en: ";font-weight:600}}

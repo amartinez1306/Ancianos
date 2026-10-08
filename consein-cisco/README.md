@@ -26,8 +26,8 @@ en `MATRIZ` y `SECAAS_DIF`). No se publican: "Better Together", el posicionamien
 User Protection / Breach Protection, las secciones internas de la matriz (reglas de uso, C, D, E, F, Estado) ni
 la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada área muestra su línea de Soluciones Consein
 (campo `linea`: Infraestructura, Seguridad, Colaboración, IA) como título sobre el encabezado y en las tarjetas. Cada producto muestra su
-**nombre y mensaje comercial**; "Seguir leyendo…" abre Producto Microsoft asociado, Cómo agrega valor y
-Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
+**nombre y mensaje comercial**; "Seguir leyendo…" abre En Microsoft (nuestra BASE), También en otras plataformas
+(AWS, Google Cloud y otras; campo `otras`), Cómo agrega valor y Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
 En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye y Resultado.
 
 ## Aviso de renovación de hardware

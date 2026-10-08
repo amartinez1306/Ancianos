@@ -1,104 +1,578 @@
 {
- "version": "3 · Octubre 2026",
+ "version": "4 · Octubre 2026",
  "paises": [
-  ["Venezuela", "en Venezuela · Caracas · Valencia · Maracaibo"],
-  ["Panamá", "en Panamá · Ciudad de Panamá"],
-  ["República Dominicana", "en República Dominicana · Santo Domingo · Santiago"],
-  ["Estados Unidos", "Miami · Florida · empresas hispanas en EE. UU."]
+  [
+   "Venezuela",
+   "en Venezuela · Caracas · Valencia · Maracaibo"
+  ],
+  [
+   "Panamá",
+   "en Panamá · Ciudad de Panamá"
+  ],
+  [
+   "República Dominicana",
+   "en República Dominicana · Santo Domingo · Santiago"
+  ],
+  [
+   "Estados Unidos",
+   "Miami · Florida · empresas hispanas en EE. UU."
+  ]
  ],
  "grupos": [
-  {"id": "transversales", "titulo": "Marca y portafolio", "pagina": "index.html",
+  {
+   "id": "transversales",
+   "titulo": "Marca y portafolio",
+   "pagina": "index.html",
    "objetivo": "Posicionar a Consein como integrador Cisco y Microsoft en los cuatro países donde opera.",
    "kw": [
-    ["integrador Cisco y Microsoft", "Principal", "Comercial", "A", "index.html · title y eyebrow"],
-    ["soluciones Cisco y Microsoft", "Principal", "Comercial", "A", "index.html · lead y meta description"],
-    ["integrador Cisco en Venezuela", "Geográfica", "Comercial", "A", "index.html · title y Nosotros"],
-    ["integrador Cisco en Panamá", "Geográfica", "Comercial", "A", "index.html · title y Nosotros"],
-    ["servicios gestionados de red", "Secundaria", "Comercial", "B", "index.html · preguntas frecuentes"],
-    ["outsourcing de redes y seguridad", "Secundaria", "Comercial", "B", "index.html · preguntas frecuentes"],
-    ["partner Cisco Venezuela", "Geográfica", "Comercial", "A", "Pendiente: confirmar el nivel de partnership", false],
-    ["Consein", "Marca", "Navegacional", "A", "Todas las páginas"]
-   ]},
-  {"id": "conectividad", "titulo": "1. Conectividad LAN y WAN (Infraestructura)", "pagina": "soluciones.html#conectividad",
+    [
+     "integrador Cisco y Microsoft",
+     "Principal",
+     "Comercial",
+     "A",
+     "index.html · title y eyebrow"
+    ],
+    [
+     "soluciones Cisco y Microsoft",
+     "Principal",
+     "Comercial",
+     "A",
+     "index.html · lead y meta description"
+    ],
+    [
+     "integrador Cisco en Venezuela",
+     "Geográfica",
+     "Comercial",
+     "A",
+     "index.html · title y Nosotros"
+    ],
+    [
+     "integrador Cisco en Panamá",
+     "Geográfica",
+     "Comercial",
+     "A",
+     "index.html · title y Nosotros"
+    ],
+    [
+     "servicios gestionados de red",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "index.html · preguntas frecuentes"
+    ],
+    [
+     "outsourcing de redes y seguridad",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "index.html · preguntas frecuentes"
+    ],
+    [
+     "partner Cisco Venezuela",
+     "Geográfica",
+     "Comercial",
+     "A",
+     "Pendiente: confirmar el nivel de partnership",
+     false
+    ],
+    [
+     "Consein",
+     "Marca",
+     "Navegacional",
+     "A",
+     "Todas las páginas"
+    ]
+   ]
+  },
+  {
+   "id": "multinube",
+   "titulo": "Multinube: AWS y Google Cloud",
+   "pagina": "soluciones.html#criterio",
+   "objetivo": "Captar a las empresas que, además de Microsoft, operan en AWS o Google Cloud.",
+   "kw": [
+    [
+     "SD-WAN multinube",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Criterio y FAQ"
+    ],
+    [
+     "seguridad multinube",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Criterio"
+    ],
+    [
+     "conectividad a AWS y Google Cloud",
+     "Long tail",
+     "Comercial",
+     "B",
+     "Cisco Catalyst SD-WAN"
+    ],
+    [
+     "Google Workspace",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Fichas de producto y SECaaS"
+    ],
+    [
+     "Meraki vMX en AWS y Google Cloud",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Meraki MX + Secure Access"
+    ]
+   ]
+  },
+  {
+   "id": "conectividad",
+   "titulo": "1. Conectividad LAN y WAN (Infraestructura)",
+   "pagina": "soluciones.html#conectividad",
    "objetivo": "Posicionarnos en SD-WAN y SASE para empresas y en redes gestionadas en la nube con Cisco Meraki.",
    "kw": [
-    ["SD-WAN para empresas", "Principal", "Comercial", "A", "H2 del área"],
-    ["arquitectura SASE", "Principal", "Comercial", "A", "Intro y Meraki MX + Secure Access"],
-    ["Cisco Meraki", "Producto", "Comercial", "A", "Intro del área"],
-    ["Cisco Catalyst SD-WAN", "Producto", "Comercial", "A", "Cisco Catalyst SD-WAN"],
-    ["Meraki MX con SD-WAN", "Producto", "Comercial", "A", "REN-03"],
-    ["conectividad de sucursales a Azure", "Long tail", "Informativa", "A", "Cisco Catalyst SD-WAN"],
-    ["red gestionada en la nube", "Secundaria", "Comercial", "B", "Meraki MS y MR"],
-    ["Wi-Fi empresarial", "Secundaria", "Comercial", "B", "Intro y Meraki MS y MR"],
-    ["respaldo 4G/5G para sucursales", "Long tail", "Comercial", "B", "Meraki MG"],
-    ["Azure Virtual WAN", "Long tail", "Informativa", "C", "Cisco Catalyst SD-WAN"]
-   ]},
-  {"id": "secaas", "titulo": "2. SECaaS (Seguridad)", "pagina": "soluciones.html#secaas",
+    [
+     "SD-WAN para empresas",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área"
+    ],
+    [
+     "arquitectura SASE",
+     "Principal",
+     "Comercial",
+     "A",
+     "Intro y Meraki MX + Secure Access"
+    ],
+    [
+     "Cisco Meraki",
+     "Producto",
+     "Comercial",
+     "A",
+     "Intro del área"
+    ],
+    [
+     "Cisco Catalyst SD-WAN",
+     "Producto",
+     "Comercial",
+     "A",
+     "Cisco Catalyst SD-WAN"
+    ],
+    [
+     "Meraki MX con SD-WAN",
+     "Producto",
+     "Comercial",
+     "A",
+     "REN-03"
+    ],
+    [
+     "conectividad de sucursales a Azure",
+     "Long tail",
+     "Informativa",
+     "A",
+     "Cisco Catalyst SD-WAN"
+    ],
+    [
+     "red gestionada en la nube",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Meraki MS y MR"
+    ],
+    [
+     "Wi-Fi empresarial",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Intro y Meraki MS y MR"
+    ],
+    [
+     "respaldo 4G/5G para sucursales",
+     "Long tail",
+     "Comercial",
+     "B",
+     "Meraki MG"
+    ],
+    [
+     "Azure Virtual WAN",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Cisco Catalyst SD-WAN"
+    ]
+   ]
+  },
+  {
+   "id": "secaas",
+   "titulo": "2. SECaaS (Seguridad)",
+   "pagina": "soluciones.html#secaas",
    "objetivo": "Ser referencia en seguridad como servicio administrada, del endpoint al firewall en la nube.",
    "kw": [
-    ["seguridad como servicio", "Principal", "Comercial", "A", "H2 del área y FAQ"],
-    ["SECaaS", "Principal", "Comercial", "A", "H2 del área y paquetes"],
-    ["ciberseguridad administrada para empresas", "Secundaria", "Comercial", "A", "Intro del área"],
-    ["firewall en la nube", "Secundaria", "Comercial", "A", "H2 del área y SECaaS Advantage"],
-    ["Zero Trust", "Secundaria", "Comercial", "A", "SECaaS Essential"],
-    ["Cisco Duo", "Producto", "Comercial", "A", "SECaaS Essential y Advantage"],
-    ["Cisco Secure Access", "Producto", "Comercial", "A", "SECaaS Essential y Advantage"],
-    ["outsourcing de ciberseguridad", "Secundaria", "Comercial", "B", "Intro del área"],
-    ["Secure Web Gateway", "Secundaria", "Comercial", "B", "SECaaS Essential"],
-    ["seguridad DNS", "Long tail", "Comercial", "B", "SECaaS Essential"],
-    ["Cisco Secure Endpoint", "Producto", "Comercial", "B", "SECaaS Advantage"],
-    ["CASB", "Long tail", "Informativa", "B", "SECaaS Advantage"],
-    ["NOC/SOC 24/7", "Secundaria", "Comercial", "B", "SECaaS Essential"],
-    ["alternativa a la VPN tradicional", "Long tail", "Informativa", "C", "FAQ de usuarios remotos"]
-   ]},
-  {"id": "proteccion-red", "titulo": "3. Red local y perímetro (Seguridad)", "pagina": "soluciones.html#proteccion-red",
+    [
+     "seguridad como servicio",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área y FAQ"
+    ],
+    [
+     "SECaaS",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área y paquetes"
+    ],
+    [
+     "ciberseguridad administrada para empresas",
+     "Secundaria",
+     "Comercial",
+     "A",
+     "Intro del área"
+    ],
+    [
+     "firewall en la nube",
+     "Secundaria",
+     "Comercial",
+     "A",
+     "H2 del área y SECaaS Advantage"
+    ],
+    [
+     "Zero Trust",
+     "Secundaria",
+     "Comercial",
+     "A",
+     "SECaaS Essential"
+    ],
+    [
+     "Cisco Duo",
+     "Producto",
+     "Comercial",
+     "A",
+     "SECaaS Essential y Advantage"
+    ],
+    [
+     "Cisco Secure Access",
+     "Producto",
+     "Comercial",
+     "A",
+     "SECaaS Essential y Advantage"
+    ],
+    [
+     "outsourcing de ciberseguridad",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Intro del área"
+    ],
+    [
+     "Secure Web Gateway",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "SECaaS Essential"
+    ],
+    [
+     "seguridad DNS",
+     "Long tail",
+     "Comercial",
+     "B",
+     "SECaaS Essential"
+    ],
+    [
+     "Cisco Secure Endpoint",
+     "Producto",
+     "Comercial",
+     "B",
+     "SECaaS Advantage"
+    ],
+    [
+     "CASB",
+     "Long tail",
+     "Informativa",
+     "B",
+     "SECaaS Advantage"
+    ],
+    [
+     "NOC/SOC 24/7",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "SECaaS Essential"
+    ],
+    [
+     "alternativa a la VPN tradicional",
+     "Long tail",
+     "Informativa",
+     "C",
+     "FAQ de usuarios remotos"
+    ]
+   ]
+  },
+  {
+   "id": "proteccion-red",
+   "titulo": "3. Red local y perímetro (Seguridad)",
+   "pagina": "soluciones.html#proteccion-red",
    "objetivo": "Captar la demanda de control de acceso a la red local (Cisco ISE) y de firewall perimetral, ofrecidos por separado.",
    "kw": [
-    ["control de acceso a la red (NAC)", "Principal", "Comercial", "A", "H2 del área y Cisco ISE"],
-    ["firewall perimetral", "Principal", "Comercial", "A", "H2 del área y Cisco Secure Firewall"],
-    ["Cisco ISE", "Producto", "Comercial", "A", "Cisco ISE"],
-    ["Cisco Secure Firewall", "Producto", "Comercial", "A", "Cisco Secure Firewall"],
-    ["segmentación de la red", "Long tail", "Informativa", "B", "Intro del área y Cisco ISE"],
-    ["integración con Intune", "Long tail", "Informativa", "B", "Cisco ISE"],
-    ["Microsoft Sentinel", "Long tail", "Informativa", "B", "Cisco Secure Firewall"]
-   ]},
-  {"id": "colaboracion", "titulo": "4. Colaboración", "pagina": "soluciones.html#colaboracion",
+    [
+     "control de acceso a la red (NAC)",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área y Cisco ISE"
+    ],
+    [
+     "firewall perimetral",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área y Cisco Secure Firewall"
+    ],
+    [
+     "Cisco ISE",
+     "Producto",
+     "Comercial",
+     "A",
+     "Cisco ISE"
+    ],
+    [
+     "Cisco Secure Firewall",
+     "Producto",
+     "Comercial",
+     "A",
+     "Cisco Secure Firewall"
+    ],
+    [
+     "segmentación de la red",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Intro del área y Cisco ISE"
+    ],
+    [
+     "integración con Intune",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Cisco ISE"
+    ],
+    [
+     "Microsoft Sentinel",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Cisco Secure Firewall"
+    ]
+   ]
+  },
+  {
+   "id": "colaboracion",
+   "titulo": "4. Colaboración",
+   "pagina": "soluciones.html#colaboracion",
    "objetivo": "Liderar las búsquedas de salas Microsoft Teams Rooms con hardware Cisco certificado.",
    "kw": [
-    ["Microsoft Teams Rooms", "Principal", "Comercial", "A", "H2 del área"],
-    ["salas de reuniones para Teams", "Principal", "Comercial", "A", "Cisco Room Bar"],
-    ["implementación de Teams Rooms", "Long tail", "Transaccional", "A", "Intro del área"],
-    ["Cisco Room Bar", "Producto", "Comercial", "A", "Cisco Room Bar / Room Bar Pro"],
-    ["Cisco Board Pro", "Producto", "Comercial", "B", "Cisco Board Pro Series"],
-    ["videoconferencia empresarial", "Secundaria", "Comercial", "B", "Intro del área"],
-    ["pizarra digital", "Long tail", "Informativa", "C", "Cisco Board Pro Series"]
-   ]},
-  {"id": "inteligencia-artificial", "titulo": "5. Inteligencia Artificial (IA)", "pagina": "soluciones.html#inteligencia-artificial",
+    [
+     "Microsoft Teams Rooms",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área"
+    ],
+    [
+     "salas de reuniones para Teams",
+     "Principal",
+     "Comercial",
+     "A",
+     "Cisco Room Bar"
+    ],
+    [
+     "implementación de Teams Rooms",
+     "Long tail",
+     "Transaccional",
+     "A",
+     "Intro del área"
+    ],
+    [
+     "Cisco Room Bar",
+     "Producto",
+     "Comercial",
+     "A",
+     "Cisco Room Bar / Room Bar Pro"
+    ],
+    [
+     "Cisco Board Pro",
+     "Producto",
+     "Comercial",
+     "B",
+     "Cisco Board Pro Series"
+    ],
+    [
+     "videoconferencia empresarial",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Intro del área"
+    ],
+    [
+     "pizarra digital",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Cisco Board Pro Series"
+    ]
+   ]
+  },
+  {
+   "id": "inteligencia-artificial",
+   "titulo": "5. Inteligencia Artificial (IA)",
+   "pagina": "soluciones.html#inteligencia-artificial",
    "objetivo": "Posicionarnos temprano en seguridad para IA, un tema con poca competencia en español.",
    "kw": [
-    ["seguridad para inteligencia artificial", "Principal", "Comercial", "A", "H2 del área"],
-    ["Cisco AI Defense", "Producto", "Comercial", "A", "Cisco AI Defense"],
-    ["adopción responsable de IA", "Secundaria", "Informativa", "B", "Intro del área"],
-    ["inventario de activos de IA", "Long tail", "Informativa", "B", "Intro y Cisco AI Defense"],
-    ["validación de modelos", "Long tail", "Informativa", "B", "Intro y Cisco AI Defense"],
-    ["Azure AI Foundry", "Long tail", "Informativa", "B", "Cisco AI Defense"],
-    ["Copilot Studio", "Long tail", "Informativa", "C", "Cisco AI Defense"]
-   ]},
-  {"id": "renueva", "titulo": "Ofertas de Productos · Programa Renueva", "pagina": "productos.html",
+    [
+     "seguridad para inteligencia artificial",
+     "Principal",
+     "Comercial",
+     "A",
+     "H2 del área"
+    ],
+    [
+     "Cisco AI Defense",
+     "Producto",
+     "Comercial",
+     "A",
+     "Cisco AI Defense"
+    ],
+    [
+     "adopción responsable de IA",
+     "Secundaria",
+     "Informativa",
+     "B",
+     "Intro del área"
+    ],
+    [
+     "inventario de activos de IA",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Intro y Cisco AI Defense"
+    ],
+    [
+     "validación de modelos",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Intro y Cisco AI Defense"
+    ],
+    [
+     "Azure AI Foundry",
+     "Long tail",
+     "Informativa",
+     "B",
+     "Cisco AI Defense"
+    ],
+    [
+     "Copilot Studio",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Cisco AI Defense"
+    ]
+   ]
+  },
+  {
+   "id": "renueva",
+   "titulo": "Ofertas de Productos · Programa Renueva",
+   "pagina": "productos.html",
    "objetivo": "Generar demanda de renovación de hardware Cisco sin soporte.",
    "kw": [
-    ["renovación de equipos Cisco", "Principal", "Comercial", "A", "Title y H1"],
-    ["renovación de hardware Cisco", "Principal", "Comercial", "A", "Lead del encabezado"],
-    ["equipos Cisco en fin de soporte", "Principal", "Informativa", "A", "Lead, REN-01 y FAQ"],
-    ["end of life", "Secundaria", "Informativa", "A", "Por qué renovar y REN-01"],
-    ["inventario de obsolescencia", "Secundaria", "Comercial", "A", "REN-01 y autodiagnóstico"],
-    ["migración de Cisco ASA a Secure Firewall", "Long tail", "Comercial", "A", "REN-04"],
-    ["reemplazo de MPLS por SD-WAN", "Long tail", "Comercial", "A", "REN-03"],
-    ["renovación de switches y Wi-Fi", "Long tail", "Comercial", "B", "REN-02"],
-    ["salas de videoconferencia a Teams Rooms", "Long tail", "Comercial", "B", "REN-06"],
-    ["financiamiento para renovación tecnológica", "Secundaria", "Transaccional", "B", "REN-07"],
-    ["financiamiento bancario", "Long tail", "Transaccional", "B", "Aviso y REN-07"],
-    ["BOD 26-02", "Long tail", "Informativa", "C", "Por qué renovar"]
-   ]}
+    [
+     "renovación de equipos Cisco",
+     "Principal",
+     "Comercial",
+     "A",
+     "Title y H1"
+    ],
+    [
+     "renovación de hardware Cisco",
+     "Principal",
+     "Comercial",
+     "A",
+     "Lead del encabezado"
+    ],
+    [
+     "equipos Cisco en fin de soporte",
+     "Principal",
+     "Informativa",
+     "A",
+     "Lead, REN-01 y FAQ"
+    ],
+    [
+     "end of life",
+     "Secundaria",
+     "Informativa",
+     "A",
+     "Por qué renovar y REN-01"
+    ],
+    [
+     "inventario de obsolescencia",
+     "Secundaria",
+     "Comercial",
+     "A",
+     "REN-01 y autodiagnóstico"
+    ],
+    [
+     "migración de Cisco ASA a Secure Firewall",
+     "Long tail",
+     "Comercial",
+     "A",
+     "REN-04"
+    ],
+    [
+     "reemplazo de MPLS por SD-WAN",
+     "Long tail",
+     "Comercial",
+     "A",
+     "REN-03"
+    ],
+    [
+     "renovación de switches y Wi-Fi",
+     "Long tail",
+     "Comercial",
+     "B",
+     "REN-02"
+    ],
+    [
+     "salas de videoconferencia a Teams Rooms",
+     "Long tail",
+     "Comercial",
+     "B",
+     "REN-06"
+    ],
+    [
+     "financiamiento para renovación tecnológica",
+     "Secundaria",
+     "Transaccional",
+     "B",
+     "REN-07"
+    ],
+    [
+     "financiamiento bancario",
+     "Long tail",
+     "Transaccional",
+     "B",
+     "Aviso y REN-07"
+    ],
+    [
+     "BOD 26-02",
+     "Long tail",
+     "Informativa",
+     "C",
+     "Por qué renovar"
+    ]
+   ]
+  }
  ]
 }
