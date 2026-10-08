@@ -1,0 +1,5 @@
+# robots.txt — publicar en la raíz del dominio: https://www.consein.com/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.consein.com/sitemap.xml
