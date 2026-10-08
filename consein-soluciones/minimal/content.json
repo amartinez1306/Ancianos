@@ -535,7 +535,7 @@
    "title": "Ciberseguridad empresarial Zero Trust | Consein",
    "meta": "Ciberseguridad empresarial con Microsoft Defender, Sentinel, Entra, Intune y Purview. SOC y seguridad gestionada en Venezuela, Panamá y la región.",
    "h1": "Ciberseguridad Zero Trust para su empresa",
-   "sub": "Protegemos identidades, datos y dispositivos con Microsoft Defender, Sentinel, Entra y Purview, y vigilamos su operación todos los días.",
+   "sub": "Protegemos identidades, datos y dispositivos con Microsoft Defender, Sentinel, Entra y Purview, y cuidamos su operación todos los días.",
    "problemas": [
     "Herramientas de seguridad fragmentadas",
     "Alertas que nadie atiende",
@@ -602,7 +602,9 @@
       "Revisión de Microsoft Secure Score.",
       "Identidad, endpoints, correo, datos y nube.",
       "Análisis de brechas de configuración.",
-      "Hoja de ruta priorizada por riesgo e impacto."
+      "Hoja de ruta priorizada por riesgo e impacto.",
+      "Acompañamiento en los resultados del Secure Score: le explicamos cada hallazgo y cómo corregirlo.",
+      "Seguimiento de los resultados para dar continuidad a las mejoras después de la entrega del Secure Score."
      ],
      "resultado": "Mapa de riesgo y plan de remediación accionable."
     },
@@ -670,7 +672,7 @@
      "code": "SEG-05",
      "name": "Consein Managed Security",
      "tipo": "Servicio gestionado",
-     "valor": "Vigilamos su seguridad todos los días con especialistas.",
+     "valor": "Cuidamos su seguridad todos los días con especialistas.",
      "ideal": "Organizaciones sin un equipo de seguridad dedicado.",
      "resuelve": "Seguridad que depende de un equipo interno saturado.",
      "incluye": [
@@ -723,7 +725,7 @@
      "Con Microsoft Intune inscribimos y protegemos equipos Windows, macOS, iOS y Android, aplicamos políticas de cumplimiento y habilitamos el borrado remoto selectivo de la información corporativa."
     ],
     [
-     "¿Pueden vigilar nuestra seguridad todos los días?",
+     "¿Pueden cuidar nuestra seguridad todos los días?",
      "Sí. Con Consein Managed Security monitoreamos su entorno de forma continua, respondemos ante incidentes, mejoramos su postura de seguridad y le entregamos reportes ejecutivos mensuales."
     ],
     [
@@ -732,7 +734,7 @@
     ],
     [
      "¿Ofrecen servicios de ciberseguridad gestionada en Venezuela y Panamá?",
-     "Sí. Protegemos y vigilamos la operación de empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, sobre la plataforma de seguridad de Microsoft."
+     "Sí. Protegemos y cuidamos la operación de empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, sobre la plataforma de seguridad de Microsoft."
     ]
    ],
    "seo": {
@@ -978,7 +980,7 @@
    "promesa": "Integramos ERP, CRM, Power BI y gobierno corporativo.",
    "title": "Dynamics 365 Business Central, CRM y Power BI | Consein",
    "meta": "Dynamics 365 Business Central, CRM, Power BI y software para mercado de capitales y registro de accionistas (SIMC, SIAC). Partner Microsoft en la región.",
-   "h1": "ERP Dynamics 365, CRM, Power BI, Sistema Integrado de Capitales y Sistema Integrado de Accionistas",
+   "h1": "Dynamics 365 + Power BI, Sistemas de Mercado y Accionistas",
    "sub": "Implementamos Dynamics 365 Business Central, CRM, Power BI y nuestros sistemas de mercado de capitales y accionistas para que controle su operación y decida con cifras confiables.",
    "problemas": [
     "Cierres contables que tardan semanas",
