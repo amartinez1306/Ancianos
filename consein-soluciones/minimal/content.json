@@ -1039,9 +1039,9 @@
    "offerings": [
     {
      "code": "EMP-01",
-     "name": "Business Central Quick Start",
+     "name": "Implementación de Business Central",
      "tipo": "Implementación",
-     "valor": "Modernizamos su gestión financiera con un ERP conectado.",
+     "valor": "Implementamos su ERP en la nube con procesos integrados.",
      "ideal": "PyMEs y empresas medianas con procesos financieros manuales o sistemas limitados.",
      "resuelve": "Baja trazabilidad, cierres lentos y sistemas que frenan el crecimiento.",
      "incluye": [
@@ -1055,10 +1055,10 @@
     },
     {
      "code": "EMP-02",
-     "name": "Ruta Great Plains a Business Central",
+     "name": "De Dynamics GP a Business Central",
      "tipo": "Assessment + programa",
-     "valor": "Llevamos Dynamics GP a la nube sin perder información crítica.",
-     "ideal": "Empresas que dependen de Dynamics GP (Great Plains).",
+     "valor": "Migramos Dynamics GP a la nube sin perder información crítica.",
+     "ideal": "Empresas que operan con Dynamics GP.",
      "resuelve": "Infraestructura local, personalizaciones difíciles de mantener y riesgo de obsolescencia.",
      "incluye": [
       "Assessment funcional y técnico de GP.",
@@ -1071,14 +1071,14 @@
     },
     {
      "code": "EMP-03",
-     "name": "CRM de Ventas y Servicio al Cliente",
+     "name": "CRM comercial y de servicio",
      "tipo": "Implementación",
-     "valor": "Unificamos la visión del cliente, de la oportunidad al servicio.",
+     "valor": "Implementamos ventas y servicio en Dynamics 365, con una visión única del cliente.",
      "ideal": "Equipos comerciales y de servicio que trabajan con hojas de cálculo.",
      "resuelve": "Seguimiento manual, oportunidades perdidas y poca visibilidad del cliente.",
      "incluye": [
-      "Diseño de procesos comerciales o de servicio.",
-      "Configuración de Dynamics 365 Sales o Customer Service.",
+      "Diseño de procesos comerciales y de servicio.",
+      "Implementación de Dynamics 365 Sales y Customer Service.",
       "Integraciones y automatizaciones básicas.",
       "Tableros, capacitación y adopción."
      ],
@@ -1087,9 +1087,9 @@
     },
     {
      "code": "EMP-04",
-     "name": "Tablero Ejecutivo Power BI",
+     "name": "Power BI para la dirección",
      "tipo": "Implementación",
-     "valor": "Entregamos una sola versión de las cifras a toda la dirección.",
+     "valor": "Construimos tableros con una sola versión de las cifras para toda la dirección.",
      "ideal": "Direcciones que reciben reportes manuales o cifras que no coinciden.",
      "resuelve": "Horas dedicadas a armar reportes y decisiones con información inconsistente.",
      "incluye": [
@@ -1103,7 +1103,7 @@
     },
     {
      "code": "EMP-05",
-     "name": "Copilot para Finanzas y Ventas",
+     "name": "Copilot para finanzas y ventas",
      "tipo": "Acelerador",
      "valor": "Llevamos la IA al ERP, el CRM y los tableros que ya usa.",
      "ideal": "Equipos de finanzas y ventas con Dynamics 365 o Power BI.",
@@ -1119,7 +1119,7 @@
     },
     {
      "code": "EMP-06",
-     "name": "Soporte y Evolución de Dynamics",
+     "name": "Soporte y evolución de Dynamics 365",
      "tipo": "Servicio gestionado",
      "valor": "Mantenemos su ERP y CRM al día y en mejora continua.",
      "ideal": "Empresas que ya operan Dynamics y necesitan soporte experto.",
@@ -1182,7 +1182,7 @@
     ],
     [
      "¿Cuánto tiempo toma implementar Business Central?",
-     "Depende de sus procesos e integraciones. Con Business Central Quick Start comenzamos por lo esencial y le entregamos un plan detallado al cerrar el diagnóstico."
+     "Depende de sus procesos e integraciones. Con la Implementación de Business Central comenzamos por lo esencial y le entregamos un plan detallado al cerrar el diagnóstico."
     ],
     [
      "¿Qué beneficios podemos esperar del nuevo ERP?",
@@ -1198,11 +1198,11 @@
     ],
     [
      "¿Podemos usar Copilot en el ERP y el CRM?",
-     "Sí. Con Copilot para Finanzas y Ventas activamos la IA dentro de Business Central, Dynamics 365 y Power BI, en las herramientas que su equipo ya usa."
+     "Sí. Con Copilot para finanzas y ventas activamos la IA dentro de Business Central, Dynamics 365 y Power BI, en las herramientas que su equipo ya usa."
     ],
     [
      "¿Quién da soporte después de la implementación?",
-     "Nosotros. Con Soporte y Evolución de Dynamics mantenemos su ERP y CRM al día, atendemos solicitudes y mejoramos los procesos de forma continua."
+     "Nosotros. Con Soporte y evolución de Dynamics 365 mantenemos su ERP y CRM al día, atendemos solicitudes y mejoramos los procesos de forma continua."
     ],
     [
      "¿Tienen software para casas de bolsa y operaciones de valores?",
