@@ -84,15 +84,16 @@ def arte_hero():
   {''.join(puntos)}
   <circle cx="{cx}" cy="{cy}" r="78" class="core-halo"/>
   <circle cx="{cx}" cy="{cy}" r="66" fill="url(#g-core)" class="core"/>
-  <path d="M258 262a14 14 0 0 1 3-27.6 19 19 0 0 1 36.5 4.6 12 12 0 0 1 2.5 23z" class="cloud" transform="translate(0 -12)"/>
-  <text x="{cx}" y="{cy + 22}" text-anchor="middle" class="core-label">MICROSOFT</text>
-  <text x="{cx}" y="{cy + 38}" text-anchor="middle" class="core-sub">BASE</text>
+  <path d="M258 262a14 14 0 0 1 3-27.6 19 19 0 0 1 36.5 4.6 12 12 0 0 1 2.5 23z" class="cloud" transform="translate(0 -18)"/>
+  <text x="{cx}" y="{cy + 14}" text-anchor="middle" class="core-label">MICROSOFT</text>
+  <text x="{cx}" y="{cy + 29}" text-anchor="middle" class="core-sub">BASE</text>
+  <text x="{cx}" y="{cy + 44}" text-anchor="middle" class="core-alt">*AWS / Google Cloud</text>
 </svg></div>"""
 
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
-  <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small></div>
-  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas, también en AWS y Google Cloud</small></div>
+  <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small><small class="alt">*AWS / Google Cloud</small></div>
+  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
 

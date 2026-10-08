@@ -317,3 +317,6 @@ dialog.detail{border-radius:20px;overflow-y:auto;overscroll-behavior:contain}
 .detail .code{max-width:calc(100% - 52px)}
 .table.routes td:nth-child(4){font-size:.85rem;color:var(--green-ink);font-weight:500}
 @media (max-width:860px){.table.routes td:nth-child(4)::before{content:"También en: ";font-weight:600}}
+/* Nota discreta: Microsoft es la BASE; también AWS / Google Cloud */
+.hero-art .core-alt{fill:#c5cbe8;font:500 8px "Poppins",sans-serif;letter-spacing:.04em}
+.layer small.alt{font-size:.72rem;color:#9aa3cf;margin-top:6px;letter-spacing:.02em}
