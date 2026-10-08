@@ -697,6 +697,22 @@
       "Estimación de ahorro."
      ],
      "resultado": "Un stack unificado, más simple y más económico."
+    },
+    {
+     "code": "SEG-08",
+     "name": "Escudo Digital 360°: ciberseguridad para banca",
+     "tipo": "Programa integral para el sector financiero",
+     "valor": "Blindamos su institución financiera con Zero Trust y cumplimiento regulatorio de punta a punta.",
+     "ideal": "Bancos e instituciones financieras de Latinoamérica supervisados por SUDEBAN, SFC, SBS, CNBS y las Superintendencias de Bancos.",
+     "resuelve": "Brechas que cuestan en promedio US$3,22 millones en el sector financiero de Latinoamérica (IBM, 2024) y tardan 316 días en contenerse (IBM, 2025); phishing y credenciales comprometidas que abren el camino al core bancario, e identidades fragmentadas entre sistemas legados y nube.",
+     "incluye": [
+      "Evaluamos: auditoría de identidad, Secure Score y assessment regulatorio SUDEBAN, SFC y SBS.",
+      "Diseñamos: arquitectura Zero Trust con modelo de niveles, acceso condicional y protección del core bancario.",
+      "Remediamos: hardening de Active Directory, eliminación de privilegios heredados, rotación de Kerberos, LAPS y MFA.",
+      "Transformamos: la seguridad como hábito de la organización, con marco de adopción y capacitación.",
+      "Administramos y aseguramos: SOC gestionado con Microsoft Sentinel y respuesta proactiva."
+     ],
+     "resultado": "Una institución protegida y auditable, alineada con la normativa bancaria local, con el respaldo de nuestra experiencia en Banco Plaza, Bancaribe, BBVA, Bancamiga y Mercantil Banco."
     }
    ],
    "faq": [
@@ -733,6 +749,10 @@
      "Sí. Mapeamos sus herramientas frente a Microsoft Defender y Purview y planificamos una transición sin brechas de protección. Unificar la seguridad en Microsoft puede generar hasta 60% de ahorro (estudios Forrester TEI)."
     ],
     [
+     "¿Tienen una solución de ciberseguridad para bancos?",
+     "Sí. Con Escudo Digital 360° evaluamos, diseñamos, remediamos y administramos la seguridad de bancos e instituciones financieras, con Zero Trust, SOC gestionado y entornos auditables alineados con SUDEBAN, SFC, SBS y la normativa bancaria local."
+    ],
+    [
      "¿Ofrecen servicios de ciberseguridad gestionada en Venezuela y Panamá?",
      "Sí. Protegemos y cuidamos la operación de empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, sobre la plataforma de seguridad de Microsoft."
     ]
@@ -748,7 +768,9 @@
      "Microsoft Defender",
      "Microsoft Sentinel",
      "gestión de dispositivos Intune",
-     "protección de datos Purview"
+     "protección de datos Purview",
+     "ciberseguridad para bancos",
+     "ciberseguridad sector financiero"
     ]
    }
   },
