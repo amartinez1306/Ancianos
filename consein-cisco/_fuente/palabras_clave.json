@@ -1,9 +1,9 @@
 {
- "version": "4 · Octubre 2026",
+ "version": "5 · Octubre 2026",
  "paises": [
   [
    "Venezuela",
-   "en Venezuela · Caracas · Valencia · Maracaibo"
+   "en Venezuela (todo el país) · Caracas · Valencia · Maracaibo"
   ],
   [
    "Panamá",
@@ -44,7 +44,7 @@
      "Geográfica",
      "Comercial",
      "A",
-     "index.html · title y Nosotros"
+     "index.html · Nosotros (Cisco, desde 2026)"
     ],
     [
      "integrador Cisco en Panamá",
@@ -129,10 +129,24 @@
   },
   {
    "id": "conectividad",
-   "titulo": "1. Conectividad LAN y WAN (Infraestructura)",
+   "titulo": "1. Network as a Service (Infraestructura)",
    "pagina": "soluciones.html#conectividad",
-   "objetivo": "Posicionarnos en SD-WAN y SASE para empresas y en redes gestionadas en la nube con Cisco Meraki.",
+   "objetivo": "Posicionarnos en Network as a Service, SD-WAN y SASE para empresas, con redes gestionadas en la nube con Cisco Meraki.",
    "kw": [
+    [
+     "Network as a Service",
+     "Principal",
+     "Comercial",
+     "A",
+     "Nombre y H2 del área"
+    ],
+    [
+     "NaaS",
+     "Principal",
+     "Comercial",
+     "A",
+     "Nombre y H2 del área"
+    ],
     [
      "SD-WAN para empresas",
      "Principal",
@@ -206,38 +220,45 @@
    ]
   },
   {
-   "id": "secaas",
-   "titulo": "2. SECaaS (Seguridad)",
-   "pagina": "soluciones.html#secaas",
-   "objetivo": "Ser referencia en seguridad como servicio administrada, del endpoint al firewall en la nube.",
+   "id": "ciberseguridad",
+   "titulo": "2. Ciberseguridad 360 (Seguridad)",
+   "pagina": "soluciones.html#ciberseguridad",
+   "objetivo": "Ser referencia en ciberseguridad como servicio: SECaaS del endpoint a la nube, más control de acceso a la red y firewall perimetral, ofrecidos por separado.",
    "kw": [
+    [
+     "Ciberseguridad 360",
+     "Marca",
+     "Comercial",
+     "A",
+     "Nombre y H2 del área"
+    ],
     [
      "seguridad como servicio",
      "Principal",
      "Comercial",
      "A",
-     "H2 del área y FAQ"
+     "Intro del área"
     ],
     [
      "SECaaS",
      "Principal",
      "Comercial",
      "A",
-     "H2 del área y paquetes"
+     "Intro y paquetes"
     ],
     [
      "ciberseguridad administrada para empresas",
      "Secundaria",
      "Comercial",
      "A",
-     "Intro del área"
+     "SECaaS Essential (Ideal para)"
     ],
     [
      "firewall en la nube",
      "Secundaria",
      "Comercial",
      "A",
-     "H2 del área y SECaaS Advantage"
+     "SECaaS Advantage"
     ],
     [
      "Zero Trust",
@@ -265,7 +286,7 @@
      "Secundaria",
      "Comercial",
      "B",
-     "Intro del área"
+     "SECaaS Essential (Ideal para)"
     ],
     [
      "Secure Web Gateway",
@@ -308,28 +329,20 @@
      "Informativa",
      "C",
      "FAQ de usuarios remotos"
-    ]
-   ]
-  },
-  {
-   "id": "proteccion-red",
-   "titulo": "3. Red local y perímetro (Seguridad)",
-   "pagina": "soluciones.html#proteccion-red",
-   "objetivo": "Captar la demanda de control de acceso a la red local (Cisco ISE) y de firewall perimetral, ofrecidos por separado.",
-   "kw": [
+    ],
     [
      "control de acceso a la red (NAC)",
      "Principal",
      "Comercial",
      "A",
-     "H2 del área y Cisco ISE"
+     "Cisco ISE"
     ],
     [
      "firewall perimetral",
      "Principal",
      "Comercial",
      "A",
-     "H2 del área y Cisco Secure Firewall"
+     "Intro y Cisco Secure Firewall"
     ],
     [
      "Cisco ISE",
@@ -350,7 +363,7 @@
      "Long tail",
      "Informativa",
      "B",
-     "Intro del área y Cisco ISE"
+     "Cisco ISE"
     ],
     [
      "integración con Intune",
@@ -370,7 +383,7 @@
   },
   {
    "id": "colaboracion",
-   "titulo": "4. Colaboración",
+   "titulo": "3. Colaboración",
    "pagina": "soluciones.html#colaboracion",
    "objetivo": "Liderar las búsquedas de salas Microsoft Teams Rooms con hardware Cisco certificado.",
    "kw": [
@@ -426,59 +439,52 @@
    ]
   },
   {
-   "id": "inteligencia-artificial",
-   "titulo": "5. Inteligencia Artificial (IA)",
-   "pagina": "soluciones.html#inteligencia-artificial",
-   "objetivo": "Posicionarnos temprano en seguridad para IA, un tema con poca competencia en español.",
+   "id": "datacenter",
+   "titulo": "4. Datacenter (Infraestructura)",
+   "pagina": "soluciones.html#datacenter",
+   "objetivo": "Captar la demanda de renovación y modernización de centros de datos para la nube híbrida.",
    "kw": [
     [
-     "seguridad para inteligencia artificial",
+     "modernización de datacenter",
      "Principal",
      "Comercial",
      "A",
      "H2 del área"
     ],
     [
-     "Cisco AI Defense",
-     "Producto",
+     "renovación de datacenter",
+     "Principal",
      "Comercial",
      "A",
-     "Cisco AI Defense"
+     "Datacenter Cisco"
     ],
     [
-     "adopción responsable de IA",
+     "centro de datos híbrido",
+     "Secundaria",
+     "Comercial",
+     "B",
+     "Datacenter Cisco"
+    ],
+    [
+     "nube híbrida",
      "Secundaria",
      "Informativa",
      "B",
-     "Intro del área"
+     "H2 del área"
     ],
     [
-     "inventario de activos de IA",
-     "Long tail",
-     "Informativa",
+     "servidores Cisco UCS",
+     "Producto",
+     "Comercial",
      "B",
-     "Intro y Cisco AI Defense"
+     "Datacenter Cisco"
     ],
     [
-     "validación de modelos",
-     "Long tail",
-     "Informativa",
-     "B",
-     "Intro y Cisco AI Defense"
-    ],
-    [
-     "Azure AI Foundry",
-     "Long tail",
-     "Informativa",
-     "B",
-     "Cisco AI Defense"
-    ],
-    [
-     "Copilot Studio",
-     "Long tail",
-     "Informativa",
+     "Cisco Nexus",
+     "Producto",
+     "Comercial",
      "C",
-     "Cisco AI Defense"
+     "Datacenter Cisco"
     ]
    ]
   },

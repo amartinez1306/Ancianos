@@ -93,7 +93,7 @@ const portada = (titulo, sub, nota) => [
 // =====================================================================================
 const c = [];
 c.push(...portada("Manual SEO", "Soluciones Cisco de Consein · consein.com/cisco",
-  "Documento editable para el equipo de marketing y contenidos · Versión 2 · Octubre 2026"));
+  "Documento editable para el equipo de marketing y contenidos · Versión 3 · Octubre 2026"));
 c.push(p(`Este manual reúne la estrategia de posicionamiento del sitio Soluciones Cisco, los ajustes que ya aplicamos, las ${total} palabras clave objetivo y el plan de trabajo para llegar a las cinco primeras posiciones de Google en nuestro ámbito.`));
 c.push(new Paragraph({ pageBreakBefore: true, heading: HeadingLevel.HEADING_1, children: [new TextRun("Contenido")] }),
   new TableOfContents("Contenido", { hyperlink: true, headingStyleRange: "1-1" }),
@@ -101,7 +101,7 @@ c.push(new Paragraph({ pageBreakBefore: true, heading: HeadingLevel.HEADING_1, c
 
 // 1. Objetivo
 c.push(h1("1. Objetivo y alcance"),
-  p("Queremos que Consein aparezca entre los cinco primeros resultados cuando una empresa de Venezuela, Panamá, República Dominicana o el mercado hispano de Estados Unidos busque soluciones Cisco integradas con Microsoft: conectividad SD-WAN y SASE, seguridad como servicio, control de acceso a la red, salas Teams Rooms, seguridad para IA y renovación de equipos Cisco."),
+  p("Queremos que Consein aparezca entre los cinco primeros resultados cuando una empresa de Venezuela, Panamá, República Dominicana o el mercado hispano de Estados Unidos busque soluciones Cisco integradas con Microsoft (y también con AWS o Google Cloud): Network as a Service con SD-WAN y SASE, Ciberseguridad 360, salas Teams Rooms, datacenter y renovación de equipos Cisco."),
   h2("Lo que es alcanzable"),
   bullet(" búsquedas con intención comercial y modificador geográfico (por ejemplo, “integrador Cisco en Venezuela”, “seguridad como servicio Panamá”) y frases long tail (“migración de Cisco ASA a Secure Firewall”). Aquí competimos con integradores locales y el top 5 es realista en 3 a 6 meses.", "Top 5 alcanzable:"),
   bullet(" términos genéricos como “Cisco ISE”, “SD-WAN” o “Microsoft Teams Rooms”. Los dominan cisco.com, microsoft.com y medios globales. Trabajamos sus variantes locales y comerciales, que son las que convierten.", "Top 5 difícil:"),
@@ -123,7 +123,7 @@ c.push(h1("2. Ajustes que aplicamos en el sitio"),
     ["Títulos (title)", "Reescritos con la palabra clave principal al inicio y máximo 60 caracteres. Inicio incluye “Integrador Cisco y Microsoft” y los países principales."],
     ["Meta descriptions", "Reescritas en 140 a 155 caracteres, con beneficio, productos y países."],
     ["H1", "Soluciones de Valor: “Soluciones Cisco que suman valor…”. Ofertas de Productos: “renovación de equipos Cisco”. Inicio mantiene “Sinergia exponencial” y suma la palabra clave en el texto superior."],
-    ["H2 por área", "Cada área lleva su palabra clave principal: SD-WAN para empresas, seguridad como servicio, control de acceso a la red (NAC), Microsoft Teams Rooms y seguridad para inteligencia artificial."],
+    ["H2 por área", "Cada área lleva su palabra clave principal: Network as a Service (NaaS) con SD-WAN para empresas, Ciberseguridad 360, Microsoft Teams Rooms y modernización de datacenter."],
     ["Textos", "Introducciones, fichas de producto y ofertas Renueva incluyen las frases objetivo de forma natural, en primera persona y sin relleno."],
     ["Preguntas frecuentes", "Tres preguntas nuevas: trabajo con otras nubes, equipos Cisco en fin de soporte y países donde atendemos. Están marcadas como FAQPage para resultados enriquecidos."],
     ["Jerarquía de encabezados", "Un solo H1 por página; las fichas de detalle pasan a H3 para respetar el orden H1 › H2 › H3."],
@@ -132,6 +132,7 @@ c.push(h1("2. Ajustes que aplicamos en el sitio"),
     ["sitemap.xml y robots.txt", "Se generan automáticamente con el sitio."],
     ["Datos estructurados", "Organization con descripción y temas de especialidad (knowsAbout), WebPage, BreadcrumbList, ItemList de Service (11 + 8) con categoría y FAQPage (9 preguntas)."],
     ["Mensaje multinube", "Microsoft sigue como BASE en todos los titulares. Cada ficha suma la fila “También en otras plataformas” (AWS, Google Cloud, Google Workspace, Webex, otras MDM y SIEM), cada área muestra “También en:”, el Programa Renueva lo repite en el aviso, la tabla de rutas, la introducción de las ofertas y cada oferta, hay una pregunta frecuente nueva (“¿Trabajan solo con Microsoft?”) y los gráficos del diseño digital muestran una nota discreta “*AWS / Google Cloud” bajo Microsoft · BASE."],
+    ["Revisión Rev1 (octubre 2026)", "Áreas: Network as a Service (NaaS), Ciberseguridad 360 (SECaaS, Cisco ISE y Secure Firewall en una sola área), Colaboración y Datacenter. Cisco AI Defense sale del sitio por ahora. El inventario de obsolescencia es un servicio, no gratuito. Nosotros aclara que Consein existe desde 1987 y suma Cisco desde julio de 2026."],
     ["Verificador", "Script _fuente/verificar_seo.py: confirma que cada palabra clave aparece en su página después de cualquier cambio de texto."],
   ], [2400, 6960]));
 
@@ -148,11 +149,10 @@ c.push(h1("3. Mapa de palabras clave por página"),
     ["index.html", "soluciones.html", "productos.html"].map(f => [f, M[f].desc, String(M[f].desc.length)]), [1900, 6260, 1200]),
   gap(), h2("H2 de cada área de práctica"),
   table(["Área", "H2 vigente", "Línea Consein"], [
-    ["Conectividad LAN y WAN", M.h2.conectividad, "Infraestructura"],
-    ["SECaaS", M.h2.secaas, "Seguridad"],
-    ["Red local y perímetro", M.h2["proteccion-red"], "Seguridad"],
+    ["Network as a Service (NaaS)", M.h2.conectividad, "Infraestructura"],
+    ["Ciberseguridad 360", M.h2.ciberseguridad, "Seguridad"],
     ["Colaboración", M.h2.colaboracion, "Colaboración"],
-    ["Inteligencia Artificial", M.h2["inteligencia-artificial"], "IA"],
+    ["Datacenter", M.h2.datacenter, "Infraestructura"],
   ], [2400, 5160, 1800]));
 
 // 4. Palabras clave
@@ -252,7 +252,7 @@ c.push(h1("10. Plan de contenidos"),
     ["Red local y perímetro", "Qué es NAC y cómo controla el acceso a su red\nCómo migrar de Cisco ASA a Secure Firewall", "control de acceso a la red (NAC) · migración de Cisco ASA a Secure Firewall"],
     ["Colaboración", "Cómo equipar una sala Microsoft Teams Rooms\nCisco Room Bar o Board Pro: cuál elegir según la sala", "Microsoft Teams Rooms · salas de reuniones para Teams"],
     ["Multinube", "Cisco con Microsoft, AWS y Google Cloud: una red y una seguridad para varias nubes\nCómo conectar sus sedes a AWS y Google Cloud con SD-WAN", "SD-WAN multinube · seguridad multinube · conectividad a AWS y Google Cloud"],
-    ["IA", "Seguridad para IA generativa en la empresa\nCómo hacer un inventario de activos de IA", "seguridad para inteligencia artificial · inventario de activos de IA"],
+    ["Datacenter", "Cuándo renovar los servidores y el switching de su centro de datos\nDatacenter híbrido: cómo conectar su centro de datos con Azure, AWS y Google Cloud", "modernización de datacenter · renovación de datacenter · centro de datos híbrido"],
     ["Programa Renueva", "Cómo saber si sus equipos Cisco están en end of life\nQué implica la directiva BOD 26-02 para su red\nCómo financiar la renovación tecnológica", "equipos Cisco en fin de soporte · end of life · financiamiento para renovación tecnológica"],
   ], [1700, 4360, 3300]),
   gap(),
@@ -290,15 +290,16 @@ c.push(h1("13. Pendientes de validación"),
   check("Validar volúmenes de búsqueda por país y ajustar prioridades."),
   check("Datos de oficinas (dirección y teléfono) para el pie y los perfiles de Google Business."),
   check("Imagen Open Graph de 1200 × 630 px."),
-  check("Decidir si Cisco AI Defense sigue publicado mientras está en validación."),
-  check("Decidir si se agrega Datacenter al acelerador y una oferta de renovación de datacenter."));
+  check("Validar con el equipo técnico los componentes de Datacenter (Cisco UCS, Cisco Nexus) y su ficha en el Modelo de Servicios."),
+  check("Retomar Cisco AI Defense cuando se definan los métodos de despliegue y los SKU."),
+  check("Definir el alcance y el precio del servicio de inventario de obsolescencia."));
 
 // =====================================================================================
 // LISTA DE PALABRAS CLAVE (v3)
 // =====================================================================================
 const k = [];
 k.push(...portada("Palabras clave SEO", "Soluciones Cisco de Consein · 5 áreas de práctica y Programa Renueva",
-  "Documento editable para el equipo SEO · Versión 4 · Octubre 2026"));
+  "Documento editable para el equipo SEO · Versión 5 · Octubre 2026"));
 k.push(p(`${total} palabras clave en ${KW.grupos.length} grupos (${totalA} de prioridad A). La estrategia, las reglas de uso y el plan de trabajo están en el Manual SEO. Esta lista se genera desde _fuente/palabras_clave.json.`),
   rich([{ text: "Prioridad: ", bold: true }, "A = meta top 5 en 6 meses; B = top 10; C = soporte semántico.   ", { text: "* ", bold: true }, "Pendiente de confirmar el nivel de partnership."]),
   h2("Modificadores geográficos"), table(["País", "Modificadores"], KW.paises, [2600, 6760]));

@@ -13,28 +13,28 @@ Para publicarlo, suba la carpeta a cualquier servidor web (ajuste `URL_BASE` en 
 ## Páginas
 | Archivo | Menú | Contenido |
 |---|---|---|
-| `index.html` | Inicio | Sinergia exponencial con sticker "Inventario gratis", enfoque, 5 áreas de práctica (incluida SECaaS), Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, contacto (llamado a la acción) y preguntas frecuentes |
-| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Criterio, vista consolidada y 11 soluciones en 5 áreas: Conectividad LAN y WAN, SECaaS (Essential y Advantage), Red local y perímetro (ISE y Secure Firewall, por separado), Colaboración e IA |
-| `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Inventariamos gratis su hardware Cisco", por qué renovar, autodiagnóstico, rutas, método y 8 ofertas |
+| `index.html` | Inicio | Sinergia exponencial con sticker "Renueve su red", enfoque, 4 áreas de práctica, Cómo trabajamos (los siete pasos aplicados a Cisco), resultados, nosotros, contacto (llamado a la acción) y preguntas frecuentes |
+| `soluciones.html` | Soluciones Cisco › Soluciones de Valor | Criterio, vista consolidada y 11 soluciones en 4 áreas: Network as a Service (NaaS), Ciberseguridad 360 (SECaaS Essential y Advantage, Cisco ISE y Secure Firewall), Colaboración y Datacenter |
+| `productos.html` | Soluciones Cisco › Ofertas de Productos | Aviso "Renueve su hardware Cisco por fases", por qué renovar, autodiagnóstico con recomendación por señal, rutas, método y 8 ofertas |
 
 Menú: **Inicio · Soluciones Cisco · Nosotros · Contacto**. Soluciones Cisco despliega dos opciones de segundo nivel,
-Soluciones de Valor (5 áreas de práctica) y Ofertas de Productos (8 ofertas del Programa Renueva).
+Soluciones de Valor (4 áreas de práctica) y Ofertas de Productos (8 ofertas del Programa Renueva).
 
 **Soluciones de Valor** se construye con la parte de productos (secciones A y B) de
 `Nueva_Matriz_Valor_Cisco_Microsoft_Consein_v2.docx` y con `Iniciativa_SECaaS.docx` (paquetes Essential y Advantage,
 en `MATRIZ` y `SECAAS_DIF`). No se publican: "Better Together", el posicionamiento por licencia, los paquetes
 User Protection / Breach Protection, las secciones internas de la matriz (reglas de uso, C, D, E, F, Estado) ni
 la parte de negocio de SECaaS (ingresos recurrentes, plazos, multi-tenant). Datos en `ESPECIALIDADES`, `CRITERIOS` y `MATRIZ`. Cada área muestra su línea de Soluciones Consein
-(campo `linea`: Infraestructura, Seguridad, Colaboración, IA) como título sobre el encabezado y en las tarjetas. Cada producto muestra su
+(campo `linea`: Infraestructura, Seguridad, Colaboración) como título sobre el encabezado y en las tarjetas. Cada producto muestra su
 **nombre y mensaje comercial**; "Seguir leyendo…" abre En Microsoft (nuestra BASE), También en otras plataformas
 (AWS, Google Cloud y otras; campo `otras`), Cómo agrega valor y Servicio Consein (por ejemplo `soluciones.html#cisco-ise`).
 En **Ofertas de Productos**, la subpantalla muestra Ideal para, Qué resolvemos, Qué incluye, Resultado, Valor en Microsoft
 y También en (AWS, Google Cloud y otras plataformas; campo `otras` de `PRODUCTOS`).
 
 ## Aviso de renovación de hardware
-- **Inicio, Soluciones de Valor y Ofertas de Productos:** sticker circular discreto en el encabezado ("Inventario gratis", con el texto giratorio
+- **Inicio, Soluciones de Valor y Ofertas de Productos:** sticker circular discreto en el encabezado ("Renueve su red", con el texto giratorio
   "Renovación de hardware · Programa Renueva") que lleva al aviso completo. Se edita en `sticker_renueva()`.
-- **Ofertas de Productos:** aviso completo "Inventariamos gratis su hardware Cisco", después del encabezado.
+- **Ofertas de Productos:** aviso completo "Renueve su hardware Cisco por fases", después del encabezado. El inventario de obsolescencia es un servicio (no gratuito).
   Textos en `AVISOS` e ilustración en `arte_hardware()`.
 Estilos al final de `estilos.css` (y ajustes en `digital.css`). El menú
 muestra la etiqueta "Destacado · Renovación de hardware" en Ofertas de Productos.
@@ -76,7 +76,7 @@ No se publica en el sitio.
 
 ## Antes de publicar
 - Confirmar el nivel de partnership y las certificaciones Cisco vigentes de Consein.
-- Validar la capacidad de entrega de cada oferta (en especial AI Defense, Hypershield y Secure AI Factory).
+- Validar los componentes de Datacenter (Cisco UCS, Cisco Nexus). Cisco AI Defense queda fuera hasta definir despliegue y SKU.
 - Revisar CSC-09 frente a Microsoft Entra Global Secure Access.
 - Acordar con los bancos locales de cada país el proceso de evaluación para la Renovación financiada (REN-07).
 - Conectar el formulario de contacto al CRM (hoy es una maqueta).

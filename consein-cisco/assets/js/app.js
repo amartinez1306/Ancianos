@@ -124,13 +124,20 @@
     var verdict = document.getElementById("verdict");
     checks.forEach(function (c) {
       c.addEventListener("change", function () {
-        var n = Array.prototype.filter.call(checks, function (x) { return x.checked; }).length;
+        // La recomendación depende de las señales marcadas, no solo de cuántas son
+        var marcadas = Array.prototype.filter.call(checks, function (x) { return x.checked; });
+        var n = marcadas.length, obs = 0, recs = [];
+        marcadas.forEach(function (x) {
+          if (x.dataset.obs === "1") obs++;
+          (x.dataset.rec || "").split("|").forEach(function (r) { if (r && recs.indexOf(r) < 0) recs.push(r); });
+        });
         bar.style.width = (n / checks.length * 100) + "%";
+        var lista = recs.join(", ");
         verdict.textContent =
           n === 0 ? "Marque las señales que reconoce en su empresa." :
-          n <= 2 ? "Le recomendamos inventariar su base instalada para planificar a tiempo." :
-          n <= 4 ? "Su red ya limita su plataforma Microsoft. Le proponemos un inventario de obsolescencia." :
-                   "Riesgo alto. Le proponemos iniciar el inventario de obsolescencia esta semana.";
+          obs >= 2 ? "Sus señales apuntan a equipos sin soporte. Le recomendamos empezar por el inventario de obsolescencia. Ofertas sugeridas: " + lista + "." :
+          obs === 1 ? "Conviene revisar el soporte de sus equipos. Ofertas sugeridas: " + lista + "." :
+                      "Sus señales no indican obsolescencia. Ofertas que responden a su caso: " + lista + ".";
       });
     });
   }

@@ -34,6 +34,8 @@ _ICONOS = {
     "servicios-empresariales": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2M3 13h18"/>',
     "automatizacion": '<path d="M20 12a8 8 0 01-14.3 4.9M4 12a8 8 0 0114.3-4.9"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/>',
     "inteligencia-artificial": '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/>',
+    "ciberseguridad": '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9.5 12l2 2 3.5-3.5"/>',
+    "datacenter": '<rect x="4" y="3" width="16" height="5" rx="1"/><rect x="4" y="10" width="16" height="5" rx="1"/><rect x="4" y="17" width="16" height="4" rx="1"/><path d="M8 5.5h.01M8 12.5h.01M8 19h.01M12 5.5h5M12 12.5h5"/>',
     "integral": '<path d="M12 12c-2-2.7-3.6-4-5.3-4C4.6 8 3 9.8 3 12s1.6 4 3.7 4c1.7 0 3.3-1.3 5.3-4zm0 0c2 2.7 3.6 4 5.3 4 2.1 0 3.7-1.8 3.7-4s-1.6-4-3.7-4c-1.7 0-3.3 1.3-5.3 4z"/>',
     "calendario": '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
     "certificado": '<circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/>',
@@ -51,7 +53,7 @@ def arte_hero():
     """Diagrama de red animado: Microsoft al centro, nodos Cisco y el anillo integrador de Consein."""
     import math
     cx, cy, r = 280, 260, 160
-    nodos = ["SD&#45;WAN", "SECaaS", "Teams Rooms", "Cisco ISE", "AI Defense", "Meraki"]
+    nodos = ["SD&#45;WAN", "SECaaS", "Teams Rooms", "Cisco ISE", "Datacenter", "Meraki"]
     lineas, paquetes, puntos = [], [], []
     for i, n in enumerate(nodos):
         a = math.radians(-90 + 60 * i)
@@ -93,7 +95,7 @@ def arte_hero():
 
 ARTE_CAPAS = """<div class="stack" aria-hidden="true">
   <div class="layer l1"><span class="tag">BASE</span><b>Microsoft</b><small>Identidad · Microsoft 365 · Azure · Dynamics 365 · IA</small><small class="alt">*AWS / Google Cloud</small></div>
-  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas</small></div>
+  <div class="layer l2"><span class="tag">Acelerador</span><b>Cisco</b><small>Red · Seguridad · Salas · Datacenter</small></div>
   <div class="layer l3"><span class="tag">Integrador</span><b>Consein</b><small>Diseñamos, implementamos y operamos con un solo responsable</small></div>
 </div>"""
 
@@ -102,22 +104,19 @@ ARTE_CAPAS = """<div class="stack" aria-hidden="true">
 # ---------------------------------------------------------------------------
 ESPECIALIDADES = [
     # "linea": línea de soluciones Consein a la que pertenece cada área (título visible en el sitio).
-    # Productos: Nueva Matriz de Valor v2 (secciones A y B) + Iniciativa SECaaS de Consein.
-    {"id": "conectividad", "linea": "Infraestructura", "otras": "AWS, Google Cloud y Google Workspace", "nombre": "Conectividad LAN y WAN",
-     "h2": "SD-WAN para empresas y arquitectura SASE",
-     "intro": "Conectamos sus redes LAN y WAN según el destino del tráfico: aplicaciones SaaS como Microsoft 365 o cargas IaaS en Azure. Su Wi-Fi empresarial, sus switches y sus enlaces, gestionados en la nube con Cisco Meraki."},
-    {"id": "secaas", "linea": "Seguridad", "otras": "AWS, Google Cloud, Google Workspace y Okta", "nombre": "SECaaS",
-     "h2": "SECaaS: seguridad como servicio, del endpoint al firewall en la nube",
-     "intro": "Convertimos la ciberseguridad en un servicio por consumo: ciberseguridad administrada para empresas, en paquetes todo en uno basados en Cisco. Es outsourcing de ciberseguridad operado por Consein desde Cisco Security Cloud Control."},
-    {"id": "proteccion-red", "linea": "Seguridad", "otras": "AWS, Google Cloud y otras plataformas MDM y SIEM", "nombre": "Red local y perímetro",
-     "h2": "Control de acceso a la red (NAC) y firewall perimetral",
-     "intro": "Ofrecemos por separado Cisco ISE, para controlar quién entra a su red local y aplicar la segmentación de la red, y Cisco Secure Firewall, un firewall perimetral para empresas que protege el borde on-premise y la conectividad híbrida."},
+    # Productos: Nueva Matriz de Valor v2 + Iniciativa SECaaS + revisión Rev1 (NaaS, Ciberseguridad 360, Datacenter).
+    {"id": "conectividad", "linea": "Infraestructura", "otras": "AWS, Google Cloud y Google Workspace", "nombre": "Network as a Service (NaaS)",
+     "h2": "Network as a Service (NaaS) con SD-WAN para empresas",
+     "intro": "Transformamos la infraestructura de su empresa en un servicio ágil y predecible. Gestionamos desde la nube su Wi-Fi, switches y SD-WAN con Cisco Meraki, garantizando un acceso seguro y una experiencia optimizada hacia sus entornos en Microsoft 365 y Azure."},
+    {"id": "ciberseguridad", "linea": "Seguridad", "otras": "AWS, Google Cloud, Google Workspace, Okta y otras plataformas MDM y SIEM", "nombre": "Ciberseguridad 360",
+     "h2": "Ciberseguridad 360: protección unificada del endpoint a la nube",
+     "intro": "Protección unificada desde el endpoint hasta la nube. Convertimos la ciberseguridad corporativa en un servicio por consumo, combinando un modelo de seguridad como servicio (SECaaS) con el control de acceso a la red local y el firewall perimetral."},
     {"id": "colaboracion", "linea": "Colaboración", "otras": "Webex y otras plataformas de video", "nombre": "Colaboración",
      "h2": "Salas Microsoft Teams Rooms con hardware Cisco",
      "intro": "Hacemos la implementación de Teams Rooms en sus salas de reuniones: videoconferencia empresarial con hardware Cisco certificado, instalación y soporte."},
-    {"id": "inteligencia-artificial", "linea": "IA", "otras": "AWS y Google Cloud", "nombre": "Inteligencia Artificial",
-     "h2": "Seguridad para inteligencia artificial",
-     "intro": "Acompañamos la adopción responsable de IA en Azure AI Foundry y Copilot Studio, empezando por el inventario de activos de IA y la validación de modelos."},
+    {"id": "datacenter", "linea": "Infraestructura", "otras": "AWS y Google Cloud", "nombre": "Datacenter",
+     "h2": "Modernización de datacenter para la nube híbrida",
+     "intro": "Renovamos su centro de datos con servidores y switching Cisco y lo preparamos para operar en modo híbrido con Azure y, si su operación lo requiere, con AWS o Google Cloud."},
 ]
 
 # Diferenciadores de SECaaS (Iniciativa SECaaS)
@@ -162,11 +161,11 @@ MATRIZ = [
      "ms": "Microsoft 365 / Azure", "otras": "Aplicaciones críticas en AWS, Google Cloud o su centro de datos.",
      "valor": "Sumamos respaldo 4G/5G para sucursales: enlaces celulares que mantienen el acceso a sus aplicaciones críticas y a Azure cuando falla su proveedor de internet principal, sujeto a la cobertura celular de la sede."},
 
-    {"area": "secaas", "id": "secaas-essential", "nombre": "SECaaS Essential",
+    {"area": "ciberseguridad", "id": "secaas-essential", "nombre": "SECaaS Essential",
      "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
      "mensaje": "Base sólida para la seguridad moderna: identidad, acceso web y cimientos de Zero Trust.",
      "ms": "Active Directory / Entra ID", "otras": "Google Workspace, Okta y otros proveedores de identidad; aplicaciones en AWS, Google Cloud o servidores locales.",
-     "ideal": "Medianas empresas y corporaciones que buscan modernizar su seguridad y prefieren delegar su gestión a Consein.",
+     "ideal": "Medianas empresas y corporaciones que buscan modernizar su seguridad y prefieren delegar su gestión a Consein: ciberseguridad administrada para empresas, como outsourcing de ciberseguridad.",
      "componentes": "Duo Essentials · Cisco Secure Access (SWG/DNS)",
      "incluye": ["MFA avanzado con Cisco Duo (push y OTP).",
                  "Integración con Active Directory / Entra ID.",
@@ -176,7 +175,7 @@ MATRIZ = [
                  "Gestión operativa de altas y bajas.",
                  "Monitoreo continuo NOC/SOC 24/7."],
      "valor": "Protegemos la identidad y el acceso web de sus usuarios y establecemos los cimientos de Zero Trust para su organización, como un servicio administrado por Consein."},
-    {"area": "secaas", "id": "secaas-advantage", "nombre": "SECaaS Advantage",
+    {"area": "ciberseguridad", "id": "secaas-advantage", "nombre": "SECaaS Advantage",
      "origen": ["Servicio administrado por Consein desde Cisco Security Cloud Control"],
      "mensaje": "Seguridad avanzada y visibilidad total para entornos híbridos y distribuidos.",
      "ms": "Active Directory / Entra ID", "otras": "Google Workspace, Okta y otros proveedores de identidad; aplicaciones en AWS, Google Cloud o servidores locales.",
@@ -191,11 +190,11 @@ MATRIZ = [
                  "Bloqueo avanzado de malware en el dispositivo.",
                  "Mayor visibilidad y control de aplicaciones."],
      "valor": "Sumamos a todo lo incluido en Essential la protección integral del endpoint, el firewall en la nube y el control de las aplicaciones SaaS, como un servicio administrado por Consein."},
-    {"area": "proteccion-red", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
+    {"area": "ciberseguridad", "id": "cisco-ise", "nombre": "Cisco ISE (Identity Services Engine)",
      "origen": [S1], "mensaje": "Control de acceso a la red (NAC).",
      "ms": "Microsoft Intune (integración complementaria)", "otras": "Otras plataformas de gestión de dispositivos (MDM), como Jamf o Workspace ONE.",
      "valor": "Controlamos qué usuario y qué dispositivo entra a la red cableada e inalámbrica, y aplicamos la segmentación de la red por perfil. Evaluamos la postura con Cisco Secure Client y la complementamos con la integración con Intune. Aporta el control de acceso a la red (NAC), una capa que complementa a Microsoft."},
-    {"area": "proteccion-red", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
+    {"area": "ciberseguridad", "id": "secure-firewall", "nombre": "Cisco Secure Firewall",
      "origen": [S6], "mensaje": "Gobierno único de la conectividad híbrida.",
      "ms": "Azure Firewall / Microsoft Sentinel", "otras": "Versión virtual en AWS y Google Cloud; registros hacia Splunk u otro SIEM.",
      "valor": "Protegemos el borde on-premise y la conectividad entre Azure, sedes y centro de datos con un firewall perimetral de nueva generación y un gobierno único de reglas. Sus registros llegan a Microsoft Sentinel."},
@@ -208,10 +207,11 @@ MATRIZ = [
      "ms": "Microsoft Teams Rooms / Whiteboard", "otras": "Webex y, según el dispositivo, otras plataformas de video.",
      "valor": "Llevamos la reunión híbrida y la pizarra digital de Teams (Microsoft Whiteboard) a una pantalla táctil certificada para salas medianas."},
 
-    {"area": "inteligencia-artificial", "id": "ai-defense", "nombre": "Cisco AI Defense",
-     "origen": [S7], "mensaje": "Adopción responsable de IA.",
-     "ms": "Azure AI Foundry / Copilot Studio", "otras": "Modelos y aplicaciones de IA en AWS y Google Cloud.",
-     "valor": "Empezamos por el inventario de activos de IA de su empresa y la validación de modelos y aplicaciones. Definimos el alcance de la protección en tiempo real junto a Prompt Shields y Defender for AI."},
+    {"area": "datacenter", "id": "datacenter-cisco", "nombre": "Datacenter Cisco",
+     "origen": ["Consein · Datacenter híbrido"], "mensaje": "Un centro de datos moderno, listo para la nube híbrida.",
+     "componentes": "Servidores Cisco UCS · Switching Cisco Nexus",
+     "ms": "Azure y Windows Server (operación híbrida)", "otras": "Conectividad a AWS y Google Cloud.",
+     "valor": "Hacemos la renovación de datacenter: cambiamos servidores y switching que perdieron soporte por equipos Cisco actuales y conectamos su centro de datos híbrido con Azure, con soporte y gestión del ciclo de vida."},
 ]
 
 NUMEROS = {1: "un", 2: "dos", 3: "tres", 4: "cuatro", 5: "cinco", 6: "seis", 7: "siete", 8: "ocho", 9: "nueve", 10: "diez"}
@@ -242,7 +242,7 @@ def tecnologias_area(area_id):
 # ---------------------------------------------------------------------------
 PRODUCTOS = [
     {"code": "REN-01", "otras": "También evaluamos la conexión con AWS, Google Cloud y Google Workspace", "titulo": "Inventario de obsolescencia",
-     "valor": "Identificamos de forma gratuita sus equipos Cisco en fin de soporte (end of life) y cuánto riesgo representan.",
+     "valor": "Identificamos sus equipos Cisco en fin de soporte (end of life) y cuánto riesgo representan. Es un servicio con alcance según su base instalada.",
      "ideal": "Cualquier empresa con switches, routers, firewalls, servidores o salas Cisco de más de cinco años.",
      "resuelve": "Basamos cada decisión de renovación en datos de riesgo y soporte.",
      "incluye": ["Inventariamos su base instalada Cisco.",
@@ -252,6 +252,7 @@ PRODUCTOS = [
      "resultado": "Le entregamos un mapa de obsolescencia y una hoja de ruta de renovación por fases.",
      "tec": ("Toda la base instalada, clasificada en renovar ya, planificar o mantener", "Identificamos qué equipos limitan la integración con Azure, Intune, Sentinel o Teams Rooms, y con AWS o Google Cloud"),
      "dato": "69% del hardware activo con fecha de fin de soporte programada quedará sin soporte en 2027 (NTT DATA, 2024).",
+     "nota": "El inventario es un servicio: definimos el alcance y la inversión según el tamaño de su base instalada.",
      "cta": "Inventariemos su red"},
     {"code": "REN-02", "otras": "Google Workspace, Webex y Zoom", "titulo": "Campus y Wi-Fi renovados",
      "valor": "Renovación de switches y Wi-Fi: cambiamos switches y access points legados por Meraki MS y Meraki MR, con QoS para la voz y el video de Teams.",
@@ -348,14 +349,14 @@ FAQ = [
      "Instalamos Cisco Room Bar, Room Bar Pro y Board Pro Series, dispositivos certificados que ejecutan Microsoft Teams Rooms de forma nativa. En Consein sumamos el hardware de sala, la instalación y el soporte."),
     ("¿Cómo protegen a los usuarios remotos?",
      "Con SECaaS, una alternativa a la VPN tradicional: acceso ZTNA, filtrado web y seguridad DNS con Cisco Secure Access, MFA con Cisco Duo y, en SECaaS Advantage, EDR con Cisco Secure Endpoint, todo administrado por Consein."),
-    ("¿Cómo acompañan la adopción de inteligencia artificial?",
-     "Con Cisco AI Defense empezamos por el inventario de sus activos de IA y la validación de modelos y aplicaciones en Azure AI Foundry y Copilot Studio."),
+    ("¿Cómo modernizan el centro de datos?",
+     "Renovamos servidores y switching del centro de datos con Cisco y los preparamos para operar en modo híbrido con Azure. Con Cisco Catalyst SD-WAN también conectamos su datacenter con AWS y Google Cloud."),
     ("¿Trabajan solo con Microsoft?",
      "Microsoft es nuestra BASE y nuestra especialidad. Si su empresa también usa AWS, Google Cloud o Google Workspace, llevamos ahí la misma red y la misma seguridad Cisco: Catalyst SD-WAN conecta sus sedes con AWS y Google Cloud, SECaaS protege a sus usuarios en cualquier nube y Cisco Secure Firewall tiene versión virtual para ambas."),
     ("¿Qué hacemos con los equipos Cisco en fin de soporte?",
-     "Con el Programa Renueva hacemos un inventario de obsolescencia gratuito, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms, con una red lista para Microsoft, AWS o Google Cloud. También gestionamos el financiamiento con bancos locales."),
+     "Con el Programa Renueva hacemos un inventario de obsolescencia como servicio, priorizamos por riesgo y renovamos por fases hacia Meraki, Cisco Catalyst SD-WAN, Secure Firewall o Teams Rooms, con una red lista para Microsoft, AWS o Google Cloud. También gestionamos el financiamiento con bancos locales."),
     ("¿En qué países atienden?",
-     "Somos integrador Cisco y Microsoft para empresas en Venezuela (Caracas, Valencia y Maracaibo), Panamá, República Dominicana y Estados Unidos. Ofrecemos servicios gestionados de red y outsourcing de redes y seguridad en los cuatro países."),
+     "Atendemos empresas en toda Venezuela, Panamá, República Dominicana y Estados Unidos. Ofrecemos servicios gestionados de red y outsourcing de redes y seguridad en los cuatro países."),
 ]
 
 FUENTES = [
@@ -448,7 +449,7 @@ def pie():
     <div class="foot">
       <div>
         <a class="logo" href="index.html"><img src="assets/img/logo-consein-blanco.png" alt="Consein" width="154" height="26"></a>
-        <p>Integramos Cisco y Microsoft para empresas en {', '.join(PAISES[:-1])} y {PAISES[-1]} desde 1987.</p>
+        <p>Tecnología para empresas en {', '.join(PAISES[:-1])} y {PAISES[-1]} desde 1987. Desde 2026, también con Cisco.</p>
       </div>
       <div><h4>Soluciones de Valor</h4><ul>{esp}</ul></div>
       <div><h4>Ofertas de Productos</h4><ul>
@@ -481,7 +482,7 @@ ORG = {
     "description": "Integrador Cisco y Microsoft: SD-WAN, SASE, seguridad como servicio (SECaaS), control de acceso a la red y salas Microsoft Teams Rooms.",
     "areaServed": [{"@type": "Country", "name": p} for p in PAISES],
     "knowsAbout": ["Cisco Meraki", "Cisco Catalyst SD-WAN", "SASE", "Seguridad como servicio (SECaaS)", "Cisco ISE",
-                   "Cisco Secure Firewall", "Microsoft Teams Rooms", "Cisco AI Defense", "Renovación de equipos Cisco",
+                   "Cisco Secure Firewall", "Microsoft Teams Rooms", "Network as a Service (NaaS)", "Datacenter", "Renovación de equipos Cisco",
                    "Microsoft Azure", "AWS", "Google Cloud", "Multinube"],
 }
 
@@ -575,7 +576,7 @@ def arte_hardware():
 AVISOS = {
     "productos": {
         "tag": "Oferta destacada · Renovación de hardware",
-        "titulo": "Inventariamos gratis su hardware Cisco",
+        "titulo": "Renueve su hardware Cisco por fases",
         "texto": "Le entregamos el mapa de obsolescencia de su base instalada y un plan de renovación priorizado, con costo total y alternativas de financiamiento bancario. Renovamos hacia una red lista para Microsoft y también para AWS o Google Cloud.",
         "cifra": "<small>financiamiento</small>local", "cifra_txt": "Gestionamos su solicitud ante bancos locales. Cada banco estudia el caso y decide la factibilidad del financiamiento.", "fuente": "",
         "lista_tipo": "ol",
@@ -616,14 +617,14 @@ def pasos_consein():
 def sticker_renueva(sufijo=""):
     """Sticker discreto (Inicio, Soluciones de Valor y Ofertas de Productos): lleva al aviso completo en Ofertas de Productos.
     El sufijo evita ids repetidos cuando todas las páginas conviven en la versión de un solo archivo."""
-    return f"""<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco con inventario gratuito">
+    return f"""<a class="sticker" href="productos.html#renovacion-hardware" aria-label="Programa Renueva: renovación de hardware Cisco">
   <svg viewBox="0 0 160 160" aria-hidden="true">
     <defs><path id="st-c{sufijo}" d="M80 80 m-61 0 a61 61 0 1 1 122 0 a61 61 0 1 1 -122 0"/></defs>
     <circle class="st-bg" cx="80" cy="80" r="78"/>
     <circle class="st-in" cx="80" cy="80" r="47"/>
     <g class="st-ring"><text class="st-t"><textPath href="#st-c{sufijo}" textLength="378" lengthAdjust="spacing">RENOVACIÓN DE HARDWARE · PROGRAMA RENUEVA ·</textPath></text></g>
   </svg>
-  <span class="st-core"><b>Inventario gratis</b><i>→</i></span>
+  <span class="st-core"><b>Renueve su red</b><i>→</i></span>
 </a>"""
 
 
@@ -640,7 +641,7 @@ def aviso(variante):
         <div class="aviso-stat"><b>{a['cifra']}</b><p>{E(a['cifra_txt'])}{f"<cite>{E(a['fuente'])}</cite>" if a['fuente'] else ""}</p></div>
         <{a['lista_tipo']} class="aviso-list">{items}</{a['lista_tipo']}>
         <div class="actions">
-          <a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a>
+          <a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario</a>
           <a class="btn btn-line" href="{a['cta2'][1]}">{E(a['cta2'][0])}</a>
         </div>
       </div>
@@ -739,10 +740,10 @@ def inicio():
   <div class="wrap">
     <div class="section-head"><p class="eyebrow">Nosotros</p><h2>Por qué Consein</h2></div>
     <div class="grid g4 proof">
-      <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Somos integrador Cisco en Venezuela, Panamá, República Dominicana y Estados Unidos.</p></div>
+      <div>{D(icono('calendario'))}<b>Desde 1987</b><p>Acompañamos a empresas en Venezuela, Panamá, República Dominicana y Estados Unidos con su plataforma Microsoft.</p></div>
       <div>{D(icono('certificado'))}<b>82 certificaciones</b><p>Somos Microsoft Solutions Partner en Infrastructure, Modern Work, Data &amp; AI y Digital &amp; App Innovation.</p></div>
       <div>{D(icono('trofeo'))}<b>WITSA 2026</b><p>ARIA IA Generativa, que desarrollamos con Bancaribe, recibió el reconocimiento de los Global AI Awards.</p></div>
-      <div>{D(icono('objetivo'))}<b>Un responsable</b><p>Validamos cada producto Cisco contra su plataforma Microsoft y también contra AWS y Google Cloud cuando forman parte de su operación.</p></div>
+      <div>{D(icono('objetivo'))}<b>Cisco, desde 2026</b><p>En julio de 2026 anunciamos Cisco como capa de valor sobre su plataforma Microsoft. Como integrador Cisco en Venezuela y la región, también apoyamos a empresas en AWS y Google Cloud.</p></div>
     </div>
   </div>
 </section>
@@ -840,16 +841,16 @@ def soluciones():
       <div>{D(icono(e['id']))}<p class="linea">Soluciones Consein · {E(e['linea'])}</p><p class="eyebrow">{E(e['nombre'])}</p><h2>{E(e['h2'])}</h2></div>
       <div><p>{E(e['intro'])}</p><p class="tech"><b>Cisco:</b> {E(cisco)} · <b>Microsoft:</b> {E(ms)} · <b>También en:</b> {E(e['otras'])}</p></div>
     </div>
-    <div class="grid g3">{cards}</div>{dif if e["id"] == "secaas" else ""}
+    <div class="grid g3">{cards}</div>{dif if e["id"] == "ciberseguridad" else ""}
   </div>
 </section>"""
     cuerpo = f"""
 <section class="page-head">
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Soluciones Cisco › Soluciones de Valor</p>
-    <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas</p>
+    <p class="eyebrow">Acelerador Cisco: Red · Seguridad · Salas · Datacenter</p>
     <h1>Soluciones Cisco que suman valor a su plataforma Microsoft</h1>
-    <p class="lead">Integramos conectividad, seguridad como servicio y colaboración Cisco con su plataforma Microsoft y, cuando su operación lo requiere, con AWS y Google Cloud. Son {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
+    <p class="lead">Integramos red como servicio, ciberseguridad, colaboración y datacenter Cisco con su plataforma Microsoft y, cuando su operación lo requiere, con AWS y Google Cloud. Son {NUMEROS[len(ESPECIALIDADES)]} áreas de práctica.</p>
     <nav class="chips" aria-label="Áreas de práctica">{chips}</nav>
     {sticker_renueva("-sol")}
   </div>
@@ -884,7 +885,7 @@ def soluciones():
                "provider": {"@id": URL_BASE + "#consein"}, "url": URL_BASE + "soluciones.html#" + m["id"],
                "areaServed": [{"@type": "Country", "name": p} for p in PAISES]}} for i, m in enumerate(MATRIZ)]}]
     pagina("soluciones.html", "soluciones",
-           "Soluciones Cisco: SD-WAN, SASE, SECaaS y Teams Rooms | Consein",
+           "Soluciones Cisco: NaaS, SD-WAN, SECaaS y Teams Rooms | Consein",
            "SD-WAN, SASE, seguridad como servicio (SECaaS), Cisco ISE y Teams Rooms, integrados con Microsoft y extendidos a AWS y Google Cloud.",
            cuerpo, ld)
 
@@ -905,24 +906,27 @@ def productos():
     otras_rutas = ["Google Workspace, Webex y Zoom", "Google Workspace, Webex y Zoom", "Google Workspace; Meraki vMX en AWS y Google Cloud",
                    "Aplicaciones en AWS y Google Cloud", "Versión virtual en AWS y Google Cloud", "AWS y Google Cloud", "Webex"]
     filas = "".join(f"<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td><td>{E(d)}</td></tr>" for (a, b, c), d in zip(rutas, otras_rutas))
+    # (señal, ¿indica obsolescencia?, ofertas recomendadas)
     senales = [
-        "Sus equipos Cisco tienen más de cinco años o ya recibieron un anuncio de fin de venta o de soporte.",
-        "El Wi-Fi se satura en reuniones de Teams o en horas pico.",
-        "Sus firewalls o routers de sucursal llevan tiempo sin actualizaciones.",
-        "Cada cambio de configuración exige visitar sede por sede.",
-        "Su red todavía aplica políticas de acceso independientes del cumplimiento de Intune.",
-        "Sus salas de video funcionan fuera de Microsoft Teams.",
-        "Su red debe conectar con AWS o Google Cloud, además de Azure.",
-        "Su auditor o su aseguradora preguntó por equipos sin soporte.",
+        ("Sus equipos Cisco tienen más de cinco años o ya recibieron un anuncio de fin de venta o de soporte.", True, ["REN-01"]),
+        ("El Wi-Fi se satura en reuniones de Teams o en horas pico.", False, ["REN-02"]),
+        ("Sus firewalls o routers de sucursal llevan tiempo sin actualizaciones.", True, ["REN-03", "REN-04"]),
+        ("Cada cambio de configuración exige visitar sede por sede.", False, ["REN-02", "REN-03"]),
+        ("Su red todavía aplica políticas de acceso independientes del cumplimiento de Intune.", False, ["REN-02"]),
+        ("Sus salas de video funcionan fuera de Microsoft Teams.", False, ["REN-06"]),
+        ("Su red debe conectar con AWS o Google Cloud, además de Azure.", False, ["REN-05"]),
+        ("Su auditor o su aseguradora preguntó por equipos sin soporte.", True, ["REN-01"]),
     ]
-    checks = "".join(f'<label><input type="checkbox"> {E(s)}</label>' for s in senales)
+    titulos = {p["code"]: p["titulo"] for p in PRODUCTOS}
+    checks = "".join(f'<label><input type="checkbox" data-obs="{1 if o else 0}" data-rec="{E("|".join(titulos[r] for r in recs))}"> {E(t)}</label>'
+                     for t, o, recs in senales)
     cuerpo = f"""
 <section class="page-head">
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Inicio</a> › Ofertas de Productos</p>
     <h1>Programa Renueva: renovación de equipos Cisco</h1>
     <p class="lead">Hacemos la renovación de hardware Cisco: cambiamos sus equipos Cisco en fin de soporte por una red segura y gestionable, conectada a Microsoft 365, Azure y Teams, y también a AWS o Google Cloud. Inventariamos, priorizamos por riesgo, migramos por fases y gestionamos el financiamiento con bancos locales.</p>
-    <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario gratuito</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
+    <div class="actions"><a class="btn btn-primary" href="index.html?interes=REN-01#contacto">Solicitar inventario</a><a class="btn btn-line" href="#ofertas">Ver ofertas</a></div>
     {sticker_renueva("-prod")}
   </div>
 </section>
@@ -946,7 +950,7 @@ def productos():
   <div class="wrap">
     <div class="grid g2" style="gap:64px;align-items:start">
       <div><p class="eyebrow">Autodiagnóstico</p><h2>¿Su red necesita renovación?</h2>
-        <p class="lead">Marque las señales que reconoce. Con dos o más, le recomendamos un inventario de obsolescencia.</p></div>
+        <p class="lead">Marque las señales que reconoce. Le indicamos qué ofertas del Programa Renueva responden a su caso.</p></div>
       <form class="check" onsubmit="return false">
         {checks}
         <div class="meter" aria-hidden="true"><i id="meter"></i></div>
@@ -987,7 +991,7 @@ def productos():
     <div class="grid g4">{cards}</div>
   </div>
 </section>
-{banda('Inventariemos su red gratis', 'Solicitar inventario', 'index.html?interes=REN-01#contacto')}"""
+{banda('Inventariemos su red', 'Solicitar inventario', 'index.html?interes=REN-01#contacto')}"""
     ld = [{"@type": "WebPage", "name": "Programa Renueva: renovación de equipos Cisco", "url": URL_BASE + "productos.html", "inLanguage": "es",
            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
                {"@type": "ListItem", "position": 1, "name": "Inicio", "item": URL_BASE},
@@ -996,7 +1000,7 @@ def productos():
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": servicio_ld(p, "Renovación de infraestructura Cisco")} for i, p in enumerate(PRODUCTOS)]}]
     pagina("productos.html", "productos",
            "Renovación de equipos Cisco en fin de soporte | Consein",
-           "Renovamos equipos Cisco en fin de soporte hacia una red lista para Microsoft, AWS y Google Cloud. Inventario de obsolescencia gratis y financiamiento.",
+           "Renovamos equipos Cisco en fin de soporte hacia una red lista para Microsoft, AWS y Google Cloud. Inventario de obsolescencia, migración por fases y financiamiento.",
            cuerpo, ld)
 
 
