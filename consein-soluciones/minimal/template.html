@@ -5,10 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soluciones Microsoft para empresas | Consein</title>
 <meta name="description" content="">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.consein.com/soluciones/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Consein">
+<meta property="og:locale" content="es_LA">
+<meta property="og:title" content="Soluciones Microsoft para empresas | Consein">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://www.consein.com/soluciones/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Consein","url":"https://www.consein.com","foundingDate":"1987","areaServed":["Venezuela","Panamá","República Dominicana","Estados Unidos"],"knowsAbout":["Microsoft Azure","Ciberseguridad","Microsoft 365","Dynamics 365","Microsoft Fabric","Power Platform","Inteligencia artificial"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.consein.com/#org","name":"Consein","url":"https://www.consein.com","description":"Partner Microsoft desde 1987: nube Azure, ciberseguridad, Microsoft 365, Dynamics 365, datos, automatización e inteligencia artificial para empresas.","foundingDate":"1987","areaServed":["Venezuela","Panamá","República Dominicana","Estados Unidos"],"knowsAbout":["Migración a Azure","Ciberseguridad empresarial","Zero Trust","Microsoft 365","Microsoft 365 Copilot","Dynamics 365 Business Central","Power BI","Microsoft Fabric","SQL Server","Power Platform","Automatización de procesos","Inteligencia artificial","Agentes de IA"],"award":"WITSA Global AI Award for Infrastructure (BanIA)"}</script>
 <style>
 /* Tipografías corporativas
    - Títulos: Haltto. Es una fuente con licencia: coloque los archivos en ./fonts/ junto a este HTML
@@ -282,7 +291,7 @@ footer img{height:20px;width:auto}
 
 <header class="site">
   <div class="wrap">
-    <a class="logo" href="#/" aria-label="Consein, Soluciones"><img src="__LOGO__" alt="Consein" width="155" height="26"></a>
+    <a class="logo" href="#/" aria-label="Consein, Soluciones"><img src="__LOGO__" alt="Consein, partner Microsoft" width="155" height="26"></a>
     <button class="burger" aria-label="Menú" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button>
     <nav class="main" aria-label="Principal">
       <a href="https://www.consein.com/">Inicio</a>
@@ -336,9 +345,32 @@ const PAGES = [DATA.nortia, ...DATA.practicas];
 const bySlug = s => PAGES.find(p => p.slug === s);
 let current = null;
 
+/* ---------- SEO: meta, Open Graph, canonical y datos estructurados por ruta ----------
+   En producción, cada ruta #/slug se publica como URL real: /soluciones/slug */
+const SITE = 'https://www.consein.com/soluciones/';
 function setMeta(title, desc){
+  const url = SITE + (current ? current.slug : '');
   document.title = title;
-  document.querySelector('meta[name="description"]').setAttribute('content', desc);
+  const m = (sel, v, attr = 'content') => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, v); };
+  m('meta[name="description"]', desc);
+  m('meta[property="og:title"]', title); m('meta[property="og:description"]', desc); m('meta[property="og:url"]', url);
+  m('link[rel="canonical"]', url, 'href');
+}
+function setPageLD(page){
+  let s = document.getElementById('page-ld');
+  if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'page-ld'; document.head.appendChild(s); }
+  const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.consein.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Soluciones', item: SITE }];
+  const graph = [];
+  if (page) {
+    crumbs.push({ '@type': 'ListItem', position: 3, name: page.nav, item: SITE + page.slug });
+    graph.push({ '@type': 'Service', name: page.h1, serviceType: page.seo ? page.seo.kw : page.nav, description: page.meta, url: SITE + page.slug,
+      provider: { '@id': 'https://www.consein.com/#org' }, areaServed: ['Venezuela', 'Panamá', 'República Dominicana', 'Estados Unidos'],
+      hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Soluciones de ' + page.nav,
+        itemListElement: (page.offerings || []).map(o => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: o.name, description: o.valor } })) } });
+  }
+  graph.push({ '@type': 'BreadcrumbList', itemListElement: crumbs });
+  s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 }
 
 /* ---------- Menú ---------- */
@@ -441,7 +473,7 @@ function home(){
 
   <section><div class="wrap">
     <p class="kicker">Especialidades</p>
-    <h2>Siete especialidades, un solo ecosistema</h2>
+    <h2>Siete especialidades Microsoft, un solo ecosistema</h2>
     <div class="grid g4" style="margin-top:40px">${DATA.practicas.map(p => `
       ${p.num === '07' ? `<a class="area feature" href="#/${p.slug}" style="--pc:${p.color}">
         <div class="fmain"><h3>${esc(p.nav)}</h3><p>${esc(p.promesa)} ${p.offerings.length} soluciones de IA para su negocio.</p><span class="link">Ver soluciones</span></div>
@@ -492,7 +524,7 @@ function practiceIA(p){
 
   <section class="sol-hl" id="soluciones-ia"><div class="wrap">
     <p class="kicker">Nuestras soluciones</p>
-    <h2><span class="sol-count">${p.offerings.length}</span> soluciones de IA listas para su negocio</h2>
+    <h2><span class="sol-count">${p.offerings.length}</span> soluciones de inteligencia artificial para su negocio</h2>
     <p class="lead">Elija por línea de negocio y abra cada solución con «Seguir leyendo…».</p>
     <nav class="line-nav" aria-label="Líneas de solución">${lines.map(l => `<a href="#line-${lineId(l)}" data-scroll="line-${lineId(l)}">${esc(l)}</a>`).join('')}</nav>
     ${offers(p)}
@@ -508,7 +540,7 @@ function practiceIA(p){
     <div><p class="kicker">Respaldo</p><p>${esc(p.respaldo)}</p><div class="tags">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div><p class="kicker">NortIA · Programa de adopción IA</p><p>${esc(p.puente)}</p><a class="link" href="#/nortia">Ver NortIA</a></div>
   </div></section>
-  ${p.faq ? faqHTML(p.faq) : ''}`;
+  ${p.faq ? faqHTML(p.faq, p.seo && p.seo.h2_faq) : ''}`;
 }
 
 function practice(p){
@@ -525,7 +557,7 @@ function practice(p){
   <hr class="rule">
 
   <section><div class="wrap grid g2" style="gap:56px">
-    <div><p class="kicker">Lo que resolvemos</p><h2>Retos que atendemos</h2></div>
+    <div><p class="kicker">Lo que resolvemos</p><h2>${esc(p.seo ? p.seo.h2_retos : 'Retos que atendemos')}</h2></div>
     <ul class="list">${p.problemas.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
   </div></section>
 
@@ -536,7 +568,7 @@ function practice(p){
 
   <section><div class="wrap">
     <p class="kicker">Ofertas</p>
-    <h2>Elija por dónde empezar</h2>
+    <h2>${esc(p.seo ? p.seo.h2_ofertas : 'Elija por dónde empezar')}</h2>
     <div style="margin-top:36px">${offers(p)}</div>
   </div></section>
 
@@ -550,16 +582,16 @@ function practice(p){
     <div><p class="kicker">Respaldo</p><p>${esc(p.respaldo)}</p><div class="tags">${p.tecnologias.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
     <div><p class="kicker" style="--c:#B8734A">Conexión con NortIA</p><p>${esc(p.puente)}</p><a class="link" style="--c:#B8734A" href="#/nortia">Ver NortIA</a></div>
   </div></section>
-  ${p.faq ? faqHTML(p.faq) : ''}`;
+  ${p.faq ? faqHTML(p.faq, p.seo && p.seo.h2_faq) : ''}`;
 }
 
 
 /* ---------- Preguntas frecuentes (con datos estructurados FAQPage para SEO) ---------- */
-function faqHTML(list){
+function faqHTML(list, title){
   return `<section class="faq-sec" id="faq"><div class="wrap faq-grid">
     <div class="faq-aside">
       <p class="kicker">Preguntas frecuentes</p>
-      <h2>Resolvemos sus dudas</h2>
+      <h2>${esc(title || 'Resolvemos sus dudas')}</h2>
       <p class="lead">Si su pregunta no está aquí, escríbanos y le respondemos.</p>
       <a class="btn" href="#contacto">Quiero hablar con un especialista</a>
     </div>
@@ -617,7 +649,7 @@ function nortia(n){
   <section class="tight"><div class="wrap">
     <p class="kicker">Respaldo</p><p>${esc(n.respaldo)}</p>
   </div></section>
-  ${n.faq ? faqHTML(n.faq) : ''}`;
+  ${n.faq ? faqHTML(n.faq, n.seo && n.seo.h2_faq) : ''}`;
 }
 
 /* ---------- Rutas ---------- */
@@ -629,6 +661,7 @@ function render(){
   document.documentElement.style.setProperty('--c', page ? page.color : '#000F76');
   $('#app').innerHTML = !page ? home() : page.slug === 'nortia' ? nortia(page) : practice(page);
   setFaqLD(page && page.faq ? page.faq : null);
+  setPageLD(page);
   document.querySelector('nav.main').classList.remove('open');
   closeOffer();
   window.scrollTo(0, 0);

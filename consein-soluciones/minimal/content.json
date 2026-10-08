@@ -1,18 +1,28 @@
 {
  "hub": {
   "title": "Soluciones Microsoft para empresas | Consein",
-  "meta": "Soluciones Microsoft de nube Azure, ciberseguridad, Microsoft 365, Dynamics 365, datos, automatización e inteligencia artificial. Partner Microsoft desde 1987.",
+  "meta": "Partner Microsoft desde 1987: Azure, ciberseguridad, Microsoft 365, Copilot, Dynamics 365, Fabric, Power Platform e IA para empresas en Venezuela y Panamá.",
   "h1": "Soluciones Microsoft para su empresa",
-  "sub": "Diseñamos, implementamos y operamos soluciones de nube, seguridad, datos e inteligencia artificial. Nos hacemos cargo del resultado.",
-  "cta": "Quiero mi Diagnóstico Consein 360"
+  "sub": "Somos partner Microsoft desde 1987. Diseñamos, implementamos y operamos soluciones de nube, ciberseguridad, datos e inteligencia artificial para su empresa.",
+  "cta": "Quiero mi Diagnóstico Consein 360",
+  "seo": {
+   "kw": "soluciones Microsoft para empresas",
+   "h2_faq": null,
+   "secundarias": [
+    "partner Microsoft",
+    "consultoría Microsoft",
+    "transformación digital",
+    "servicios cloud"
+   ]
+  }
  },
  "nortia": {
   "slug": "nortia",
   "nav": "NortIA",
   "color": "#B8734A",
-  "title": "NortIA: metodología de adopción de IA | Consein",
-  "meta": "NortIA es nuestra metodología para adoptar la inteligencia artificial con método: medimos, formamos, construimos agentes y gobernamos la IA.",
-  "h1": "NortIA: adopción de IA con método",
+  "title": "NortIA: programa de adopción de IA | Consein",
+  "meta": "NortIA es nuestro programa de adopción de inteligencia artificial: diagnóstico, estrategia, formación de Champions, agentes de IA y gobierno de la IA.",
+  "h1": "NortIA: programa de adopción de IA",
   "sub": "Nuestra metodología para que su organización use, construya y gobierne la IA con autonomía, sobre el ecosistema Microsoft.",
   "problema": "Comprar licencias de Copilot es el primer paso. Sin dirección, la adopción se queda en la superficie y el retorno es difícil de medir.",
   "datos": [
@@ -229,8 +239,23 @@
    [
     "¿Qué pasa al terminar el ciclo?",
     "Su equipo queda preparado para repetir el ciclo en cualquier área del negocio. Si lo desea, lo acompañamos con NortIA Continuo para llevar la metodología a nuevos dominios de forma recurrente."
+   ],
+   [
+    "¿Ofrecen el programa de adopción de IA en Venezuela y Panamá?",
+    "Sí. Llevamos NortIA a empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, con sesiones presenciales y remotas sobre el ecosistema Microsoft."
    ]
-  ]
+  ],
+  "seo": {
+   "kw": "adopción de inteligencia artificial",
+   "h2_faq": "Dudas sobre adopción de IA",
+   "secundarias": [
+    "programa de adopción de IA",
+    "estrategia de IA",
+    "gobierno de la IA",
+    "formación en IA",
+    "Champions de IA"
+   ]
+  }
  },
  "practicas": [
   {
@@ -239,10 +264,10 @@
    "nav": "Infraestructura",
    "color": "#1F6FEB",
    "promesa": "Migramos y operamos su nube en Azure.",
-   "title": "Infraestructura y migración a Azure | Consein",
-   "meta": "Migramos, operamos y optimizamos su infraestructura en Microsoft Azure. Partner Microsoft con especialización en migración a Azure.",
-   "h1": "Infraestructura en Azure sin interrupciones",
-   "sub": "Diseñamos, migramos y operamos su plataforma en Microsoft Azure, con costos bajo control y lista para la IA.",
+   "title": "Migración a Azure e infraestructura cloud | Consein",
+   "meta": "Migración a Azure, nube híbrida y operación gestionada. Partner Microsoft desde 1987 en Venezuela, Panamá y la región. Solicite su evaluación.",
+   "h1": "Migración a Azure sin interrupciones",
+   "sub": "Diseñamos, migramos y operamos su infraestructura en Microsoft Azure, con costos bajo control y lista para la IA.",
    "problemas": [
     "Servidores al final de su vida útil",
     "Facturas de nube que crecen sin explicación",
@@ -480,8 +505,26 @@
     [
      "¿Qué respaldo tiene Consein en Azure?",
      "Somos Microsoft Solutions Partner for Infrastructure (Azure) y contamos con la especialización Infra and Database Migration to Microsoft Azure, que acredita profundidad técnica comprobada en migraciones."
+    ],
+    [
+     "¿Atienden proyectos de migración a Azure en Venezuela y Panamá?",
+     "Sí. Acompañamos a empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, con equipos presenciales y remotos. Somos partner Microsoft desde 1987."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "migración a Azure",
+    "h2_retos": "Retos de infraestructura que atendemos",
+    "h2_ofertas": "Servicios de migración a Azure",
+    "h2_faq": "Dudas sobre migración a Azure",
+    "secundarias": [
+     "infraestructura en la nube",
+     "nube híbrida",
+     "servicios gestionados Azure",
+     "optimización de costos en la nube",
+     "recuperación ante desastres",
+     "fin de soporte Windows Server"
+    ]
+   }
   },
   {
    "num": "02",
@@ -490,7 +533,7 @@
    "color": "#1E9E5A",
    "promesa": "Protegemos su organización con Zero Trust.",
    "title": "Ciberseguridad empresarial Zero Trust | Consein",
-   "meta": "Protegemos identidades, datos y dispositivos con Microsoft Defender, Sentinel, Entra y Purview. SOC moderno y seguridad gestionada.",
+   "meta": "Ciberseguridad empresarial con Microsoft Defender, Sentinel, Entra, Intune y Purview. SOC y seguridad gestionada en Venezuela, Panamá y la región.",
    "h1": "Ciberseguridad Zero Trust para su empresa",
    "sub": "Protegemos identidades, datos y dispositivos con Microsoft Defender, Sentinel, Entra y Purview, y vigilamos su operación todos los días.",
    "problemas": [
@@ -686,8 +729,26 @@
     [
      "¿Podemos reducir el número de herramientas de seguridad?",
      "Sí. Mapeamos sus herramientas frente a Microsoft Defender y Purview y planificamos una transición sin brechas de protección. Unificar la seguridad en Microsoft puede generar hasta 60% de ahorro (estudios Forrester TEI)."
+    ],
+    [
+     "¿Ofrecen servicios de ciberseguridad gestionada en Venezuela y Panamá?",
+     "Sí. Protegemos y vigilamos la operación de empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, sobre la plataforma de seguridad de Microsoft."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "ciberseguridad empresarial",
+    "h2_retos": "Retos de ciberseguridad que atendemos",
+    "h2_ofertas": "Servicios de ciberseguridad",
+    "h2_faq": "Dudas sobre ciberseguridad",
+    "secundarias": [
+     "Zero Trust",
+     "SOC gestionado",
+     "Microsoft Defender",
+     "Microsoft Sentinel",
+     "gestión de dispositivos Intune",
+     "protección de datos Purview"
+    ]
+   }
   },
   {
    "num": "03",
@@ -695,8 +756,8 @@
    "nav": "Colaboración",
    "color": "#0A9AA8",
    "promesa": "Conectamos a su equipo con Microsoft 365 y Copilot.",
-   "title": "Microsoft 365 y adopción de Copilot | Consein",
-   "meta": "Implementamos Microsoft 365 y acompañamos la adopción de Copilot con casos de uso por rol y medición mensual del impacto.",
+   "title": "Microsoft 365 y Copilot para empresas | Consein",
+   "meta": "Implementamos Microsoft 365 y la adopción de Microsoft 365 Copilot con formación por rol y medición del impacto. Partner Microsoft en Venezuela y Panamá.",
    "h1": "Productividad con Microsoft 365 y Copilot",
    "sub": "Implementamos Microsoft 365 y acompañamos la adopción de Copilot hasta que su equipo trabaje mejor, con resultados medibles.",
    "problemas": [
@@ -888,8 +949,26 @@
     [
      "¿Cómo medimos el retorno de Microsoft 365 y Copilot?",
      "Definimos una línea base y medimos cada mes el uso, la adopción por área y el tiempo ahorrado en tareas clave, para demostrar el valor de su inversión."
+    ],
+    [
+     "¿Son partner de Microsoft 365 en Venezuela y Panamá?",
+     "Sí. Implementamos Microsoft 365 y acompañamos la adopción de Copilot en empresas de Venezuela, Panamá, República Dominicana y Estados Unidos."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "Microsoft 365 para empresas",
+    "h2_retos": "Retos de productividad que atendemos",
+    "h2_ofertas": "Servicios de Microsoft 365 y Copilot",
+    "h2_faq": "Dudas sobre Microsoft 365 y Copilot",
+    "secundarias": [
+     "Microsoft 365 Copilot",
+     "adopción de Copilot",
+     "formación en Copilot",
+     "migración de correo a Microsoft 365",
+     "intranet SharePoint",
+     "Microsoft Teams"
+    ]
+   }
   },
   {
    "num": "04",
@@ -898,8 +977,8 @@
    "color": "#D9731A",
    "promesa": "Integramos ERP, CRM y Power BI.",
    "title": "Dynamics 365 Business Central, CRM y Power BI | Consein",
-   "meta": "Implementamos Dynamics 365 Business Central, migramos Dynamics GP a la nube y construimos tableros ejecutivos en Power BI.",
-   "h1": "ERP, CRM y Power BI para decidir a tiempo",
+   "meta": "Implementación de Dynamics 365 Business Central, migración de Dynamics GP, CRM y tableros Power BI. Partner Microsoft en Venezuela, Panamá y la región.",
+   "h1": "ERP Dynamics 365, CRM y Power BI",
    "sub": "Implementamos Dynamics 365 Business Central, CRM y tableros Power BI para que controle su operación y decida con cifras confiables.",
    "problemas": [
     "Cierres contables que tardan semanas",
@@ -1076,8 +1155,26 @@
     [
      "¿Quién da soporte después de la implementación?",
      "Nosotros. Con Soporte y Evolución de Dynamics mantenemos su ERP y CRM al día, atendemos solicitudes y mejoramos los procesos de forma continua."
+    ],
+    [
+     "¿Implementan Business Central en Venezuela y Panamá?",
+     "Sí. Implementamos Dynamics 365 Business Central y damos soporte a empresas en Venezuela, Panamá, República Dominicana y Estados Unidos."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "Dynamics 365 Business Central",
+    "h2_retos": "Retos de gestión que atendemos",
+    "h2_ofertas": "Servicios de Dynamics 365 y Power BI",
+    "h2_faq": "Dudas sobre Dynamics 365",
+    "secundarias": [
+     "ERP en la nube",
+     "implementación de Business Central",
+     "migración de Dynamics GP",
+     "CRM Dynamics 365",
+     "tableros Power BI",
+     "partner Dynamics 365"
+    ]
+   }
   },
   {
    "num": "05",
@@ -1086,7 +1183,7 @@
    "color": "#1A8FD1",
    "promesa": "Unificamos y gobernamos sus datos.",
    "title": "Microsoft Fabric y gobierno de datos | Consein",
-   "meta": "Unificamos y gobernamos sus datos con Microsoft Fabric y Purview para la analítica y la inteligencia artificial.",
+   "meta": "Microsoft Fabric, gobierno de datos con Purview y diagnóstico SQL Server ante el fin de soporte de SQL Server 2016. Partner Microsoft en la región.",
    "h1": "Datos confiables con Microsoft Fabric",
    "sub": "Unificamos, gobernamos y activamos sus datos con Microsoft Fabric y Purview, listos para la analítica y la IA.",
    "problemas": [
@@ -1284,8 +1381,26 @@
     [
      "¿Pueden operar nuestra plataforma de datos?",
      "Sí. Con Data Platform Managed Service operamos, monitoreamos y mejoramos su plataforma de datos cada mes."
+    ],
+    [
+     "¿Ofrecen consultoría de datos y Microsoft Fabric en la región?",
+     "Sí. Acompañamos proyectos de datos, Microsoft Fabric y SQL Server en empresas de Venezuela, Panamá, República Dominicana y Estados Unidos."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "Microsoft Fabric",
+    "h2_retos": "Retos de datos que atendemos",
+    "h2_ofertas": "Servicios de datos y Microsoft Fabric",
+    "h2_faq": "Dudas sobre Microsoft Fabric y datos",
+    "secundarias": [
+     "gobierno de datos",
+     "analítica de datos",
+     "SQL Server 2016 fin de soporte",
+     "diagnóstico SQL Server",
+     "modernización de bases de datos",
+     "datos para inteligencia artificial"
+    ]
+   }
   },
   {
    "num": "06",
@@ -1294,7 +1409,7 @@
    "color": "#7B4FD6",
    "promesa": "Automatizamos sus procesos con Power Platform.",
    "title": "Automatización de procesos con Power Platform | Consein",
-   "meta": "Automatizamos procesos con Power Automate y creamos aplicaciones low-code con Power Apps. Menos tareas manuales, más trazabilidad.",
+   "meta": "Automatización de procesos con Power Automate, Power Apps y procesamiento inteligente de documentos. Partner Microsoft en Venezuela, Panamá y la región.",
    "h1": "Automatización de procesos con Power Platform",
    "sub": "Automatizamos tareas manuales y creamos aplicaciones low-code con Power Automate y Power Apps, con resultados medibles.",
    "problemas": [
@@ -1528,8 +1643,26 @@
     [
      "¿Cómo escalamos la automatización con orden?",
      "Con el Centro de Excelencia Power Platform establecemos gobierno, entornos y buenas prácticas, y con Soporte y Evolución mantenemos sus flujos y aplicaciones funcionando y creciendo."
+    ],
+    [
+     "¿Ofrecen consultoría de Power Platform en Venezuela y Panamá?",
+     "Sí. Automatizamos procesos con Power Platform para empresas en Venezuela, Panamá, República Dominicana y Estados Unidos."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "automatización de procesos",
+    "h2_retos": "Retos operativos que atendemos",
+    "h2_ofertas": "Soluciones de automatización de procesos",
+    "h2_faq": "Dudas sobre automatización de procesos",
+    "secundarias": [
+     "Power Automate",
+     "Power Apps",
+     "aplicaciones low-code",
+     "automatización de facturas",
+     "digitalización de procesos",
+     "RPA"
+    ]
+   }
   },
   {
    "num": "07",
@@ -1537,10 +1670,10 @@
    "nav": "Inteligencia Artificial",
    "color": "#4B3FC9",
    "promesa": "Llevamos la IA a producción.",
-   "title": "Inteligencia artificial y agentes de IA para empresas | Consein",
-   "meta": "Construimos agentes de IA, copilotos y soluciones de IA generativa con Copilot Studio y Azure OpenAI, conectados a sus procesos.",
-   "h1": "Inteligencia artificial en producción",
-   "sub": "Construimos agentes, copilotos y soluciones de IA generativa conectados a sus procesos, con gobierno desde el diseño.",
+   "title": "Inteligencia artificial para empresas y agentes IA | Consein",
+   "meta": "Inteligencia artificial para empresas: agentes de IA con Copilot Studio y Azure OpenAI en producción, con soluciones para banca, seguros y legal.",
+   "h1": "Inteligencia artificial para su empresa",
+   "sub": "Construimos agentes de IA, copilotos y soluciones de IA generativa con Copilot Studio y Azure OpenAI, conectados a sus procesos y con gobierno desde el diseño.",
    "problemas": [
     "Licencias de IA sin uso",
     "Pilotos que se quedan en pruebas",
@@ -1866,8 +1999,25 @@
     [
      "¿Cómo mantenemos los agentes funcionando después del lanzamiento?",
      "Con AgentOps monitoreamos el desempeño, la calidad de las respuestas y los costos, y evolucionamos sus agentes de forma continua."
+    ],
+    [
+     "¿Desarrollan soluciones de inteligencia artificial para empresas en Venezuela y Panamá?",
+     "Sí. Diseñamos y operamos agentes de IA para empresas en Venezuela, Panamá, República Dominicana y Estados Unidos, sobre la plataforma de Microsoft."
     ]
-   ]
+   ],
+   "seo": {
+    "kw": "inteligencia artificial para empresas",
+    "h2_faq": "Dudas sobre inteligencia artificial",
+    "secundarias": [
+     "agentes de IA",
+     "IA generativa",
+     "Copilot Studio",
+     "Azure OpenAI",
+     "IA para banca",
+     "IA para seguros",
+     "IA legal"
+    ]
+   }
   }
  ]
 }
